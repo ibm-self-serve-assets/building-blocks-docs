@@ -1,9 +1,5 @@
 # Automating Enterprise Retail Application Deployment on IBM Cloud Red Hat OpenShift Using Terraform and Ansible
 
-**Subtitle:** A production-grade, layered automation approach for
-infrastructure provisioning and application lifecycle management on IBM
-Cloud
-
 **Skill Level:** Intermediate
 
 **Technologies:** IBM Cloud, Red Hat OpenShift, Terraform, Ansible,
