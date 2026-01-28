@@ -4,6 +4,6 @@ AI Core Capabilities enable enterprises to design, deploy, and govern AI solutio
 in a secure, scalable, and reusable manner.
 
 ## Pillars
-- Data
 - Agents
 - Trust
+- Data

@@ -53,13 +53,6 @@ nav:
   - AI Core:
       - Overview: ai-core/index.md
 
-      - Data:
-          - Overview: ai-core/data/index.md
-          - Zero Copy Lakehouse: ai-core/data/zero-copy-lakehouse.md
-          - Vector Search: ai-core/data/vector-search.md
-          - Question & Answer: ai-core/data/question-answer.md
-          - Data Security & Encryption: ai-core/data/data-security.md
-
       - Agents:
           - Overview: ai-core/agents/index.md
           - Multi-Agent Orchestration: ai-core/agents/multi-agent-orchestration.md
@@ -73,19 +66,15 @@ nav:
           - Compliance Accelerators: ai-core/trust/compliance-accelerators.md
           - Secure AI Lifecycle: ai-core/trust/secure-ai-lifecycle.md
 
+      - Data:
+          - Overview: ai-core/data/index.md
+          - Zero Copy Lakehouse: ai-core/data/zero-copy-lakehouse.md
+          - Vector Search: ai-core/data/vector-search.md
+          - Question & Answer: ai-core/data/question-answer.md
+          - Data Security & Encryption: ai-core/data/data-security.md
+
   - Automation Core:
       - Overview: automation-core/index.md
-
-      - Optimize:
-          - Overview: automation-core/optimize/index.md
-          - Automated Resilience & Compliance: automation-core/optimize/automated-resilience.md
-          - FinOps: automation-core/optimize/finops.md
-          - Automated Resource Management: automation-core/optimize/automated-resource-management.md
-
-      - Observe:
-          - Overview: automation-core/observe/index.md
-          - Application Observability: automation-core/observe/application-observability.md
-          - Network Performance: automation-core/observe/network-performance.md
 
       - Build:
           - Overview: automation-core/build/index.md
@@ -93,3 +82,16 @@ nav:
           - Authentication Management: automation-core/build/authentication-management.md
           - Infrastructure as Code: automation-core/build/infrastructure-as-code.md
           - Code Assistant: automation-core/build/code-assistant.md
+
+      - Observe:
+          - Overview: automation-core/observe/index.md
+          - Application Observability: automation-core/observe/application-observability.md
+          - Network Performance: automation-core/observe/network-performance.md
+
+      - Optimize:
+          - Overview: automation-core/optimize/index.md
+          - Automated Resilience & Compliance: automation-core/optimize/automated-resilience.md
+          - FinOps: automation-core/optimize/finops.md
+          - Automated Resource Management: automation-core/optimize/automated-resource-management.md
+
+
