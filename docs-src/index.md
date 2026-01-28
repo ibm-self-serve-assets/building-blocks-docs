@@ -8,8 +8,6 @@ These **ready-to-use components** simplify the entire lifecycle—development, i
 
 By adopting these **proven and tested** patterns, organizations can reduce engineering effort, minimize risk, and achieve a faster time-to-value while maintaining enterprise-grade scalability, security, and governance.
 
-Today, we offer a **portfolio of 20 Building Blocks**, purpose-built to deliver IBM technology in a modular, flexible, and composable manner. This approach empowers partners and development teams to selectively integrate the exact capabilities they need, enabling them to create tailored, differentiated solutions for their customers without reinventing foundational components.
-
 ## Capability Areas
 
 - **AI Core Capabilities**
