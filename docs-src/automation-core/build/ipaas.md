@@ -1,7 +1,5 @@
 # Automating Enterprise Retail Application Deployment on IBM Cloud Red Hat OpenShift Using Terraform and Ansible
 
-**Skill Level:** Intermediate
-
 **Technologies:** IBM Cloud, Red Hat OpenShift, Terraform, Ansible,
 Kubernetes, PostgreSQL
 
