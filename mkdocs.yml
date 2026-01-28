@@ -59,14 +59,14 @@ nav:
           - Agent Builder: ai-core/agents/agent-builder.md
           - AI Gateway: ai-core/agents/ai-gateway.md
 
-      - Trust:
+      - Trusted AI:
           - Overview: ai-core/trust/index.md
           - Design-Time Evaluations: ai-core/trust/design-time-evaluations.md
           - Runtime Evaluations: ai-core/trust/runtime-evaluations.md
           - Compliance Accelerators: ai-core/trust/compliance-accelerators.md
           - Secure AI Lifecycle: ai-core/trust/secure-ai-lifecycle.md
 
-      - Data:
+      - Data and AI:
           - Overview: ai-core/data/index.md
           - Zero Copy Lakehouse: ai-core/data/zero-copy-lakehouse.md
           - Vector Search: ai-core/data/vector-search.md
@@ -76,7 +76,7 @@ nav:
   - Automation Core:
       - Overview: automation-core/index.md
 
-      - Build:
+      - Build and Deploy:
           - Overview: automation-core/build/index.md
           - iPaaS: automation-core/build/ipaas.md
           - Authentication Management: automation-core/build/authentication-management.md
