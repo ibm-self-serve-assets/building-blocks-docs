@@ -6,18 +6,20 @@ docs_dir: docs-src
 
 theme:
   name: material
-  custom_dir: docs/overrides
+  custom_dir: docs-src/overrides
 
   features:
     - navigation.sections
     - navigation.instant
     - navigation.top
+    - navigation.footer        # ✅ Next / Previous buttons
     - content.code.copy
     - search.highlight
     - search.share
     - header.autohide
 
   palette:
+    # 🌙 Dark mode (default)
     - scheme: slate
       primary: custom
       accent: custom
@@ -25,6 +27,7 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
 
+    # ☀️ Light mode
     - scheme: default
       primary: custom
       accent: custom
@@ -46,3 +49,52 @@ markdown_extensions:
   - toc:
       permalink: true
 
+# ------------------------------------------------------------
+# Explicit navigation (REQUIRED for Next / Previous buttons)
+# ------------------------------------------------------------
+nav:
+  - Home: index.md
+
+  - AI Core:
+      - Overview: ai-core/index.md
+
+      - Data:
+          - Overview: ai-core/data/index.md
+          - Zero Copy Lakehouse: ai-core/data/zero-copy-lakehouse.md
+          - Vector Search: ai-core/data/vector-search.md
+          - Question & Answer: ai-core/data/question-answer.md
+          - Data Security & Encryption: ai-core/data/data-security.md
+
+      - Agents:
+          - Overview: ai-core/agents/index.md
+          - Multi-Agent Orchestration: ai-core/agents/multi-agent-orchestration.md
+          - Agent Builder: ai-core/agents/agent-builder.md
+          - AI Gateway: ai-core/agents/ai-gateway.md
+
+      - Trust:
+          - Overview: ai-core/trust/index.md
+          - Design-Time Evaluations: ai-core/trust/design-time-evaluations.md
+          - Runtime Evaluations: ai-core/trust/runtime-evaluations.md
+          - Compliance Accelerators: ai-core/trust/compliance-accelerators.md
+          - Secure AI Lifecycle: ai-core/trust/secure-ai-lifecycle.md
+
+  - Automation Core:
+      - Overview: automation-core/index.md
+
+      - Optimize:
+          - Overview: automation-core/optimize/index.md
+          - Automated Resilience & Compliance: automation-core/optimize/automated-resilience.md
+          - FinOps: automation-core/optimize/finops.md
+          - Automated Resource Management: automation-core/optimize/automated-resource-management.md
+
+      - Observe:
+          - Overview: automation-core/observe/index.md
+          - Application Observability: automation-core/observe/application-observability.md
+          - Network Performance: automation-core/observe/network-performance.md
+
+      - Build:
+          - Overview: automation-core/build/index.md
+          - iPaaS: automation-core/build/ipaas.md
+          - Authentication Management: automation-core/build/authentication-management.md
+          - Infrastructure as Code: automation-core/build/infrastructure-as-code.md
+          - Code Assistant: automation-core/build/code-assistant.md
