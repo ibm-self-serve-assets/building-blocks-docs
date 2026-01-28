@@ -66,7 +66,7 @@ nav:
           - Compliance Accelerators: ai-core/trust/compliance-accelerators.md
           - Secure AI Lifecycle: ai-core/trust/secure-ai-lifecycle.md
 
-      - Data and AI:
+      - Data for AI:
           - Overview: ai-core/data/index.md
           - Zero Copy Lakehouse: ai-core/data/zero-copy-lakehouse.md
           - Vector Search: ai-core/data/vector-search.md
