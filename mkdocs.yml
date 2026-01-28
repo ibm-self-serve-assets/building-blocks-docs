@@ -1,5 +1,5 @@
 site_name: IBM Building Blocks Documentation
-site_description: Modular IBM Building Blocks aligned with IBM Garage and Carbon Design
+site_description: Modular IBM Building Blocks Documentation
 site_url: https://ibm-self-serve-assets.github.io/building-blocks-docs/
 
 docs_dir: docs

@@ -1,8 +1,7 @@
 
 # IBM Building Blocks Documentation
 
-This documentation provides **full technical depth** for IBM Building Blocks, following
-**IBM Garage methodology** and **Carbon Design principles**.
+This documentation provides **full technical depth** for IBM Building Blocks
 
 ## Design Principles
 - Modular, composable architectures
