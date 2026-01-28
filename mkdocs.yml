@@ -12,14 +12,13 @@ theme:
     - navigation.sections
     - navigation.instant
     - navigation.top
-    - navigation.footer        # ✅ Next / Previous buttons
+    - navigation.footer 
     - content.code.copy
     - search.highlight
     - search.share
     - header.autohide
 
   palette:
-    # 🌙 Dark mode (default)
     - scheme: slate
       primary: custom
       accent: custom
@@ -27,7 +26,6 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
 
-    # ☀️ Light mode
     - scheme: default
       primary: custom
       accent: custom
@@ -49,9 +47,6 @@ markdown_extensions:
   - toc:
       permalink: true
 
-# ------------------------------------------------------------
-# Explicit navigation (REQUIRED for Next / Previous buttons)
-# ------------------------------------------------------------
 nav:
   - Home: index.md
 
