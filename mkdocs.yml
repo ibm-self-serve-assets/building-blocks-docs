@@ -1,10 +1,5 @@
-site_name: IBM Building Blocks Documentation
-site_description: Modular IBM Building Blocks aligned with IBM Garage and Carbon Design
-site_url: https://ibm-self-serve-assets.github.io/building-blocks-docs/
-
 theme:
   name: material
-  custom_dir: docs/overrides
   features:
     - navigation.sections
     - navigation.expand
@@ -12,6 +7,18 @@ theme:
     - navigation.top
     - content.code.copy
 
-extra_css:
-  - stylesheets/carbon.css
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
 
