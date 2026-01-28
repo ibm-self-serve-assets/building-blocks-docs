@@ -10,7 +10,6 @@ theme:
 
   features:
     - navigation.sections
-    - navigation.expand
     - navigation.instant
     - navigation.top
     - content.code.copy
