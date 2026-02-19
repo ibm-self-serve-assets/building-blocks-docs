@@ -1,3 +1,7 @@
+# To run this workflow for local testing, use the following command:
+# pip install mkdocs-material
+# mkdocs serve
+#
 name: Publish Docs
 
 on:

@@ -55,6 +55,38 @@
   display: none;
 }
 
+/* =========================================================
+   RESPONSIVE LAYOUT - FIXED LEFT NAV, EXPANDING CONTENT
+   ========================================================= */
+
+/* On large screens, control the grid layout */
+@media screen and (min-width: 76.25em) {
+  .md-grid {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  /* Fixed width left sidebar */
+  .md-sidebar--primary {
+    width: 15rem;
+    flex-shrink: 0;
+  }
+  
+  /* Main content expands to fill available space */
+  .md-content {
+    max-width: none;
+    flex-grow: 1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  /* Right sidebar (TOC) gets smaller fixed width */
+  .md-sidebar--secondary {
+    width: 12rem;
+    flex-shrink: 0;
+  }
+}
 
 /* =========================================================
    LINKS
