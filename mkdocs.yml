@@ -45,10 +45,10 @@ nav:
 
       - Agents:
           - Overview: ai-core/agents/index.md
-          - Multi-Agent Orchestration: ai-core/agents/multi-agent-orchestration.md
           - Agent Builder: ai-core/agents/agent-builder.md
           - AI Gateway: ai-core/agents/ai-gateway.md
-
+          - Multi-Agent Orchestration: ai-core/agents/multi-agent-orchestration.md
+          
       - Trusted AI:
           - Overview: ai-core/trust/index.md
           - Design-Time Evaluations: ai-core/trust/design-time-evaluations.md
@@ -84,4 +84,6 @@ nav:
           - FinOps: automation-core/optimize/finops.md
           - Automated Resource Management: automation-core/optimize/automated-resource-management.md
 
+  - IBM Bob and Building Blocks:
+      - Overview: ibm-bob/index.md
 
