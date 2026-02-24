@@ -1,4 +1,4 @@
-## **Build and Deploy**
+# **Build and Deploy**
 
 Build and Deploy focuses on accelerating application delivery while
 ensuring consistency, security, and automation across environments. This
