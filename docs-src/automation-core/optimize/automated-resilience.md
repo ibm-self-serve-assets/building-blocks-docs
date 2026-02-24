@@ -1,4 +1,3 @@
-## **Overview**
 
 Automated Resilience & Compliance focuses on continuously safeguarding
 application stability, security posture, and regulatory alignment across
