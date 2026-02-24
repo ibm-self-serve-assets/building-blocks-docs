@@ -12,11 +12,11 @@ improving both developer productivity and code reliability.
 Code Assistant enables organizations to accelerate software delivery
 while improving consistency and quality. It provides:
 
--   Faster development cycles\
--   Reduced manual coding effort\
--   Improved developer efficiency\
--   Early detection of defects and vulnerabilities\
--   Standardized coding practices\
+-   Faster development cycles.
+-   Reduced manual coding effort.
+-   Improved developer efficiency.
+-   Early detection of defects and vulnerabilities.
+-   Standardized coding practices.
 -   Enhanced modernization capabilities
 
 This results in measurable gains in productivity, maintainability, and
