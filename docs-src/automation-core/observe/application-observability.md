@@ -63,25 +63,21 @@ Instana automatically detects services, containers, APIs, and
 infrastructure components, eliminating manual configuration overhead.
 
 ------------------------------------------------------------------------
-
 ### **Distributed Tracing**
 Provides end-to-end visibility into transactions across microservices,
 enabling rapid identification of latency sources and service failures.
 
 ------------------------------------------------------------------------
-
 ### **Real-Time Performance Analytics**
 Continuously analyzes performance metrics to detect anomalies,
 degradations, and emerging issues.
 
 ------------------------------------------------------------------------
-
 ### **Dependency Mapping**
 Builds dynamic service dependency graphs, allowing teams to understand
 application interactions and failure propagation paths.
 
 ------------------------------------------------------------------------
-
 ### **Contextual Alerting**
 Reduces alert noise by correlating events and highlighting only
 actionable incidents.
