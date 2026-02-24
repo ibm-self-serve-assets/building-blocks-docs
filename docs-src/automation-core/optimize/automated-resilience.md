@@ -1,4 +1,4 @@
-### **Automated Resilience & Compliance**
+## **Automated Resilience & Compliance**
 
 Automated Resilience & Compliance focuses on continuously safeguarding
 application stability, security posture, and regulatory alignment across
@@ -10,7 +10,7 @@ into continuous, automated practices.
 
 ------------------------------------------------------------------------
 
-## **Why It Matters for Enterprises**
+### **Why It Matters for Enterprises**
 
 Modern enterprises operate highly distributed, containerized workloads
 where risks emerge dynamically --- from newly disclosed vulnerabilities
@@ -23,7 +23,7 @@ delivery pipelines.
 
 ------------------------------------------------------------------------
 
-## **What We Do Here**
+### **What We Do Here**
 
 This building block centralizes resilience and compliance intelligence
 using platforms such as IBM Concert, correlating security, runtime, and
@@ -35,7 +35,7 @@ generating alerts.
 
 ------------------------------------------------------------------------
 
-## **Key Features & Capabilities**
+### **Key Features & Capabilities**
 
 -   Unified visibility across applications, clusters, and environments.
 -   Continuous vulnerability and CVE exposure monitoring.
@@ -46,7 +46,7 @@ generating alerts.
 
 ------------------------------------------------------------------------
 
-## **Core Capabilities**
+### **Core Capabilities**
 
 Automated Resilience & Compliance delivers continuous risk intelligence
 by combining operational telemetry, vulnerability data, and governance
@@ -58,7 +58,7 @@ decision-making.
 
 ------------------------------------------------------------------------
 
-## **Use Cases**
+### **Use Cases**
 
 Organizations typically adopt this capability to:
 
