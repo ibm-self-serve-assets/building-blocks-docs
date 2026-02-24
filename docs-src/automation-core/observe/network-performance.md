@@ -1,15 +1,12 @@
 ## **Network Performance -- Intelligent Visibility for Modern Networks**
-
 ------------------------------------------------------------------------
 Network Performance monitoring provides deep visibility into the
 behavior, health, and efficiency of enterprise network infrastructures.
 It enables organizations to analyze traffic patterns, detect
 degradations, identify bottlenecks, and ensure consistent service
 delivery across complex, distributed environments.
-
 ------------------------------------------------------------------------
 ## **Operational Context**
-
 Modern enterprise networks span data centers, cloud providers, branch
 offices, remote users, and software-defined architectures. Performance
 issues can emerge from congestion, misconfigurations, capacity
@@ -19,10 +16,8 @@ environments.
 
 Network performance intelligence provides the operational clarity
 required to maintain reliability and service quality.
-
 ------------------------------------------------------------------------
 ## **Why It Matters**
-
 Without comprehensive network visibility, enterprises face:
 
 -   Undetected performance degradation\
@@ -33,10 +28,8 @@ Without comprehensive network visibility, enterprises face:
 
 Network performance analytics transform reactive problem resolution into
 proactive performance assurance.
-
 ------------------------------------------------------------------------
 ## **Enterprise Challenges Solved**
-
 -   Fragmented network monitoring tools\
 -   Lack of end-to-end traffic visibility\
 -   Difficulty diagnosing intermittent issues\
@@ -46,7 +39,6 @@ proactive performance assurance.
 
 ------------------------------------------------------------------------
 ## **Technology Enablement -- IBM SevOne**
-
 Network Performance is enabled by IBM SevOne, which delivers scalable,
 high-fidelity monitoring and analytics across enterprise networks.
 SevOne collects, correlates, and analyzes telemetry from network
@@ -55,36 +47,33 @@ performance, utilization, and anomalies.
 
 The platform is designed for large-scale, heterogeneous network
 environments.
-
 ------------------------------------------------------------------------
 ## **Core Capabilities**
 
-### **Comprehensive Network Visibility**
-Provides unified monitoring across multi-vendor devices, cloud networks,
+**Comprehensive Network Visibility**
+- Provides unified monitoring across multi-vendor devices, cloud networks,
 and hybrid infrastructures.
 
 ------------------------------------------------------------------------
-### **Traffic & Flow Analytics**
-
-Analyzes traffic patterns to identify congestion, abnormal flows, and
+**Traffic & Flow Analytics**
+- Analyzes traffic patterns to identify congestion, abnormal flows, and
 utilization inefficiencies.
 
 ------------------------------------------------------------------------
-### **Performance & Latency Monitoring**
-
-Continuously tracks network health indicators including latency, packet
+**Performance & Latency Monitoring**
+- Continuously tracks network health indicators including latency, packet
 loss, and throughput.
 
 ------------------------------------------------------------------------
-### **Capacity & Trend Analysis**
+**Capacity & Trend Analysis**
 
-Enables predictive planning by identifying growth patterns and
+- Enables predictive planning by identifying growth patterns and
 saturation risks.
 
 ------------------------------------------------------------------------
-### **Anomaly Detection**
+**Anomaly Detection**
 
-Identifies unexpected network behavior that may indicate performance or
+- Identifies unexpected network behavior that may indicate performance or
 security issues.
 
 ------------------------------------------------------------------------
