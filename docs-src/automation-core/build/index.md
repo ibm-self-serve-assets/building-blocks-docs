@@ -10,11 +10,11 @@ from manual processes to repeatable, scalable delivery pipelines.
 
 - **Platform as a Service (iPaaS)** Capabilities, delivered through IBM
 webMethods, simplify application and data integration across distributed
-systems.\
+systems.
 - **Authentication Management** Enabled by IBM Verify, centralizes identity,
-access control, and security enforcement.\
+access control, and security enforcement.
 - **Infrastructure as Code** Powered by tools such as Terraform and Ansible,
-ensures consistent, automated environment provisioning.\
+ensures consistent, automated environment provisioning.
 - **Code Assistant** Supported by IBM Bob enhances developer productivity through AI-assisted code generation and
 modernization.
 
