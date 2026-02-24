@@ -25,25 +25,25 @@ Code for these accelerators can be found in the [Build - Automation Building Blo
 
 ### **Key Use Cases**
 
-**Platform as a Service (IBM webMethods)**\
+**Platform as a Service (IBM webMethods)**
 Organizations leverage this capability to integrate cloud and on-prem
 applications, orchestrate business workflows, enable API management,
 connect legacy systems, synchronize data across platforms, and
 streamline hybrid integration architectures.
 
-**Authentication Management (IBM Verify)**\
+**Authentication Management (IBM Verify)**
 Typical scenarios include centralized identity and access management,
 single sign-on (SSO), multi-factor authentication (MFA), adaptive access
 policies, privileged access control, and securing application workloads
 across hybrid environments.
 
-**Infrastructure as Code (Terraform, Ansible)**\
+**Infrastructure as Code (Terraform, Ansible)**
 Common use cases involve automated infrastructure provisioning,
 environment standardization, configuration management, deployment
 automation, drift prevention, multi-cloud orchestration, and repeatable
 DevOps pipelines.
 
-**Code Assistant (IBM watsonx Code Assistant / Bob)**\
+**Code Assistant (IBM Bob)**
 Organizations adopt this capability to accelerate code development,
 modernize legacy applications, generate automation scripts, assist with
 refactoring, improve developer efficiency, reduce manual coding effort,
