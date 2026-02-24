@@ -1,5 +1,5 @@
 ## **Network Performance -- Intelligent Visibility for Modern Networks**
-------------------------------------------------------------------------
+
 Network Performance monitoring provides deep visibility into the
 behavior, health, and efficiency of enterprise network infrastructures.
 It enables organizations to analyze traffic patterns, detect

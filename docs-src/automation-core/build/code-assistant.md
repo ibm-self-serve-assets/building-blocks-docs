@@ -1,8 +1,4 @@
 ## **Code Assistant -- AI‑Powered Developer Companion**
-
-------------------------------------------------------------------------
-## **Overview**
-
 IBM's Code Assistant, commonly associated with Project Bob and watsonx
 Code Assistant, is an AI‑powered development assistant designed to
 augment modern software engineering workflows. Embedded directly within
@@ -11,7 +7,6 @@ intelligent recommendations, automated refactoring, and real‑time
 quality insights. The assistant acts as a collaborative partner,
 improving both developer productivity and code reliability.
 
-------------------------------------------------------------------------
 ## **Business Value**
 
 Code Assistant enables organizations to accelerate software delivery
@@ -27,7 +22,6 @@ while improving consistency and quality. It provides:
 This results in measurable gains in productivity, maintainability, and
 operational stability.
 
-------------------------------------------------------------------------
 ## **Developer Challenges Addressed**
 
 -   Repetitive and boilerplate code creation.
@@ -37,7 +31,6 @@ operational stability.
 -   Legacy application modernization complexity.
 -   Security vulnerabilities introduced during development.
 
-------------------------------------------------------------------------
 ## **Capabilities & Functions**
 
 ### **AI‑Assisted Code Generation**
@@ -47,7 +40,6 @@ operational stability.
 -   Intelligent auto‑completion.
 -   Code explanation and comprehension.
 
-------------------------------------------------------------------------
 ### **Automated Development Workflows**
 
 -   AI‑assisted refactoring.
@@ -55,7 +47,6 @@ operational stability.
 -   Code transformation and modernization.
 -   Debugging assistance.
 
-------------------------------------------------------------------------
 ### **Security & Quality Intelligence**
 
 -   Detection of vulnerabilities and secrets.
@@ -63,7 +54,6 @@ operational stability.
 -   Proactive remediation guidance.
 -   Consistent implementation patterns.
 
-------------------------------------------------------------------------
 ## **Feature Highlights**
 
 -   Conversational AI integrated within the IDE.
@@ -73,7 +63,6 @@ operational stability.
 -   Built‑in secure coding guidance.
 -   Enhanced developer decision support.
 
-------------------------------------------------------------------------
 ## **Example Use Cases**
 
 Organizations commonly leverage Code Assistant to:
@@ -86,7 +75,6 @@ Organizations commonly leverage Code Assistant to:
 -   Detect security issues earlier in development.
 -   Enforce consistent coding standards.
 
-------------------------------------------------------------------------
 ## **Developer Benefits**
 
 Code Assistant improves developer workflows by:
@@ -98,6 +86,5 @@ Code Assistant improves developer workflows by:
 -   Enhancing knowledge transfer.
 -   Supporting scalable development practices.
 
-------------------------------------------------------------------------
 IBM Code Assistant ultimately transforms software development from a
 purely manual activity into an AI‑augmented engineering process.

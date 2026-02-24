@@ -1,5 +1,4 @@
 ## **Application Observability -- Intelligent Visibility for Modern Applications**
-------------------------------------------------------------------------
 
 Application Observability provides deep, contextual visibility into
 application behavior, performance, and dependencies by analyzing

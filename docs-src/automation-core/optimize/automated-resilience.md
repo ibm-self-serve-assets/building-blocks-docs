@@ -1,4 +1,4 @@
-
+## **Automated Resilience & Compliance**
 Automated Resilience & Compliance focuses on continuously safeguarding
 application stability, security posture, and regulatory alignment across
 complex hybrid cloud environments. It provides enterprises with unified
@@ -6,8 +6,6 @@ visibility into operational risks, vulnerabilities, and compliance
 deviations, enabling proactive rather than reactive management. This
 building block transforms resilience and governance from periodic audits
 into continuous, automated practices.
-
-------------------------------------------------------------------------
 
 ### **Why It Matters for Enterprises**
 
@@ -20,8 +18,6 @@ reduces operational risk, strengthens governance, minimizes downtime,
 and supports regulatory obligations without introducing friction into
 delivery pipelines.
 
-------------------------------------------------------------------------
-
 ### **What We Do Here**
 
 This building block centralizes resilience and compliance intelligence
@@ -32,8 +28,6 @@ posture, and prioritize remediation actions based on risk impact. The
 emphasis is on creating actionable intelligence rather than simply
 generating alerts.
 
-------------------------------------------------------------------------
-
 ### **Key Features & Capabilities**
 
 -   Unified visibility across applications, clusters, and environments.
@@ -42,8 +36,6 @@ generating alerts.
 -   Certificate lifecycle and expiration management.
 -   Dependency and risk correlation across services.
 -   Risk-based prioritization and remediation guidance.
-
-------------------------------------------------------------------------
 
 ### **Core Capabilities**
 
@@ -54,8 +46,6 @@ also *why it matters* and *where to act first*. By correlating
 application dependencies, infrastructure conditions, and security
 findings, it enables more accurate impact analysis and faster
 decision-making.
-
-------------------------------------------------------------------------
 
 ### **Use Cases**
 
