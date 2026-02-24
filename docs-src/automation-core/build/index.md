@@ -8,14 +8,14 @@ between development and operations. By combining platform services,
 automation frameworks, and AI-assisted tooling, enterprises can move
 from manual processes to repeatable, scalable delivery pipelines.
 
-Platform as a Service (iPaaS) capabilities, delivered through IBM
+- Platform as a Service (iPaaS) capabilities, delivered through IBM
 webMethods, simplify application and data integration across distributed
 systems.\
-Authentication Management, enabled by IBM Verify, centralizes identity,
+- Authentication Management, enabled by IBM Verify, centralizes identity,
 access control, and security enforcement.\
-Infrastructure as Code, powered by tools such as Terraform and Ansible,
+- Infrastructure as Code, powered by tools such as Terraform and Ansible,
 ensures consistent, automated environment provisioning.\
-Code Assistant, supported by IBM watsonx Code Assistant (Project "Bob"),
+- Code Assistant, supported by IBM watsonx Code Assistant (Project "Bob"),
 enhances developer productivity through AI-assisted code generation and
 modernization.
 
