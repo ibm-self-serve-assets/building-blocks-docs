@@ -1,4 +1,3 @@
-## **FinOps & Financial Optimization**
 
 ### **Overview**
 
