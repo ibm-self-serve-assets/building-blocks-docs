@@ -60,7 +60,7 @@ nav:
           - Overview: ai-core/data/index.md
           - RAG Building Block: ai-core/data/rag-building-block.md
           - NL to SQL: ai-core/data/nl-to-sql.md
-          - Intelligent ETL: ai-core/data/intelligent-etl.md
+          - Enterprise Intelligent Data Ingestion: ai-core/data/intelligent-etl.md
           - Vector Search:
               - Overview: ai-core/data/vector_search/index.md
               - DataStax Astra DB: ai-core/data/vector_search/datastax-astra-db.md
