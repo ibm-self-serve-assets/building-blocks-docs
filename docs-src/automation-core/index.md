@@ -1,5 +1,4 @@
 # **Automation Core Capabilities**
-
 Automation capabilities empower organizations to design, operate, and
 continuously improve hybrid cloud environments with greater speed,
 consistency, and reliability. By integrating intelligent tooling,
@@ -76,8 +75,8 @@ Optimize transforms operations into a closed-loop improvement model.
 Together, Build and Deploy, Observe, and Optimize create a cohesive
 automation framework. Each building block reinforces the others:
 
--   Build establishes repeatability\
--   Observe provides operational intelligence\
+-   Build establishes repeatability.
+-   Observe provides operational intelligence.
 -   Optimize drives continuous improvement
 
 This integrated model enables enterprises to scale hybrid cloud
