@@ -1,5 +1,6 @@
 ## **Application Observability -- Intelligent Visibility for Modern Applications**
 ------------------------------------------------------------------------
+
 Application Observability provides deep, contextual visibility into
 application behavior, performance, and dependencies by analyzing
 metrics, traces, logs, and events. Unlike traditional monitoring,
@@ -51,25 +52,24 @@ The platform is designed for dynamic, containerized, and cloud-native
 environments.
 ------------------------------------------------------------------------
 ## **Core Capabilities**
-### **Automatic Discovery**
-
-Instana automatically detects services, containers, APIs, and
+**Automatic Discovery**
+- Instana automatically detects services, containers, APIs, and
 infrastructure components, eliminating manual configuration overhead.
 ------------------------------------------------------------------------
-### **Distributed Tracing**
-Provides end-to-end visibility into transactions across microservices,
+**Distributed Tracing**
+- Provides end-to-end visibility into transactions across microservices,
 enabling rapid identification of latency sources and service failures.
 ------------------------------------------------------------------------
-### **Real-Time Performance Analytics**
-Continuously analyzes performance metrics to detect anomalies,
+**Real-Time Performance Analytics**
+- Continuously analyzes performance metrics to detect anomalies,
 degradations, and emerging issues.
 ------------------------------------------------------------------------
-### **Dependency Mapping**
-Builds dynamic service dependency graphs, allowing teams to understand
+**Dependency Mapping**
+- Builds dynamic service dependency graphs, allowing teams to understand
 application interactions and failure propagation paths.
 ------------------------------------------------------------------------
-### **Contextual Alerting**
-Reduces alert noise by correlating events and highlighting only
+**Contextual Alerting**
+- Reduces alert noise by correlating events and highlighting only
 actionable incidents.
 ------------------------------------------------------------------------
 ## **Representative Use Cases**
