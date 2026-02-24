@@ -61,9 +61,7 @@ loss, and throughput.
 - **Capacity & Trend Analysis**
 Enables predictive planning by identifying growth patterns and
 saturation risks.
-
-**Anomaly Detection**
-
+- **Anomaly Detection**
 - Identifies unexpected network behavior that may indicate performance or
 security issues.
 

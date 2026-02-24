@@ -14,22 +14,22 @@ distributed workloads. Enterprises must balance agility, stability,
 governance, and cost efficiency. A Terraform + Ansible automation model
 delivers:
 
--   Consistent environment provisioning\
--   Reduced manual intervention\
--   Improved deployment reliability\
--   Stronger governance and auditability\
--   Seamless CI/CD integration
+-   Consistent environment provisioning.
+-   Reduced manual intervention.
+-   Improved deployment reliability.
+-   Stronger governance and auditability.
+-   Seamless CI/CD integration.
 
 This separation of responsibilities enables scalable and predictable
 automation.
 ### **Automation Challenges Addressed**
 
--   Manual and error-prone infrastructure provisioning\
--   Configuration drift across environments\
--   Inconsistent application deployments\
--   Difficulty replicating production setups\
--   Limited operational standardization\
--   Slow environment creation cycles
+-   Manual and error-prone infrastructure provisioning.
+-   Configuration drift across environments.
+-   Inconsistent application deployments.
+-   Difficulty replicating production setups.
+-   Limited operational standardization.
+-   Slow environment creation cycles.
 
 ### **Capabilities & Functions**
 
@@ -38,22 +38,22 @@ automation.
 Terraform provides declarative infrastructure lifecycle management,
 enabling:
 
--   VPC and networking creation\
--   OpenShift cluster provisioning\
--   IAM and security configuration\
--   Environment replication\
--   Drift detection and state management
+-   VPC and networking creation.
+-   OpenShift cluster provisioning.
+-   IAM and security configuration.
+-   Environment replication.
+-   Drift detection and state management.
 
 Terraform is optimized for managing infrastructure state.
 #### **Ansible -- Configuration & Orchestration**
 
 Ansible provides procedural automation designed for:
 
--   Application deployment\
--   Platform configuration\
--   Kubernetes/OpenShift resource management\
--   Day-2 operational workflows\
--   CI/CD pipeline execution
+-   Application deployment.
+-   Platform configuration.
+-   Kubernetes/OpenShift resource management.
+-   Day-2 operational workflows.
+-   CI/CD pipeline execution.
 
 Ansible is optimized for managing application and configuration state.
 ### **Enterprise Automation Strategy**
@@ -98,12 +98,12 @@ This reflects common enterprise microservices deployment patterns.
 
 Enterprises gain:
 
--   Idempotent deployments\
--   Reduced manual intervention\
--   Faster environment creation\
--   Consistent platform configuration\
--   Simplified Day-2 operations\
--   Improved release reliability
+-   Idempotent deployments.
+-   Reduced manual intervention.
+-   Faster environment creation.
+-   Consistent platform configuration.
+-   Simplified Day-2 operations.
+-   Improved release reliability.
 
 ### **Summary**
 

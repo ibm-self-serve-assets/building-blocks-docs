@@ -39,9 +39,7 @@ signals.
 - **Federation & Standards Support**
 Integrates with enterprise ecosystems using industry‑standard identity
 protocols.
-
-#### **Lifecycle & Policy Controls**
-
+- **Lifecycle & Policy Controls**
 Ensures access is governed by identity lifecycle events and
 organizational policies.
 
