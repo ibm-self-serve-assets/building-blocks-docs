@@ -1,4 +1,3 @@
-## **Overview**
 
 Automated Resource Management focuses on continuously optimizing
 application performance and infrastructure efficiency by dynamically
