@@ -49,17 +49,17 @@ environments.
 
 ## **Core Capabilities**
 
-**Comprehensive Network Visibility**
-- Provides unified monitoring across multi-vendor devices, cloud networks,
+- **Comprehensive Network Visibility**
+Provides unified monitoring across multi-vendor devices, cloud networks,
 and hybrid infrastructures.
-**Traffic & Flow Analytics**
-- Analyzes traffic patterns to identify congestion, abnormal flows, and
+- **Traffic & Flow Analytics**
+Analyzes traffic patterns to identify congestion, abnormal flows, and
 utilization inefficiencies.
-**Performance & Latency Monitoring**
-- Continuously tracks network health indicators including latency, packet
+- **Performance & Latency Monitoring**
+Continuously tracks network health indicators including latency, packet
 loss, and throughput.
-**Capacity & Trend Analysis**
-- Enables predictive planning by identifying growth patterns and
+- **Capacity & Trend Analysis**
+Enables predictive planning by identifying growth patterns and
 saturation risks.
 
 **Anomaly Detection**

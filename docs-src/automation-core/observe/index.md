@@ -21,15 +21,11 @@ The Building Block of Observe includes:
     identify performance degradation, and ensure network reliability at
     scale.
 
-------------------------------------------------------------------------
-
 ## **Github Repository**
 
 Code for these accelerators can be found in the [Observe -- Automation
 Building Blocks
 repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/observe)
-
-------------------------------------------------------------------------
 
 ## **Use Cases**
 
@@ -45,8 +41,6 @@ repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/observe
     bottlenecks, traffic flow analysis, capacity planning, performance
     trend analysis, SLA monitoring, and ensuring reliability across
     distributed enterprise networks.
-
-------------------------------------------------------------------------
 
 Together, these building blocks establish a continuous observability
 model where application intelligence and network analytics work in
