@@ -1,7 +1,6 @@
 ## **Platform as a Service (iPaaS)**
 
 ------------------------------------------------------------------------
-
 IBM webMethods Integration represents a comprehensive, cloud-native
 Integration Platform as a Service (iPaaS) designed to connect
 applications, systems, and data across distributed enterprise
@@ -12,7 +11,6 @@ patterns, API management, B2B/EDI, and event-driven architectures, the
 platform simplifies complex integration landscapes.
 
 ------------------------------------------------------------------------
-
 ### **Business Value**
 
 Modern enterprises operate within heterogeneous IT ecosystems where
@@ -29,7 +27,6 @@ This approach allows enterprises to innovate rapidly while maintaining
 architectural consistency and governance.
 
 ------------------------------------------------------------------------
-
 ### **Integration Challenges Addressed**
 
 -   Fragmented application landscapes\
@@ -40,7 +37,6 @@ architectural consistency and governance.
 -   Limited visibility into integration dependencies
 
 ------------------------------------------------------------------------
-
 ### **Capabilities & Functions**
 
 IBM webMethods Integration delivers a broad set of enterprise
@@ -57,7 +53,6 @@ With over 600 connectors, the platform accelerates connectivity across
 cloud services, enterprise systems, databases, and messaging frameworks.
 
 ------------------------------------------------------------------------
-
 ### **Key Features**
 
 -   Low-code, drag-and-drop interface\
@@ -68,7 +63,6 @@ cloud services, enterprise systems, databases, and messaging frameworks.
 -   Support for synchronous and asynchronous patterns
 
 ------------------------------------------------------------------------
-
 ### **Example Scenarios**
 
 Organizations commonly leverage IBM webMethods Integration to:
@@ -82,7 +76,6 @@ Organizations commonly leverage IBM webMethods Integration to:
 -   Synchronize distributed data sources
 
 ------------------------------------------------------------------------
-
 ### **Operational Benefits**
 
 Enterprises gain:

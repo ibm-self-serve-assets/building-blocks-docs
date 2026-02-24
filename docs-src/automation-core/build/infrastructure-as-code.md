@@ -11,7 +11,6 @@ layered automation strategy aligned with DevOps, compliance, and
 multi-environment deployment practices.
 
 ------------------------------------------------------------------------
-
 ### **Business Value**
 
 Cloud-native platforms introduce dynamic infrastructure lifecycles and
@@ -29,7 +28,6 @@ This separation of responsibilities enables scalable and predictable
 automation.
 
 ------------------------------------------------------------------------
-
 ### **Automation Challenges Addressed**
 
 -   Manual and error-prone infrastructure provisioning\
@@ -40,7 +38,6 @@ automation.
 -   Slow environment creation cycles
 
 ------------------------------------------------------------------------
-
 ### **Capabilities & Functions**
 
 #### **Terraform -- Infrastructure as Code**
@@ -57,7 +54,6 @@ enabling:
 Terraform is optimized for managing infrastructure state.
 
 ------------------------------------------------------------------------
-
 #### **Ansible -- Configuration & Orchestration**
 
 Ansible provides procedural automation designed for:
@@ -71,7 +67,6 @@ Ansible provides procedural automation designed for:
 Ansible is optimized for managing application and configuration state.
 
 ------------------------------------------------------------------------
-
 ### **Enterprise Automation Strategy**
 
   Layer                    Primary Tool   Objective
@@ -84,7 +79,6 @@ Ansible is optimized for managing application and configuration state.
 This layered strategy ensures clear separation of concerns.
 
 ------------------------------------------------------------------------
-
 ### **Infrastructure Provisioning**
 
 Terraform automates the creation of foundational components required to
@@ -99,7 +93,6 @@ Terraform's state-driven model ensures reproducibility, drift
 prevention, and auditable changes while minimizing operational risk.
 
 ------------------------------------------------------------------------
-
 ### **Application Deployment**
 
 Ansible orchestrates the Retail application lifecycle, including:
@@ -116,7 +109,6 @@ Ansible orchestrates the Retail application lifecycle, including:
 This reflects common enterprise microservices deployment patterns.
 
 ------------------------------------------------------------------------
-
 ### **Operational Benefits**
 
 Enterprises gain:
@@ -129,7 +121,6 @@ Enterprises gain:
 -   Improved release reliability
 
 ------------------------------------------------------------------------
-
 ### **Summary**
 
 This automation framework demonstrates how enterprises can standardize
