@@ -1,6 +1,4 @@
 
-### **Overview**
-
 FinOps (Financial Operations) establishes a data-driven discipline that
 enables organizations to manage, govern, and optimize cloud investments.
 As enterprises scale across hybrid and multi-cloud environments,
