@@ -56,15 +56,15 @@ nav:
           - Compliance Accelerators: ai-core/trust/compliance-accelerators.md
           - Secure AI Lifecycle: ai-core/trust/secure-ai-lifecycle.md
 
-      - Data for AI:
+      - Data:
           - Overview: ai-core/data/index.md
-          - RAG Building Block: ai-core/data/rag-building-block.md
-          - NL to SQL: ai-core/data/nl-to-sql.md
-          - Enterprise Intelligent Data Ingestion: ai-core/data/intelligent-etl.md
+          - Question & Answer: ai-core/data/q-and-a.md
+          - Zero-Copy Lakehouse: ai-core/data/zero-copy-lakehouse.md
           - Vector Search:
-              - Overview: ai-core/data/vector_search/index.md
-              - DataStax Astra DB: ai-core/data/vector_search/datastax-astra-db.md
-              - OpenSearch: ai-core/data/vector_search/opensearch.md
+              - Overview: ai-core/data/vector-search/index.md
+              - DataStax Astra DB: ai-core/data/vector-search/datastax-astra-db.md
+              - OpenSearch: ai-core/data/vector-search/opensearch.md
+          - Data Security and Encryption: ai-core/data/data-security-and-encryption.md
 
   - Automation Core:
       - Overview: automation-core/index.md
