@@ -11,10 +11,10 @@ IBM Bob custom modes allow developers to tailor Bob's behavior by combining reus
 
 This composable approach enables teams to design highly contextual assistants optimized for specialized tasks and domain-specific scenarios.
       
-## Code Repositories
+## Getting started with Building Block modes
 Instructions and related files for these custom modes can be found in their respective repository.
 
-### Agents Code Repository
+### Agents
 - [Agent Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/ibm-bob/modes): Bob uses wxo's ADK and documentation MCP servers to build custom agents.
 - [MCP Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/ibm-bob/modes): Expands on the Agent Builder mode to build and deploy MCP servers on wxo.
 - [Domain Agent Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/ibm-bob/modes/domain-agent-builder): Bob builds a tool-augmented RAG agent for partner's custom specific domain.
