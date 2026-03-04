@@ -57,6 +57,11 @@ required to maintain performance objectives. By understanding
 application dependencies and constraints, it avoids disruptive scaling
 behaviors and instead applies precise, context-aware optimizations.
 
+## **High Level Architecture**
+
+<img width="1307" height="786" alt="image" src="https://github.com/user-attachments/assets/61e1d243-b573-4651-a820-c52cf15c7df8" />
+
+
 ## **Use Cases**
 
 **Organizations typically adopt this capability to:**
