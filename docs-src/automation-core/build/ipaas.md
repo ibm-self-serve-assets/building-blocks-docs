@@ -108,11 +108,13 @@ Organizations commonly leverage IBM webMethods Integration to:
 ## **Related Capabilities**
 
 **Within Build and Deploy:**
+
 - [Authentication Management](authentication-management.md) - Secure access and identity management
 - [Infrastructure as Code](infrastructure-as-code.md) - Automated infrastructure provisioning
 - [Code Assistant](code-assistant.md) - AI-powered development assistance
 
 **Other Building Blocks:**
+
 - [Application Observability](../observe/application-observability.md) - Monitor integrated applications
 - [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize integration workloads
 

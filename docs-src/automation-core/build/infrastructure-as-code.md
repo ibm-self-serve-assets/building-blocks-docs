@@ -142,11 +142,13 @@ best practices.
 ## **Related Capabilities**
 
 **Within Build and Deploy:**
+
 - [Code Assistant](code-assistant.md) - AI-assisted IaC template generation
 - [Platform as a Service (iPaaS)](ipaas.md) - Integrate infrastructure with applications
 - [Authentication Management](authentication-management.md) - Automate identity provisioning
 
 **Other Building Blocks:**
+
 - [Application Observability](../observe/application-observability.md) - Monitor deployed infrastructure
 - [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize provisioned resources
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Ensure infrastructure compliance

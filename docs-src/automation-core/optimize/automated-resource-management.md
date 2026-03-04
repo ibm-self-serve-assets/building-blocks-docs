@@ -80,10 +80,12 @@ behaviors and instead applies precise, context-aware optimizations.
 ## **Related Capabilities**
 
 **Within Optimize:**
+
 - [FinOps](finops.md) - Optimize costs while maintaining performance
 - [Automated Resilience & Compliance](automated-resilience.md) - Ensure compliant resource allocation
 
 **Other Building Blocks:**
+
 - [Application Observability](../observe/application-observability.md) - Monitor resource utilization and performance
 - [Network Performance](../observe/network-performance.md) - Optimize network resource allocation
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Automate resource provisioning

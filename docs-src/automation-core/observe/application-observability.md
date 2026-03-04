@@ -126,9 +126,11 @@ ecosystems.
 ## **Related Capabilities**
 
 **Within Observe:**
+
 - [Network Performance](network-performance.md) - Correlate application and network performance
 
 **Other Building Blocks:**
+
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Monitor automated deployments
 - [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize based on observability data
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Detect vulnerabilities and compliance issues

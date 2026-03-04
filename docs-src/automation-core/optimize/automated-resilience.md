@@ -81,10 +81,12 @@ decision-making.
 ## **Related Capabilities**
 
 **Within Optimize:**
+
 - [FinOps](finops.md) - Balance security investments with cost efficiency
 - [Automated Resource Management](automated-resource-management.md) - Ensure compliant resource allocation
 
 **Other Building Blocks:**
+
 - [Application Observability](../observe/application-observability.md) - Monitor application health and security
 - [Authentication Management](../build/authentication-management.md) - Strengthen identity and access controls
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Ensure infrastructure compliance

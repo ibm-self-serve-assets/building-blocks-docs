@@ -128,9 +128,11 @@ complex digital infrastructures.
 ## **Related Capabilities**
 
 **Within Observe:**
+
 - [Application Observability](application-observability.md) - Correlate network and application performance
 
 **Other Building Blocks:**
+
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Monitor network infrastructure deployments
 - [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize network resource allocation
 - [FinOps](../optimize/finops.md) - Analyze network infrastructure costs

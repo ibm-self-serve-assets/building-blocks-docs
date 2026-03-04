@@ -115,11 +115,13 @@ Organizations commonly leverage Code Assistant to:
 ## **Related Capabilities**
 
 **Within Build and Deploy:**
+
 - [Infrastructure as Code](infrastructure-as-code.md) - Generate IaC templates with AI assistance
 - [Platform as a Service (iPaaS)](ipaas.md) - Accelerate integration development
 - [Authentication Management](authentication-management.md) - Implement secure authentication patterns
 
 **Other Building Blocks:**
+
 - [Application Observability](../observe/application-observability.md) - Monitor AI-generated code performance
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Ensure code security and compliance
 

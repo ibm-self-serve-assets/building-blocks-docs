@@ -110,11 +110,13 @@ security while preserving user productivity.
 ## **Related Capabilities**
 
 **Within Build and Deploy:**
+
 - [Platform as a Service (iPaaS)](ipaas.md) - Secure application integration
 - [Infrastructure as Code](infrastructure-as-code.md) - Automated infrastructure with identity controls
 - [Code Assistant](code-assistant.md) - AI-powered development with security guidance
 
 **Other Building Blocks:**
+
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Continuous security posture monitoring
 - [Application Observability](../observe/application-observability.md) - Monitor authentication patterns
 

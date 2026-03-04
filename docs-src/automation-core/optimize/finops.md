@@ -82,10 +82,12 @@ Organizations commonly leverage FinOps to:
 ## **Related Capabilities**
 
 **Within Optimize:**
+
 - [Automated Resource Management](automated-resource-management.md) - Optimize resource costs and utilization
 - [Automated Resilience & Compliance](automated-resilience.md) - Balance security investments with cost efficiency
 
 **Other Building Blocks:**
+
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Track infrastructure provisioning costs
 - [Application Observability](../observe/application-observability.md) - Correlate performance with cost
 - [Network Performance](../observe/network-performance.md) - Analyze network infrastructure costs
