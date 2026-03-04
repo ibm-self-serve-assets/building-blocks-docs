@@ -17,6 +17,11 @@ Automated Resilience & Compliance focuses on continuously safeguarding applicati
 
 ---
 
+## **High Level Architecture**
+
+<img width="1307" height="786" alt="image" src="https://github.com/user-attachments/assets/61e1d243-b573-4651-a820-c52cf15c7df8" />
+
+---
 ## **Why It Matters for Enterprises**
 
 Modern enterprises operate highly distributed, containerized workloads
