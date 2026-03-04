@@ -1,20 +1,38 @@
-# Optimize Building Blocks
+# **Optimize Building Blocks**
+
+[← Back to Automation Core](../index.md)
 
 Optimize focuses on continuously improving cost efficiency, operational stability, and resource utilization across hybrid cloud environments. It brings together financial visibility, resilience automation, and intelligent resource management to ensure applications remain performant, compliant, and economically sustainable.
 
-The Building Block of Optimize includes:
+## **Core Capabilities**
 
-- **Automated Resilience & Compliance** – enabled by IBM Concert, delivers centralized visibility into application risk, vulnerabilities, and compliance posture. It strengthens governance and operational resilience by correlating security, configuration, and runtime insights. 
-- **FinOps** – powered by Aptio, provides financial transparency and cost intelligence, allowing organizations to understand, allocate, and optimize cloud investments with precision.
-- **Automated Resource Management** – driven by IBM Turbonomic, ensures applications receive the right resources at the right time, preserving performance while preventing waste and overprovisioning. 
+| Capability | Technology | Description |
+|------------|-----------|-------------|
+| **[Automated Resilience & Compliance](automated-resilience.md)** | IBM Concert | Centralized visibility into application risk, vulnerabilities, and compliance posture |
+| **[FinOps](finops.md)** | Aptio | Financial transparency and cost intelligence for cloud investments |
+| **[Automated Resource Management](automated-resource-management.md)** | IBM Turbonomic | Intelligent resource allocation ensuring performance while preventing waste |
 
-## Github Repository
+## **Github Repository**
 Code for these accelerators can be found in the [Optimize building blocks repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/optimize)
 
-## Use Cases
+## **Use Cases**
 
-- **Automated Resilience & Compliance (IBM Concert)** → Organizations leverage this capability to continuously monitor CVE exposure, detect compliance drift, manage certificate lifecycles, assess security posture, map dependency risks, and identify systemic resilience weaknesses before they affect business-critical workloads.  
-- **FinOps** → Cost transparency across teams, budget forecasting, spend anomaly detection, granular cost allocation, unit economics analysis, ROI evaluation for cloud initiatives, and identifying optimization opportunities across multi-cloud environments.  
-- **Automated Resource Management** → Typical scenarios involve real-time resource scaling, workload placement optimization, infrastructure bottleneck prevention, SLA protection, container density optimization, automated performance remediation, and balancing cost-performance trade-offs. 
+### **[Automated Resilience & Compliance (IBM Concert)](automated-resilience.md)**
+Organizations leverage this capability to continuously monitor CVE exposure, detect compliance drift, manage certificate lifecycles, assess security posture, map dependency risks, and identify systemic resilience weaknesses before they affect business-critical workloads.
+
+### **[FinOps](finops.md)**
+Cost transparency across teams, budget forecasting, spend anomaly detection, granular cost allocation, unit economics analysis, ROI evaluation for cloud initiatives, and identifying optimization opportunities across multi-cloud environments.
+
+### **[Automated Resource Management (IBM Turbonomic)](automated-resource-management.md)**
+Typical scenarios involve real-time resource scaling, workload placement optimization, infrastructure bottleneck prevention, SLA protection, container density optimization, automated performance remediation, and balancing cost-performance trade-offs.
+
+---
+
+## **Related Building Blocks**
+
+- **[Build and Deploy](../build/index.md)** - Automate infrastructure and application deployment
+- **[Observe](../observe/index.md)** - Monitor and analyze application and infrastructure performance
+
+---
 
 Together, these building blocks establish a closed-loop optimization model where cost efficiency, resilience, and performance continuously inform and enhance one another.

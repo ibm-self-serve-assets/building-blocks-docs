@@ -1,13 +1,22 @@
-## **Automated Resilience & Compliance**
-Automated Resilience & Compliance focuses on continuously safeguarding
-application stability, security posture, and regulatory alignment across
-complex hybrid cloud environments. It provides enterprises with unified
-visibility into operational risks, vulnerabilities, and compliance
-deviations, enabling proactive rather than reactive management. This
-building block transforms resilience and governance from periodic audits
-into continuous, automated practices.
+# **Automated Resilience & Compliance**
 
-### **Why It Matters for Enterprises**
+[← Back to Optimize](index.md) | [← Back to Automation Core](../index.md)
+
+---
+
+## **Overview**
+
+Automated Resilience & Compliance focuses on continuously safeguarding application stability, security posture, and regulatory alignment across complex hybrid cloud environments. It provides enterprises with unified visibility into operational risks, vulnerabilities, and compliance deviations, enabling proactive rather than reactive management.
+
+**Core Focus Areas:**
+- 🛡️ **Security Posture** - Continuous vulnerability monitoring
+- 📋 **Compliance Tracking** - Regulatory alignment
+- 🔐 **Certificate Management** - Lifecycle automation
+- 🔗 **Dependency Mapping** - Risk correlation
+
+---
+
+## **Why It Matters for Enterprises**
 
 Modern enterprises operate highly distributed, containerized workloads
 where risks emerge dynamically --- from newly disclosed vulnerabilities
@@ -18,26 +27,28 @@ reduces operational risk, strengthens governance, minimizes downtime,
 and supports regulatory obligations without introducing friction into
 delivery pipelines.
 
-### **What We Do Here**
+## **What We Do Here**
 
-This building block centralizes resilience and compliance intelligence
-using platforms such as IBM Concert, correlating security, runtime, and
-configuration insights. It enables organizations to detect
-vulnerabilities, identify systemic weaknesses, evaluate compliance
-posture, and prioritize remediation actions based on risk impact. The
-emphasis is on creating actionable intelligence rather than simply
-generating alerts.
+This building block centralizes resilience and compliance intelligence using platforms such as IBM Concert, correlating security, runtime, and configuration insights. It enables organizations to detect vulnerabilities, identify systemic weaknesses, evaluate compliance posture, and prioritize remediation actions based on risk impact.
 
-### **Key Features & Capabilities**
+> **💡 Key Principle:** Create actionable intelligence rather than simply generating alerts.
 
--   Unified visibility across applications, clusters, and environments.
--   Continuous vulnerability and CVE exposure monitoring.
--   Compliance posture tracking and drift detection.
--   Certificate lifecycle and expiration management.
--   Dependency and risk correlation across services.
--   Risk-based prioritization and remediation guidance.
+---
 
-### **Core Capabilities**
+## **Key Features & Capabilities**
+
+| Feature | Capability |
+|---------|-----------|
+| 👁️ Unified visibility | Applications, clusters, environments |
+| 🔍 Continuous vulnerability monitoring | CVE exposure tracking |
+| 📋 Compliance posture tracking | Drift detection |
+| 🔐 Certificate lifecycle management | Expiration prevention |
+| 🔗 Dependency & risk correlation | Service mapping |
+| 🎯 Risk-based prioritization | Remediation guidance |
+
+---
+
+## **Core Capabilities**
 
 Automated Resilience & Compliance delivers continuous risk intelligence
 by combining operational telemetry, vulnerability data, and governance
@@ -47,14 +58,36 @@ application dependencies, infrastructure conditions, and security
 findings, it enables more accurate impact analysis and faster
 decision-making.
 
-### **Use Cases**
+## **Use Cases**
 
-Organizations typically adopt this capability to:
+**Organizations typically adopt this capability to:**
 
--   Continuously detect and assess CVE exposure across workloads.
--   Identify compliance drift across Kubernetes / OpenShift
-    environments.
--   Prevent outages caused by expired or mismanaged certificates.
--   Map vulnerabilities to affected applications and business services.
--   Prioritize remediation based on risk severity and blast radius.
--   Improve audit readiness through continuous compliance tracking.
+| Use Case | Benefit |
+|----------|---------|
+| 🔍 Continuously detect CVE exposure | Proactive security |
+| 📋 Identify compliance drift | Regulatory readiness |
+| 🔐 Prevent certificate-related outages | Service continuity |
+| 🔗 Map vulnerabilities to services | Impact assessment |
+| 🎯 Prioritize remediation by risk | Efficient resource use |
+| ✅ Improve audit readiness | Continuous compliance |
+
+---
+
+> **🎯 Strategic Value:** Automated Resilience & Compliance transforms resilience and governance from periodic audits into continuous, automated practices that reduce operational risk and strengthen enterprise security posture.
+
+---
+
+## **Related Capabilities**
+
+**Within Optimize:**
+- [FinOps](finops.md) - Balance security investments with cost efficiency
+- [Automated Resource Management](automated-resource-management.md) - Ensure compliant resource allocation
+
+**Other Building Blocks:**
+- [Application Observability](../observe/application-observability.md) - Monitor application health and security
+- [Authentication Management](../build/authentication-management.md) - Strengthen identity and access controls
+- [Infrastructure as Code](../build/infrastructure-as-code.md) - Ensure infrastructure compliance
+
+---
+
+[← Back to Optimize](index.md)

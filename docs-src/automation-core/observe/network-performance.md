@@ -1,10 +1,20 @@
-## **Network Performance -- Intelligent Visibility for Modern Networks**
+# **Network Performance -- Intelligent Visibility for Modern Networks**
 
-Network Performance monitoring provides deep visibility into the
-behavior, health, and efficiency of enterprise network infrastructures.
-It enables organizations to analyze traffic patterns, detect
-degradations, identify bottlenecks, and ensure consistent service
-delivery across complex, distributed environments.
+[← Back to Observe](index.md) | [← Back to Automation Core](../index.md)
+
+---
+
+## **Overview**
+
+Network Performance monitoring provides deep visibility into the behavior, health, and efficiency of enterprise network infrastructures. It enables organizations to analyze traffic patterns, detect degradations, identify bottlenecks, and ensure consistent service delivery across complex, distributed environments.
+
+**Monitoring Dimensions:**
+- 📊 **Traffic Analysis** - Flow patterns & utilization
+- ⚡ **Performance Metrics** - Latency & throughput
+- 🔍 **Anomaly Detection** - Unusual behavior
+- 📈 **Capacity Planning** - Growth trends
+
+---
 
 ## **Operational Context**
 Modern enterprise networks span data centers, cloud providers, branch
@@ -18,24 +28,33 @@ Network performance intelligence provides the operational clarity
 required to maintain reliability and service quality.
 
 ## **Why It Matters**
-Without comprehensive network visibility, enterprises face:
 
--   Undetected performance degradation\
--   Prolonged troubleshooting cycles\
--   Limited capacity planning insights\
--   Increased SLA violations\
--   Reduced application reliability
+**Without comprehensive network visibility, enterprises face:**
 
-Network performance analytics transform reactive problem resolution into
-proactive performance assurance.
+| Challenge | Impact |
+|-----------|--------|
+| 📉 Undetected performance degradation | Service quality issues |
+| ⏱️ Prolonged troubleshooting cycles | Higher operational costs |
+| 📊 Limited capacity planning insights | Unexpected bottlenecks |
+| ⚠️ Increased SLA violations | Customer dissatisfaction |
+| 🔻 Reduced application reliability | Business disruption |
+
+> **💡 Key Insight:** Network performance analytics transform reactive problem resolution into proactive performance assurance.
+
+---
 
 ## **Enterprise Challenges Solved**
--   Fragmented network monitoring tools\
--   Lack of end-to-end traffic visibility\
--   Difficulty diagnosing intermittent issues\
--   Limited insight into network utilization trends\
--   Poor correlation between network and application performance\
--   Scaling challenges in hybrid environments
+
+| Challenge | Solution |
+|-----------|----------|
+| 🔀 Fragmented network monitoring tools | Unified monitoring platform |
+| 👁️ Lack of end-to-end traffic visibility | Comprehensive flow analysis |
+| 🐛 Difficulty diagnosing intermittent issues | Historical trend analysis |
+| 📊 Limited insight into utilization trends | Predictive analytics |
+| 🔗 Poor network-application correlation | Integrated observability |
+| 📈 Scaling challenges in hybrid environments | Multi-vendor support |
+
+---
 
 ## **Technology Enablement -- IBM SevOne**
 Network Performance is enabled by IBM SevOne, which delivers scalable,
@@ -67,26 +86,34 @@ security issues.
 
 ## **Representative Use Cases**
 
-Organizations commonly leverage network performance monitoring to:
+**Organizations commonly leverage network performance monitoring to:**
 
--   Detect network bottlenecks before service impact\
--   Optimize network capacity and utilization\
--   Troubleshoot latency and packet loss issues\
--   Monitor SLA compliance\
--   Analyze traffic behavior across hybrid clouds\
--   Support network modernization initiatives\
--   Improve application performance correlation
+- 🎯 Detect network bottlenecks before service impact
+- 📊 Optimize network capacity and utilization
+- 🔍 Troubleshoot latency and packet loss issues
+- ✅ Monitor SLA compliance
+- ☁️ Analyze traffic behavior across hybrid clouds
+- 🔄 Support network modernization initiatives
+- 🔗 Improve application performance correlation
+
+---
 
 ## **Operational Impact**
 
-Enterprises benefit through:
+**Enterprises benefit through:**
 
--   Faster issue detection and resolution\
--   Reduced operational downtime\
--   Improved network reliability\
--   Enhanced capacity planning\
--   Better visibility into traffic dynamics\
--   Proactive performance optimization
+| Benefit | Outcome |
+|---------|---------|
+| ⚡ Faster issue detection & resolution | Reduced MTTR |
+| 🛡️ Reduced operational downtime | Higher availability |
+| 📈 Improved network reliability | Better service quality |
+| 📊 Enhanced capacity planning | Cost optimization |
+| 👁️ Better visibility into traffic dynamics | Informed decisions |
+| 🎯 Proactive performance optimization | Preventive maintenance |
+
+---
+
+> **🎯 Strategic Outcome:** Network Performance intelligence transforms network monitoring into a strategic operational capability, enabling enterprises to maintain stability, scalability, and service reliability across increasingly complex digital infrastructures.
 
 ## **Strategic Outcome**
 
@@ -94,3 +121,19 @@ Network Performance intelligence transforms network monitoring into a
 strategic operational capability, enabling enterprises to maintain
 stability, scalability, and service reliability across increasingly
 complex digital infrastructures.
+
+---
+
+## **Related Capabilities**
+
+**Within Observe:**
+- [Application Observability](application-observability.md) - Correlate network and application performance
+
+**Other Building Blocks:**
+- [Infrastructure as Code](../build/infrastructure-as-code.md) - Monitor network infrastructure deployments
+- [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize network resource allocation
+- [FinOps](../optimize/finops.md) - Analyze network infrastructure costs
+
+---
+
+[← Back to Observe](index.md)
