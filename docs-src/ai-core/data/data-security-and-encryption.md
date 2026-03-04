@@ -6,6 +6,8 @@ The Data Security and Encryption building block combines critical capabilities f
 
 This building block provides comprehensive data protection capabilities using IBM watsonx.data Intelligence, combining automated project and catalog management with advanced data masking and governance workflows.
 
+---
+
 ## Key Components
 
 ### 1. Project & Catalog Automation
@@ -17,34 +19,43 @@ REST API-based workflows for creating categories, business terms, data protectio
 ### 3. Guardium Integration (Coming Soon)
 Advanced data security, monitoring, and encryption enforcement with IBM Guardium.
 
+---
+
 ## Features
 
 ### Data Governance
+
 - **Automated Setup**: Python scripts for project and catalog creation
 - **Category Management**: Organize data by sensitivity levels
 - **Business Terms**: Define and manage business vocabulary
 - **Policy Enforcement**: Automated policy application
 
 ### Data Protection
+
 - **Data Masking**: Redact sensitive information (email, SSN, etc.)
 - **Access Controls**: Role-based data access
 - **Encryption**: Data encryption at rest and in transit
 - **Audit Trails**: Track data access and modifications
 
 ### Compliance
+
 - **Regulatory Support**: GDPR, CCPA, HIPAA compliance
 - **Data Classification**: Automatic data sensitivity classification
 - **Policy Management**: Centralized policy administration
 - **Reporting**: Compliance reporting and monitoring
 
+---
 
 ## Prerequisites
 
-- IBM Cloud account with access to watsonx.data Intelligence
-- IBM Cloud Object Storage instance and credentials
-- IBM API Key with sufficient permissions
-- Installed: `curl`, `jq`, Python 3.x, `requests` library
-- Correct service endpoints for your IBM Cloud region
+!!! info "Requirements"
+    - IBM Cloud account with access to watsonx.data Intelligence
+    - IBM Cloud Object Storage instance and credentials
+    - IBM API Key with sufficient permissions
+    - Installed: `curl`, `jq`, Python 3.x, `requests` library
+    - Correct service endpoints for your IBM Cloud region
+
+---
 
 ## Getting Started
 
@@ -52,7 +63,7 @@ Advanced data security, monitoring, and encryption enforcement with IBM Guardium
 
 ```bash
 git clone https://github.com/ibm-self-serve-assets/building-blocks.git
-cd building-blocks/data-for-ai/data-security-and-encryption/
+cd building-blocks/data-for-ai/data-security-and-encryption/assets/data-protection-automation
 ```
 
 ### Step 2: Configure Input JSON
@@ -97,10 +108,13 @@ python setup_ibm_projects_catalog.py
 ```
 
 This will:
+
 - Authenticate with IBM Cloud IAM
 - Create a project with configured storage
 - Create a catalog with governance enabled
 - Print responses for verification
+
+---
 
 ## Data Protection Workflow
 
@@ -189,7 +203,10 @@ curl -X GET "${CATALOG_API_BASE}/v2/assets/<ASSET_ID>/data" \
   -H "Accept: application/json"
 ```
 
-Expected result: Email column is masked (e.g., `***` or `xxxxx`)
+!!! success "Expected Result"
+    Email column is masked (e.g., `***` or `xxxxx`)
+
+---
 
 ## Configuration Reference
 
@@ -208,6 +225,8 @@ Expected result: Email column is masked (e.g., `***` or `xxxxx`)
 | | `is_governed` | Governance enabled | `true` |
 | **COS Bucket** | `bucket_name` | COS bucket name | `bucket-xyz` |
 | | `endpoint_url` | COS endpoint | `s3.eu-de.cloud-object-storage...` |
+
+---
 
 ## Masking Methods
 
@@ -247,92 +266,164 @@ Encrypts data while maintaining its format (e.g., credit card numbers remain 16 
 }
 ```
 
+---
+
 ## Use Cases
 
 ### Healthcare (HIPAA Compliance)
+
 - Mask patient identifiers (SSN, medical record numbers)
 - Protect PHI (Protected Health Information)
 - Audit access to sensitive medical data
 
 ### Financial Services (PCI DSS)
+
 - Mask credit card numbers
 - Protect account information
 - Secure transaction data
 
 ### Retail (GDPR/CCPA)
+
 - Mask customer email addresses
 - Protect personal information
 - Enable data subject rights
 
 ### Enterprise Data Governance
+
 - Classify data by sensitivity
 - Enforce role-based access
 - Track data lineage and usage
 
+---
+
 ## Best Practices
 
 ### Security
-1. **Rotate API Keys**: Regularly rotate IBM Cloud API keys
-2. **Least Privilege**: Grant minimum required permissions
-3. **Audit Logs**: Enable and monitor audit logs
-4. **Encryption**: Use encryption for data at rest and in transit
+
+!!! tip "Security Guidelines"
+    1. **Rotate API Keys**: Regularly rotate IBM Cloud API keys
+    2. **Least Privilege**: Grant minimum required permissions
+    3. **Audit Logs**: Enable and monitor audit logs
+    4. **Encryption**: Use encryption for data at rest and in transit
 
 ### Governance
+
 1. **Data Classification**: Classify all sensitive data
 2. **Policy Review**: Regularly review and update policies
 3. **Access Control**: Implement role-based access control
 4. **Compliance**: Maintain compliance documentation
 
 ### Operations
+
 1. **Automation**: Automate policy deployment
 2. **Monitoring**: Monitor policy violations
 3. **Testing**: Test masking rules before production
 4. **Documentation**: Document all governance rules
+
+---
 
 ## Guardium Integration (Coming Soon)
 
 The next iteration will add IBM Guardium capabilities:
 
 ### Data Activity Monitoring
+
 - Track sensitive data access in real-time
 - Detect anomalous access patterns
 - Generate security alerts
 
 ### Encryption & Key Management
+
 - Enforce encryption policies consistently
 - Centralized key management
 - Automated key rotation
 
 ### Compliance Reporting
+
 - Automate reporting for GDPR, CCPA, HIPAA
 - Generate audit trails
 - Track compliance metrics
 
 ### Integration with watsonx.data
+
 - Unified data protection and governance
 - Seamless policy enforcement
 - Centralized monitoring
 
 Learn more: [IBM Guardium Documentation](https://www.ibm.com/docs/en/gdp/12.x)
 
+---
+
 ## Troubleshooting
 
 ### Common Issues
 
-**Authentication Errors**:
-- Verify API key is valid
-- Check token expiration
-- Ensure proper permissions
+!!! warning "Common Problems and Solutions"
+    
+    **Authentication Errors:**
+    
+    - Verify API key is valid
+    - Check token expiration
+    - Ensure proper permissions
+    
+    **Policy Not Applied:**
+    
+    - Verify rule and term IDs are correct
+    - Check policy is activated
+    - Confirm user roles match target roles
+    
+    **Masking Not Working:**
+    
+    - Verify column names match criteria
+    - Check rule is linked to policy
+    - Confirm policy is applied to asset
 
-**Policy Not Applied**:
-- Verify rule and term IDs are correct
-- Check policy is activated
-- Confirm user roles match target roles
+---
 
-**Masking Not Working**:
-- Verify column names match criteria
-- Check rule is linked to policy
-- Confirm policy is applied to asset
+## IBM Products Used
+
+This building block leverages the following IBM products and services:
+
+### IBM watsonx.data Intelligence
+AI-powered data intelligence and governance platform for enterprise data management.
+
+- **Purpose**: Data governance, catalog management, and policy enforcement
+- **Documentation**: [watsonx.data Intelligence Documentation](https://www.ibm.com/docs/en/watsonx/wdi/saas)
+- **API Reference**: [watsonx.data API](https://cloud.ibm.com/apidocs/watson-data-api)
+- **Getting Started**: [Setting up watsonx.data Intelligence](https://www.ibm.com/docs/en/watsonx/wdi/saas?topic=cloud-setting-up-watsonxdata-intelligence)
+
+### IBM Cloud Object Storage (COS)
+Scalable, secure object storage for unstructured data with built-in encryption.
+
+- **Purpose**: Secure data storage with encryption at rest
+- **Documentation**: [IBM COS Documentation](https://cloud.ibm.com/docs/cloud-object-storage)
+- **Security Features**: [COS Security](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-security)
+- **Getting Started**: [COS Getting Started](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage)
+
+### IBM Knowledge Catalog
+Enterprise catalog for discovering, curating, and governing data assets.
+
+- **Purpose**: Data classification, business terms, and policy management
+- **Documentation**: [Knowledge Catalog Documentation](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=services-watson-knowledge-catalog)
+- **API Reference**: [Knowledge Catalog API](https://cloud.ibm.com/apidocs/knowledge-catalog)
+- **Data Protection**: [Data Protection Rules](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=catalog-data-protection-rules)
+
+### IBM Guardium Data Protection (Coming Soon)
+Comprehensive data security and compliance solution.
+
+- **Purpose**: Advanced data activity monitoring, encryption, and compliance reporting
+- **Documentation**: [IBM Guardium Documentation](https://www.ibm.com/docs/en/gdp/12.x)
+- **Product Page**: [IBM Guardium](https://www.ibm.com/products/guardium-data-protection)
+- **Integration**: Seamless integration with watsonx.data for unified data protection
+
+### IBM Cloud IAM
+Identity and Access Management for secure authentication and authorization.
+
+- **Purpose**: API key management and access control
+- **Documentation**: [IBM Cloud IAM Documentation](https://cloud.ibm.com/docs/account?topic=account-iamoverview)
+- **API Keys**: [Managing API Keys](https://cloud.ibm.com/docs/account?topic=account-userapikey)
+
+---
 
 ## Resources
 
@@ -341,9 +432,12 @@ Learn more: [IBM Guardium Documentation](https://www.ibm.com/docs/en/gdp/12.x)
 - [Knowledge Catalog API](https://cloud.ibm.com/apidocs/knowledge-catalog)
 - [IBM Guardium](https://www.ibm.com/products/guardium-data-protection)
 
+---
+
 ## Support
 
 For issues or questions:
+
 - [GitHub Issues](https://github.com/ibm-self-serve-assets/building-blocks/issues)
 - [IBM Cloud Support](https://cloud.ibm.com/unifiedsupport/supportcenter)
 - [watsonx.data Documentation](https://www.ibm.com/docs/en/watsonxdata)

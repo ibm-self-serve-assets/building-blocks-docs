@@ -6,7 +6,22 @@ The Vector Search building block provides a modular framework for building GenAI
 
 This building block offers an ingestion API that simplifies the process of chunking, embedding, and storing documents in vector databases. It's designed to save significant development and testing time by providing ready-to-use pipelines with extensible customization options.
 
-![Vector Search Architecture](https://github.com/user-attachments/assets/b259ff95-163e-427c-93f3-15a99462f777)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b259ff95-163e-427c-93f3-15a99462f777" alt="Vector Search Architecture" />
+</p>
+
+---
+
+## IBM Products Used
+
+This building block leverages the following IBM products and services:
+
+- **[watsonx.ai](https://www.ibm.com/products/watsonx-ai)**: Foundation models and embedding services for document vectorization
+- **[watsonx.data](https://www.ibm.com/products/watsonx-data)**: Data lakehouse platform with integrated vector database support
+- **[IBM Cloud Object Storage (COS)](https://www.ibm.com/cloud/object-storage)**: Scalable object storage for document repositories
+- **[Milvus](https://milvus.io/)**: Open-source vector database for semantic search (integrated with watsonx.data)
+
+---
 
 ## Features
 
@@ -16,27 +31,23 @@ This building block offers an ingestion API that simplifies the process of chunk
 - **Flexible Chunking**: Multiple chunking strategies (Docling hybrid, Markdown text splitter, recursive)
 - **REST API**: Easy-to-use API with authentication
 
+---
+
 ## Supported Vector Databases
 
-The building block supports multiple vector database solutions:
+The building block provides integrations with multiple vector database platforms, each optimized for different use cases and deployment scenarios.
 
-### [DataStax Astra DB](datastax-astra-db.md)
-A fully managed, cloud-native vector database built on Apache Cassandra, offering:
-- Serverless deployment
-- Global distribution
-- Built-in vector search capabilities
-- Seamless scaling
+!!! info "Available Integrations"
+    - **[Milvus](milvus.md)**: High-performance vector database optimized for billion-scale vector search ✅ **Available Now**
+    - **[OpenSearch](opensearch.md)**: Enterprise search with hybrid vector and keyword search capabilities 🔄 **Planned**
+    - **[DataStax Astra DB](datastax-astra-db.md)**: Cloud-native vector database with global distribution 🔄 **Planned**
 
-### [OpenSearch](opensearch.md)
-An open-source search and analytics suite with vector search capabilities:
-- Hybrid search (keyword + vector)
-- Flexible deployment options
-- Rich query DSL
-- Integration with existing OpenSearch clusters
+---
 
 ## Key Capabilities
 
 ### Document Loaders
+
 - HTML documents
 - JSON files
 - PDF documents
@@ -44,21 +55,26 @@ An open-source search and analytics suite with vector search capabilities:
 - Custom loaders
 
 ### Embedding Models
+
 - **Dense embeddings**: Traditional vector representations
 - **Hybrid embeddings**: Combination of dense and sparse vectors
 - **Dual embeddings**: Separate embeddings for different purposes
 - Support for HuggingFace, watsonx.ai, and IBM models
 
 ### Document Processing
+
 - Docling/Markdown processing
 - Picture annotation
 - Table cleanup
 - Custom processing pipelines
 
 ### Chunking Strategies
+
 - **Docling hybrid chunker**: Intelligent chunking based on document structure
 - **Markdown text splitter**: Preserves markdown formatting
 - **Recursive text splitter**: Hierarchical text splitting
+
+---
 
 ## Deployment Options
 
@@ -69,15 +85,18 @@ The Vector Search API can be deployed:
 - **Red Hat OpenShift**: Enterprise Kubernetes platform
 - **Docker**: Containerized deployment
 
+---
+
 ## Getting Started
 
 ### Prerequisites
 
-1. watsonx.data environment with vector database (Milvus/Astra DB/OpenSearch)
-2. Python 3.13 installed locally
-3. git installed locally
-4. IBM COS credentials
-5. Vector database credentials
+!!! info "Requirements"
+    1. watsonx.data environment with Milvus vector database
+    2. Python 3.13 installed locally
+    3. git installed locally
+    4. IBM COS credentials
+    5. Vector database credentials
 
 ### Installation
 
@@ -118,13 +137,15 @@ uvicorn app.main:app --host 127.0.0.1 --port 4050 --reload
 
 Access Swagger UI at: `http://127.0.0.1:4050/docs`
 
+---
+
 ## API Usage
 
 ### Ingestion Endpoint
 
 **Endpoint**: `POST /ingest-files`
 
-**Request Body**:
+**Request Body:**
 ```json
 {
     "bucket_name": "<cos-bucket>",
@@ -133,18 +154,19 @@ Access Swagger UI at: `http://127.0.0.1:4050/docs`
 }
 ```
 
-**Parameters**:
+**Parameters:**
+
 - `bucket_name`: Name of the S3/COS bucket containing documents
 - `collection_name`: Target collection to create or upsert into
 - `chunk_type`: Chunking strategy (DOCLING_DOCS, MARKDOWN, RECURSIVE)
 
-**Headers**:
+**Headers:**
 ```
 REST_API_KEY: <your-secret>
 Content-Type: application/json
 ```
 
-**Example using Python**:
+**Example using Python:**
 ```python
 import json, requests
 
@@ -165,6 +187,8 @@ response = requests.post(url, headers=headers, data=payload)
 print(response.text)
 ```
 
+---
+
 ## Use Cases
 
 - **Semantic Search**: Find documents based on meaning, not just keywords
@@ -172,6 +196,8 @@ print(response.text)
 - **Knowledge Bases**: Build searchable knowledge repositories
 - **Document Discovery**: Find similar documents across large collections
 - **Question Answering**: Retrieve relevant context for Q&A systems
+
+---
 
 ## Customization
 
@@ -183,30 +209,41 @@ The API supports extensive customization:
 - **Chunking Strategies**: Adjust chunk size and overlap
 - **Metadata Extraction**: Custom metadata fields
 
+---
+
 ## Coming Soon
 
-- .png and .jpg VLM Support
-- Additional docling processing functions (image annotation, table exports)
-- Enhanced error logging with structured logs
-- Performance optimization for large-scale ingestion
-- Additional vector database integrations
+!!! note "Upcoming Features"
+    - .png and .jpg VLM Support
+    - Additional docling processing functions (image annotation, table exports)
+    - Enhanced error logging with structured logs
+    - Performance optimization for large-scale ingestion
+    - Additional vector database integrations
+
+---
 
 ## Performance Considerations
 
-- **Batch Processing**: Process multiple documents in parallel
-- **Chunk Size**: Balance between context and retrieval precision
-- **Embedding Dimensions**: Higher dimensions = more accuracy but slower
-- **Index Configuration**: Optimize for your query patterns
+!!! tip "Optimization Guidelines"
+    - **Batch Processing**: Process multiple documents in parallel
+    - **Chunk Size**: Balance between context and retrieval precision
+    - **Embedding Dimensions**: Higher dimensions = more accuracy but slower
+    - **Index Configuration**: Optimize for your query patterns
+
+---
 
 ## Resources
 
 - [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/vector-search)
-- [DataStax Astra DB Documentation](datastax-astra-db.md)
-- [OpenSearch Documentation](opensearch.md)
+- [Milvus Documentation](milvus.md)
+
+---
 
 ## Team
 
 **Created and Architected By**: Anand Das, Anindya Neogi, Joseph Kim, Shivam Solanki
+
+---
 
 ## Support
 

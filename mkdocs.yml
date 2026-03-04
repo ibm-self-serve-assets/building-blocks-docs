@@ -26,10 +26,17 @@ theme:
 extra_css:
   - stylesheets/carbon.css
 
+extra_javascript:
+  - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
+
 markdown_extensions:
   - admonition
   - attr_list
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight
   - pymdownx.tabbed
   - pymdownx.details
@@ -59,11 +66,13 @@ nav:
       - Data:
           - Overview: ai-core/data/index.md
           - Question & Answer: ai-core/data/q-and-a.md
+          - Data Ingestion: ai-core/data/data-ingestion.md
           - Zero-Copy Lakehouse: ai-core/data/zero-copy-lakehouse.md
           - Vector Search:
               - Overview: ai-core/data/vector-search/index.md
-              - DataStax Astra DB: ai-core/data/vector-search/datastax-astra-db.md
+              - Milvus: ai-core/data/vector-search/milvus.md
               - OpenSearch: ai-core/data/vector-search/opensearch.md
+              - DataStax Astra DB: ai-core/data/vector-search/datastax-astra-db.md
           - Data Security and Encryption: ai-core/data/data-security-and-encryption.md
 
   - Automation Core:

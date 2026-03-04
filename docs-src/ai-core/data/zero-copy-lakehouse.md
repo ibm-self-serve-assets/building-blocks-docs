@@ -8,6 +8,8 @@ A Zero-Copy Lakehouse is a data architecture approach where multiple analytics, 
 
 Instead of copying data between warehouses, lakes, and ML pipelines, a zero-copy approach enables shared access with governance and performance optimizations.
 
+---
+
 ## Why It Matters
 
 Traditional setups involve ETL (Extract, Transform, Load) pipelines that duplicate data into multiple systems, leading to:
@@ -19,13 +21,18 @@ Traditional setups involve ETL (Extract, Transform, Load) pipelines that duplica
 
 Zero-copy lakehouse eliminates data silos by providing a single source of truth for BI, AI, ML, and analytics workloads.
 
+---
+
 ## Benefits
 
-- **Cost Savings**: No redundant storage costs
-- **Faster Insights**: Avoids ETL delays
-- **Single Source of Truth**: Reduces risk of inconsistent data
-- **Flexibility**: Multiple engines/tools access the same data
-- **Governance**: One layer controls access everywhere
+!!! success "Key Advantages"
+    - **Cost Savings**: No redundant storage costs
+    - **Faster Insights**: Avoids ETL delays
+    - **Single Source of Truth**: Reduces risk of inconsistent data
+    - **Flexibility**: Multiple engines/tools access the same data
+    - **Governance**: One layer controls access everywhere
+
+---
 
 ## IBM watsonx.data & Zero Copy
 
@@ -34,6 +41,8 @@ In the IBM watsonx.data lakehouse:
 - Built on open table formats (Iceberg/Delta)
 - Provides federated query capability (query S3, Db2, Cloud Object Storage, external warehouses, all in place)
 - Ensures zero-copy data access with no need to ETL into another system
+
+---
 
 ## Architecture
 
@@ -54,6 +63,8 @@ s3_catalog"] --> Engine
     Queries --> Users["Data Scientists / Analysts"]
 ```
 
+---
+
 ## Watsonx.data Setup Automation
 
 The building block provides a Python script (`watsonxdata_setup.py`) that automates the setup of IBM watsonx.data resources using official APIs.
@@ -68,23 +79,26 @@ The building block provides a Python script (`watsonxdata_setup.py`) that automa
 
 ### Prerequisites
 
-1. Access to:
-   - IBM Cloud Account and AWS Account
-   - [watsonx.data SaaS instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1) on IBM Cloud
-   - [DB2 Database SaaS instance](https://cloud.ibm.com/docs/db2-saas?topic=db2-saas-provisioning) on IBM Cloud
-   - [AWS S3 - Simple Cloud Storage](https://aws.amazon.com/s3/)
+!!! info "Requirements"
+    1. Access to:
+       - IBM Cloud Account and AWS Account
+       - [watsonx.data SaaS instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1) on IBM Cloud
+       - [DB2 Database SaaS instance](https://cloud.ibm.com/docs/db2-saas?topic=db2-saas-provisioning) on IBM Cloud
+       - [AWS S3 - Simple Cloud Storage](https://aws.amazon.com/s3/)
+    
+    2. Python 3.8+ installed locally
+    
+    3. Install dependencies:
+       ```bash
+       pip install requests
+       ```
+    
+    4. Set your IBM Cloud API key:
+       ```bash
+       export IBM_API_KEY="your-ibm-cloud-api-key"
+       ```
 
-2. Python 3.8+ installed locally
-
-3. Install dependencies:
-   ```bash
-   pip install requests
-   ```
-
-4. Set your IBM Cloud API key:
-   ```bash
-   export IBM_API_KEY="your-ibm-cloud-api-key"
-   ```
+---
 
 ## Getting Started
 
@@ -92,7 +106,7 @@ The building block provides a Python script (`watsonxdata_setup.py`) that automa
 
 ```bash
 git clone https://github.com/ibm-self-serve-assets/building-blocks.git
-cd building-blocks/data-for-ai/zero-copy-lakehouse/
+cd building-blocks/data-for-ai/zero-copy-lakehouse/assets/setup-lakehouse
 ```
 
 ### Step 2: Configure Settings
@@ -126,11 +140,14 @@ python watsonxdata_setup.py
 ```
 
 This will:
+
 - Authenticate with IBM Cloud IAM
 - Create a project
 - Create a catalog
 - Register storage buckets
 - Configure database connections
+
+---
 
 ## Demo: Zero-Copy Lakehouse in Action
 
@@ -204,7 +221,10 @@ JOIN "cos_catalog"."customer"."customer" c ON a.customer_id = c.customer_id
 JOIN "db2_catalog"."customer_info"."customer_summary" cs ON cs.customer_id = a.customer_id;
 ```
 
-This query demonstrates accessing **S3, COS, and Db2** data directly without duplication, enabling **Zero-Copy Lakehouse** insights.
+!!! success "Zero-Copy in Action"
+    This query demonstrates accessing **S3, COS, and Db2** data directly without duplication, enabling **Zero-Copy Lakehouse** insights.
+
+---
 
 ## Use Cases
 
@@ -214,13 +234,62 @@ This query demonstrates accessing **S3, COS, and Db2** data directly without dup
 - **Data Governance**: Centralized access control and compliance
 - **AI/ML Pipelines**: Direct access to training data without movement
 
+---
+
 ## Best Practices
 
-- Keep your API keys secure and never commit them to git
-- Ensure your S3/COS buckets and Db2 tables exist before running the demo
-- For larger workloads, consider optimizing with Iceberg/Delta formats
-- Use appropriate access controls and encryption for sensitive data
-- Monitor query performance and optimize catalog configurations
+!!! tip "Implementation Guidelines"
+    - Keep your API keys secure and never commit them to git
+    - Ensure your S3/COS buckets and Db2 tables exist before running the demo
+    - For larger workloads, consider optimizing with Iceberg/Delta formats
+    - Use appropriate access controls and encryption for sensitive data
+    - Monitor query performance and optimize catalog configurations
+
+---
+
+## IBM Products Used
+
+This building block leverages the following IBM products and services:
+
+### IBM watsonx.data
+Open, hybrid, and governed data store built on an open lakehouse architecture.
+
+- **Purpose**: Federated query engine (Presto) for zero-copy data access across multiple sources
+- **Documentation**: [IBM watsonx.data Documentation](https://www.ibm.com/docs/en/watsonxdata)
+- **Getting Started**: [watsonx.data Getting Started](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-getting-started)
+- **Provisioning**: [Provisioning watsonx.data](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1)
+
+### IBM Cloud Object Storage (COS)
+Scalable, secure object storage for unstructured data with S3-compatible API.
+
+- **Purpose**: Data lake storage with Iceberg/Delta table formats
+- **Documentation**: [IBM COS Documentation](https://cloud.ibm.com/docs/cloud-object-storage)
+- **Integration**: [COS with watsonx.data](https://www.ibm.com/docs/en/watsonxdata?topic=catalogs-ibm-cos)
+- **Getting Started**: [COS Getting Started](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage)
+
+### IBM Db2 Database
+Enterprise-grade relational database for OLTP workloads.
+
+- **Purpose**: Operational database for real-time transactional data
+- **Documentation**: [IBM Db2 Documentation](https://www.ibm.com/docs/en/db2)
+- **SaaS Offering**: [Db2 on Cloud](https://www.ibm.com/docs/en/db2-saas)
+- **Provisioning**: [Provisioning Db2](https://cloud.ibm.com/docs/db2-saas?topic=db2-saas-provisioning)
+
+### Amazon S3
+Cloud object storage service (external integration).
+
+- **Purpose**: Multi-cloud data access without data movement
+- **Documentation**: [AWS S3 Documentation](https://aws.amazon.com/s3/)
+- **Integration**: [S3 with watsonx.data](https://www.ibm.com/docs/en/watsonxdata?topic=catalogs-amazon-s3)
+
+### Presto Query Engine
+Distributed SQL query engine for big data analytics (included in watsonx.data).
+
+- **Purpose**: Federated query execution across multiple data sources
+- **Documentation**: [Presto Documentation](https://prestodb.io/docs/current/)
+- **watsonx.data Integration**: [Presto in watsonx.data](https://www.ibm.com/docs/en/watsonxdata?topic=engines-presto)
+
+---
 
 ## Resources
 
@@ -228,6 +297,8 @@ This query demonstrates accessing **S3, COS, and Db2** data directly without dup
 - [IBM watsonx.data Documentation](https://www.ibm.com/docs/en/watsonxdata)
 - [Adding Storage and Catalog Pair](https://www.ibm.com/docs/en/watsonxdata/standard/2.0.x?topic=components-adding-storage-catalog-pair)
 - [Adding Database and Catalog Pair](https://www.ibm.com/docs/en/watsonxdata/standard/2.0.x?topic=components-adding-database-catalog-pair)
+
+---
 
 ## Support
 
