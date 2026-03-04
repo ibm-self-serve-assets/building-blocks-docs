@@ -29,7 +29,7 @@ Application observability addresses this complexity by correlating
 telemetry across the entire application stack.
 
 ## **High Level Architecture**
-<img width="1505" height="884" alt="image" src="https://github.com/user-attachments/assets/842c2800-2958-40c6-9d9b-bdd2d0b55589" />
+<img width="1500" height="769" alt="image" src="https://github.com/user-attachments/assets/a1d78635-3121-4501-b5a0-4cfe01b863fa" />
 
 
 ## **Why It Matters**
