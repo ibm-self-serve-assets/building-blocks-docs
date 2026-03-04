@@ -19,7 +19,7 @@ Automated Resilience & Compliance focuses on continuously safeguarding applicati
 
 ## **High Level Architecture**
 
-<img width="1503" height="886" alt="image" src="https://github.com/user-attachments/assets/4884409a-4f2b-4c1e-8abb-31a9dc37105a" />
+<img width="1495" height="776" alt="image" src="https://github.com/user-attachments/assets/bec5e8c3-fbc3-4e7a-a5c3-94d28accc293" />
 
 ---
 ## **Why It Matters for Enterprises**
