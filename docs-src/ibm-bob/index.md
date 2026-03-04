@@ -20,10 +20,14 @@ Instructions and related files for these custom modes can be found in their resp
 - [Domain Agent Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/ibm-bob/modes/domain-agent-builder): Bob builds a tool-augmented RAG agent for partner's custom specific domain.
 
 ### Data
-- [Data for AI](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/ibm-bob/base-mode): Specialized for data engineering, architecture, and data operations
-- [RAG Ingestion](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/ibm-bob/rag-ingestion-sse-mcp-server): Ingest IBM Cloud Object Storage (COS) into vector databases.
-- [RAG Retrieval](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/ibm-bob/rag-retrieval-sse-mcp-server): Retrieve from OpenSearch or Milvus.
-- [RAG Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/ibm-bob/advance-mode/rag-builder-mode): IBM Bob: Intelligence for Vector Search and Document Processing.
+- [Data Ingestion](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/data-ingestion/bob-mode/base-mode/ingestion.yaml): Comprehensive data ingestion for structured, semi-structured, and unstructured data
+- [Data Security and Encryption](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/data-security-and-encryption/bob-mode/base-mode/data-security.yaml): Data protection, masking, and encryption workflows
+- [Zero-Copy Lakehouse](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/zero-copy-lakehouse/bob-mode/base-mode/zero-copy-lakehouse.yaml): Federated query across databases and cloud object stores
+- [RAG Accelerator](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/question-and-answer/rag/bob-mode/base-mode/rag-builder.yaml): Complete RAG pipeline with document processing and semantic search
+- [Text-to-SQL](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/question-and-answer/text-to-sql/bob-mode/base-mode/text-to-sql.yaml): Natural language to SQL query conversion with metadata enrichment
+- [Milvus Vector Search](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/vector-search/milvus/bob-mode/base-mode/milvus.yaml): High-performance vector database for billion-scale search
+- [OpenSearch Vector Search](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/vector-search/opensearch/bob-mode/base-mode/opensearch.yaml): Enterprise search with hybrid vector and keyword capabilities
+- [DataStax Astra DB](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/vector-search/datastax-astradb/bob-mode/base-mode/astradb.yaml): Cloud-native vector database with global distribution
 
 ### Automation
 - [Application monitoring and observability expert](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/observe/application-observability/bob-modes/base-modes/application-observability.yaml): Connect Bob with the Instana MCP server.

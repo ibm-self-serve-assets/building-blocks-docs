@@ -138,7 +138,7 @@ The Text-to-SQL component converts natural language questions into executable SQ
 #### Architecture
 
 <p align="center">
-  <img src="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/data-for-ai/q-and-a/Text-To-SQL/images/image.png" alt="Text-to-SQL Architecture" />
+  <img src="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/data-for-ai/question-and-answer/text-to-sql/assets/asset-1/images/image.png" alt="Text-to-SQL Architecture" />
 </p>
 
 #### Prerequisites
