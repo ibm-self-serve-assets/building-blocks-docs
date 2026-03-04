@@ -26,5 +26,5 @@ Instructions and related files for these custom modes can be found in their resp
 - [RAG Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/ibm-bob/advance-mode/rag-builder-mode): IBM Bob: Intelligence for Vector Search and Document Processing.
 
 ### Automation
-- [Application monitoring and observability expert](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/observe/application-observability/ibm-bob/base-mode): Connect Bob with the Instana MCP server.
-- [Automated Resilience & Compliance](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resilience-and-compliance/ibm-bob/base-mode/application-resilience.yaml): Unified Vulnerability and Certificate Intelligence via IBM Concert.
+- [Application monitoring and observability expert](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/observe/application-observability/bob-modes/base-modes/application-observability.yaml): Connect Bob with the Instana MCP server.
+- [Automated Resilience & Compliance](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resilience-and-compliance/bob-modes/base-modes/application-resilience.yaml): Unified Vulnerability and Certificate Intelligence via IBM Concert.
