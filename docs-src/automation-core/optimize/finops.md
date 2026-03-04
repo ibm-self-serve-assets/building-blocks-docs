@@ -9,6 +9,7 @@
 FinOps (Financial Operations) establishes a data-driven discipline that enables organizations to manage, govern, and optimize cloud investments. As enterprises scale across hybrid and multi-cloud environments, financial visibility becomes as critical as performance monitoring.
 
 **FinOps Pillars:**
+
 - 💰 **Cost Visibility** - Granular spend tracking
 - 📊 **Budget Management** - Forecasting & planning
 - 🎯 **Optimization** - Waste reduction

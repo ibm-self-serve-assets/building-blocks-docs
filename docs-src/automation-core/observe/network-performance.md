@@ -9,6 +9,7 @@
 Network Performance monitoring provides deep visibility into the behavior, health, and efficiency of enterprise network infrastructures. It enables organizations to analyze traffic patterns, detect degradations, identify bottlenecks, and ensure consistent service delivery across complex, distributed environments.
 
 **Monitoring Dimensions:**
+
 - 📊 **Traffic Analysis** - Flow patterns & utilization
 - ⚡ **Performance Metrics** - Latency & throughput
 - 🔍 **Anomaly Detection** - Unusual behavior

@@ -9,6 +9,7 @@
 Automated Resource Management focuses on continuously optimizing application performance and infrastructure efficiency by dynamically aligning resource allocation with real-time demand. In modern hybrid and multi-cloud environments, this capability ensures that applications receive precisely the resources they require — **no more, no less**.
 
 **Optimization Dimensions:**
+
 - ⚡ **Performance** - Maintain SLA compliance
 - 💰 **Cost** - Eliminate waste
 - 📊 **Utilization** - Maximize efficiency

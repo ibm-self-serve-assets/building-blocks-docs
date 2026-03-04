@@ -9,6 +9,7 @@
 Automated Resilience & Compliance focuses on continuously safeguarding application stability, security posture, and regulatory alignment across complex hybrid cloud environments. It provides enterprises with unified visibility into operational risks, vulnerabilities, and compliance deviations, enabling proactive rather than reactive management.
 
 **Core Focus Areas:**
+
 - 🛡️ **Security Posture** - Continuous vulnerability monitoring
 - 📋 **Compliance Tracking** - Regulatory alignment
 - 🔐 **Certificate Management** - Lifecycle automation

@@ -9,6 +9,7 @@
 Authentication Management using IBM Verify delivers a unified, enterprise‑grade identity and access management solution that secures user access across cloud, hybrid, and on‑premises environments. IBM Verify centralizes authentication, access controls, and risk‑based decisions while enabling seamless, secure access to applications and services.
 
 **Core Security Pillars:**
+
 - 🔐 Centralized identity verification
 - 🎯 Risk-based adaptive access
 - 🔑 Multi-factor authentication (MFA)

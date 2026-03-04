@@ -9,6 +9,7 @@
 IBM's Code Assistant, commonly associated with Project Bob and watsonx Code Assistant, is an AI‑powered development assistant designed to augment modern software engineering workflows. Embedded directly within developer environments and IDEs, it provides contextual code generation, intelligent recommendations, automated refactoring, and real‑time quality insights.
 
 **AI-Powered Capabilities:**
+
 - 🤖 Natural language to code generation
 - 🔍 Context-aware suggestions
 - 🔄 Automated refactoring

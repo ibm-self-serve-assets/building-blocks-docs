@@ -9,6 +9,7 @@
 Modern enterprise environments demand automation that is repeatable, auditable, and scalable across both infrastructure and application layers. This architecture demonstrates a production-aligned automation model using Terraform for infrastructure provisioning and Ansible for application deployment and orchestration.
 
 **Automation Stack:**
+
 - 🏗️ **Terraform** - Infrastructure provisioning
 - ⚙️ **Ansible** - Application deployment & configuration
 - 🔄 **CI/CD Integration** - Continuous delivery

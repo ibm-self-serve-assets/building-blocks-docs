@@ -9,6 +9,7 @@
 Application Observability provides deep, contextual visibility into application behavior, performance, and dependencies by analyzing metrics, traces, logs, and events. Unlike traditional monitoring, observability enables teams to understand **why** issues occur, not just **what** failed.
 
 **Observability Pillars:**
+
 - 📊 **Metrics** - Performance indicators
 - 🔍 **Traces** - Transaction flows
 - 📝 **Logs** - Event records
