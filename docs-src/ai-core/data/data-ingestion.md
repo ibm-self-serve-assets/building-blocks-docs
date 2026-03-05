@@ -1,6 +1,6 @@
 # Data Ingestion Building Block
 
-Comprehensive data ingestion solutions for IBM watsonx.data covering unstructured, structured, and semi-structured data sources.
+Comprehensive data ingestion solutions for IBM watsonx.data covering unstructured and structured data sources.
 
 ## Overview
 
@@ -36,12 +36,6 @@ This building block leverages the following IBM products and services:
 - CDC (Change Data Capture) pipelines
 - Batch and streaming ingestion modes
 
-### Semi-Structured Data Ingestion
-
-- JSON, XML, CSV processing
-- Log file ingestion and parsing
-- API data extraction
-- Cloud storage integration (COS, S3)
 
 ---
 
@@ -56,7 +50,7 @@ IBM UDI provides specialized capabilities for ingesting unstructured data from v
 - **Content Extraction**: Extract text and metadata from unstructured sources
 - **Format Conversion**: Convert between different file formats
 
-**Repository Path**: [`data-ingestion/assets/ibm-udi/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/assets/ibm-udi)
+**Repository Path**: [`data-ingestion/assets/unstructured-data/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/assets/unstructured-data)
 
 ### Structured Data Ingestion
 
@@ -69,16 +63,6 @@ Connect to and ingest data from relational databases and data warehouses:
 
 **Repository Path**: [`data-ingestion/assets/structured-data/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/assets/structured-data)
 
-### Semi-Structured Data Ingestion
-
-Process and ingest semi-structured data formats:
-
-- **JSON/XML Processing**: Parse and validate JSON and XML documents
-- **CSV Handling**: Flexible CSV parsing with schema inference
-- **Log File Processing**: Extract structured data from log files
-- **API Integration**: Pull data from REST APIs and web services
-
-**Repository Path**: [`data-ingestion/assets/semi-structured-data/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/assets/semi-structured-data)
 
 ---
 
@@ -102,9 +86,8 @@ Process and ingest semi-structured data formats:
    ```
 
 2. Choose your ingestion type and navigate to the appropriate directory:
-   - For unstructured data: `cd assets/ibm-udi/`
+   - For unstructured data: `cd assets/unstructured-data/`
    - For structured data: `cd assets/structured-data/`
-   - For semi-structured data: `cd assets/semi-structured-data/`
 
 3. Follow the specific README instructions in each directory for setup and configuration.
 
@@ -125,11 +108,11 @@ Process and ingest semi-structured data formats:
 
 The Data Ingestion building block includes a custom IBM Bob mode for AI-assisted development:
 
-- **Mode Configuration**: [`bob-mode/base-mode/ingestion.yaml`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/bob-mode/base-mode/ingestion.yaml)
+- **Mode Configuration**: [`bob-modes/base-modes/.bob/ingestion.yaml`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/bob-modes/base-modes/.bob/ingestion.yaml)
 - **Capabilities**: Pipeline design, connector setup, CDC implementation, error handling
 - **Use Cases**: Setting up new pipelines, troubleshooting issues, performance optimization
 
-For more information, see the [Bob Mode README](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/bob-mode/README.md).
+For more information, see the [Bob Modes README](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/bob-modes/README.md).
 
 ---
 
@@ -177,9 +160,8 @@ Source System → Batch/Stream Router → Processing → watsonx.data
 ## Resources
 
 - [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion)
-- [IBM UDI Documentation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/assets/ibm-udi)
+- [Unstructured Data Documentation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/assets/unstructured-data)
 - [Structured Data Documentation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/assets/structured-data)
-- [Semi-Structured Data Documentation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/assets/semi-structured-data)
 
 ---
 

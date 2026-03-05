@@ -40,13 +40,12 @@ Enables seamless querying across databases, warehouses, and cloud object stores 
 
 ### [Data Ingestion](data-ingestion.md)
 
-Comprehensive data ingestion solutions for IBM watsonx.data covering unstructured, structured, and semi-structured data sources.
+Comprehensive data ingestion solutions for IBM watsonx.data covering unstructured and structured data sources.
 
 **Supported Data Types:**
 
-- **IBM UDI (Unstructured Data Ingestion)**: Process documents, PDFs, images, and unstructured content
+- **Unstructured Data Ingestion**: Process documents, PDFs, images, and unstructured content
 - **Structured Data Ingestion**: Database connectors with CDC support for RDBMS platforms
-- **Semi-Structured Data Ingestion**: JSON, XML, CSV, and log file processing
 
 ---
 
