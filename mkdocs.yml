@@ -46,10 +46,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-
-  - AI Core:
-      - Overview: ai-core/index.md
-
+  - AI:
       - Agents:
           - Overview: ai-core/agents/index.md
           - Agent Builder: ai-core/agents/agent-builder.md
@@ -75,9 +72,7 @@ nav:
               - DataStax Astra DB: ai-core/data/vector-search/datastax-astra-db.md
           - Data Security and Encryption: ai-core/data/data-security-and-encryption.md
 
-  - Automation Core:
-      - Overview: automation-core/index.md
-
+  - Automation:
       - Build and Deploy:
           - Overview: automation-core/build/index.md
           - iPaaS: automation-core/build/ipaas.md
