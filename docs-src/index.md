@@ -14,7 +14,7 @@ By adopting these **proven and tested** patterns, organizations can reduce engin
 Reusable, enterprise-ready AI building blocks that accelerate agent adoption by enabling the design, orchestration, and deployment of intelligent agents across business workflows.
 
 - **Trust**
-Capabilities that evaluate, tune, and compare prompts and models to optimize outcomes. These building blocks help teams select the most appropriate models for each use case while ensuring transparency, compliance, and responsible AI practices.
+Trusted AI building blocks provide tools to evaluate AI models and agents across the lifecycle, ensuring reliability, transparency, and compliance. They include design-time evaluations, runtime monitoring, and compliance accelerators.
 
 - **Data**
 Data for AI Building Blocks accelerate decision-making and improve productivity by enabling intelligent access to enterprise data. They unlock new ways to interact with complex systems—driving smarter, faster, and more efficient operations across the organization.
