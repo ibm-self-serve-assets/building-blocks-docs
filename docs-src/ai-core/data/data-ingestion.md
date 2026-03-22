@@ -104,18 +104,6 @@ Connect to and ingest data from relational databases and data warehouses:
 
 ---
 
-## Bob Mode Integration
-
-The Data Ingestion building block includes a custom IBM Bob mode for AI-assisted development:
-
-- **Mode Configuration**: [`bob-modes/base-modes/.bob/ingestion.yaml`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/bob-modes/base-modes/.bob/ingestion.yaml)
-- **Capabilities**: Pipeline design, connector setup, CDC implementation, error handling
-- **Use Cases**: Setting up new pipelines, troubleshooting issues, performance optimization
-
-For more information, see the [Bob Modes README](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/bob-modes/README.md).
-
----
-
 ## Architecture Patterns
 
 ### Batch Ingestion Pattern
