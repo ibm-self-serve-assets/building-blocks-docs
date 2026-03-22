@@ -23,13 +23,9 @@ Instructions and related files for these custom modes can be found in their resp
 
 ### Data
 - [Data Ingestion](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/data-ingestion/bob-modes/base-modes): Comprehensive data ingestion for structured and unstructured data
-- [Data Security and Encryption](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/data-security-and-encryption/bob-modes/base-modes): Data protection, masking, and encryption workflows
-- [Zero-Copy Lakehouse](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/zero-copy-lakehouse/bob-modes/base-modes): Federated query across databases and cloud object stores
 - [RAG Accelerator](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/question-and-answer/rag/bob-modes/base-modes): Complete RAG pipeline with document processing and semantic search
 - [Text-to-SQL](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/question-and-answer/text-to-sql/bob-modes/base-modes): Natural language to SQL query conversion with metadata enrichment
-- [Milvus Vector Search](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/vector-search/milvus/bob-modes/base-modes): High-performance vector database for billion-scale search
-- [OpenSearch Vector Search](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/vector-search/opensearch/bob-modes/base-modes): Enterprise search with hybrid vector and keyword capabilities
-- [DataStax Astra DB](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/vector-search/datastax-astradb/bob-modes/base-modes): Cloud-native vector database with global distribution
+
 
 ### Automation
 - [Application monitoring and observability expert](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/observe/application-observability/bob-modes/base-modes/application-observability.zip): Connect Bob with the Instana MCP server.
