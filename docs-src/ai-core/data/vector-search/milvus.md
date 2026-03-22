@@ -216,18 +216,6 @@ print(response.text)
 
 ---
 
-## Bob Mode Integration
-
-The Milvus building block includes a custom IBM Bob mode for AI-assisted development:
-
-- **Mode Configuration**: [`bob-modes/base-modes/.bob/milvus.yaml`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/vector-search/milvus/bob-modes/base-modes/.bob/milvus.yaml)
-- **Capabilities**: Milvus setup, collection schema design, index optimization, query tuning
-- **Use Cases**: Setting up Milvus, troubleshooting issues, performance optimization
-
-For more information, see the [Bob Modes README](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/vector-search/milvus/bob-modes/README.md).
-
----
-
 ## Performance Considerations
 
 !!! tip "Optimization Guidelines"
