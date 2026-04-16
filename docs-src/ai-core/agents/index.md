@@ -6,7 +6,7 @@ The Building Block of Agents includes:
 
 - **Agent Builder** – Create and deploy agents  
 - **Multi-Agent Orchestration** – Coordinate agents, tools, and humans  
-- **Agent Gateway** – Connect third-party models and Agents
+- **Agent Harness** – unified AI system for generating software
 
 
 ## Github Repository
@@ -15,5 +15,5 @@ Code for these accelerators can be found in the [Agents building blocks repo](ht
 ## Use Cases
 
 - **Agent Builder** → Build an HR assistant that automates leave approvals using Workday APIs.  
-- **Multi-Agent Orchestration** → Automate a **sales pipeline workflow** where Salesforce data, Outlook meetings, and Slack updates are coordinated across teams.  
-- **Agent Gateway** → Centralized gateway that connects AI agents to multiple LLM providers and external systems with enterprise-grade security and governance.
+- **Multi-Agent Orchestration** → Automate a sales pipeline workflow where Salesforce data, Outlook meetings, and Slack updates are coordinated across teams.  
+- **Agent Harness** → Unified AI system for generating, evolving, and operating enterprise-ready software from intent. It transforms natural language requirements into production-grade code
