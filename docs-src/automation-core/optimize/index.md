@@ -1,38 +1,31 @@
-# **Optimize Building Blocks**
-
-[← Back to Automation Core](../index.md)
+# Optimize Building Blocks
 
 Optimize focuses on continuously improving cost efficiency, operational stability, and resource utilization across hybrid cloud environments. It brings together financial visibility, resilience automation, and intelligent resource management to ensure applications remain performant, compliant, and economically sustainable.
 
-## **Core Capabilities**
+The Building Block of Optimize includes:
 
-| Capability | Technology | Description |
-|------------|-----------|-------------|
-| **[Automated Resilience & Compliance](automated-resilience.md)** | IBM Concert | Centralized visibility into application risk, vulnerabilities, and compliance posture |
-| **[FinOps](finops.md)** | Aptio | Financial transparency and cost intelligence for cloud investments |
-| **[Automated Resource Management](automated-resource-management.md)** | IBM Turbonomic | Intelligent resource allocation ensuring performance while preventing waste |
+- **Automated Resilience & Compliance** – enabled by IBM Concert, delivers centralized visibility into application risk, vulnerabilities, and compliance posture. It strengthens governance and operational resilience by correlating security, configuration, and runtime insights. 
+- **FinOps** – powered by Aptio, provides financial transparency and cost intelligence, allowing organizations to understand, allocate, and optimize cloud investments with precision.
+- **Automated Resource Management** – driven by IBM Turbonomic, ensures applications receive the right resources at the right time, preserving performance while preventing waste and overprovisioning. 
 
-## **Github Repository**
+## Github Repository
 Code for these accelerators can be found in the [Optimize building blocks repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/optimize)
 
-## **Use Cases**
+## 🔗 Implementation Resources
 
-### **[Automated Resilience & Compliance (IBM Concert)](automated-resilience.md)**
-Organizations leverage this capability to continuously monitor CVE exposure, detect compliance drift, manage certificate lifecycles, assess security posture, map dependency risks, and identify systemic resilience weaknesses before they affect business-critical workloads.
+Detailed implementation guides, code samples, and deployment assets are available in the **Optimize** folder:
 
-### **[FinOps](finops.md)**
-Cost transparency across teams, budget forecasting, spend anomaly detection, granular cost allocation, unit economics analysis, ROI evaluation for cloud initiatives, and identifying optimization opportunities across multi-cloud environments.
+- **[FinOps](../../../optimize/finops/README.md)** - IBM Apptio for financial operations and cost optimization
+- **[Automated Resource Management](../../../optimize/automated-resource-mgmt/README.md)** - IBM Turbonomic for intelligent resource optimization
 
-### **[Automated Resource Management (IBM Turbonomic)](automated-resource-management.md)**
-Typical scenarios involve real-time resource scaling, workload placement optimization, infrastructure bottleneck prevention, SLA protection, container density optimization, automated performance remediation, and balancing cost-performance trade-offs.
+**📂 Browse all:** [Optimize Building Blocks](../../../optimize/)
 
----
+**Note:** Automated resilience and compliance capabilities are being developed and will be added to the optimize folder in future releases.
 
-## **Related Building Blocks**
+## Use Cases
 
-- **[Build and Deploy](../build/index.md)** - Automate infrastructure and application deployment
-- **[Observe](../observe/index.md)** - Monitor and analyze application and infrastructure performance
-
----
+- **Automated Resilience & Compliance (IBM Concert)** → Organizations leverage this capability to continuously monitor CVE exposure, detect compliance drift, manage certificate lifecycles, assess security posture, map dependency risks, and identify systemic resilience weaknesses before they affect business-critical workloads.  
+- **FinOps** → Cost transparency across teams, budget forecasting, spend anomaly detection, granular cost allocation, unit economics analysis, ROI evaluation for cloud initiatives, and identifying optimization opportunities across multi-cloud environments.  
+- **Automated Resource Management** → Typical scenarios involve real-time resource scaling, workload placement optimization, infrastructure bottleneck prevention, SLA protection, container density optimization, automated performance remediation, and balancing cost-performance trade-offs. 
 
 Together, these building blocks establish a closed-loop optimization model where cost efficiency, resilience, and performance continuously inform and enhance one another.

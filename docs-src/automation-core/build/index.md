@@ -1,7 +1,5 @@
 # **Build and Deploy**
 
-[← Back to Automation Core](../index.md)
-
 Build and Deploy focuses on accelerating application delivery while
 ensuring consistency, security, and automation across environments. This
 building block enables organizations to standardize integration,
@@ -10,52 +8,49 @@ between development and operations. By combining platform services,
 automation frameworks, and AI-assisted tooling, enterprises can move
 from manual processes to repeatable, scalable delivery pipelines.
 
-## **Core Capabilities**
+- **Platform as a Service (iPaaS)** Capabilities, delivered through IBM
+webMethods, simplify application and data integration across distributed
+systems.
+- **Authentication Management** Enabled by IBM Verify, centralizes identity,
+access control, and security enforcement.
+- **Infrastructure as Code** Powered by tools such as Terraform and Ansible,
+ensures consistent, automated environment provisioning.
 
-| Capability | Technology | Description |
-|------------|-----------|-------------|
-| **[Platform as a Service (iPaaS)](ipaas.md)** | IBM webMethods | Simplify application and data integration across distributed systems |
-| **[Authentication Management](authentication-management.md)** | IBM Verify | Centralize identity, access control, and security enforcement |
-| **[Infrastructure as Code](infrastructure-as-code.md)** | Terraform & Ansible | Ensure consistent, automated environment provisioning |
-| **[Code Assistant](code-assistant.md)** | IBM Bob | Enhance developer productivity through AI-assisted code generation |
+## Github Repository
+Code for these accelerators can be found in the [Build - Automation Building Blocks repo.](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build)
 
-## **Github Repository**
-Code for these accelerators can be found in the [Build - Automation Building Blocks repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build).
+## 🔗 Implementation Resources
 
-## **Key Use Cases**
+Detailed implementation guides, code samples, and deployment assets are available in the **Build and Deploy** folder:
 
-### **[Platform as a Service (IBM webMethods)](ipaas.md)**
+- **[Infrastructure as Code (IaaS)](../../../build-and-deploy/Iaas/README.md)** - Terraform and Ansible automation for OpenShift deployments
+- **[Authentication Management (Non-Human Identity)](../../../build-and-deploy/non-human-identity/README.md)** - IBM Security Verify integration and identity management
+- **[Platform as a Service (iPaaS)](../../../build-and-deploy/ipaas/README.md)** - IBM webMethods integration platform assets
+- **[Quantum-Safe Cryptography](../../../build-and-deploy/quantum-safe/README.md)** - IBM Guardium Crypto Manager for post-quantum security
+
+**📂 Browse all:** [Build and Deploy Building Blocks](../../../build-and-deploy/)
+
+### **Key Use Cases**
+
+**Platform as a Service (IBM webMethods)**
 Organizations leverage this capability to integrate cloud and on-prem
 applications, orchestrate business workflows, enable API management,
 connect legacy systems, synchronize data across platforms, and
 streamline hybrid integration architectures.
 
-### **[Authentication Management (IBM Verify)](authentication-management.md)**
+**Authentication Management (IBM Verify)**
 Typical scenarios include centralized identity and access management,
 single sign-on (SSO), multi-factor authentication (MFA), adaptive access
 policies, privileged access control, and securing application workloads
 across hybrid environments.
 
-### **[Infrastructure as Code (Terraform, Ansible)](infrastructure-as-code.md)**
+**Infrastructure as Code (Terraform, Ansible)**
 Common use cases involve automated infrastructure provisioning,
 environment standardization, configuration management, deployment
 automation, drift prevention, multi-cloud orchestration, and repeatable
 DevOps pipelines.
 
-### **[Code Assistant (IBM Bob)](code-assistant.md)**
-Organizations adopt this capability to accelerate code development,
-modernize legacy applications, generate automation scripts, assist with
-refactoring, improve developer efficiency, reduce manual coding effort,
-and support consistent implementation patterns.
-
----
-
-## **Related Building Blocks**
-
-- **[Observe](../observe/index.md)** - Monitor and analyze application and infrastructure performance
-- **[Optimize](../optimize/index.md)** - Continuously improve efficiency, resilience, and resource utilization
-
----
+------------------------------------------------------------------------
 
 Together, these capabilities create a cohesive Build and Deploy model
 that enhances delivery speed, improves operational consistency, and

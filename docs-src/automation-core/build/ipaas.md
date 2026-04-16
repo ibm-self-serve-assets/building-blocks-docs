@@ -1,23 +1,21 @@
-# **Platform as a Service (iPaaS)**
+## 🔗 Implementation Resources
 
-[← Back to Build and Deploy](index.md) | [← Back to Automation Core](../index.md)
-
----
-
-## **Overview**
-
-IBM webMethods Integration represents a comprehensive, cloud-native Integration Platform as a Service (iPaaS) designed to connect applications, systems, and data across distributed enterprise environments. It enables organizations to seamlessly integrate SaaS applications, on-premise systems, APIs, and events through a low-code, drag-and-drop development model.
-
-**Key Integration Patterns:**
-
-- 🔄 Hybrid integration (cloud + on-premise)
-- 🔌 API management & lifecycle
-- 📦 B2B/EDI integration
-- ⚡ Event-driven architectures
+For detailed implementation guides, code samples, and deployment assets, see:
+- **[Platform as a Service (iPaaS)](../../../build-and-deploy/ipaas/README.md)** - Complete IBM webMethods integration guide with watsonx Orchestrate, watsonx.governance, and watsonx.ai
 
 ---
 
-## **Business Value**
+## **Platform as a Service (iPaaS)**
+IBM webMethods Integration represents a comprehensive, cloud-native
+Integration Platform as a Service (iPaaS) designed to connect
+applications, systems, and data across distributed enterprise
+environments. It enables organizations to seamlessly integrate SaaS
+applications, on-premise systems, APIs, and events through a low-code,
+drag-and-drop development model. By supporting hybrid integration
+patterns, API management, B2B/EDI, and event-driven architectures, the
+platform simplifies complex integration landscapes.
+
+### **Business Value**
 
 Modern enterprises operate within heterogeneous IT ecosystems where
 business processes span multiple platforms, cloud providers, and legacy
@@ -32,20 +30,16 @@ systems. IBM webMethods Integration provides:
 This approach allows enterprises to innovate rapidly while maintaining
 architectural consistency and governance.
 
-## **Integration Challenges Addressed**
+### **Integration Challenges Addressed**
 
-| Challenge | Impact |
-|-----------|--------|
-| 🔀 Fragmented application landscapes | Disconnected business processes |
-| 🔗 Complex SaaS-to-legacy connectivity | Integration bottlenecks |
-| 🗄️ Data silos across platforms | Inconsistent information |
-| 📡 API sprawl and governance gaps | Security and compliance risks |
-| ⚙️ Manual and brittle integration workflows | High operational overhead |
-| 👁️ Limited visibility into integration dependencies | Difficult troubleshooting |
+-   Fragmented application landscapes.
+-   Complex SaaS-to-legacy connectivity.
+-   Data silos across platforms.
+-   API sprawl and governance gaps.
+-   Manual and brittle integration workflows.
+-   Limited visibility into integration dependencies.
 
----
-
-## **Capabilities & Functions**
+### **Capabilities & Functions**
 
 IBM webMethods Integration delivers a broad set of enterprise
 integration capabilities:
@@ -57,24 +51,19 @@ integration capabilities:
 -   Data synchronization and orchestration.
 -   Prebuilt connectors and adapters
 
-> **💡 Platform Advantage:** With over **600+ pre-built connectors**, the platform accelerates connectivity across cloud services, enterprise systems, databases, and messaging frameworks.
+With over 600 connectors, the platform accelerates connectivity across
+cloud services, enterprise systems, databases, and messaging frameworks.
 
----
+### **Key Features**
 
-## **Key Features**
+-   Low-code, drag-and-drop interface.
+-   Cloud-native scalability.
+-   Extensive connector ecosystem.
+-   Centralized integration governance.
+-   API management and security controls.
+-   Support for synchronous and asynchronous patterns
 
-| Feature | Benefit |
-|---------|---------|
-| 🎨 Low-code, drag-and-drop interface | Accelerate development cycles |
-| ☁️ Cloud-native scalability | Handle growing workloads |
-| 🔌 Extensive connector ecosystem | Rapid integration deployment |
-| 🛡️ Centralized integration governance | Maintain control and compliance |
-| 🔐 API management and security controls | Protect enterprise assets |
-| ⚡ Synchronous & asynchronous patterns | Flexible integration models |
-
----
-
-## **Example Scenarios**
+### **Example Scenarios**
 
 Organizations commonly leverage IBM webMethods Integration to:
 
@@ -86,38 +75,17 @@ Organizations commonly leverage IBM webMethods Integration to:
 -   Integrate B2B partner ecosystems.
 -   Synchronize distributed data sources
 
-## **Operational Benefits**
+### **Operational Benefits**
 
-**Enterprises gain:**
+Enterprises gain:
 
-| Benefit | Outcome |
-|---------|---------|
-| ⚡ Faster integration development cycles | Accelerated time-to-market |
-| 🎯 Reduced custom integration complexity | Lower maintenance burden |
-| 🔄 Improved system interoperability | Seamless data flow |
-| 📋 Enhanced architectural governance | Better compliance |
-| 📈 Scalable hybrid connectivity | Future-proof architecture |
-| 🎛️ Simplified API and event management | Operational efficiency |
+-   Faster integration development cycles.
+-   Reduced custom integration complexity.
+-   Improved system interoperability.
+-   Enhanced architectural governance.
+-   Scalable hybrid connectivity.
+-   Simplified API and event management.
 
----
-
-> **🎯 Strategic Impact:** IBM webMethods Integration transforms enterprise integration from a fragmented technical challenge into a scalable, standardized platform capability.
-
----
-
-## **Related Capabilities**
-
-**Within Build and Deploy:**
-
-- [Authentication Management](authentication-management.md) - Secure access and identity management
-- [Infrastructure as Code](infrastructure-as-code.md) - Automated infrastructure provisioning
-- [Code Assistant](code-assistant.md) - AI-powered development assistance
-
-**Other Building Blocks:**
-
-- [Application Observability](../observe/application-observability.md) - Monitor integrated applications
-- [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize integration workloads
-
----
-
-[← Back to Build and Deploy](index.md)
+IBM webMethods Integration ultimately transforms enterprise integration
+from a fragmented technical challenge into a scalable, standardized
+platform capability.
