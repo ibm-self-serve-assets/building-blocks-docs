@@ -84,6 +84,7 @@ nav:
           - iPaaS: automation-core/build/ipaas.md
           - Non-human identity: automation-core/build/authentication-management.md
           - Infrastructure as Code: automation-core/build/infrastructure-as-code.md
+          - Quantum-Safe Cryptography: automation-core/build/quantum-safe-cryptography.md
 
       - Modernize:
           - Overview: automation-core/modernize/index.md
@@ -97,4 +98,6 @@ nav:
 
   - IBM Bob and Building Blocks:
       - Overview: ibm-bob/index.md
+
+  - 
 
