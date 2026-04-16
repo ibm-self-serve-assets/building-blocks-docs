@@ -59,18 +59,23 @@ nav:
           - Runtime Monitoring: ai-core/trust/run-time-monitoring.md
           - Compliance Accelerators: ai-core/trust/compliance-accelerators.md
 
-
-      - Data:
-          - Overview: ai-core/data/index.md
-          - Question & Answer: ai-core/data/q-and-a.md
-          - Data Ingestion: ai-core/data/data-ingestion.md
-          - Zero-Copy Lakehouse: ai-core/data/zero-copy-lakehouse.md
+  - Data:
+      - Overview: data-core/index.md
+      - Enrichment:
+          - Overview: data-core/enrichment/index.md
+          - Automated Data Pipelines: data-core/enrichment/automated-data-pipelines/index.md
+          - Data Streaming: data-core/enrichment/data-streaming/index.md
+          - Data Enrichment & Quality: data-core/enrichment/data-enrichment-and-quality/index.md
+      - Activation:
+          - Overview: data-core/activation/index.md
+          - Question & Answer: data-core/activation/q-and-a/index.md
           - Vector Search:
-              - Overview: ai-core/data/vector-search/index.md
-              - Milvus: ai-core/data/vector-search/milvus.md
-              - OpenSearch: ai-core/data/vector-search/opensearch.md
-              - DataStax Astra DB: ai-core/data/vector-search/datastax-astra-db.md
-          - Data Security and Encryption: ai-core/data/data-security-and-encryption.md
+              - Overview: data-core/activation/vector-search/index.md
+              - Milvus: data-core/activation/vector-search/milvus.md
+              - OpenSearch: data-core/activation/vector-search/opensearch.md
+              - DataStax Astra DB: data-core/activation/vector-search/datastax-astra-db.md
+          - No SQL Database: data-core/activation/no-sql-database/index.md
+          - Zero-Copy Lakehouse: data-core/activation/zero-copy-lakehouse/index.md
 
   - Automation:
       - Build and Deploy:
