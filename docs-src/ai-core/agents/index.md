@@ -6,7 +6,7 @@ The Building Block of Agents includes:
 
 - **Agent Builder** – Create and deploy agents  
 - **Multi-Agent Orchestration** – Coordinate agents, tools, and humans  
-- **Agent Harness** – unified AI system for generating software
+- **Agentic SDLC** – Unified AI system for generating software
 
 
 ## Github Repository

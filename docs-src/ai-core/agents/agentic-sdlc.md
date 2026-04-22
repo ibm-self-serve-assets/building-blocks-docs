@@ -1,4 +1,4 @@
-# Agent Harness
+# Agentic SDLC
 
 Agent Harness is a unified AI system for generating, evolving, and operating enterprise-ready software from intent. It transforms natural language requirements into production-grade code, services, and complete projects—automating the entire software development lifecycle with intelligent, context-aware agents.
 
