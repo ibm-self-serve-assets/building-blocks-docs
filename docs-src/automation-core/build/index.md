@@ -1,67 +1,97 @@
-# **Build and Deploy**
+# 🚀 **Build and Deploy**
 
-Build and Deploy focuses on accelerating application delivery while
-ensuring consistency, security, and automation across environments. This
-building block enables organizations to standardize integration,
-identity, provisioning, and development workflows, reducing friction
-between development and operations. By combining platform services,
-automation frameworks, and AI-assisted tooling, enterprises can move
-from manual processes to repeatable, scalable delivery pipelines.
+## ⚡ Accelerate Application Delivery
 
-- **Platform as a Service (iPaaS)** Capabilities, delivered through IBM
-webMethods, simplify application and data integration across distributed
-systems.
-- **Authentication Management** Enabled by IBM Verify, centralizes identity,
-access control, and security enforcement.
-- **Infrastructure as Code** Powered by tools such as Terraform and Ansible,
-ensures consistent, automated environment provisioning.
-- **Quantum-Safe Cryptography** Delivered through IBM Guardium Crypto Manager,
-provides post-quantum cryptographic protection and centralized key lifecycle
-management.
+Build and Deploy focuses on accelerating application delivery while ensuring consistency, security, and automation across environments. This building block enables organizations to standardize integration, identity, provisioning, and development workflows, reducing friction between development and operations.
 
-## Github Repository
-Code for these accelerators can be found in the [Build - Automation Building Blocks repo.](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build)
+!!! success "Transformation Journey"
+    By combining platform services, automation frameworks, and AI-assisted tooling, enterprises can move from manual processes to repeatable, scalable delivery pipelines.
 
-## 🔗 Implementation Resources
+---
+
+## 🛠️ **Core Capabilities**
+
+### 🔗 iPaaS
+**Platform as a Service** capabilities, delivered through IBM webMethods, simplify application and data integration across distributed systems.
+
+### 🔐 Authentication
+**Authentication Management** enabled by IBM Verify, centralizes identity, access control, and security enforcement.
+
+### ⚙️ Infrastructure as Code
+Powered by tools such as **Terraform and Ansible**, ensures consistent, automated environment provisioning.
+
+### 🔒 Quantum-Safe
+Delivered through **IBM Guardium Crypto Manager**, provides post-quantum cryptographic protection and centralized key lifecycle management.
+
+---
+
+## 📦 **Github Repository**
+
+!!! info "Source Code"
+    Code for these accelerators can be found in the [Build - Automation Building Blocks repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build) 🔗
+
+---
+
+## 🔗 **Implementation Resources**
 
 Detailed implementation guides, code samples, and deployment assets are available in the **Build and Deploy** folder:
 
-- **[Infrastructure as Code (IaaS)](../../../build-and-deploy/Iaas/README.md)** - Terraform and Ansible automation for OpenShift deployments
-- **[Authentication Management (Non-Human Identity)](../../../build-and-deploy/non-human-identity/README.md)** - IBM Security Verify integration and identity management
-- **[Platform as a Service (iPaaS)](../../../build-and-deploy/ipaas/README.md)** - IBM webMethods integration platform assets
-- **[Quantum-Safe Cryptography](../../../build-and-deploy/quantum-safe/README.md)** - IBM Guardium Crypto Manager for post-quantum security
+| 🎯 Capability | 📖 Documentation |
+|--------------|------------------|
+| ⚙️ **Infrastructure as Code** | [Terraform and Ansible automation for OpenShift deployments](../../../build-and-deploy/Iaas/README.md) |
+| 🔐 **Authentication Management** | [IBM Security Verify integration and identity management](../../../build-and-deploy/non-human-identity/README.md) |
+| 🔗 **Platform as a Service (iPaaS)** | [IBM webMethods integration platform assets](../../../build-and-deploy/ipaas/README.md) |
+| 🔒 **Quantum-Safe Cryptography** | [IBM Guardium Crypto Manager for post-quantum security](../../../build-and-deploy/quantum-safe/README.md) |
 
 **📂 Browse all:** [Build and Deploy Building Blocks](../../../build-and-deploy/)
 
-### **Key Use Cases**
+---
 
-**Platform as a Service (IBM webMethods)**
-Organizations leverage this capability to integrate cloud and on-prem
-applications, orchestrate business workflows, enable API management,
-connect legacy systems, synchronize data across platforms, and
-streamline hybrid integration architectures.
+## 💼 **Key Use Cases**
 
-**Authentication Management (IBM Verify)**
-Typical scenarios include centralized identity and access management,
-single sign-on (SSO), multi-factor authentication (MFA), adaptive access
-policies, privileged access control, and securing application workloads
-across hybrid environments.
+### 🔗 **Platform as a Service (IBM webMethods)**
 
-**Infrastructure as Code (Terraform, Ansible)**
-Common use cases involve automated infrastructure provisioning,
-environment standardization, configuration management, deployment
-automation, drift prevention, multi-cloud orchestration, and repeatable
-DevOps pipelines.
+Organizations leverage this capability to:
+- ☁️ Integrate cloud and on-prem applications
+- 🔄 Orchestrate business workflows
+- 🌐 Enable API management
+- 🔌 Connect legacy systems
+- 📊 Synchronize data across platforms
+- 🏗️ Streamline hybrid integration architectures
 
-**Quantum-Safe Cryptography (IBM Guardium Crypto Manager)**
-Key scenarios include quantum-safe migration, multi-cloud key management,
-cryptographic compliance automation, certificate lifecycle management,
-post-quantum algorithm implementation, and DevSecOps integration for
-secure credential management.
+### 🔐 **Authentication Management (IBM Verify)**
 
-------------------------------------------------------------------------
+Typical scenarios include:
+- 👤 Centralized identity and access management
+- 🔑 Single sign-on (SSO)
+- 🛡️ Multi-factor authentication (MFA)
+- 🎯 Adaptive access policies
+- 🔒 Privileged access control
+- 🌐 Securing application workloads across hybrid environments
 
-Together, these capabilities create a cohesive Build and Deploy model
-that enhances delivery speed, improves operational consistency, and
-embeds automation and security into the software lifecycle.
+### ⚙️ **Infrastructure as Code (Terraform, Ansible)**
+
+Common use cases involve:
+- 🚀 Automated infrastructure provisioning
+- 📋 Environment standardization
+- 🔧 Configuration management
+- 📦 Deployment automation
+- 🔄 Drift prevention
+- ☁️ Multi-cloud orchestration
+- 🔁 Repeatable DevOps pipelines
+
+### 🔒 **Quantum-Safe Cryptography (IBM Guardium Crypto Manager)**
+
+Key scenarios include:
+- 🔐 Quantum-safe migration
+- ☁️ Multi-cloud key management
+- ✅ Cryptographic compliance automation
+- 📜 Certificate lifecycle management
+- 🛡️ Post-quantum algorithm implementation
+- 🔄 DevSecOps integration for secure credential management
+
+---
+
+!!! success "Integrated Value"
+    Together, these capabilities create a cohesive **Build and Deploy** model that enhances delivery speed, improves operational consistency, and embeds automation and security into the software lifecycle. 🎯
 
