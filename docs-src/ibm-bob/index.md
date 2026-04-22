@@ -35,4 +35,5 @@ Instructions and related files for these custom modes can be found in their resp
 ### Automation
 - [Application monitoring and observability expert](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/observe/application-observability/bob-modes/base-modes/application-observability.zip): Connect Bob with the Instana MCP server.
 - [Automated Resilience & Compliance](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resilience-and-compliance/bob-modes/base-modes/application-resilience.zip): Unified Vulnerability and Certificate Intelligence via IBM Concert.
-- [Secrets Management](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/secrets-management/bob-modes/base-modes/secrets-management.zip): Secrets Management via IBMHashicorp Vault.
+- [Secrets Management](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/secrets-management/bob-modes/base-modes/secrets-managemeAutomated Resource Management IBM Turbonomic
+- [Automated Resource Management](https://github.com/ibm-self-serve-assets/building-blocks/blob/Building-Blocks-2.0/optimize/automated-resource-mgmt/bob-modes/base-modes/automated-resource-mgmt.zip): Automated Resource Management via IBM Turbonomic.
