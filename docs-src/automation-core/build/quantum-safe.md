@@ -8,13 +8,11 @@
 Quantum-Safe Cryptography using IBM Guardium Crypto Manager delivers enterprise-grade cryptographic key management and post-quantum cryptographic capabilities that protect sensitive data against both current and future quantum computing threats. IBM Guardium Crypto Manager centralizes key lifecycle operations, enables quantum-resistant algorithms, and ensures cryptographic compliance across hybrid cloud environments.
 
 ---
-
 !!! info "📖 Implementation Resources"
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
     **[Quantum-Safe Cryptography](../../../build-and-deploy/quantum-safe/README.md)** - Complete IBM Guardium Crypto Manager integration guide with IBM Bob Custom Mode for quantum-resistant cryptography and key management
-
 ---
 
 ### **Why It Matters**

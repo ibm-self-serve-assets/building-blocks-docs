@@ -1,15 +1,19 @@
-## 🔗 Implementation Resources
+# **Legacy Code Understanding**
 
-For detailed implementation guides and modernization strategies that leverage AI-powered code analysis, see:
-- **[Legacy Code Understanding](../../../modernize/legacy-code-understanding/README.md)** - AI-powered code analysis and modernization tools
+[← Back to Modernize](index.md) | [← Back to Automation Core](../index.md)
 
-**📂 Browse all:** [Modernize Building Blocks](../../../modernize/)
 
----
-
-## **Legacy Code Understanding -- AI-Powered Code Analysis**
+## **Overview**
 
 Legacy Code Understanding provides AI-powered analysis and comprehension of complex, undocumented, or poorly maintained codebases. It enables enterprises to understand existing applications, identify technical debt, map dependencies, and plan modernization strategies effectively.
+
+---
+!!! info "📖 Implementation Resources"
+
+    For detailed implementation guides and modernization strategies that leverage AI-powered code analysis, see:
+    
+    **[Legacy Code Understanding](../../../modernize/legacy-code-understanding/README.md)** - AI-powered code analysis and modernization tools
+---
 
 ## **Operational Context**
 

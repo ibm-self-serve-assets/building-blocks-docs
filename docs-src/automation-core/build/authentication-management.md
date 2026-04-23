@@ -7,15 +7,12 @@
 Authentication Management using IBM Verify delivers a unified, enterprise‑grade identity and access management solution that secures user access across cloud, hybrid, and on‑premises environments. IBM Verify centralizes authentication, access controls, and risk‑based decisions while enabling seamless, secure access to applications and services.
 
 ---
-
 !!! info "📖 Implementation Resources"
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
     **[Authentication Management (Non-Human Identity)](../../../build-and-deploy/authentication-management/README.md)** - Complete IBM Security Verify integration guide with watsonx Orchestrate, watsonx.governance, and watsonx.ai
-
 ---
-
 
 **Core Security Pillars:**
 

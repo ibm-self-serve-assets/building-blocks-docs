@@ -1,15 +1,19 @@
-## 🔗 Implementation Resources
+# **Middleware Modernization**
 
-For detailed implementation guides and modernization strategies for middleware transformation, see:
-- **[Middleware Modernization](../../../modernize/middleware/README.md)** - Application and middleware transformation strategies
+[← Back to Modernize](index.md) | [← Back to Automation Core](../index.md)
 
-**📂 Browse all:** [Modernize Building Blocks](../../../modernize/)
 
----
-
-## **Middleware Modernization -- Application Transformation**
+## **Overview**
 
 Middleware Modernization provides comprehensive strategies and tools for transforming legacy middleware, application servers, and integration layers into modern, cloud-native architectures. It enables enterprises to migrate from monolithic platforms to microservices, containerized workloads, and cloud-native patterns while preserving business functionality.
+
+---
+!!! info "📖 Implementation Resources"
+
+    For detailed implementation guides and modernization strategies for middleware transformation, see:
+    
+    **[Middleware Modernization](../../../modernize/middleware/README.md)** - Application and middleware transformation strategies
+---
 
 ## **Operational Context**
 

@@ -8,13 +8,11 @@
 IBM webMethods Integration represents a comprehensive, cloud-native Integration Platform as a Service (iPaaS) designed to connect applications, systems, and data across distributed enterprise environments. It enables organizations to seamlessly integrate SaaS applications, on-premise systems, APIs, and events through a low-code, drag-and-drop development model.
 
 ---
-
 !!! info "📖 Implementation Resources"
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
     **[iPaaS](../../../build-and-deploy/ipaas/README.md)** - Complete IBM webMethods Integration guide with implementation examples
-
 ---
 
 **Key Integration Patterns:**

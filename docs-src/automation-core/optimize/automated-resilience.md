@@ -8,13 +8,11 @@
 Automated Resilience & Compliance focuses on continuously safeguarding application stability, security posture, and regulatory alignment across complex hybrid cloud environments. It provides enterprises with unified visibility into operational risks, vulnerabilities, and compliance deviations, enabling proactive rather than reactive management.
 
 ---
-
 !!! info "📖 Implementation Resources"
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
     **[Automated Resilience](../../../optimize/automated-resilience/README.md)** - Complete IBM Concert integration guide with implementation examples
-
 ---
 
 **Core Focus Areas:**
