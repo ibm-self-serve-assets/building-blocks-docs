@@ -12,7 +12,7 @@ IBM webMethods Integration represents a comprehensive, cloud-native Integration 
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
-    **[iPaaS](../../../build-and-deploy/ipaas/README.md)** - Complete IBM webMethods Integration guide with implementation examples
+    **[iPaaS](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/ipaas/README.md)** - Complete IBM webMethods Integration guide with implementation examples
 ---
 
 **Key Integration Patterns:**

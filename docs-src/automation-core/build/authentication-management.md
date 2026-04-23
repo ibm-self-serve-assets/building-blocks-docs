@@ -11,7 +11,7 @@ Authentication Management using IBM Verify delivers a unified, enterprise‑grad
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
-    **[Authentication Management (Non-Human Identity)](../../../build-and-deploy/authentication-management/README.md)** - Complete IBM Security Verify integration guide with watsonx Orchestrate, watsonx.governance, and watsonx.ai
+    **[Authentication Management (Non-Human Identity)](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/authentication-mgmt/README.md)** - Complete IBM Security Verify integration guide with watsonx Orchestrate, watsonx.governance, and watsonx.ai
 ---
 
 **Core Security Pillars:**

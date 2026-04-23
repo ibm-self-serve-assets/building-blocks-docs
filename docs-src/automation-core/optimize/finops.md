@@ -12,7 +12,7 @@ FinOps (Financial Operations) establishes a data-driven discipline that enables 
 
     For detailed implementation guides, code samples, and IBM Bob Custom Mode for IBM Apptio, see:
     
-    **[FinOps](../../../optimize/finops/README.md)** - Complete IBM Apptio integration guide with IBM Bob Custom Mode for natural language financial operations
+    **[FinOps](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/finops/README.md)** - Complete IBM Apptio integration guide with IBM Bob Custom Mode for natural language financial operations
 ---
 
 **FinOps Pillars:**

@@ -11,7 +11,7 @@ Automated Resource Management focuses on continuously optimizing application per
 
     For detailed implementation guides, code samples, and IBM Bob Custom Mode for IBM Turbonomic, see:
     
-    **[Automated Resource Management](../../../optimize/automated-resource-mgmt/README.md)** - Complete IBM Turbonomic integration guide with IBM Bob Custom Mode for natural language resource optimization
+    **[Automated Resource Management](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resource-mgmt/README.md)** - Complete IBM Turbonomic integration guide with IBM Bob Custom Mode for natural language resource optimization
 ---
 
 **Optimization Dimensions:**

@@ -12,7 +12,7 @@ Modern enterprise environments demand automation that is repeatable, auditable, 
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
-    **[Infrastructure as Code](../../../build-and-deploy/infrastructure-as-code/README.md)** - Complete Terraform and Ansible automation guide with implementation examples
+    **[Infrastructure as Code](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/Iaas/README.md)** - Complete Terraform and Ansible automation guide with implementation examples
 ---
 
 **Automation Stack:**

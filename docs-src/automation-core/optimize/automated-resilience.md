@@ -12,7 +12,7 @@ Automated Resilience & Compliance focuses on continuously safeguarding applicati
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
-    **[Automated Resilience](../../../optimize/automated-resilience/README.md)** - Complete IBM Concert integration guide with implementation examples
+    **[Automated Resilience](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resilience-and-compliance/README.md)** - Complete IBM Concert integration guide with implementation examples
 ---
 
 **Core Focus Areas:**
