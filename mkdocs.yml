@@ -78,7 +78,7 @@ nav:
           - iPaaS: automation-core/build/ipaas.md
           - Authentication Management: automation-core/build/authentication-management.md
           - Infrastructure as Code: automation-core/build/infrastructure-as-code.md
-          - Code Assistant: automation-core/build/code-assistant.md
+          - Quantum-Safe Cryptography: automation-core/build/quantum-safe.md
 
       - Observe:
           - Overview: automation-core/observe/index.md
