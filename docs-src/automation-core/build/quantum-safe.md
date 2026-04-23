@@ -144,12 +144,20 @@ To implement quantum-safe cryptography in your environment:
 
 ---
 
+## **Related Capabilities**
+
 **Within Build and Deploy:**
+
 - [Authentication Management](authentication-management.md) - Identity and access management
 - [Infrastructure as Code](infrastructure-as-code.md) - Automated infrastructure provisioning
 - [iPaaS](ipaas.md) - Integration platform capabilities
 
 **Other Building Blocks:**
+
 - [Legacy Code Understanding](../modernize/legacy-code-understanding.md) - Analyze cryptographic implementations in legacy code
 - [Middleware Modernization](../modernize/middleware-modernization.md) - Modernize security middleware
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Ensure cryptographic compliance
+
+---
+
+[← Back to Build and Deploy](index.md)
