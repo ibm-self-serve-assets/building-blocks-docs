@@ -27,8 +27,8 @@ Explore the **Build with Bob** webinar series and additional resources designed 
 
 ## Access the Portal
 
-Visit the official Build with Bob resource hub:  
-https://ibm-self-serve-assets.github.io/build-with-bob/
+Visit the official Build with Bob resource hub:
+**[Build with Bob Portal](https://ibm-self-serve-assets.github.io/build-with-bob/)**
 
 ---
 
