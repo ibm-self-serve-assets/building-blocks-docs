@@ -80,10 +80,10 @@ nav:
           - Infrastructure as Code: automation-core/build/infrastructure-as-code.md
           - Quantum-Safe Cryptography: automation-core/build/quantum-safe.md
 
-      - Observe:
-          - Overview: automation-core/observe/index.md
-          - Application Observability: automation-core/observe/application-observability.md
-          - Network Performance: automation-core/observe/network-performance.md
+      - Modernize:
+          - Overview: automation-core/modernize/index.md
+          - Legacy Code Understanding: automation-core/modernize/legacy-code-understanding.md
+          - Middleware Modernization: automation-core/modernize/middleware-modernization.md
 
       - Optimize:
           - Overview: automation-core/optimize/index.md
