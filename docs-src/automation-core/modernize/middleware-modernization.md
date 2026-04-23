@@ -1,6 +1,6 @@
 # **Middleware Modernization**
 
-[← Back to Modernize](index.md) | [← Back to Automation Core](../index.md)
+[← Back to Modernize](index.md)
 
 
 ## **Overview**

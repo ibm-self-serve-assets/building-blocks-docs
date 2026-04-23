@@ -1,6 +1,5 @@
 # **Optimize Building Blocks**
 
-[← Back to Automation Core](../index.md)
 
 Optimize focuses on continuously improving cost efficiency, operational stability, and resource utilization across hybrid cloud environments. It brings together financial visibility, resilience automation, and intelligent resource management to ensure applications remain performant, compliant, and economically sustainable.
 

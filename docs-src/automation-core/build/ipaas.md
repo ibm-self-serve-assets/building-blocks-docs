@@ -1,6 +1,6 @@
 # **Platform as a Service (iPaaS)**
 
-[← Back to Build and Deploy](index.md) | [← Back to Automation Core](../index.md)
+[← Back to Build and Deploy](index.md)
 
 
 ## **Overview**

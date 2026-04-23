@@ -1,6 +1,6 @@
 # **FinOps**
 
-[← Back to Optimize](index.md) | [← Back to Automation Core](../index.md)
+[← Back to Optimize](index.md)
 
 
 ## **Overview**
