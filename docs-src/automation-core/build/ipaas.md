@@ -118,11 +118,12 @@ Organizations commonly leverage IBM webMethods Integration to:
 
 - [Authentication Management](authentication-management.md) - Secure access and identity management
 - [Infrastructure as Code](infrastructure-as-code.md) - Automated infrastructure provisioning
-- [Code Assistant](code-assistant.md) - AI-powered development assistance
+- [Quantum-Safe Cryptography](quantum-safe.md) - Secure integration communications
 
 **Other Building Blocks:**
 
-- [Application Observability](../observe/application-observability.md) - Monitor integrated applications
+- [Legacy Code Understanding](../modernize/legacy-code-understanding.md) - Analyze integration code patterns
+- [Middleware Modernization](../modernize/middleware-modernization.md) - Modernize integration platforms
 - [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize integration workloads
 
 ---

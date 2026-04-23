@@ -119,12 +119,13 @@ security while preserving user productivity.
 
 - [Platform as a Service (iPaaS)](ipaas.md) - Secure application integration
 - [Infrastructure as Code](infrastructure-as-code.md) - Automated infrastructure with identity controls
-- [Code Assistant](code-assistant.md) - AI-powered development with security guidance
+- [Quantum-Safe Cryptography](quantum-safe.md) - Cryptographic key management
 
 **Other Building Blocks:**
 
+- [Legacy Code Understanding](../modernize/legacy-code-understanding.md) - Analyze authentication patterns in legacy code
+- [Middleware Modernization](../modernize/middleware-modernization.md) - Modernize authentication middleware
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Continuous security posture monitoring
-- [Application Observability](../observe/application-observability.md) - Monitor authentication patterns
 
 ---
 

@@ -92,8 +92,8 @@ behaviors and instead applies precise, context-aware optimizations.
 
 **Other Building Blocks:**
 
-- [Application Observability](../observe/application-observability.md) - Monitor resource utilization and performance
-- [Network Performance](../observe/network-performance.md) - Optimize network resource allocation
+- [Legacy Code Understanding](../modernize/legacy-code-understanding.md) - Analyze resource usage patterns in legacy code
+- [Middleware Modernization](../modernize/middleware-modernization.md) - Optimize modernized workloads
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Automate resource provisioning
 
 ---

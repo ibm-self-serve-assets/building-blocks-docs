@@ -95,9 +95,9 @@ Organizations commonly leverage FinOps to:
 
 **Other Building Blocks:**
 
+- [Legacy Code Understanding](../modernize/legacy-code-understanding.md) - Assess modernization costs
+- [Middleware Modernization](../modernize/middleware-modernization.md) - Analyze modernization cost benefits
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Track infrastructure provisioning costs
-- [Application Observability](../observe/application-observability.md) - Correlate performance with cost
-- [Network Performance](../observe/network-performance.md) - Analyze network infrastructure costs
 
 ---
 

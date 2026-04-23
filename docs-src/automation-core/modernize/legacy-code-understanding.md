@@ -91,3 +91,22 @@ Enterprises benefit through:
 ## **Strategic Outcome**
 
 Legacy Code Understanding transforms code modernization into a strategic capability, enabling enterprises to confidently modernize legacy applications while preserving business value and reducing operational risk.
+
+---
+
+## **Related Capabilities**
+
+**Within Modernize:**
+
+- [Middleware Modernization](middleware-modernization.md) - Modernize middleware based on code analysis
+
+**Other Building Blocks:**
+
+- [Infrastructure as Code](../build/infrastructure-as-code.md) - Analyze infrastructure code patterns
+- [Authentication Management](../build/authentication-management.md) - Understand authentication patterns in legacy code
+- [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Identify compliance issues in legacy code
+- [FinOps](../optimize/finops.md) - Assess technical debt costs
+
+---
+
+[← Back to Modernize](index.md)

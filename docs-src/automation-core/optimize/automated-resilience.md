@@ -99,9 +99,11 @@ decision-making.
 
 **Other Building Blocks:**
 
-- [Application Observability](../observe/application-observability.md) - Monitor application health and security
+- [Legacy Code Understanding](../modernize/legacy-code-understanding.md) - Identify vulnerabilities in legacy code
+- [Middleware Modernization](../modernize/middleware-modernization.md) - Modernize for better resilience
 - [Authentication Management](../build/authentication-management.md) - Strengthen identity and access controls
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Ensure infrastructure compliance
+- [Quantum-Safe Cryptography](../build/quantum-safe.md) - Secure cryptographic compliance
 
 ---
 

@@ -94,3 +94,22 @@ Enterprises benefit through:
 ## **Strategic Outcome**
 
 Middleware Modernization transforms legacy infrastructure into a strategic asset, enabling enterprises to adopt cloud-native architectures, reduce operational costs, and accelerate application delivery while maintaining business continuity.
+
+---
+
+## **Related Capabilities**
+
+**Within Modernize:**
+
+- [Legacy Code Understanding](legacy-code-understanding.md) - Analyze middleware code before modernization
+
+**Other Building Blocks:**
+
+- [Infrastructure as Code](../build/infrastructure-as-code.md) - Automate modernized infrastructure deployment
+- [iPaaS](../build/ipaas.md) - Integrate modernized middleware
+- [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize modernized workloads
+- [FinOps](../optimize/finops.md) - Track modernization cost benefits
+
+---
+
+[← Back to Modernize](index.md)
