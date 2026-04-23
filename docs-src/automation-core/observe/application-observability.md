@@ -1,14 +1,14 @@
+# **Application Observability -- Intelligent Visibility for Modern Applications**
+
+[← Back to Observe](index.md) | [← Back to Automation Core](../index.md)
+
+---
+
 !!! info "📖 Implementation Resources"
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
     **[Application Observability](../../../observe/application-observability/README.md)** - Complete IBM Instana integration guide with implementation examples
-
----
-
-# **Application Observability -- Intelligent Visibility for Modern Applications**
-
-[← Back to Observe](index.md) | [← Back to Automation Core](../index.md)
 
 ---
 

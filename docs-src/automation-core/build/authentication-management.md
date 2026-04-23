@@ -1,14 +1,14 @@
+# **Authentication Management with IBM Verify**
+
+[← Back to Build and Deploy](index.md) | [← Back to Automation Core](../index.md)
+
+---
+
 !!! info "📖 Implementation Resources"
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
     **[Authentication Management (Non-Human Identity)](../../../build-and-deploy/authentication-management/README.md)** - Complete IBM Security Verify integration guide with watsonx Orchestrate, watsonx.governance, and watsonx.ai
-
----
-
-# **Authentication Management with IBM Verify**
-
-[← Back to Build and Deploy](index.md) | [← Back to Automation Core](../index.md)
 
 ---
 

@@ -1,14 +1,14 @@
+# **FinOps**
+
+[← Back to Optimize](index.md) | [← Back to Automation Core](../index.md)
+
+---
+
 !!! info "📖 Implementation Resources"
 
     For detailed implementation guides, code samples, and IBM Bob Custom Mode for IBM Apptio, see:
     
     **[FinOps](../../../optimize/finops/README.md)** - Complete IBM Apptio integration guide with IBM Bob Custom Mode for natural language financial operations
-
----
-
-# **FinOps**
-
-[← Back to Optimize](index.md) | [← Back to Automation Core](../index.md)
 
 ---
 

@@ -1,14 +1,14 @@
+# **Infrastructure as Code**
+
+[← Back to Build and Deploy](index.md) | [← Back to Automation Core](../index.md)
+
+---
+
 !!! info "📖 Implementation Resources"
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
     **[Infrastructure as Code](../../../build-and-deploy/infrastructure-as-code/README.md)** - Complete Terraform and Ansible automation guide with implementation examples
-
----
-
-# **Infrastructure as Code**
-
-[← Back to Build and Deploy](index.md) | [← Back to Automation Core](../index.md)
 
 ---
 

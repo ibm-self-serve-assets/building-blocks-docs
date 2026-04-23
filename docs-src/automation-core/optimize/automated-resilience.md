@@ -1,14 +1,14 @@
+# **Automated Resilience & Compliance**
+
+[← Back to Optimize](index.md) | [← Back to Automation Core](../index.md)
+
+---
+
 !!! info "📖 Implementation Resources"
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
     **[Automated Resilience](../../../optimize/automated-resilience/README.md)** - Complete IBM Concert integration guide with implementation examples
-
----
-
-# **Automated Resilience & Compliance**
-
-[← Back to Optimize](index.md) | [← Back to Automation Core](../index.md)
 
 ---
 

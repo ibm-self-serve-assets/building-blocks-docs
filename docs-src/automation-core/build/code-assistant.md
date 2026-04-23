@@ -1,14 +1,14 @@
+# **Code Assistant -- AI‑Powered Developer Companion**
+
+[← Back to Build and Deploy](index.md) | [← Back to Automation Core](../index.md)
+
+---
+
 !!! info "📖 Implementation Resources"
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
     **[Code Assistant](../../../build-and-deploy/code-assistant/README.md)** - Complete IBM watsonx Code Assistant integration guide with implementation examples
-
----
-
-# **Code Assistant -- AI‑Powered Developer Companion**
-
-[← Back to Build and Deploy](index.md) | [← Back to Automation Core](../index.md)
 
 ---
 

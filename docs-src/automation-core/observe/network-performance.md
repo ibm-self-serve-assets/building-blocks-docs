@@ -1,14 +1,14 @@
+# **Network Performance -- Intelligent Visibility for Modern Networks**
+
+[← Back to Observe](index.md) | [← Back to Automation Core](../index.md)
+
+---
+
 !!! info "📖 Implementation Resources"
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
     **[Network Performance](../../../observe/network-performance/README.md)** - Complete network monitoring integration guide with implementation examples
-
----
-
-# **Network Performance -- Intelligent Visibility for Modern Networks**
-
-[← Back to Observe](index.md) | [← Back to Automation Core](../index.md)
 
 ---
 
