@@ -1,9 +1,8 @@
-## 🔗 Implementation Resources
+!!! info "📖 Implementation Resources"
 
-For detailed implementation guides, code samples, and deployment assets, see:
-- **[Infrastructure as Code](../../../build-and-deploy/infrastructure-as-code/README.md)** - Complete Terraform and Ansible automation guide with implementation examples
-
-**📂 Browse all:** [Build and Deploy Building Blocks](../../../build-and-deploy/)
+    For detailed implementation guides, code samples, and deployment assets, see:
+    
+    **[Infrastructure as Code](../../../build-and-deploy/infrastructure-as-code/README.md)** - Complete Terraform and Ansible automation guide with implementation examples
 
 ---
 

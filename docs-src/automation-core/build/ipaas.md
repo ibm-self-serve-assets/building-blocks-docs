@@ -1,9 +1,8 @@
-## 🔗 Implementation Resources
+!!! info "📖 Implementation Resources"
 
-For detailed implementation guides, code samples, and deployment assets, see:
-- **[iPaaS](../../../build-and-deploy/ipaas/README.md)** - Complete IBM webMethods Integration guide with implementation examples
-
-**📂 Browse all:** [Build and Deploy Building Blocks](../../../build-and-deploy/)
+    For detailed implementation guides, code samples, and deployment assets, see:
+    
+    **[iPaaS](../../../build-and-deploy/ipaas/README.md)** - Complete IBM webMethods Integration guide with implementation examples
 
 ---
 

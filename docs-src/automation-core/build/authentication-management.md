@@ -1,9 +1,8 @@
-## 🔗 Implementation Resources
+!!! info "📖 Implementation Resources"
 
-For detailed implementation guides, code samples, and deployment assets, see:
-- **[Authentication Management](../../../build-and-deploy/authentication-management/README.md)** - Complete IBM Verify integration guide with implementation examples
-
-**📂 Browse all:** [Build and Deploy Building Blocks](../../../build-and-deploy/)
+    For detailed implementation guides, code samples, and deployment assets, see:
+    
+    **[Authentication Management (Non-Human Identity)](../../../build-and-deploy/authentication-management/README.md)** - Complete IBM Security Verify integration guide with watsonx Orchestrate, watsonx.governance, and watsonx.ai
 
 ---
 

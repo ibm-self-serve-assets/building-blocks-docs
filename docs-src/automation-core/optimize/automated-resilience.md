@@ -1,9 +1,8 @@
-## 🔗 Implementation Resources
+!!! info "📖 Implementation Resources"
 
-For detailed implementation guides, code samples, and deployment assets, see:
-- **[Automated Resilience](../../../optimize/automated-resilience/README.md)** - Complete IBM Concert integration guide with implementation examples
-
-**📂 Browse all:** [Optimize Building Blocks](../../../optimize/)
+    For detailed implementation guides, code samples, and deployment assets, see:
+    
+    **[Automated Resilience](../../../optimize/automated-resilience/README.md)** - Complete IBM Concert integration guide with implementation examples
 
 ---
 

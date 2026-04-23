@@ -1,3 +1,11 @@
+!!! info "📖 Implementation Resources"
+
+    For detailed implementation guides, code samples, and IBM Bob Custom Mode for IBM Turbonomic, see:
+    
+    **[Automated Resource Management](../../../optimize/automated-resource-mgmt/README.md)** - Complete IBM Turbonomic integration guide with IBM Bob Custom Mode for natural language resource optimization
+
+---
+
 # **Automated Resource Management**
 
 [← Back to Optimize](index.md) | [← Back to Automation Core](../index.md)
