@@ -2,6 +2,10 @@
 
 [← Back to Build and Deploy](index.md) | [← Back to Automation Core](../index.md)
 
+## **Overview**
+
+Authentication Management using IBM Verify delivers a unified, enterprise‑grade identity and access management solution that secures user access across cloud, hybrid, and on‑premises environments. IBM Verify centralizes authentication, access controls, and risk‑based decisions while enabling seamless, secure access to applications and services.
+
 ---
 
 !!! info "📖 Implementation Resources"
@@ -12,9 +16,6 @@
 
 ---
 
-## **Overview**
-
-Authentication Management using IBM Verify delivers a unified, enterprise‑grade identity and access management solution that secures user access across cloud, hybrid, and on‑premises environments. IBM Verify centralizes authentication, access controls, and risk‑based decisions while enabling seamless, secure access to applications and services.
 
 **Core Security Pillars:**
 

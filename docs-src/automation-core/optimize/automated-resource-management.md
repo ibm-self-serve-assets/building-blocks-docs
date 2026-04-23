@@ -2,6 +2,10 @@
 
 [← Back to Optimize](index.md) | [← Back to Automation Core](../index.md)
 
+## **Overview**
+
+Automated Resource Management focuses on continuously optimizing application performance and infrastructure efficiency by dynamically aligning resource allocation with real-time demand. In modern hybrid and multi-cloud environments, this capability ensures that applications receive precisely the resources they require — **no more, no less**.
+
 ---
 
 !!! info "📖 Implementation Resources"
@@ -11,10 +15,6 @@
     **[Automated Resource Management](../../../optimize/automated-resource-mgmt/README.md)** - Complete IBM Turbonomic integration guide with IBM Bob Custom Mode for natural language resource optimization
 
 ---
-
-## **Overview**
-
-Automated Resource Management focuses on continuously optimizing application performance and infrastructure efficiency by dynamically aligning resource allocation with real-time demand. In modern hybrid and multi-cloud environments, this capability ensures that applications receive precisely the resources they require — **no more, no less**.
 
 **Optimization Dimensions:**
 

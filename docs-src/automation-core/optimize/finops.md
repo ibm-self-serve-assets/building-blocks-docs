@@ -2,6 +2,11 @@
 
 [← Back to Optimize](index.md) | [← Back to Automation Core](../index.md)
 
+
+## **Overview**
+
+FinOps (Financial Operations) establishes a data-driven discipline that enables organizations to manage, govern, and optimize cloud investments. As enterprises scale across hybrid and multi-cloud environments, financial visibility becomes as critical as performance monitoring.
+
 ---
 
 !!! info "📖 Implementation Resources"
@@ -11,10 +16,6 @@
     **[FinOps](../../../optimize/finops/README.md)** - Complete IBM Apptio integration guide with IBM Bob Custom Mode for natural language financial operations
 
 ---
-
-## **Overview**
-
-FinOps (Financial Operations) establishes a data-driven discipline that enables organizations to manage, govern, and optimize cloud investments. As enterprises scale across hybrid and multi-cloud environments, financial visibility becomes as critical as performance monitoring.
 
 **FinOps Pillars:**
 

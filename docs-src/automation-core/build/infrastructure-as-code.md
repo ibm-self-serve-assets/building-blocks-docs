@@ -2,6 +2,11 @@
 
 [← Back to Build and Deploy](index.md) | [← Back to Automation Core](../index.md)
 
+
+## **Automating Enterprise Retail Application Deployment**
+
+Modern enterprise environments demand automation that is repeatable, auditable, and scalable across both infrastructure and application layers. This architecture demonstrates a production-aligned automation model using Terraform for infrastructure provisioning and Ansible for application deployment and orchestration.
+
 ---
 
 !!! info "📖 Implementation Resources"
@@ -11,10 +16,6 @@
     **[Infrastructure as Code](../../../build-and-deploy/infrastructure-as-code/README.md)** - Complete Terraform and Ansible automation guide with implementation examples
 
 ---
-
-## **Automating Enterprise Retail Application Deployment**
-
-Modern enterprise environments demand automation that is repeatable, auditable, and scalable across both infrastructure and application layers. This architecture demonstrates a production-aligned automation model using Terraform for infrastructure provisioning and Ansible for application deployment and orchestration.
 
 **Automation Stack:**
 
