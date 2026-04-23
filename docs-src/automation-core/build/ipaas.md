@@ -1,3 +1,12 @@
+## 🔗 Implementation Resources
+
+For detailed implementation guides, code samples, and deployment assets, see:
+- **[iPaaS](../../../build-and-deploy/ipaas/README.md)** - Complete IBM webMethods Integration guide with implementation examples
+
+**📂 Browse all:** [Build and Deploy Building Blocks](../../../build-and-deploy/)
+
+---
+
 # **Platform as a Service (iPaaS)**
 
 [← Back to Build and Deploy](index.md) | [← Back to Automation Core](../index.md)

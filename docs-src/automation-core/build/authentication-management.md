@@ -1,3 +1,12 @@
+## 🔗 Implementation Resources
+
+For detailed implementation guides, code samples, and deployment assets, see:
+- **[Authentication Management](../../../build-and-deploy/authentication-management/README.md)** - Complete IBM Verify integration guide with implementation examples
+
+**📂 Browse all:** [Build and Deploy Building Blocks](../../../build-and-deploy/)
+
+---
+
 # **Authentication Management with IBM Verify**
 
 [← Back to Build and Deploy](index.md) | [← Back to Automation Core](../index.md)

@@ -1,3 +1,12 @@
+## 🔗 Implementation Resources
+
+For detailed implementation guides, code samples, and deployment assets, see:
+- **[Infrastructure as Code](../../../build-and-deploy/infrastructure-as-code/README.md)** - Complete Terraform and Ansible automation guide with implementation examples
+
+**📂 Browse all:** [Build and Deploy Building Blocks](../../../build-and-deploy/)
+
+---
+
 # **Infrastructure as Code**
 
 [← Back to Build and Deploy](index.md) | [← Back to Automation Core](../index.md)
