@@ -1,5 +1,12 @@
 # Build with Bob
 
+## Overview
+
+The Build with Bob initiative provides a structured learning path to:
+- Accelerate development using AI-powered tools  
+- Learn through real-world use cases and demos  
+- Build, deploy, and optimize applications using IBM technologies  
+
 ## Webinar Series and Resources
 
 Explore the **Build with Bob** webinar series and additional resources designed to help you get started and scale with IBM Bob.
@@ -46,10 +53,3 @@ Visit the official Build with Bob resource hub:
 **[IBM Bob](https://bob.ibm.com/)**
 
 ---
-
-## Overview
-
-The Build with Bob initiative provides a structured learning path to:
-- Accelerate development using AI-powered tools  
-- Learn through real-world use cases and demos  
-- Build, deploy, and optimize applications using IBM technologies  
