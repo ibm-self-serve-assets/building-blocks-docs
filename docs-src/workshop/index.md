@@ -19,7 +19,7 @@ The workshop also covers how to instrument these applications using IBM’s auto
 - Write a Custom Mode to build a data analytics website from wireframe images using IBM Carbon and a code execution MCP Server
 - Implement agentic Q&A with multi-turn interactions using the Agent Builder Skill
 
-### [Agent Operations](https://github.com/build-engineering/ibm-building-blocks-workshop-q1-2026/tree/main/lab-4-agent-ops)
+### [Agent Ops](https://github.com/build-engineering/ibm-building-blocks-workshop-q1-2026/tree/main/lab-4-agent-ops)
 - Evaluate, analyze, and security-test agents
 
 ### [Data for AI Labs](https://github.com/build-engineering/ibm-building-blocks-workshop-q1-2026/tree/main/lab-5-data-for-ai)
