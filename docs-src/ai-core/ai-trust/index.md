@@ -17,7 +17,7 @@ The AI Trust building blocks provide frameworks, tools, and production-ready cod
 
 1. Choose the building block that matches your current need.
 2. Explore the **assets** folder in the repository for ready-to-use code samples and SDKs.
-3. Check **bob-modes** for AI-assisted evaluation workflows (available for Model Evaluation and Agent Ops).
+3. Check **bob-modes** for AI-assisted evaluation workflows.
 
 !!! info "GitHub Repository"
     [AI Trust Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust)

@@ -11,25 +11,17 @@ Enforce safety boundaries and operational constraints to keep your AI applicatio
 ## How It Works
 
 ```mermaid
-graph TD
+graph TB
     REQ["User Input"]
-
-    subgraph guardrails["GUARDRAIL PIPELINE"]
-        direction TB
-        INPUT_CHK["Input Guardrail<br>Jailbreak, HAP"]
-        MODEL["AI Model"]
-        OUTPUT_CHK["Output Guardrail<br>PII, Safety, Quality"]
-        DEC{"PASS / FLAG / BLOCK"}
-    end
-
     REQ --> INPUT_CHK
-    INPUT_CHK -->|"pass"| MODEL
+    INPUT_CHK["Input Guardrail<br>Jailbreak, HAP"]
     INPUT_CHK -->|"block"| BLOCKED1["Input rejected"]
-    MODEL --> OUTPUT_CHK
-    OUTPUT_CHK --> DEC
+    INPUT_CHK -->|"pass"| MODEL["AI Model"]
+    MODEL --> OUTPUT_CHK["Output Guardrail<br>PII, Safety, Quality"]
+    OUTPUT_CHK --> DEC{"PASS / FLAG / BLOCK"}
     DEC -->|"pass"| RESP["Response delivered"]
-    DEC -->|"flag"| FLAG["Delivered + flagged for review"]
-    DEC -->|"block"| BLOCKED2["Fallback response served"]
+    DEC -->|"flag"| FLAG["Delivered + flagged"]
+    DEC -->|"block"| BLOCKED2["Fallback response"]
 ```
 
 **Three-tier response handling:**

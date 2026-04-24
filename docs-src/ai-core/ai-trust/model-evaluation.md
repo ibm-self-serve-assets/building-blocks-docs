@@ -1,6 +1,6 @@
 # Model Evaluation
 
-Evaluate your AI and ML models for a range of key metrics — performance quality, fairness, reliability, drift, bias, and more — **before taking them to production**.
+Evaluate your AI and ML models for a range of key metrics — performance quality, fairness, reliability, drift, bias, and more — throughout the AI lifecycle.
 
 ## Why This Matters
 
@@ -9,44 +9,18 @@ Evaluate your AI and ML models for a range of key metrics — performance qualit
 - **Compliance requires evidence.** Regulatory frameworks such as the EU AI Act and NIST AI RMF expect structured testing with reproducible scoring and stored evaluation artifacts.
 - **Baselines enable monitoring.** Metrics captured at evaluation time become reference points for detecting drift and regression in production.
 
-## Architecture
+## What's Covered
 
-```mermaid
-graph TD
-    subgraph app["Your AI Application"]
-        GENAI["GenAI Models<br>RAG, Chatbot, Agent"]
-        PREDML["Predictive ML Models<br>Classification, Regression"]
-    end
+| Area | What It Evaluates |
+|------|------------------|
+| **[Gen AI Evaluations](#gen-ai-evaluations)** | RAG pipelines, LLM outputs, chatbot safety — quality, safety, readability metrics |
+| **[Predictive ML Evaluations](#predictive-ml-evaluations)** | Traditional ML models — scoring, confidence assessment, credit risk prediction |
 
-    subgraph eval["Model Evaluation"]
-        SCRIPTS["Evaluation Scripts<br>Quick evaluation<br>5 standalone scripts"]
-        SDK["Evaluation SDK<br>Production integration<br>PromptTemplateEvaluator"]
-        MLEVAL["Predictive ML<br>Credit risk scoring<br>watsonx ML API"]
-    end
-
-    subgraph watsonx["IBM watsonx Services"]
-        WGV["watsonx.governance<br>Metrics · Monitors · Factsheets"]
-        WML["watsonx.ai / ML<br>Model hosting · Inference"]
-    end
-
-    GENAI --> SCRIPTS
-    GENAI --> SDK
-    PREDML --> MLEVAL
-    SCRIPTS --> WGV
-    SDK --> WGV
-    MLEVAL --> WML
-```
+---
 
 ## Gen AI Evaluations
 
-Evaluate generative AI applications — RAG pipelines, LLM outputs, chatbot safety, and agent tool-calling — using IBM watsonx governance metrics.
-
-### Two Approaches
-
-| Approach | Best For | What You Get |
-|----------|----------|-------------|
-| **[Evaluation Scripts](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/model-evaluation/gen-ai-evaluations/assets/evaluation-scripts)** | Quick evaluation, experimentation | 5 standalone Python scripts — run independently, no package installation |
-| **[Evaluation SDK](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/model-evaluation/gen-ai-evaluations/assets/evaluation-sdk)** | Production integration | Importable Python package (`wx_gov_prompt_eval`) with SLM and LLM-as-Judge modes, OpenScale monitoring, factsheet tracking |
+Evaluate generative AI applications — RAG pipelines, LLM outputs, and chatbot safety — using IBM watsonx governance metrics.
 
 ### Evaluation Scripts
 

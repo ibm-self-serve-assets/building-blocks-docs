@@ -20,7 +20,7 @@ The workshop also covers how to instrument these applications using IBM’s auto
 - Implement agentic Q&A with multi-turn interactions using the Agent Builder Skill
 
 ### [Agent Operations](https://github.com/build-engineering/ibm-building-blocks-workshop-q1-2026/tree/main/lab-4-agent-ops)
-- Agent Ops
+- Evaluate, analyze, and security-test agents
 
 ### [Data for AI Labs](https://github.com/build-engineering/ibm-building-blocks-workshop-q1-2026/tree/main/lab-5-data-for-ai)
 - Data preparation and integration for AI-driven applications

@@ -17,39 +17,12 @@ AI regulations are multiplying fast and every AI use case may fall under differe
 | **Position reporting** | Surface potential compliance gaps across the enterprise |
 | **Configurable assessment workflows** | Streamline the review cycle for use case owners and compliance teams |
 
-## Programmatic Assets
+## Available Assets
 
-Two Python scripts demonstrate how to manage compliance programmatically using IBM watsonx governance APIs:
-
-### Use Case Inventory Management
-
-Create and manage AI use cases in the watsonx governance inventory using the **IBM AI Governance Facts Client SDK**.
-
-```python
-from ibm_aigov_facts_client import AIGovFactsClient
-
-client = AIGovFactsClient(api_key="...", container_type="project", container_id="...")
-
-# Create an AI use case
-use_case = client.assets.create_ai_usecase(
-    catalog_id="...", name="Credit Risk Scoring", description="..."
-)
-
-# Add compliance metadata
-use_case.set_custom_fact(fact_id="risk_level", value="high")
-use_case.set_custom_fact(fact_id="regulations", value=["EU AI Act", "ECOA"])
-```
-
-### Governed Tool Catalog
-
-Register, list, and manage AI tools in the watsonx governance tool catalog using the **ibm_watsonx_gov SDK**.
-
-```python
-from ibm_watsonx_gov.tools.clients.ai_tool_client import list_tools, register_tool
-
-tools = list_tools(search_text="credit", limit=10)
-register_tool(payload={"tool_name": "credit_scorer", "description": "..."})
-```
+| Script | What It Does |
+|--------|-------------|
+| **Use Case Inventory Management** | Create and manage AI use cases in the watsonx governance inventory, add compliance metadata (risk level, regulations, ownership) |
+| **Governed Tool Catalog** | Register, list, and manage AI tools in the watsonx governance tool catalog |
 
 ## Compliance Workflows (OpenPages Governance Console)
 

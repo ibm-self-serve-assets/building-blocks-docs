@@ -2,6 +2,8 @@
 
 AI agents don't behave like traditional software — they can respond differently every time. That makes them harder to test, trust, and troubleshoot. **Agent Ops** is a framework for testing, monitoring, and improving AI agents from development through production.
 
+The capabilities below are built for **watsonx Orchestrate agents** using the Agent Development Kit (ADK). For LangGraph/LangChain agents, see [LangGraph Agent Evaluation](#langgraph-agent-evaluation) at the bottom of this page.
+
 ## Why This Matters
 
 - **Agents are non-deterministic.** The same input can produce different outputs, making traditional testing insufficient.
@@ -20,39 +22,7 @@ AI agents don't behave like traditional software — they can respond differentl
 | **Red-Team** | Stress-test agent security against prompt injection, social engineering, and jailbreaking |
 | **Observe** | Track cost, latency, and token usage per interaction with full traceability |
 
-## Two Evaluation Paths
-
-Agent Ops supports two different agent frameworks with dedicated tooling for each:
-
-```mermaid
-graph TD
-    subgraph agents["Your AI Agents"]
-        WXO["watsonx Orchestrate<br>Agents"]
-        LG["LangGraph / LangChain<br>Agents"]
-    end
-
-    subgraph wxo_eval["WXO Agent Evaluation"]
-        ADK["ADK CLI<br>evaluate · analyze<br>quick-eval · generate<br>red-team"]
-        LF["Langfuse<br>Observability"]
-    end
-
-    subgraph lg_eval["LangGraph Agent Evaluation"]
-        SDK["Python SDK<br>wx_gov_agent_eval<br>BasicRAG · ToolCalling<br>AdvancedRAG"]
-        WGV["watsonx.governance<br>Metrics · Factsheets"]
-    end
-
-    WXO --> wxo_eval
-    LG --> lg_eval
-    ADK --> LF
-    SDK --> WGV
-```
-
-| Path | Framework | Tooling | Assets |
-|------|-----------|---------|--------|
-| **[WXO Agents](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/agent-ops/assets/wxo-agents)** | watsonx Orchestrate | ADK CLI (evaluate, analyze, quick-eval, generate, red-team) + Langfuse | 6 Python scripts + sample agent |
-| **[LangGraph Agents](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/agent-ops/assets/langgraph-agents)** | LangGraph / LangChain | Python SDK (`wx_gov_agent_eval`) + watsonx governance | Importable package with 3 evaluator classes |
-
-## Recommended Evaluation Workflow
+## Evaluation Workflow
 
 ```mermaid
 graph LR
@@ -96,6 +66,12 @@ graph LR
 |----------|---------|
 | On-policy | instruction_override, emotional_appeal, role_playing, hypothetical_scenario, authority_impersonation, crescendo_attack |
 | Off-policy | jailbreaking, prompt_leakage, topic_derailment, social_engineering, data_extraction |
+
+## LangGraph Agent Evaluation
+
+For teams building agents with **LangGraph or LangChain**, a Python SDK package (`wx_gov_agent_eval`) is also available. It provides three evaluator classes — BasicRAG, ToolCalling, and AdvancedRAG — integrated with IBM watsonx governance for metrics and factsheet tracking.
+
+[LangGraph Agent Evaluation Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/agent-ops/assets/langgraph-agents)
 
 ## Bob Modes
 

@@ -98,6 +98,26 @@
 }
 
 /* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+/* Section headers (AI, Automation, etc.) — slightly larger */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+  font-size: 0.72rem;
+  margin-top: 0.6rem;
+}
+
+/* Nav page links (Overview, Model Evaluation, etc.) — smaller */
+.md-nav__link {
+  font-size: 0.65rem;
+}
+
+/* Left nav padding from edge */
+.md-sidebar--primary .md-sidebar__inner {
+  padding-left: 0.5rem;
+}
+
+/* =========================================================
    LINKS
    ========================================================= */
 .md-typeset a {
