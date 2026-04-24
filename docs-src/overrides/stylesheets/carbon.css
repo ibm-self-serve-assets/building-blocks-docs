@@ -117,6 +117,24 @@
   padding-left: 0.5rem;
 }
 
+/* Ensure bullets are visible for nested nav items */
+.md-nav__list .md-nav__item {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+/* Add left padding for nested items to show bullets clearly */
+.md-nav__list .md-nav__list .md-nav__item {
+  padding-left: 0.5rem;
+}
+
+/* Ensure the bullet point is visible */
+.md-nav__item--nested > .md-nav__link {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
 /* =========================================================
    LINKS
    ========================================================= */
