@@ -7,17 +7,15 @@ docs_dir: docs-src
 theme:
   name: material
   custom_dir: docs-src/overrides
-
   features:
     - navigation.sections
     - navigation.instant
     - navigation.top
-    - navigation.footer 
+    - navigation.footer
     - content.code.copy
     - search.highlight
     - search.share
     - header.autohide
-
   palette:
     - scheme: default
       primary: custom
@@ -45,56 +43,56 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Building Blocks: index.md
-  - AI:
-      - Agents:
-          - Overview: ai-core/agents/index.md
-          - Agent Builder: ai-core/agents/agent-builder.md
-          - Multi-Agent Orchestration: ai-core/agents/multi-agent-orchestration.md
-          - Agentic SDLC: ai-core/agents/agentic-sdlc.md
-          
-      - AI Trust:
-          - Overview: ai-core/ai-trust/index.md
-          - Model Evaluation: ai-core/ai-trust/model-evaluation.md
-          - Agent Ops: ai-core/ai-trust/agent-ops.md
-          - Real-Time Guardrails: ai-core/ai-trust/real-time-guardrails.md
-          - AI Compliance: ai-core/ai-trust/ai-compliance.md
+  - "Building Blocks": index.md
 
+  - "AI":
+      - "Agents":
+          - "Overview": ai-core/agents/index.md
+          - "Agent Builder": ai-core/agents/agent-builder.md
+          - "Multi-Agent Orchestration": ai-core/agents/multi-agent-orchestration.md
+          - "Agentic SDLC": ai-core/agents/agentic-sdlc.md
 
-      - Data:
-          - Overview: ai-core/data/index.md
-          - Question & Answer: ai-core/data/q-and-a.md
-          - Data Ingestion: ai-core/data/data-ingestion.md
-          - Zero-Copy Lakehouse: ai-core/data/zero-copy-lakehouse.md
-          - Vector Search:
-              - Overview: ai-core/data/vector-search/index.md
-              - Milvus: ai-core/data/vector-search/milvus.md
-              - OpenSearch: ai-core/data/vector-search/opensearch.md
-              - DataStax Astra DB: ai-core/data/vector-search/datastax-astra-db.md
-          - Data Security and Encryption: ai-core/data/data-security-and-encryption.md
+      - "AI Trust":
+          - "Overview": ai-core/ai-trust/index.md
+          - "Model Evaluation": ai-core/ai-trust/model-evaluation.md
+          - "Agent Ops": ai-core/ai-trust/agent-ops.md
+          - "Real-Time Guardrails": ai-core/ai-trust/real-time-guardrails.md
+          - "AI Compliance": ai-core/ai-trust/ai-compliance.md
 
-  - Automation:
-      - Build and Deploy:
-          - Overview: automation-core/build/index.md
-          - iPaaS: automation-core/build/ipaas.md
-          - Authentication Management: automation-core/build/authentication-management.md
-          - Infrastructure as Code: automation-core/build/infrastructure-as-code.md
-          - Quantum-Safe Cryptography: automation-core/build/quantum-safe.md
+      - "Data":
+          - "Overview": ai-core/data/index.md
+          - "Question & Answer": ai-core/data/q-and-a.md
+          - "Data Ingestion": ai-core/data/data-ingestion.md
+          - "Zero-Copy Lakehouse": ai-core/data/zero-copy-lakehouse.md
+          - "Vector Search":
+              - "Overview": ai-core/data/vector-search/index.md
+              - "Milvus": ai-core/data/vector-search/milvus.md
+              - "OpenSearch": ai-core/data/vector-search/opensearch.md
+              - "DataStax Astra DB": ai-core/data/vector-search/datastax-astra-db.md
+          - "Data Security and Encryption": ai-core/data/data-security-and-encryption.md
 
-      - Modernize:
-          - Overview: automation-core/modernize/index.md
-          - Legacy Code Understanding: automation-core/modernize/legacy-code-understanding.md
-          - Middleware Modernization: automation-core/modernize/middleware-modernization.md
+  - "Automation":
+      - "Build and Deploy":
+          - "Overview": automation-core/build/index.md
+          - "iPaaS": automation-core/build/ipaas.md
+          - "Authentication Management": automation-core/build/authentication-management.md
+          - "Infrastructure as Code": automation-core/build/infrastructure-as-code.md
+          - "Quantum-Safe Cryptography": automation-core/build/quantum-safe.md
 
-      - Optimize:
-          - Overview: automation-core/optimize/index.md
-          - Automated Resilience & Compliance: automation-core/optimize/automated-resilience.md
-          - FinOps: automation-core/optimize/finops.md
-          - Automated Resource Management: automation-core/optimize/automated-resource-management.md
+      - "Modernize":
+          - "Overview": automation-core/modernize/index.md
+          - "Legacy Code Understanding": automation-core/modernize/legacy-code-understanding.md
+          - "Middleware Modernization": automation-core/modernize/middleware-modernization.md
 
-  - "──────────────────": null
+      - "Optimize":
+          - "Overview": automation-core/optimize/index.md
+          - "Automated Resilience & Compliance": automation-core/optimize/automated-resilience.md
+          - "FinOps": automation-core/optimize/finops.md
+          - "Automated Resource Management": automation-core/optimize/automated-resource-management.md
 
-  - Call to Action:
-      - IBM Bob and Building Blocks: ibm-bob/index.md
-      - Build with Bob Workshops: workshop/index.md
-      - Build with Bob Webinars: build-with-bob/index.md
+  - "---": null
+
+  - "Call to Action":
+      - "IBM Bob and Building Blocks": ibm-bob/index.md
+      - "Build with Bob Workshops": workshop/index.md
+      - "Build with Bob Webinars": build-with-bob/index.md
