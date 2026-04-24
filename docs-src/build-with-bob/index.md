@@ -1,39 +1,23 @@
-# Build with Bob
+# Build with Bob Webinars
 
-## Overview
+The **Build with Bob** webinar series covers IBM Technology Building Blocks through live sessions and recorded replays — helping you learn how to build, deploy, and optimize AI applications using IBM technologies and Bob, your build buddy.
 
-The Build with Bob initiative provides a structured learning path to:
-- Accelerate development using AI-powered tools  
-- Learn through real-world use cases and demos  
-- Build, deploy, and optimize applications using IBM technologies  
+## Quick Links
 
-## Webinar Series and Resources
+| Resource | Link |
+|----------|------|
+| Build with Bob Webinar Series Page | [ibm.biz/buildwithbob](https://ibm.biz/buildwithbob) |
+| Session Schedule | [Upcoming and past sessions](https://ibm-self-serve-assets.github.io/build-with-bob/#sessions) |
+| YouTube Replays | [youtube.com/@BuildwithIBM](https://www.youtube.com/@BuildwithIBM) |
+| Try Bob | [bob.ibm.com](https://bob.ibm.com/) |
+| Register (Partners) | [Partner Registration](https://forms.office.com/pages/responsepage.aspx?id=V3D2_MlQ1EqY8__KZK3Z6ezk4uuBg1pIlRCaiZ6jTzhUMkE0QVlQQkhSRUtTMUFRQVk0SkhXSVI4Mi4u&route=shorturl) |
+| Register (IBMers) | [IBM YourLearning](https://ec.yourlearning.ibm.com/w3/series/10550636?layout=grid) |
 
-Explore the **Build with Bob** webinar series and additional resources designed to help you get started and scale with IBM Bob.
+## Sessions & Resources
 
----
+Visit the page below for the latest session schedule, recordings, and registration links. This content updates automatically.
 
-## What’s Included
+<iframe src="https://ibm-self-serve-assets.github.io/build-with-bob/" width="100%" height="800" style="border: 1px solid #e0e0e0; border-radius: 8px;" loading="lazy"></iframe>
 
-- 📅 **Upcoming Sessions**
-  Stay updated on the latest sessions and events through the **[Build with Bob Portal](https://ibm-self-serve-assets.github.io/build-with-bob/)**.
-
-- 📝 **Registration for IBMers**
-  Register for upcoming webinars and hands-on workshops via **[IBMer Registration](https://ec.yourlearning.ibm.com/w3/series/10550636?layout=grid)**.
-
-- 📝 **Registration for Partners**
-  Register using the **[Partner Registration Form](https://forms.office.com/pages/responsepage.aspx?id=V3D2_MlQ1EqY8__KZK3Z6ezk4uuBg1pIlRCaiZ6jTzhUMkE0QVlQQkhSRUtTMUFRQVk0SkhXSVI4Mi4u&route=shorturl)**.
-
-- ▶️ **Recorded Sessions**
-  Access past webinar recordings in **[Build with Bob Sessions](https://ibm-self-serve-assets.github.io/build-with-bob/#sessions)**.
-
-- ▶️ **YouTube Replays**
-  Watch replays anytime on the **[Build with IBM YouTube Channel](https://www.youtube.com/@BuildwithIBM)**.
-
-- 🧪 **Try Bob**
-  Get hands-on experience with **[IBM Bob](https://bob.ibm.com/)**.
-
-- 🧱 **Building Blocks Documentation**
-  Explore detailed docs to build and scale solutions.
-
----
+!!! tip "Can't see the webinar page?"
+    If the embedded view doesn't load, visit it directly at [ibm.biz/buildwithbob](https://ibm.biz/buildwithbob).
