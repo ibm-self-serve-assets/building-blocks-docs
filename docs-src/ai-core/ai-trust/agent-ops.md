@@ -4,6 +4,8 @@ AI agents don't behave like traditional software — they can respond differentl
 
 The capabilities below are built for **watsonx Orchestrate agents** using the Agent Development Kit (ADK). For LangGraph/LangChain agents, see [LangGraph Agent Evaluation](#langgraph-agent-evaluation) at the bottom of this page.
 
+![Evaluate, observe, and optimize your agents using the Agent Ops Building Block](images/Agent%20Ops%20Evaluation-2026-04-21-220937_150.png)
+
 ## Why This Matters
 
 - **Agents are non-deterministic.** The same input can produce different outputs, making traditional testing insufficient.
