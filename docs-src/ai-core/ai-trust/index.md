@@ -2,7 +2,9 @@
 
 Building trust in AI requires a holistic approach across the full AI lifecycle — from model evaluation and agent operations to real-time safeguards and regulatory compliance. These capabilities are powered by **IBM watsonx governance** and **IBM watsonx orchestrate**.
 
-The AI Trust building blocks provide frameworks, tools, and production-ready code to help you build AI solutions that are reliable, transparent, and compliant.
+The AI Trust building blocks provide frameworks, production-ready code samples, and tools to help you build AI solutions that are reliable, transparent, and compliant. Whether you're evaluating GenAI models for quality and safety, testing AI agents before deployment, enforcing real-time guardrails in production, or mapping AI use cases to regulations — AI Trust has you covered.
+
+![AI Trust Building Blocks](images/ai-trust-mapping.png)
 
 ## Building Blocks
 
