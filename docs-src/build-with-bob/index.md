@@ -30,6 +30,21 @@ Explore the **Build with Bob** webinar series and additional resources designed 
 Visit the official Build with Bob resource hub:
 **[Build with Bob Portal](https://ibm-self-serve-assets.github.io/build-with-bob/)**
 
+### Registration for IBMers
+**[IBMer Registration](https://ec.yourlearning.ibm.com/w3/series/10550636?layout=grid)**
+
+### Registration for Partners
+**[Partner Registration Form](https://forms.office.com/pages/responsepage.aspx?id=V3D2_MlQ1EqY8__KZK3Z6ezk4uuBg1pIlRCaiZ6jTzhUMkE0QVlQQkhSRUtTMUFRQVk0SkhXSVI4Mi4u&route=shorturl)**
+
+### Recorded Sessions
+**[Build with Bob Sessions](https://ibm-self-serve-assets.github.io/build-with-bob/#sessions)**
+
+### YouTube Replays
+**[Build with IBM YouTube Channel](https://www.youtube.com/@BuildwithIBM)**
+
+### Try Bob
+**[IBM Bob](https://bob.ibm.com/)**
+
 ---
 
 ## Overview
