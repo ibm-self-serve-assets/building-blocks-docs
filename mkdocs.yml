@@ -45,7 +45,7 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Home: index.md
+  - Building Blocks: index.md
   - AI:
       - Agents:
           - Overview: ai-core/agents/index.md
@@ -92,12 +92,9 @@ nav:
           - FinOps: automation-core/optimize/finops.md
           - Automated Resource Management: automation-core/optimize/automated-resource-management.md
 
-  - IBM Bob and Building Blocks:
-      - Overview: ibm-bob/index.md
+  - IBM Bob and Building Blocks: ibm-bob/index.md
 
-  - Build with Bob Workshops:
-      - Overview: workshop/index.md
+  - Build with Bob Workshops: workshop/index.md
 
-  - Build with Bob Webinars:
-      - Overview: build-with-bob/index.md
+  - Build with Bob Webinars: build-with-bob/index.md
 
