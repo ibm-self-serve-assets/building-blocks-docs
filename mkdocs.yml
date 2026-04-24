@@ -12,7 +12,7 @@ theme:
     - navigation.sections
     - navigation.instant
     - navigation.top
-    - navigation.footer 
+    - navigation.footer
     - content.code.copy
     - search.highlight
     - search.share
@@ -52,14 +52,13 @@ nav:
           - Agent Builder: ai-core/agents/agent-builder.md
           - Multi-Agent Orchestration: ai-core/agents/multi-agent-orchestration.md
           - Agentic SDLC: ai-core/agents/agentic-sdlc.md
-          
+
       - AI Trust:
           - Overview: ai-core/ai-trust/index.md
           - Model Evaluation: ai-core/ai-trust/model-evaluation.md
           - Agent Ops: ai-core/ai-trust/agent-ops.md
           - Real-Time Guardrails: ai-core/ai-trust/real-time-guardrails.md
           - AI Compliance: ai-core/ai-trust/ai-compliance.md
-
 
       - Data:
           - Overview: ai-core/data/index.md
@@ -92,8 +91,7 @@ nav:
           - FinOps: automation-core/optimize/finops.md
           - Automated Resource Management: automation-core/optimize/automated-resource-management.md
 
-  - IBM Bob and Building Blocks: ibm-bob/index.md
-
-  - Build with Bob Workshops: workshop/index.md
-
-  - Build with Bob Webinars: build-with-bob/index.md
+  - Call to Action:
+      - IBM Bob and Building Blocks: ibm-bob/index.md
+      - Build with Bob Workshops: workshop/index.md
+      - Build with Bob Webinars: build-with-bob/index.md
