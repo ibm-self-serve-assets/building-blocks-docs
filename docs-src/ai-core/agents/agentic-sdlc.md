@@ -67,7 +67,7 @@ Agent Harness is powered by **IBM Bob**, an IDE-native agentic AI that serves as
 - Ongoing software evolution through assisted updates and improvements
 
 ## Github Repository
-Get started with [Agents harness building blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/agent-gateway)
+Get started with [Agentic SDLC](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/agentic-sdlc)
 
 ## Download IBM Bob
 Get started with IBM Bob to unlock Agent Harness capabilities:
