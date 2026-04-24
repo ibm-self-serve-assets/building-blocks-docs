@@ -94,11 +94,7 @@ nav:
 
   - "──────────────────": null
 
-  - "Call to Action": null
-
-  - IBM Bob and Building Blocks: ibm-bob/index.md
-
-  - Build with Bob Workshops: workshop/index.md
-
-  - Build with Bob Webinars: build-with-bob/index.md
-
+  - Call to Action:
+    - IBM Bob and Building Blocks: ibm-bob/index.md
+    - Build with Bob Workshops: workshop/index.md
+    - Build with Bob Webinars: build-with-bob/index.md
