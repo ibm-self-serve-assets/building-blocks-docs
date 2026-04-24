@@ -92,6 +92,10 @@ nav:
           - FinOps: automation-core/optimize/finops.md
           - Automated Resource Management: automation-core/optimize/automated-resource-management.md
 
+  - "──────────────────": null
+
+  - "Call to Action": null
+
   - IBM Bob and Building Blocks: ibm-bob/index.md
 
   - Build with Bob Workshops: workshop/index.md
