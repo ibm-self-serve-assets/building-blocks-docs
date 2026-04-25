@@ -118,14 +118,19 @@
 }
 
 /* Bullets only for "Call to Action" section items */
-/* Target the last nav section (Call to Action) */
+/* Remove default list styling */
 .md-nav--primary > .md-nav__list > .md-nav__item:last-child .md-nav__list .md-nav__item {
-  list-style-type: disc !important;
-  list-style-position: outside !important;
-  margin-left: 1.5rem !important;
+  list-style-type: none !important;
 }
 
-/* Don't make the link itself a list item - just style the container */
+/* Add bullet using ::before pseudo-element */
+.md-nav--primary > .md-nav__list > .md-nav__item:last-child .md-nav__list .md-nav__item > .md-nav__link::before {
+  content: "• " !important;
+  margin-right: 0.5rem !important;
+  color: inherit !important;
+}
+
+/* Ensure link displays normally */
 .md-nav--primary > .md-nav__list > .md-nav__item:last-child .md-nav__list .md-nav__link {
   display: block !important;
 }
