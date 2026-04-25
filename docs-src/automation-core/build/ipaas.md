@@ -5,14 +5,14 @@
 
 ## **Overview**
 
-IBM webMethods Integration represents a comprehensive, cloud-native Integration Platform as a Service (iPaaS) designed to connect applications, systems, and data across distributed enterprise environments. It enables organizations to seamlessly integrate SaaS applications, on-premise systems, APIs, and events through a low-code, drag-and-drop development model.
+webMethods Hybrid Integration represents a comprehensive, cloud-native Integration Platform as a Service (iPaaS) designed to connect applications, systems, and data across distributed enterprise environments. It enables organizations to seamlessly integrate SaaS applications, on-premise systems, APIs, and events through a low-code, drag-and-drop development model.
 
 ---
 !!! info "📖 Implementation Resources"
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
-    **[iPaaS](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/ipaas/README.md)** - Complete IBM webMethods Integration guide with implementation examples
+    **[iPaaS](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/ipaas/README.md)** - Complete webMethods Hybrid Integration guide with implementation examples
 ---
 
 **Key Integration Patterns:**
@@ -28,7 +28,7 @@ IBM webMethods Integration represents a comprehensive, cloud-native Integration 
 
 Modern enterprises operate within heterogeneous IT ecosystems where
 business processes span multiple platforms, cloud providers, and legacy
-systems. IBM webMethods Integration provides:
+systems. webMethods Hybrid Integration provides:
 
 -   Accelerated integration development.
 -   Reduced dependency on custom code.
@@ -54,7 +54,7 @@ architectural consistency and governance.
 
 ## **Capabilities & Functions**
 
-IBM webMethods Integration delivers a broad set of enterprise
+webMethods Hybrid Integration delivers a broad set of enterprise
 integration capabilities:
 
 -   Hybrid application integration.
@@ -83,7 +83,7 @@ integration capabilities:
 
 ## **Example Scenarios**
 
-Organizations commonly leverage IBM webMethods Integration to:
+Organizations commonly leverage webMethods Hybrid Integration to:
 
 -   Connect SaaS applications with core enterprise systems.
 -   Modernize legacy integration architectures.
@@ -108,7 +108,7 @@ Organizations commonly leverage IBM webMethods Integration to:
 
 ---
 
-> **🎯 Strategic Impact:** IBM webMethods Integration transforms enterprise integration from a fragmented technical challenge into a scalable, standardized platform capability.
+> **🎯 Strategic Impact:** webMethods Hybrid Integration transforms enterprise integration from a fragmented technical challenge into a scalable, standardized platform capability.
 
 ---
 
