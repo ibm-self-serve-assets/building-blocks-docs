@@ -118,16 +118,17 @@
 }
 
 /* Bullets only for "Call to Action" section items */
-.md-nav__item:has(> .md-nav__link[title="Call to Action"]) .md-nav__list .md-nav__item {
-  list-style-type: disc;
-  list-style-position: outside;
-  margin-left: 1.2rem;
+/* Target the last nav section (Call to Action) */
+.md-nav--primary > .md-nav__list > .md-nav__item:last-child .md-nav__list .md-nav__item {
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  margin-left: 1.5rem !important;
 }
 
-.md-nav__item:has(> .md-nav__link[title="Call to Action"]) .md-nav__list .md-nav__link {
-  display: list-item;
-  list-style-type: disc;
-  list-style-position: outside;
+.md-nav--primary > .md-nav__list > .md-nav__item:last-child .md-nav__list .md-nav__link {
+  display: list-item !important;
+  list-style-type: disc !important;
+  list-style-position: outside !important;
 }
 
 /* =========================================================
