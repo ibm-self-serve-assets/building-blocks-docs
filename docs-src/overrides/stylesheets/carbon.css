@@ -125,10 +125,9 @@
   margin-left: 1.5rem !important;
 }
 
+/* Don't make the link itself a list item - just style the container */
 .md-nav--primary > .md-nav__list > .md-nav__item:last-child .md-nav__list .md-nav__link {
-  display: list-item !important;
-  list-style-type: disc !important;
-  list-style-position: outside !important;
+  display: block !important;
 }
 
 /* =========================================================
