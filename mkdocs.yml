@@ -45,7 +45,8 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Building Blocks: index.md
+  - Building Blocks:
+      - Overview: index.md
   - AI:
       - Agents:
           - Overview: ai-core/agents/index.md
