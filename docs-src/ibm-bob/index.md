@@ -27,9 +27,9 @@ Instructions and related files for these custom modes can be found in their resp
 
 
 ### Data
-- [Data Ingestion](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/data-ingestion/bob-modes/base-modes): Comprehensive data ingestion for structured and unstructured data
-- [RAG Accelerator](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/question-and-answer/rag/bob-modes/base-modes): Complete RAG pipeline with document processing and semantic search
-- [Text-to-SQL](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data-for-ai/question-and-answer/text-to-sql/bob-modes/base-modes): Natural language to SQL query conversion with metadata enrichment
+- [Data Ingestion](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/_archive/data-ingestion/bob-modes/base-modes): Comprehensive data ingestion for structured and unstructured data
+- [RAG Accelerator](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/_archive/question-and-answer/rag/bob-modes/base-modes): Complete RAG pipeline with document processing and semantic search
+- [Text-to-SQL](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/query/text-to-sql/bob-modes/base-modes): Natural language to SQL query conversion with metadata enrichment
 
 
 ### Automation
