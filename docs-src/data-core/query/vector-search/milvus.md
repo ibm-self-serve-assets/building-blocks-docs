@@ -74,7 +74,7 @@ The service pulls documents from COS, processes them with Docling, generates emb
 1. Clone the repository:
    ```bash
    git clone https://github.com/ibm-self-serve-assets/building-blocks.git
-   cd building-blocks/data-for-ai/vector-search/milvus/assets/data-ingestion-asset/
+   cd building-blocks/data/query/vector-search/milvus/assets/data-ingestion-asset/
    ```
 
 2. Create a Python virtual environment:

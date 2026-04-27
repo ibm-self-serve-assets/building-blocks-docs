@@ -58,7 +58,7 @@ The RAG Accelerator provides a complete RAG pipeline with document processing, e
 1. Clone the repository:
    ```bash
    git clone https://github.com/ibm-self-serve-assets/building-blocks.git
-   cd building-blocks/data-for-ai/question-and-answer/rag/assets/rag-accelerator
+   cd building-blocks/data/query/text-to-sql/assets/rag-accelerator
    ```
 
 2. Create a Python virtual environment:
@@ -153,7 +153,7 @@ The Text-to-SQL component converts natural language questions into executable SQ
 
 1. Navigate to the Text-to-SQL directory:
    ```bash
-   cd building-blocks/data-for-ai/question-and-answer/text-to-sql/assets/asset-1
+   cd building-blocks/data/query/text-to-sql/assets/asset-1
    ```
 
 2. Set up metadata enrichment:

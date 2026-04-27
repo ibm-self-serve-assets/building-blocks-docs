@@ -106,7 +106,7 @@ The building block provides a Python script (`watsonxdata_setup.py`) that automa
 
 ```bash
 git clone https://github.com/ibm-self-serve-assets/building-blocks.git
-cd building-blocks/data-for-ai/zero-copy-lakehouse/assets/setup-lakehouse
+cd building-blocks/data/query/federated-search/assets/setup-lakehouse
 ```
 
 ### Step 2: Configure Settings

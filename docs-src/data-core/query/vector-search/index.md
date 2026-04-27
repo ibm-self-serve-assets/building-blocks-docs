@@ -103,7 +103,7 @@ The Vector Search API can be deployed:
 1. Clone the repository:
    ```bash
    git clone https://github.com/ibm-self-serve-assets/building-blocks.git
-   cd building-blocks/data-for-ai/vector-search/
+   cd building-blocks/data/query/vector-search/
    ```
 
 2. Create a Python virtual environment:

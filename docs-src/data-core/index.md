@@ -1,6 +1,6 @@
 # Data - Building Blocks
 
-Welcome to the **Data Building Blocks** documentation. This collection provides ready-to-use accelerators organized into two main categories: **Enrichment** and **Activation**.
+Welcome to the **Data Building Blocks** documentation. This collection provides ready-to-use accelerators organized into three main categories: **Integration**, **Intelligence**, and **Query**.
 
 ## Overview
 
