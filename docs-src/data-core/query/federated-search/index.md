@@ -86,7 +86,7 @@ The building block provides a Python script (`watsonxdata_setup.py`) that automa
        - [DB2 Database SaaS instance](https://cloud.ibm.com/docs/db2-saas?topic=db2-saas-provisioning) on IBM Cloud
        - [AWS S3 - Simple Cloud Storage](https://aws.amazon.com/s3/)
     
-    2. Python 3.8+ installed locally
+    2. Python 3.12+ installed locally
     
     3. Install dependencies:
        ```bash
@@ -293,7 +293,7 @@ Distributed SQL query engine for big data analytics (included in watsonx.data).
 
 ## Resources
 
-- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/zero-copy-lakehouse)
+- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/federated-search)
 - [IBM watsonx.data Documentation](https://www.ibm.com/docs/en/watsonxdata)
 - [Adding Storage and Catalog Pair](https://www.ibm.com/docs/en/watsonxdata/standard/2.0.x?topic=components-adding-storage-catalog-pair)
 - [Adding Database and Catalog Pair](https://www.ibm.com/docs/en/watsonxdata/standard/2.0.x?topic=components-adding-database-catalog-pair)
@@ -302,4 +302,4 @@ Distributed SQL query engine for big data analytics (included in watsonx.data).
 
 ## Support
 
-For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/zero-copy-lakehouse) or contact the IBM watsonx.data support team.
+For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/federated-search) or contact the IBM watsonx.data support team.

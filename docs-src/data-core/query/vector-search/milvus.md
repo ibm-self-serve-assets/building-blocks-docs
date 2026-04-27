@@ -241,8 +241,7 @@ print(response.text)
 
 ## Resources
 
-- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/vector-search/milvus)
-- [Data Ingestion Asset](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/vector-search/milvus/assets/data-ingestion-asset)
+- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/vector-search)
 - [Milvus Documentation](https://milvus.io/docs)
 - [watsonx.data Milvus Setup](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-adding-milvus-service)
 
@@ -256,4 +255,4 @@ print(response.text)
 
 ## Support
 
-For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/vector-search/milvus) or open an issue.
+For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/vector-search) or open an issue.

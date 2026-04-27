@@ -50,7 +50,7 @@ IBM UDI provides specialized capabilities for ingesting unstructured data from v
 - **Content Extraction**: Extract text and metadata from unstructured sources
 - **Format Conversion**: Convert between different file formats
 
-**Repository Path**: [`data-ingestion/assets/unstructured-data/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/assets/unstructured-data)
+**Repository Path**: [`integration/ai-generated-data-pipeline/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/ai-generated-data-pipeline)
 
 ### Structured Data Ingestion
 
@@ -61,7 +61,7 @@ Connect to and ingest data from relational databases and data warehouses:
 - **Batch Processing**: Efficient bulk data loading
 - **Schema Mapping**: Automatic schema detection and mapping
 
-**Repository Path**: [`data-ingestion/assets/structured-data/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/assets/structured-data)
+**Repository Path**: [`integration/ai-generated-data-pipeline/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/ai-generated-data-pipeline)
 
 
 ---
@@ -82,7 +82,7 @@ Connect to and ingest data from relational databases and data warehouses:
 1. Clone the repository:
    ```bash
    git clone https://github.com/ibm-self-serve-assets/building-blocks.git
-   cd building-blocks/data-for-ai/data-ingestion/
+   cd building-blocks/data/integration/ai-generated-data-pipeline/
    ```
 
 2. Choose your ingestion type and navigate to the appropriate directory:
@@ -147,12 +147,10 @@ Source System → Batch/Stream Router → Processing → watsonx.data
 
 ## Resources
 
-- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion)
-- [Unstructured Data Documentation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/assets/unstructured-data)
-- [Structured Data Documentation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion/assets/structured-data)
+- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/ai-generated-data-pipeline)
 
 ---
 
 ## Support
 
-For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-ingestion) or open an issue.
+For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/ai-generated-data-pipeline) or open an issue.

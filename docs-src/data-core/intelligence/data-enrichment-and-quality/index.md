@@ -63,7 +63,7 @@ Advanced data security, monitoring, and encryption enforcement with IBM Guardium
 
 ```bash
 git clone https://github.com/ibm-self-serve-assets/building-blocks.git
-cd building-blocks/data-for-ai/data-security-and-encryption/assets/data-protection-automation
+cd building-blocks/data/intelligence/data-enrichment-quality
 ```
 
 ### Step 2: Configure Input JSON
@@ -427,7 +427,7 @@ Identity and Access Management for secure authentication and authorization.
 
 ## Resources
 
-- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/data-security-and-encryption)
+- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-enrichment-quality)
 - [watsonx.data API Documentation](https://cloud.ibm.com/apidocs/watson-data-api)
 - [Knowledge Catalog API](https://cloud.ibm.com/apidocs/knowledge-catalog)
 - [IBM Guardium](https://www.ibm.com/products/guardium-data-protection)

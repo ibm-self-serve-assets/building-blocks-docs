@@ -138,7 +138,7 @@ The Text-to-SQL component converts natural language questions into executable SQ
 #### Architecture
 
 <p align="center">
-  <img src="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/data-for-ai/question-and-answer/text-to-sql/assets/asset-1/images/image.png" alt="Text-to-SQL Architecture" />
+  <img src="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/data/query/text-to-sql/assets/asset-1/images/image.png" alt="Text-to-SQL Architecture" />
 </p>
 
 #### Prerequisites
@@ -173,8 +173,8 @@ The Text-to-SQL component converts natural language questions into executable SQ
 
 The Text-to-SQL application can be deployed on:
 
-- **IBM Code Engine**: See [Code Engine Setup](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/question-and-answer/text-to-sql/assets/asset-1/applications/code-engine-setup)
-- **Red Hat OpenShift**: See [OpenShift Setup](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/question-and-answer/text-to-sql/assets/asset-1/applications/openshift-setup)
+- **IBM Code Engine**: See [Code Engine Setup](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/text-to-sql)
+- **Red Hat OpenShift**: See [OpenShift Setup](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/text-to-sql)
 
 ---
 

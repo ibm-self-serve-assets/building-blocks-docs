@@ -197,10 +197,10 @@ results = collection.find(
 - [DataStax Astra DB Documentation](https://docs.datastax.com/en/astra/home/astra.html)
 - [Apache Cassandra Documentation](https://cassandra.apache.org/doc/latest/)
 - [Vector Search Guide](https://docs.datastax.com/en/astra/astra-db-vector/get-started/quickstart.html)
-- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai)
+- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/nosql-database)
 
 ---
 
 ## Support
 
-For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai) or contact DataStax support.
+For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/nosql-database) or contact DataStax support.

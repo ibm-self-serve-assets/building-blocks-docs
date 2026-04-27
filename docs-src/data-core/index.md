@@ -1,6 +1,6 @@
-# Data for AI - Building Blocks
+# Data - Building Blocks
 
-Welcome to the **Data for AI Building Blocks** documentation. This collection provides ready-to-use accelerators organized into two main categories: **Enrichment** and **Activation**.
+Welcome to the **Data Building Blocks** documentation. This collection provides ready-to-use accelerators organized into two main categories: **Enrichment** and **Activation**.
 
 ## Overview
 
@@ -9,27 +9,30 @@ This framework provides ready-to-use accelerators that address critical capabili
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
     
-    **[Building Blocks - Data for AI](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai)**
+    **[Building Blocks - Data](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data)**
 
 ---
 
 ## Architecture
 
-The Data for AI building blocks are organized into two core capabilities:
+The Data building blocks are organized into three core capabilities:
 
-### 1. Enrichment
-Data preparation, transformation, and quality enhancement capabilities that prepare data for AI workloads.
+### 1. Integration
+Data ingestion and pipeline automation to bring data into your systems from various sources.
 
-### 2. Activation
-Data access, retrieval, and query capabilities that enable AI applications to interact with prepared data.
+### 2. Intelligence
+Data quality, governance, and real-time streaming to ensure trustworthy and timely data.
+
+### 3. Query
+Data access, retrieval, and query capabilities that enable AI applications to interact with data.
 
 ---
 
-## Enrichment Building Blocks
+## Integration Building Blocks
 
-Enrichment capabilities focus on preparing and enhancing data for AI use cases.
+Integration capabilities focus on data ingestion and pipeline automation.
 
-### [Automated Data Pipelines](enrichment/automated-data-pipelines/index.md)
+### [Automated Data Pipelines](integration/automated-data-pipelines/index.md)
 
 Comprehensive data ingestion solutions for IBM watsonx.data covering unstructured and structured data sources.
 
@@ -42,19 +45,11 @@ Comprehensive data ingestion solutions for IBM watsonx.data covering unstructure
 
 ---
 
-### [Data Streaming](enrichment/data-streaming/index.md)
+## Intelligence Building Blocks
 
-Real-time data streaming capabilities for continuous data flow into AI pipelines.
+Intelligence capabilities focus on data quality, governance, and streaming.
 
-**Key Features:**
-
-- Real-time event ingestion
-- Stream processing for operational and analytical use cases
-- Integration with Apache Kafka and IBM Event Streams
-
----
-
-### [Data Enrichment & Quality](enrichment/data-enrichment-and-quality/index.md)
+### [Data Enrichment & Quality](intelligence/data-enrichment-and-quality/index.md)
 
 Data governance, quality controls, and security features to ensure trustworthy AI.
 
@@ -67,11 +62,23 @@ Data governance, quality controls, and security features to ensure trustworthy A
 
 ---
 
-## Activation Building Blocks
+### [Data Streaming](intelligence/data-streaming/index.md)
 
-Activation capabilities enable AI applications to access and query prepared data.
+Real-time data streaming capabilities for continuous data flow into AI pipelines.
 
-### [Question & Answer (Q&A)](activation/q-and-a/index.md)
+**Key Features:**
+
+- Real-time event ingestion
+- Stream processing for operational and analytical use cases
+- Integration with Apache Kafka and IBM Event Streams
+
+---
+
+## Query Building Blocks
+
+Query capabilities enable AI applications to access and query data.
+
+### [Text-to-SQL](query/text-to-sql/index.md)
 
 Natural language interfaces to interact with data through RAG (Retrieval-Augmented Generation) and Text-to-SQL.
 
@@ -82,7 +89,7 @@ Natural language interfaces to interact with data through RAG (Retrieval-Augment
 
 ---
 
-### [Vector Search](activation/vector-search/index.md)
+### [Vector Search](query/vector-search/index.md)
 
 Vector-based retrieval service for GenAI pipelines with semantic similarity search.
 
@@ -94,7 +101,7 @@ Vector-based retrieval service for GenAI pipelines with semantic similarity sear
 
 ---
 
-### [No SQL Database](activation/no-sql-database/index.md)
+### [NoSQL Database](query/nosql-database/index.md)
 
 NoSQL database solutions for flexible, scalable data storage and retrieval.
 
@@ -106,9 +113,9 @@ NoSQL database solutions for flexible, scalable data storage and retrieval.
 
 ---
 
-### [Zero-Copy Lakehouse](activation/zero-copy-lakehouse/index.md)
+### [Federated Search](query/federated-search/index.md)
 
-Query across databases, warehouses, and cloud object stores without data duplication.
+Query data across distributed sources without data duplication using zero-copy lakehouse architecture.
 
 **Key Benefits:**
 
@@ -127,7 +134,7 @@ Query across databases, warehouses, and cloud object stores without data duplica
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/ibm-self-serve-assets/building-blocks.git
-   cd building-blocks/data-for-ai
+   cd building-blocks/data
    ```
 
 2. **Navigate to the specific building block directory**
@@ -138,7 +145,7 @@ Query across databases, warehouses, and cloud object stores without data duplica
 
 ## Key Benefits
 
-!!! success "Why Use Data for AI Building Blocks?"
+!!! success "Why Use Data Building Blocks?"
     
     - **Faster Time-to-Value**: Pre-built accelerators reduce development time
     - **Cost Savings**: Eliminate redundant storage and data movement

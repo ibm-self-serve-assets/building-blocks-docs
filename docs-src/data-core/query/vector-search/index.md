@@ -234,7 +234,7 @@ The API supports extensive customization:
 
 ## Resources
 
-- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/vector-search)
+- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/vector-search)
 - [Milvus Documentation](milvus.md)
 
 ---
@@ -247,4 +247,4 @@ The API supports extensive customization:
 
 ## Support
 
-For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/vector-search) or open an issue.
+For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/vector-search) or open an issue.

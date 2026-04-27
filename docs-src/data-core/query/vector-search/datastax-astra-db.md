@@ -323,6 +323,6 @@ Astra DB brings enterprise-grade reliability and global scale to vector search, 
 
 For questions about DataStax Astra DB integration in the building blocks framework:
 
-- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/vector-search)
+- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/vector-search)
 - [DataStax Support](https://support.datastax.com/)
 - [DataStax Community Forum](https://community.datastax.com/)

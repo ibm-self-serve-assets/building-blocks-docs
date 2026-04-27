@@ -60,7 +60,7 @@ This building block leverages the following IBM products and services:
 !!! info "Requirements"
     1. IBM Event Streams or Apache Kafka cluster
     2. IBM Cloud account (for IBM Event Streams)
-    3. Python 3.8+ or Java 11+ for client applications
+    3. Python 3.12+ or Java 11+ for client applications
     4. Network connectivity to Kafka brokers
 
 ### Basic Setup
@@ -130,10 +130,10 @@ flowchart LR
 
 - [IBM Event Streams Documentation](https://cloud.ibm.com/docs/EventStreams)
 - [Apache Kafka Documentation](https://kafka.apache.org/documentation/)
-- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai)
+- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-streaming)
 
 ---
 
 ## Support
 
-For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai) or contact IBM support.
+For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-streaming) or contact IBM support.

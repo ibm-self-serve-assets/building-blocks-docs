@@ -61,17 +61,28 @@ nav:
           - Real-Time Guardrails: ai-core/ai-trust/real-time-guardrails.md
           - AI Compliance: ai-core/ai-trust/ai-compliance.md
 
-      - Data:
-          - Overview: ai-core/data/index.md
-          - Question & Answer: ai-core/data/q-and-a.md
-          - Data Ingestion: ai-core/data/data-ingestion.md
-          - Zero-Copy Lakehouse: ai-core/data/zero-copy-lakehouse.md
+  - Data:
+      - Overview: data-core/index.md
+      
+      - Integration:
+          - Overview: data-core/integration/index.md
+          - Automated Data Pipelines: data-core/integration/automated-data-pipelines/index.md
+
+      - Intelligence:
+          - Overview: data-core/intelligence/index.md
+          - Data Enrichment & Quality: data-core/intelligence/data-enrichment-and-quality/index.md
+          - Data Streaming: data-core/intelligence/data-streaming/index.md
+
+      - Query:
+          - Overview: data-core/query/index.md
+          - Text-to-SQL: data-core/query/text-to-sql/index.md
           - Vector Search:
-              - Overview: ai-core/data/vector-search/index.md
-              - Milvus: ai-core/data/vector-search/milvus.md
-              - OpenSearch: ai-core/data/vector-search/opensearch.md
-              - DataStax Astra DB: ai-core/data/vector-search/datastax-astra-db.md
-          - Data Security and Encryption: ai-core/data/data-security-and-encryption.md
+              - Overview: data-core/query/vector-search/index.md
+              - Milvus: data-core/query/vector-search/milvus.md
+              - OpenSearch: data-core/query/vector-search/opensearch.md
+              - DataStax Astra DB: data-core/query/vector-search/datastax-astra-db.md
+          - NoSQL Database: data-core/query/nosql-database/index.md
+          - Federated Search: data-core/query/federated-search/index.md
 
   - Automation:
       - Build and Deploy:

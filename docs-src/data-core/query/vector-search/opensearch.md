@@ -252,6 +252,6 @@ OpenSearch combines traditional full-text search with modern vector search capab
 
 For questions about OpenSearch integration in the building blocks framework:
 
-- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data-for-ai/vector-search)
+- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/vector-search)
 - [OpenSearch Community](https://opensearch.org/community.html)
 - [OpenSearch Forum](https://forum.opensearch.org/)
