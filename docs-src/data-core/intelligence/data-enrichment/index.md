@@ -2,6 +2,13 @@
 
 The Data Enrichment building block combines critical capabilities for protecting sensitive data through masking, encryption, and access controls, ensuring data governance and regulatory compliance.
 
+!!! info "GitHub Repository"
+    The complete source code and examples are available in the GitHub repository:
+    
+    **[Building Blocks - Data Enrichment](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-enrichment)**
+
+---
+
 ## Overview
 
 This building block provides comprehensive data protection capabilities using IBM watsonx.data Intelligence, combining automated project and catalog management with advanced data masking and governance workflows.

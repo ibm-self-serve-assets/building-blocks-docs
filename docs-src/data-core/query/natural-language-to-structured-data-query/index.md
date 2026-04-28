@@ -2,6 +2,13 @@
 
 Natural language interfaces to interact with structured data through advanced query generation, RAG (Retrieval-Augmented Generation), and Text-to-SQL powered by IBM watsonx.
 
+!!! info "GitHub Repository"
+    The complete source code and examples are available in the GitHub repository:
+    
+    **[Building Blocks - Natural Language to Structured Data Query](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/natural-language-to-structured-data-query)**
+
+---
+
 ## Overview
 
 This building block enables users to query and interact with structured data using natural language, making data more accessible to both technical and non-technical users. It combines RAG capabilities with Text-to-SQL conversion to provide comprehensive natural language query support.

@@ -2,6 +2,13 @@
 
 Data quality management and lineage tracking capabilities for ensuring data integrity and traceability.
 
+!!! info "GitHub Repository"
+    The complete source code and examples are available in the GitHub repository:
+    
+    **[Building Blocks - Quality and Lineage](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/quality-and-lineage)**
+
+---
+
 ## Overview
 
 The Quality and Lineage building block provides comprehensive data quality assessment, monitoring, and lineage tracking capabilities. It enables organizations to maintain high data quality standards and understand data flow throughout their systems.

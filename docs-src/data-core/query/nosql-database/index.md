@@ -2,6 +2,13 @@
 
 NoSQL database solutions for flexible, scalable data storage and retrieval with optional vector capabilities for AI workloads.
 
+!!! info "GitHub Repository"
+    The complete source code and examples are available in the GitHub repository:
+    
+    **[Building Blocks - NoSQL Database](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/nosql-database)**
+
+---
+
 ## Overview
 
 The No SQL Database building block provides large-scale NoSQL storage with Cassandra compatibility and optional vector capabilities for AI and application workloads. It offers a serverless, cloud-native database solution that scales automatically based on demand.

@@ -2,6 +2,13 @@
 
 The Vector Search building block provides a modular framework for building GenAI pipelines that combine document parsing and extraction with vector databases for semantic search capabilities.
 
+!!! info "GitHub Repository"
+    The complete source code and examples are available in the GitHub repository:
+    
+    **[Building Blocks - Vector Search](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/vector-search)**
+
+---
+
 ## Overview
 
 This building block offers an ingestion API that simplifies the process of chunking, embedding, and storing documents in vector databases. It's designed to save significant development and testing time by providing ready-to-use pipelines with extensible customization options.

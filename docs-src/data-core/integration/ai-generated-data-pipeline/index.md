@@ -2,6 +2,13 @@
 
 AI-powered data pipeline generation and automation for IBM watsonx.data covering unstructured and structured data sources.
 
+!!! info "GitHub Repository"
+    The complete source code and examples are available in the GitHub repository:
+    
+    **[Building Blocks - AI-Generated Data Pipeline](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/ai-generated-data-pipeline)**
+
+---
+
 ## Overview
 
 The AI-Generated Data Pipeline building block provides an intelligent framework for automatically generating and managing data pipelines for IBM watsonx.data. It leverages AI to understand data sources, recommend optimal ingestion strategies, and automate pipeline creation, reducing manual effort and accelerating time-to-value.

@@ -2,6 +2,13 @@
 
 The Zero-Copy Lakehouse building block enables seamless querying across databases, warehouses, and cloud object stores without data duplication, reducing costs and latency.
 
+!!! info "GitHub Repository"
+    The complete source code and examples are available in the GitHub repository:
+    
+    **[Building Blocks - Federated Search](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query/federated-search)**
+
+---
+
 ## What is Zero-Copy Lakehouse?
 
 A Zero-Copy Lakehouse is a data architecture approach where multiple analytics, AI, and ML tools can access and process the same underlying data without duplicating or moving it across systems.
