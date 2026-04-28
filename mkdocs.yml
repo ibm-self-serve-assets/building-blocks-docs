@@ -67,6 +67,7 @@ nav:
       - Integration:
           - Overview: data-core/integration/index.md
           - Automated Data Pipelines: data-core/integration/automated-data-pipelines/index.md
+          - Data Streaming: data-core/integration/data-streaming/index.md
 
       - Intelligence:
           - Overview: data-core/intelligence/index.md
