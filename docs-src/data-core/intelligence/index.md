@@ -10,7 +10,7 @@ Intelligence capabilities provide data governance, quality controls, and streami
 
 ## Available Building Blocks
 
-### [Data Enrichment](data-enrichment-and-quality/index.md)
+### [Data Enrichment](data-enrichment/index.md)
 
 Enhance and augment your data with additional context, metadata, and semantic information to improve data usability and AI model performance.
 
@@ -29,7 +29,7 @@ Enhance and augment your data with additional context, metadata, and semantic in
 
 ---
 
-### [Quality and Lineage](data-enrichment-and-quality/index.md)
+### [Quality and Lineage](quality-and-lineage/index.md)
 
 Ensure data quality, governance, and lineage tracking to maintain trustworthy data for AI applications.
 

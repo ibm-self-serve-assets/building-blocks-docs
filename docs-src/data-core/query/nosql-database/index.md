@@ -1,4 +1,4 @@
-# No SQL Database Building Block
+# NoSQL Database Building Block
 
 NoSQL database solutions for flexible, scalable data storage and retrieval with optional vector capabilities for AI workloads.
 
@@ -11,7 +11,7 @@ NoSQL database solutions for flexible, scalable data storage and retrieval with 
 
 ## Overview
 
-The No SQL Database building block provides large-scale NoSQL storage with Cassandra compatibility and optional vector capabilities for AI and application workloads. It offers a serverless, cloud-native database solution that scales automatically based on demand.
+The NoSQL Database building block provides large-scale NoSQL storage with Cassandra compatibility and optional vector capabilities for AI and application workloads. It offers a serverless, cloud-native database solution that scales automatically based on demand.
 
 ---
 

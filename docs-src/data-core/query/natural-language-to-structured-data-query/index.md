@@ -31,9 +31,7 @@ The RAG Accelerator provides a complete RAG pipeline with document processing, e
 - **LLM Integration**: Configurable models and prompt templates
 - **Governance**: Integration with watsonx.governance for build-time and runtime governance
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/7846b5a7-5e22-45bd-94ea-d0176d7a07fc" alt="RAG Architecture" />
-</p>
+![RAG architecture](https://github.com/user-attachments/assets/7846b5a7-5e22-45bd-94ea-d0176d7a07fc)
 
 #### Key Capabilities
 
@@ -144,9 +142,7 @@ The Text-to-SQL component converts natural language questions into executable SQ
 
 #### Architecture
 
-<p align="center">
-  <img src="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/data/query/text-to-sql/assets/asset-1/images/image.png" alt="Text-to-SQL Architecture" />
-</p>
+![Text-to-SQL architecture](https://github.com/ibm-self-serve-assets/building-blocks/raw/main/data/query/text-to-sql/assets/asset-1/images/image.png)
 
 #### Prerequisites
 

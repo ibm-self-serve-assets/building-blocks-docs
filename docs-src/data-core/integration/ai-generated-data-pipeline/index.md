@@ -43,7 +43,6 @@ This building block leverages the following IBM products and services:
 - CDC (Change Data Capture) pipelines
 - Batch and streaming ingestion modes
 
-
 ---
 
 ## Components
@@ -69,7 +68,6 @@ Connect to and ingest data from relational databases and data warehouses:
 - **Schema Mapping**: Automatic schema detection and mapping
 
 **Repository Path**: [`integration/ai-generated-data-pipeline/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/ai-generated-data-pipeline)
-
 
 ---
 

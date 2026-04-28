@@ -13,9 +13,7 @@ The Vector Search building block provides a modular framework for building GenAI
 
 This building block offers an ingestion API that simplifies the process of chunking, embedding, and storing documents in vector databases. It's designed to save significant development and testing time by providing ready-to-use pipelines with extensible customization options.
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/b259ff95-163e-427c-93f3-15a99462f777" alt="Vector Search Architecture" />
-</p>
+![Vector Search architecture](https://github.com/user-attachments/assets/b259ff95-163e-427c-93f3-15a99462f777)
 
 ---
 
