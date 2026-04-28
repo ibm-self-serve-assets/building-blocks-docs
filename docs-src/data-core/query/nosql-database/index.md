@@ -107,6 +107,8 @@ This building block leverages the following products and services:
 
 ## Architecture Pattern
 
+![Astra DB architecture overview](images/AstraDB.png)
+
 ```mermaid
 flowchart LR
     subgraph Applications["Applications"]

@@ -13,6 +13,8 @@ The Data Enrichment building block combines critical capabilities for protecting
 
 This building block provides comprehensive data protection capabilities using IBM watsonx.data Intelligence, combining automated project and catalog management with advanced data masking and governance workflows.
 
+![Data enrichment workflow](images/Enrichment.png)
+
 ---
 
 ## Key Components
