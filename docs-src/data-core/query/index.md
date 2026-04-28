@@ -10,7 +10,7 @@ Query capabilities provide the "data access layer" for AI applications, enabling
 
 ## Available Building Blocks
 
-### [Natural Language to Structured Data Query](text-to-sql/index.md)
+### [Natural Language to Structured Data Query](natural-language-to-structured-data-query/index.md)
 
 Natural language interfaces to interact with structured data through advanced query generation, RAG (Retrieval-Augmented Generation), and Text-to-SQL powered by IBM watsonx.
 

@@ -32,7 +32,7 @@ Data access, retrieval, and query capabilities that enable AI applications to in
 
 Integration capabilities focus on data ingestion and pipeline automation.
 
-### [AI-Generated Data Pipeline](integration/automated-data-pipelines/index.md)
+### [AI-Generated Data Pipeline](integration/ai-generated-data-pipeline/index.md)
 
 AI-powered data pipeline generation and automation for IBM watsonx.data covering unstructured and structured data sources.
 
@@ -63,7 +63,7 @@ Real-time data streaming capabilities powered by Confluent Platform for continuo
 
 Intelligence capabilities focus on data quality, governance, and enrichment.
 
-### [Data Enrichment](intelligence/data-enrichment-and-quality/index.md)
+### [Data Enrichment](intelligence/data-enrichment/index.md)
 
 Data enrichment capabilities to enhance and augment your data with additional context and metadata.
 
@@ -76,7 +76,7 @@ Data enrichment capabilities to enhance and augment your data with additional co
 
 ---
 
-### [Quality and Lineage](intelligence/data-enrichment-and-quality/index.md)
+### [Quality and Lineage](intelligence/quality-and-lineage/index.md)
 
 Data governance, quality controls, and lineage tracking to ensure trustworthy AI.
 
@@ -93,7 +93,7 @@ Data governance, quality controls, and lineage tracking to ensure trustworthy AI
 
 Query capabilities enable AI applications to access and query data.
 
-### [Natural Language to Structured Data Query](query/text-to-sql/index.md)
+### [Natural Language to Structured Data Query](query/natural-language-to-structured-data-query/index.md)
 
 Natural language interfaces to interact with structured data through advanced query generation.
 

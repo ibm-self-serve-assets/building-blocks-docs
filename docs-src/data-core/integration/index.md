@@ -10,7 +10,7 @@ Integration capabilities provide the foundation for data movement, enabling seam
 
 ## Available Building Blocks
 
-### [AI-Generated Data Pipeline](automated-data-pipelines/index.md)
+### [AI-Generated Data Pipeline](ai-generated-data-pipeline/index.md)
 
 AI-powered data pipeline generation and automation for IBM watsonx.data covering unstructured and structured data sources.
 
