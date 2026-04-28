@@ -10,12 +10,13 @@ Integration capabilities provide the foundation for data movement, enabling seam
 
 ## Available Building Blocks
 
-### [Automated Data Pipelines](automated-data-pipelines/index.md)
+### [AI-Generated Data Pipeline](automated-data-pipelines/index.md)
 
-Build and run batch, real-time, replication, and unstructured data pipelines with observability and hybrid integration support.
+AI-powered data pipeline generation and automation for IBM watsonx.data covering unstructured and structured data sources.
 
 **Key Features:**
 
+- **AI-Powered Pipeline Generation**: Automatically generate data pipelines using AI
 - **Unstructured Data Ingestion**: Process documents, PDFs, images, and media files
 - **Structured Data Ingestion**: RDBMS connectors with CDC support
 - **Batch and Streaming**: Support for both batch and real-time ingestion
@@ -24,9 +25,31 @@ Build and run batch, real-time, replication, and unstructured data pipelines wit
 **IBM Products:**
 
 - IBM watsonx.data
+- IBM watsonx.ai
 - IBM Cloud Object Storage (COS)
 - IBM UDI (Unstructured Data Ingestion)
 - IBM Db2
+
+---
+
+### [Data Streaming](data-streaming/index.md)
+
+Real-time data streaming capabilities powered by Confluent Platform for continuous data flow into AI pipelines.
+
+**Key Features:**
+
+- **Real-time Event Ingestion**: Capture and process events as they occur
+- **Advanced Stream Processing**: ksqlDB, Kafka Streams, and Flink integration
+- **Confluent Platform**: Complete data streaming solution by Kafka creators
+- **Schema Registry**: Centralized schema management for data governance
+- **200+ Connectors**: Pre-built integrations via Kafka Connect
+
+**Products:**
+
+- Confluent Platform
+- Confluent Cloud
+- Apache Kafka
+- IBM watsonx.data
 
 ---
 

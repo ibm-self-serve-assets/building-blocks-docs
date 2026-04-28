@@ -1,10 +1,10 @@
-# Data Ingestion Building Block
+# AI-Generated Data Pipeline
 
-Comprehensive data ingestion solutions for IBM watsonx.data covering unstructured and structured data sources.
+AI-powered data pipeline generation and automation for IBM watsonx.data covering unstructured and structured data sources.
 
 ## Overview
 
-The Data Ingestion building block provides a complete framework for ingesting various types of data into IBM watsonx.data. It supports multiple data formats and sources, enabling seamless integration of diverse data types into your data lakehouse.
+The AI-Generated Data Pipeline building block provides an intelligent framework for automatically generating and managing data pipelines for IBM watsonx.data. It leverages AI to understand data sources, recommend optimal ingestion strategies, and automate pipeline creation, reducing manual effort and accelerating time-to-value.
 
 ---
 

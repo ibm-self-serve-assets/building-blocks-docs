@@ -10,15 +10,34 @@ Intelligence capabilities provide data governance, quality controls, and streami
 
 ## Available Building Blocks
 
-### [Data Enrichment & Quality](data-enrichment-and-quality/index.md)
+### [Data Enrichment](data-enrichment-and-quality/index.md)
 
-Improves trust and usability of enterprise data through cataloging, governance, quality controls, lineage, metadata enrichment, and discovery.
+Enhance and augment your data with additional context, metadata, and semantic information to improve data usability and AI model performance.
+
+**Key Features:**
+
+- **Metadata Enrichment**: Enhance data with business context and semantic information
+- **Data Augmentation**: Add derived attributes and calculated fields
+- **Context Enhancement**: Enrich data with external reference data
+- **Semantic Enrichment**: Apply ontologies and taxonomies
+
+**IBM Products:**
+
+- IBM watsonx.data Intelligence
+- IBM Governance and Catalog
+- IBM Knowledge Catalog
+
+---
+
+### [Quality and Lineage](data-enrichment-and-quality/index.md)
+
+Ensure data quality, governance, and lineage tracking to maintain trustworthy data for AI applications.
 
 **Key Features:**
 
 - **Data Privacy & Encryption**: Protect sensitive data with watsonx.data Intelligence
-- **Metadata Enrichment**: Enhance data with business context
 - **Quality Controls**: Validate and ensure data quality
+- **Data Lineage**: Track data flow and transformations
 - **Governance**: Access controls and compliance features
 
 **IBM Products:**
@@ -27,24 +46,6 @@ Improves trust and usability of enterprise data through cataloging, governance, 
 - IBM Governance and Catalog
 - IBM Data Quality
 - IBM Guardium (coming soon)
-
----
-
-### [Data Streaming](data-streaming/index.md)
-
-Supports real-time event ingestion, streaming pipelines, and stream processing for operational and analytical use cases.
-
-**Key Features:**
-
-- Real-time data ingestion
-- Event-driven architectures
-- Stream processing capabilities
-- Integration with Apache Kafka
-
-**IBM Products:**
-
-- IBM Event Streams (Apache Kafka)
-- IBM Cloud Pak for Data
 
 ---
 

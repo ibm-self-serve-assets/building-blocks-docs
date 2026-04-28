@@ -10,14 +10,15 @@ Query capabilities provide the "data access layer" for AI applications, enabling
 
 ## Available Building Blocks
 
-### [Text-to-SQL](text-to-sql/index.md)
+### [Natural Language to Structured Data Query](text-to-sql/index.md)
 
-Natural language interfaces to interact with data through RAG (Retrieval-Augmented Generation) and Text-to-SQL powered by IBM watsonx.
+Natural language interfaces to interact with structured data through advanced query generation, RAG (Retrieval-Augmented Generation), and Text-to-SQL powered by IBM watsonx.
 
 **Key Components:**
 
 - **RAG Accelerator**: Complete RAG pipeline with document processing and semantic search
 - **Text-to-SQL**: Convert natural language questions into executable SQL queries
+- **Natural Language Query**: Advanced natural language understanding for data queries
 
 **IBM Products:**
 

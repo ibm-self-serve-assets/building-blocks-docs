@@ -1,10 +1,10 @@
-# Question & Answer (Q&A) Building Block
+# Natural Language to Structured Data Query
 
-Natural language interfaces to interact with data through RAG (Retrieval-Augmented Generation) and Text-to-SQL powered by IBM watsonx.
+Natural language interfaces to interact with structured data through advanced query generation, RAG (Retrieval-Augmented Generation), and Text-to-SQL powered by IBM watsonx.
 
 ## Overview
 
-This building block enables users to query and interact with data using natural language, making data more accessible to both technical and non-technical users.
+This building block enables users to query and interact with structured data using natural language, making data more accessible to both technical and non-technical users. It combines RAG capabilities with Text-to-SQL conversion to provide comprehensive natural language query support.
 
 ---
 

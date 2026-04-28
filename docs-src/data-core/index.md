@@ -32,12 +32,13 @@ Data access, retrieval, and query capabilities that enable AI applications to in
 
 Integration capabilities focus on data ingestion and pipeline automation.
 
-### [Automated Data Pipelines](integration/automated-data-pipelines/index.md)
+### [AI-Generated Data Pipeline](integration/automated-data-pipelines/index.md)
 
-Comprehensive data ingestion solutions for IBM watsonx.data covering unstructured and structured data sources.
+AI-powered data pipeline generation and automation for IBM watsonx.data covering unstructured and structured data sources.
 
 **Key Features:**
 
+- Automated pipeline generation using AI
 - Unstructured data ingestion (documents, PDFs, images)
 - Structured data ingestion with CDC support
 - Batch and streaming ingestion modes
@@ -45,32 +46,46 @@ Comprehensive data ingestion solutions for IBM watsonx.data covering unstructure
 
 ---
 
+### [Data Streaming](integration/data-streaming/index.md)
+
+Real-time data streaming capabilities powered by Confluent Platform for continuous data flow into AI pipelines.
+
+**Key Features:**
+
+- Real-time event ingestion with Confluent Platform
+- Advanced stream processing with ksqlDB and Kafka Streams
+- 200+ pre-built connectors via Kafka Connect
+- Schema Registry for data governance
+
+---
+
 ## Intelligence Building Blocks
 
-Intelligence capabilities focus on data quality, governance, and streaming.
+Intelligence capabilities focus on data quality, governance, and enrichment.
 
-### [Data Enrichment & Quality](intelligence/data-enrichment-and-quality/index.md)
+### [Data Enrichment](intelligence/data-enrichment-and-quality/index.md)
 
-Data governance, quality controls, and security features to ensure trustworthy AI.
+Data enrichment capabilities to enhance and augment your data with additional context and metadata.
+
+**Key Features:**
+
+- Metadata enrichment
+- Data augmentation
+- Context enhancement
+- Semantic enrichment
+
+---
+
+### [Quality and Lineage](intelligence/data-enrichment-and-quality/index.md)
+
+Data governance, quality controls, and lineage tracking to ensure trustworthy AI.
 
 **Key Features:**
 
 - Data privacy and encryption
-- Metadata enrichment
 - Data quality validation
 - Access controls and governance
-
----
-
-### [Data Streaming](intelligence/data-streaming/index.md)
-
-Real-time data streaming capabilities for continuous data flow into AI pipelines.
-
-**Key Features:**
-
-- Real-time event ingestion
-- Stream processing for operational and analytical use cases
-- Integration with Apache Kafka and IBM Event Streams
+- Data lineage tracking
 
 ---
 
@@ -78,14 +93,15 @@ Real-time data streaming capabilities for continuous data flow into AI pipelines
 
 Query capabilities enable AI applications to access and query data.
 
-### [Text-to-SQL](query/text-to-sql/index.md)
+### [Natural Language to Structured Data Query](query/text-to-sql/index.md)
 
-Natural language interfaces to interact with data through RAG (Retrieval-Augmented Generation) and Text-to-SQL.
+Natural language interfaces to interact with structured data through advanced query generation.
 
 **Key Components:**
 
 - **RAG Accelerator**: Complete RAG pipeline with document processing and semantic search
 - **Text-to-SQL**: Convert natural language to executable SQL queries
+- **Natural Language Query**: Advanced natural language understanding for data queries
 
 ---
 
