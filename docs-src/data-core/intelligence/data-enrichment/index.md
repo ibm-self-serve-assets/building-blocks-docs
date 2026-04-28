@@ -1,6 +1,6 @@
-# Data Security and Encryption Building Block
+# Data Enrichment
 
-The Data Security and Encryption building block combines critical capabilities for protecting sensitive data through masking, encryption, and access controls, ensuring data governance and regulatory compliance.
+The Data Enrichment building block combines critical capabilities for protecting sensitive data through masking, encryption, and access controls, ensuring data governance and regulatory compliance.
 
 ## Overview
 
@@ -63,7 +63,7 @@ Advanced data security, monitoring, and encryption enforcement with IBM Guardium
 
 ```bash
 git clone https://github.com/ibm-self-serve-assets/building-blocks.git
-cd building-blocks/data/intelligence/data-enrichment-quality
+cd building-blocks/data/intelligence/data-enrichment
 ```
 
 ### Step 2: Configure Input JSON
@@ -427,7 +427,7 @@ Identity and Access Management for secure authentication and authorization.
 
 ## Resources
 
-- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-enrichment-quality)
+- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-enrichment)
 - [watsonx.data API Documentation](https://cloud.ibm.com/apidocs/watson-data-api)
 - [Knowledge Catalog API](https://cloud.ibm.com/apidocs/knowledge-catalog)
 - [IBM Guardium](https://www.ibm.com/products/guardium-data-protection)
