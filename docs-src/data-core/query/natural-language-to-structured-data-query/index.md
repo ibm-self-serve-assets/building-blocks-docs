@@ -35,7 +35,7 @@ The RAG Accelerator provides a complete RAG pipeline with document processing, e
 
 #### Key Capabilities
 
-**Ingestion Customization:**
+##### Ingestion Customization
 
 - Document loaders: HTML, JSON, PDF, Markdown, custom loaders
 - Collection schema: Configurable via JSON templates
@@ -43,7 +43,7 @@ The RAG Accelerator provides a complete RAG pipeline with document processing, e
 - Document processing: Docling/Markdown processing, picture annotation, table cleanup
 - Chunkers: Docling hybrid chunker, Markdown text splitter, recursive text splitter
 
-**Querying Customization:**
+##### Querying Customization
 
 - Search parameters: Number of docs retrieved and reranked
 - Rerankers: Weighted, RRF, cross-encoding
@@ -254,7 +254,7 @@ Watch the RAG Accelerator in action, demonstrating the complete RAG pipeline fro
   Your browser does not support the video tag.
 </video>
 
-**Demo Highlights:**
+#### Demo Highlights
 
 - Document ingestion from IBM Cloud Object Storage (COS)
 - Docling-based document parsing and chunking
@@ -272,7 +272,7 @@ Watch the Text-to-SQL application convert natural language questions into execut
   Your browser does not support the video tag.
 </video>
 
-**Demo Highlights:**
+#### Demo Highlights
 
 - Natural language question input
 - Metadata enrichment from watsonx.data Intelligence

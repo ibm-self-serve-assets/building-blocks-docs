@@ -39,49 +39,57 @@ This building block delivers enterprise-grade data streaming capabilities throug
 
 #### Why Choose Confluent?
 
-**Built by Kafka Creators:**
+#### Built by Kafka Creators
+
 - Created by the team that built Apache Kafka at LinkedIn
 - Most advanced Kafka distribution with latest features
 - Industry-leading expertise and innovation
 - Largest Kafka community and ecosystem
 
-**Confluent Cloud - Fully Managed:**
+#### Confluent Cloud - Fully Managed
+
 - Cloud-native, serverless Kafka service
 - Available on AWS, Azure, and Google Cloud
 - Elastic scaling with pay-as-you-go pricing
 - 99.99% uptime SLA with multi-region support
 
-**Advanced Stream Processing:**
+#### Advanced Stream Processing
+
 - **ksqlDB**: SQL-based stream processing for real-time applications
 - **Kafka Streams**: Native stream processing library
 - **Flink on Confluent**: Advanced stateful stream processing
 - Real-time data transformations and aggregations
 
-**Data Governance and Integration:**
+#### Data Governance and Integration
+
 - **Schema Registry**: Centralized schema management with versioning
 - **Kafka Connect**: 200+ pre-built connectors for data integration
 - **Stream Lineage**: Track data flow across your organization
 - **Data Quality Rules**: Ensure data integrity in real-time
 
-**Enterprise Operations:**
+#### Enterprise Operations
+
 - **Control Center**: Advanced monitoring and management UI
 - **Cluster Linking**: Multi-datacenter replication
 - **Tiered Storage**: Cost-effective long-term data retention
 - **Self-Balancing Clusters**: Automated partition rebalancing
 
-**DevOps and Automation:**
+#### DevOps and Automation
+
 - Infrastructure as Code with Terraform
 - GitOps workflows for configuration management
 - Automated cluster provisioning and scaling
 - CI/CD integration for stream processing applications
 
-**Security:**
+#### Security
+
 - End-to-end encryption (TLS/SSL)
 - RBAC (Role-Based Access Control)
 - SASL/SCRAM, OAuth, and mTLS authentication
 - Audit logs and compliance reporting
 
-**Use Cases:**
+#### Use Cases
+
 - Real-time analytics and data warehousing
 - Event-driven microservices
 - Customer 360 and personalization
@@ -94,7 +102,8 @@ This building block delivers enterprise-grade data streaming capabilities throug
 
 Apache Kafka is the foundational distributed streaming platform that powers Confluent Platform.
 
-**Core Capabilities:**
+#### Core Capabilities
+
 - High-throughput, low-latency message broker
 - Distributed, fault-tolerant architecture
 - Horizontal scalability to handle trillions of events
