@@ -89,11 +89,10 @@ behaviors and instead applies precise, context-aware optimizations.
 
 - [FinOps](finops.md) - Optimize costs while maintaining performance
 - [Automated Resilience & Compliance](automated-resilience.md) - Ensure compliant resource allocation
+- [Middleware Modernization](middleware-modernization.md) - Optimize modernized workloads
 
 **Other Building Blocks:**
 
-- [Legacy Code Understanding](../modernize/legacy-code-understanding.md) - Analyze resource usage patterns in legacy code
-- [Middleware Modernization](../modernize/middleware-modernization.md) - Optimize modernized workloads
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Automate resource provisioning
 
 ---

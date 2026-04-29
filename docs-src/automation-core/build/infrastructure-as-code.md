@@ -151,13 +151,12 @@ best practices.
 **Within Build and Deploy:**
 
 - [Platform as a Service (iPaaS)](ipaas.md) - Integrate infrastructure with applications
-- [Authentication Management](authentication-management.md) - Automate identity provisioning
-- [Quantum-Safe Cryptography](quantum-safe.md) - Secure infrastructure credentials
+- [Authentication Management](../secure/authentication-management.md) - Automate identity provisioning
+- [Quantum-Safe Cryptography](../secure/quantum-safe.md) - Secure infrastructure credentials
 
 **Other Building Blocks:**
 
-- [Legacy Code Understanding](../modernize/legacy-code-understanding.md) - Analyze infrastructure code
-- [Middleware Modernization](../modernize/middleware-modernization.md) - Modernize infrastructure patterns
+- [Middleware Modernization](../optimize/middleware-modernization.md) - Modernize infrastructure patterns
 - [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize provisioned resources
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Ensure infrastructure compliance
 

@@ -1,6 +1,6 @@
 # **Middleware Modernization**
 
-[← Back to Modernize](index.md)
+[← Back to Optimize](index.md)
 
 
 ## **Overview**
@@ -99,17 +99,17 @@ Middleware Modernization transforms legacy infrastructure into a strategic asset
 
 ## **Related Capabilities**
 
-**Within Modernize:**
+**Within Optimize:**
 
-- [Legacy Code Understanding](legacy-code-understanding.md) - Analyze middleware code before modernization
+- [Automated Resource Management](automated-resource-management.md) - Optimize modernized workloads
+- [FinOps](finops.md) - Track modernization cost benefits
+- [Automated Resilience & Compliance](automated-resilience.md) - Ensure modernized workload compliance
 
 **Other Building Blocks:**
 
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Automate modernized infrastructure deployment
 - [iPaaS](../build/ipaas.md) - Integrate modernized middleware
-- [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize modernized workloads
-- [FinOps](../optimize/finops.md) - Track modernization cost benefits
 
 ---
 
-[← Back to Modernize](index.md)
+[← Back to Optimize](index.md)

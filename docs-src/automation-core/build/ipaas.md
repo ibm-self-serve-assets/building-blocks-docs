@@ -116,14 +116,13 @@ Organizations commonly leverage webMethods Hybrid Integration to:
 
 **Within Build and Deploy:**
 
-- [Authentication Management](authentication-management.md) - Secure access and identity management
+- [Authentication Management](../secure/authentication-management.md) - Secure access and identity management
 - [Infrastructure as Code](infrastructure-as-code.md) - Automated infrastructure provisioning
-- [Quantum-Safe Cryptography](quantum-safe.md) - Secure integration communications
+- [Quantum-Safe Cryptography](../secure/quantum-safe.md) - Secure integration communications
 
 **Other Building Blocks:**
 
-- [Legacy Code Understanding](../modernize/legacy-code-understanding.md) - Analyze integration code patterns
-- [Middleware Modernization](../modernize/middleware-modernization.md) - Modernize integration platforms
+- [Middleware Modernization](../optimize/middleware-modernization.md) - Modernize integration platforms
 - [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize integration workloads
 
 ---

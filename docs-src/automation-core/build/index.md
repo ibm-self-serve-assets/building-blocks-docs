@@ -48,7 +48,7 @@ Delivers enterprise-grade cryptographic key management and post-quantum cryptogr
 
 ## **Related Building Blocks**
 
-- **[Modernize](../modernize/index.md)** - Modernize legacy applications and infrastructure
+- **[Secure](../secure/index.md)** - Security and cryptographic capabilities
 - **[Optimize](../optimize/index.md)** - Continuously improve efficiency, resilience, and resource utilization
 
 ---

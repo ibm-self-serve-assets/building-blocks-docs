@@ -89,20 +89,19 @@ nav:
       - Build and Deploy:
           - Overview: automation-core/build/index.md
           - iPaaS: automation-core/build/ipaas.md
-          - Authentication Management: automation-core/build/authentication-management.md
           - Infrastructure as Code: automation-core/build/infrastructure-as-code.md
-          - Quantum-Safe Cryptography: automation-core/build/quantum-safe.md
 
-      - Modernize:
-          - Overview: automation-core/modernize/index.md
-          - Legacy Code Understanding: automation-core/modernize/legacy-code-understanding.md
-          - Middleware Modernization: automation-core/modernize/middleware-modernization.md
+      - Secure:
+          - Overview: automation-core/secure/index.md
+          - Authentication Management: automation-core/secure/authentication-management.md
+          - Quantum-Safe Cryptography: automation-core/secure/quantum-safe.md
 
       - Optimize:
           - Overview: automation-core/optimize/index.md
           - Automated Resilience & Compliance: automation-core/optimize/automated-resilience.md
           - FinOps: automation-core/optimize/finops.md
           - Automated Resource Management: automation-core/optimize/automated-resource-management.md
+          - Code Modernization: automation-core/optimize/middleware-modernization.md
 
   - "------------------------------": []
   - Call to Action:

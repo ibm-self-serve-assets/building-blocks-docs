@@ -1,6 +1,6 @@
 # **Authentication Management with IBM Verify**
 
-[← Back to Build and Deploy](index.md)
+[← Back to Secure](index.md)
 
 ## **Overview**
 
@@ -115,18 +115,17 @@ security while preserving user productivity.
 
 ## **Related Capabilities**
 
-**Within Build and Deploy:**
+**Within Secure:**
 
-- [Platform as a Service (iPaaS)](ipaas.md) - Secure application integration
-- [Infrastructure as Code](infrastructure-as-code.md) - Automated infrastructure with identity controls
 - [Quantum-Safe Cryptography](quantum-safe.md) - Cryptographic key management
 
 **Other Building Blocks:**
 
-- [Legacy Code Understanding](../modernize/legacy-code-understanding.md) - Analyze authentication patterns in legacy code
-- [Middleware Modernization](../modernize/middleware-modernization.md) - Modernize authentication middleware
+- [Platform as a Service (iPaaS)](../build/ipaas.md) - Secure application integration
+- [Infrastructure as Code](../build/infrastructure-as-code.md) - Automated infrastructure with identity controls
+- [Middleware Modernization](../optimize/middleware-modernization.md) - Modernize authentication middleware
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Continuous security posture monitoring
 
 ---
 
-[← Back to Build and Deploy](index.md)
+[← Back to Secure](index.md)

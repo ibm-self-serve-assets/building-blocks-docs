@@ -30,7 +30,7 @@ Typical scenarios involve real-time resource scaling, workload placement optimiz
 ## **Related Building Blocks**
 
 - **[Build and Deploy](../build/index.md)** - Automate infrastructure and application deployment
-- **[Observe](../observe/index.md)** - Monitor and analyze application and infrastructure performance
+- **[Secure](../secure/index.md)** - Security and cryptographic capabilities
 
 ---
 

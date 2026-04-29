@@ -92,11 +92,10 @@ Organizations commonly leverage FinOps to:
 
 - [Automated Resource Management](automated-resource-management.md) - Optimize resource costs and utilization
 - [Automated Resilience & Compliance](automated-resilience.md) - Balance security investments with cost efficiency
+- [Middleware Modernization](middleware-modernization.md) - Analyze modernization cost benefits
 
 **Other Building Blocks:**
 
-- [Legacy Code Understanding](../modernize/legacy-code-understanding.md) - Assess modernization costs
-- [Middleware Modernization](../modernize/middleware-modernization.md) - Analyze modernization cost benefits
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Track infrastructure provisioning costs
 
 ---

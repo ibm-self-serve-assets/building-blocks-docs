@@ -96,14 +96,13 @@ decision-making.
 
 - [FinOps](finops.md) - Balance security investments with cost efficiency
 - [Automated Resource Management](automated-resource-management.md) - Ensure compliant resource allocation
+- [Middleware Modernization](middleware-modernization.md) - Modernize for better resilience
 
 **Other Building Blocks:**
 
-- [Legacy Code Understanding](../modernize/legacy-code-understanding.md) - Identify vulnerabilities in legacy code
-- [Middleware Modernization](../modernize/middleware-modernization.md) - Modernize for better resilience
-- [Authentication Management](../build/authentication-management.md) - Strengthen identity and access controls
+- [Authentication Management](../secure/authentication-management.md) - Strengthen identity and access controls
+- [Quantum-Safe Cryptography](../secure/quantum-safe.md) - Secure cryptographic compliance
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Ensure infrastructure compliance
-- [Quantum-Safe Cryptography](../build/quantum-safe.md) - Secure cryptographic compliance
 
 ---
 
