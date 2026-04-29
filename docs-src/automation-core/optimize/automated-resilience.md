@@ -96,7 +96,7 @@ decision-making.
 
 - [FinOps](finops.md) - Balance security investments with cost efficiency
 - [Automated Resource Management](automated-resource-management.md) - Ensure compliant resource allocation
-- [Middleware Modernization](middleware-modernization.md) - Modernize for better resilience
+- [Code Modernization](middleware-modernization.md) - Modernize for better resilience
 
 **Other Building Blocks:**
 

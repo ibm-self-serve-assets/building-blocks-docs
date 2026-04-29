@@ -156,7 +156,7 @@ best practices.
 
 **Other Building Blocks:**
 
-- [Middleware Modernization](../optimize/middleware-modernization.md) - Modernize infrastructure patterns
+- [Code Modernization](../optimize/middleware-modernization.md) - Modernize infrastructure patterns
 - [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize provisioned resources
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Ensure infrastructure compliance
 
