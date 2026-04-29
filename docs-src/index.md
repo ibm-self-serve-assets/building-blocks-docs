@@ -24,8 +24,8 @@ Data for AI Building Blocks accelerate decision-making and improve productivity 
 - **Build**
 Enables secure, automated integration and workflow orchestration across applications and clouds. These building blocks deliver identity and access control, infrastructure automation, and AI-assisted development to support faster, governed deployments.
 
-- **Observe**
-Provides end-to-end visibility across applications and infrastructure, detecting dependencies and performance issues in real time. Advanced network analytics help monitor data flows, optimize connectivity, and ensure reliable performance across hybrid environments.
+- **Secure**
+Provides end-to-end security across identities, applications, and infrastructure using IBM Verify and HashiCorp Vault for secure access and centralized secrets management. It ensures protection of credentials, tokens, and certificates across their lifecycle with strong governance and control. Advanced capabilities from IBM Quantum Safe enable quantum-resistant encryption and future-ready data protection across hybrid environments.
 
 - **Optimize**
 Delivers continuous monitoring, policy enforcement, and self-healing workflows. These building blocks enable cost-efficient operations, dynamic resource management, and real-time observability to maintain optimal performance, governance, and financial efficiency across hybrid and multicloud environments.
