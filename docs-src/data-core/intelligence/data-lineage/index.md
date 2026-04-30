@@ -6,6 +6,8 @@ Track data transformations and flow across your data ecosystem for compliance, g
 
 Data Lineage provides end-to-end visibility into how data moves and transforms across your organization. This building block helps teams understand data origins, track transformations, assess impact of changes, and maintain compliance with regulatory requirements.
 
+![Data Lineage Overview](../../images/data-lineage.png)
+
 ## Key Features
 
 ### End-to-End Lineage Tracking

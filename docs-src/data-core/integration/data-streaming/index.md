@@ -13,7 +13,7 @@ Enterprise-grade real-time data streaming powered by **Confluent Platform** - th
 
 This building block delivers enterprise-grade data streaming capabilities through **Confluent Platform**, the most complete data streaming solution built by the original creators of Apache Kafka. Confluent provides real-time event ingestion and stream processing for operational and analytical use cases, enabling continuous data flow into AI pipelines with enterprise security, scalability, and advanced management features.
 
-![Confluent Platform overview](images/Confluent.png)
+![Confluent Platform overview](../../images/data-streaming-confluent.png)
 
 **Confluent Platform** offers the most advanced Kafka distribution with cloud-native capabilities, comprehensive tooling, and enterprise features that go far beyond open-source Apache Kafka.
 

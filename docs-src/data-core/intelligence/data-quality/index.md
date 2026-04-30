@@ -13,6 +13,8 @@ Ensure data quality through validation rules and quality checks to maintain trus
 
 The Data Quality building block provides comprehensive data quality assessment, monitoring, and validation capabilities. It enables organizations to maintain high data quality standards through automated validation rules, profiling, and continuous monitoring.
 
+![Data Quality Overview](../../images/data-quality.png)
+
 ---
 
 ## IBM Products Used
