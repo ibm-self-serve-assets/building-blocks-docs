@@ -118,39 +118,32 @@ Text2SQL enables users to query databases using natural language instead of writ
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                   User Interface                             │
-│              (Natural Language Input)                        │
-└────────────────────┬────────────────────────────────────────┘
-                     │
-                     │ Natural Language Question
-                     ▼
-┌─────────────────────────────────────────────────────────────┐
-│                Text2SQL Engine                               │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
-│  │   NL Parser  │  │  Schema      │  │  SQL         │      │
-│  │              │→ │  Mapper      │→ │  Generator   │      │
-│  └──────────────┘  └──────────────┘  └──────────────┘      │
-│                                                              │
-│  ┌──────────────┐  ┌──────────────┐                        │
-│  │  Validator   │  │  Optimizer   │                        │
-│  └──────────────┘  └──────────────┘                        │
-└────────────────────┬────────────────────────────────────────┘
-                     │
-                     │ SQL Query
-                     ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   Database                                   │
-│         (PostgreSQL, Db2, MySQL, etc.)                       │
-└────────────────────┬────────────────────────────────────────┘
-                     │
-                     │ Query Results
-                     ▼
-┌─────────────────────────────────────────────────────────────┐
-│                Result Formatter                              │
-│         (Tables, Charts, Explanations)                       │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    UI[User Interface<br/>Natural Language Input]
+    
+    subgraph Text2SQL Engine
+        NLP[NL Parser]
+        Schema[Schema Mapper]
+        SQLGen[SQL Generator]
+        Validator[Validator]
+        Optimizer[Optimizer]
+    end
+    
+    DB[(Database<br/>PostgreSQL, Db2, MySQL)]
+    Formatter[Result Formatter<br/>Tables, Charts, Explanations]
+    
+    UI -->|Natural Language Question| NLP
+    NLP --> Schema
+    Schema --> SQLGen
+    SQLGen --> Validator
+    Validator --> Optimizer
+    Optimizer -->|SQL Query| DB
+    DB -->|Query Results| Formatter
+    
+    style UI fill:#e1f5ff
+    style DB fill:#fff4e1
+    style Formatter fill:#e8f5e9
 ```
 
 ## Example Queries
@@ -245,6 +238,40 @@ def query():
         'explanation': result.explanation
     })
 ```
+
+## Demo Videos
+
+### Text-to-SQL Demo
+
+Watch the Text-to-SQL application convert natural language questions into executable SQL queries:
+
+<video width="100%" controls>
+  <source src="demos/text-to-sql-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+**Demo Highlights:**
+
+- Natural language question input
+- SQL query generation using IBM watsonx.ai
+- Query execution and result display
+- Error handling and query refinement
+
+### RAG Accelerator Demo
+
+Watch the RAG Accelerator demonstrate document-based question answering:
+
+<video width="100%" controls>
+  <source src="demos/rag-accelerator-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+**Demo Highlights:**
+
+- Document ingestion and processing
+- Semantic search and retrieval
+- Context-aware question answering
+- Integration with watsonx.ai
 
 ## Resources
 

@@ -90,28 +90,28 @@ Data Observability provides comprehensive monitoring, alerting, and quality vali
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     Data Pipelines                          │
-│  (Airflow, Databricks, Custom Scripts)                      │
-└────────────────────┬────────────────────────────────────────┘
-                     │
-                     │ Metadata & Metrics
-                     ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    Databand Platform                         │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
-│  │  Monitoring  │  │   Quality    │  │   Alerting   │      │
-│  │   Engine     │  │   Checks     │  │   System     │      │
-│  └──────────────┘  └──────────────┘  └──────────────┘      │
-└────────────────────┬────────────────────────────────────────┘
-                     │
-                     │ Insights & Alerts
-                     ▼
-┌─────────────────────────────────────────────────────────────┐
-│              Users & Downstream Systems                      │
-│  (Dashboards, Notifications, Incident Management)           │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    Pipelines[Data Pipelines<br/>Airflow, Databricks, Custom Scripts]
+    
+    subgraph Databand Platform
+        Monitor[Monitoring<br/>Engine]
+        Quality[Quality<br/>Checks]
+        Alert[Alerting<br/>System]
+    end
+    
+    Users[Users & Downstream Systems<br/>Dashboards, Notifications, Incident Management]
+    
+    Pipelines -->|Metadata & Metrics| Monitor
+    Pipelines -->|Metadata & Metrics| Quality
+    Pipelines -->|Metadata & Metrics| Alert
+    
+    Monitor -->|Insights & Alerts| Users
+    Quality -->|Insights & Alerts| Users
+    Alert -->|Insights & Alerts| Users
+    
+    style Pipelines fill:#e1f5ff
+    style Users fill:#e8f5e9
 ```
 
 ## Best Practices

@@ -46,6 +46,60 @@ Data Lineage provides end-to-end visibility into how data moves and transforms a
     - **Data Quality**: Trace data quality issues to their source
     - **Migration Planning**: Map data flows for system migrations
 
+## Architecture
+
+```mermaid
+graph TB
+    subgraph Data Sources
+        DB1[(Database 1)]
+        DB2[(Database 2)]
+        Files[File Systems]
+    end
+    
+    subgraph Data Pipelines
+        ETL[ETL Jobs]
+        Transform[Transformations]
+    end
+    
+    subgraph Lineage Platform
+        Capture[Lineage Capture]
+        Store[(Metadata Store)]
+        Analyze[Impact Analysis]
+        Visualize[Visualization]
+    end
+    
+    subgraph Outputs
+        Reports[Reports & Dashboards]
+        Compliance[Compliance Reports]
+        Alerts[Impact Alerts]
+    end
+    
+    DB1 --> ETL
+    DB2 --> ETL
+    Files --> ETL
+    ETL --> Transform
+    
+    ETL -.->|Metadata| Capture
+    Transform -.->|Metadata| Capture
+    
+    Capture --> Store
+    Store --> Analyze
+    Store --> Visualize
+    
+    Analyze --> Reports
+    Analyze --> Compliance
+    Analyze --> Alerts
+    Visualize --> Reports
+    
+    style DB1 fill:#e1f5ff
+    style DB2 fill:#e1f5ff
+    style Files fill:#e1f5ff
+    style Store fill:#fff4e1
+    style Reports fill:#e8f5e9
+    style Compliance fill:#e8f5e9
+    style Alerts fill:#e8f5e9
+```
+
 ## Getting Started
 
 ### Prerequisites

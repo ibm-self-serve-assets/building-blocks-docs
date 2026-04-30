@@ -45,6 +45,41 @@ This building block leverages the following IBM products and services:
 
 ---
 
+## Architecture
+
+```mermaid
+graph LR
+    subgraph Data Sources
+        Unstructured[Unstructured Data<br/>PDF, DOCX, Images]
+        Structured[Structured Data<br/>RDBMS, Warehouses]
+    end
+    
+    subgraph AI Pipeline Generator
+        UDI[IBM UDI<br/>Document Processing]
+        CDC[CDC Engine<br/>Change Capture]
+        AIEngine[AI Engine<br/>Pipeline Generation]
+    end
+    
+    subgraph watsonx.data
+        Lakehouse[(Data Lakehouse)]
+        COS[(Cloud Object<br/>Storage)]
+    end
+    
+    Unstructured --> UDI
+    Structured --> CDC
+    UDI --> AIEngine
+    CDC --> AIEngine
+    AIEngine --> Lakehouse
+    AIEngine --> COS
+    
+    style Unstructured fill:#e1f5ff
+    style Structured fill:#e1f5ff
+    style Lakehouse fill:#fff4e1
+    style COS fill:#fff4e1
+```
+
+---
+
 ## Components
 
 ### IBM UDI (Unstructured Data Ingestion)
