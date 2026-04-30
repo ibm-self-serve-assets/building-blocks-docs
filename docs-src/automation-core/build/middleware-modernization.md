@@ -12,7 +12,7 @@ Code Modernization provides comprehensive strategies and tools for transforming 
 
     For detailed implementation guides and modernization strategies for code and application transformation, see:
     
-    **[Code Modernization](../../../modernize/middleware/README.md)** - Application code and middleware transformation strategies
+    **[Code Modernization](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/code-modernisation/README.md)** - Application code and middleware transformation strategies
 ---
 
 ## **Operational Context**
