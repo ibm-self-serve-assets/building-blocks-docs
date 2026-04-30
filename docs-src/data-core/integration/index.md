@@ -10,7 +10,7 @@ Integration capabilities provide the foundation for data movement, enabling seam
 
 ## Available Building Blocks
 
-### [AI-Generated Data Pipeline](ai-generated-data-pipeline/index.md)
+### [Data Pipeline (AI Generated)](data-pipeline-ai-generated/index.md)
 
 AI-powered data pipeline generation and automation for IBM watsonx.data covering unstructured and structured data sources.
 
@@ -49,6 +49,24 @@ Real-time data streaming capabilities powered by Confluent Platform for continuo
 - Confluent Platform
 - Confluent Cloud
 - Apache Kafka
+- IBM watsonx.data
+
+---
+
+### [Data Observability](data-observability/index.md)
+
+Monitor and ensure data pipeline quality and reliability with comprehensive observability capabilities.
+
+**Key Features:**
+
+- **Pipeline Monitoring**: Real-time pipeline execution tracking and performance metrics
+- **Data Quality Validation**: Automated quality checks and anomaly detection
+- **Alerting System**: Configurable alerts with multi-channel notifications
+- **Integration**: Native integration with IBM watsonx.data and popular orchestration tools
+
+**Products:**
+
+- Databand
 - IBM watsonx.data
 
 ---

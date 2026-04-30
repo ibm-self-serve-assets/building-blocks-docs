@@ -1,51 +1,69 @@
 # Intelligence - Building Blocks
 
-Welcome to the **Intelligence Building Blocks** documentation. These accelerators focus on data quality, governance, and real-time streaming to ensure trustworthy and timely data.
+Welcome to the **Intelligence Building Blocks** documentation. These accelerators focus on data quality, governance, and lineage tracking to ensure trustworthy and timely data.
 
 ## Overview
 
-Intelligence capabilities provide data governance, quality controls, and streaming features that ensure data is properly managed, secured, and available in real-time for AI and analytics workloads.
+Intelligence capabilities provide data governance, quality controls, and lineage tracking features that ensure data is properly managed, secured, and traceable for AI and analytics workloads.
 
 ---
 
 ## Available Building Blocks
 
-### [Data Enrichment](data-enrichment/index.md)
+### [Data Quality](data-quality/index.md)
 
-Enhance and augment your data with additional context, metadata, and semantic information to improve data usability and AI model performance.
-
-**Key Features:**
-
-- **Metadata Enrichment**: Enhance data with business context and semantic information
-- **Data Augmentation**: Add derived attributes and calculated fields
-- **Context Enhancement**: Enrich data with external reference data
-- **Semantic Enrichment**: Apply ontologies and taxonomies
-
-**IBM Products:**
-
-- IBM watsonx.data Intelligence
-- IBM Governance and Catalog
-- IBM Knowledge Catalog
-
----
-
-### [Quality and Lineage](quality-and-lineage/index.md)
-
-Ensure data quality, governance, and lineage tracking to maintain trustworthy data for AI applications.
+Ensure data quality through validation rules and quality checks to maintain trustworthy data for AI applications.
 
 **Key Features:**
 
-- **Data Privacy & Encryption**: Protect sensitive data with watsonx.data Intelligence
-- **Quality Controls**: Validate and ensure data quality
-- **Data Lineage**: Track data flow and transformations
-- **Governance**: Access controls and compliance features
+- **Data Quality Validation**: Validation rules and quality checks
+- **Quality Monitoring**: Continuous quality assessment
+- **Data Profiling**: Automated data profiling and assessment
+- **Integration**: Native integration with watsonx.data Intelligence
 
 **IBM Products:**
 
 - IBM watsonx.data Intelligence
 - IBM Governance and Catalog
 - IBM Data Quality
-- IBM Guardium (coming soon)
+
+---
+
+### [Data Lineage](data-lineage/index.md)
+
+Track data transformations and flow across your data ecosystem for compliance and governance.
+
+**Key Features:**
+
+- **End-to-End Lineage**: Track data flow from source to destination
+- **Transformation Tracking**: Monitor data transformations and business logic
+- **Impact Analysis**: Assess downstream impact of data changes
+- **Compliance**: Audit trails for regulatory compliance
+
+**IBM Products:**
+
+- IBM watsonx.data Intelligence
+- IBM Governance and Catalog
+- IBM Manta
+
+---
+
+### [Text2SQL](text2sql/index.md)
+
+Convert natural language questions into executable SQL queries using AI-powered query generation.
+
+**Key Features:**
+
+- **Natural Language Understanding**: Interpret complex questions
+- **SQL Generation**: Generate optimized SQL queries
+- **Schema Intelligence**: Automatic schema understanding
+- **Multi-Database Support**: Support for various database systems
+
+**IBM Products:**
+
+- IBM watsonx.ai
+- IBM watsonx.data
+- IBM Db2
 
 ---
 
@@ -53,9 +71,9 @@ Ensure data quality, governance, and lineage tracking to maintain trustworthy da
 
 !!! example "Common Intelligence Scenarios"
     - **Data Quality Assurance**: Validate and cleanse data before AI consumption
-    - **Metadata Management**: Enrich data with business context and lineage
-    - **Real-Time Pipelines**: Stream data from operational systems
-    - **Compliance**: Ensure regulatory compliance with governance features
+    - **Lineage Tracking**: Track data flow for compliance and governance
+    - **Impact Analysis**: Understand downstream effects of data changes
+    - **Natural Language Queries**: Enable non-technical users to query data
 
 ---
 

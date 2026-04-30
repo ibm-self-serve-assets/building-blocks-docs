@@ -66,24 +66,25 @@ nav:
       
       - Integration:
           - Overview: data-core/integration/index.md
-          - AI-Generated Data Pipeline: data-core/integration/ai-generated-data-pipeline/index.md
+          - Data Pipeline (AI Generated): data-core/integration/data-pipeline-ai-generated/index.md
           - Data Streaming: data-core/integration/data-streaming/index.md
+          - Data Observability: data-core/integration/data-observability/index.md
 
       - Intelligence:
           - Overview: data-core/intelligence/index.md
-          - Data Enrichment: data-core/intelligence/data-enrichment/index.md
-          - Quality and Lineage: data-core/intelligence/quality-and-lineage/index.md
+          - Data Quality: data-core/intelligence/data-quality/index.md
+          - Data Lineage: data-core/intelligence/data-lineage/index.md
+          - Text2SQL: data-core/intelligence/text2sql/index.md
 
-      - Query:
-          - Overview: data-core/query/index.md
-          - Federated Search: data-core/query/federated-search/index.md
-          - Natural Language to Structured Data Query: data-core/query/natural-language-to-structured-data-query/index.md
-          - NoSQL Database: data-core/query/nosql-database/index.md
+      - Retrieval:
+          - Overview: data-core/retrieval/index.md
           - Vector Search:
-              - Overview: data-core/query/vector-search/index.md
-              - Milvus: data-core/query/vector-search/milvus.md
-              - OpenSearch: data-core/query/vector-search/opensearch.md
-              - DataStax Astra DB: data-core/query/vector-search/datastax-astra-db.md
+              - Overview: data-core/retrieval/vector-search/index.md
+              - Milvus: data-core/retrieval/vector-search/milvus.md
+              - OpenSearch: data-core/retrieval/vector-search/opensearch.md
+              - DataStax Astra DB: data-core/retrieval/vector-search/datastax-astra-db.md
+          - No SQL Database: data-core/retrieval/no-sql-database/index.md
+          - Zero Copy: data-core/retrieval/zero-copy/index.md
 
   - Automation:
       - Build and Deploy:
