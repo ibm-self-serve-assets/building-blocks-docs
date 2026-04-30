@@ -122,7 +122,7 @@ Organizations commonly leverage webMethods Hybrid Integration to:
 
 **Other Building Blocks:**
 
-- [Code Modernization](../optimize/middleware-modernization.md) - Modernize integration platforms
+- [Code Modernization](middleware-modernization.md) - Modernize integration platforms
 - [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize integration workloads
 
 ---

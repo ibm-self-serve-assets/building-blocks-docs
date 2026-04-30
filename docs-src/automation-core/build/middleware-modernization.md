@@ -1,6 +1,6 @@
 # **Code Modernization**
 
-[← Back to Optimize](index.md)
+[← Back to Build and Deploy](index.md)
 
 
 ## **Overview**
@@ -109,17 +109,17 @@ Code Modernization transforms legacy infrastructure into a strategic asset, enab
 
 ## **Related Capabilities**
 
-**Within Optimize:**
+**Within Build and Deploy:**
 
-- [Automated Resource Management](automated-resource-management.md) - Optimize modernized workloads
-- [FinOps](finops.md) - Track modernization cost benefits
-- [Automated Resilience & Compliance](automated-resilience.md) - Ensure modernized workload compliance
+- [Infrastructure as Code](infrastructure-as-code.md) - Automate modernized infrastructure deployment
+- [iPaaS](ipaas.md) - Integrate modernized middleware
 
 **Other Building Blocks:**
 
-- [Infrastructure as Code](../build/infrastructure-as-code.md) - Automate modernized infrastructure deployment
-- [iPaaS](../build/ipaas.md) - Integrate modernized middleware
+- [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize modernized workloads
+- [FinOps](../optimize/finops.md) - Track modernization cost benefits
+- [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Ensure modernized workload compliance
 
 ---
 
-[← Back to Optimize](index.md)
+[← Back to Build and Deploy](index.md)

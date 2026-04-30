@@ -154,7 +154,7 @@ To implement quantum-safe cryptography in your environment:
 
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Automated infrastructure provisioning
 - [iPaaS](../build/ipaas.md) - Integration platform capabilities
-- [Code Modernization](../optimize/middleware-modernization.md) - Modernize security middleware
+- [Code Modernization](../build/middleware-modernization.md) - Modernize security middleware
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Ensure cryptographic compliance
 
 ---

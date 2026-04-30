@@ -123,7 +123,7 @@ security while preserving user productivity.
 
 - [Platform as a Service (iPaaS)](../build/ipaas.md) - Secure application integration
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Automated infrastructure with identity controls
-- [Code Modernization](../optimize/middleware-modernization.md) - Modernize authentication middleware
+- [Code Modernization](../build/middleware-modernization.md) - Modernize authentication middleware
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Continuous security posture monitoring
 
 ---
