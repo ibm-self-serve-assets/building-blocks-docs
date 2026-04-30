@@ -91,6 +91,7 @@ nav:
           - Overview: automation-core/build/index.md
           - iPaaS: automation-core/build/ipaas.md
           - Infrastructure as Code: automation-core/build/infrastructure-as-code.md
+          - Code Modernization: automation-core/build/middleware-modernization.md
 
       - Secure:
           - Overview: automation-core/secure/index.md
@@ -102,7 +103,6 @@ nav:
           - Automated Resilience & Compliance: automation-core/optimize/automated-resilience.md
           - FinOps: automation-core/optimize/finops.md
           - Automated Resource Management: automation-core/optimize/automated-resource-management.md
-          - Code Modernization: automation-core/optimize/middleware-modernization.md
 
   - "------------------------------": []
   - Call to Action:
