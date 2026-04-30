@@ -36,12 +36,14 @@ Instructions and related files for these custom modes can be found in their resp
 
 ### Build and Deploy
 - [Ansible Ops](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/Iaas/bob-modes/base-modes): Ansible Operations with Ansible playbook to deploy the Retail Application on RedHat OpenShift Cluster.
-- [Secrets Management](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/non-human-identity/secrets-management/bob-modes/base-modes): Secrets Management via IBM Hashicorp Vault.
 
 ### Optimize
 - [Automated Resilience & Compliance](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resilience-and-compliance/bob-modes/base-modes/application-resilience.zip): Unified Vulnerability and Certificate Intelligence via IBM Concert.
 - [Automated Resource Management](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resilience-and-compliance/bob-modes/base-modes/application-resilience.zip): Resource Optimization & Cost Control with IBM Turbonomic.
 - [FinOps](https://github.com/ibm-self-serve-assets/building-blocks/blob/finops/optimize/finops/bob-modes/base-modes/cloudability-api.zip): Maximize Cloud Value Through FinOps with IBM Apptio.
+
+### Secure:
+- [Secrets Management](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/non-human-identity/secrets-management/bob-modes/base-modes): Secrets Management via IBM Hashicorp Vault.
 
 ### Others
 - [Application monitoring and observability expert](https://github.com/ibm-self-serve-assets/building-blocks/blob/finops/observe/application-observability/bob-modes/base-modes/application-observability.zip): Connect Bob with the Instana MCP server.
