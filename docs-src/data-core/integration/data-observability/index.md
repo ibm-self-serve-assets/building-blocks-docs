@@ -6,6 +6,8 @@ Monitor and ensure data pipeline quality and reliability with comprehensive obse
 
 Data Observability provides comprehensive monitoring, alerting, and quality validation for data pipelines. This building block helps teams detect, diagnose, and resolve data quality issues before they impact downstream applications and AI models.
 
+![Data Observability Overview](../../images/data-observability.png)
+
 ## Key Features
 
 ### Pipeline Monitoring

@@ -6,6 +6,8 @@ Convert natural language questions into executable SQL queries using AI-powered 
 
 Text2SQL enables users to query databases using natural language instead of writing SQL code. This building block leverages IBM watsonx.ai foundation models to understand user intent and generate accurate, optimized SQL queries that can be executed against various database systems.
 
+![Text2SQL Overview](../../images/text2sql.png)
+
 ## Key Features
 
 ### Natural Language Understanding
