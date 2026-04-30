@@ -224,7 +224,7 @@ The Data Streaming building block integrates with multiple platforms and service
 
 ## Related Building Blocks
 
-- [AI-Generated Data Pipeline](../ai-generated-data-pipeline/index.md): Automated data pipeline generation
-- [Data Enrichment](../../intelligence/data-enrichment/index.md): Enhance streaming data quality
-- [Vector Search](../../query/vector-search/index.md): Real-time vector search capabilities
-- [Natural Language to Structured Data Query](../../query/natural-language-to-structured-data-query/index.md): Query streaming data with natural language
+- [Data Pipeline (AI Generated)](../data-pipeline-ai-generated/index.md): Automated data pipeline generation
+- [Data Quality](../../intelligence/data-quality/index.md): Enhance streaming data quality
+- [Vector Search](../../retrieval/vector-search/index.md): Real-time vector search capabilities
+- [Text2SQL](../../intelligence/text2sql/index.md): Query streaming data with natural language
