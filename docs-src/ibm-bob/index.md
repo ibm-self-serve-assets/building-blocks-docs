@@ -14,6 +14,9 @@ This composable approach enables teams to design highly contextual assistants op
 ## Getting started with Building Block modes
 Instructions and related files for these custom modes can be found in their respective repository.
 
+#### Building Blocks Explorer
+- [Building Blocks Explorer](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/explore-BBs): A generic Bob mode that connects to an MCP server to detect all available Building Blocks. Use it to discover capabilities across the catalog and find the right assets for your use case.
+
 ### AI
 
 #### Agents
