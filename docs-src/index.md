@@ -16,8 +16,15 @@ Reusable, enterprise-ready AI building blocks that accelerate agent adoption by 
 - **AI Trust**
 AI Trust building blocks provide tools to evaluate AI models, test and monitor AI agents, enforce real-time safety guardrails, and manage regulatory compliance. They include model evaluation, agent ops, real-time guardrails, and AI compliance.
 
-- **Data**
-Data for AI Building Blocks accelerate decision-making and improve productivity by enabling intelligent access to enterprise data. They unlock new ways to interact with complex systems—driving smarter, faster, and more efficient operations across the organization.
+- **Data Core Capabilities**
+- **Integration:**
+ This is where data is brought together from different systems through pipelines, streaming, replication, unstructured ingestion, and observability. From a business perspective, this helps reduce silos and improves visibility across operations.
+
+- **Intelligence:**
+This is where the data becomes more useful and trusted. Quality checks, lineage, enrichment, and natural-language access help teams understand whether the data is accurate, explainable, and ready for decision-making.
+
+- **Retrieval:**
+ This is the consumption layer. It enables users, applications, analytics, and AI solutions to access the right data through search, vector retrieval, NoSQL access, and federated analytics.
 
 **Automation Core Capabilities**
 
@@ -29,5 +36,6 @@ Provides end-to-end security across identities, applications, and infrastructure
 
 - **Optimize**
 Delivers continuous monitoring, policy enforcement, and self-healing workflows. These building blocks enable cost-efficient operations, dynamic resource management, and real-time observability to maintain optimal performance, governance, and financial efficiency across hybrid and multicloud environments.
+
 
 ![Building Blocks](image.png)
