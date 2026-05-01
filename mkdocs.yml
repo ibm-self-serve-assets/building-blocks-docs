@@ -93,16 +93,16 @@ nav:
           - Infrastructure as Code: automation-core/build/infrastructure-as-code.md
           - Code Modernization: automation-core/build/middleware-modernization.md
 
-      - Secure:
-          - Overview: automation-core/secure/index.md
-          - Authentication Management: automation-core/secure/authentication-management.md
-          - Quantum-Safe Cryptography: automation-core/secure/quantum-safe.md
-
       - Optimize:
           - Overview: automation-core/optimize/index.md
           - Automated Resilience & Compliance: automation-core/optimize/automated-resilience.md
           - FinOps: automation-core/optimize/finops.md
           - Automated Resource Management: automation-core/optimize/automated-resource-management.md
+          
+      - Secure:
+          - Overview: automation-core/secure/index.md
+          - Authentication Management: automation-core/secure/authentication-management.md
+          - Quantum-Safe Cryptography: automation-core/secure/quantum-safe.md
 
   - "------------------------------": []
   - Call to Action:
