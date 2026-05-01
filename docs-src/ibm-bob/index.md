@@ -35,15 +35,15 @@ Instructions and related files for these custom modes can be found in their resp
 
 #### [Data Integration](../data-core/integration/index.md)
 
-- **[Data Ingestion](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/_archive/data-ingestion/bob-modes/base-modes)**: Comprehensive data ingestion mode for both structured and unstructured data sources. Bob assists in building data pipelines, configuring connectors, and implementing data transformation logic for batch and streaming ingestion.
+- [Data Ingestion](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/integration/data-pipeline-ai-generated/data-ingestion/bob-modes/): Comprehensive data ingestion mode for both structured and unstructured data sources. Bob assists in building data pipelines, configuring connectors, and implementing data transformation logic for batch and streaming ingestion.
 
 #### [Data Intelligence](../data-core/intelligence/index.md)
 
-- **[Text-to-SQL](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/query/text-to-sql/bob-modes/base-modes)**: Natural language to SQL query conversion mode with metadata enrichment. Bob helps build and optimize Text2SQL systems, configure schema understanding, and implement query validation for business intelligence applications.
+- [Text-to-SQL](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/text2sql/bob-modes): Natural language to SQL query conversion mode with metadata enrichment. Bob helps build and optimize Text2SQL systems, configure schema understanding, and implement query validation for business intelligence applications.
 
 #### [Data Retrieval](../data-core/retrieval/index.md)
 
-- **[RAG Accelerator](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/_archive/question-and-answer/rag/bob-modes/base-modes)**: Complete RAG pipeline mode with document processing and semantic search capabilities. Bob assists in building vector search systems, configuring embedding models, and optimizing retrieval strategies for question-answering applications.
+- [Vector Search](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/retrieval/vector-search/milvus/bob-modes/): Complete vector search mode with document processing and semantic search capabilities. Bob assists in building vector search systems, configuring embedding models, and optimizing retrieval strategies for question-answering applications.
 
 
 ### Automation
