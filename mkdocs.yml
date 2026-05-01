@@ -87,7 +87,7 @@ nav:
           - Zero Copy: data-core/retrieval/zero-copy/index.md
 
   - Automation:
-      - Overview: docs-src/automation-core/index.md
+      - Overview: automation-core/index.md
         
       - Build and Deploy:
           - Overview: automation-core/build/index.md
