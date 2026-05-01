@@ -48,6 +48,7 @@ nav:
   - Building Blocks:
       - Overview: index.md
   - AI:
+      - Overview: ai-core/index.md
       - Agents:
           - Overview: ai-core/agents/index.md
           - Agent Builder: ai-core/agents/agent-builder.md
