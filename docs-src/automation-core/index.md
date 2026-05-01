@@ -1,12 +1,12 @@
 # **Automation Core**
 
-Automation Core provides a comprehensive framework for building, optimizing, and securing enterprise applications and infrastructure. By combining intelligent automation, operational excellence, and robust security capabilities, organizations can accelerate delivery, reduce operational overhead, and maintain resilience across hybrid cloud environments.
+Welcome to the Automation Building Blocks documentation. This collection provides ready-to-use accelerators organized into three main categories: Build & Deploy, Optimize, and Secure.
 
+Automation Core provides a comprehensive framework for building, optimizing, and securing enterprise applications and infrastructure. By combining intelligent automation, operational excellence, and robust security capabilities, organizations can accelerate delivery, reduce operational overhead, and maintain resilience across hybrid cloud environments.
 
 ![Automation Core](images/automation.png)
 
 ---
-
 ## **Build and Deploy**
 
 Accelerate application delivery with standardized integration, infrastructure provisioning, and AI-assisted code modernization. Transform legacy systems into cloud-native architectures while maintaining consistency and security across all environments.
