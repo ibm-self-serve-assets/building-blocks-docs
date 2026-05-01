@@ -24,7 +24,7 @@ AI Trust building blocks provide tools to evaluate AI models, test and monitor A
 This is where the data becomes more useful and trusted. Quality checks, lineage, enrichment, and natural-language access help teams understand whether the data is accurate, explainable, and ready for decision-making.
 
 - **Retrieval:**
- This is the consumption layer. It enables users, applications, analytics, and AI solutions to access the right data through search, vector retrieval, NoSQL access, and federated analytics.
+ This is the consumption layer. It enables users, applications, analytics, and AI solutions to access the right data through search, vector retrieval, NoSQL access, and federated analytics. 
 
 **Automation Core Capabilities**
 
