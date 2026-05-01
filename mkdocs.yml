@@ -87,6 +87,8 @@ nav:
           - Zero Copy: data-core/retrieval/zero-copy/index.md
 
   - Automation:
+      - Overview: docs-src/automation-core/index.md
+        
       - Build and Deploy:
           - Overview: automation-core/build/index.md
           - iPaaS: automation-core/build/ipaas.md
@@ -101,8 +103,8 @@ nav:
           
       - Secure:
           - Overview: automation-core/secure/index.md
-          - Authentication Management: automation-core/secure/authentication-management.md
-          - Quantum-Safe Cryptography: automation-core/secure/quantum-safe.md
+          - Non-human Identity: automation-core/secure/authentication-management.md
+          - Quantum-Safe: automation-core/secure/quantum-safe.md
 
   - "------------------------------": []
   - Call to Action:
