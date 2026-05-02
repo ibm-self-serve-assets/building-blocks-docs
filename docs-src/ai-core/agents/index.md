@@ -21,12 +21,20 @@ The Agents framework is organized into three core capabilities that work togethe
 
 ![Agents Building Blocks Architecture](images/agents-architecture.png)
 
-The architecture consists of:
+The architecture demonstrates how these building blocks integrate:
 
-- **Agent Builder (Studio/ADK)** - Create and deploy autonomous AI agents using the watsonx Orchestrate Agentic Development Kit
-- **Multi-Agent Orchestration (Tools & Agent)** - Coordinate multiple specialized agents to collaborate on complex workflows
-- **Agentic SDLC** - Automate software development lifecycle with IBM Bob
-- **Agent Ops** - Evaluate, monitor, and optimize agents throughout their lifecycle
+### **Agentic SDLC (Outer Layer)**
+Transform software development with IBM Bob, an IDE-native agentic AI that automates the entire development lifecycle from natural language requirements to production-ready code.
+
+### **Watsonx Orchestrate (Middle Layer)**
+Build and deploy production-ready AI agents with low-code development tools, pre-built skills, and enterprise integrations powered by IBM watsonx Orchestrate.
+
+### **Core Building Blocks (Inner Layer)**
+
+- **Agent Builder** - Create AI agents rapidly using visual builder, Agent Development Kit (ADK), pre-built skills library, and natural language to agent conversion
+- **Multi-Agent Orchestration** - Coordinate multiple specialized agents through A2A and MCP protocols to solve complex business problems with intelligent workflow automation
+
+These components work together seamlessly: Agent Builder creates individual agents, Multi-Agent Orchestration coordinates them for complex workflows, all within the watsonx Orchestrate platform, and supported by IBM Bob's Agentic SDLC for development automation.
 
 ---
 
