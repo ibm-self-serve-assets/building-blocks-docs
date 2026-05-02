@@ -21,9 +21,7 @@ Automate the entire software development lifecycle with IBM Bob, an IDE-native a
 
 ## Powered by IBM Bob
 
-<div align="center">
-  <img src="images/Bob_logo.png" alt="IBM Bob Logo" width="200"/>
-</div>
+![IBM Bob Logo](images/Bob_logo.png){ width="200" style="display: block; margin: 0 auto;" }
 
 Agent Harness is powered by **IBM Bob**, an IDE-native agentic AI that serves as your SDLC partner, embedded directly in developer workflows with deep, continuous awareness of real codebases.
 
