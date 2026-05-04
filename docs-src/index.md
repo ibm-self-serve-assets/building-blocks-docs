@@ -17,6 +17,7 @@ Reusable, enterprise-ready AI building blocks that accelerate agent adoption by 
 AI Trust building blocks provide tools to evaluate AI models, test and monitor AI agents, enforce real-time safety guardrails, and manage regulatory compliance. They include model evaluation, agent ops, real-time guardrails, and AI compliance.
 
 **Data Core Capabilities**
+
 - **Integration:**
  This is where data is brought together from different systems through pipelines, streaming, replication, unstructured ingestion, and observability. From a business perspective, this helps reduce silos and improves visibility across operations.
 
