@@ -51,9 +51,6 @@
   background-color: var(--md-primary-fg-color);
 }
 
-.md-nav__title {
-  display: none;
-}
 
 /* =========================================================
    CONTENT
