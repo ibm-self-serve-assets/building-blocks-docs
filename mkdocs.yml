@@ -79,6 +79,7 @@ nav:
 
       - Retrieval:
           - Overview: data-core/retrieval/index.md
+          - RAG: data-core/retrieval/rag/index.md
           - Vector Search:
               - Overview: data-core/retrieval/vector-search/index.md
               - Milvus: data-core/retrieval/vector-search/milvus.md

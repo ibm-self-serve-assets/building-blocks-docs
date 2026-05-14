@@ -10,6 +10,28 @@ Retrieval capabilities provide the "data access layer" for AI applications, enab
 
 ## Available Building Blocks
 
+### [RAG (Retrieval-Augmented Generation)](rag/index.md)
+
+Complete RAG pipeline with document ingestion, embedding generation, vector storage, and semantic search capabilities.
+
+**Key Features:**
+
+- Document ingestion from IBM Cloud Object Storage
+- Embedding generation with IBM Watsonx.ai
+- Vector storage (Milvus or OpenSearch)
+- Semantic, keyword, and hybrid search
+- MCP server integration for AI assistants
+- Bob modes for RAG development guidance
+
+**Components:**
+
+- **RAG Accelerator**: Complete pipeline with FastAPI REST API
+- **RAG Ingestion MCP Server**: Document ingestion for AI assistants
+- **RAG Retrieval MCP Server**: Semantic and keyword search
+- **Bob Modes**: AI assistant modes for RAG development
+
+---
+
 ### [Vector Search](vector-search/index.md)
 
 Vector ingestion, embedding, and retrieval for semantic similarity search in GenAI pipelines.
@@ -66,8 +88,12 @@ Federated analytics without copying data. Query data across distributed sources 
 ## Use Cases
 
 !!! example "Common Retrieval Scenarios"
+    - **RAG Systems**: Build complete Retrieval-Augmented Generation pipelines
+    - **Question Answering**: Intelligent Q&A over document collections
     - **Semantic Search**: Find documents based on meaning, not just keywords
-    - **Vector Similarity**: Build RAG systems with semantic document retrieval
+    - **Hybrid Search**: Combine semantic understanding with keyword precision
+    - **Knowledge Management**: Create searchable knowledge bases from unstructured data
+    - **AI Assistant Integration**: Add RAG capabilities via MCP servers
     - **Multi-Cloud Analytics**: Query data across AWS, IBM Cloud, and on-premises
     - **Real-Time Insights**: Access live data without ETL delays
     - **NoSQL Storage**: Scalable storage for AI application data
