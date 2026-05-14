@@ -6,6 +6,8 @@ These **ready-to-use components** simplify the entire lifecycle—development, i
 
 By adopting these **proven and tested** patterns, organizations can reduce engineering effort, minimize risk, and achieve a faster time-to-value while maintaining enterprise-grade scalability, security, and governance.
 
+<img width="1399" height="711" alt="image" src="https://github.com/user-attachments/assets/38d9a620-8345-43eb-a7ca-d086bd8fb11b" />
+
 ## Capability Areas
 
 **AI Core Capabilities**
@@ -37,6 +39,3 @@ Provides end-to-end security across identities, applications, and infrastructure
 
 - **Optimize**
 Delivers continuous monitoring, policy enforcement, and self-healing workflows. These building blocks enable cost-efficient operations, dynamic resource management, and real-time observability to maintain optimal performance, governance, and financial efficiency across hybrid and multicloud environments.
-
-
-![Building Blocks](image.png)
