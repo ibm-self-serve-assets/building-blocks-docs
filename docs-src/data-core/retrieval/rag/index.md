@@ -43,7 +43,7 @@ Complete RAG pipeline with document processing, embedding, and querying capabili
 
 ---
 
-#### [RAG Ingestion MCP Server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-ingestion-mcp-server)
+#### [RAG Ingestion MCP Server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-ingestion-sse-mcp-server)
 
 MCP server for document ingestion from IBM COS.
 
@@ -56,7 +56,7 @@ MCP server for document ingestion from IBM COS.
 
 ---
 
-#### [RAG Retrieval MCP Server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-retrieval-mcp-server)
+#### [RAG Retrieval MCP Server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-retrieval-sse-mcp-server)
 
 MCP server for semantic and keyword search.
 
