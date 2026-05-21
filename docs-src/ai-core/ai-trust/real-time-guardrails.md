@@ -79,5 +79,9 @@ Uses `LLMAsJudgeMetric` with `WxAIFoundationModel` as the judge.
 
 All scripts use the `ibm_watsonx_gov` SDK with `MetricsEvaluator` and `GenAIConfiguration`.
 
+## Bob Modes
+
+[Bob mode for Real-Time Guardrails](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/real-time-guardrails/bob-modes) provides an AI-assisted workflow that integrates watsonx.governance-backed guardrails into your AI and agentic applications across input, retrieval, generation, and output stages. It helps select and tune metrics, enforce Pass/Flag/Block actions with audit logging, and integrate guardrails into the broader solution.
+
 !!! info "GitHub Repository"
     [Real-Time Guardrails Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/real-time-guardrails)

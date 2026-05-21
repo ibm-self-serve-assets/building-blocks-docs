@@ -29,6 +29,7 @@ Instructions and related files for these custom modes can be found in their resp
 #### AI Trust
 - [Agent Ops](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/agent-ops/bob-modes/base-modes): Foundation Mode for pre-deployment evaluation of WXO agents. Using WXO ADK, Bob automates benchmark generation and provides a structured workflow for assessing agent behavior across key dimensions, including agent-specific metrics, cost and latency characteristics, and adversarial robustness through red-teaming.
 - [Model Evaluation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/model-evaluation/gen-ai-evaluations/bob-modes/base-modes): Bob helps you evaluate GenAI apps (RAG pipelines, LLM outputs, chatbot safety) using IBM watsonx governance SDK and custom watsonx governance MCP server.
+- [Real-Time Guardrails](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/real-time-guardrails/bob-modes/base-modes): Bob integrates watsonx.governance-backed guardrails into your AI and agentic applications across input, retrieval, generation, and output stages, helping select and tune metrics, enforce Pass/Flag/Block actions with audit logging, and integrate guardrails into the broader solution.
 
 
 ### Data
