@@ -1,6 +1,6 @@
 # Multi-Agent Orchestration
 
-Coordinate multiple AI agents to collaborate intelligently on complex enterprise workflows, with support for external system integration through MCP and A2A protocols.
+Orchestrate specialized AI agents to collaborate intelligently on complex enterprise workflows. Enable dynamic task delegation across domains (HR, IT, Finance, Legal, etc), shared memory and context management, chained reasoning for comprehensive responses, and seamless integration with enterprise systems through MCP (Model Context Protocol) and cross-platform agent collaboration via A2A (Agent-to-Agent) protocols.
 
 ## Why This Matters
 

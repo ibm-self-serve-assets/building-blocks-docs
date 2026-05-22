@@ -1,6 +1,6 @@
 # Agent Builder
 
-Create and deploy autonomous AI agents that interact with enterprise applications, tools, and data using the watsonx Orchestrate Agentic Development Kit (ADK).
+Build autonomous AI agents that transform enterprise operations through intelligent automation. Using the watsonx Orchestrate Agentic Development Kit (ADK), create conversational agents, voice-enabled assistants, domain-specific experts, and REST API integrations that seamlessly connect to enterprise applications, automate complex workflows, and deliver multi-channel experiences across chat, voice, phone, WhatsApp, SMS, and Slack.
 
 ## Why This Matters
 
