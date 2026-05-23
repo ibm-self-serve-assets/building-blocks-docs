@@ -12,6 +12,14 @@ Skills are packaged as downloadable assets that can be imported into IBM Bob. Ea
 
 - [Data Streaming (Confluent)](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/integration/data-streaming/bob-skills/data-streaming-confluent.zip): Work with Confluent Platform for real-time data streaming. Bob assists with Kafka topic management, stream processing configuration, and data pipeline setup for event-driven architectures.
 
+## Automation
+
+### Application Resource Management
+
+#### [Application Resource Management ](../../automation-core/optimize/automated-resource-management.md)
+
+- [Application Resource Management](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resource-mgmt/bob-skills/automated-resource-mgmt-turbonomic.zip): Automates application resource management at scale with the precision required to assure application performance. It continuously analyzes and optimizes compute, storage, and network resources in real time, helping organizations improve application resiliency, maximize infrastructure utilization, reduce operational costs, and ensure applications always receive the resources.
+
 ## How to Use Skills
 
 1. Download the skill package from the GitHub repository
