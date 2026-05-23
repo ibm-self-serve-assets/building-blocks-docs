@@ -111,6 +111,6 @@ nav:
   - "------------------------------": []
   - Call to Action:
       - Quick Start with Bob Modes: ibm-bob/index.md
-      - Quick Start with Bob Skills: ibm-bob/Skills/index.md
+      - Quick Start with Bob Skills: ibm-bob/skills/index.md
       - Build with Bob Workshops: workshop/index.md
       - Build with Bob Webinars: build-with-bob/index.md
