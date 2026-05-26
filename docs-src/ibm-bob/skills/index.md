@@ -109,7 +109,9 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
 
 ## Contributing to Skills for IBM Building Blocks
 
-These Skills are not meant to restate generic programming or cloud concepts. Bob is a frontier model with PhD-level knowledge across most engineering domains, so these Skills skip reiterating the basics.  
+Start by reading [Bob's Skills documentation](https://bob.ibm.com/docs/ide/features/skills) plus these [skill authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices).  
+
+Skills are not meant to restate generic programming, architecture or cloud development concepts. IBM Bob is a frontier model with PhD-level knowledge across most engineering domains, so these Skills skip reiterating the basics.  
 
 Instead, these Skills encode the local, up-to-date know-how that does-not-yet reside in Bob's memory, mostly because it's too new, like code library updates, API endpoints or CLI command syntax for IBM' latest product releases. 
 
