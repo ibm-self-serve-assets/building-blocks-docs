@@ -85,20 +85,14 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
       <tr>
         <td><div class="skill-subgroup"><img src="images/build.png" alt="" class="title-icon"><span>Build</span></div></td>
         <td>
-            <p><a href="SKILL.md">infrastructure-as-code-ansible</a>
-            <br>Coming soon</p>
-            <p><a href="SKILL.md">infrastructure-as-code-terraform</a>
-            <br>Coming soon</p>
-            <p><a href="SKILL.md">non-human-identify-vault</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/infrastructure-as-code-ansible/SKILL.md">infrastructure-as-code-ansible</a>
             <br>Coming soon</p>
         </td>
       </tr>
       <tr>
         <td><div class="skill-subgroup"><img src="images/modernize.png" alt="" class="title-icon"><span>Modernize</span></div></td>
         <td>
-            <p><a href="SKILL.md">code-modernization-java</a>
-            <br>Coming soon</p>
-            <p><a href="SKILL.md">legacy-code-understanding-cobol</a>
+            <p><a href="[SKILL.md](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/code-modernization-java/SKILL.md)">code-modernization-java</a>
             <br>Coming soon</p>
         </td>
       </tr>
@@ -107,10 +101,6 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
         <td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/automated-resource-mgmt-turbonomic/SKILL.md">automated-resource-management-turbonomics</a>
             <br>Automates application resource management at scale with the precision required to assure application performance. It continuously analyzes and optimizes compute, storage, and network resources in real time, helping organizations improve application resiliency, maximize infrastructure utilization, reduce operational costs, and ensure applications always receive the resources.</p>
-            <p><a href="SKILL.md">automated-resource-management-cloudability</a>
-            <br>Coming soon</p>
-            <p><a href="SKILL.md">finops-apptio</a>
-            <br>Coming soon</p>
         </td>
       </tr>
     </tbody>
