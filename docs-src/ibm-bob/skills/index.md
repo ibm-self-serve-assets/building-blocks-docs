@@ -114,7 +114,7 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
         <td><div class="skill-subgroup"><img src="images/optimize.png" alt="" class="title-icon"><span>Optimize</span></div></td>
         <td>
             <p><a href="SKILL.md">automated-resource-management-turbonomics</a>
-            <br>Coming soon</p>
+            <br>Automates application resource management at scale with the precision required to assure application performance. It continuously analyzes and optimizes compute, storage, and network resources in real time, helping organizations improve application resiliency, maximize infrastructure utilization, reduce operational costs, and ensure applications always receive the resources.</p>
             <p><a href="SKILL.md">automated-resource-management-cloudability</a>
             <br>Coming soon</p>
             <p><a href="SKILL.md">finops-apptio</a>
