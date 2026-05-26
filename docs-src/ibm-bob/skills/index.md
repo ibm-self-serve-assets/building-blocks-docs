@@ -11,11 +11,13 @@ This collection of [Skills for IBM Bob](https://bob.ibm.com/docs/ide/features/sk
 ## Quick Start  
 The Skills have been packed into a single .zip that you can easily download and install.
 
-1. Download [skills.zip](https://github.com/ibm-self-serve-assets/building-blocks/ibm/bob/skills/skills.zip)
-2. Copy all skill folders into either your global or project-level `.bob` folder:
+1. Go to the [skills.zip page](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/skills.zip) 
+2. Click the `Download raw file` icon at the upper-right of the page.
+<img src="images/download-raw-file.png" width="200">
+3. Copy all skill folders into either your global or project-level `.bob` folder:
     - global = `~/.bob/skills`
     - project = `<project>/.bob/skills`
-3. Bob will automatically activate the appropriate skill when working on related tasks.
+4. Bob will automatically activate the appropriate skill when working on related tasks.
 
 
 ## Skill Taxonomy
