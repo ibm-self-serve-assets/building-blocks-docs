@@ -53,9 +53,9 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
       <tr>
         <td><div class="skill-subgroup"><img src="images/integration.png" alt="" class="title-icon"><span>Integration</span></div></td>
         <td>
-            <p><a href="SKILL.md">data-streaming-confluent</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/data-streaming-confluent">data-streaming-confluent</a>
             <br>Works with the Confluent Platform for real-time data streaming, Kafka topic management, stream processing configuration, and data pipeline setup for event-driven architectures.</p>
-            <p><a href="SKILL.md">data-streaming-confluent-terraform</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/data-streaming-confluent-terraform/SKILL.md">data-streaming-confluent-terraform</a>
             <br>Expert guidance for building real-time streaming systems on Confluent Cloud using Infrastructure-as-Code (Terraform), Apache Flink SQL, and Python producers. Adapts to any streaming use case (IoT, finance, retail, healthcare, logistics) while maintaining production-ready quality.</p>
         </td>
       </tr>
@@ -69,7 +69,7 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
       <tr>
         <td><div class="skill-subgroup"><img src="images/query.png" alt="" class="title-icon"><span>Query</span></div></td>
         <td>
-            <p><a href="[SKILL.md](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/no-sql-astradb/SKILL.md)">no-sql-astradb</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/no-sql-astradb/SKILL.md">no-sql-astradb</a>
             <br>Coming soon</p>
         </td>
       </tr>
