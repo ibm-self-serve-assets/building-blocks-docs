@@ -92,7 +92,7 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
       <tr>
         <td><div class="skill-subgroup"><img src="images/modernize.png" alt="" class="title-icon"><span>Modernize</span></div></td>
         <td>
-            <p><a href="[SKILL.md](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/code-modernization-java/SKILL.md)">code-modernization-java</a>
+            <p><a href="https://github.com/ibm-self-serve-asse ts/building-blocks/blob/main/ibm-bob/skills/code-modernization-java/SKILL.md">code-modernization-java</a>
             <br>Coming soon</p>
         </td>
       </tr>
