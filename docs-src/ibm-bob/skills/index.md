@@ -31,16 +31,14 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
       <tr>
         <td><div class="skill-subgroup"><img src="images/agents.png" alt="" class="title-icon"><span>Agents</span></div></td>
         <td>
-            <a href="SKILL.md">agent-builder</a>
+            <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/agent-builder/SKILL.md">agent-builder</a>
             <br>Build and deploy multi-agent systems with tools (MCP servers) using watsonx Orchestrate's Agent Development Kit (ADK), CLI and REST API.
         </td>
       </tr>
       <tr>
         <td><div class="skill-subgroup"><img src="images/ai-trust.png" alt="" class="title-icon"><span>AI Trust</span></div></td>
         <td>
-            <p><a href="SKILL.md">agent-ops</a>
-            <br>Coming soon</p>
-            <p><a href="SKILL.md">real-time guardrails</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/agent-ops/SKILL.md">agent-ops</a>
             <br>Coming soon</p>
         </td>
       </tr>
@@ -64,20 +62,14 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
       <tr>
         <td><div class="skill-subgroup"><img src="images/intelligence.png" alt="" class="title-icon"><span>Intelligence</span></div></td>
         <td>
-            <p><a href="SKILL.md">data-enrichment</a>
-            <br>Coming soon</p>
-            <p><a href="SKILL.md">data-quality</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/data-enrichment/SKILL.md">data-enrichment</a>
             <br>Coming soon</p>
         </td>
       </tr>
       <tr>
         <td><div class="skill-subgroup"><img src="images/query.png" alt="" class="title-icon"><span>Query</span></div></td>
         <td>
-            <p><a href="SKILL.md">nl-to-structured-data-query</a>
-            <br>Coming soon</p>
-            <p><a href="SKILL.md">unstructured-data-query-rag</a>
-            <br>Coming soon</p>
-            <p><a href="SKILL.md">no-sql-astradb</a>
+            <p><a href="[SKILL.md](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/no-sql-astradb/SKILL.md)">no-sql-astradb</a>
             <br>Coming soon</p>
         </td>
       </tr>
@@ -113,7 +105,7 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
       <tr>
         <td><div class="skill-subgroup"><img src="images/optimize.png" alt="" class="title-icon"><span>Optimize</span></div></td>
         <td>
-            <p><a href="SKILL.md">automated-resource-management-turbonomics</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/automated-resource-mgmt-turbonomic/SKILL.md">automated-resource-management-turbonomics</a>
             <br>Automates application resource management at scale with the precision required to assure application performance. It continuously analyzes and optimizes compute, storage, and network resources in real time, helping organizations improve application resiliency, maximize infrastructure utilization, reduce operational costs, and ensure applications always receive the resources.</p>
             <p><a href="SKILL.md">automated-resource-management-cloudability</a>
             <br>Coming soon</p>
