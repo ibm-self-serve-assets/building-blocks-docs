@@ -6,7 +6,7 @@ These **ready-to-use components** simplify the entire lifecycle—development, i
 
 By adopting these **proven and tested** patterns, organizations can reduce engineering effort, minimize risk, and achieve a faster time-to-value while maintaining enterprise-grade scalability, security, and governance.
 
-<img width="1793" height="913" alt="image" src="https://github.com/user-attachments/assets/432947fd-2be8-4751-93fa-8315e6c4351a" />
+<img width="1309" height="733" alt="image" src="https://github.com/user-attachments/assets/80b0e775-f21e-4c8f-8047-076e97bc7edc" />
 
 ## Capability Areas
 
