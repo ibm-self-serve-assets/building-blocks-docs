@@ -151,7 +151,7 @@ best practices.
 **Within Build and Deploy:**
 
 - [Platform as a Service (iPaaS)](ipaas.md) - Integrate infrastructure with applications
-- [Authentication Management](../secure/authentication-management.md) - Automate identity provisioning
+- [Authentication Management](../secure/non-human-identity.md) - Automate identity provisioning
 - [Quantum-Safe Cryptography](../secure/quantum-safe.md) - Secure infrastructure credentials
 
 **Other Building Blocks:**

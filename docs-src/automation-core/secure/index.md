@@ -6,7 +6,7 @@ Secure focuses on protecting enterprise applications, data, and infrastructure t
 
 | Capability | Technology | Description |
 |------------|-----------|-------------|
-| **[Authentication Management](authentication-management.md)** | IBM Verify | Centralize identity, access control, and security enforcement |
+| **[Authentication Management](non-human-identity.md)** | IBM Verify & HashiCorp Vault | Centralize identity, access control, and security enforcement |
 | **[Quantum-Safe Cryptography](quantum-safe.md)** | IBM Guardium Crypto Manager | Enterprise-grade cryptographic key management and post-quantum cryptographic capabilities |
 
 ## **Github Repository**
@@ -14,7 +14,7 @@ Code for these accelerators can be found in the [Secure - Automation Building Bl
 
 ## **Key Use Cases**
 
-### **[Authentication Management (IBM Verify)](authentication-management.md)**
+### **[Authentication Management (IBM Verify & HashiCorp Vault)](non-human-identity.md)**
 Typical scenarios include centralized identity and access management, single sign-on (SSO), multi-factor authentication (MFA), adaptive access policies, privileged access control, and securing application workloads across hybrid environments.
 
 ### **[Quantum-Safe Cryptography (IBM Guardium Crypto Manager)](quantum-safe.md)**

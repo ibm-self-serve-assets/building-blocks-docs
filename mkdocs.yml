@@ -105,7 +105,7 @@ nav:
           
       - Secure:
           - Overview: automation-core/secure/index.md
-          - Non-human Identity: automation-core/secure/authentication-management.md
+          - Non-human Identity: automation-core/secure/non-human-identity.md
           - Quantum-Safe: automation-core/secure/quantum-safe.md
 
   - "------------------------------": []
