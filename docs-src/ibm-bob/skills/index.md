@@ -14,7 +14,7 @@ The Skills have been packed into a single .zip that you can easily download and 
 1. Go to the [skills.zip page](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/skills.zip) 
 2. Click the `Download raw file` icon at the upper-right of the page.
    
-<img src="images/download-raw-file.png" width="200">
+    <img src="images/download-raw-file.png" width="200">
 
 4. Copy all skill folders into either your global or project-level `.bob` folder:
     - global = `~/.bob/skills`
