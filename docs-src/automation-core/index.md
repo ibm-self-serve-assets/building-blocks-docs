@@ -84,9 +84,10 @@ Gain financial transparency and cost intelligence for cloud investments with IBM
 
 Protect enterprise applications, data, and infrastructure through comprehensive identity management, secrets management, and quantum-safe cryptographic capabilities. Implement robust authentication and prepare for post-quantum security threats while maintaining compliance.
 
-### **[Non-human Identity & Access Management](secure/authentication-management.md)**
-Centralize identity, access control, and security enforcement across hybrid environments with IBM Verify.
+### **[Authentication Management](secure/non-human-identity.md)**
+Centralize identity, access control, secrets management, and security enforcement across hybrid environments with IBM Verify and HashiCorp Vault.
 
+**IBM Verify - Identity & Access Management:**
 - **Identity & Access Management**: Unified identity governance for users and service accounts
 - **SSO, MFA, Adaptive Access**: Single sign-on with multi-factor authentication and risk-based policies
 - **Policy Enforcement & Governance**: Centralized access control and compliance enforcement
@@ -94,9 +95,7 @@ Centralize identity, access control, and security enforcement across hybrid envi
 - **Application Workload Security**: Identity-based security for microservices and APIs
 - **Zero Trust Architecture**: Continuous verification and least-privilege access
 
-### **[Secrets Management](secure/index.md)**
-Secure storage and automated lifecycle management of sensitive credentials with HashiCorp Vault.
-
+**HashiCorp Vault - Secrets Management:**
 - **Secure Storage of Secrets**: Encrypted storage for API keys, passwords, and certificates
 - **Dynamic Credentials**: On-demand generation of short-lived credentials
 - **Encryption as a Service**: Centralized encryption and decryption operations
