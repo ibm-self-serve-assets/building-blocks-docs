@@ -20,7 +20,7 @@ The Skills have been packed into a single .zip that you can easily download and 
     - global = `~/.bob/skills`
     - project = `<project>/.bob/skills`
 
-4. Bob will automatically activate the appropriate skill when working on related tasks.
+1. Bob will automatically activate the appropriate skill when working on related tasks.
 
 
 ## Skill Taxonomy
