@@ -148,7 +148,7 @@ To implement quantum-safe cryptography in your environment:
 
 **Within Secure:**
 
-- [Authentication Management](non-human-identity.md) - Identity and access management
+- [Non-human Identity](non-human-identity.md) - Identity and access management
 
 **Other Building Blocks:**
 

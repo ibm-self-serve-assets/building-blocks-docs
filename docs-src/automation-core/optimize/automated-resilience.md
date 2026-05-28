@@ -100,7 +100,7 @@ decision-making.
 
 **Other Building Blocks:**
 
-- [Authentication Management](../secure/non-human-identity.md) - Strengthen identity and access controls
+- [Non-human Identity](../secure/non-human-identity.md) - Strengthen identity and access controls
 - [Quantum-Safe Cryptography](../secure/quantum-safe.md) - Secure cryptographic compliance
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Ensure infrastructure compliance
 

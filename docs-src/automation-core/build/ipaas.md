@@ -116,7 +116,7 @@ Organizations commonly leverage webMethods Hybrid Integration to:
 
 **Within Build and Deploy:**
 
-- [Authentication Management](../secure/non-human-identity.md) - Secure access and identity management
+- [Non-human Identity](../secure/non-human-identity.md) - Secure access and identity management
 - [Infrastructure as Code](infrastructure-as-code.md) - Automated infrastructure provisioning
 - [Quantum-Safe Cryptography](../secure/quantum-safe.md) - Secure integration communications
 
