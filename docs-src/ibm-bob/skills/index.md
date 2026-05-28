@@ -19,6 +19,7 @@ The Skills have been packed into a single .zip that you can easily download and 
 4. Copy all skill folders into either your global or project-level `.bob` folder:
     - global = `~/.bob/skills`
     - project = `<project>/.bob/skills`
+
 5. Bob will automatically activate the appropriate skill when working on related tasks.
 
 
