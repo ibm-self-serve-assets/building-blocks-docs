@@ -28,7 +28,7 @@ applications, orchestrate business workflows, enable API management,
 connect legacy systems, synchronize data across platforms, and
 streamline hybrid integration architectures.
 
-### **[Authentication Management (IBM Verify & HashiCorp Vault)](../secure/non-human-identity.md)**
+### **[Non-human Identity (IBM Verify & HashiCorp Vault)](../secure/non-human-identity.md)**
 Typical scenarios include centralized identity and access management,
 single sign-on (SSO), multi-factor authentication (MFA), adaptive access
 policies, privileged access control, and securing application workloads

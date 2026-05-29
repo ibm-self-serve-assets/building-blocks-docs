@@ -1,10 +1,10 @@
-# **Authentication Management**
+# **Non-human Identity**
 
 [← Back to Secure](index.md)
 
 ## **Overview**
 
-Authentication Management delivers enterprise‑grade identity and access management solutions that secure user access across cloud, hybrid, and on‑premises environments. This building block provides two complementary approaches:
+Non-human Identity delivers enterprise‑grade identity and access management solutions that secure user access across cloud, hybrid, and on‑premises environments. This building block provides two complementary approaches:
 
 - **IBM Verify** - Unified identity and access management for user authentication
 - **HashiCorp Vault** - Secrets management and machine identity authentication
@@ -16,7 +16,7 @@ Together, these solutions centralize authentication, access controls, and risk�
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
-    **[Authentication Management (Non-Human Identity)](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/authentication-mgmt/README.md)** - Complete IBM Security Verify integration guide with watsonx Orchestrate, watsonx.governance, and watsonx.ai
+    **[Non-human Identity](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/authentication-mgmt/README.md)** - Complete IBM Security Verify integration guide with watsonx Orchestrate, watsonx.governance, and watsonx.ai
 ---
 
 **Core Security Pillars:**
@@ -152,7 +152,7 @@ Maintains detailed audit trails of all secrets access and operations.
 
 ## **Summary**
 
-Authentication Management provides comprehensive identity and access control through two complementary solutions:
+Non-human Identity provides comprehensive identity and access control through two complementary solutions:
 
 - **IBM Verify** delivers centralized, adaptive user authentication with SSO, MFA, and risk-based access controls
 - **HashiCorp Vault** provides enterprise secrets management with dynamic credentials, automated rotation, and machine identity authentication
