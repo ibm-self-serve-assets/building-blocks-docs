@@ -93,7 +93,7 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
             <br>Use for any Ansible-related tasks including playbook development, shell script conversion, debugging failures, or interactive setup. This is the parent skill that provides access to specialized Ansible workflows.</p>
         </td>
         <td>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/terraform-infrastructure-as-code/SKILL.md">infrastructure-as-code-ansible</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/terraform-infrastructure-as-code/SKILL.md">infrastructure-as-code-terraform</a>
             <br>Use when writing, reviewing, or debugging Terraform/OpenTofu modules, tests, CI/CD pipelines, or state operations. Diagnoses failure modes (identity churn, secrets, blast radius, CI drift, state corruption) with version-aware guidance..</p>
         </td>
       </tr>
