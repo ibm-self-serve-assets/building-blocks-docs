@@ -90,7 +90,7 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
         <td><div class="skill-subgroup"><img src="images/build.png" alt="" class="title-icon"><span>Build</span></div></td>
         <td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/infrastructure-as-code-ansible/SKILL.md">infrastructure-as-code-ansible</a>
-            <br>Coming soon</p>
+            <br>Use for any Ansible-related tasks including playbook development, shell script conversion, debugging failures, or interactive setup. This is the parent skill that provides access to specialized Ansible workflows.</p>
         </td>
       </tr>
       <tr>
