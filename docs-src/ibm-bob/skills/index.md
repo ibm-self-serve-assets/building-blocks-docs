@@ -89,22 +89,26 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
       <tr>
         <td><div class="skill-subgroup"><img src="images/build.png" alt="" class="title-icon"><span>Build</span></div></td>
         <td>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/infrastructure-as-code-ansible/SKILL.md">infrastructure-as-code-ansible</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/ansible-infrastructure-as-code/SKILL.md">infrastructure-as-code-ansible</a>
             <br>Use for any Ansible-related tasks including playbook development, shell script conversion, debugging failures, or interactive setup. This is the parent skill that provides access to specialized Ansible workflows.</p>
         </td>
-      </tr>
-      <tr>
-        <td><div class="skill-subgroup"><img src="images/modernize.png" alt="" class="title-icon"><span>Modernize</span></div></td>
         <td>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/code-modernization-java/SKILL.md">code-modernization-java</a>
-            <br>Coming soon</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/terraform-infrastructure-as-code/SKILL.md">infrastructure-as-code-ansible</a>
+            <br>Use when writing, reviewing, or debugging Terraform/OpenTofu modules, tests, CI/CD pipelines, or state operations. Diagnoses failure modes (identity churn, secrets, blast radius, CI drift, state corruption) with version-aware guidance..</p>
         </td>
       </tr>
       <tr>
-        <td><div class="skill-subgroup"><img src="images/optimize.png" alt="" class="title-icon"><span>Optimize</span></div></td>
+        <td><div class="skill-subgroup"><img src="images/modernize.png" alt="" class="title-icon"><span>Optimize</span></div></td>
         <td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/automated-resource-mgmt-turbonomic/SKILL.md">automated-resource-management-turbonomics</a>
             <br>Automates application resource management at scale with the precision required to assure application performance. It continuously analyzes and optimizes compute, storage, and network resources in real time, helping organizations improve application resiliency, maximize infrastructure utilization, reduce operational costs, and ensure applications always receive the resources.</p>
+        </td>
+      </tr>
+      <tr>
+        <td><div class="skill-subgroup"><img src="images/optimize.png" alt="" class="title-icon"><span>Secure</span></div></td>
+        <td>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/non-human-identity-vault/SKILL.md">vault-non-human-identity</a>
+            <br>Coming soon</p>
         </td>
       </tr>
     </tbody>
