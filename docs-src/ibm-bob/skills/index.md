@@ -36,14 +36,14 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
       <tr>
         <td><div class="skill-subgroup"><img src="images/agents.png" alt="" class="title-icon"><span>Agents</span></div></td>
         <td>
-            <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/agent-builder/SKILL.md">agent-builder</a>
+            <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/agent-builder/SKILL.md">Agent Builder</a>
             <br>Build and deploy multi-agent systems with tools (MCP servers) using watsonx Orchestrate's Agent Development Kit (ADK), CLI and REST API.
         </td>
       </tr>
       <tr>
         <td><div class="skill-subgroup"><img src="images/ai-trust.png" alt="" class="title-icon"><span>AI Trust</span></div></td>
         <td>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/agent-ops/SKILL.md">agent-ops</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/agent-ops/SKILL.md">Agent Ops</a>
             <br>Coming soon</p>
         </td>
       </tr>
@@ -60,8 +60,6 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
         <td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/data-streaming-confluent">Data-streaming: Confluent</a>
             <br>Works with the Confluent Platform for real-time data streaming, Kafka topic management, stream processing configuration, and data pipeline setup for event-driven architectures.</p>
-        <td>
-        </td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/data-streaming-confluent-terraform/SKILL.md">Data-streaming: Confluent plus Terraform</a>
             <br>Expert guidance for building real-time streaming systems on Confluent Cloud using Infrastructure-as-Code (Terraform), Apache Flink SQL, and Python producers. Adapts to any streaming use case (IoT, finance, retail, healthcare, logistics) while maintaining production-ready quality.</p>
         </td>
@@ -97,9 +95,6 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
         <td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/infrastructure-as-code-terraform/SKILL.md">Infrastructure-as-code: Terraform</a>
             <br>Use when writing, reviewing, or debugging Terraform/OpenTofu modules, tests, CI/CD pipelines, or state operations. Diagnoses failure modes (identity churn, secrets, blast radius, CI drift, state corruption) with version-aware guidance.</p>
-        </td>
-
-        <td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/code-modernization-expert/SKILL.md">Code Modernization Expert</a>
             <br>Modernize legacy code using enterprise patterns, automated refactoring, technical debt analysis, and incremental migration with zero downtime.</p>
         </td>
