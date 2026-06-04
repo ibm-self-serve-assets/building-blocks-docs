@@ -1,146 +1,246 @@
-# **Quantum-Safe Cryptography**
+# **Quantum-Safe**
 
 [← Back to Secure](index.md)
 
 
 ## **Overview**
 
-Quantum-Safe Cryptography using IBM Guardium Crypto Manager delivers enterprise-grade cryptographic key management and post-quantum cryptographic capabilities that protect sensitive data against both current and future quantum computing threats. IBM Guardium Crypto Manager centralizes key lifecycle operations, enables quantum-resistant algorithms, and ensures cryptographic compliance across hybrid cloud environments.
+IBM Quantum Safe Explorer is a developer-focused tool that scans application source code and binaries to discover cryptographic assets and vulnerabilities. It helps organizations understand where cryptography is being used and identify algorithms that may become vulnerable in the quantum era. It can generate inventories in several formats, including a Cryptography Bill of Materials (CBOM).
 
 ---
 !!! info "📖 Implementation Resources"
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
-    **[Quantum-Safe Cryptography](../../../build-and-deploy/quantum-safe/README.md)** - Complete IBM Guardium Crypto Manager integration guide with IBM Bob Custom Mode for quantum-resistant cryptography and key management
+    **[Quantum-Safe](../../../build-and-deploy/quantum-safe/README.md)** - Complete IBM Quantum Safe Explorer integration guide with IBM Bob for quantum-resistant cryptography
 ---
 
-### **Why It Matters**
+### **Typical Discoveries**
 
-The emergence of quantum computing poses a significant threat to current cryptographic standards. Organizations must prepare for a post-quantum world by implementing quantum-resistant algorithms while maintaining backward compatibility with existing systems. IBM Guardium Crypto Manager enables enterprises to transition to quantum-safe cryptography while ensuring continuous protection of sensitive data and maintaining regulatory compliance.
+IBM Quantum Safe Explorer identifies:
 
-### **Challenges Addressed**
+- Encryption algorithms (RSA, ECC, AES, SHA, etc.)
+- Key sizes and modes
+- Cryptographic libraries
+- Certificates and protocols
+- Locations in code where cryptography is implemented
+- Quantum-vulnerable algorithms
 
-IBM Guardium Crypto Manager helps solve key enterprise cryptographic challenges:
+---
 
-- Quantum computing threats to existing encryption
-- Complex key lifecycle management across multi-cloud environments
-- Cryptographic compliance and audit requirements
-- Certificate expiration and management overhead
-- Lack of centralized key governance
-- Algorithm migration complexity
+## **What is a CBOM?**
 
-### **Capabilities & Functions**
+**CBOM (Cryptography Bill of Materials)** is a structured inventory of all cryptographic components used by an application.
 
-#### **Key Lifecycle Management**
+It is similar to an SBOM (Software Bill of Materials), but focuses specifically on cryptography.
 
-Provides comprehensive key management capabilities including:
+### **CBOM Contents**
 
-- Automated key generation for symmetric and asymmetric algorithms
-- Policy-driven key rotation and renewal
-- Secure key distribution to applications and services
-- Key archival for compliance and recovery
-- Crypto-shredding for secure key destruction
+| Information | Example |
+|------------|---------|
+| Algorithms | RSA-2048, AES-256, SHA-1 |
+| Libraries | OpenSSL, BouncyCastle |
+| Protocols | TLS 1.2 |
+| Certificates | X.509 certificates |
+| Key sizes | 1024-bit, 2048-bit |
+| Dependencies | Which components use which crypto |
 
-#### **Quantum-Safe Cryptography**
+IBM Quantum Safe Explorer automatically generates CBOMs in JSON format whenever a scan is performed.
 
-Enables post-quantum cryptographic protection through:
+---
 
-- NIST-approved post-quantum cryptographic algorithms
-- Hybrid cryptography combining classical and quantum-resistant algorithms
-- Algorithm agility for seamless migration between cryptographic standards
-- Quantum risk assessment and vulnerability analysis
-- Migration planning tools for quantum-safe transition
+## **Using Quantum Safe Explorer in a CI/CD Pipeline**
 
-#### **Certificate Management**
+Continuously scan applications during CI/CD using IBM Quantum Safe Explorer to automatically create CBOMs, identify vulnerable cryptography, and use IBM BOB Building Blocks to generate code fixes and modernize those cryptographic implementations so applications become crypto-agile and prepared for the post-quantum era.
 
-Automates certificate lifecycle operations including:
+### **End-to-End Flow**
 
-- Automated certificate generation and renewal
-- Integration with Certificate Authorities (CAs)
-- Certificate discovery and inventory management
-- Expiration monitoring and alerting
-- Revocation management and CRL distribution
+```
+Developer
+    ↓
+Git Push
+    ↓
+CI/CD Pipeline
+    ↓
+Build + Tests
+    ↓
+IBM Quantum Safe Explorer
+    ↓
+Generate CBOM
+    ↓
+Detect weak algorithms
+    ↓
+IBM BOB
+    ↓
+Code remediation suggestions
+    ↓
+Pull Request created
+    ↓
+Developer approval
+    ↓
+Re-scan with Explorer
+    ↓
+Updated CBOM
+    ↓
+Application becomes Quantum Ready
+```
 
-#### **Compliance & Governance**
+---
 
-Ensures cryptographic compliance through:
+## **Step-by-Step Process**
 
-- Policy enforcement for cryptographic operations
-- Comprehensive audit logging and trails
-- Compliance reporting for FIPS, PCI-DSS, GDPR, and other standards
-- Key usage tracking and access monitoring
-- Role-based access control and separation of duties
+### **Step 1: Developer pushes code**
 
-#### **IBM Bob Custom Mode Integration**
+Code is committed to version control systems:
+- GitHub / GitLab
+- Triggers CI/CD Pipeline
 
-Provides natural language interface for cryptographic operations:
+**CI/CD Platform Examples:**
+- GitHub Actions
+- Jenkins
+- Tekton
+- Azure DevOps
 
-- Conversational key management commands
-- Automated workflow generation for common tasks
-- Integration with DevSecOps pipelines
-- Multi-cloud key management orchestration
-- AI-assisted cryptographic policy recommendations
+### **Step 2: Run IBM Quantum Safe Explorer**
 
-### **Use Cases**
+During the pipeline execution:
 
-**Quantum-Safe Migration**
-Organizations transitioning to quantum-resistant cryptography can use IBM Guardium Crypto Manager to implement post-quantum algorithms while maintaining backward compatibility with existing systems. The hybrid cryptography approach ensures continuous protection during the migration period.
+```
+Build
+ ↓
+Unit Tests
+ ↓
+Quantum Safe Explorer Scan
+ ↓
+Generate CBOM
+ ↓
+Publish Artifacts
+```
 
-**Multi-Cloud Key Management**
-Enterprises operating across multiple cloud providers can centralize key management operations, ensuring consistent cryptographic policies and governance across AWS, Azure, Google Cloud, and IBM Cloud environments.
+Explorer scans the source code and produces:
+- `findings.json`
+- CSV reports
+- `CBOM.json`
 
-**Compliance Automation**
-Organizations subject to strict regulatory requirements can automate cryptographic compliance through policy enforcement, continuous monitoring, and automated reporting for standards such as FIPS 140-2/3, PCI-DSS, GDPR, and HIPAA.
+**Example discovery:**
+```json
+{
+  "algorithm": "RSA",
+  "key_size": 1024,
+  "location": "auth-service.java:120",
+  "risk": "High"
+}
+```
 
-**Certificate Lifecycle Automation**
-Enterprises managing large certificate inventories can automate discovery, monitoring, renewal, and revocation processes, preventing outages caused by certificate expiration and reducing operational overhead.
+### **Step 3: Identify vulnerable cryptography**
 
-**DevSecOps Integration**
-Development teams can integrate cryptographic operations into CI/CD pipelines, enabling automated key provisioning, rotation, and secure credential management throughout the software development lifecycle.
+Suppose the scan finds:
 
-### **Integration Points**
+| Algorithm | Risk |
+|-----------|------|
+| RSA-1024 | High |
+| SHA-1 | High |
+| TLS 1.0 | High |
+| ECC P-256 | Medium |
 
-IBM Guardium Crypto Manager integrates with:
+These become entries in the generated CBOM.
 
-- **IBM Bob** - Natural language interface for cryptographic operations
-- **IBM watsonx Orchestrate** - Workflow automation for key management tasks
-- **IBM watsonx.governance** - Cryptographic policy governance and compliance
-- **Cloud Providers** - AWS KMS, Azure Key Vault, Google Cloud KMS integration
-- **Certificate Authorities** - Public and private CA integration
-- **Applications** - KMIP, PKCS#11, and REST API support
+### **Step 4: Feed CBOM into IBM BOB**
 
-### **Technical Architecture**
+IBM BOB (Building Blocks) is IBM's AI-assisted engineering platform that can consume reports and code repositories and help developers modernize or remediate code.
 
-The quantum-safe cryptography building block follows a layered architecture:
+**BOB can:**
+- Read the CBOM
+- Understand where weak cryptography exists
+- Generate pull requests
+- Suggest replacement APIs
+- Produce migration guides
+- Update code automatically
 
-1. **Management Layer** - IBM Bob Custom Mode provides natural language interface
-2. **Orchestration Layer** - Automated workflows for key lifecycle operations
-3. **Crypto Layer** - IBM Guardium Crypto Manager core services
-4. **Integration Layer** - APIs and connectors for applications and cloud services
-5. **Compliance Layer** - Policy enforcement, audit logging, and reporting
+### **Step 5: Remediate cryptography**
 
-### **Getting Started**
+#### **Example 1: Hash Algorithm Update**
 
-To implement quantum-safe cryptography in your environment:
+**Before:**
+```java
+MessageDigest md = MessageDigest.getInstance("SHA-1");
+```
+
+**BOB suggests:**
+```java
+MessageDigest md = MessageDigest.getInstance("SHA-256");
+```
+
+#### **Example 2: RSA Key Size Update**
+
+**Before (1024-bit keys):**
+```java
+KeyPairGenerator.getInstance("RSA");
+```
+
+**BOB updates to:**
+```java
+KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
+keyGen.initialize(3072);
+```
+
+#### **Example 3: TLS Protocol Update**
+
+**Old:**
+```
+TLS 1.0
+```
+
+**Updated:**
+```
+TLS 1.3
+```
+
+#### **Example 4: Post-Quantum Algorithms**
+
+Eventually, BOB may recommend migration to NIST PQC algorithms such as:
+- **ML-KEM (Kyber)** - Key encapsulation
+- **ML-DSA (Dilithium)** - Digital signatures
+
+---
+
+## **Benefits**
+
+This integrated approach provides:
+
+- **Continuous cryptographic inventory** - Always know what crypto is in use
+- **Automatic CBOM generation** - No manual tracking required
+- **Early detection of weak algorithms** - Find issues before production
+- **AI-assisted remediation** - Faster fixes with BOB suggestions
+- **Faster transition to post-quantum cryptography** - Automated migration paths
+- **Improved crypto agility** - Easy algorithm updates across codebase
+
+---
+
+## **Getting Started**
+
+To implement IBM Quantum Safe Explorer in your CI/CD pipeline:
 
 1. Review the [complete implementation guide](../../../build-and-deploy/quantum-safe/README.md)
-2. Set up IBM Guardium Crypto Manager instance
-3. Configure IBM Bob Custom Mode for natural language operations
-4. Define cryptographic policies and key lifecycle rules
-5. Integrate with applications and cloud services
-6. Implement monitoring and compliance reporting
+2. Integrate IBM Quantum Safe Explorer into your CI/CD pipeline
+3. Configure automated CBOM generation and vulnerability scanning
+4. Set up IBM BOB for AI-assisted cryptographic remediation
+5. Implement continuous monitoring and re-scanning after remediation
+6. Establish workflows for pull request review and approval
 
-### **Best Practices**
+---
 
-- **Start with Risk Assessment** - Evaluate quantum vulnerability of existing cryptographic implementations
-- **Implement Hybrid Cryptography** - Use both classical and quantum-resistant algorithms during transition
-- **Automate Key Rotation** - Establish automated key rotation policies to reduce manual intervention
-- **Centralize Key Management** - Consolidate key management across all environments for consistent governance
-- **Monitor Certificate Expiration** - Implement automated monitoring to prevent outages
-- **Enforce Separation of Duties** - Use role-based access control to enforce cryptographic governance
-- **Maintain Audit Trails** - Enable comprehensive logging for compliance and forensic analysis
-- **Test Disaster Recovery** - Regularly test key recovery and backup procedures
+## **Best Practices**
+
+- **Integrate Explorer Early** - Add IBM Quantum Safe Explorer to CI/CD pipelines from the start
+- **Automate CBOM Generation** - Generate CBOMs automatically with every build
+- **Start with Risk Assessment** - Use Explorer to evaluate quantum vulnerability of existing cryptographic implementations
+- **Leverage AI Remediation** - Use IBM BOB to automatically generate fixes for vulnerable cryptography
+- **Continuous Scanning** - Re-scan applications after remediation to verify fixes
+- **Maintain Audit Trails** - Keep records of all cryptographic changes and remediations
+- **Prioritize High-Risk Findings** - Address critical vulnerabilities first
+- **Test Thoroughly** - Validate all cryptographic changes in non-production environments
+- **Plan for Post-Quantum** - Prepare migration paths to NIST PQC algorithms
 
 ---
 
