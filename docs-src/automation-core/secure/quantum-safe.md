@@ -28,11 +28,50 @@ IBM Quantum Safe Explorer identifies:
 
 ---
 
+## **Who Should Use Quantum Safe Explorer?**
+
+### **Target Personas**
+
+IBM Quantum Safe Explorer is designed for technology leaders who need to ensure their products and infrastructure are prepared for the quantum era:
+
+- **VP of Products** - Product leaders responsible for ensuring their software products remain secure and competitive as quantum computing advances
+- **Chief Information Security Officer (CISO)** - Security executives tasked with protecting organizational assets and maintaining cryptographic compliance
+
+### **Ideal for Software Companies**
+
+This solution is particularly valuable for software companies across various sectors:
+
+- **SaaS Providers** - Cloud-based software platforms requiring robust cryptographic security
+- **Database Vendors** - Companies providing data storage solutions with encryption requirements
+- **CRM & ERP Systems** - Enterprise software managing sensitive business data
+- **HR Platforms** - Human resources systems handling confidential employee information
+- **AI & Machine Learning Companies** - Organizations building AI solutions that require secure data processing
+
+### **IBM Client Zero Success Story**
+
+IBM has successfully implemented Quantum Safe Explorer internally as part of its "Client Zero" initiative, demonstrating the solution's effectiveness in real-world enterprise environments. This internal deployment has enabled IBM to accelerate crypto-agility across its product portfolio and prepare for the post-quantum era.
+
+Learn more about IBM's journey: [Empowering CIOs to Accelerate Crypto-Agility with IBM Quantum Safe Explorer](https://www.ibm.com/new/product-blog/empowering-cios-to-accelerate-crypto-agility-with-ibm-quantum-safe-explorer)
+
+---
+
 ## **What is a CBOM?**
 
-**CBOM (Cryptography Bill of Materials)** is a structured inventory of all cryptographic components used by an application.
+A **Cryptography Bill of Materials (CBOM)** provides a standardized inventory of the cryptographic assets used within software and systems, including algorithms, keys, certificates, protocols, and their configurations. As a core capability of the **CycloneDX** standard, CBOM gives organizations visibility into how and where cryptography is deployed across their environments. This visibility enables security teams to identify vulnerable or deprecated cryptographic components, support compliance requirements, and improve cryptographic agility. CBOM also plays a critical role in helping organizations assess and prepare for the transition to post-quantum cryptography.
 
-It is similar to an SBOM (Software Bill of Materials), but focuses specifically on cryptography.
+### **IBM's Leadership in CBOM Standardization**
+
+IBM is at the forefront of advancing the adoption and standardization of the Cryptography Bill of Materials (CBOM), a critical capability within the CycloneDX standard. CBOM provides comprehensive visibility into cryptographic assets, including algorithms, keys, certificates, and protocols. This detailed inventory enables organizations to identify vulnerable or deprecated cryptography, enforce security policies, and prepare for the transition to post-quantum cryptography.
+
+IBM Research has been instrumental in defining the CycloneDX CBOM specification and driving its industry adoption. In 2024, IBM open-sourced **CBOMkit**, a powerful toolkit that enables cryptographic inventory generation, visualization, analysis, and storage. To further advance industry collaboration, IBM contributed these capabilities to the **Post-Quantum Cryptography Alliance (PQCA)** under the Linux Foundation.
+
+As a core capability of the CycloneDX standard, CBOM empowers organizations to:
+
+- **Discover and inventory cryptographic assets** across their application portfolio
+- **Identify vulnerable or obsolete algorithms** that pose security risks
+- **Assess exposure to emerging quantum threats** and quantum-vulnerable cryptography
+- **Support security governance and regulatory compliance** requirements
+- **Prioritize and plan cryptographic migration initiatives** for quantum readiness
 
 ### **CBOM Contents**
 
