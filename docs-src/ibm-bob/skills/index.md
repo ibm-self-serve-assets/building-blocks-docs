@@ -95,6 +95,8 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
             <br>Use when writing, reviewing, or debugging Terraform/OpenTofu modules, tests, CI/CD pipelines, or state operations. Diagnoses failure modes (identity churn, secrets, blast radius, CI drift, state corruption) with version-aware guidance.</p>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/code-modernization-expert/SKILL.md">Code Modernization Expert</a>
             <br>Modernize legacy code using enterprise patterns, automated refactoring, technical debt analysis, and incremental migration with zero downtime.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/maximo-code-optimization">Maximo Code Optimization</a>
+            <br>Modernize and optimize Maximo automation scripts by analyzing legacy code patterns, identifying performance bottlenecks, and applying best practices for script efficiency. Transforms outdated automation scripts into maintainable, performant code while preserving business logic and ensuring compatibility with current Maximo versions.</p>
         </td>
       </tr>
       <tr>
