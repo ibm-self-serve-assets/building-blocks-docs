@@ -57,6 +57,21 @@ The following use cases are available as part of the Building Blocks collateral.
 
 ---
 
+### **Maximo Automation Script Modernization**
+
+[View Bob Skill](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/maximo-code-optimization)
+
+Developed a Bob-powered analysis and modernization workflow that ingests existing Maximo automation scripts, performs static analysis, identifies optimization opportunities, reviews code quality, and recommends modernization improvements aligned with current best practices and maintainability standards.
+
+**Key capabilities:**
+
+- Automated ingestion and parsing of legacy Maximo automation scripts
+- Static code analysis to identify technical debt, anti-patterns, and optimization opportunities
+- AI-generated modernization recommendations aligned to current Maximo best practices
+- Code quality review with actionable remediation guidance
+
+---
+
 ### **Maximo Knowledge Hub**
 
 Designed and implemented a centralised knowledge platform that serves as a unified source of truth for Maximo-related operational, technical, and external reference data. The solution enables contextual knowledge retrieval, accelerates troubleshooting, and supports AI-assisted workflows for enterprise Maximo use cases.
@@ -67,19 +82,6 @@ Designed and implemented a centralised knowledge platform that serves as a unifi
 - Contextual retrieval using semantic search and AI-assisted query resolution
 - Accelerated troubleshooting for field technicians and operations teams
 - Foundation layer for downstream AI agent workflows
-
----
-
-### **Maximo Automation Script Modernization**
-
-Developed a Bob-powered analysis and modernization workflow that ingests existing Maximo automation scripts, performs static analysis, identifies optimization opportunities, reviews code quality, and recommends modernization improvements aligned with current best practices and maintainability standards.
-
-**Key capabilities:**
-
-- Automated ingestion and parsing of legacy Maximo automation scripts
-- Static code analysis to identify technical debt, anti-patterns, and optimization opportunities
-- AI-generated modernization recommendations aligned to current Maximo best practices
-- Code quality review with actionable remediation guidance
 
 ---
 
