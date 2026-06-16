@@ -8,7 +8,7 @@ This collection of [Skills for IBM Bob](https://bob.ibm.com/docs/ide/features/sk
  - [Contributing to Skills for IBM Building Blocks](#contributing-to-skills-for-ibm-building-blocks)
  - [Skills vs Modes](#skills-vs-modes)
 
-## Quick Start  
+## How to install the Skills
 The Skills have been packed into a single .zip that you can easily download and install.
 
 <details>
