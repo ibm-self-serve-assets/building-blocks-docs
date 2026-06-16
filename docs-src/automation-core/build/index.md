@@ -16,6 +16,7 @@ from manual processes to repeatable, scalable delivery pipelines.
 | **[Platform as a Service (iPaaS)](ipaas.md)** | IBM webMethods | Simplify application and data integration across distributed systems |
 | **[Infrastructure as Code](infrastructure-as-code.md)** | Terraform & Ansible | Ensure consistent, automated environment provisioning |
 | **[Code Modernization](middleware-modernization.md)** | AI-powered transformation tools | Transform legacy applications and middleware to modern, cloud-native architectures |
+| **[Asset Management](asset-management.md)** | IBM Maximo Application Suite | Manage the full asset lifecycle with AI-driven predictive maintenance and IoT monitoring |
 
 ## **Github Repository**
 Code for these accelerators can be found in the [Build - Automation Building Blocks repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build).
@@ -42,6 +43,9 @@ DevOps pipelines.
 
 ### **[Code Modernization](middleware-modernization.md)**
 Organizations leverage this capability to refactor legacy COBOL or mainframe code to modern languages, modernize Java applications to Spring Boot, transform monolithic applications to microservices, migrate from WebSphere/WebLogic to OpenShift, containerize legacy applications, and eliminate technical debt while maintaining business continuity.
+
+### **[Asset Management](asset-management.md)**
+Organizations leverage IBM Maximo Application Suite to automate preventive and predictive maintenance programmes, monitor physical assets in real time via IoT sensor integration, manage work order lifecycles, enforce regulatory compliance and inspection schedules, and consolidate fragmented legacy CMMS/EAM systems into a single cloud-native platform on OpenShift.
 
 ---
 

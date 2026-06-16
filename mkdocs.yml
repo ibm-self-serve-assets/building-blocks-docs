@@ -96,6 +96,7 @@ nav:
           - iPaaS: automation-core/build/ipaas.md
           - Infrastructure as Code: automation-core/build/infrastructure-as-code.md
           - Code Modernization: automation-core/build/middleware-modernization.md
+          - Asset Management: automation-core/build/asset-management.md
 
       - Optimize:
           - Overview: automation-core/optimize/index.md
