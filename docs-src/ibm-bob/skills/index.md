@@ -12,7 +12,7 @@ This collection of [Skills for IBM Bob](https://bob.ibm.com/docs/ide/features/sk
 The Skills have been packed into a single .zip that you can easily download and install.
 
 <details>
-  <summary>Click here for instructions on installing the Skills into IBM Bob</summary>
+  <summary>Click here for instructions on installing the Skills into IBM Bob <img src="images/download.png" width="20"></summary>
   
   1. Go to the [skills.zip page](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills.zip) 
   2. Click the `Download raw file` icon at the upper-right of the page.
