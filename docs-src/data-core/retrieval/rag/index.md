@@ -1,165 +1,158 @@
 # RAG (Retrieval-Augmented Generation)
 
-Complete RAG pipeline with document ingestion, embedding generation, vector storage, and semantic search capabilities. Supports both Milvus and OpenSearch as vector databases with IBM Watsonx embeddings.
+Complete end-to-end RAG pipeline — ingest documents from **IBM Cloud Object Storage**, generate dense embeddings with **IBM watsonx.ai**, store in **IBM watsonx.data OpenSearch**, and serve hybrid search (vector + BM25 keyword) and Q&A queries via REST API or MCP server.
+
+!!! info "GitHub Repository"
+    The complete source code and examples are available in the GitHub repository:
+    
+    **[Building Blocks - RAG](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG)**
 
 ---
 
 ## Overview
 
-The RAG building block provides a complete end-to-end pipeline for implementing Retrieval-Augmented Generation systems. It handles document processing, embedding generation, vector storage, and semantic search to enable AI applications to access and retrieve relevant information from large document collections.
+The RAG building block provides a complete pipeline for implementing Retrieval-Augmented Generation systems. It handles document processing, embedding generation with IBM watsonx.ai, vector storage in IBM watsonx.data OpenSearch, and hybrid semantic + keyword search — enabling AI applications to retrieve relevant information from large document collections.
 
-**Key Capabilities:**
-
-- Document ingestion from IBM Cloud Object Storage (COS)
-- Embedding generation with IBM Watsonx.ai
-- Vector storage in Milvus or OpenSearch
-- Semantic search with vector similarity
-- Keyword search with BM25 algorithm
-- Hybrid search combining semantic and keyword approaches
-- FastAPI-based REST API
-- Docker deployment ready
-- MCP server integration for AI assistants
+> **AI-tool agnostic**: MCP servers work with **IBM Bob**, **Claude**, and other MCP-compatible AI assistants.
 
 ---
 
-## What's Included
+## When to Use
 
-### Assets
-
-#### [RAG Accelerator](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-accelerator)
-
-Complete RAG pipeline with document processing, embedding, and querying capabilities.
-
-**Features:**
-
-- Ingest documents from IBM Cloud Object Storage (COS)
-- Generate embeddings with IBM Watsonx.ai
-- Store vectors in **Milvus** or **OpenSearch**
-- Perform semantic search with vector similarity
-- Keyword search with BM25 algorithm
-- Hybrid search combining semantic and keyword approaches
-- FastAPI-based REST API
-- Docker deployment ready
+| Scenario | Asset |
+|---|---|
+| Need a full-featured RAG service with `/ingest`, `/query`, and `/qna` REST endpoints | [`rag-accelerator`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-accelerator) |
+| Need an AI assistant (Bob, Claude) to trigger ingestion via MCP tools | [`rag-ingestion-sse-mcp-server`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-ingestion-sse-mcp-server) |
+| Need an AI assistant (Bob, Claude) to query the knowledge base via MCP tools | [`rag-retrieval-sse-mcp-server`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-retrieval-sse-mcp-server) |
+| Need a lightweight REST retrieval API to pair with your own ingestion pipeline | [`rag-retrieval-fastapi-server`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-retrieval-fastapi-server) |
 
 ---
 
-#### [RAG Ingestion MCP Server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-ingestion-sse-mcp-server)
+## Assets
 
-MCP server for document ingestion from IBM COS.
+### [RAG Accelerator](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-accelerator)
 
-**Features:**
+Full-featured FastAPI RAG service — ingest documents from IBM COS, generate IBM watsonx.ai embeddings, index vectors in OpenSearch, and expose REST endpoints.
 
-- Deploy as remote MCP server via SSE transport
-- Integrate with AI assistants (IBM Bob, Claude, etc.)
-- Support for multiple document formats
-- Batch ingestion capabilities
+**API Endpoints:**
 
----
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/ingest` | Ingest documents from IBM COS into OpenSearch |
+| `POST` | `/query` | Hybrid search — returns top-K chunks (vector + BM25) |
+| `POST` | `/qna` | RAG Q&A — retrieves context, generates answer with watsonx.ai |
+| `GET`  | `/index_management/indices` | List all indexes |
+| `POST` | `/index_management/create` | Create a new index |
+| `DELETE` | `/index_management/delete` | Drop an index |
 
-#### [RAG Retrieval MCP Server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-retrieval-sse-mcp-server)
-
-MCP server for semantic and keyword search.
-
-**Features:**
-
-- Semantic retrieval with Watsonx embeddings
-- Keyword search with BM25
-- Hybrid search combining both approaches
-- Works with both Milvus and OpenSearch backends
-- Configurable reranking options
-
----
-
-### Bob Modes
-
-#### [Base Modes](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/bob-modes/base-modes)
-
-AI assistant modes specialized for RAG development.
-
-**Available Modes:**
-
-- **RAG Builder Mode**: Guidance for building RAG pipelines
-- **Data Generator Mode**: Help with test data generation
-- Vector database configuration (Milvus/OpenSearch)
-- Document processing and chunking strategies
-- MCP server development assistance
-- Embedding model selection and optimization
+**Quick Start:**
+```bash
+cd assets/rag-accelerator
+cp .env.example .env
+# Edit .env: IBM_API_KEY, WATSONX_PROJECT_ID, OPENSEARCH_* credentials, COS_ENDPOINT
+pip install -r requirements.txt
+python main.py
+# Swagger UI → http://localhost:8080/docs
+```
 
 ---
 
-## Vector Database Support
+### [RAG Ingestion MCP Server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-ingestion-sse-mcp-server)
 
-### Milvus
+MCP server (SSE transport) that exposes ingestion tools — `ingest_from_cos`, `list_indexed_documents`, `delete_document` — so AI assistants (IBM Bob, Claude) can trigger RAG ingestion without a REST client.
 
-High-performance vector database optimized for similarity search.
-
-**Features:**
-
-- High-performance vector similarity search
-- Scalable distributed architecture
-- Support for multiple index types (IVF_FLAT, HNSW, etc.)
-- Rich filtering capabilities
-- Ideal for large-scale deployments
-
----
-
-### OpenSearch
-
-Combines vector search with full-text search capabilities.
-
-**Features:**
-
-- Combines vector search with full-text search
-- Built-in BM25 keyword search
-- Powerful aggregations and analytics
-- Familiar Elasticsearch-compatible API
-- Excellent for hybrid search scenarios
+**Quick Start:**
+```bash
+cd assets/rag-ingestion-sse-mcp-server
+cp .env.example .env
+# Edit .env: IBM_API_KEY, WATSONX_PROJECT_ID, OPENSEARCH_* and COS_* vars
+pip install -r app/requirements.txt
+uvicorn app.server:app --host 0.0.0.0 --port 8080
+# MCP endpoint → http://localhost:8080/mcp
+```
 
 ---
 
-## Quick Start
+### [RAG Retrieval MCP Server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-retrieval-sse-mcp-server)
 
-### 1. For Complete RAG Pipeline
-
-Navigate to [`assets/rag-accelerator`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-accelerator) and follow the README:
-
-- Configure your vector database (Milvus or OpenSearch)
-- Set up IBM Watsonx credentials
-- Deploy via Docker or run locally
-
-### 2. For MCP Servers
-
-Choose from ingestion or retrieval MCP servers in the Assets directory:
-
-- Deploy as remote SSE-based MCP servers
-- Integrate with AI coding assistants
-- Enable RAG capabilities in your AI workflows
-
-### 3. For AI Assistance
-
-Use the Bob Mode configurations in [`bob-modes/base-modes`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/bob-modes/base-modes) with IBM Bob:
-
-- Import the RAG Builder or Data Generator modes
-- Get expert guidance on RAG implementation
-- Optimize your RAG pipeline design
+MCP server (SSE transport) that exposes retrieval tools — `search_documents`, `keyword_search`, `ask_question` — enabling AI assistants to query the OpenSearch index and perform RAG Q&A.
 
 ---
 
-## Use Cases
+### [RAG Retrieval FastAPI Server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-retrieval-fastapi-server)
 
-!!! example "Common RAG Applications"
+Lightweight FastAPI server focused exclusively on retrieval. Designed to pair with the RAG Accelerator or the MCP ingestion server.
 
-    **Question Answering**: Build intelligent Q&A systems over your documents
-    
-    **Semantic Search**: Find relevant information based on meaning, not just keywords
-    
-    **Document Analysis**: Extract insights from large document collections
-    
-    **Knowledge Management**: Create searchable knowledge bases from unstructured data
-    
-    **AI Assistant Integration**: Add RAG capabilities to AI coding assistants via MCP
-    
-    **Hybrid Search**: Combine semantic understanding with keyword precision
+**API Endpoints:**
+
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/retrieve` | Hybrid search — returns top-K chunks (vector + BM25) |
+| `POST` | `/keyword_search` | BM25 keyword-only search |
+| `GET`  | `/health` | Server health and configuration status |
+
+---
+
+## Bob Modes
+
+Three focused Bob modes covering the full RAG lifecycle. Install by copying the zip to your Bob modes directory.
+
+| Mode | Zip | Use When |
+|---|---|---|
+| **RAG Builder** | [`rag-builder.zip`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/bob-modes/base-modes/rag-builder.zip) | Designing or building a complete RAG system end-to-end |
+| **RAG Ingestion Builder** | [`rag-ingestion.zip`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/bob-modes/base-modes/rag-ingestion.zip) | Building or debugging document ingestion from IBM COS |
+| **RAG Retrieval Builder** | [`rag-retrieval.zip`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/bob-modes/base-modes/rag-retrieval.zip) | Tuning search quality or building the Q&A layer |
+
+**Install (Windows):**
+```powershell
+Copy-Item bob-modes/base-modes/rag-builder.zip "$env:APPDATA\IBM Bob\User\globalStorage\ibm.bob-code\modes\"
+Copy-Item bob-modes/base-modes/rag-ingestion.zip "$env:APPDATA\IBM Bob\User\globalStorage\ibm.bob-code\modes\"
+Copy-Item bob-modes/base-modes/rag-retrieval.zip "$env:APPDATA\IBM Bob\User\globalStorage\ibm.bob-code\modes\"
+```
+
+**Install (Linux / macOS):**
+```bash
+cp bob-modes/base-modes/rag-builder.zip ~/.config/IBM\ Bob/User/globalStorage/ibm.bob-code/modes/
+cp bob-modes/base-modes/rag-ingestion.zip ~/.config/IBM\ Bob/User/globalStorage/ibm.bob-code/modes/
+cp bob-modes/base-modes/rag-retrieval.zip ~/.config/IBM\ Bob/User/globalStorage/ibm.bob-code/modes/
+```
+
+---
+
+## Bob Skills
+
+Install by extracting the zip into your Bob workspace `.bob/skills/` directory.
+
+| Skill | Zip | Capabilities |
+|---|---|---|
+| `rag-pipeline-builder` | [`rag-pipeline-builder.zip`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/bob-skills/rag-pipeline-builder.zip) | Complete RAG pipeline design, IBM watsonx.ai embedding integration, OpenSearch HNSW + hybrid search design, chunking strategy selection, FastAPI service patterns |
+| `rag-mcp-server-builder` | [`rag-mcp-server-builder.zip`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/bob-skills/rag-mcp-server-builder.zip) | MCP server development (SSE transport, FastMCP), RAG ingestion + retrieval tool design, IBM Bob / Claude integration, deployment to IBM Code Engine |
+
+```bash
+# From the root of your Bob workspace project
+unzip bob-skills/rag-pipeline-builder.zip
+unzip bob-skills/rag-mcp-server-builder.zip
+```
+
+---
+
+## Embedding Models
+
+| Model ID | Dimension | Language | Use Case |
+|---|---|---|---|
+| `ibm/slate-125m-english-rtrvr` | 768 | English | Recommended for English RAG |
+| `ibm/slate-30m-english-rtrvr` | 384 | English | Lightweight English RAG |
+| `intfloat/multilingual-e5-large` | 1024 | Multi | Multilingual RAG |
+
+---
+
+## Search Mode Comparison
+
+| Feature | Hybrid Search (recommended) | Vector-only |
+|---|---|---|
+| Index type | HNSW (cosine) + BM25 | HNSW (cosine) |
+| Retrieval quality | ✅ Best — catches semantic + exact matches | ⚠️ Misses keyword-specific queries |
+| IBM deployment | IBM watsonx.data managed OpenSearch | IBM watsonx.data managed OpenSearch |
 
 ---
 
@@ -167,39 +160,63 @@ Use the Bob Mode configurations in [`bob-modes/base-modes`](https://github.com/i
 
 ```mermaid
 graph LR
-    A[Documents in COS] --> B[RAG Ingestion]
-    B --> C[IBM Watsonx.ai<br/>Embeddings]
-    C --> D{Vector Database}
-    D --> E[Milvus]
-    D --> F[OpenSearch]
-    G[User Query] --> H[RAG Retrieval]
-    H --> C
+    A[Documents in IBM COS] --> B[RAG Ingestion]
+    B --> C[IBM watsonx.ai<br/>Embeddings]
+    C --> D[IBM watsonx.data<br/>OpenSearch]
+    E[User Query] --> F[RAG Retrieval]
+    F --> C
     C --> D
-    E --> I[Search Results]
-    F --> I
-    I --> J[AI Application]
+    D --> G[Hybrid Search Results]
+    G --> H[IBM watsonx.ai<br/>LLM Generation]
+    H --> I[Answer + Citations]
 ```
 
 ---
 
 ## IBM Products Used
 
-- **IBM Watsonx.ai**: Embedding generation and LLM capabilities
-- **IBM Cloud Object Storage (COS)**: Document storage and ingestion
-- **Milvus**: High-performance vector database (optional)
-- **OpenSearch**: Hybrid vector and keyword search (optional)
+- **IBM watsonx.ai** — Embedding generation (`ibm/slate-125m-english-rtrvr`) and LLM generation (Granite)
+- **IBM watsonx.data (OpenSearch)** — Managed OpenSearch for k-NN HNSW + BM25 hybrid search
+- **IBM Cloud Object Storage (COS)** — Document storage and ingestion source
+- **IBM Cloud IAM** — API key authentication
+
+---
+
+## Prerequisites
+
+- **IBM Cloud API key** — [create at IBM Cloud IAM](https://cloud.ibm.com/iam/apikeys)
+- **Python 3.10+**
+- **IBM watsonx.ai** project — note your Project ID and instance URL
+- **IBM watsonx.data OpenSearch** instance — note host, port, username, and password
+- **IBM Cloud Object Storage** bucket — note endpoint, instance CRN, and bucket name
+
+---
+
+## Use Cases
+
+!!! example "Common RAG Applications"
+
+    **Question Answering** — Build intelligent Q&A systems over your documents
+    
+    **Semantic Search** — Find relevant information based on meaning, not just keywords
+    
+    **Document Analysis** — Extract insights from large document collections
+    
+    **Knowledge Management** — Create searchable knowledge bases from unstructured data
+    
+    **AI Assistant Integration** — Add RAG capabilities to AI coding assistants via MCP
+    
+    **Hybrid Search** — Combine semantic understanding with keyword precision
 
 ---
 
 ## Resources
 
 - [GitHub Repository - RAG Building Block](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG)
-- [RAG Accelerator](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-accelerator)
-- [RAG Ingestion MCP Server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-ingestion-mcp-server)
-- [RAG Retrieval MCP Server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/assets/rag-retrieval-mcp-server)
-- [IBM Watsonx.ai Documentation](https://www.ibm.com/docs/en/watsonx-as-a-service)
-- [Milvus Documentation](https://milvus.io/docs)
-- [OpenSearch Documentation](https://opensearch.org/docs/latest/)
+- [IBM watsonx.ai Documentation](https://www.ibm.com/docs/en/watsonx-as-a-service)
+- [IBM watsonx.data Documentation](https://cloud.ibm.com/docs/watsonxdata)
+- [OpenSearch k-NN Plugin](https://opensearch.org/docs/latest/search-plugins/knn/)
+- [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs)
 
 ---
 

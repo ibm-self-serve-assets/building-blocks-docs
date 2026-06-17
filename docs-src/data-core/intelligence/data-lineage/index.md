@@ -36,9 +36,9 @@ Data Lineage provides end-to-end visibility into how data moves and transforms a
 
 ## IBM Products
 
-- **IBM watsonx.data Intelligence**: Data governance and lineage tracking
-- **IBM Governance and Catalog**: Enterprise metadata management
-- **IBM Manta**: Automated data lineage solution
+- **[IBM watsonx.data Intelligence](https://www.ibm.com/docs/en/watsonx/wdi/saas)**: Data governance and lineage tracking
+- **[IBM Governance and Catalog](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=services-watson-knowledge-catalog)**: Enterprise metadata management
+- **[IBM Manta](https://www.ibm.com/products/manta-data-lineage)**: Automated data lineage solution
 
 ## Use Cases
 
@@ -267,11 +267,43 @@ def validate_email(data):
     return validated_data
 ```
 
+## Bob Mode
+
+Give IBM Bob a Data Lineage specialist persona.
+
+**Install (Windows):**
+```powershell
+Copy-Item bob-modes/base-modes/data-lineage-builder.zip "$env:APPDATA\IBM Bob\User\globalStorage\ibm.bob-code\modes\"
+```
+**Install (Linux / macOS):**
+```bash
+cp bob-modes/base-modes/data-lineage-builder.zip ~/.config/IBM\ Bob/User/globalStorage/ibm.bob-code/modes/
+```
+
+Restart IBM Bob — **Data Lineage Builder** mode appears in the mode selector.
+
+---
+
+## Bob Skills
+
+| Skill | Zip | Capabilities |
+|---|---|---|
+| `openlineage-instrumentation` | [`openlineage-instrumentation.zip`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-lineage/bob-skills/openlineage-instrumentation.zip) | OpenLineage event design, Python/DataStage/Spark instrumentation patterns, IBM Databand lineage API integration, lineage graph authoring |
+
+```bash
+unzip bob-skills/openlineage-instrumentation.zip
+```
+
+Open IBM Bob → Skills panel → enable `openlineage-instrumentation`.
+
+---
+
 ## Resources
 
 - [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-lineage)
 - [IBM Manta Documentation](https://www.ibm.com/products/manta-data-lineage)
 - [IBM watsonx.data Intelligence Documentation](https://www.ibm.com/docs/en/watsonxdata)
+- [OpenLineage Specification](https://openlineage.io/spec)
 
 ## Support
 

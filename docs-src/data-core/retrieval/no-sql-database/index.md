@@ -5,13 +5,13 @@ Large-scale NoSQL storage with Cassandra compatibility and optional vector capab
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
     
-    **[Building Blocks - NoSQL Database](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/no-sql-database)**
+    **[Building Blocks - NoSQL Database (Astra DB)](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/no-sql-database/astradb)**
 
 ---
 
 ## Overview
 
-The No SQL Database building block provides large-scale NoSQL storage with Cassandra compatibility and optional vector capabilities for AI and application workloads. It offers a serverless, cloud-native database solution that scales automatically based on demand.
+The No SQL Database building block provides large-scale NoSQL storage with Cassandra compatibility and optional vector capabilities for AI and application workloads. It is powered by **DataStax Astra DB** — part of the **IBM Cloud HCD (Hyper-Converged Database)** portfolio — offering a serverless, cloud-native database solution that scales automatically based on demand.
 
 ---
 
@@ -19,7 +19,7 @@ The No SQL Database building block provides large-scale NoSQL storage with Cassa
 
 This building block leverages the following products and services:
 
-- **[DataStax Astra DB](https://www.datastax.com/products/datastax-astra)**: Cloud-native, serverless database built on Apache Cassandra
+- **[IBM HCD / DataStax Astra DB](https://cloud.ibm.com/catalog/services/hyper-converged-database)**: Cloud-native, serverless database built on Apache Cassandra — part of IBM Cloud's Hyper-Converged Database portfolio
 - **[Apache Cassandra](https://cassandra.apache.org/)**: Distributed NoSQL database for high availability and scalability
 - **[IBM watsonx.data](https://www.ibm.com/products/watsonx-data)**: Integration for unified data access
 
@@ -190,23 +190,42 @@ results = collection.find(
 
 ---
 
-## Coming Soon
+## Bob Mode
 
-!!! note "Upcoming Features"
-    - Detailed implementation guides
-    - Sample applications with vector search
-    - Integration patterns with watsonx.ai
-    - Performance tuning guidelines
-    - Migration guides from other databases
+Give IBM Bob a NoSQL / Astra DB specialist persona.
+
+**Install (Windows):**
+```powershell
+Copy-Item bob-modes/base-modes/astradb-nosql.zip "$env:APPDATA\IBM Bob\User\globalStorage\ibm.bob-code\modes\"
+```
+**Install (Linux / macOS):**
+```bash
+cp bob-modes/base-modes/astradb-nosql.zip ~/.config/IBM\ Bob/User/globalStorage/ibm.bob-code/modes/
+```
+
+Restart IBM Bob — the Astra DB NoSQL mode appears in the mode selector.
+
+---
+
+## Bob Skills
+
+Teach Bob Astra DB NoSQL and vector patterns. Extract the zip into your Bob workspace `.bob/skills/` directory:
+
+```bash
+unzip bob-skills/astradb-nosql.zip
+```
+
+Open IBM Bob → Skills panel → enable the skill.
 
 ---
 
 ## Resources
 
+- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/no-sql-database/astradb)
+- [IBM HCD / DataStax Astra DB on IBM Cloud](https://cloud.ibm.com/catalog/services/hyper-converged-database)
 - [DataStax Astra DB Documentation](https://docs.datastax.com/en/astra/home/astra.html)
 - [Apache Cassandra Documentation](https://cassandra.apache.org/doc/latest/)
 - [Vector Search Guide](https://docs.datastax.com/en/astra/astra-db-vector/get-started/quickstart.html)
-- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/no-sql-database)
 
 ---
 

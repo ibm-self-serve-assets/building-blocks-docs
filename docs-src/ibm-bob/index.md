@@ -36,15 +36,22 @@ Instructions and related files for these custom modes can be found in their resp
 
 #### [Data Integration](../data-core/integration/index.md)
 
-- [Data Ingestion](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/integration/data-pipeline-ai-generated/data-ingestion/bob-modes/): Comprehensive data ingestion mode for both structured and unstructured data sources. Bob assists in building data pipelines, configuring connectors, and implementing data transformation logic for batch and streaming ingestion.
+- [Data Ingestion](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated/bob-modes): AI-generated data pipeline mode for both structured (DataStage CDC) and unstructured (Docling/UDI) sources. Describe your data source and target — Bob generates the complete ingestion pipeline automatically.
+- [Data Observability Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-observability/bob-modes): IBM Databand pipeline onboarding, OpenLineage instrumentation for Python/DataStage/Spark, alert policy design and quality threshold tuning, IBM COS report archiving.
 
 #### [Data Intelligence](../data-core/intelligence/index.md)
 
-- [Text-to-SQL](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/text2sql/bob-modes): Natural language to SQL query conversion mode with metadata enrichment. Bob helps build and optimize Text2SQL systems, configure schema understanding, and implement query validation for business intelligence applications.
+- [Text-to-SQL](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/text2sql/bob-modes): Natural language to SQL using IBM watsonx.data Intelligence Text2SQL API. Bob helps build the FastAPI application, enrich database metadata (table/column descriptions, synonyms), and evaluate SQL accuracy across Presto, PostgreSQL, Oracle, and Snowflake dialects.
+- [Data Lineage Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-lineage/bob-modes): End-to-end lineage tracking with IBM Manta and watsonx.data Intelligence. Bob assists with OpenLineage instrumentation, impact analysis, compliance reporting, and lineage visualization.
+- [Data Quality Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-quality/bob-modes): Data quality rule authoring and monitoring with watsonx.data Intelligence. Bob helps define validation rules, configure profiling, set quality thresholds, and build compliance reports.
 
 #### [Data Retrieval](../data-core/retrieval/index.md)
 
-- [Vector Search](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/retrieval/vector-search/milvus/bob-modes/): Complete vector search mode with document processing and semantic search capabilities. Bob assists in building vector search systems, configuring embedding models, and optimizing retrieval strategies for question-answering applications.
+- [RAG Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/bob-modes): End-to-end RAG architect — pipeline architecture, hybrid search design, chunking strategy, IBM watsonx.ai embedding model choice, MCP server design, RAG evaluation (RAGAS).
+- [RAG Ingestion Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/bob-modes): Focused ingestion specialist — IBM COS document loading, chunking, watsonx.ai embedding, OpenSearch indexing, MCP ingestion tool design (`ingest_from_cos`).
+- [RAG Retrieval Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/bob-modes): Focused retrieval and generation specialist — hybrid search queries, reranking, watsonx.ai Granite generation, RAGAS evaluation, streaming SSE responses, MCP retrieval tools.
+- [OpenSearch Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/opensearch/bob-modes): IBM watsonx.data OpenSearch k-NN index design, HNSW parameter tuning, hybrid search score fusion, IBM watsonx.ai embedding integration for standalone vector search services.
+- [Astra DB Vector Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/datastax-astradb/bob-modes): DataStax Astra DB (IBM HCD) vector collection design, `astrapy` ANN search patterns, IBM watsonx.ai embedding integration, IBM COS ingestion for serverless global vector storage.
 
 
 ### Automation

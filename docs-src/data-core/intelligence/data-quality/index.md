@@ -124,14 +124,34 @@ flowchart LR
 
 ---
 
-## Coming Soon
+## Bob Mode
 
-!!! note "Upcoming Features"
-    - Detailed implementation guides
-    - Sample quality rules and templates
-    - Advanced lineage visualization
-    - Machine learning-based quality prediction
-    - Integration with additional data sources
+Give IBM Bob a Data Quality specialist persona.
+
+**Install (Windows):**
+```powershell
+Copy-Item bob-modes/base-modes/data-quality-builder.zip "$env:APPDATA\IBM Bob\User\globalStorage\ibm.bob-code\modes\"
+```
+**Install (Linux / macOS):**
+```bash
+cp bob-modes/base-modes/data-quality-builder.zip ~/.config/IBM\ Bob/User/globalStorage/ibm.bob-code/modes/
+```
+
+Restart IBM Bob — **Data Quality Builder** mode appears in the mode selector.
+
+---
+
+## Bob Skills
+
+| Skill | Zip | Capabilities |
+|---|---|---|
+| `data-quality-rules` | [`data-quality-rules.zip`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-quality/bob-skills/data-quality-rules.zip) | Data quality rule authoring, watsonx.data Intelligence quality checks, profiling automation, threshold design, compliance reporting patterns |
+
+```bash
+unzip bob-skills/data-quality-rules.zip
+```
+
+Open IBM Bob → Skills panel → enable `data-quality-rules`.
 
 ---
 

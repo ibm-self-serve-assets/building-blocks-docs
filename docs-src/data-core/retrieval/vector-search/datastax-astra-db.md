@@ -1,328 +1,185 @@
 # DataStax Astra DB Vector Search
 
-Cloud-native vector database built on Apache Cassandra with serverless scalability and global distribution.
+Build vector search applications using **DataStax Astra DB** — part of the **IBM Cloud HCD (Hyper-Converged Database)** portfolio — with **IBM watsonx.ai** embeddings. Ingest documents from **IBM COS**, generate dense embeddings, store in Astra DB vector collections, and perform ANN search with cosine similarity.
+
+!!! info "GitHub Repository"
+    The complete source code and examples are available in the GitHub repository:
+    
+    **[Building Blocks - Vector Search / DataStax Astra DB](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/datastax-astradb)**
+
+---
 
 ## Overview
 
-DataStax Astra DB is a cloud-native database-as-a-service built on Apache Cassandra, offering vector search capabilities for AI applications. It combines the proven scalability and reliability of Cassandra with modern vector search features, making it ideal for production AI workloads that require global distribution and high availability.
-
-!!! note "Implementation Status"
-    DataStax Astra DB integration is planned for future releases. This page provides information about Astra DB capabilities and use cases to help developers understand its potential in the building blocks framework.
+This building block provides a standalone FastAPI ingestion service for **IBM HCD (DataStax Astra DB)**. Documents are downloaded from IBM COS, parsed into chunks, embedded with IBM watsonx.ai, and inserted into Astra DB vector collections using the `astrapy` Data API. Queries use ANN cosine similarity search over the `$vector` field.
 
 ---
 
-## Why DataStax Astra DB for Vector Search?
+## When to Use
 
-Astra DB brings enterprise-grade reliability and global scale to vector search, making it suitable for mission-critical AI applications that need to serve users worldwide with low latency.
+| Scenario | Notes |
+|---|---|
+| Need vector search on IBM HCD (Astra DB) rather than OpenSearch | Use this block — Astra DB uses `$vector` field + ANN cosine search |
+| Ingest documents from IBM COS and search them semantically | Start with `astradb-vector-ingestion` FastAPI asset |
+| Want globally distributed, serverless vector storage | Astra DB is serverless — scales automatically |
+| Need both NoSQL document storage and vector search in one service | Combine this with [No SQL Database](../no-sql-database/index.md) |
 
-### Key Advantages
-
-- **Serverless Architecture**: Auto-scaling without infrastructure management
-- **Global Distribution**: Multi-region deployment with active-active replication
-- **High Availability**: 99.99% uptime SLA with automatic failover
-- **Cassandra Foundation**: Battle-tested distributed database technology
-- **Unified Platform**: Combine vector search with traditional database operations
+> **OpenSearch vs Astra DB for RAG**: Use **[OpenSearch](opensearch.md)** if you need hybrid search (vector + BM25 keyword). Use **Astra DB** if you specifically need IBM HCD serverless Cassandra-backed vector storage.
 
 ---
 
-## Core Features
+## Asset — Astra DB Vector Ingestion Service
 
-### Vector Search Capabilities
+**Location**: [`assets/astradb-vector-ingestion/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/datastax-astradb/assets/astradb-vector-ingestion)
+**IBM Products**: IBM HCD (Astra DB), IBM watsonx.ai, IBM COS, IBM Cloud IAM
 
-**Vector Similarity Search**
+FastAPI service that downloads documents from IBM COS, generates IBM watsonx.ai embeddings, and inserts them into Astra DB vector collections using the `astrapy` Data API.
 
-- Approximate nearest neighbor (ANN) search
-- Support for multiple distance metrics (Cosine, Euclidean, Dot Product)
-- Configurable accuracy vs. performance trade-offs
-- Real-time vector indexing and updates
+**Quick Start:**
+```bash
+cd assets/astradb-vector-ingestion
+cp .env.example .env
+# Edit .env:
+#   IBM_API_KEY                   — your IBM Cloud API key
+#   WATSONX_PROJECT_ID            — your watsonx.ai project ID
+#   ASTRA_DB_API_ENDPOINT         — from Astra DB console → Connect
+#   ASTRA_DB_APPLICATION_TOKEN    — AstraCS:... token
+pip install -r requirements.txt
+python main.py
+# Swagger UI → http://localhost:8080/docs
+```
 
-**Hybrid Data Model**
+**Ingest documents from COS:**
+```bash
+curl -X POST http://localhost:8080/ingest \
+  -H "REST_API_KEY: your_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "bucket_name": "my-docs-bucket",
+    "directory": "documents/",
+    "collection_name": "ibm_docs_vectors",
+    "embedding_model_id": "ibm/slate-125m-english-rtrvr"
+  }'
+```
 
-- Store vectors alongside structured data
-- Query vectors with metadata filters
-- Combine vector similarity with traditional queries
-- Support for multiple vector columns per table
+---
 
-**Scalability**
+## Bob Mode
 
-- Horizontal scaling across nodes
-- Automatic data distribution and replication
-- Linear performance scaling with cluster size
-- Support for billions of vectors
+Give IBM Bob an Astra DB Vector specialist persona.
 
-### Database Features
+**Install (Windows):**
+```powershell
+Copy-Item bob-modes/base-modes/astradb-vector-builder.zip "$env:APPDATA\IBM Bob\User\globalStorage\ibm.bob-code\modes\"
+```
+**Install (Linux / macOS):**
+```bash
+cp bob-modes/base-modes/astradb-vector-builder.zip ~/.config/IBM\ Bob/User/globalStorage/ibm.bob-code/modes/
+```
 
-**Multi-Model Support**
+Restart IBM Bob — **Astra DB Vector Builder** mode appears in the mode selector.
 
-- Document API for JSON data
-- REST API for easy integration
-- GraphQL API for flexible queries
-- CQL (Cassandra Query Language) for advanced operations
+---
 
-**Data Management**
+## Bob Skill
 
-- Automatic data replication across regions
-- Configurable consistency levels
-- Time-to-live (TTL) for automatic data expiration
-- Change data capture (CDC) for real-time streaming
+| Skill | Zip | Capabilities |
+|---|---|---|
+| `astradb-vector-setup` | [`astradb-vector-setup.zip`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/datastax-astradb/bob-skills/astradb-vector-setup.zip) | Astra DB vector collection creation, IBM watsonx.ai embedding integration, ANN search queries (`astrapy`), IBM COS ingestion patterns |
 
-**Security & Compliance**
+```bash
+# From the root of your Bob workspace project
+unzip bob-skills/astradb-vector-setup.zip
+```
 
-- Encryption at rest and in transit
-- Role-based access control (RBAC)
-- SOC 2, HIPAA, and GDPR compliance
-- Private endpoints and VPC peering
+Open IBM Bob → Skills panel → enable `astradb-vector-setup`.
+
+---
+
+## Vector Collection Design
+
+```python
+from astrapy.db import AstraDB
+
+db = AstraDB(
+    token="your-AstraCS-token",
+    api_endpoint="your-api-endpoint"
+)
+
+# Create a vector-enabled collection (768-dim for IBM slate model)
+collection = db.create_collection(
+    collection_name="ibm_docs_vectors",
+    dimension=768,
+    metric="cosine"
+)
+
+# Insert a document with its embedding
+collection.insert_one({
+    "_id": "doc1",
+    "text": "IBM watsonx.data is an open lakehouse platform.",
+    "$vector": [0.01, 0.22, ...]  # 768-dimensional vector
+})
+
+# Perform ANN similarity search
+results = collection.find(
+    sort={"$vector": query_embedding},
+    limit=5
+)
+```
+
+---
+
+## Architecture
+
+```mermaid
+graph LR
+    A[IBM Cloud Object Storage] --> B[Astra DB Ingestion Service<br/>FastAPI]
+    B --> C[Unstructured parse + chunk]
+    C --> D[IBM watsonx.ai<br/>embed_documents]
+    D --> E[DataStax Astra DB<br/>IBM HCD Vector Collection]
+    E --> F[ANN Search<br/>cosine similarity]
+```
+
+---
+
+## IBM Products Used
+
+- **IBM HCD / DataStax Astra DB** — Serverless Cassandra-backed vector storage
+- **IBM watsonx.ai** — Embedding generation (`ibm/slate-125m-english-rtrvr`)
+- **IBM Cloud Object Storage (COS)** — Document source storage
+- **IBM Cloud IAM** — API key authentication
+
+---
+
+## Embedding Models
+
+| Model ID | Dimension | Language | Use Case |
+|---|---|---|---|
+| `ibm/slate-125m-english-rtrvr` | 768 | English | Recommended for English RAG |
+| `ibm/slate-30m-english-rtrvr` | 384 | English | Lightweight English RAG |
+| `intfloat/multilingual-e5-large` | 1024 | Multi | Multilingual RAG |
 
 ---
 
 ## Use Cases
 
-### Global Applications
-
-**Multi-Region Deployment**
-
-- Serve users from nearest data center
-- Active-active replication for write availability
-- Disaster recovery with automatic failover
-- Compliance with data residency requirements
-
-**Low-Latency Search**
-
-- Sub-100ms query latency globally
-- Edge caching for frequently accessed vectors
-- Optimized for read-heavy workloads
-- Predictable performance at scale
-
-### Enterprise AI Applications
-
-**Recommendation Systems**
-
-- Real-time product recommendations
-- Personalized content delivery
-- User behavior analysis
-- A/B testing with vector embeddings
-
-**Fraud Detection**
-
-- Anomaly detection using vector similarity
-- Real-time transaction analysis
-- Pattern recognition across user behavior
-- Historical fraud pattern matching
-
-**Customer 360**
-
-- Unified customer profiles with vector embeddings
-- Similar customer identification
-- Churn prediction and prevention
-- Personalized marketing campaigns
-
-### Content & Media
-
-**Content Discovery**
-
-- Semantic search across media libraries
-- Similar content recommendations
-- Automated content tagging
-- Duplicate content detection
-
-**Digital Asset Management**
-
-- Image and video similarity search
-- Brand asset organization
-- Rights management with metadata
-- Multi-modal search (text + image)
-
-### Healthcare & Life Sciences
-
-**Patient Matching**
-
-- Find similar patient cases
-- Clinical trial matching
-- Treatment protocol recommendations
-- Medical literature search
-
-**Drug Discovery**
-
-- Molecular similarity search
-- Compound screening
-- Target identification
-- Literature mining
-
----
-
-## Integration with IBM Products
-
-### IBM watsonx.ai
-
-- Generate embeddings using IBM foundation models
-- Integrate with watsonx.ai for document processing
-- Support for RAG (Retrieval-Augmented Generation) pipelines
-- Real-time embedding updates
-
-### IBM Cloud Object Storage
-
-- Store source documents in COS
-- Process and vectorize documents from COS
-- Archive historical data with metadata
-- Seamless data pipeline integration
-
-### IBM watsonx.data
-
-- Federated queries across Astra DB and lakehouse
-- Unified data governance
-- Cross-platform analytics
-- Data movement and synchronization
-
----
-
-## Comparison with Other Vector Databases
-
-| Feature | Astra DB | Milvus | OpenSearch |
-|---------|----------|--------|------------|
-| **Global Distribution** | ✅ Native | ❌ No | ⚠️ Limited |
-| **Serverless** | ✅ Yes | ❌ No | ⚠️ AWS Only |
-| **Multi-Model** | ✅ Yes | ❌ No | ⚠️ Limited |
-| **High Availability** | ✅ 99.99% | ⚠️ Manual | ✅ Yes |
-| **Managed Service** | ✅ Fully | ⚠️ Limited | ✅ AWS |
-| **Open Source** | ⚠️ Cassandra | ✅ Yes | ✅ Yes |
-| **Consistency** | ✅ Tunable | ⚠️ Eventual | ✅ Strong |
-
----
-
-## Best Practices
-
-### Data Modeling
-
-!!! tip "Design Guidelines"
-    - **Partition Key Design**: Distribute data evenly across nodes
-    - **Vector Dimensions**: Balance between accuracy and storage (384-1536 typical)
-    - **Denormalization**: Store related data together for query efficiency
-    - **TTL Strategy**: Use time-to-live for temporary data
-
-### Performance Optimization
-
-- **Replication Factor**: Balance between availability and cost
-- **Consistency Level**: Choose based on application requirements
-- **Batch Operations**: Use batch inserts for bulk data loading
-- **Connection Pooling**: Reuse connections for better performance
-
-### Scalability Planning
-
-- **Capacity Planning**: Monitor storage and throughput metrics
-- **Auto-scaling**: Configure thresholds for automatic scaling
-- **Region Selection**: Deploy in regions close to users
-- **Data Distribution**: Ensure even data distribution across partitions
-
----
-
-## Security & Governance
-
-### Access Control
-
-- Role-based access control (RBAC)
-- Fine-grained permissions per keyspace/table
-- API token management
-- IP allowlisting and VPC peering
-
-### Compliance
-
-- SOC 2 Type II certified
-- HIPAA compliant
-- GDPR compliant
-- ISO 27001 certified
-
-### Data Protection
-
-- Encryption at rest (AES-256)
-- Encryption in transit (TLS 1.2+)
-- Automated backups with point-in-time recovery
-- Data masking for sensitive information
-
----
-
-## Performance Characteristics
-
-### Scalability
-
-- **Horizontal Scaling**: Add nodes without downtime
-- **Linear Performance**: Performance scales with cluster size
-- **Multi-Region**: Active-active replication across regions
-- **Serverless**: Automatic scaling based on workload
-
-### Latency
-
-- **Single-Region**: Sub-10ms for local queries
-- **Multi-Region**: Sub-100ms for global queries
-- **Vector Search**: Optimized ANN algorithms
-- **Caching**: Built-in caching for hot data
-
-### Throughput
-
-- **Writes**: Millions of writes per second
-- **Reads**: Optimized for read-heavy workloads
-- **Concurrent Users**: Support for thousands of concurrent connections
-- **Batch Operations**: Efficient bulk data operations
-
----
-
-## Cost Optimization
-
-### Serverless Pricing
-
-- Pay only for storage and operations used
-- No idle capacity costs
-- Automatic scaling reduces over-provisioning
-- Predictable pricing model
-
-### Storage Optimization
-
-- Compression for reduced storage costs
-- TTL for automatic data expiration
-- Tiered storage for historical data
-- Efficient vector storage formats
-
----
-
-## Future Integration Plans
-
-!!! note "Roadmap"
-    The DataStax Astra DB integration for the building blocks framework will include:
-    
-    - **Ingestion API**: FastAPI service for document processing and vectorization
-    - **Global Deployment**: Multi-region configuration templates
-    - **IBM watsonx Integration**: Native embedding generation using watsonx.ai
-    - **Monitoring Dashboard**: Real-time metrics and performance tracking
-    - **Bob Mode Support**: AI-assisted Astra DB configuration and optimization
-    - **Migration Tools**: Data migration from other vector databases
+- **Semantic Search** — Find documents based on meaning using ANN cosine similarity
+- **RAG Pipelines** — Retrieval layer backed by IBM HCD serverless storage
+- **Global Applications** — Multi-region deployment with Cassandra replication
+- **AI Backends** — Store embeddings alongside application data
 
 ---
 
 ## Resources
 
-### Documentation
-
-- [DataStax Astra DB Documentation](https://docs.datastax.com/en/astra/home/astra.html)
-- [Vector Search Guide](https://docs.datastax.com/en/astra-serverless/docs/vector-search/overview.html)
-- [API Reference](https://docs.datastax.com/en/astra-serverless/docs/develop/dev-with-apis.html)
-
-### Learning Resources
-
-- [Astra DB Quickstart](https://docs.datastax.com/en/astra-serverless/docs/getting-started/quickstart.html)
-- [Vector Search Tutorial](https://docs.datastax.com/en/astra-serverless/docs/vector-search/quickstart.html)
-- [Best Practices Guide](https://docs.datastax.com/en/astra-serverless/docs/plan/planning.html)
-
-### Community
-
-- [DataStax Community](https://community.datastax.com/)
-- [DataStax Academy](https://www.datastax.com/dev)
-- [GitHub Examples](https://github.com/datastax)
+- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/datastax-astradb)
+- [IBM HCD / DataStax Astra DB on IBM Cloud](https://cloud.ibm.com/catalog/services/hyper-converged-database)
+- [DataStax Astra DB Data API](https://docs.datastax.com/en/astra/astra-db-vector/api-reference/data-api.html)
+- [astrapy SDK Documentation](https://github.com/datastax/astrapy)
+- [IBM watsonx.ai Embedding Models](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models-embed.html)
 
 ---
 
 ## Support
 
-For questions about DataStax Astra DB integration in the building blocks framework:
-
-- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search)
-- [DataStax Support](https://support.datastax.com/)
-- [DataStax Community Forum](https://community.datastax.com/)
+For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/datastax-astradb) or open an issue.

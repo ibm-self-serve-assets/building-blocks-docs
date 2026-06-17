@@ -1,6 +1,6 @@
 # Data Pipeline (AI Generated)
 
-AI-powered data pipeline generation and automation for IBM watsonx.data covering unstructured and structured data sources.
+Comprehensive data ingestion for IBM watsonx.data covering both **structured** data sources (relational databases via IBM DataStage CDC connectors) and **unstructured** data (documents, PDFs, images via IBM Docling and UDI). AI-generated pipelines are created by IBM Bob using the included modes and skills — describe your source and target and Bob generates the ingestion pipeline automatically.
 
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
@@ -11,7 +11,18 @@ AI-powered data pipeline generation and automation for IBM watsonx.data covering
 
 ## Overview
 
-The Data Pipeline (AI Generated) building block provides an intelligent framework for automatically generating and managing data pipelines for IBM watsonx.data. It leverages AI to understand data sources, recommend optimal ingestion strategies, and automate pipeline creation, reducing manual effort and accelerating time-to-value.
+The Data Pipeline building block provides an intelligent framework for automatically generating and managing data ingestion pipelines for IBM watsonx.data. It leverages IBM Bob AI modes and skills to generate complete pipeline code — structured (DataStage CDC), unstructured (Docling/UDI), and UDI+OpenSearch — from a plain-English description of your source and target.
+
+---
+
+## When to Use
+
+| Scenario | Asset |
+|---|---|
+| Ingest from IBM Db2, PostgreSQL, MySQL, or Oracle into watsonx.data | [`assets/structured-data/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated/assets/udi-ingestion-opensearch) — DataStage CDC patterns |
+| Ingest PDFs, DOCX, HTML, images, or email documents into a pipeline | Unstructured data — IBM Docling + UDI patterns |
+| Use IBM UDI + OpenSearch for unstructured document search | [`assets/udi-ingestion-opensearch/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated/assets/udi-ingestion-opensearch) |
+| Ask Bob to generate a pipeline from a plain-English description | Activate **Data Ingestion** Bob Mode (`data-ingestion.zip`) |
 
 ---
 
@@ -19,29 +30,121 @@ The Data Pipeline (AI Generated) building block provides an intelligent framewor
 
 This building block leverages the following IBM products and services:
 
-- **[watsonx.data](https://www.ibm.com/products/watsonx-data)**: Data lakehouse platform for storing and managing ingested data
-- **[IBM Cloud Object Storage (COS)](https://www.ibm.com/cloud/object-storage)**: Scalable object storage for data staging and archival
+- **[IBM DataStage](https://www.ibm.com/docs/en/datastage)**: Enterprise data integration with CDC connectors for structured sources
 - **[IBM UDI (Unstructured Data Ingestion)](https://www.ibm.com/docs/en/watsonx/watsonxdata)**: Purpose-built solution for ingesting unstructured data
-- **[Db2](https://www.ibm.com/products/db2)**: Relational database for structured data sources
-- **[IBM Cloud Pak for Data](https://www.ibm.com/products/cloud-pak-for-data)**: Unified data and AI platform for data integration
+- **[IBM Docling](https://github.com/DS4SD/docling)**: Document parsing and conversion for PDFs, DOCX, HTML, and more
+- **[IBM watsonx.data](https://www.ibm.com/products/watsonx-data)**: Data lakehouse platform for storing and managing ingested data
+- **[IBM Cloud Object Storage (COS)](https://www.ibm.com/cloud/object-storage)**: Scalable object storage for data staging and archival
 
 ---
 
-## Features
-
-### Unstructured Data Ingestion
-
-- Document processing (PDF, DOCX, TXT, HTML)
-- Image and media file handling
-- Email and messaging data extraction
-- Web scraping and crawling capabilities
+## Assets
 
 ### Structured Data Ingestion
 
-- RDBMS connectors (DB2, PostgreSQL, MySQL, Oracle)
-- Data warehouse integration
-- CDC (Change Data Capture) pipelines
-- Batch and streaming ingestion modes
+AI-generated ingestion pipelines for relational databases using IBM DataStage connectors with CDC support.
+
+**Supported Sources:**
+
+- IBM Db2 (on-premises and IBM Cloud)
+- PostgreSQL / Amazon RDS
+- MySQL / MariaDB
+- Oracle Database
+- Microsoft SQL Server
+- IBM Db2 Warehouse on Cloud
+
+**Key Patterns:**
+- Full-load batch ingestion
+- CDC (Change Data Capture) incremental sync
+- Schema mapping and type conversion
+- Data validation and rejection handling
+
+---
+
+### Unstructured Data Ingestion
+
+AI-generated pipelines for ingesting documents, PDFs, images, and other unstructured content using IBM Docling and IBM UDI.
+
+**Supported Document Types:**
+- PDF (text, tables, figures)
+- DOCX / PPTX / XLSX
+- HTML / Markdown
+- Images (PNG, JPG, TIFF — OCR)
+- Email (EML, MSG)
+
+---
+
+### UDI + OpenSearch Ingestion
+
+**Location**: [`assets/udi-ingestion-opensearch/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated/assets/udi-ingestion-opensearch)
+
+IBM UDI + IBM watsonx.data OpenSearch integration for unstructured document search.
+
+**Quick Start:**
+```bash
+cd assets/udi-ingestion-opensearch/scripts
+cp .env.example .env
+# Edit .env: IBM_API_KEY, OPENSEARCH_HOST, OPENSEARCH_PASSWORD, COS credentials
+pip install -r requirements.txt
+python setup.py      # provision OpenSearch index
+python ingest.py     # run document ingestion
+```
+
+---
+
+## Bob Mode
+
+Give IBM Bob a Data Ingestion specialist persona — describe your data source and target, and Bob generates the full pipeline.
+
+**Install (Windows):**
+```powershell
+Copy-Item bob-modes/base-modes/data-ingestion.zip "$env:APPDATA\IBM Bob\User\globalStorage\ibm.bob-code\modes\"
+```
+**Install (Linux / macOS):**
+```bash
+cp bob-modes/base-modes/data-ingestion.zip ~/.config/IBM\ Bob/User/globalStorage/ibm.bob-code/modes/
+```
+
+Restart IBM Bob — **Data Ingestion** mode appears in the mode selector.
+
+---
+
+## Bob Skills
+
+Install by extracting the zip into your Bob workspace `.bob/skills/` directory.
+
+| Skill | Zip | Capabilities |
+|---|---|---|
+| `data-ingestion-structured` | [`data-ingestion-structured.zip`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated/bob-skills/data-ingestion-structured.zip) | IBM DataStage connector config, CDC pipeline design, schema mapping, DB2/PostgreSQL/MySQL/Oracle patterns, batch and incremental load strategies |
+| `data-ingestion-unstructured` | [`data-ingestion-unstructured.zip`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated/bob-skills/data-ingestion-unstructured.zip) | IBM Docling document parsing, UDI pipeline configuration, IBM COS ingestion, multi-format chunking, metadata extraction, Python 3.12 automation scripts |
+| `udi-opensearch` | [`udi-opensearch.zip`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated/bob-skills/udi-opensearch.zip) | IBM UDI + OpenSearch integration, document search pipeline setup, OpenSearch index provisioning for UDI output |
+
+```bash
+unzip bob-skills/data-ingestion-structured.zip
+unzip bob-skills/data-ingestion-unstructured.zip
+unzip bob-skills/udi-opensearch.zip
+```
+
+---
+
+## AI-Generated Pipeline Workflow
+
+```
+1. Activate Bob Mode (data-ingestion.zip)
+   │
+   ▼
+2. Describe your ingestion requirement:
+   "Ingest customer orders from PostgreSQL into watsonx.data Iceberg table with CDC"
+   │
+   ▼
+3. Bob generates:
+   ├─ DataStage flow definition (structured)
+   │   or Docling pipeline script (unstructured)
+   ├─ Schema mapping configuration
+   ├─ .env.example with required credentials
+   ├─ Dockerfile for containerization
+   └─ README with deployment instructions
+```
 
 ---
 
@@ -49,117 +152,33 @@ This building block leverages the following IBM products and services:
 
 ```mermaid
 graph LR
-    subgraph Data Sources
-        Unstructured[Unstructured Data<br/>PDF, DOCX, Images]
-        Structured[Structured Data<br/>RDBMS, Warehouses]
+    subgraph Structured["Structured Sources"]
+        DB["DB2 / PostgreSQL<br/>MySQL / Oracle"]
     end
-    
-    subgraph AI Pipeline Generator
-        UDI[IBM UDI<br/>Document Processing]
-        CDC[CDC Engine<br/>Change Capture]
-        AIEngine[AI Engine<br/>Pipeline Generation]
+    subgraph Unstructured["Unstructured Sources"]
+        Files["COS / Email<br/>PDF / DOCX / HTML"]
     end
-    
-    subgraph watsonx.data
-        Lakehouse[(Data Lakehouse)]
-        COS[(Cloud Object<br/>Storage)]
+    subgraph Ingestion["Ingestion Layer"]
+        DS["IBM DataStage<br/>CDC connectors"]
+        UDI["IBM Docling + UDI<br/>parse + embed"]
     end
-    
-    Unstructured --> UDI
-    Structured --> CDC
-    UDI --> AIEngine
-    CDC --> AIEngine
-    AIEngine --> Lakehouse
-    AIEngine --> COS
-    
-    style Unstructured fill:#e1f5ff
-    style Structured fill:#e1f5ff
-    style Lakehouse fill:#fff4e1
-    style COS fill:#fff4e1
+    Target["IBM watsonx.data<br/>Iceberg / COS / Db2"]
+
+    DB --> DS
+    Files --> UDI
+    DS --> Target
+    UDI --> Target
 ```
-
----
-
-## Components
-
-### IBM UDI (Unstructured Data Ingestion)
-
-IBM UDI provides specialized capabilities for ingesting unstructured data from various sources:
-
-- **Document Ingestion**: Process documents in multiple formats
-- **Media Processing**: Handle images, videos, and audio files
-- **Content Extraction**: Extract text and metadata from unstructured sources
-- **Format Conversion**: Convert between different file formats
-
-**Repository Path**: [`integration/data-pipeline-ai-generated/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated)
-
-### Structured Data Ingestion
-
-Connect to and ingest data from relational databases and data warehouses:
-
-- **Database Connectors**: Pre-built connectors for major RDBMS platforms
-- **CDC Support**: Real-time change data capture for incremental updates
-- **Batch Processing**: Efficient bulk data loading
-- **Schema Mapping**: Automatic schema detection and mapping
-
-**Repository Path**: [`integration/data-pipeline-ai-generated/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated)
-
----
-
-## Getting Started
-
-### Prerequisites
-
-!!! info "Requirements"
-    1. IBM watsonx.data environment
-    2. IBM Cloud Object Storage (COS) credentials
-    3. Source system credentials (database, API keys, etc.)
-    4. Python 3.12+ installed locally
-    5. git installed locally
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ibm-self-serve-assets/building-blocks.git
-   cd building-blocks/data/integration/data-pipeline-ai-generated/
-   ```
-
-2. Choose your ingestion type and navigate to the appropriate directory:
-   - For unstructured data: `cd assets/unstructured-data/`
-   - For structured data: `cd assets/structured-data/`
-
-3. Follow the specific README instructions in each directory for setup and configuration.
 
 ---
 
 ## Use Cases
 
 - **Data Lake Population**: Ingest diverse data sources into watsonx.data
-- **Real-time Data Pipelines**: Stream data from operational systems
-- **Document Processing**: Extract and index document content
+- **Real-time Data Pipelines**: Stream data from operational systems via CDC
+- **Document Processing**: Extract and index document content with Docling
 - **Database Migration**: Move data from legacy systems to watsonx.data
 - **API Data Integration**: Pull data from external APIs and services
-- **Log Analytics**: Ingest and analyze application and system logs
-
----
-
-## Architecture Patterns
-
-### Batch Ingestion Pattern
-```
-Source System → Staging (COS) → Transformation → watsonx.data
-```
-
-### Streaming Ingestion Pattern
-```
-Source System → CDC → Real-time Processing → watsonx.data
-```
-
-### Hybrid Pattern
-```
-Source System → Batch/Stream Router → Processing → watsonx.data
-```
 
 ---
 
@@ -175,19 +194,12 @@ Source System → Batch/Stream Router → Processing → watsonx.data
 
 ---
 
-## Performance Considerations
-
-- **Batch Size**: Optimize batch sizes for your data volume
-- **Parallelization**: Use multiple workers for concurrent ingestion
-- **Network Bandwidth**: Consider network capacity for large data transfers
-- **Resource Allocation**: Allocate sufficient compute and memory resources
-- **Incremental Loading**: Use CDC for efficient incremental updates
-
----
-
 ## Resources
 
 - [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated)
+- [IBM DataStage Documentation](https://www.ibm.com/docs/en/datastage)
+- [IBM Docling](https://github.com/DS4SD/docling)
+- [IBM watsonx.data Documentation](https://cloud.ibm.com/docs/watsonxdata)
 
 ---
 

@@ -1,6 +1,6 @@
 # Vector Search Building Block
 
-The Vector Search building block provides a modular framework for building GenAI pipelines that combine document parsing and extraction with vector databases for semantic search capabilities.
+Build high-performance **hybrid search** solutions — combining **semantic vector search** with **BM25 keyword search** — using **IBM watsonx.data OpenSearch** and **IBM watsonx.ai** embeddings. Ingest documents from **IBM Cloud Object Storage**, parse them with IBM Docling, generate dense embeddings, and run hybrid search queries that outperform pure vector-only search.
 
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
@@ -11,242 +11,125 @@ The Vector Search building block provides a modular framework for building GenAI
 
 ## Overview
 
-This building block offers an ingestion API that simplifies the process of chunking, embedding, and storing documents in vector databases. It's designed to save significant development and testing time by providing ready-to-use pipelines with extensible customization options.
+The Vector Search building block provides standalone ingestion and hybrid search services for GenAI pipelines. Each integration ships a complete FastAPI asset, a Bob Mode, and a Bob Skill — ready to deploy on IBM Cloud, Red Hat OpenShift, or locally.
 
-![Vector Search architecture](https://github.com/user-attachments/assets/b259ff95-163e-427c-93f3-15a99462f777)
-
----
-
-## IBM Products Used
-
-This building block leverages the following IBM products and services:
-
-- **[watsonx.ai](https://www.ibm.com/products/watsonx-ai)**: Foundation models and embedding services for document vectorization
-- **[watsonx.data](https://www.ibm.com/products/watsonx-data)**: Data lakehouse platform with integrated vector database support
-- **[IBM Cloud Object Storage (COS)](https://www.ibm.com/cloud/object-storage)**: Scalable object storage for document repositories
-- **[Milvus](https://milvus.io/)**: Open-source vector database for semantic search (integrated with watsonx.data)
+> **Recommendation**: Use **hybrid search** (vector + BM25) rather than pure vector-only search. Combining dense semantic search with BM25 keyword matching consistently produces superior retrieval accuracy for RAG applications.
 
 ---
 
-## Features
+## When to Use
 
-- **Ingestion Pipeline**: Chunking, merging, and ingestion into vector databases
-- **Embedding Options**: Dense, hybrid, or dual embeddings with selectable models
-- **Document Processing**: Docling-based parsing with support for HTML, JSON, PDF, Markdown
-- **Flexible Chunking**: Multiple chunking strategies (Docling hybrid, Markdown text splitter, recursive)
-- **REST API**: Easy-to-use API with authentication
+| Scenario | Building Block |
+|---|---|
+| Build a standalone search service for documents stored in IBM COS | [OpenSearch](opensearch.md) |
+| Best retrieval accuracy with hybrid search (vector + BM25) | [OpenSearch](opensearch.md) — recommended |
+| Power the retrieval layer for a RAG pipeline | [OpenSearch](opensearch.md) |
+| Need IBM HCD (Astra DB) serverless vector collections | [DataStax Astra DB](datastax-astra-db.md) |
 
 ---
 
-## Supported Vector Databases
-
-The building block provides integrations with multiple vector database platforms, each optimized for different use cases and deployment scenarios.
+## Supported Integrations
 
 !!! info "Available Integrations"
-    - **[Milvus](milvus.md)**: High-performance vector database optimized for billion-scale vector search ✅ **Available Now**
-    - **[OpenSearch](opensearch.md)**: Enterprise search with hybrid vector and keyword search capabilities 🔄 **Planned**
-    - **[DataStax Astra DB](datastax-astra-db.md)**: Cloud-native vector database with global distribution 🔄 **Planned**
+    - **[OpenSearch](opensearch.md)** — IBM watsonx.data managed OpenSearch with k-NN HNSW + BM25 hybrid search ✅ **Available Now**
+    - **[DataStax Astra DB](datastax-astra-db.md)** — IBM HCD serverless Cassandra-backed vector storage ✅ **Available Now**
 
 ---
 
-## Key Capabilities
+## OpenSearch (Recommended)
 
-### Document Loaders
+**Location**: [`opensearch/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/opensearch)
+**IBM Products**: IBM watsonx.data (OpenSearch), IBM watsonx.ai, IBM COS
 
-- HTML documents
-- JSON files
-- PDF documents
-- Markdown files
-- Custom loaders
+Hybrid search engine on IBM watsonx.data managed OpenSearch — combines k-NN vector search with BM25 keyword search. Uses HNSW indexes via the k-NN plugin. This is the **recommended backend** for all new hybrid search and RAG projects.
 
-### Embedding Models
+**Key Features:**
+- OpenSearch data ingestion FastAPI service
+- Hybrid search: dense k-NN vector search + BM25 keyword search with score fusion
+- IBM watsonx.ai embedding integration (`ibm/slate-125m-english-rtrvr`, dim=768)
+- Bob Mode: `opensearch-builder.zip`
+- Bob Skill: `opensearch-vector-search.zip`
 
-- **Dense embeddings**: Traditional vector representations
-- **Hybrid embeddings**: Combination of dense and sparse vectors
-- **Dual embeddings**: Separate embeddings for different purposes
-- Support for HuggingFace, watsonx.ai, and IBM models
-
-### Document Processing
-
-- Docling/Markdown processing
-- Picture annotation
-- Table cleanup
-- Custom processing pipelines
-
-### Chunking Strategies
-
-- **Docling hybrid chunker**: Intelligent chunking based on document structure
-- **Markdown text splitter**: Preserves markdown formatting
-- **Recursive text splitter**: Hierarchical text splitting
+[View OpenSearch Details →](opensearch.md)
 
 ---
 
-## Deployment Options
+## DataStax Astra DB
 
-The Vector Search API can be deployed:
+**Location**: [`datastax-astradb/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/datastax-astradb)
+**IBM Products**: IBM HCD (DataStax Astra DB), IBM watsonx.ai, IBM COS
 
-- **Locally**: For development and testing
-- **IBM Code Engine**: Serverless container platform
-- **Red Hat OpenShift**: Enterprise Kubernetes platform
-- **Docker**: Containerized deployment
+Vector search using **DataStax Astra DB** — part of the IBM Cloud HCD (Hyper-Converged Database) portfolio. Ingest documents from IBM COS, generate dense embeddings with IBM watsonx.ai, and perform ANN cosine similarity search.
 
----
+**Key Features:**
+- Astra DB vector ingestion FastAPI service
+- ANN cosine similarity search via `astrapy` Data API
+- Globally distributed, serverless Cassandra-backed storage
+- Bob Mode: `astradb-vector-builder.zip`
+- Bob Skill: `astradb-vector-setup.zip`
 
-## Getting Started
-
-### Prerequisites
-
-!!! info "Requirements"
-    1. watsonx.data environment with Milvus vector database
-    2. Python 3.12 installed locally
-    3. git installed locally
-    4. IBM COS credentials
-    5. Vector database credentials
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ibm-self-serve-assets/building-blocks.git
-   cd building-blocks/data/retrieval/vector-search/
-   ```
-
-2. Create a Python virtual environment:
-   ```bash
-   python3 -m venv virtual-env
-   source virtual-env/bin/activate
-   pip3 install -r requirements.txt
-   ```
-
-3. Configure environment variables:
-   ```bash
-   cp env .env
-   ```
-
-4. Update `.env` with your credentials:
-   - **Vector DB credentials**: Host, port, username, password
-   - **IBM COS credentials**: API key, endpoint, service instance ID
-   - **REST_API_KEY**: Set a unique value for API authentication
-
-### Starting the Application
-
-Start the application locally:
-```bash
-python3 main.py
-```
-
-Or using Uvicorn:
-```bash
-uvicorn app.main:app --host 127.0.0.1 --port 4050 --reload
-```
-
-Access Swagger UI at: `http://127.0.0.1:4050/docs`
+[View DataStax Astra DB Details →](datastax-astra-db.md)
 
 ---
 
-## API Usage
+## Search Strategy Comparison
 
-### Ingestion Endpoint
+| Approach | How It Works | Results |
+|---|---|---|
+| **Hybrid Search** (recommended) | Dense vector + BM25 keyword with score fusion | ✅ Best accuracy — catches both semantic and exact matches |
+| Vector-only search | Dense vector similarity (cosine / ANN) | ⚠️ Misses keyword-specific queries |
+| Keyword-only (BM25) | Term frequency / inverse document frequency | ⚠️ Misses paraphrase and semantic matches |
 
-**Endpoint**: `POST /ingest-files`
+---
 
-**Request Body:**
-```json
-{
-    "bucket_name": "<cos-bucket>",
-    "collection_name": "<collection-name>",
-    "chunk_type": "DOCLING_DOCS"
-}
-```
+## OpenSearch vs Astra DB
 
-**Parameters:**
+| | OpenSearch | Astra DB |
+|---|---|---|
+| **Search type** | Hybrid (vector + BM25) | Vector ANN (cosine) |
+| **IBM product** | IBM watsonx.data | IBM HCD |
+| **Architecture** | Managed cluster | Serverless |
+| **Best for** | RAG + hybrid search | Serverless global vector storage |
+| **Recommendation** | ✅ New projects | When IBM HCD is required |
 
-- `bucket_name`: Name of the S3/COS bucket containing documents
-- `collection_name`: Target collection to create or upsert into
-- `chunk_type`: Chunking strategy (DOCLING_DOCS, MARKDOWN, RECURSIVE)
+---
 
-**Headers:**
-```
-REST_API_KEY: <your-secret>
-Content-Type: application/json
-```
+## Embedding Models
 
-**Example using Python:**
-```python
-import json, requests
+| Model ID | Dimension | Language | Use Case |
+|---|---|---|---|
+| `ibm/slate-125m-english-rtrvr` | 768 | English | Recommended for English RAG |
+| `ibm/slate-30m-english-rtrvr` | 384 | English | Lightweight English RAG |
+| `intfloat/multilingual-e5-large` | 1024 | Multi | Multilingual RAG |
 
-url = "http://127.0.0.1:4050/ingest-files"
+---
 
-payload = json.dumps({
-    "bucket_name": "<cos-bucket>",
-    "collection_name": "<collection-name>",
-    "chunk_type": "DOCLING_DOCS"
-})
+## Prerequisites
 
-headers = {
-    "REST_API_KEY": "<your-secret>",
-    "Content-Type": "application/json"
-}
-
-response = requests.post(url, headers=headers, data=payload)
-print(response.text)
-```
+- **IBM Cloud API key** — [create at IBM Cloud IAM](https://cloud.ibm.com/iam/apikeys)
+- **Python 3.10+**
+- **IBM watsonx.ai** project — note Project ID and instance URL
+- **IBM Cloud Object Storage** bucket with source documents
+- **IBM watsonx.data OpenSearch** instance (for OpenSearch) or **Astra DB** instance (for DataStax)
 
 ---
 
 ## Use Cases
 
-- **Semantic Search**: Find documents based on meaning, not just keywords
-- **RAG Pipelines**: Retrieval-augmented generation for LLMs
-- **Knowledge Bases**: Build searchable knowledge repositories
-- **Document Discovery**: Find similar documents across large collections
-- **Question Answering**: Retrieve relevant context for Q&A systems
-
----
-
-## Customization
-
-The API supports extensive customization:
-
-- **Collection Schema**: Configurable via JSON templates
-- **Embedding Models**: Choose from multiple providers and models
-- **Document Processing**: Custom processing pipelines
-- **Chunking Strategies**: Adjust chunk size and overlap
-- **Metadata Extraction**: Custom metadata fields
-
----
-
-## Coming Soon
-
-!!! note "Upcoming Features"
-    - .png and .jpg VLM Support
-    - Additional docling processing functions (image annotation, table exports)
-    - Enhanced error logging with structured logs
-    - Performance optimization for large-scale ingestion
-    - Additional vector database integrations
-
----
-
-## Performance Considerations
-
-!!! tip "Optimization Guidelines"
-    - **Batch Processing**: Process multiple documents in parallel
-    - **Chunk Size**: Balance between context and retrieval precision
-    - **Embedding Dimensions**: Higher dimensions = more accuracy but slower
-    - **Index Configuration**: Optimize for your query patterns
+- **Semantic Search** — Find documents based on meaning, not just keywords
+- **RAG Pipelines** — Retrieval-augmented generation for LLMs
+- **Knowledge Bases** — Build searchable knowledge repositories
+- **Document Discovery** — Find similar documents across large collections
+- **Question Answering** — Retrieve relevant context for Q&A systems
 
 ---
 
 ## Resources
 
 - [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search)
-- [Milvus Documentation](milvus.md)
-
----
-
-## Team
-
-**Created and Architected By**: Anand Das, Anindya Neogi, Joseph Kim, Shivam Solanki
+- [IBM watsonx.data Documentation](https://cloud.ibm.com/docs/watsonxdata)
+- [IBM watsonx.ai Embedding Models](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models-embed.html)
+- [OpenSearch k-NN Plugin](https://opensearch.org/docs/latest/search-plugins/knn/)
 
 ---
 

@@ -59,7 +59,7 @@ The following use cases are available as part of the Building Blocks collateral.
 
 ### **Maximo Automation Script Modernization**
 
-[View Bob Skill](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/maximo-code-optimization)
+[View Bob Skill](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills) | [View Asset](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset)
 
 Developed a Bob-powered analysis and modernization workflow that ingests existing Maximo automation scripts, performs static analysis, identifies optimization opportunities, reviews code quality, and recommends modernization improvements aligned with current best practices and maintainability standards.
 
@@ -69,6 +69,42 @@ Developed a Bob-powered analysis and modernization workflow that ingests existin
 - Static code analysis to identify technical debt, anti-patterns, and optimization opportunities
 - AI-generated modernization recommendations aligned to current Maximo best practices
 - Code quality review with actionable remediation guidance
+
+---
+
+### **Maximo Java Conversion**
+
+[View Bob Skill](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills) | [View Asset](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset)
+
+Developed a Bob-powered conversion workflow that transforms legacy Maximo Java classes into modern automation scripts across multiple target languages — preserving all business logic while enforcing current Maximo security, performance, and error-handling best practices.
+
+**Key capabilities:**
+
+- Conversion of legacy Maximo Java classes to automation scripts in Python (Jython), JavaScript, Nashorn, ECMAScript, and Maximo Business Rules (MBR)
+- Business logic preservation — retains validation rules, field updates, status transitions, and MboSet patterns
+- Automated test script generation alongside every converted script
+- Comprehensive conversion reports with mandatory rule validation and before/after comparisons
+- Batch conversion support — convert multiple Java files in a single operation
+- Security best practices enforced: SQL injection prevention, input validation, MXLoggerFactory error handling
+
+**Supported Target Languages:**
+
+| Language | Engine | Version |
+|---|---|---|
+| Python (Jython) | Jython | 2.7.4 |
+| JavaScript | Nashorn | 15.6 |
+| Nashorn | Nashorn | 15.6 |
+| ECMAScript | Nashorn | 15.6 |
+| Maximo Business Rules (MBR) | MBR | 1.0 |
+
+**Quick Start with IBM Bob:**
+```
+Use skill maximo-java-conversion to convert WorkOrderValidator.java to Jython
+
+Use skill maximo-java-conversion to convert all Java files in java-input/ to JavaScript
+```
+
+Place your `.java` files in `java-input/` before asking Bob. Converted scripts and conversion reports are generated automatically.
 
 ---
 

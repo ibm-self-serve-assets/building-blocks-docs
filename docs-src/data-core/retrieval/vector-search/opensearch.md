@@ -1,257 +1,188 @@
-# OpenSearch Vector Search
+# OpenSearch Hybrid Search
 
-Enterprise-grade search and analytics engine with vector search capabilities for AI-powered applications.
+Build high-performance **hybrid search** applications using **IBM watsonx.data OpenSearch** with **IBM watsonx.ai** embeddings. Ingest documents from **IBM Cloud Object Storage**, generate dense embeddings, store in k-NN vector indexes, and perform hybrid (vector + BM25) search for best retrieval accuracy.
+
+!!! info "GitHub Repository"
+    The complete source code and examples are available in the GitHub repository:
+    
+    **[Building Blocks - Vector Search / OpenSearch](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/opensearch)**
+
+---
 
 ## Overview
 
-OpenSearch is an open-source, distributed search and analytics suite derived from Elasticsearch. It provides powerful vector search capabilities through its k-NN (k-Nearest Neighbors) plugin, enabling semantic search and similarity matching for AI/ML applications.
+This building block provides a standalone FastAPI ingestion and search service backed by **IBM watsonx.data managed OpenSearch**. It uses the OpenSearch k-NN plugin with HNSW indexes for vector search, combined with BM25 keyword search — delivering hybrid retrieval that outperforms pure vector-only approaches.
 
-!!! note "Implementation Status"
-    OpenSearch integration is planned for future releases. This page provides information about OpenSearch capabilities and use cases to help developers understand its potential in the building blocks framework.
-
----
-
-## Why OpenSearch for Vector Search?
-
-OpenSearch combines traditional full-text search with modern vector search capabilities, making it ideal for hybrid search scenarios where you need both keyword matching and semantic similarity.
-
-### Key Advantages
-
-- **Hybrid Search**: Combine keyword search with vector similarity in a single query
-- **Scalability**: Distributed architecture handles billions of vectors
-- **Real-time Indexing**: Near real-time updates for dynamic datasets
-- **Rich Ecosystem**: Extensive tooling, dashboards, and integrations
-- **Enterprise Features**: Security, monitoring, and management capabilities
+> **Hybrid Search vs Vector-only**: Always use hybrid search (k-NN + BM25) in production — it consistently outperforms pure vector search by catching both semantic paraphrase matches and exact keyword matches.
 
 ---
 
-## Core Features
+## When to Use
 
-### Vector Search Capabilities
+| Scenario | Notes |
+|---|---|
+| Need a standalone ingestion + search service for documents stored in IBM COS | Start with `opensearch-data-ingestion` FastAPI asset |
+| Want the best retrieval accuracy for a RAG pipeline | Use **hybrid search** (k-NN + BM25) — outperforms vector-only |
+| Need to integrate with an existing RAG accelerator | Index documents here, point `rag-retrieval-fastapi-server` at the same index |
+| Need to tune HNSW index parameters (`ef_construction`, `m`) | Use the `opensearch-vector-search` Bob Skill |
 
-**k-NN Search**
+---
 
-- Approximate nearest neighbor search using HNSW (Hierarchical Navigable Small World) algorithm
-- Exact k-NN search for smaller datasets
-- Configurable distance metrics (Euclidean, Cosine, Inner Product)
-- Support for multiple vector fields per document
+## Asset — OpenSearch Data Ingestion Service
 
-**Hybrid Search**
+**Location**: [`assets/opensearch-data-ingestion/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/opensearch/assets/opensearch-data-ingestion)
+**IBM Products**: IBM watsonx.data (OpenSearch), IBM watsonx.ai, IBM COS, IBM Cloud IAM
 
-- Combine vector similarity with BM25 text scoring
-- Weighted scoring between semantic and keyword matches
-- Filter vectors based on metadata attributes
-- Boost results based on business logic
+FastAPI service that downloads documents from IBM COS, generates IBM watsonx.ai embeddings, creates k-NN HNSW indexes in IBM watsonx.data OpenSearch, and bulk-inserts document vectors.
 
-**Index Management**
+**Quick Start:**
+```bash
+cd assets/opensearch-data-ingestion
+cp .env.example .env
+# Edit .env:
+#   IBM_API_KEY              — your IBM Cloud API key
+#   WATSONX_PROJECT_ID       — your watsonx.ai project ID
+#   OPENSEARCH_HOST          — OpenSearch host (from watsonx.data console)
+#   OPENSEARCH_USERNAME      — OpenSearch username
+#   OPENSEARCH_PASSWORD      — OpenSearch password
+#   COS_ENDPOINT             — IBM COS endpoint
+#   COS_BUCKET_NAME          — source bucket name
+pip install -r requirements.txt
+python main.py
+# Swagger UI → http://localhost:8080/docs
+```
 
-- Automatic index optimization
-- Index lifecycle management
-- Snapshot and restore capabilities
-- Cross-cluster replication
+**Ingest documents from COS:**
+```bash
+curl -X POST http://localhost:8080/ingest \
+  -H "REST_API_KEY: your_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "bucket_name": "my-docs-bucket",
+    "directory": "documents/",
+    "index_name": "product_knowledge_base",
+    "embedding_model_id": "ibm/slate-125m-english-rtrvr"
+  }'
+```
 
-### Performance Optimization
+**Hybrid search:**
+```bash
+curl -X POST http://localhost:8080/search \
+  -H "REST_API_KEY: your_key" \
+  -H "Content-Type: application/json" \
+  -d '{"query": "What is IBM watsonx?", "k": 5, "search_type": "hybrid"}'
+```
 
-- **HNSW Algorithm**: Fast approximate nearest neighbor search
-- **Index Segmentation**: Distribute vectors across shards
-- **Caching**: Query result caching for frequently accessed vectors
-- **Compression**: Vector quantization to reduce storage
+---
+
+## Bob Mode
+
+Give IBM Bob an OpenSearch hybrid search specialist persona.
+
+**Install (Windows):**
+```powershell
+Copy-Item bob-modes/base-modes/opensearch-builder.zip "$env:APPDATA\IBM Bob\User\globalStorage\ibm.bob-code\modes\"
+```
+**Install (Linux / macOS):**
+```bash
+cp bob-modes/base-modes/opensearch-builder.zip ~/.config/IBM\ Bob/User/globalStorage/ibm.bob-code/modes/
+```
+
+Restart IBM Bob — **OpenSearch Builder** mode appears in the mode selector.
+
+---
+
+## Bob Skill
+
+| Skill | Zip | Capabilities |
+|---|---|---|
+| `opensearch-vector-search` | [`opensearch-vector-search.zip`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/opensearch/bob-skills/opensearch-vector-search.zip) | IBM watsonx.data OpenSearch k-NN index design, HNSW parameter tuning, hybrid search (vector + BM25), watsonx.ai embedding integration |
+
+```bash
+# From the root of your Bob workspace project
+unzip bob-skills/opensearch-vector-search.zip
+```
+
+Open IBM Bob → Skills panel → enable `opensearch-vector-search`.
+
+---
+
+## k-NN Index Configuration
+
+```json
+{
+  "settings": {"index": {"knn": true}},
+  "mappings": {
+    "properties": {
+      "vector": {
+        "type": "knn_vector",
+        "dimension": 768,
+        "method": {
+          "name": "hnsw",
+          "space_type": "l2",
+          "engine": "nmslib",
+          "parameters": {"ef_construction": 128, "m": 24}
+        }
+      }
+    }
+  }
+}
+```
+
+---
+
+## Embedding Models
+
+| Model ID | Dimension | Language | Use Case |
+|---|---|---|---|
+| `ibm/slate-125m-english-rtrvr` | 768 | English | Recommended for English RAG |
+| `ibm/slate-30m-english-rtrvr` | 384 | English | Lightweight English RAG |
+| `intfloat/multilingual-e5-large` | 1024 | Multi | Multilingual RAG |
+
+---
+
+## Architecture
+
+```mermaid
+graph LR
+    A[IBM Cloud Object Storage] --> B[OpenSearch Ingestion Service<br/>FastAPI]
+    B --> C[IBM Docling<br/>parse + chunk]
+    C --> D[IBM watsonx.ai<br/>embed_documents]
+    D --> E[IBM watsonx.data OpenSearch<br/>k-NN HNSW index]
+    E --> F[Hybrid Search<br/>k-NN + BM25]
+```
+
+---
+
+## IBM Products Used
+
+- **IBM watsonx.data (OpenSearch)** — Managed OpenSearch for k-NN HNSW + BM25 hybrid search
+- **IBM watsonx.ai** — Embedding generation (`ibm/slate-125m-english-rtrvr`)
+- **IBM Cloud Object Storage (COS)** — Document source storage
+- **IBM Cloud IAM** — API key authentication
 
 ---
 
 ## Use Cases
 
-### Enterprise Search
-
-**Semantic Document Search**
-
-- Find documents based on meaning, not just keywords
-- Improve search relevance with contextual understanding
-- Support multi-language search with cross-lingual embeddings
-
-**Knowledge Management**
-
-- Build intelligent knowledge bases
-- Enable natural language queries over enterprise content
-- Discover related documents and insights
-
-### E-Commerce & Retail
-
-**Product Discovery**
-
-- Visual search using image embeddings
-- "Find similar products" recommendations
-- Personalized product suggestions based on user behavior
-
-**Customer Support**
-
-- Semantic FAQ search
-- Automated ticket routing based on content similarity
-- Knowledge base article recommendations
-
-### Media & Content
-
-**Content Recommendation**
-
-- Suggest similar articles, videos, or podcasts
-- Content discovery based on user preferences
-- Duplicate content detection
-
-**Image & Video Search**
-
-- Search media libraries by visual similarity
-- Find similar scenes or objects across content
-- Automated content tagging and categorization
-
-### Healthcare & Life Sciences
-
-**Medical Literature Search**
-
-- Semantic search across research papers
-- Find similar patient cases
-- Drug discovery through molecular similarity
-
-**Clinical Decision Support**
-
-- Match patient symptoms to similar cases
-- Recommend treatment protocols
-- Identify relevant clinical trials
-
----
-
----
-
-## Integration with IBM Products
-
-### IBM watsonx.ai
-
-- Generate embeddings using IBM foundation models
-- Leverage watsonx.ai for document understanding
-- Integrate with RAG pipelines for question answering
-
-### IBM Cloud Object Storage
-
-- Store source documents in COS
-- Process and index documents from COS buckets
-- Archive historical data while maintaining search access
-
-### IBM watsonx.data
-
-- Federated queries across OpenSearch and data lakehouse
-- Unified data governance and access control
-- Seamless data movement between systems
-
----
-
-## Comparison with Other Vector Databases
-
-| Feature | OpenSearch | Milvus | Pinecone |
-|---------|-----------|--------|----------|
-| **Hybrid Search** | ✅ Native | ⚠️ Limited | ❌ No |
-| **Full-text Search** | ✅ Excellent | ❌ No | ❌ No |
-| **Scalability** | ✅ Billions | ✅ Billions | ✅ Billions |
-| **Open Source** | ✅ Yes | ✅ Yes | ❌ No |
-| **Managed Service** | ✅ AWS | ⚠️ Limited | ✅ Yes |
-| **Analytics** | ✅ Built-in | ⚠️ Limited | ❌ No |
-| **Visualization** | ✅ Dashboards | ❌ No | ⚠️ Limited |
-
----
-
-## Best Practices
-
-### Index Design
-
-!!! tip "Optimization Guidelines"
-    - **Dimension Selection**: Balance between accuracy and performance (768-1536 dimensions typical)
-    - **Shard Configuration**: Distribute vectors across multiple shards for scalability
-    - **Replica Strategy**: Use replicas for high availability and read performance
-    - **Refresh Interval**: Adjust based on real-time requirements vs. indexing throughput
-
-### Query Optimization
-
-- **Filter First**: Apply metadata filters before vector search
-- **Limit Results**: Request only needed results (k value)
-- **Use Approximate Search**: HNSW for large-scale deployments
-- **Cache Frequently**: Cache common queries and embeddings
-
-### Monitoring & Maintenance
-
-- **Index Health**: Monitor shard status and allocation
-- **Query Performance**: Track search latency and throughput
-- **Resource Usage**: Monitor CPU, memory, and disk utilization
-- **Index Optimization**: Regular force merge for read-heavy workloads
-
----
-
-## Security & Governance
-
-### Access Control
-
-- Role-based access control (RBAC)
-- Field-level security for sensitive data
-- Document-level security based on user permissions
-- Audit logging for compliance
-
-### Data Protection
-
-- Encryption at rest and in transit
-- Secure inter-node communication
-- Integration with enterprise identity providers
-- Data masking for PII protection
-
----
-
-## Performance Characteristics
-
-### Scalability
-
-- **Horizontal Scaling**: Add nodes to increase capacity
-- **Vertical Scaling**: Increase resources per node
-- **Index Sharding**: Distribute data across cluster
-- **Query Distribution**: Parallel query execution
-
-### Latency
-
-- **Approximate k-NN**: Sub-100ms for millions of vectors
-- **Exact k-NN**: Suitable for smaller datasets (<100K vectors)
-- **Hybrid Queries**: Slightly higher latency than pure vector search
-- **Caching**: Significant improvement for repeated queries
-
----
-
-## Future Integration Plans
-
-!!! note "Roadmap"
-    The OpenSearch integration for the building blocks framework will include:
-    
-    - **Ingestion API**: FastAPI service for document processing and indexing
-    - **Hybrid Search**: Combined keyword and semantic search capabilities
-    - **IBM watsonx Integration**: Native embedding generation using watsonx.ai
-    - **Monitoring Dashboard**: Real-time metrics and performance tracking
-    - **Bob Mode Support**: AI-assisted OpenSearch configuration and optimization
+- **Semantic Search** — Find documents based on meaning, not just keywords
+- **RAG Pipelines** — Retrieval-augmented generation for LLMs
+- **Hybrid Search** — Combine semantic understanding with keyword precision
+- **Knowledge Bases** — Build searchable knowledge repositories
+- **Question Answering** — Retrieve relevant context for Q&A systems
 
 ---
 
 ## Resources
 
-### Documentation
-
-- [OpenSearch Official Documentation](https://opensearch.org/docs/latest/)
-- [k-NN Plugin Guide](https://opensearch.org/docs/latest/search-plugins/knn/index/)
-- [OpenSearch on AWS](https://aws.amazon.com/opensearch-service/)
-
-### Learning Resources
-
-- [OpenSearch Vector Search Tutorial](https://opensearch.org/docs/latest/search-plugins/knn/knn-index/)
-- [Hybrid Search Best Practices](https://opensearch.org/docs/latest/search-plugins/knn/approximate-knn/)
-- [Performance Tuning Guide](https://opensearch.org/docs/latest/tuning-your-cluster/)
+- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/opensearch)
+- [IBM watsonx.data Documentation](https://cloud.ibm.com/docs/watsonxdata)
+- [IBM watsonx.ai Embedding Models](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models-embed.html)
+- [OpenSearch k-NN Plugin](https://opensearch.org/docs/latest/search-plugins/knn/)
+- [IBM Cloud IAM API Keys](https://cloud.ibm.com/iam/apikeys)
 
 ---
 
 ## Support
 
-For questions about OpenSearch integration in the building blocks framework:
-
-- [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search)
-- [OpenSearch Community](https://opensearch.org/community.html)
-- [OpenSearch Forum](https://forum.opensearch.org/)
+For issues or questions, please refer to the [GitHub repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/opensearch) or open an issue.
