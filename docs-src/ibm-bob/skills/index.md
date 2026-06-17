@@ -14,8 +14,8 @@ The Skills have been packed into a single .zip that you can easily download and 
       <img src="images/download-raw-file.png" width="200">
 
 2. Copy all skill folders into either your global or project-level `.bob` folder:
-   - global = `~/.bob/skills`
-   - project = `<project>/.bob/skills`
+  - global = `~/.bob/skills`
+  - project = `<project>/.bob/skills`
 
 ## Skill Taxonomy
 
