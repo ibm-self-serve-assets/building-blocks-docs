@@ -1,7 +1,5 @@
 # IBM Planning Analytics Budget and Forecasting
-
 ---
-
 ## Overview
 
 IBM Planning Analytics Budget and Forecasting is a comprehensive Bob skill and mode package that transforms Planning Analytics into an accessible business intelligence platform for financial planning and analysis through natural language queries.
