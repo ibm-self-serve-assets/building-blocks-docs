@@ -94,7 +94,7 @@ The solution combines Bob AI assistant capabilities with Planning Analytics' rob
 
 ### High-Level Architecture
 
-<img width="750" height="1000" alt="image" src="https://github.com/user-attachments/assets/eda21efc-f288-42a6-b3dd-4f429020ed56" />
+<img width="600" height="1000" alt="image" src="https://github.com/user-attachments/assets/eda21efc-f288-42a6-b3dd-4f429020ed56" />
 
 
 ### System Components
