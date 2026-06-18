@@ -29,48 +29,51 @@ The solution combines Bob AI assistant capabilities with Planning Analytics' rob
 
 <details>
 <summary><strong>🎯 Natural Language Query Translation</strong></summary>
-<br>
 
-**Intelligent Query Understanding**: Converts business questions into optimized TM1 queries automatically
+<p><strong>Intelligent Query Understanding</strong>: Converts business questions into optimized TM1 queries automatically</p>
 
-- **Plain English Interface**: Ask questions like "Show Q1 2025 compensation budget vs actual by department" without learning MDX syntax
-- **Context-Aware Translation**: Understands business terminology and maps it to Planning Analytics dimensions and measures
-- **Query Optimization**: Automatically generates efficient MDX queries with proper filtering and aggregation
-- **Multi-Cube Support**: Works across multiple Planning Analytics cubes with automatic cube discovery
+<ul>
+<li><strong>Plain English Interface</strong>: Ask questions like "Show Q1 2025 compensation budget vs actual by department" without learning MDX syntax</li>
+<li><strong>Context-Aware Translation</strong>: Understands business terminology and maps it to Planning Analytics dimensions and measures</li>
+<li><strong>Query Optimization</strong>: Automatically generates efficient MDX queries with proper filtering and aggregation</li>
+<li><strong>Multi-Cube Support</strong>: Works across multiple Planning Analytics cubes with automatic cube discovery</li>
+</ul>
 
-**Use Case**: Financial analysts can explore planning data without technical training, reducing dependency on IT teams and accelerating analysis cycles.
+<p><strong>Use Case</strong>: Financial analysts can explore planning data without technical training, reducing dependency on IT teams and accelerating analysis cycles.</p>
 
 </details>
 
 <details>
 <summary><strong>⚡ Financial Analysis Capabilities</strong></summary>
-<br>
 
-**Comprehensive Variance Analysis**: Automated calculation and explanation of financial variances
+<p><strong>Comprehensive Variance Analysis</strong>: Automated calculation and explanation of financial variances</p>
 
-- **Budget vs Actual Analysis**: Compare planned budgets against actual results with automatic variance calculation ($ and %)
-- **Forecast Accuracy**: Measure forecast performance with accuracy metrics and bias analysis
-- **Period-over-Period Comparison**: Year-over-Year, Quarter-over-Quarter, Month-over-Month trend analysis
-- **Material Variance Identification**: Automatically flag variances exceeding thresholds (>10% or >$100K)
-- **Hierarchical Rollups**: Aggregate variances across organizational hierarchies (department → region → total)
+<ul>
+<li><strong>Budget vs Actual Analysis</strong>: Compare planned budgets against actual results with automatic variance calculation ($ and %)</li>
+<li><strong>Forecast Accuracy</strong>: Measure forecast performance with accuracy metrics and bias analysis</li>
+<li><strong>Period-over-Period Comparison</strong>: Year-over-Year, Quarter-over-Quarter, Month-over-Month trend analysis</li>
+<li><strong>Material Variance Identification</strong>: Automatically flag variances exceeding thresholds (>10% or >$100K)</li>
+<li><strong>Hierarchical Rollups</strong>: Aggregate variances across organizational hierarchies (department → region → total)</li>
+</ul>
 
-**Use Case**: Monthly financial close processes become faster with automated variance identification and explanation, enabling finance teams to focus on analysis rather than data gathering.
+<p><strong>Use Case</strong>: Monthly financial close processes become faster with automated variance identification and explanation, enabling finance teams to focus on analysis rather than data gathering.</p>
 
 </details>
 
 <details>
 <summary><strong>🔒 Advanced Analytics & Insights</strong></summary>
-<br>
 
-**AI-Powered Pattern Detection**: Identify trends, outliers, and key drivers automatically
+<p><strong>AI-Powered Pattern Detection</strong>: Identify trends, outliers, and key drivers automatically</p>
 
-- **Outlier Detection**: Statistical analysis to identify anomalous patterns requiring investigation
-- **Trend Analysis**: Time series visualization with growth rates, moving averages, and seasonal decomposition
-- **Key Driver Analysis**: Impact analysis showing what's driving changes in financial results
-- **Root Cause Suggestions**: AI-generated hypotheses for variance explanations
-- **Predictive Insights**: Pattern-based forecasting and early warning indicators
+<ul>
+<li><strong>Outlier Detection</strong>: Statistical analysis to identify anomalous patterns requiring investigation</li>
+<li><strong>Trend Analysis</strong>: Time series visualization with growth rates, moving averages, and seasonal decomposition</li>
+<li><strong>Key Driver Analysis</strong>: Impact analysis showing what's driving changes in financial results</li>
+<li><strong>Root Cause Suggestions</strong>: AI-generated hypotheses for variance explanations</li>
+<li><strong>Predictive Insights</strong>: Pattern-based forecasting and early warning indicators</li>
+</ul>
 
-**Use Case**: Executive teams receive proactive alerts about unusual patterns in financial data, enabling faster response to emerging issues or opportunities.
+<p><strong>Use Case</strong>: Executive teams receive proactive alerts about unusual patterns in financial data, enabling faster response to emerging issues or opportunities.</p>
 
 </details>
 
