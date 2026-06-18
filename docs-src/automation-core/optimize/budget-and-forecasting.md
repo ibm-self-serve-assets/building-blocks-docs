@@ -130,6 +130,7 @@ sequenceDiagram
 IBM Planning Analytics Budget and Forecasting is designed for financial analysts who need to perform variance analysis, trend identification, and financial reporting without technical expertise.
 
 **Common Tasks:**
+
 - Monthly budget vs actual variance analysis
 - Quarterly forecast accuracy assessment
 - Year-over-year performance comparison
@@ -137,6 +138,7 @@ IBM Planning Analytics Budget and Forecasting is designed for financial analysts
 - Executive summary preparation
 
 **Benefits:**
+
 - Eliminate manual data extraction and Excel manipulation
 - Reduce analysis time from hours to minutes
 - Focus on insights rather than data gathering
@@ -150,6 +152,7 @@ IBM Planning Analytics Budget and Forecasting is designed for financial analysts
 FP&A teams use IBM Planning Analytics Budget and Forecasting to streamline financial close processes, improve forecast accuracy, and deliver actionable insights to business leaders.
 
 **Common Tasks:**
+
 - Consolidated variance reporting across business units
 - Rolling forecast updates and accuracy tracking
 - Budget reforecasting and scenario analysis
@@ -157,6 +160,7 @@ FP&A teams use IBM Planning Analytics Budget and Forecasting to streamline finan
 - Cross-functional financial analysis
 
 **Benefits:**
+
 - Standardized analysis methodology across the organization
 - Faster financial close cycles
 - Improved forecast accuracy through pattern detection
@@ -170,12 +174,14 @@ FP&A teams use IBM Planning Analytics Budget and Forecasting to streamline finan
 Business executives leverage IBM Planning Analytics Budget and Forecasting for on-demand access to financial insights, enabling data-driven decision-making without waiting for analyst reports.
 
 **Common Tasks:**
+
 - Quick variance checks during business reviews
 - Performance trend monitoring
 - Key driver identification for strategic decisions
 - Executive dashboard consumption
 
 **Benefits:**
+
 - Self-service access to financial insights
 - Real-time understanding of business performance
 - Faster response to emerging issues or opportunities
