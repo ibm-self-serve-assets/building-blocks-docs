@@ -1,9 +1,6 @@
 # IBM Planning Analytics Budget and Forecasting
 
-> **Version**: 1.0.0 | **Last Updated**: 2026-06-18 | **Status**: Production Ready ✅
-
 ## Table of Contents
-
 - [Overview](#overview)
 - [Key Features](#key-features)
 - [Architecture](#architecture)
