@@ -29,6 +29,7 @@ The solution combines Bob AI assistant capabilities with Planning Analytics' rob
 
 <details>
 <summary><strong>🎯 Natural Language Query Translation</strong></summary>
+<br>
 
 **Intelligent Query Understanding**: Converts business questions into optimized TM1 queries automatically
 
@@ -43,6 +44,7 @@ The solution combines Bob AI assistant capabilities with Planning Analytics' rob
 
 <details>
 <summary><strong>⚡ Financial Analysis Capabilities</strong></summary>
+<br>
 
 **Comprehensive Variance Analysis**: Automated calculation and explanation of financial variances
 
@@ -58,6 +60,7 @@ The solution combines Bob AI assistant capabilities with Planning Analytics' rob
 
 <details>
 <summary><strong>🔒 Advanced Analytics & Insights</strong></summary>
+<br>
 
 **AI-Powered Pattern Detection**: Identify trends, outliers, and key drivers automatically
 
