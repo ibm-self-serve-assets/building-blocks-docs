@@ -1,17 +1,5 @@
 # IBM Planning Analytics Budget and Forecasting
 
-## Table of Contents
-- [Overview](#overview)
-- [Key Features](#key-features)
-- [Architecture](#architecture)
-- [Use Cases](#use-cases)
-- [Products & Services](#products--services)
-- [Core Concepts](#core-concepts)
-- [Download Skills](#download-skills)
-- [Download Custom Modes](#download-custom-modes)
-- [Assets](#assets)
-- [Call to Action](#call-to-action)
-
 ---
 
 ## Overview
