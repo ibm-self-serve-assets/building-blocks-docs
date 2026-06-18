@@ -103,7 +103,7 @@ nav:
           - Automated Resilience & Compliance: automation-core/optimize/automated-resilience.md
           - FinOps: automation-core/optimize/finops.md
           - Automated Resource Management: automation-core/optimize/automated-resource-management.md
-          
+          - Budget & Forecasting: docs-src/automation-core/optimize/budget-and-forecasting.md
       - Secure:
           - Overview: automation-core/secure/index.md
           - Non-human Identity: automation-core/secure/non-human-identity.md
