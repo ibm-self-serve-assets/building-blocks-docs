@@ -86,28 +86,7 @@ The solution addresses the complexity of managing dynamic, distributed physical 
 
 ### High-Level Architecture
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                    IBM Maximo Application Suite                   │
-│                                                                    │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────────┐  │
-│  │   Maximo    │  │   Maximo    │  │  Maximo Health /        │  │
-│  │   Manage    │  │   Monitor   │  │  Predict / Visual       │  │
-│  └─────────────┘  └─────────────┘  └─────────────────────────┘  │
-│                                                                    │
-│  ┌─────────────────────────────────────────────────────────────┐ │
-│  │              OpenShift Container Platform                    │ │
-│  └─────────────────────────────────────────────────────────────┘ │
-└──────────────────────────────────────────────────────────────────┘
-         │                    │                    │
-         ↓                    ↓                    ↓
-┌────────────────┐   ┌───────────────┐   ┌────────────────────┐
-│  Bob AI Layer  │   │  IoT / SCADA  │   │  Enterprise Systems │
-│  (Scripts,     │   │  (Sensors,    │   │  (ERP, GIS,         │
-│   Agents,      │   │   Real-time   │   │   CMMS, iPaaS)      │
-│   Knowledge)   │   │   Data)       │   │                     │
-└────────────────┘   └───────────────┘   └────────────────────┘
-```
+<img width="800" alt="Asset Management High-Level Architecture" src="../images/asset_management_image.png" />
 
 ### System Components
 
@@ -115,10 +94,16 @@ The solution addresses the complexity of managing dynamic, distributed physical 
 |-----------|---------|------------|-------------|
 | **Maximo Manage** | Core work order, asset, and inventory management | IBM MAS, OpenShift | Horizontal |
 | **Maximo Monitor** | IoT asset health monitoring and anomaly detection | IBM MAS, Watson IoT | Horizontal |
-| **Maximo Predict** | AI-driven failure prediction and reliability analytics | IBM MAS, Watson Studio | Vertical |
-| **Bob AI Layer** | Script modernization, agents, and knowledge retrieval | IBM Bob, Building Blocks | Horizontal |
-| **OpenShift Platform** | Container orchestration for MAS deployment | Red Hat OpenShift | Horizontal |
-| **Integration Layer** | ERP, SCADA, IoT, and enterprise system connectivity | IBM App Connect, iPaaS | Horizontal |
+| **Maximo Health / Predict / Visual** | AI-driven failure prediction, reliability analytics, and visual inspection | IBM MAS, Watson Studio | Vertical |
+| **OpenShift Container Platform** | Container orchestration and runtime for all MAS components | Red Hat OpenShift | Horizontal |
+| **Integration & API Layer** | Enterprise system connectivity and API management | IBM App Connect, iPaaS | Horizontal |
+| **Event Streaming** | Real-time event ingestion and processing across asset data streams | Confluent (Kafka) | Horizontal |
+| **Search & Analytics** | Full-text and semantic search across asset and operational data | OpenSearch | Horizontal |
+| **Object Storage** | Scalable storage for asset documents, images, and reports | MinIO / S3 Compatible | Vertical |
+| **Database** | Persistent relational data store for Maximo operational data | PostgreSQL / Db2 | Vertical |
+| **Bob AI Layer** | Script modernization, conversational agents, and knowledge retrieval | IBM Bob, Building Blocks | Horizontal |
+| **IoT / SCADA** | Real-time sensor data ingestion and edge device integration | Watson IoT / Edge | Horizontal |
+| **Enterprise Systems** | ERP, GIS, CMMS, and third-party system integration | SAP, Oracle, GIS, Others | Horizontal |
 
 ### Data Flow
 
