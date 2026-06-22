@@ -535,8 +535,7 @@ Explore our comprehensive video library to see Asset Management with IBM Maximo 
 
 | Video Title | Description | Duration | Link |
 |-------------|-------------|----------|------|
-| **Maximo Automation Script Modernization with Bob** | Complete walkthrough of AI-powered script analysis, Java conversion, and test generation for IBM Maximo | TBC | [▶️ View on GitHub](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management) |
-| **Work Order Voice Agent for Maximo** | Demonstration of hands-free work order management using Bob-powered voice agent and Maximo Manage APIs | TBC | [▶️ View on GitHub](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management) |
+| **Maximo Automation Script Modernization with Bob** | Complete walkthrough of AI-powered script analysis, Java conversion, and test generation for IBM Maximo | 18 mins | [▶️ Watch on YouTube](https://www.youtube.com/watch?v=bNID8QRi7Iw) |
 
 ### Additional Resources
 
