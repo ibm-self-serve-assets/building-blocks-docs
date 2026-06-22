@@ -83,33 +83,8 @@ This building block addresses these challenges through systematic code analysis,
 
 ### High-Level Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        Legacy Applications                           │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐              │
-│  │   Monoliths  │  │Legacy Middleware│ │  Old Code   │              │
-│  └──────────────┘  └──────────────┘  └──────────────┘              │
-└─────────────────────────────────────────────────────────────────────┘
-                              ↓ Analysis & Assessment
-┌─────────────────────────────────────────────────────────────────────┐
-│                   Code Modernization Platform                        │
-│  ┌──────────────────────────────────────────────────────────────┐  │
-│  │              AI-Powered Analysis Engine                       │  │
-│  │  • Code scanning  • Dependency analysis  • Pattern detection │  │
-│  └──────────────────────────────────────────────────────────────┘  │
-│  ┌──────────────────────────────────────────────────────────────┐  │
-│  │              Transformation Engine                            │  │
-│  │  • Refactoring  • Migration  • Testing  • Validation         │  │
-│  └──────────────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────────────┘
-                              ↓ Modernized Output
-┌─────────────────────────────────────────────────────────────────────┐
-│                      Modern Cloud-Native Apps                        │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐              │
-│  │Microservices │  │  Containers  │  │Modern Frameworks│            │
-│  └──────────────┘  └──────────────┘  └──────────────┘              │
-└─────────────────────────────────────────────────────────────────────┘
-```
+<img width="600" height="500" alt="ChatGPT Image Jun 22, 2026, 08_05_48 PM" src="https://github.com/user-attachments/assets/c2627308-ab17-4381-af95-058ada6efc68" />
+
 
 ### System Components
 
