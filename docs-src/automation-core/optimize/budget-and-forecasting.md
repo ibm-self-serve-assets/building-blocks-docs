@@ -231,10 +231,13 @@ Bob: Compares Feb performance and confirms recovery
 ```
 
 **Results**:
-- ✅ **Time Savings**: 90% reduction in variance analysis time (from 3-5 days to 2-3 hours)
-- ✅ **Accuracy**: Elimination of manual calculation errors
-- ✅ **Insights**: AI-powered root cause identification and impact analysis
-- ✅ **Consistency**: Standardized variance reporting across all business units
+
+<ul>
+<li>✅ <strong>Time Savings</strong>: 90% reduction in variance analysis time (from 3-5 days to 2-3 hours)</li>
+<li>✅ <strong>Accuracy</strong>: Elimination of manual calculation errors</li>
+<li>✅ <strong>Insights</strong>: AI-powered root cause identification and impact analysis</li>
+<li>✅ <strong>Consistency</strong>: Standardized variance reporting across all business units</li>
+</ul>
 
 #### Scenario 2: Forecast Accuracy Assessment
 
@@ -243,10 +246,13 @@ Bob: Compares Feb performance and confirms recovery
 **Solution**: Bob provides automated forecast accuracy metrics, bias analysis, and pattern identification to improve forecasting processes.
 
 **Benefits**:
-- Systematic tracking of forecast accuracy by department, product, and time period
-- Identification of consistent forecast biases (optimistic vs pessimistic)
-- Pattern detection to improve future forecasting models
-- Accountability through transparent accuracy measurement
+
+<ul>
+<li>Systematic tracking of forecast accuracy by department, product, and time period</li>
+<li>Identification of consistent forecast biases (optimistic vs pessimistic)</li>
+<li>Pattern detection to improve future forecasting models</li>
+<li>Accountability through transparent accuracy measurement</li>
+</ul>
 
 #### Scenario 3: Executive Ad-Hoc Analysis
 
@@ -255,10 +261,13 @@ Bob: Compares Feb performance and confirms recovery
 **Solution**: Bob enables self-service financial analysis through natural language, providing instant insights without analyst intervention.
 
 **Benefits**:
-- Real-time access to financial data during business discussions
-- Faster decision-making with immediate data availability
-- Reduced bottlenecks from analyst workload
-- Empowered executives with data-driven insights
+
+<ul>
+<li>Real-time access to financial data during business discussions</li>
+<li>Faster decision-making with immediate data availability</li>
+<li>Reduced bottlenecks from analyst workload</li>
+<li>Empowered executives with data-driven insights</li>
+</ul>
 
 ---
 
