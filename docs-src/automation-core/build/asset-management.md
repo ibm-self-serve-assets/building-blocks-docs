@@ -86,7 +86,7 @@ The solution addresses the complexity of managing dynamic, distributed physical 
 
 ### High-Level Architecture
 
-<img width="800" alt="Asset Management High-Level Architecture" src="../images/asset_management_image.png" />
+<img width="800" alt="Asset Management High-Level Architecture" src="/building-blocks/automation-core/images/asset_management_image.png" />
 
 ### System Components
 
@@ -389,86 +389,12 @@ Maximo automation scripts are server-side code modules that extend Maximo busine
 - Security best practices must be enforced: SQL injection prevention, input validation, MXLoggerFactory error handling
 
 **Script Execution Flow:**
-```
-┌─────────────────┐
-│  Maximo Event   │
-│  (Save, Status  │
-│   Transition,   │
-│   Field Change) │
-└────────┬────────┘
-         │
-         ↓
-┌─────────────────┐
-│  Launch Point   │
-│  (Script        │
-│   Trigger       │
-│   Configuration)│
-└────────┬────────┘
-         │
-         ↓
-┌─────────────────┐
-│  Automation     │
-│  Script         │
-│  (Jython / JS / │
-│   MBR)          │
-└────────┬────────┘
-         │
-         ↓
-┌─────────────────┐
-│  MBO / MboSet   │
-│  (Maximo        │
-│   Business      │
-│   Object API)   │
-└────────┬────────┘
-         │
-         ↓
-┌─────────────────┐
-│  Maximo         │
-│  Database       │
-└─────────────────┘
-```
+
+<img width="800" alt="Script Execution Flow in Maximo" src="/building-blocks/automation-core/images/asset_management_script_execution_flow.png" />
 
 ### How It Works
 
-```
-┌─────────────────┐
-│  Asset Event /  │
-│  Technician     │
-│  Request        │
-└────────┬────────┘
-         │
-         ↓
-┌─────────────────┐
-│  Bob AI Layer   │
-│  (Voice Agent / │
-│   Workflow      │
-│   Orchestrator) │
-└────────┬────────┘
-         │
-         ↓
-┌─────────────────┐
-│  Maximo Manage  │
-│  (Work Orders,  │
-│   Assets,       │
-│   Inventory)    │
-└────────┬────────┘
-         │
-         ↓
-┌─────────────────┐
-│  Maximo Monitor │
-│  / Predict      │
-│  (IoT Health,   │
-│   AI Analytics) │
-└────────┬────────┘
-         │
-         ↓
-┌─────────────────┐
-│  Enterprise     │
-│  Systems        │
-│  (ERP, SCADA,   │
-│   GIS)          │
-└─────────────────┘
-```
+<img width="800" alt="How Asset Management Works with Maximo + Bob AI" src="/building-blocks/automation-core/images/asset_management_how_it_works.png" />
 
 ---
 
