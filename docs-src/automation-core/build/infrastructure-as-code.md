@@ -1,165 +1,554 @@
-# **Infrastructure as Code**
+# Infrastructure as Code
 
-[← Back to Build and Deploy](index.md)
+## Overview
 
+Infrastructure as Code (IaC) is an enterprise automation framework that enables repeatable, auditable, and scalable infrastructure provisioning and application deployment through declarative code and configuration management.
 
-## **Automating Enterprise Retail Application Deployment**
+### What is Infrastructure as Code?
 
-Modern enterprise environments demand automation that is repeatable, auditable, and scalable across both infrastructure and application layers. This architecture demonstrates a production-aligned automation model using Terraform for infrastructure provisioning and Ansible for application deployment and orchestration.
+Infrastructure as Code transforms infrastructure management from manual, error-prone processes into automated, version-controlled workflows. This building block combines Terraform for infrastructure provisioning with Ansible for application deployment and configuration management, creating a comprehensive automation solution for modern enterprise environments.
+
+Designed for DevOps teams, platform engineers, and cloud architects, IaC enables organizations to provision cloud resources, configure platforms, deploy applications, and manage operational workflows through code. By treating infrastructure and configuration as software artifacts, teams can apply software development best practices—version control, code review, testing, and continuous integration—to infrastructure management.
+
+The solution addresses the complexity of managing dynamic, distributed cloud-native environments where manual processes cannot scale. Whether provisioning OpenShift clusters, deploying microservices applications, or managing multi-environment configurations, Infrastructure as Code accelerates delivery while maintaining consistency, governance, and auditability across the entire infrastructure lifecycle.
+
+### Why Infrastructure as Code?
+
+- **🏗️ Declarative Infrastructure Provisioning**: Define infrastructure state in code with Terraform for predictable, repeatable deployments
+- **⚙️ Automated Configuration Management**: Use Ansible playbooks to standardize application deployment and platform configuration
+- **🔄 Environment Consistency**: Eliminate configuration drift with version-controlled infrastructure and automated state management
+- **📋 GitOps Integration**: Leverage Git workflows for infrastructure changes with full audit trails and rollback capabilities
+- **🚀 Accelerated Delivery**: Reduce environment creation from days to hours with automated provisioning and deployment
+- **🎯 Separation of Concerns**: Clear boundaries between infrastructure (Terraform) and application layers (Ansible)
 
 ---
-!!! info "📖 Implementation Resources"
 
-    For detailed implementation guides, code samples, and deployment assets, see:
+## Key Features
+
+### Core Capabilities
+
+<details>
+<summary><strong>🎯 Terraform Infrastructure Provisioning</strong></summary>
+
+<p><strong>Declarative Infrastructure Management</strong>: Define and manage cloud infrastructure through code with state-driven automation</p>
+
+<ul>
+<li><strong>VPC and Networking</strong>: Automated creation of Virtual Private Clouds, subnets, security groups, and network policies</li>
+<li><strong>Cluster Provisioning</strong>: OpenShift and Kubernetes cluster deployment with worker node pools and auto-scaling</li>
+<li><strong>IAM Configuration</strong>: Identity and access management setup with role-based access control (RBAC)</li>
+<li><strong>State Management</strong>: Centralized state tracking with drift detection and automatic reconciliation</li>
+<li><strong>Environment Replication</strong>: Template-based infrastructure for dev, test, staging, and production environments</li>
+</ul>
+
+<p><strong>Use Case</strong>: Platform teams can provision complete OpenShift environments in minutes with consistent networking, security, and access controls across all regions.</p>
+
+</details>
+
+<details>
+<summary><strong>⚡ Ansible Configuration & Orchestration</strong></summary>
+
+<p><strong>Procedural Automation for Applications</strong>: Deploy and configure applications with idempotent playbooks and role-based organization</p>
+
+<ul>
+<li><strong>Application Deployment</strong>: Automated deployment of microservices, databases, and supporting infrastructure</li>
+<li><strong>Platform Configuration</strong>: Namespace creation, resource quotas, network policies, and platform-level settings</li>
+<li><strong>Kubernetes Resource Management</strong>: Declarative management of deployments, services, config maps, and secrets</li>
+<li><strong>Day-2 Operations</strong>: Rolling updates, health checks, backup automation, and operational workflows</li>
+<li><strong>CI/CD Integration</strong>: Seamless integration with Jenkins, GitLab CI, Tekton, and other pipeline tools</li>
+</ul>
+
+<p><strong>Use Case</strong>: Development teams can deploy complete retail applications with databases, backend services, and frontends using standardized playbooks that work across all environments.</p>
+
+</details>
+
+<details>
+<summary><strong>🔒 Enterprise Governance & Compliance</strong></summary>
+
+<p><strong>Auditable Infrastructure Changes</strong>: Version-controlled infrastructure with approval workflows and compliance enforcement</p>
+
+<ul>
+<li><strong>Version Control Integration</strong>: All infrastructure changes tracked in Git with full history and rollback capability</li>
+<li><strong>Policy as Code</strong>: Enforce organizational standards through automated policy validation (OPA, Sentinel)</li>
+<li><strong>Approval Workflows</strong>: Multi-stage approval processes for production infrastructure changes</li>
+<li><strong>Audit Trails</strong>: Complete audit logs of who changed what, when, and why</li>
+<li><strong>Compliance Reporting</strong>: Automated compliance checks against industry standards (SOC 2, HIPAA, PCI-DSS)</li>
+</ul>
+
+<p><strong>Use Case</strong>: Security teams can enforce compliance policies automatically, ensuring all infrastructure changes meet regulatory requirements before deployment.</p>
+
+</details>
+
+---
+
+## Architecture
+
+### High-Level Architecture
+
+
+```
+/Users/sunilgajula/Downloads/Infrstructure_as_code.png
+
+```
+
+### System Components
+
+| Component | Purpose | Technology | Scalability |
+|-----------|---------|------------|-------------|
+| **Terraform** | Infrastructure provisioning and state management | HCL, Terraform Cloud | Horizontal |
+| **Ansible** | Configuration management and application deployment | YAML, Ansible Tower | Horizontal |
+| **Git Repository** | Version control for IaC code | GitHub, GitLab | N/A |
+| **CI/CD Pipeline** | Automated testing and deployment | Jenkins, Tekton, GitLab CI | Horizontal |
+| **State Backend** | Terraform state storage | S3, Terraform Cloud | Vertical |
+| **Inventory System** | Ansible inventory management | Dynamic inventory, Tower | Horizontal |
+
+### Data Flow
+
+```mermaid
+sequenceDiagram
+    participant Dev as Developer
+    participant Git as Git Repository
+    participant CI as CI/CD Pipeline
+    participant TF as Terraform
+    participant ANS as Ansible
+    participant Cloud as IBM Cloud
+    participant OCP as OpenShift
     
-    **[Infrastructure as Code](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/Iaas/README.md)** - Complete Terraform and Ansible automation guide with implementation examples
----
-
-**Automation Stack:**
-
-- 🏗️ **Terraform** - Infrastructure provisioning
-- ⚙️ **Ansible** - Application deployment & configuration
-- 🔄 **CI/CD Integration** - Continuous delivery
-- 📋 **GitOps** - Version-controlled infrastructure
-
----
-
-## **Business Value**
-
-Cloud-native platforms introduce dynamic infrastructure lifecycles and
-distributed workloads. Enterprises must balance agility, stability,
-governance, and cost efficiency. A Terraform + Ansible automation model
-delivers:
-
--   Consistent environment provisioning.
--   Reduced manual intervention.
--   Improved deployment reliability.
--   Stronger governance and auditability.
--   Seamless CI/CD integration.
-
-This separation of responsibilities enables scalable and predictable
-automation.
-## **Automation Challenges Addressed**
-
-| Challenge | Solution |
-|-----------|----------|
-| ⚠️ Manual and error-prone provisioning | Declarative infrastructure code |
-| 🔄 Configuration drift across environments | State management & drift detection |
-| 📦 Inconsistent application deployments | Standardized playbooks |
-| 🔁 Difficulty replicating production setups | Environment templates |
-| 📋 Limited operational standardization | Codified best practices |
-| ⏱️ Slow environment creation cycles | Automated provisioning |
+    Dev->>Git: Commit IaC Code
+    Git->>CI: Trigger Pipeline
+    CI->>TF: terraform plan
+    TF->>Cloud: Query Current State
+    Cloud-->>TF: Return State
+    TF-->>CI: Show Plan
+    CI->>TF: terraform apply
+    TF->>Cloud: Provision Infrastructure
+    Cloud-->>TF: Confirm Resources
+    TF->>ANS: Trigger Ansible
+    ANS->>OCP: Deploy Applications
+    OCP-->>ANS: Confirm Deployment
+    ANS-->>CI: Report Success
+    CI-->>Dev: Deployment Complete
+```
 
 ---
 
-## **Capabilities & Functions**
+## Use Cases
 
-#### **Terraform -- Infrastructure as Code**
+### Who Should Use Infrastructure as Code?
 
-Terraform provides declarative infrastructure lifecycle management,
-enabling:
+#### Target Personas
 
--   VPC and networking creation.
--   OpenShift cluster provisioning.
--   IAM and security configuration.
--   Environment replication.
--   Drift detection and state management.
+<details>
+<summary><strong>👨‍💻 Platform Engineers</strong></summary>
 
-Terraform is optimized for managing infrastructure state.
-#### **Ansible -- Configuration & Orchestration**
+Infrastructure as Code is designed for platform engineers who need to provision and manage cloud infrastructure at scale with consistency and reliability.
 
-Ansible provides procedural automation designed for:
+**Common Tasks:**
 
--   Application deployment.
--   Platform configuration.
--   Kubernetes/OpenShift resource management.
--   Day-2 operational workflows.
--   CI/CD pipeline execution.
+- Provisioning OpenShift clusters across multiple regions
+- Managing VPC networking and security configurations
+- Implementing infrastructure standards and policies
+- Automating environment creation for development teams
+- Managing infrastructure state and drift detection
 
-Ansible is optimized for managing application and configuration state.
-## **Enterprise Automation Strategy**
+**Benefits:**
 
-| Layer | Primary Tool | Objective |
-|-------|-------------|-----------|
-| 🏗️ Infrastructure | Terraform | Provision cloud & cluster resources |
-| ⚙️ Platform Configuration | Ansible | Configure namespaces, policies |
-| 📦 Applications | Ansible | Deploy workloads & services |
-| 🔄 Operations | Ansible | Continuous operational automation |
+- Eliminate manual infrastructure provisioning errors
+- Reduce cluster provisioning time from days to hours
+- Ensure consistent infrastructure across all environments
+- Implement infrastructure changes through code review processes
 
-> **💡 Key Principle:** This layered strategy ensures clear separation of concerns and maintainable automation.
+</details>
+
+<details>
+<summary><strong>🏢 DevOps Teams</strong></summary>
+
+DevOps teams use Infrastructure as Code to automate the entire application lifecycle from infrastructure provisioning to application deployment and operations.
+
+**Common Tasks:**
+
+- Deploying microservices applications to Kubernetes
+- Managing application configurations across environments
+- Implementing CI/CD pipelines for infrastructure and applications
+- Automating Day-2 operations (updates, scaling, backups)
+- Coordinating infrastructure and application changes
+
+**Benefits:**
+
+- Unified automation for infrastructure and applications
+- Faster deployment cycles with automated pipelines
+- Reduced operational overhead through automation
+- Improved collaboration between development and operations
+
+</details>
+
+<details>
+<summary><strong>🎯 Cloud Architects</strong></summary>
+
+Cloud architects leverage Infrastructure as Code to design and implement scalable, secure, and compliant cloud architectures.
+
+**Common Tasks:**
+
+- Designing multi-region infrastructure architectures
+- Implementing security and compliance policies
+- Creating reusable infrastructure modules and templates
+- Establishing governance frameworks for cloud resources
+
+**Benefits:**
+
+- Codify architectural best practices
+- Ensure compliance through automated policy enforcement
+- Accelerate architecture implementation
+- Maintain consistency across cloud deployments
+
+</details>
+
+### Real-World Scenarios
+
+#### Scenario 1: Multi-Environment Application Deployment
+
+**Challenge**: A retail company needs to deploy a microservices application across development, staging, and production environments with consistent configurations but environment-specific parameters.
+
+**Solution**: Infrastructure as Code automates the entire deployment workflow using Terraform for infrastructure and Ansible for applications.
+
+**Implementation**:
+```yaml
+# Terraform provisions infrastructure
+terraform apply -var-file=environments/prod.tfvars
+
+# Ansible deploys application
+ansible-playbook deploy-retail-app.yml -e env=production
+```
+
+**Results**:
+- ✅ **Time Savings**: 90% reduction in environment setup time (from 3 days to 4 hours)
+- ✅ **Consistency**: 100% configuration parity across environments
+- ✅ **Reliability**: Zero deployment failures due to configuration errors
+- ✅ **Auditability**: Complete audit trail of all infrastructure and application changes
+
+#### Scenario 2: Disaster Recovery Automation
+
+**Challenge**: Organizations need to replicate production infrastructure in disaster recovery regions with minimal manual intervention.
+
+**Solution**: Terraform templates enable one-command infrastructure replication with Ansible playbooks for application restoration.
+
+**Benefits**:
+- Automated DR environment provisioning in under 2 hours
+- Tested DR procedures through regular automated failover drills
+- Reduced RTO (Recovery Time Objective) from days to hours
+- Documented and version-controlled DR procedures
+
+#### Scenario 3: Compliance-Driven Infrastructure
+
+**Challenge**: Financial services companies must ensure all infrastructure meets regulatory compliance requirements (PCI-DSS, SOC 2).
+
+**Solution**: Policy-as-code integration with Terraform validates compliance before provisioning, while Ansible enforces configuration standards.
+
+**Benefits**:
+- Automated compliance validation for every infrastructure change
+- Prevented non-compliant infrastructure from being deployed
+- Reduced compliance audit preparation time by 80%
+- Continuous compliance monitoring and reporting
 
 ---
 
-## **Infrastructure Provisioning**
+## Products & Services
 
-Terraform automates the creation of foundational components required to
-host enterprise workloads:
+#### Product 1: HashiCorp Terraform
 
--   Virtual Private Cloud (VPC)\
--   Networking and security controls\
--   OpenShift cluster\
--   Worker node pools
+**Description**: Terraform is an open-source infrastructure as code tool that enables declarative infrastructure provisioning across multiple cloud providers. It uses HCL (HashiCorp Configuration Language) to define infrastructure resources and maintains state to track and manage infrastructure lifecycle.
 
-Terraform's state-driven model ensures reproducibility, drift
-prevention, and auditable changes while minimizing operational risk.
+**Key Features:**
+- Multi-cloud infrastructure provisioning (IBM Cloud, AWS, Azure, GCP)
+- Declarative configuration with HCL
+- State management and drift detection
+- Module system for reusable infrastructure components
+- Plan and apply workflow for safe infrastructure changes
 
----
-
-## **Application Deployment**
-
-Ansible orchestrates the Retail application lifecycle, including:
-
--   Namespace creation.
--   Image build and registry push.
--   Secret and credential management.
--   PostgreSQL deployment.
--   Backend and frontend services.
--   Database schema initialization.
--   Rolling restarts.
--   Validation checks.
-
-This reflects common enterprise microservices deployment patterns.
-
-## **Operational Benefits**
-
-**Enterprises gain:**
-
-| Benefit | Impact |
-|---------|--------|
-| ✅ Idempotent deployments | Predictable outcomes |
-| 🤖 Reduced manual intervention | Lower error rates |
-| ⚡ Faster environment creation | Accelerated delivery |
-| 🎯 Consistent platform configuration | Standardization |
-| 🔧 Simplified Day-2 operations | Operational efficiency |
-| 🚀 Improved release reliability | Higher confidence |
+**Links:**
+- 📖 [Documentation](https://www.terraform.io/docs)
+- 🚀 [Get Started](https://learn.hashicorp.com/terraform)
+- 💻 [GitHub Repository](https://github.com/hashicorp/terraform)
 
 ---
 
-> **🎯 Strategic Outcome:** This automation framework demonstrates how enterprises can standardize infrastructure provisioning, automate application deployments, reduce operational risk, and improve scalability while aligning with DevOps best practices.
+#### Product 2: Red Hat Ansible
 
-## **Summary**
+**Description**: Ansible is an open-source automation platform that provides configuration management, application deployment, and orchestration capabilities. It uses agentless architecture and YAML-based playbooks to automate IT infrastructure and application workflows.
 
-This automation framework demonstrates how enterprises can standardize
-infrastructure provisioning, automate application deployments, reduce
-operational risk, and improve scalability while aligning with DevOps
-best practices.
+**Key Features:**
+- Agentless automation using SSH
+- YAML-based playbooks for readability
+- Extensive module library for cloud, network, and application automation
+- Role-based organization for reusable automation
+- Integration with CI/CD pipelines and orchestration tools
+
+**Links:**
+- 📖 [Documentation](https://docs.ansible.com/)
+- 🚀 [Get Started](https://www.ansible.com/resources/get-started)
+- 💻 [GitHub Repository](https://github.com/ansible/ansible)
 
 ---
 
-## **Related Capabilities**
+## Core Concepts
+
+### Fundamental Concepts
+
+#### Concept 1: Infrastructure as Code (IaC)
+
+Infrastructure as Code is the practice of managing and provisioning infrastructure through machine-readable definition files rather than physical hardware configuration or interactive configuration tools. IaC enables version control, testing, and automation of infrastructure changes.
+
+**Key Points:**
+- Infrastructure is defined in code files (Terraform HCL, Ansible YAML)
+- Changes are version-controlled in Git repositories
+- Infrastructure can be tested, reviewed, and deployed like application code
+- Enables reproducible and consistent infrastructure across environments
+
+**Example:**
+```hcl
+# Terraform example: Provision IBM Cloud VPC
+resource "ibm_is_vpc" "retail_vpc" {
+  name = "retail-production-vpc"
+  resource_group = ibm_resource_group.retail.id
+  tags = ["environment:production", "app:retail"]
+}
+
+resource "ibm_is_subnet" "retail_subnet" {
+  name            = "retail-subnet-zone-1"
+  vpc             = ibm_is_vpc.retail_vpc.id
+  zone            = "us-south-1"
+  ipv4_cidr_block = "10.240.0.0/24"
+}
+```
+
+#### Concept 2: Declarative vs Procedural Automation
+
+Understanding the difference between declarative (Terraform) and procedural (Ansible) automation is crucial for effective IaC implementation.
+
+**Declarative (Terraform)**:
+- Define the desired end state
+- Tool determines how to achieve that state
+- Idempotent by design
+- Best for infrastructure provisioning
+
+**Procedural (Ansible)**:
+- Define the steps to achieve the desired state
+- Explicit control over execution order
+- Idempotent through careful playbook design
+- Best for configuration and application deployment
+
+**Visual Representation:**
+```
+Declarative (Terraform):
+┌─────────────┐
+│ Desired     │
+│ State       │ → Terraform calculates → Infrastructure
+│ (What)      │   required changes        Created/Updated
+└─────────────┘
+
+Procedural (Ansible):
+┌─────────────┐
+│ Step 1      │ →  Execute  → Result 1
+│ Step 2      │ →  Execute  → Result 2
+│ Step 3      │ →  Execute  → Result 3
+│ (How)       │
+└─────────────┘
+```
+
+#### Concept 3: State Management
+
+Terraform maintains a state file that tracks the current state of managed infrastructure. This state is critical for determining what changes need to be applied and for preventing conflicts in team environments.
+
+**Key Points:**
+- State file maps real-world resources to configuration
+- Enables drift detection (actual vs desired state)
+- Supports remote state backends for team collaboration
+- State locking prevents concurrent modifications
+- Sensitive data in state requires secure storage
+
+**State Workflow:**
+```
+┌─────────────┐
+│ Terraform   │
+│ Config      │
+└──────┬──────┘
+       │
+       ↓
+┌─────────────┐     ┌─────────────┐
+│ terraform   │────→│  Compare    │
+│ plan        │     │  with State │
+└─────────────┘     └──────┬──────┘
+                           │
+                           ↓
+                    ┌─────────────┐
+                    │  Show       │
+                    │  Changes    │
+                    └──────┬──────┘
+                           │
+                           ↓
+                    ┌─────────────┐
+                    │ terraform   │
+                    │ apply       │
+                    └──────┬──────┘
+                           │
+                           ↓
+                    ┌─────────────┐
+                    │ Update      │
+                    │ State       │
+                    └─────────────┘
+```
+
+### How It Works
+
+```
+┌─────────────────┐
+│  Developer      │
+│  Commits Code   │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  Git Repository │
+│  (Version       │
+│   Control)      │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  CI/CD Pipeline │
+│  Triggered      │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  Terraform      │
+│  Provisions     │
+│  Infrastructure │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  Ansible        │
+│  Deploys        │
+│  Applications   │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  Running        │
+│  Environment    │
+└─────────────────┘
+```
+
+---
+
+## Download Skills
+
+Download pre-built skills to extend your Infrastructure as Code capabilities with Bob AI Assistant:
+
+| Skill Name | Description | Download Link | Version |
+|------------|-------------|---------------|---------|
+| **Infrastructure as Code - Ansible** | Ansible automation skill for application deployment, configuration management, and operational workflows | [📥 Download](https://github.com/ibm-self-serve-assets/building-blocks/raw/main/build-and-deploy/infrastructure-as-code/bob-skills/infrastructure-as-code-ansible/infrastructure-as-code-ansible.zip) | v1.0.0 |
+| **Infrastructure as Code - Terraform** | Terraform automation skill for infrastructure provisioning, state management, and resource lifecycle | [📥 Download](https://github.com/ibm-self-serve-assets/building-blocks/raw/main/build-and-deploy/infrastructure-as-code/bob-skills/infrastructure-as-code-terraform/infrastructure-as-code-terraform.zip) | v1.0.0 |
+
+### What's Included in IaC Skills
+
+**Ansible Skill:**
+- Playbook generation and optimization
+- Role and task creation assistance
+- Inventory management guidance
+- Troubleshooting and debugging support
+- Best practices recommendations
+
+**Terraform Skill:**
+- HCL code generation and validation
+- Module creation and organization
+- State management assistance
+- Provider configuration guidance
+- Resource dependency optimization
+
+### How to Install Skills
+
+1. **Download the skill package** from the link above
+2. **Extract the contents** to your Bob skills directory:
+   ```bash
+   cd ~/Downloads
+   unzip infrastructure-as-code-ansible.zip -d ~/.bob/skills/iac-ansible
+   unzip infrastructure-as-code-terraform.zip -d ~/.bob/skills/iac-terraform
+   ```
+3. **Verify installation**:
+   ```bash
+   ls ~/.bob/skills/
+   # Should show: iac-ansible/ iac-terraform/
+   ```
+4. **Restart Bob** to load the new skills
+
+### Skills Resources
+
+- 📦 [Building Blocks Skills Repository](https://github.com/ibm-self-serve-assets/building-blocks)
+- 📖 [Skills Development Guide](../../ibm-bob/skills/contributing_to_skills.md)
+- 💬 [Community Forum](https://community.ibm.com/building-blocks)
+
+---
+
+## Assets
+
+### Demo Videos
+
+Explore our comprehensive video library to see Infrastructure as Code in action:
+
+#### Getting Started Videos
+
+| Video Title | Description | Duration | Link |
+|-------------|-------------|----------|------|
+| **Infrastructure as Code with Terraform & Ansible** | Complete walkthrough of IaC automation for enterprise retail application deployment | 15:42 | [▶️ Watch on YouTube](https://www.youtube.com/watch?v=o-gSbancvVM&t=1s) |
+
+### Additional Resources
+
+- 🎥 [YouTube Channel](https://youtube.com/@ibm-building-blocks) - Subscribe for latest videos
+- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/Iaas/README.md) - Complete Terraform and Ansible automation guide
+- 💬 [Community Discussions](https://community.ibm.com/building-blocks) - Ask questions and share experiences
+
+---
+
+## Call to Action
+
+### Ready to Build with Infrastructure as Code?
+
+Take the next step with this Building Block by choosing the path that best fits your needs:
+
+- **Explore the fundamentals** in the [Overview](#overview), [Architecture](#architecture), and [Core Concepts](#core-concepts) sections
+- **Download reusable assets** from [Download Skills](#download-skills)
+- **Watch the demo video** to see IaC in action
+- **Extend and customize** using your own Terraform modules and Ansible playbooks
+
+**Get Started Now:**
+- 🚀 [Download Ansible Skill](https://github.com/ibm-self-serve-assets/building-blocks/raw/main/build-and-deploy/infrastructure-as-code/bob-skills/infrastructure-as-code-ansible/infrastructure-as-code-ansible.zip)
+- 📥 [Download Terraform Skill](https://github.com/ibm-self-serve-assets/building-blocks/raw/main/build-and-deploy/infrastructure-as-code/bob-skills/infrastructure-as-code-terraform/infrastructure-as-code-terraform.zip)
+- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/Iaas/README.md)
+- 💬 [Join the Community](https://community.ibm.com/building-blocks)
+
+---
+
+## Related Capabilities
 
 **Within Build and Deploy:**
 
 - [Platform as a Service (iPaaS)](ipaas.md) - Integrate infrastructure with applications
-- [Non-human Identity](../secure/non-human-identity.md) - Automate identity provisioning
-- [Quantum-Safe Cryptography](../secure/quantum-safe.md) - Secure infrastructure credentials
+- [Code Modernization](middleware-modernization.md) - Modernize infrastructure patterns
 
 **Other Building Blocks:**
 
-- [Code Modernization](middleware-modernization.md) - Modernize infrastructure patterns
+- [Non-human Identity](../secure/non-human-identity.md) - Automate identity provisioning
+- [Quantum-Safe Cryptography](../secure/quantum-safe.md) - Secure infrastructure credentials
 - [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize provisioned resources
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Ensure infrastructure compliance
 
 ---
 
-[← Back to Build and Deploy](index.md)
+<div align="center">
+
+**[Download Skills](#download-skills)** • **[Watch Demo](https://www.youtube.com/watch?v=o-gSbancvVM&t=1s)** • **[Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/Iaas/README.md)** • **[Community](https://community.ibm.com/building-blocks)**
+
+Made with ❤️ by IBM
+
+</div>
