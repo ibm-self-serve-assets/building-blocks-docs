@@ -492,11 +492,3 @@ Take the next step with this Building Block by choosing the path that best fits 
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Ensure modernized workload compliance
 
 ---
-
-<div align="center">
-
-**[Get Started](../../../ibm-bob/index.md)** • **[Download Skills](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/code-modernisation/bob-skills)** • **[Watch Demo](https://www.youtube.com/watch?v=bNID8QRi7Iw)** • **[Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/code-modernisation/README.md)**
-
-Made with ❤️ by IBM
-
-</div>
