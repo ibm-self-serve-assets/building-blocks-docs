@@ -1,200 +1,585 @@
-# **Asset Management**
+# Asset Management
 
 [← Back to Build and Deploy](index.md)
 
+## Overview
 
-## **Overview**
+IBM Maximo Application Suite (MAS) is an enterprise-grade asset lifecycle management platform that unifies maintenance, inspection, and reliability operations across physical assets. Built on a cloud-native, AI-powered foundation, Maximo enables organisations to manage the complete lifecycle of assets — from acquisition and deployment through maintenance, compliance, and decommission — within a single integrated platform.
 
-IBM Maximo Application Suite (MAS) is an enterprise-grade asset lifecycle management platform that unifies maintenance, inspection, and reliability operations across physical assets. Built on a cloud-native, AI-powered foundation, Maximo enables organizations to manage the complete lifecycle of assets — from acquisition and deployment through maintenance, compliance, and decommission — within a single integrated platform.
+### What is Asset Management?
 
-By combining asset management, work management, supply chain, and predictive maintenance capabilities, Maximo transforms reactive operations into proactive, data-driven asset strategies that maximize uptime, reduce costs, and improve regulatory compliance.
+Asset Management with IBM Maximo transforms reactive, manual maintenance operations into automated, AI-driven asset performance management. This building block combines IBM Maximo Application Suite for asset lifecycle management with Bob AI capabilities for automation script modernization, conversational agents, and intelligent operational workflows.
 
----
-<!-- !!! info "📖 Implementation Resources"
+Designed for maintenance engineers, operations teams, and enterprise architects, Maximo enables organisations to manage work orders, track asset health, schedule preventive maintenance, and meet regulatory compliance — all through a unified platform. By treating asset data, maintenance workflows, and operational knowledge as managed software artefacts, teams can apply modern DevOps and AI-assisted practices to asset-intensive industries.
 
-    For detailed implementation guides, code samples, and deployment assets, see:
-    
-    **[Asset Management](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/asset-management/README.md)** - Complete IBM Maximo Application Suite guide with implementation examples -->
----
+The solution addresses the complexity of managing dynamic, distributed physical asset estates where manual processes cannot scale. Whether automating work order lifecycle management, converting legacy Maximo scripts, or deploying AI-driven voice agents for field technicians, Asset Management accelerates delivery while maintaining consistency, governance, and auditability across the entire asset lifecycle.
 
-**Key Asset Management Patterns:**
+### Why Asset Management?
 
-- Predictive and preventive maintenance automation
-- Work order lifecycle management
-- IoT sensor integration and real-time asset monitoring
-- AI-driven failure prediction and reliability analytics
-- Regulatory compliance and audit management
+- **🏗️ Unified Asset Lifecycle Management**: Manage assets from acquisition through decommission within a single, cloud-native platform
+- **⚙️ AI-Powered Automation**: Leverage Bob AI to modernise automation scripts, orchestrate workflows, and build intelligent agents
+- **🔄 Predictive Maintenance**: Shift from reactive to proactive maintenance using IoT sensor data and AI-driven failure prediction
+- **📋 Regulatory Compliance**: Automate inspection records, audit trails, and compliance reporting across all asset types
+- **🚀 Accelerated Field Operations**: Empower technicians with voice agents and mobile-enabled work order management
+- **🎯 Enterprise Integration**: Connect Maximo with ERP, SCADA, IoT, and enterprise systems through standardised integration patterns
 
 ---
 
-## **Business Value**
+## Key Features
 
-Physical assets represent one of the largest capital investments in any industrial, utilities, or facilities-driven enterprise. Unplanned downtime, reactive maintenance, and poor asset visibility translate directly into lost revenue, safety incidents, and compliance failures. IBM Maximo Application Suite delivers:
+### Core Capabilities
 
-- Reduced unplanned downtime through predictive maintenance.
-- Lower maintenance costs through optimised work scheduling.
-- Extended asset lifespan through proactive condition monitoring.
-- Improved compliance posture with automated inspection and audit trails.
-- Unified visibility across asset fleets, sites, and geographies.
-- Accelerated ROI through cloud-native deployment on OpenShift.
+<details>
+<summary><strong>🎯 Maximo Automation Script Modernization</strong></summary>
 
-This approach enables enterprises to shift from cost-centre maintenance operations to value-generating asset performance management.
+<p><strong>AI-Powered Script Analysis and Modernization</strong>: Ingest, analyse, and modernise legacy Maximo automation scripts with Bob AI assistance</p>
+
+<ul>
+<li><strong>Legacy Script Ingestion</strong>: Automated parsing and analysis of existing Maximo automation scripts across all supported languages</li>
+<li><strong>Static Code Analysis</strong>: Identification of technical debt, anti-patterns, and optimisation opportunities within automation scripts</li>
+<li><strong>Modernization Recommendations</strong>: AI-generated guidance aligned to current Maximo best practices and maintainability standards</li>
+<li><strong>Java-to-Script Conversion</strong>: Automated conversion of legacy Maximo Java classes to Python (Jython), JavaScript, Nashorn, ECMAScript, and Maximo Business Rules</li>
+<li><strong>Test Script Generation</strong>: Automated creation of test scripts alongside every converted or modernised automation script</li>
+</ul>
+
+<p><strong>Use Case</strong>: Operations teams can modernise entire libraries of legacy Maximo automation scripts in hours, with comprehensive conversion reports and before/after comparisons generated automatically.</p>
+
+</details>
+
+<details>
+<summary><strong>⚡ Work Order & Field Operations Automation</strong></summary>
+
+<p><strong>AI-Driven Work Order Lifecycle Management</strong>: Automate work order creation, routing, execution, and closure through conversational and API-driven interfaces</p>
+
+<ul>
+<li><strong>Voice-Enabled Work Orders</strong>: Hands-free work order creation, update, retrieval, and closure for field technicians in industrial environments</li>
+<li><strong>Multi-Turn Workflow Agents</strong>: Conversational agents that orchestrate end-to-end work order lifecycle activities through guided dialogue</li>
+<li><strong>Real-Time API Integration</strong>: Live integration with Maximo Manage APIs for real-time work order state management</li>
+<li><strong>Natural Language Understanding</strong>: AI-powered interpretation of Maximo work order data structures from unstructured technician input</li>
+<li><strong>Contextual Task Execution</strong>: Orchestration of complex operational activities aligned to Maximo process workflows</li>
+</ul>
+
+<p><strong>Use Case</strong>: Field technicians in industrial environments can manage their entire work queue hands-free, reducing job execution time and improving real-time data capture accuracy.</p>
+
+</details>
+
+<details>
+<summary><strong>🔒 Knowledge Management & Compliance</strong></summary>
+
+<p><strong>Centralised Maximo Knowledge Platform</strong>: Unified knowledge retrieval, compliance automation, and AI-assisted operational support</p>
+
+<ul>
+<li><strong>Knowledge Hub</strong>: Centralised ingestion of Maximo operational, technical, and regulatory reference documentation</li>
+<li><strong>Semantic Search</strong>: AI-powered contextual retrieval accelerating troubleshooting for field technicians and operations teams</li>
+<li><strong>Compliance Automation</strong>: Automated inspection records, audit trails, and regulatory reporting across asset types</li>
+<li><strong>Data Ingestion Framework</strong>: Domain-specific ingestion pipeline for Bentley and Maximo data sources supporting structured and unstructured formats</li>
+<li><strong>Regulatory Reporting</strong>: Automated compliance checks and report generation against industry standards</li>
+</ul>
+
+<p><strong>Use Case</strong>: Operations teams can resolve Maximo issues in minutes using semantic knowledge retrieval, while compliance teams generate audit-ready reports automatically from Maximo operational data.</p>
+
+</details>
 
 ---
 
-## **Bob as the ADLC Partner for Maximo**
+## Architecture
 
-IBM Bob serves as the AI-powered development lifecycle companion (ADLC partner) for IBM Maximo, accelerating every stage of the asset management delivery lifecycle — from knowledge engineering and code modernization through operational automation and agent-driven field workflows. Bob brings IBM's Building Blocks framework directly into Maximo projects, enabling teams to design, build, test, and iterate faster with contextual AI assistance grounded in Maximo domain knowledge.
+### High-Level Architecture
 
-!!! tip "Bob + Maximo"
-    Bob is not just a coding assistant — it acts as an ADLC partner embedded across the Maximo delivery lifecycle: ingesting domain knowledge, modernizing automation scripts, building conversational agents, and orchestrating multi-step operational workflows. Every use case below is delivered as a reusable Building Block accelerator.
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                    IBM Maximo Application Suite                   │
+│                                                                    │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────────┐  │
+│  │   Maximo    │  │   Maximo    │  │  Maximo Health /        │  │
+│  │   Manage    │  │   Monitor   │  │  Predict / Visual       │  │
+│  └─────────────┘  └─────────────┘  └─────────────────────────┘  │
+│                                                                    │
+│  ┌─────────────────────────────────────────────────────────────┐ │
+│  │              OpenShift Container Platform                    │ │
+│  └─────────────────────────────────────────────────────────────┘ │
+└──────────────────────────────────────────────────────────────────┘
+         │                    │                    │
+         ↓                    ↓                    ↓
+┌────────────────┐   ┌───────────────┐   ┌────────────────────┐
+│  Bob AI Layer  │   │  IoT / SCADA  │   │  Enterprise Systems │
+│  (Scripts,     │   │  (Sensors,    │   │  (ERP, GIS,         │
+│   Agents,      │   │   Real-time   │   │   CMMS, iPaaS)      │
+│   Knowledge)   │   │   Data)       │   │                     │
+└────────────────┘   └───────────────┘   └────────────────────┘
+```
+
+### System Components
+
+| Component | Purpose | Technology | Scalability |
+|-----------|---------|------------|-------------|
+| **Maximo Manage** | Core work order, asset, and inventory management | IBM MAS, OpenShift | Horizontal |
+| **Maximo Monitor** | IoT asset health monitoring and anomaly detection | IBM MAS, Watson IoT | Horizontal |
+| **Maximo Predict** | AI-driven failure prediction and reliability analytics | IBM MAS, Watson Studio | Vertical |
+| **Bob AI Layer** | Script modernization, agents, and knowledge retrieval | IBM Bob, Building Blocks | Horizontal |
+| **OpenShift Platform** | Container orchestration for MAS deployment | Red Hat OpenShift | Horizontal |
+| **Integration Layer** | ERP, SCADA, IoT, and enterprise system connectivity | IBM App Connect, iPaaS | Horizontal |
+
+### Data Flow
+
+```mermaid
+sequenceDiagram
+    participant Tech as Field Technician
+    participant Agent as Bob Voice Agent
+    participant MAS as Maximo Manage
+    participant Monitor as Maximo Monitor
+    participant IoT as IoT Sensors
+    participant ERP as Enterprise Systems
+
+    IoT->>Monitor: Real-time Asset Data
+    Monitor->>MAS: Anomaly Alert / Work Order Trigger
+    Tech->>Agent: Voice Command (Create Work Order)
+    Agent->>MAS: API Call — Create/Update Work Order
+    MAS-->>Agent: Work Order Confirmation
+    Agent-->>Tech: Verbal Confirmation
+    MAS->>ERP: Work Order Sync (Parts, Labour)
+    ERP-->>MAS: Inventory & Cost Updates
+```
 
 ---
 
-## **Building Block Use Cases with Bob**
+## Use Cases
 
-The following use cases are available as part of the Building Blocks collateral. Each accelerator combines IBM Maximo with Bob to deliver intelligent, automation-first workflows across the asset management lifecycle.
+### Who Should Use Asset Management?
+
+#### Target Personas
+
+<details>
+<summary><strong>🔧 Maintenance Engineers</strong></summary>
+
+<p>Asset Management is designed for maintenance engineers who need to manage work orders, track asset health, and execute preventive and predictive maintenance workflows efficiently.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Creating, updating, and closing work orders through web, mobile, and voice interfaces</li>
+<li>Reviewing AI-generated predictive maintenance alerts from Maximo Predict</li>
+<li>Managing asset inspection records and compliance documentation</li>
+<li>Executing preventive maintenance schedules across asset fleets</li>
+<li>Accessing Maximo knowledge base for troubleshooting guidance</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Hands-free work order management through voice-enabled agents</li>
+<li>Faster issue resolution through AI-powered knowledge retrieval</li>
+<li>Reduced paperwork through automated inspection and audit records</li>
+<li>Proactive alerts replacing reactive fault discovery</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>🏢 Operations & Reliability Teams</strong></summary>
+
+<p>Operations and reliability teams use Asset Management to monitor asset health, analyse failure patterns, and implement data-driven maintenance strategies that maximise uptime and reduce costs.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Monitoring real-time asset health dashboards in Maximo Monitor</li>
+<li>Analysing failure prediction scores and reliability analytics from Maximo Predict</li>
+<li>Managing preventive and condition-based maintenance schedules</li>
+<li>Reviewing operational KPIs — MTTR, MTBF, asset availability</li>
+<li>Orchestrating multi-step operational workflows through Bob agents</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Reduced unplanned downtime through AI-driven predictive maintenance</li>
+<li>Lower maintenance costs through optimised work scheduling</li>
+<li>Improved asset availability and production continuity</li>
+<li>Data-driven decisions replacing experience-only judgement</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>🎯 Maximo Platform Architects & Developers</strong></summary>
+
+<p>Platform architects and developers leverage Asset Management building blocks to modernise legacy Maximo implementations, build integrations, and extend Maximo with AI-powered automation.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Modernising legacy Maximo automation scripts and Java classes with Bob</li>
+<li>Designing Maximo integration architectures with ERP, IoT, and SCADA systems</li>
+<li>Building and deploying custom automation scripts and business rules</li>
+<li>Implementing Bob-powered agents for Maximo operational workflows</li>
+<li>Establishing governance and code standards for Maximo development</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Accelerated script modernization with AI-generated conversion and recommendations</li>
+<li>Reusable Building Block accelerators reducing implementation time</li>
+<li>Automated test script generation improving code quality</li>
+<li>Standardised integration patterns across Maximo deployments</li>
+</ul>
+
+</details>
+
+### Real-World Scenarios
+
+#### Scenario 1: Legacy Automation Script Modernization
+
+**Challenge**: A utilities company has hundreds of legacy Maximo Java automation scripts that are difficult to maintain, lack documentation, and cannot be tested with modern CI/CD pipelines.
+
+**Solution**: Bob-powered automation script modernization converts all Java classes to modern Jython/JavaScript, generates test scripts, and produces detailed conversion reports.
+
+**Implementation**:
+```
+Use skill maximo-java-conversion to convert all Java files in java-input/ to Jython
+
+Use skill maximo-script-modernization to analyse MaintenanceValidator.py and recommend improvements
+```
+
+**Results**:
+
+<ul>
+<li>✅ <strong>Time Savings</strong>: 85% reduction in manual script migration effort</li>
+<li>✅ <strong>Quality</strong>: Automated test script generated alongside every converted script</li>
+<li>✅ <strong>Compliance</strong>: Security best practices enforced — SQL injection prevention, input validation</li>
+<li>✅ <strong>Maintainability</strong>: Full conversion reports with before/after comparisons for every script</li>
+</ul>
+
+#### Scenario 2: Voice-Enabled Field Operations
+
+**Challenge**: Industrial field technicians working in noisy, high-hazard environments cannot safely use mobile devices to manage work orders, leading to delayed updates and data quality issues.
+
+**Solution**: A Bob-powered voice agent enables hands-free work order creation, update, and closure through natural language commands integrated with Maximo Manage APIs.
+
+**Benefits**:
+
+<ul>
+<li>Hands-free work order management in industrial environments</li>
+<li>Real-time work order state updates without leaving the work site</li>
+<li>Reduced data entry errors through AI-powered natural language understanding</li>
+<li>Faster job execution with immediate access to work instructions and asset history</li>
+</ul>
+
+#### Scenario 3: Predictive Maintenance for Critical Assets
+
+**Challenge**: A manufacturing company experiences frequent unplanned failures of critical production equipment, resulting in costly downtime and emergency maintenance callouts.
+
+**Solution**: Maximo Monitor and Predict analyse IoT sensor data in real time, triggering AI-driven work orders in Maximo Manage before failures occur.
+
+**Benefits**:
+
+<ul>
+<li>Unplanned downtime reduced by proactive AI-generated maintenance alerts</li>
+<li>Maintenance scheduled during planned windows, eliminating emergency callouts</li>
+<li>Asset lifespan extended through condition-based intervention</li>
+<li>Maintenance cost reduced through optimised parts and labour scheduling</li>
+</ul>
 
 ---
 
-### **Maximo Automation Script Modernization**
+## Products & Services
 
-[View Bob Skill](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills) | [View Asset](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset)
+#### Product 1: IBM Maximo Application Suite (MAS)
 
-Developed a Bob-powered analysis and modernization workflow that ingests existing Maximo automation scripts, performs static analysis, identifies optimization opportunities, reviews code quality, and recommends modernization improvements aligned with current best practices and maintainability standards.
+**Description**: IBM Maximo Application Suite is an integrated cloud-native platform for managing the complete lifecycle of physical assets. MAS unifies asset management, work management, monitoring, inspection, and reliability operations — powered by AI and deployed on Red Hat OpenShift.
 
-**Key capabilities:**
+**Key Features:**
+- Unified asset lifecycle management — from acquisition to decommission
+- AI-powered predictive maintenance with Maximo Predict
+- Real-time IoT asset health monitoring with Maximo Monitor
+- Mobile-enabled field workforce with Maximo Mobile
+- Regulatory compliance and automated inspection management
 
+**Links:**
+- 📖 [Documentation](https://www.ibm.com/docs/en/mas-cd/continuous-delivery)
+- 🚀 [Get Started](https://www.ibm.com/products/maximo)
+- 💻 [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management)
+
+---
+
+#### Product 2: IBM Bob AI (ADLC Partner)
+
+**Description**: IBM Bob is the AI-powered development lifecycle companion (ADLC partner) embedded across the Maximo delivery lifecycle. Bob accelerates automation script modernization, builds conversational agents, orchestrates multi-step operational workflows, and provides contextual knowledge retrieval — all grounded in Maximo domain knowledge.
+
+**Key Features:**
+- Maximo automation script analysis and modernization
+- Legacy Java class conversion to Jython, JavaScript, Nashorn, ECMAScript, and MBR
+- Voice and conversational agent development for Maximo operations
+- Domain-specific knowledge ingestion and semantic retrieval
+- Multi-turn workflow orchestration for complex Maximo operational processes
+
+**Links:**
+- 📖 [Bob Skills Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills)
+- 🚀 [Building Blocks — Asset Management](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management)
+- 💻 [Asset Management Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets)
+
+---
+
+## Core Concepts
+
+### Fundamental Concepts
+
+#### Concept 1: Asset Lifecycle Management
+
+Asset Lifecycle Management is the practice of tracking, maintaining, and optimising physical assets from acquisition through decommission using integrated data, automated workflows, and AI-powered analytics. IBM Maximo provides the platform to manage every stage of this lifecycle within a single system of record.
+
+**Key Points:**
+- Assets are tracked across their full lifecycle — procurement, deployment, maintenance, and retirement
+- Work orders, inspection records, and maintenance history are centralised in Maximo Manage
+- Asset health data from IoT sensors feeds real-time monitoring and AI-driven prediction
+- Compliance records are automatically generated and maintained for regulatory audit readiness
+
+**Example:**
+```
+Asset Lifecycle in Maximo:
+┌─────────────┐
+│ Acquisition │ → Asset Record Created in Maximo Manage
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Deployment  │ → Installation, Commissioning, Baseline Established
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Operations  │ → Work Orders, Inspections, IoT Monitoring, PM Schedules
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Maintenance │ → Corrective, Preventive, Condition-Based, Predictive
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Decommission│ → Retirement, Disposal, Regulatory Sign-Off
+└─────────────┘
+```
+
+#### Concept 2: Preventive vs Predictive Maintenance
+
+Understanding the difference between preventive (schedule-driven) and predictive (condition-driven) maintenance is fundamental to implementing an effective Maximo strategy.
+
+**Preventive Maintenance**:
+- Schedule-based maintenance at fixed intervals
+- Reduces risk of failure through proactive replacement
+- Can lead to over-maintenance — servicing assets before needed
+- Best for low-cost assets or those without reliable sensor data
+
+**Predictive Maintenance**:
+- Condition-based maintenance triggered by asset health data
+- AI analyses sensor readings, failure patterns, and historical data
+- Maintenance only performed when condition thresholds indicate risk
+- Best for high-value, critical assets with IoT sensor coverage
+
+**Visual Representation:**
+```
+Preventive (Schedule-Driven):
+┌─────────────┐
+│ PM Schedule │
+│ (Time-Based)│ → Trigger at Interval → Work Order Created
+│ (What)      │
+└─────────────┘
+
+Predictive (Condition-Driven):
+┌─────────────┐
+│ IoT Sensor  │ → Maximo Monitor → AI Failure Score → Alert
+│ Data        │ → Maximo Predict → Work Order Triggered
+│ (How)       │
+└─────────────┘
+```
+
+#### Concept 3: Automation Script Architecture in Maximo
+
+Maximo automation scripts are server-side code modules that extend Maximo business logic without modifying the core platform. They execute on specific events — object saves, status transitions, field validation — and are the primary customisation mechanism in Maximo Manage.
+
+**Key Points:**
+- Scripts execute within the Maximo server JVM — no separate deployment required
+- Supported languages: Python (Jython 2.7.4), JavaScript/ECMAScript (Nashorn 15.6), Maximo Business Rules
+- Scripts access Maximo business objects (MBOs) through the MboSet API
+- Bob AI can analyse, modernise, convert, and generate test scripts for all supported languages
+- Security best practices must be enforced: SQL injection prevention, input validation, MXLoggerFactory error handling
+
+**Script Execution Flow:**
+```
+┌─────────────────┐
+│  Maximo Event   │
+│  (Save, Status  │
+│   Transition,   │
+│   Field Change) │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  Launch Point   │
+│  (Script        │
+│   Trigger       │
+│   Configuration)│
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  Automation     │
+│  Script         │
+│  (Jython / JS / │
+│   MBR)          │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  MBO / MboSet   │
+│  (Maximo        │
+│   Business      │
+│   Object API)   │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  Maximo         │
+│  Database       │
+└─────────────────┘
+```
+
+### How It Works
+
+```
+┌─────────────────┐
+│  Asset Event /  │
+│  Technician     │
+│  Request        │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  Bob AI Layer   │
+│  (Voice Agent / │
+│   Workflow      │
+│   Orchestrator) │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  Maximo Manage  │
+│  (Work Orders,  │
+│   Assets,       │
+│   Inventory)    │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  Maximo Monitor │
+│  / Predict      │
+│  (IoT Health,   │
+│   AI Analytics) │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  Enterprise     │
+│  Systems        │
+│  (ERP, SCADA,   │
+│   GIS)          │
+└─────────────────┘
+```
+
+---
+
+## Download Skills
+
+Download pre-built skills to extend your Asset Management capabilities with Bob AI Assistant:
+
+| Skill Name | Description | Download Link | Version |
+|------------|-------------|---------------|---------|
+| **Maximo Script Modernization** | AI-powered analysis and modernization of legacy Maximo automation scripts with code quality review and recommendations | [📥 Download](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills) | v1.0.0 |
+| **Maximo Java Conversion** | Automated conversion of legacy Maximo Java classes to Jython, JavaScript, Nashorn, ECMAScript, and MBR with test script generation | [📥 Download](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills) | v1.0.0 |
+
+### What's Included in Asset Management Skills
+
+**Maximo Script Modernization Skill:**
 - Automated ingestion and parsing of legacy Maximo automation scripts
-- Static code analysis to identify technical debt, anti-patterns, and optimization opportunities
-- AI-generated modernization recommendations aligned to current Maximo best practices
+- Static code analysis for technical debt and anti-pattern identification
+- AI-generated modernization recommendations aligned to Maximo best practices
 - Code quality review with actionable remediation guidance
+- Batch processing support for large script libraries
+
+**Maximo Java Conversion Skill:**
+- Conversion of Maximo Java classes to Jython, JavaScript, Nashorn, ECMAScript, and MBR
+- Business logic preservation — validation rules, field updates, status transitions, MboSet patterns
+- Automated test script generation for every converted script
+- Comprehensive conversion reports with before/after comparisons
+- Security best practices enforcement: SQL injection prevention, input validation, MXLoggerFactory error handling
+
+### How to Install Skills
+
+1. **Download the skill package** from the link above
+2. **Extract the contents** to your Bob skills directory:
+   ```bash
+   cd ~/Downloads
+   unzip maximo-script-modernization.zip -d ~/.bob/skills/maximo-script-modernization
+   unzip maximo-java-conversion.zip -d ~/.bob/skills/maximo-java-conversion
+   ```
+3. **Verify installation**:
+   ```bash
+   ls ~/.bob/skills/
+   # Should show: maximo-script-modernization/ maximo-java-conversion/
+   ```
+4. **Restart Bob** to load the new skills
+5. **Quick start** — place `.java` files in `java-input/` and ask Bob:
+   ```
+   Use skill maximo-java-conversion to convert WorkOrderValidator.java to Jython
+   ```
+
+### Skills Resources
+
+- 📦 [Building Blocks — Asset Management Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management)
+- 📖 [Skills Development Guide](../../ibm-bob/skills/contributing_to_skills.md)
+- 💻 [Asset Management Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset)
 
 ---
 
-### **Maximo Java Conversion**
+## Assets
 
-[View Bob Skill](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills) | [View Asset](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset)
+### Demo Videos
 
-Developed a Bob-powered conversion workflow that transforms legacy Maximo Java classes into modern automation scripts across multiple target languages — preserving all business logic while enforcing current Maximo security, performance, and error-handling best practices.
+Explore our comprehensive video library to see Asset Management with IBM Maximo and Bob in action:
 
-**Key capabilities:**
+#### Getting Started Videos
 
-- Conversion of legacy Maximo Java classes to automation scripts in Python (Jython), JavaScript, Nashorn, ECMAScript, and Maximo Business Rules (MBR)
-- Business logic preservation — retains validation rules, field updates, status transitions, and MboSet patterns
-- Automated test script generation alongside every converted script
-- Comprehensive conversion reports with mandatory rule validation and before/after comparisons
-- Batch conversion support — convert multiple Java files in a single operation
-- Security best practices enforced: SQL injection prevention, input validation, MXLoggerFactory error handling
+| Video Title | Description | Duration | Link |
+|-------------|-------------|----------|------|
+| **Maximo Automation Script Modernization with Bob** | Complete walkthrough of AI-powered script analysis, Java conversion, and test generation for IBM Maximo | TBC | [▶️ View on GitHub](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management) |
+| **Work Order Voice Agent for Maximo** | Demonstration of hands-free work order management using Bob-powered voice agent and Maximo Manage APIs | TBC | [▶️ View on GitHub](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management) |
 
-**Supported Target Languages:**
+### Additional Resources
 
-| Language | Engine | Version |
-|---|---|---|
-| Python (Jython) | Jython | 2.7.4 |
-| JavaScript | Nashorn | 15.6 |
-| Nashorn | Nashorn | 15.6 |
-| ECMAScript | Nashorn | 15.6 |
-| Maximo Business Rules (MBR) | MBR | 1.0 |
-
-**Quick Start with IBM Bob:**
-```
-Use skill maximo-java-conversion to convert WorkOrderValidator.java to Jython
-
-Use skill maximo-java-conversion to convert all Java files in java-input/ to JavaScript
-```
-
-Place your `.java` files in `java-input/` before asking Bob. Converted scripts and conversion reports are generated automatically.
+- 🎥 [YouTube Channel](https://youtube.com/@ibm-building-blocks) - Subscribe for the latest IBM Building Blocks videos
+- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/asset-management/README.md) - Complete IBM Maximo Application Suite guide with implementation examples
+- 💻 [Asset Management Code Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset) - Reusable code assets for Maximo modernization
 
 ---
 
-### **Maximo Knowledge Hub**
+## Call to Action
 
-Designed and implemented a centralised knowledge platform that serves as a unified source of truth for Maximo-related operational, technical, and external reference data. The solution enables contextual knowledge retrieval, accelerates troubleshooting, and supports AI-assisted workflows for enterprise Maximo use cases.
+### Ready to Build with Asset Management?
 
-**Key capabilities:**
+Take the next step with this Building Block by choosing the path that best fits your needs:
 
-- Centralised ingestion of Maximo operational, technical, and reference documentation
-- Contextual retrieval using semantic search and AI-assisted query resolution
-- Accelerated troubleshooting for field technicians and operations teams
-- Foundation layer for downstream AI agent workflows
+- **Explore the fundamentals** in the [Overview](#overview), [Architecture](#architecture), and [Core Concepts](#core-concepts) sections
+- **Download reusable skills** from [Download Skills](#download-skills) to get Bob working with Maximo immediately
+- **Watch the demo videos** to see Maximo automation and Bob AI agents in action
+- **Extend and customise** using your own Maximo automation scripts and Bob workflow agents
 
----
-
-### **Work Order Voice Agent**
-
-Built an AI-driven voice-enabled agent using Bob capabilities to support hands-free work order interactions, enabling users to create, update, retrieve, and manage Maximo work orders through conversational interfaces.
-
-**Key capabilities:**
-
-- Voice-driven work order creation, update, retrieval, and closure
-- Hands-free field operations support for technicians in industrial environments
-- Natural language understanding for Maximo work order data structures
-- Integration with Maximo Manage APIs for real-time work order state management
+**Get Started Now:**
+- 🚀 [Download Maximo Script Modernization Skill](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills)
+- 📥 [Download Maximo Java Conversion Skill](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills)
+- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/asset-management/README.md)
 
 ---
 
-### **Data Ingestion Framework with Bob**
-
-Implemented a domain-specific ingestion framework tailored for Bentley and Maximo integrations, enabling structured and unstructured enterprise data onboarding, transformation, and preparation for downstream AI and operational workflows.
-
-**Key capabilities:**
-
-- Domain-specific data ingestion pipeline for Bentley and Maximo data sources
-- Support for structured and unstructured enterprise data formats
-- Data transformation and normalisation for downstream AI consumption
-- Foundation layer for knowledge management and AI-assisted operations
-
----
-
-### **Multi-turn Workflow Agent for Maximo Operations**
-
-Developed a multi-turn conversational workflow agent capable of orchestrating work order management and related operational activities through contextual task execution, guided workflows, and conversational state management.
-
-**Key capabilities:**
-
-- Multi-turn conversational state management for complex work order workflows
-- Orchestration of end-to-end work order lifecycle activities through guided dialogue
-- Contextual task execution aligned to Maximo operational processes
-- Extensible agent framework supporting additional Maximo operational workflows
-
----
-
-## **Deployment Architecture**
-
-Maximo Application Suite is delivered as a containerised platform running on **Red Hat OpenShift**, supporting:
-
-- **IBM Cloud** (managed OpenShift)
-- **On-Premises** (self-managed OpenShift)
-- **Hybrid Cloud** (split workloads across environments)
-- **Hyperscaler Clouds** (AWS, Azure, GCP via OpenShift)
-
-This cloud-native foundation ensures scalability, automated upgrades, and consistent security across deployment models.
-
----
-
-## **Operational Benefits**
-
-**Enterprises gain:**
-
-| Benefit | Outcome |
-|---------|---------|
-| Reduced unplanned downtime | Higher asset availability and production continuity |
-| Lower total maintenance cost | Optimised labour, parts, and contractor spend |
-| Extended asset lifespan | Maximised return on capital investment |
-| Improved compliance posture | Reduced regulatory risk and audit preparation time |
-| Real-time asset visibility | Faster fault detection and decision-making |
-| AI-driven maintenance decisions | Shift from reactive to proactive operations |
-| Mobile-enabled field workforce | Faster job execution and real-time data capture |
-| Unified platform consolidation | Elimination of point-solution sprawl and data silos |
-
----
-
-> **Strategic Outcome:** IBM Maximo Application Suite transforms asset-intensive enterprises from reactive, cost-driven maintenance operations into proactive, AI-powered asset performance management — maximising uptime, reducing lifecycle costs, and ensuring continuous compliance at scale.
-
----
-
-## **Related Capabilities**
+## Related Capabilities
 
 **Within Build and Deploy:**
 
