@@ -482,7 +482,6 @@ Download pre-built skills to extend your Infrastructure as Code capabilities wit
 
 - 📦 [Building Blocks Skills Repository](https://github.com/ibm-self-serve-assets/building-blocks)
 - 📖 [Skills Development Guide](../../ibm-bob/skills/contributing_to_skills.md)
-- 💬 [Community Forum](https://community.ibm.com/building-blocks)
 
 ---
 
@@ -502,7 +501,6 @@ Explore our comprehensive video library to see Infrastructure as Code in action:
 
 - 🎥 [YouTube Channel](https://youtube.com/@ibm-building-blocks) - Subscribe for latest videos
 - 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/Iaas/README.md) - Complete Terraform and Ansible automation guide
-- 💬 [Community Discussions](https://community.ibm.com/building-blocks) - Ask questions and share experiences
 
 ---
 
@@ -521,7 +519,6 @@ Take the next step with this Building Block by choosing the path that best fits 
 - 🚀 [Download Ansible Skill](https://github.com/ibm-self-serve-assets/building-blocks/raw/main/build-and-deploy/infrastructure-as-code/bob-skills/infrastructure-as-code-ansible/infrastructure-as-code-ansible.zip)
 - 📥 [Download Terraform Skill](https://github.com/ibm-self-serve-assets/building-blocks/raw/main/build-and-deploy/infrastructure-as-code/bob-skills/infrastructure-as-code-terraform/infrastructure-as-code-terraform.zip)
 - 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/Iaas/README.md)
-- 💬 [Join the Community](https://community.ibm.com/building-blocks)
 
 ---
 
@@ -540,11 +537,3 @@ Take the next step with this Building Block by choosing the path that best fits 
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Ensure infrastructure compliance
 
 ---
-
-<div align="center">
-
-**[Download Skills](#download-skills)** • **[Watch Demo](https://www.youtube.com/watch?v=o-gSbancvVM&t=1s)** • **[Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/Iaas/README.md)** • **[Community](https://community.ibm.com/building-blocks)**
-
-Made with ❤️ by IBM
-
-</div>

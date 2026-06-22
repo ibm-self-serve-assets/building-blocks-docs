@@ -471,7 +471,6 @@ Download pre-built skills to extend your Planning Analytics capabilities with Bo
 
 - 📦 [Building Blocks Skills Repository](https://github.com/ibm-self-serve-assets/building-blocks)
 - 📖 [Skills Development Guide](../../ibm-bob/skills/contributing_to_skills.md)
-- 💬 [Community Forum](https://community.ibm.com/building-blocks)
 
 ---
 
@@ -516,7 +515,6 @@ Extend functionality with custom modes tailored for Planning Analytics workflows
 
 - 🔧 [Building Blocks Modes Repository](https://github.com/ibm-self-serve-assets/building-blocks)
 - 📖 [Modes Development Guide](../../ibm-bob/skills/contributing_to_skills.md)
-- 💬 [Community Contributions](https://community.ibm.com/building-blocks)
 
 ---
 
@@ -602,7 +600,6 @@ Take the next step with this Building Block by choosing the path that best fits 
 - 🚀 [Download Planning Analytics Skill](https://github.com/ibm-self-serve-assets/building-blocks/raw/main/optimize/budget-and-forecasting/bob-skills/planning-analytics-skill.zip)
 - 📥 [Download Planning Analytics Mode](https://github.com/ibm-self-serve-assets/building-blocks/raw/main/optimize/budget-and-forecasting/bob-modes/base-modes/planning-analytics-mode.zip)
 - 📊 [Download Sample Dataset](https://github.com/ibm-self-serve-assets/building-blocks/raw/main/optimize/budget-and-forecasting/assets/FPA_Variance_Analysis.zip)
-- 💬 [Join the Community](https://community.ibm.com/building-blocks)
 
 ---
 
@@ -624,7 +621,7 @@ Take the next step with this Building Block by choosing the path that best fits 
 
 <div align="center">
 
-**[Get Started](#how-to-get-started)** • **[Download Skills](#download-skills)** • **[Download Modes](#download-custom-modes)** • **[Tutorials](#tutorials)** • **[Community](https://community.ibm.com/building-blocks)**
+**[Download Skills](#download-skills)** • **[Download Modes](#download-custom-modes)** • **[Assets](#assets)**
 
 Made with ❤️ by IBM
 
