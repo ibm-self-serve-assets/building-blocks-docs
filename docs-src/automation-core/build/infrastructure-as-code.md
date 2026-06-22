@@ -86,7 +86,7 @@ The solution addresses the complexity of managing dynamic, distributed cloud-nat
 
 
 ```
-/Users/sunilgajula/Downloads/Infrstructure_as_code.png
+<img width="600" height="500" alt="Infrstructure_as_code" src="https://github.com/user-attachments/assets/9e33c93c-ffff-43b5-9d27-9c054bbcd1ec" />
 
 ```
 
