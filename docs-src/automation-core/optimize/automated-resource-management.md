@@ -84,7 +84,7 @@ Unlike traditional monitoring solutions that simply track utilization metrics, A
 
 ### High-Level Architecture
 
-<img width="500" height="600" alt="Auto_Resource_Mgmt" src="https://github.com/user-attachments/assets/5493ba13-c895-48c5-963b-8926285fa2ad" />
+<img width="500" height="700" alt="Auto_Resource_Mgmt" src="https://github.com/user-attachments/assets/5493ba13-c895-48c5-963b-8926285fa2ad" />
 
 
 ### System Components
