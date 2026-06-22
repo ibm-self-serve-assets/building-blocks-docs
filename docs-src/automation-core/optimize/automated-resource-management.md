@@ -84,30 +84,8 @@ Unlike traditional monitoring solutions that simply track utilization metrics, A
 
 ### High-Level Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                     Application & Workload Layer                     │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐              │
-│  │ Microservices│  │  Containers  │  │   VMs/Apps   │              │
-│  └──────────────┘  └──────────────┘  └──────────────┘              │
-└─────────────────────────────────────────────────────────────────────┘
-                              ↓ Telemetry & Metrics
-┌─────────────────────────────────────────────────────────────────────┐
-│                   Automated Resource Management                      │
-│  ┌──────────────────────────────────────────────────────────────┐  │
-│  │              Demand Analysis & Decision Engine                │  │
-│  │  • Real-time demand monitoring  • Predictive analytics       │  │
-│  │  • Constraint evaluation        • Action recommendation      │  │
-│  └──────────────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────────────┘
-                              ↓ Optimization Actions
-┌─────────────────────────────────────────────────────────────────────┐
-│                      Infrastructure Layer                            │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐              │
-│  │  Kubernetes  │  │  Hypervisors │  │ Cloud APIs   │              │
-│  └──────────────┘  └──────────────┘  └──────────────┘              │
-└─────────────────────────────────────────────────────────────────────┘
-```
+<img width="500" height="600" alt="Auto_Resource_Mgmt" src="https://github.com/user-attachments/assets/5493ba13-c895-48c5-963b-8926285fa2ad" />
+
 
 ### System Components
 
