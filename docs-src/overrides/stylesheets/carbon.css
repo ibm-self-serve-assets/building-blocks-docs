@@ -11,6 +11,19 @@
 }
 
 /* =========================================================
+   SHOW SITE TITLE IN HEADER, HIDE FROM NAVIGATION
+   ========================================================= */
+/* Show site title in the blue header bar */
+.md-header__title {
+  display: block !important;
+}
+
+/* Hide site name from sidebar navigation only */
+.md-nav--primary .md-nav__title {
+  display: none;
+}
+
+/* =========================================================
    LIGHT MODE (Carbon Gray 10)
    ========================================================= */
 [data-md-color-scheme="default"] {

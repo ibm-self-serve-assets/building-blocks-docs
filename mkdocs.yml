@@ -45,7 +45,7 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Building Blocks:
+  - Bob<span style="color:#0f62fe">+</span> Building Blocks:
       - Overview: index.md
   - AI:
       - Overview: ai-core/index.md
