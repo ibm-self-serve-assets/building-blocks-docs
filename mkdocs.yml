@@ -46,7 +46,7 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Bob<span style="color:#0f62fe">+</span> IBM Technology Building Blocks:
+  - Bob+ IBM Technology Building Blocks:
       - Overview: index.md
   - AI:
       - Overview: ai-core/index.md
