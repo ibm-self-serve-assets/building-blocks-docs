@@ -1,4 +1,4 @@
-# Contributing your own Skills for the IBM Bob<span style="color:#0f62fe">+</span> Building Blocks
+# Contributing your own Skills for the Bob<span style="color:#0f62fe">+</span> IBM Technology Building Blocks
 
 Start by reading [Bob's Skills documentation](https://bob.ibm.com/docs/ide/features/skills) plus these [skill authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices).
 
@@ -10,7 +10,7 @@ Instead, these Skills encode the local, up-to-date know-how that does-not-yet re
 
 A well-written skill captures the parts of engineering practice that are usually scattered across docs, repos, examples, Slack threads, and senior-engineer muscle memory. A good Skill tells Bob what inputs are required, what rules to follow, necessary syntax elements, but most important, a good skill ensures Bob let's IBM engineers, partners and customers focus more on the use case and less on the underlying complexity of modern agentic applications.
 
-If you want to contribute to Skills for IBM Bob<span style="color:#0f62fe">+</span> Building Blocks, please open a pull request with your edits/submissions. Any other questions, contact us on [#build-engineering-ww](https://ibm.enterprise.slack.com/archives/C08HV6MN4RE)
+If you want to contribute to Skills for Bob<span style="color:#0f62fe">+</span> IBM Technology Building Blocks, please open a pull request with your edits/submissions. Any other questions, contact us on [#build-engineering-ww](https://ibm.enterprise.slack.com/archives/C08HV6MN4RE)
 
 ## Skills vs Modes
 

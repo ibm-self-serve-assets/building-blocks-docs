@@ -27,6 +27,7 @@ extra_css:
   - stylesheets/carbon.css
 
 extra_javascript:
+  - javascripts/nav-styling.js
   - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
 
 markdown_extensions:
@@ -45,7 +46,7 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Bob<span style="color:#0f62fe">+</span> Building Blocks:
+  - Bob<span style="color:#0f62fe">+</span> IBM Technology Building Blocks:
       - Overview: index.md
   - AI:
       - Overview: ai-core/index.md
