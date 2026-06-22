@@ -136,65 +136,77 @@ sequenceDiagram
 <details>
 <summary><strong>👨‍💻 Platform Engineers</strong></summary>
 
-Infrastructure as Code is designed for platform engineers who need to provision and manage cloud infrastructure at scale with consistency and reliability.
+<p>Infrastructure as Code is designed for platform engineers who need to provision and manage cloud infrastructure at scale with consistency and reliability.</p>
 
-**Common Tasks:**
+<p><strong>Common Tasks:</strong></p>
 
-- Provisioning OpenShift clusters across multiple regions
-- Managing VPC networking and security configurations
-- Implementing infrastructure standards and policies
-- Automating environment creation for development teams
-- Managing infrastructure state and drift detection
+<ul>
+<li>Provisioning OpenShift clusters across multiple regions</li>
+<li>Managing VPC networking and security configurations</li>
+<li>Implementing infrastructure standards and policies</li>
+<li>Automating environment creation for development teams</li>
+<li>Managing infrastructure state and drift detection</li>
+</ul>
 
-**Benefits:**
+<p><strong>Benefits:</strong></p>
 
-- Eliminate manual infrastructure provisioning errors
-- Reduce cluster provisioning time from days to hours
-- Ensure consistent infrastructure across all environments
-- Implement infrastructure changes through code review processes
+<ul>
+<li>Eliminate manual infrastructure provisioning errors</li>
+<li>Reduce cluster provisioning time from days to hours</li>
+<li>Ensure consistent infrastructure across all environments</li>
+<li>Implement infrastructure changes through code review processes</li>
+</ul>
 
 </details>
 
 <details>
 <summary><strong>🏢 DevOps Teams</strong></summary>
 
-DevOps teams use Infrastructure as Code to automate the entire application lifecycle from infrastructure provisioning to application deployment and operations.
+<p>DevOps teams use Infrastructure as Code to automate the entire application lifecycle from infrastructure provisioning to application deployment and operations.</p>
 
-**Common Tasks:**
+<p><strong>Common Tasks:</strong></p>
 
-- Deploying microservices applications to Kubernetes
-- Managing application configurations across environments
-- Implementing CI/CD pipelines for infrastructure and applications
-- Automating Day-2 operations (updates, scaling, backups)
-- Coordinating infrastructure and application changes
+<ul>
+<li>Deploying microservices applications to Kubernetes</li>
+<li>Managing application configurations across environments</li>
+<li>Implementing CI/CD pipelines for infrastructure and applications</li>
+<li>Automating Day-2 operations (updates, scaling, backups)</li>
+<li>Coordinating infrastructure and application changes</li>
+</ul>
 
-**Benefits:**
+<p><strong>Benefits:</strong></p>
 
-- Unified automation for infrastructure and applications
-- Faster deployment cycles with automated pipelines
-- Reduced operational overhead through automation
-- Improved collaboration between development and operations
+<ul>
+<li>Unified automation for infrastructure and applications</li>
+<li>Faster deployment cycles with automated pipelines</li>
+<li>Reduced operational overhead through automation</li>
+<li>Improved collaboration between development and operations</li>
+</ul>
 
 </details>
 
 <details>
 <summary><strong>🎯 Cloud Architects</strong></summary>
 
-Cloud architects leverage Infrastructure as Code to design and implement scalable, secure, and compliant cloud architectures.
+<p>Cloud architects leverage Infrastructure as Code to design and implement scalable, secure, and compliant cloud architectures.</p>
 
-**Common Tasks:**
+<p><strong>Common Tasks:</strong></p>
 
-- Designing multi-region infrastructure architectures
-- Implementing security and compliance policies
-- Creating reusable infrastructure modules and templates
-- Establishing governance frameworks for cloud resources
+<ul>
+<li>Designing multi-region infrastructure architectures</li>
+<li>Implementing security and compliance policies</li>
+<li>Creating reusable infrastructure modules and templates</li>
+<li>Establishing governance frameworks for cloud resources</li>
+</ul>
 
-**Benefits:**
+<p><strong>Benefits:</strong></p>
 
-- Codify architectural best practices
-- Ensure compliance through automated policy enforcement
-- Accelerate architecture implementation
-- Maintain consistency across cloud deployments
+<ul>
+<li>Codify architectural best practices</li>
+<li>Ensure compliance through automated policy enforcement</li>
+<li>Accelerate architecture implementation</li>
+<li>Maintain consistency across cloud deployments</li>
+</ul>
 
 </details>
 

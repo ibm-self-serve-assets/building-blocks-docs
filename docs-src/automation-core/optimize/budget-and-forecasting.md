@@ -133,65 +133,77 @@ sequenceDiagram
 <details>
 <summary><strong>👨‍💼 Financial Analysts</strong></summary>
 
-IBM Planning Analytics Budget and Forecasting is designed for financial analysts who need to perform variance analysis, trend identification, and financial reporting without technical expertise.
+<p>IBM Planning Analytics Budget and Forecasting is designed for financial analysts who need to perform variance analysis, trend identification, and financial reporting without technical expertise.</p>
 
-**Common Tasks:**
+<p><strong>Common Tasks:</strong></p>
 
-- Monthly budget vs actual variance analysis
-- Quarterly forecast accuracy assessment
-- Year-over-year performance comparison
-- Material variance investigation and explanation
-- Executive summary preparation
+<ul>
+<li>Monthly budget vs actual variance analysis</li>
+<li>Quarterly forecast accuracy assessment</li>
+<li>Year-over-year performance comparison</li>
+<li>Material variance investigation and explanation</li>
+<li>Executive summary preparation</li>
+</ul>
 
-**Benefits:**
+<p><strong>Benefits:</strong></p>
 
-- Eliminate manual data extraction and Excel manipulation
-- Reduce analysis time from hours to minutes
-- Focus on insights rather than data gathering
-- Produce professional reports automatically
+<ul>
+<li>Eliminate manual data extraction and Excel manipulation</li>
+<li>Reduce analysis time from hours to minutes</li>
+<li>Focus on insights rather than data gathering</li>
+<li>Produce professional reports automatically</li>
+</ul>
 
 </details>
 
 <details>
 <summary><strong>🏢 FP&A Teams</strong></summary>
 
-FP&A teams use IBM Planning Analytics Budget and Forecasting to streamline financial close processes, improve forecast accuracy, and deliver actionable insights to business leaders.
+<p>FP&A teams use IBM Planning Analytics Budget and Forecasting to streamline financial close processes, improve forecast accuracy, and deliver actionable insights to business leaders.</p>
 
-**Common Tasks:**
+<p><strong>Common Tasks:</strong></p>
 
-- Consolidated variance reporting across business units
-- Rolling forecast updates and accuracy tracking
-- Budget reforecasting and scenario analysis
-- Key performance indicator (KPI) monitoring
-- Cross-functional financial analysis
+<ul>
+<li>Consolidated variance reporting across business units</li>
+<li>Rolling forecast updates and accuracy tracking</li>
+<li>Budget reforecasting and scenario analysis</li>
+<li>Key performance indicator (KPI) monitoring</li>
+<li>Cross-functional financial analysis</li>
+</ul>
 
-**Benefits:**
+<p><strong>Benefits:</strong></p>
 
-- Standardized analysis methodology across the organization
-- Faster financial close cycles
-- Improved forecast accuracy through pattern detection
-- Enhanced collaboration with business partners
+<ul>
+<li>Standardized analysis methodology across the organization</li>
+<li>Faster financial close cycles</li>
+<li>Improved forecast accuracy through pattern detection</li>
+<li>Enhanced collaboration with business partners</li>
+</ul>
 
 </details>
 
 <details>
 <summary><strong>🎯 Business Executives</strong></summary>
 
-Business executives leverage IBM Planning Analytics Budget and Forecasting for on-demand access to financial insights, enabling data-driven decision-making without waiting for analyst reports.
+<p>Business executives leverage IBM Planning Analytics Budget and Forecasting for on-demand access to financial insights, enabling data-driven decision-making without waiting for analyst reports.</p>
 
-**Common Tasks:**
+<p><strong>Common Tasks:</strong></p>
 
-- Quick variance checks during business reviews
-- Performance trend monitoring
-- Key driver identification for strategic decisions
-- Executive dashboard consumption
+<ul>
+<li>Quick variance checks during business reviews</li>
+<li>Performance trend monitoring</li>
+<li>Key driver identification for strategic decisions</li>
+<li>Executive dashboard consumption</li>
+</ul>
 
-**Benefits:**
+<p><strong>Benefits:</strong></p>
 
-- Self-service access to financial insights
-- Real-time understanding of business performance
-- Faster response to emerging issues or opportunities
-- Reduced dependency on analyst availability
+<ul>
+<li>Self-service access to financial insights</li>
+<li>Real-time understanding of business performance</li>
+<li>Faster response to emerging issues or opportunities</li>
+<li>Reduced dependency on analyst availability</li>
+</ul>
 
 </details>
 
