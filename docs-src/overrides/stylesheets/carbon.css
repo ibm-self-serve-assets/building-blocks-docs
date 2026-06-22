@@ -194,15 +194,9 @@
 /* Target the first navigation item (Bob+ IBM Technology Building Blocks) */
 .md-nav--primary > .md-nav__list > .md-nav__item:first-child > .md-nav__link {
   font-weight: 600;
-  font-size: 0.85rem;
-}
-
-/* Style the + character in blue using ::after pseudo-element */
-.md-nav--primary > .md-nav__list > .md-nav__item:first-child > .md-nav__link::after {
-  content: none;
-}
-
-/* Use a more specific approach - replace text content with styled version */
-.md-nav--primary > .md-nav__list > .md-nav__item:first-child > .md-nav__link {
-  position: relative;
+  font-size: 0.75rem;
+  white-space: normal !important;
+  line-height: 1.3;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
