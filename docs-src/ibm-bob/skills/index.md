@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="./skills.css">
 
-# Skills for the IBM Building Blocks
+# Skills for the IBM Bob<span style="color:#0f62fe">+</span> Building Blocks
 
-This collection of [Skills for IBM Bob](https://bob.ibm.com/docs/ide/features/skills) provides IBM Bob with the expertise to quickly build applications using the [IBM Building Blocks](../../index.md).   Each skill focuses on a specific Building Block and contains task-specific instructions, code patterns, examples and constraints Bob should follow when doing engineering work.
+This collection of [Skills for IBM Bob](https://bob.ibm.com/docs/ide/features/skills) provides IBM Bob with the expertise to quickly build applications using the [IBM Bob<span style="color:#0f62fe">+</span> Building Blocks](../../index.md).   Each skill focuses on a specific Building Block and contains task-specific instructions, code patterns, examples and constraints Bob should follow when doing engineering work.
 
- The Building Blocks are a community effort.  Learn more about [contributing your Skills for IBM Building Blocks.](contributing_to_skills.md)
+ The Building Blocks are a community effort.  Learn more about [contributing your Skills for IBM Bob<span style="color:#0f62fe">+</span> Building Blocks.](contributing_to_skills.md)
 
 ## How to install the Skills
 The Skills have been packed into a single .zip that you can easily download and install. Go to the [skills.zip page](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills.zip) and click the `Download raw file` icon at the upper-right of the page.  Copy all skill folders at either the global, `~/.bob/skills`, or project-level, `<project>/.bob/skills`

@@ -1,8 +1,8 @@
-# IBM Building Blocks Workshop
+# IBM Bob<span style="color:#0f62fe">+</span> Building Blocks Workshop
 
-Welcome to the IBM Building Blocks Workshop.
+Welcome to the IBM Bob<span style="color:#0f62fe">+</span> Building Blocks Workshop.
 
-In this session, you will explore advanced techniques for using IBM Bob to ideate and design partner-centric use cases built around IBM Building Blocks. You will learn how to develop multi-agent, modern web applications that leverage these building blocks to solve real-world business problems.
+In this session, you will explore advanced techniques for using IBM Bob to ideate and design partner-centric use cases built around IBM Bob<span style="color:#0f62fe">+</span> Building Blocks. You will learn how to develop multi-agent, modern web applications that leverage these building blocks to solve real-world business problems.
 
 The workshop also covers how to instrument these applications using IBM’s automation portfolio to gain deep observability, monitor system behavior, and optimize performance in production environments. By the end, you will have a practical understanding of how to design, build, deploy, and continuously improve enterprise-grade solutions using IBM technologies.
 

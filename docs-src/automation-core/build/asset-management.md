@@ -465,7 +465,7 @@ Explore our comprehensive video library to see Asset Management with IBM Maximo 
 
 ### Additional Resources
 
-- 🎥 [YouTube Channel](https://youtube.com/@ibm-building-blocks) - Subscribe for the latest IBM Building Blocks videos
+- 🎥 [YouTube Channel](https://youtube.com/@ibm-building-blocks) - Subscribe for the latest IBM Bob<span style="color:#0f62fe">+</span> Building Blocks videos
 - 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/asset-management/README.md) - Complete IBM Maximo Application Suite guide with implementation examples
 - 💻 [Asset Management Code Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset) - Reusable code assets for Maximo modernization
 
