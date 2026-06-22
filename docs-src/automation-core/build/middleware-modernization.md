@@ -1,9 +1,5 @@
 # Code Modernization
 
-> **Version**: 1.0.0 | **Last Updated**: 2026-06-22 | **Status**: Stable
-
----
-
 ## Overview
 
 Code Modernization is a comprehensive transformation platform that enables enterprises to refactor legacy applications, codebases, middleware, and integration layers into modern, cloud-native architectures through AI-powered analysis, automated transformations, and systematic migration strategies.
