@@ -162,3 +162,15 @@
   background-color: var(--md-primary-bg-color);
 }
 
+
+/* =========================================================
+   HIDE SITE NAME FROM NAVIGATION
+   ========================================================= */
+.md-header__title {
+  display: none;
+}
+
+/* Hide site name from sidebar navigation */
+.md-nav--primary .md-nav__title {
+  display: none;
+}

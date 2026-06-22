@@ -496,13 +496,3 @@ Take the next step with this Building Block by choosing the path that best fits 
 
 - [Infrastructure as Code](../build/infrastructure-as-code.md) - Automate resource provisioning
 - [Non-human Identity](../secure/non-human-identity.md) - Secure automated resource management
-
----
-
-<div align="center">
-
-**[Get Started](https://www.ibm.com/products/turbonomic)** • **[Download Skills](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/optimize/automated-resource-mgmt/bob-skills)** • **[Download Modes](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/optimize/automated-resource-mgmt/bob-modes)** • **[Watch Demo](https://www.youtube.com/watch?v=_bwm6rOYy5Y)**
-
-Made with ❤️ by IBM
-
-</div>

@@ -1,6 +1,6 @@
-# IBM Building Blocks – Documentation
+# IBM Bob+ Building Blocks Docs
 
-**Building Blocks** are pre-built, embeddable application capabilities that span AI (Agents, Trust, and Data) and Automation (Build, Observe, and Optimize). They are designed to accelerate innovation by enabling teams to rapidly infuse advanced IBM capabilities directly into their applications.
+**Bob+ Building Blocks** are pre-built, embeddable application capabilities that span AI (Agents, Trust, and Data) and Automation (Build, Observe, and Optimize). They are designed to accelerate innovation by enabling teams to rapidly infuse advanced IBM capabilities directly into their applications.
 
 These **ready-to-use components** simplify the entire lifecycle—development, integration, deployment, and operation—allowing teams to deliver solutions faster and with significantly less complexity. Each Building Block acts as a reference implementation, demonstrating how IBM’s Data & AI and Automation platforms integrate seamlessly within real-world enterprise applications.
 

@@ -1,5 +1,5 @@
-site_name: IBM Building Blocks Documentation
-site_description: Modular IBM Building Blocks Documentation
+site_name: IBM Bob+ Building Blocks Docs
+site_description: IBM Bob+ Building Blocks Documentation
 site_url: https://ibm-self-serve-assets.github.io/building-blocks/
 
 docs_dir: docs-src
