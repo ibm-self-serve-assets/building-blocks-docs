@@ -86,9 +86,9 @@
     margin-right: 0;
   }
   
-  /* Fixed width left sidebar */
+  /* Fixed width left sidebar - increased to accommodate longer title */
   .md-sidebar--primary {
-    width: 15rem;
+    width: 18rem;
     flex-shrink: 0;
   }
   
@@ -194,9 +194,31 @@
 /* Target the first navigation item (Bob+ IBM Technology Building Blocks) */
 .md-nav--primary > .md-nav__list > .md-nav__item:first-child > .md-nav__link {
   font-weight: 600;
-  font-size: 0.75rem;
-  white-space: normal !important;
+  font-size: 0.72rem;
+  white-space: nowrap !important;
+  overflow: visible !important;
   line-height: 1.3;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  display: block !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+/* Ensure the navigation item itself doesn't constrain width */
+.md-nav--primary > .md-nav__list > .md-nav__item:first-child {
+  overflow: visible !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+/* Ensure the entire primary navigation allows overflow */
+.md-sidebar--primary {
+  overflow: visible !important;
+}
+
+.md-sidebar--primary .md-sidebar__scrollwrap {
+  overflow: visible !important;
 }
