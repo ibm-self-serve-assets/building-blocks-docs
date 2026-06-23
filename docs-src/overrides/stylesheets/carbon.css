@@ -11,14 +11,15 @@
 }
 
 /* =========================================================
-   SHOW SITE TITLE IN HEADER, HIDE FROM NAVIGATION
+   HEADER
    ========================================================= */
-/* Show site title in the blue header bar */
+
+/* Show site title in the blue header */
 .md-header__title {
   display: block !important;
 }
 
-/* Hide site name from sidebar navigation only */
+/* Hide site name from left navigation */
 .md-nav--primary .md-nav__title {
   display: none;
 }
@@ -26,14 +27,15 @@
 /* =========================================================
    LIGHT MODE (Carbon Gray 10)
    ========================================================= */
+
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color: #0f62fe;   /* Carbon Blue 60 */
+  --md-primary-fg-color: #0f62fe; /* Carbon Blue 60 */
   --md-primary-bg-color: #ffffff;
 
-  --md-accent-fg-color: #4589ff;   /* Carbon Blue 50 */
+  --md-accent-fg-color: #4589ff; /* Carbon Blue 50 */
 
-  --md-default-bg-color: #f4f4f4;  /* Carbon Gray 10 */
-  --md-default-fg-color: #161616;  /* Carbon Gray 100 */
+  --md-default-bg-color: #f4f4f4; /* Carbon Gray 10 */
+  --md-default-fg-color: #161616; /* Carbon Gray 100 */
 
   --md-typeset-color: #161616;
 }
@@ -41,21 +43,23 @@
 /* =========================================================
    DARK MODE (Carbon Gray 90 / 100)
    ========================================================= */
+
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #78a9ff;   /* Carbon Blue 40 */
-  --md-primary-bg-color: #161616;  /* Carbon Gray 100 */
+  --md-primary-fg-color: #78a9ff; /* Carbon Blue 40 */
+  --md-primary-bg-color: #161616; /* Carbon Gray 100 */
 
   --md-accent-fg-color: #4589ff;
 
-  --md-default-bg-color: #161616;  /* Carbon Gray 100 */
-  --md-default-fg-color: #f4f4f4;  /* Carbon Gray 10 */
+  --md-default-bg-color: #161616;
+  --md-default-fg-color: #f4f4f4;
 
-  --md-typeset-color: #e0e0e0;     /* Carbon Gray 30 */
+  --md-typeset-color: #e0e0e0;
 }
 
 /* =========================================================
    HEADER & NAVIGATION
    ========================================================= */
+
 .md-header {
   background-color: var(--md-primary-fg-color);
 }
@@ -63,7 +67,6 @@
 .md-tabs {
   background-color: var(--md-primary-fg-color);
 }
-
 
 /* =========================================================
    CONTENT
@@ -75,32 +78,31 @@
 }
 
 /* =========================================================
-   RESPONSIVE LAYOUT - FIXED LEFT NAV, EXPANDING CONTENT
+   RESPONSIVE LAYOUT
    ========================================================= */
 
-/* On large screens, control the grid layout */
 @media screen and (min-width: 76.25em) {
   .md-grid {
     max-width: none;
     margin-left: 0;
     margin-right: 0;
   }
-  
-  /* Fixed width left sidebar - increased to accommodate longer title */
+
+  /* Left sidebar */
   .md-sidebar--primary {
     width: 18rem;
     flex-shrink: 0;
   }
-  
-  /* Main content expands to fill available space */
+
+  /* Main content */
   .md-content {
     max-width: none;
     flex-grow: 1;
     margin-left: 1rem;
     margin-right: 1rem;
   }
-  
-  /* Right sidebar (TOC) gets smaller fixed width */
+
+  /* TOC */
   .md-sidebar--secondary {
     width: 12rem;
     flex-shrink: 0;
@@ -111,18 +113,18 @@
    NAVIGATION
    ========================================================= */
 
-/* Section headers (AI, Automation, etc.) — slightly larger */
+/* Section headers */
 .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
   font-size: 0.72rem;
   margin-top: 0.6rem;
 }
 
-/* Nav page links (Overview, Model Evaluation, etc.) — smaller */
+/* Navigation page links */
 .md-nav__link {
   font-size: 0.65rem;
 }
 
-/* Left nav padding from edge */
+/* Left nav padding */
 .md-sidebar--primary .md-sidebar__inner {
   padding-left: 0.5rem;
 }
@@ -130,6 +132,7 @@
 /* =========================================================
    LINKS
    ========================================================= */
+
 .md-typeset a {
   color: var(--md-accent-fg-color);
 }
@@ -141,6 +144,7 @@
 /* =========================================================
    CODE BLOCKS
    ========================================================= */
+
 .md-typeset code {
   border-radius: 4px;
   padding: 0.15em 0.35em;
@@ -152,8 +156,9 @@
 }
 
 /* =========================================================
-   ADMONITIONS (INFO, WARNING, TIP)
+   ADMONITIONS
    ========================================================= */
+
 .md-typeset .admonition,
 .md-typeset details {
   border-left: 4px solid var(--md-primary-fg-color);
@@ -163,6 +168,7 @@
 /* =========================================================
    TABLES
    ========================================================= */
+
 .md-typeset table:not([class]) {
   border-radius: 6px;
   overflow: hidden;
@@ -171,54 +177,7 @@
 /* =========================================================
    FOOTER
    ========================================================= */
+
 .md-footer {
   background-color: var(--md-primary-bg-color);
-}
-
-
-/* =========================================================
-   HIDE SITE NAME FROM NAVIGATION
-   ========================================================= */
-.md-header__title {
-  display: none;
-}
-
-/* Hide site name from sidebar navigation */
-.md-nav--primary .md-nav__title {
-  display: none;
-}
-
-/* =========================================================
-   STYLE THE NAVIGATION TITLE WITH BLUE +
-   ========================================================= */
-/* Target the first navigation item (Bob+ IBM Technology Building Blocks) */
-.md-nav--primary > .md-nav__list > .md-nav__item:first-child > .md-nav__link {
-  font-weight: 600;
-  font-size: 0.72rem;
-  white-space: nowrap !important;
-  overflow: visible !important;
-  line-height: 1.3;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  display: block !important;
-  width: auto !important;
-  max-width: none !important;
-}
-
-/* Ensure the navigation item itself doesn't constrain width */
-.md-nav--primary > .md-nav__list > .md-nav__item:first-child {
-  overflow: visible !important;
-  width: auto !important;
-  max-width: none !important;
-}
-
-/* Ensure the entire primary navigation allows overflow */
-.md-sidebar--primary {
-  overflow: visible !important;
-}
-
-.md-sidebar--primary .md-sidebar__scrollwrap {
-  overflow: visible !important;
 }
