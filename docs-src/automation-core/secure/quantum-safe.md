@@ -12,7 +12,7 @@ IBM Quantum Safe Explorer is a developer-focused tool that scans application sou
 
     For detailed implementation guides, code samples, and deployment assets, see:
     
-    **[Quantum-Safe](../../../build-and-deploy/quantum-safe/README.md)** - Complete IBM Quantum Safe Explorer integration guide with IBM Bob for quantum-resistant cryptography
+    **[Quantum-Safe](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/quantum-safe/README.md)** - Complete IBM Quantum Safe Explorer integration guide with IBM Bob for quantum-resistant cryptography
 ---
 
 ### **Typical Discoveries**
