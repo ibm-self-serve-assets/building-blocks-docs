@@ -79,5 +79,9 @@ Uses `LLMAsJudgeMetric` with `WxAIFoundationModel` as the judge.
 
 All scripts use the `ibm_watsonx_gov` SDK with `MetricsEvaluator` and `GenAIConfiguration`.
 
+## Bob Skills
+
+A [Bob skill for Real-Time Guardrails](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/real-time-guardrails) is available, giving Bob the expertise to add runtime safety and quality guardrails to Gen AI, RAG agents, and watsonx Orchestrate tools using watsonx.governance — Pass/Flag/Block at input, retrieval, generation, and output.
+
 !!! info "GitHub Repository"
     [Real-Time Guardrails Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/real-time-guardrails)

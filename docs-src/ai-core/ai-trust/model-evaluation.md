@@ -65,6 +65,10 @@ Evaluate predictive ML models deployed on IBM watsonx ML — scoring, confidence
 
 Both assets authenticate via IBM Cloud IAM and call deployed watsonx ML model endpoints.
 
+## Bob Skills
+
+A [Bob skill for Model Evaluation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/build-time-gen-ai-evals) is available, giving Bob the expertise to evaluate GenAI models and applications — prompts, RAG pipelines, LLM outputs, and agentic tool-calling — using watsonx.governance metrics.
+
 ## Bob Modes
 
 A [Bob mode for Gen AI evaluation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/model-evaluation/gen-ai-evaluations/bob-modes) is available, providing an AI-assisted workflow that guides you through the evaluation process step by step.
