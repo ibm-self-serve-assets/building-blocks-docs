@@ -381,8 +381,6 @@ Certain widely-used cryptographic algorithms (RSA, ECC, Diffie-Hellman) are cons
 |-----------|-------------|---------------|
 | **Quantum Safe Mode** | Custom BOB mode tailored for quantum-safe cryptographic scanning and remediation workflows | [📥 Download](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/bob-modes/quantum-safe.zip) |
 
----
-
 ### Demo Videos
 
 Explore our video library to see Quantum Safe Explorer in action:
@@ -510,10 +508,3 @@ Take the next step with this Building Block by choosing the path that best fits 
 
 ---
 
-<div align="center">
-
-**[Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/quantum-safe/README.md)** • **[Watch Demo](https://www.youtube.com/watch?v=2IziCt51Dfc)** • **[IBM Quantum Safe](https://www.ibm.com/quantum-safe)** • **[Back to Secure](index.md)**
-
-Made with ❤️ by IBM
-
-</div>
