@@ -238,7 +238,7 @@ sequenceDiagram
 - Identification of quantum-vulnerable algorithms and risk ratings
 
 **Links:**
-- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/quantum-safe/README.md)
+- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/README.md)
 - 🌐 [IBM Quantum Safe](https://www.ibm.com/quantum-safe)
 
 ---
@@ -268,7 +268,7 @@ sequenceDiagram
 - Produces migration guides for post-quantum algorithm transitions
 
 **Links:**
-- 📖 [Quantum-Safe Integration Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/quantum-safe/README.md)
+- 📖 [Quantum-Safe Integration Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/README.md)
 
 ---
 
@@ -426,10 +426,7 @@ Follow this recommended onboarding flow:
    - Note any prerequisites: access to IBM Quantum Safe Explorer, a CI/CD platform, and an IBM BOB environment.
 
 5. **Review the implementation guide**
-   - Proceed to the [complete implementation guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/quantum-safe/README.md) for detailed setup instructions.
-
-6. **Start with a guided tutorial**
-   - Begin with the CI/CD integration tutorial in the [Tutorials](#tutorials) section below.
+   - Proceed to the [complete implementation guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/README.md) for detailed setup instructions.
 
 ### Recommended Prerequisites
 
@@ -495,13 +492,13 @@ Follow this recommended onboarding flow:
 Take the next step with this Building Block by choosing the path that best fits your needs:
 
 - **Explore the fundamentals** in the [Overview](#overview), [Architecture](#architecture), and [Core Concepts](#core-concepts) sections
-- **Follow a hands-on path** in [How to Get Started](#how-to-get-started) and [Tutorials](#tutorials)
+- **Follow a hands-on path** in [How to Get Started](#how-to-get-started)
 - **Review the complete implementation guide** on GitHub
 - **Watch the demo** to see Quantum Safe Explorer and IBM BOB in action
 
 **Quick links:**
 
-- 🚀 [Complete Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/quantum-safe/README.md)
+- 🚀 [Complete Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/README.md)
 - ▶️ [Watch Demo on YouTube](https://www.youtube.com/watch?v=2IziCt51Dfc)
 - 🌐 [IBM Quantum Safe](https://www.ibm.com/quantum-safe)
 - 📖 [CycloneDX CBOM Standard](https://cyclonedx.org/capabilities/cbom/)
