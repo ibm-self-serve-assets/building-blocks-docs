@@ -28,47 +28,47 @@ IBM has validated this approach internally through its "Client Zero" initiative,
 ### Core Capabilities
 
 <details>
-<summary>
-<strong>🎯 Cryptographic Discovery & Scanning</strong>
-</summary>
+<summary><strong>🎯 Cryptographic Discovery & Scanning</strong></summary>
 
-**Source Code & Binary Scanning**: IBM Quantum Safe Explorer performs deep scanning of application source code and compiled binaries to surface all cryptographic usage across a codebase.
+<p><strong>Source Code & Binary Scanning</strong>: IBM Quantum Safe Explorer performs deep scanning of application source code and compiled binaries to surface all cryptographic usage across a codebase.</p>
 
-- **Encryption Algorithm Detection**: Identifies RSA, ECC, AES, SHA, and other algorithms in use
-- **Key Size & Mode Analysis**: Reports key sizes, cipher modes, and protocol versions
-- **Library & Certificate Discovery**: Enumerates cryptographic libraries (e.g., OpenSSL, BouncyCastle), X.509 certificates, and TLS protocols
+<ul>
+<li><strong>Encryption Algorithm Detection</strong>: Identifies RSA, ECC, AES, SHA, and other algorithms in use</li>
+<li><strong>Key Size & Mode Analysis</strong>: Reports key sizes, cipher modes, and protocol versions</li>
+<li><strong>Library & Certificate Discovery</strong>: Enumerates cryptographic libraries (e.g., OpenSSL, BouncyCastle), X.509 certificates, and TLS protocols</li>
+</ul>
 
-**Use Case**: A development team wants to audit all cryptographic dependencies before a major release to ensure no weak algorithms are present.
-
-</details>
-
-<details>
-<summary>
-<strong>⚡ CBOM Generation & Reporting</strong>
-</summary>
-
-**Cryptography Bill of Materials (CBOM)**: Every scan automatically produces a structured CBOM in JSON format, providing a standardized inventory of cryptographic assets aligned with the CycloneDX standard.
-
-- **findings.json**: Detailed discovery results per file and line
-- **CSV Reports**: Tabular summaries for security teams and auditors
-- **CBOM.json**: Machine-readable CycloneDX-compliant cryptographic inventory
-
-**Use Case**: A CISO needs a compliance artifact listing every algorithm, key size, and certificate in a product's codebase to satisfy a regulatory audit.
+<p><strong>Use Case</strong>: A development team wants to audit all cryptographic dependencies before a major release to ensure no weak algorithms are present.</p>
 
 </details>
 
 <details>
-<summary>
-<strong>🔒 CI/CD Pipeline Integration & Remediation</strong>
-</summary>
+<summary><strong>⚡ CBOM Generation & Reporting</strong></summary>
 
-**Continuous Scanning in Pipelines**: Integrate IBM Quantum Safe Explorer directly into CI/CD workflows (GitHub Actions, Jenkins, Tekton, Azure DevOps) so every code push is automatically scanned.
+<p><strong>Cryptography Bill of Materials (CBOM)</strong>: Every scan automatically produces a structured CBOM in JSON format, providing a standardized inventory of cryptographic assets aligned with the CycloneDX standard.</p>
 
-- **Automated Vulnerability Detection**: Flags quantum-vulnerable algorithms (e.g., RSA-1024, SHA-1, TLS 1.0) as pipeline quality gates
-- **IBM BOB Integration**: Feeds CBOM findings into IBM BOB for AI-generated code remediation and pull requests
-- **Post-Quantum Migration Paths**: Recommends NIST PQC algorithms (ML-KEM / Kyber, ML-DSA / Dilithium) as migration targets
+<ul>
+<li><strong>findings.json</strong>: Detailed discovery results per file and line</li>
+<li><strong>CSV Reports</strong>: Tabular summaries for security teams and auditors</li>
+<li><strong>CBOM.json</strong>: Machine-readable CycloneDX-compliant cryptographic inventory</li>
+</ul>
 
-**Use Case**: A DevSecOps team wants broken-crypto findings to automatically trigger AI-generated fix PRs without manual developer intervention.
+<p><strong>Use Case</strong>: A CISO needs a compliance artifact listing every algorithm, key size, and certificate in a product's codebase to satisfy a regulatory audit.</p>
+
+</details>
+
+<details>
+<summary><strong>🔒 CI/CD Pipeline Integration & Remediation</strong></summary>
+
+<p><strong>Continuous Scanning in Pipelines</strong>: Integrate IBM Quantum Safe Explorer directly into CI/CD workflows (GitHub Actions, Jenkins, Tekton, Azure DevOps) so every code push is automatically scanned.</p>
+
+<ul>
+<li><strong>Automated Vulnerability Detection</strong>: Flags quantum-vulnerable algorithms (e.g., RSA-1024, SHA-1, TLS 1.0) as pipeline quality gates</li>
+<li><strong>IBM BOB Integration</strong>: Feeds CBOM findings into IBM BOB for AI-generated code remediation and pull requests</li>
+<li><strong>Post-Quantum Migration Paths</strong>: Recommends NIST PQC algorithms (ML-KEM / Kyber, ML-DSA / Dilithium) as migration targets</li>
+</ul>
+
+<p><strong>Use Case</strong>: A DevSecOps team wants broken-crypto findings to automatically trigger AI-generated fix PRs without manual developer intervention.</p>
 
 </details>
 
@@ -122,56 +122,68 @@ sequenceDiagram
 #### Target Personas
 
 <details>
-<summary>
-<strong>👨‍💻 Developers & DevSecOps Engineers</strong>
-</summary>
+<summary><strong>👨‍💻 Developers & DevSecOps Engineers</strong></summary>
 
-Quantum Safe Explorer integrates directly into developer workflows, surfacing cryptographic findings during normal CI/CD execution and pairing with IBM BOB to generate ready-to-review fix PRs.
+<p>Quantum Safe Explorer integrates directly into developer workflows, surfacing cryptographic findings during normal CI/CD execution and pairing with IBM BOB to generate ready-to-review fix PRs.</p>
 
-**Common Tasks:**
-- Run automated crypto scans on every pull request
-- Review IBM BOB-generated remediation suggestions
-- Validate fixes by re-scanning after merging changes
+<p><strong>Common Tasks:</strong></p>
 
-**Benefits:**
-- No context switching — findings and fixes surface inside existing pipelines
-- AI-generated PRs reduce manual remediation effort
+<ul>
+<li>Run automated crypto scans on every pull request</li>
+<li>Review IBM BOB-generated remediation suggestions</li>
+<li>Validate fixes by re-scanning after merging changes</li>
+</ul>
 
-</details>
+<p><strong>Benefits:</strong></p>
 
-<details>
-<summary>
-<strong>🏢 Enterprise Security & Compliance Teams (CISOs)</strong>
-</summary>
-
-Security executives use Quantum Safe Explorer to gain organization-wide visibility into cryptographic posture and demonstrate compliance readiness for post-quantum mandates.
-
-**Common Tasks:**
-- Generate CBOMs across the product portfolio for audit submissions
-- Track cryptographic risk trends over time via scan histories
-- Enforce quantum-readiness gates in enterprise CI/CD standards
-
-**Benefits:**
-- Standardized CycloneDX CBOM output accepted by compliance frameworks
-- Continuous monitoring replaces point-in-time manual audits
+<ul>
+<li>No context switching — findings and fixes surface inside existing pipelines</li>
+<li>AI-generated PRs reduce manual remediation effort</li>
+</ul>
 
 </details>
 
 <details>
-<summary>
-<strong>🎯 VP of Products & Technology Leaders</strong>
-</summary>
+<summary><strong>🏢 Enterprise Security & Compliance Teams (CISOs)</strong></summary>
 
-Product leaders leverage Quantum Safe Explorer to ensure their software products remain competitive and secure as quantum computing advances, backed by IBM's own Client Zero experience.
+<p>Security executives use Quantum Safe Explorer to gain organization-wide visibility into cryptographic posture and demonstrate compliance readiness for post-quantum mandates.</p>
 
-**Common Tasks:**
-- Assess overall quantum vulnerability exposure across product lines
-- Prioritize engineering investment in cryptographic modernization
-- Communicate crypto-agility progress to customers and regulators
+<p><strong>Common Tasks:</strong></p>
 
-**Benefits:**
-- Clear risk dashboards from CBOM data support executive decision-making
-- IBM Client Zero validation provides proven enterprise-scale reference
+<ul>
+<li>Generate CBOMs across the product portfolio for audit submissions</li>
+<li>Track cryptographic risk trends over time via scan histories</li>
+<li>Enforce quantum-readiness gates in enterprise CI/CD standards</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Standardized CycloneDX CBOM output accepted by compliance frameworks</li>
+<li>Continuous monitoring replaces point-in-time manual audits</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>🎯 VP of Products & Technology Leaders</strong></summary>
+
+<p>Product leaders leverage Quantum Safe Explorer to ensure their software products remain competitive and secure as quantum computing advances, backed by IBM's own Client Zero experience.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Assess overall quantum vulnerability exposure across product lines</li>
+<li>Prioritize engineering investment in cryptographic modernization</li>
+<li>Communicate crypto-agility progress to customers and regulators</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Clear risk dashboards from CBOM data support executive decision-making</li>
+<li>IBM Client Zero validation provides proven enterprise-scale reference</li>
+</ul>
 
 </details>
 
@@ -357,6 +369,20 @@ Certain widely-used cryptographic algorithms (RSA, ECC, Diffie-Hellman) are cons
 
 ## Assets
 
+### Download Skills
+
+| Skill Name | Description | Download Link |
+|------------|-------------|---------------|
+| **Quantum Safe Skills** | Pre-built skills for IBM Quantum Safe Explorer integration with IBM BOB | [📥 Download](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/bob-skills/skills.zip) |
+
+### Download Custom Modes
+
+| Mode Name | Description | Download Link |
+|-----------|-------------|---------------|
+| **Quantum Safe Mode** | Custom BOB mode tailored for quantum-safe cryptographic scanning and remediation workflows | [📥 Download](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/bob-modes/quantum-safe.zip) |
+
+---
+
 ### Demo Videos
 
 Explore our video library to see Quantum Safe Explorer in action:
@@ -444,9 +470,11 @@ Follow this recommended onboarding flow:
 ### Related Building Blocks
 
 **Within Secure:**
+
 - [Non-human Identity](non-human-identity.md) — Identity and access management
 
 **Other Building Blocks:**
+
 - [Infrastructure as Code](../build/infrastructure-as-code.md) — Automated infrastructure provisioning
 - [iPaaS](../build/ipaas.md) — Integration platform capabilities
 - [Code Modernization](../build/middleware-modernization.md) — Modernize security middleware
@@ -474,6 +502,7 @@ Take the next step with this Building Block by choosing the path that best fits 
 - **Watch the demo** to see Quantum Safe Explorer and IBM BOB in action
 
 **Quick links:**
+
 - 🚀 [Complete Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/quantum-safe/README.md)
 - ▶️ [Watch Demo on YouTube](https://www.youtube.com/watch?v=2IziCt51Dfc)
 - 🌐 [IBM Quantum Safe](https://www.ibm.com/quantum-safe)
