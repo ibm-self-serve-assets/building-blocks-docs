@@ -1,12 +1,22 @@
 # Bob<span style="color:#0f62fe">+</span> IBM Technology Building Blocks
 
-**Bob<span style="color:#0f62fe">+</span> IBM Technology Building Blocks** are pre-built, embeddable application capabilities that span AI (Agents, Trust, and Data) and Automation (Build, Observe, and Optimize). They are designed to accelerate innovation by enabling teams to rapidly infuse advanced IBM capabilities directly into their applications.
+**Bob<span style="color:#0f62fe">+</span> IBM Technology Building Blocks** provide a unified digital experience for discovering, adopting, and implementing IBM technologies across AI and Automation. The Building Blocks encapsulate reusable, enterprise-ready capabilities spanning AI (Agents, Trust, and Data) and Automation (Build, Secure, and Optimize), enabling organizations to rapidly integrate IBM technologies into new and existing applications.
 
-These **ready-to-use components** simplify the entire lifecycle—development, integration, deployment, and operation—allowing teams to deliver solutions faster and with significantly less complexity. Each Building Block acts as a reference implementation, demonstrating how IBM’s Data & AI and Automation platforms integrate seamlessly within real-world enterprise applications.
+Powered by **IBM Bob**, developers, architects, partners, and technical teams receive AI-assisted guidance throughout the software development lifecycle—from discovering the appropriate Building Blocks and generating solution architectures to accelerating development, application modernization, cloud migration, deployment, and ongoing optimization. This AI-first experience improves developer productivity, promotes consistent engineering practices, reduces implementation risk, and accelerates time-to-value while maintaining enterprise-grade security, governance, scalability, and operational excellence.
 
-By adopting these **proven and tested** patterns, organizations can reduce engineering effort, minimize risk, and achieve a faster time-to-value while maintaining enterprise-grade scalability, security, and governance.
+# Digital Experience with Bob+
 
-<img width="1218" height="653" alt="Screenshot 2026-06-23 at 1 29 02 PM" src="https://github.com/user-attachments/assets/0c00b8f4-e85a-40e3-be70-af38a77e48b5" />
+Bob<span style="color:#0f62fe">+</span> delivers an AI-powered digital experience that enables developers, architects, partners, and enterprise teams to discover, build, modernize, migrate, and operate applications using IBM Technology Building Blocks. Rather than searching through multiple product documents, APIs, and best practices, users interact with a single intelligent assistant that understands enterprise architecture and recommends the right IBM capabilities for every stage of the software lifecycle.
+
+Bob<span style="color:#0f62fe">+</span> combines Generative AI with IBM Technology expertise to guide users from initial solution design through deployment and ongoing operations. By abstracting implementation complexity, teams can focus on delivering business value instead of building foundational capabilities from scratch.
+
+Whether building new cloud-native applications, modernizing legacy workloads, migrating infrastructure, or optimizing production environments, Bob+ acts as an intelligent engineering companion that accelerates delivery while ensuring consistency, governance, and security.
+
+<img src="image-1.png"
+     alt="Digital Experience with IBM Bob+"
+     width="1218"
+     height="653"
+     style="max-width:100%; height:auto;">
 
 ## Capability Areas
 
