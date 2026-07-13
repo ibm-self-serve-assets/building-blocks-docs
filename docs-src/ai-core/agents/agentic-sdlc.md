@@ -49,17 +49,13 @@ Transform natural language requirements into production-ready code:
 
 ### Agentic Development Modes
 
-Purpose-built modes define Bob's behavior for different development tasks:
+Bob 2.0 introduces three focused modes that cover the full development lifecycle — from understanding to planning to execution:
 
 | Mode | Purpose | Use When |
 |------|---------|----------|
-| **Code Mode** | Create new code from requirements | Building new features or applications |
-| **Ask Mode** | Refactor or enhance existing code | Improving code quality or adding functionality |
-| **Plan Mode** | Design and strategize before implementation | Planning architecture or complex changes |
-| **Advanced Mode** | Access to MCP and Browser tools | Complex integrations or web interactions |
-| **Orchestrator Mode** | Coordinate multi-step workflows | Managing complex, multi-phase development tasks |
-
-Modes enable efficient development without changing how developers communicate.
+| **Agent** | Takes action and completes tasks with full agentic capabilities — writes, edits, runs commands, and drives the work end-to-end | Building features, fixing bugs, generating code, or any hands-on development task |
+| **Plan** | Gathers requirements, discovers context, checks understanding, and produces an actionable plan — without touching the codebase | Designing architecture, breaking down complex changes, or preparing before Agent executes |
+| **Ask** | Read-only explanation mode — analyzes architecture, explains logic, and answers questions without modifying any files | Understanding existing code, reviewing design decisions, or onboarding to a codebase |
 
 ### In-Context Code Intelligence
 

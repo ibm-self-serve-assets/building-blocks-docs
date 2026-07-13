@@ -30,13 +30,17 @@ Multi-agent orchestration enables seamless collaboration across specialized agen
 
 This workflow demonstrates how multiple agents collaborate to onboard a new client:
 
-1. **Interaction** - Customer Success Manager initiates request via Chat, Slack, or Voice
-2. **Orchestration** - Customer verification agent coordinates the workflow
-3. **Collaboration** - Specialized agents work together:
+1. **Interaction** 
+   - Customer Success Manager initiates request via Chat, Slack, or Voice
+2. **Orchestration** 
+   - Customer verification agent coordinates the workflow
+3. **Collaboration** 
+   - Specialized agents work together:
    - Company profiling agent - Gathers business information
    - Agentforce onboarding agent - Handles Salesforce integration
    - Legal advisor agent - Reviews compliance requirements
-4. **Tool Use** - Agents leverage various tools and systems:
+4. **Tool Use** 
+   - Agents leverage various tools and systems:
    - APIs & Apps (Salesforce, SAP Ariba, Dun & Bradstreet, Milvus)
    - Actions and dialog flows
    - Knowledge bases and documents
@@ -100,27 +104,6 @@ Orchestrate end-to-end workflows from intent to completion:
 - Scalable integration patterns
 - Third-party agent discovery and binding
 
----
-
-## Integration Standards
-
-### MCP (Model Context Protocol)
-
-Open standard for secure connections between data sources and AI tools:
-
-- **Two-Way Communication** - Bidirectional data flow between agents and systems
-- **Server Deployment** - Expose enterprise data through MCP servers
-- **Client Integration** - Build agents that connect to MCP servers
-- **Security** - Authentication, authorization, and encryption
-
-### A2A (Agent-to-Agent)
-
-Open standard for cross-platform agent collaboration:
-
-- **Agent Discovery** - Find and connect to agents regardless of platform
-- **Protocol Standardization** - Common communication format
-- **Framework Agnostic** - Works with LangChain, CrewAI, custom agents
-- **Interoperability** - Seamless collaboration across technologies
 
 ---
 
