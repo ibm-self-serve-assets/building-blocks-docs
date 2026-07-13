@@ -33,6 +33,7 @@ Build and deploy production-ready AI agents with low-code development tools, pre
 
 - **Agent Builder** - Create AI agents rapidly using visual builder, Agent Development Kit (ADK), pre-built skills library, and natural language to agent conversion
 - **Multi-Agent Orchestration** - Coordinate multiple specialized agents through A2A and MCP protocols to solve complex business problems with intelligent workflow automation
+- **Agentic SDLC** - Automate the full software development lifecycle with IBM Bob — from natural language requirements to production-ready code, with IDE-native intelligence, agentic development modes, and CI/CD pipeline integration
 
 These components work together seamlessly: Agent Builder creates individual agents, Multi-Agent Orchestration coordinates them for complex workflows, all within the watsonx Orchestrate platform, and supported by IBM Bob's Agentic SDLC for development automation.
 
