@@ -1,150 +1,70 @@
 # Multi-Agent Orchestration
 
-Coordinate multiple AI agents to collaborate intelligently on complex enterprise workflows, with support for external system integration through MCP and A2A protocols.
+Enterprises are moving from isolated AI assistants to agent ecosystems that take action across systems, coordinate work, and complete multi-step business processes. The **Multi-Agent Orchestration building block** provides the framework to make that possible — enabling wxO agents to collaborate with each other and with external agents built on LangChain, OpenAI, CrewAI, or any framework. 
+
+Through open standards like A2A and Chat Completions, and an AI Gateway routing across watsonx.AI, OpenAI, and Claude.AI, it turns individually built agents into a coordinated, governed enterprise capability. 
+
+It is the natural next step after [Agent Builder](agent-builder.md) — where agents are created, this building block is where they come together.
+
+![Multi-Agent Orchestration Building Block](images/multi-agent-orchestration.png)
 
 ## Why This Matters
 
-- **Single agents hit complexity limits.** Complex business processes span multiple domains—HR, IT, Finance, Legal—and no single agent can master all of them effectively.
-- **Manual coordination doesn't scale.** Hand-coding agent interactions, context passing, and error handling creates brittle workflows that break when requirements change.
-- **Enterprise systems are distributed.** Business data and logic live across Salesforce, SAP, Workday, and custom applications—agents need seamless access to all of them.
-- **Cross-platform collaboration is hard.** Agents built on different frameworks (LangChain, CrewAI, custom) can't easily work together without standardized protocols.
-- **Governance requires orchestration.** Multi-agent systems need centralized coordination, monitoring, and audit trails to maintain control and compliance.
+- **Single agents hit complexity limits.** Complex processes rarely map cleanly to one general-purpose agent — a procurement workflow alone may need a requirement-analysis agent, a supplier-research agent, a pricing agent, a compliance agent, and an approval-coordination agent all working together.
+- **Without a coordination layer, agent sprawl becomes ungovernable.** As teams independently build agents on LangChain, LangGraph, CrewAI, and custom frameworks, organizations lose track of which agents exist, who owns them, what tools they can access, and whether they comply with policy.
+- **The agent market is moving too fast to bet on one framework.** watsonx Orchestrate's open orchestration layer lets teams build with LangChain, LangGraph, CrewAI, or custom frameworks — while keeping a stable coordination and governance layer as underlying models and tools evolve.
+- **Agents are operational systems, not just models.** They call tools, access data, and initiate transactions — organizations need visibility into not just what an agent *says*, but what it *does*, and whether it stayed within its authorization boundary.
+- **Existing agent investments shouldn't have to be rebuilt.** External agents — whether built on OpenAI, LangChain, or a third-party platform — can be brought into watsonx Orchestrate workflows via A2A and Chat Completions, without requiring teams to abandon their current implementations.
+- **The enterprise agent ecosystem extends beyond what you build internally.** Through IBM Agent Connect, ISV and partner agents listed on the IBM Cloud Catalog can participate directly in watsonx Orchestrate workflows — combining IBM capabilities with partner solutions to accelerate time to value across HR, IT, customer service, and more.
 
 ## What's Covered
 
-| Component | What It Provides |
-|-----------|-----------------|
-| **[Orchestration Flow](#orchestration-flow)** | Example showing customer verification and onboarding workflow |
-| **[Key Capabilities](#key-capabilities)** | Dynamic task delegation, shared memory, chained reasoning, and external integration |
-| **[Integration Standards](#integration-standards)** | MCP and A2A protocols for external system and agent collaboration |
+| Area | What It Covers |
+|------|---------------|
+| **[Orchestration Flow](#orchestration-flow)** | How wxO agents, external agents, and enterprise systems collaborate to complete a multi-step workflow — end-to-end |
+| **[Key Capabilities](#key-capabilities)** | Agent-to-agent collaboration, external agent integration, A2A, Chat Completions, AI Gateway, and IBM Agent Connect |
+| **[Bob Skills & Modes](#bob-skills)** | AI-assisted workflows for designing and deploying multi-agent systems inside your IDE |
 
 ---
 
 ## Orchestration Flow
 
-Multi-agent orchestration enables seamless collaboration across specialized agents to handle complex workflows.
+The diagram below shows how Multi-Agent Orchestration coordinates agents and routes requests across the enterprise.
 
-![Multi-Agent Orchestration Example](images/Multi-Agent-Orchestration-example.png)
+![Multi-Agent Orchestration Architecture](images/Multi-Agent-Orchestration-example.png)
 
-**Example: Customer Verification & Onboarding**
+**How it works:**
 
-This workflow demonstrates how multiple agents collaborate to onboard a new client:
-
-1. **Interaction** 
-   - Customer Success Manager initiates request via Chat, Slack, or Voice
-2. **Orchestration** 
-   - Customer verification agent coordinates the workflow
-3. **Collaboration** 
-   - Specialized agents work together:
-   - Company profiling agent - Gathers business information
-   - Agentforce onboarding agent - Handles Salesforce integration
-   - Legal advisor agent - Reviews compliance requirements
-4. **Tool Use** 
-   - Agents leverage various tools and systems:
-   - APIs & Apps (Salesforce, SAP Ariba, Dun & Bradstreet, Milvus)
-   - Actions and dialog flows
-   - Knowledge bases and documents
-   - Business automation flows
-   - Data sources (SQL, etc.)
-   - Built-in tools (web search, etc.)
+1. **Users initiate a request** — through any channel (web, voice, Teams, Slack) triggering the agentic workflow
+2. **The wxO Agent orchestrates** — it decomposes the request, selects the right agents, and coordinates execution
+3. **wxO-to-wxO collaboration** — the orchestrating agent delegates subtasks to specialized wxO sub-agents within the platform
+4. **External agent integration** — where needed, the wxO Agent connects to external agents (OpenAI, LangChain, others) via Chat Completions or A2A protocol
+5. **AI Gateway routes LLM calls** — model requests are routed across watsonx.AI, OpenAI, Claude, or other providers based on configuration
+6. **Results are synthesized** — outputs from all agents are combined and returned to the user as a unified response
 
 ---
 
 ## Key Capabilities
 
-### Dynamic Task Delegation
-
-Automatically route tasks to the most capable agent or external system:
-
-- **Intelligent Routing** - Analyze task requirements and agent capabilities
-- **Load Balancing** - Distribute work across available agents
-- **MCP/A2A Integration** - Delegate to external systems when needed
-- **Fallback Handling** - Reroute tasks when agents are unavailable
-
-### Shared Memory & Context
-
-Enable agents to exchange knowledge through unified memory:
-
-- **Context Preservation** - Maintain conversation history across agent handoffs
-- **Structured Knowledge** - Share data in standardized formats
-- **Memory Layers** - Short-term (conversation) and long-term (knowledge base) memory
-- **Cross-Agent Access** - All agents can read and write to shared context
-
-### Chained Reasoning
-
-Combine outputs from multiple agents for comprehensive responses:
-
-- **Sequential Processing** - Pass results from one agent to the next
-- **Parallel Execution** - Run multiple agents simultaneously
-- **Result Synthesis** - Combine insights from different agents
-- **Confidence Scoring** - Aggregate confidence levels across agents
-
-### Goal-Driven Execution
-
-Orchestrate end-to-end workflows from intent to completion:
-
-- **Intent Detection** - Understand user goals and requirements
-- **Task Decomposition** - Break complex goals into subtasks
-- **Progress Tracking** - Monitor workflow execution status
-- **Error Recovery** - Handle failures and retry logic
-
-### External System Integration
-
-**MCP Servers** - Connect to external systems and data sources:
-
-- Secure gateways for enterprise systems
-- Protocol mediation and data transformation
-- Event bridging for real-time updates
-- Controlled access to sensitive data
-
-**A2A Servers** - Enable agent-to-agent collaboration:
-
-- Workflow extension across platforms
-- Transaction orchestration
-- Scalable integration patterns
-- Third-party agent discovery and binding
+| Capability | What It Does |
+|-----------|-------------|
+| **Agent-to-Agent Collaboration** | wxO agents delegate subtasks to other specialized wxO agents within the platform — enabling modular, domain-specific agent design |
+| **External Agent Integration** | wxO agents connect to agents built outside the platform — OpenAI, LangChain, CrewAI, or any custom implementation — without requiring a rebuild |
+| **A2A Protocol** | Open agent-to-agent communication standard enabling cross-framework agent collaboration and third-party agent discovery |
+| **Chat Completions Bridge** | Connects OpenAI-compatible agents to the wxO orchestration layer via the Chat Completions API — preserving existing agent investments |
+| **AI Gateway** | Routes LLM calls across watsonx.AI, OpenAI, Claude, and other providers — decoupling agents from any single model provider |
+| **IBM Agent Connect** | ISV and partner agents listed on the IBM Cloud Catalog can participate directly in wxO workflows — extending the enterprise agent ecosystem beyond what teams build internally |
 
 
 ---
 
-## Core Principles
+## Bob Skills
 
-### Interoperability
-- Enable agents built on any framework to communicate and collaborate
-- Support different agent styles (Default, ReAct, Planner) for task resolution
+A [Bob skill for Multi-Agent Orchestration](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills.zip) is available, giving Bob the expertise to design, configure, and connect multiple wxO agents — including external agent integration via A2A and Chat Completions, AI Gateway configuration, and Agent Connect setup.
 
-### Standardization
-- Provide consistent interfaces and protocols using MCP and A2A standards
-- Ensure predictable behavior across agent interactions
+## Bob Modes
 
-### Extensibility
-- Allow for future expansion as agent technologies evolve
-- Support new agent types and integration patterns
-
-### Simplicity
-- Make integration straightforward for business users and developers
-- Minimize configuration and setup complexity
-
-### Security
-- Ensure secure communication and data handling between agents
-- Implement authentication, authorization, and audit logging
-
----
-
-## Use Cases
-
-- **Employee Onboarding** - HR agent coordinates with IT and Finance agents for complete onboarding workflow
-- **Customer Verification** - Verification agent collaborates with profiling, onboarding, and legal agents
-- **Complex Decision-Making** - Multiple specialized agents analyze different aspects of business problems
-- **Enterprise Data Access** - Agents connect to databases, knowledge bases, and document repositories via MCP
-- **Cross-Platform Collaboration** - Agents built on different frameworks work together through A2A protocol
-- **Third-Party Integration** - External AI agents join orchestrated workflows seamlessly
-
----
-
-## Resources
-
-- **[Bob Mode for Multi-Agent Orchestration](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/multi-agent-orchestration/bob-modes)** - AI-assisted workflow for building multi-agent systems
+A [Bob mode for Multi-Agent Orchestration](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/multi-agent-orchestration/bob-modes) is available, providing an AI-assisted workflow for building and deploying multi-agent systems with watsonx Orchestrate.
 
 !!! info "GitHub Repository"
     [Multi-Agent Orchestration Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/multi-agent-orchestration)
