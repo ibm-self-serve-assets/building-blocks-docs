@@ -60,7 +60,7 @@ The diagram below shows how Multi-Agent Orchestration coordinates agents and rou
 
 ## Bob Skills
 
-A [Bob skill for Multi-Agent Orchestration](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills.zip) is available, giving Bob the expertise to design, configure, and connect multiple wxO agents — including external agent integration via A2A and Chat Completions, AI Gateway configuration, and Agent Connect setup.
+A [Bob skill for Multi-Agent Orchestration](https://ibm-self-serve-assets.github.io/building-blocks-docs/ibm-bob/skills/) is available, giving Bob the expertise to design, configure, and connect multiple wxO agents — including external agent integration via A2A and Chat Completions, AI Gateway configuration, and Agent Connect setup.
 
 ## Bob Modes
 

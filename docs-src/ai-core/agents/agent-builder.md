@@ -64,7 +64,7 @@ The ADK is a comprehensive set of CLI utilities and Python modules for creating,
 
 ## Bob Skills
 
-A [Bob skill for Agent Builder](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills.zip) is available, giving Bob the expertise to create, configure, and deploy watsonx Orchestrate agents using the ADK — prompt engineering, tool integration, evaluation setup, and lifecycle management.
+A [Bob skill for Agent Builder](https://ibm-self-serve-assets.github.io/building-blocks-docs/ibm-bob/skills/) is available, giving Bob the expertise to create, configure, and deploy watsonx Orchestrate agents using the ADK — prompt engineering, tool integration, evaluation setup, and lifecycle management.
 
 ## Bob Modes
 

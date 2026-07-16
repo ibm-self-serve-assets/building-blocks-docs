@@ -50,7 +50,7 @@ Evaluate, monitor, govern, and protect AI in production using IBM watsonx.govern
 1. **Choose a building block** that matches your current need — use the [Building Blocks](#building-blocks) table above to navigate to the right one.
 2. **Get AI-assisted** — each building block has purpose-built Bob support to help you build faster:
     - **Bob Modes** — custom modes are available within each building block's own repository and documentation.
-    - **Bob Skills** — pre-packaged skills that extend Bob's expertise across building blocks. [Download the Bob Skills package](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills.zip) to get started.
+    - **Bob Skills** — pre-packaged skills that extend Bob's expertise across building blocks. [Download the Bob Skills package](https://ibm-self-serve-assets.github.io/building-blocks-docs/ibm-bob/skills/) to get started.
 
 ---
 
