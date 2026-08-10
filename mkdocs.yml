@@ -110,8 +110,7 @@ nav:
           - Non-human Identity: automation-core/secure/non-human-identity.md
           - Quantum-Safe: automation-core/secure/quantum-safe.md
 
-  - "------------------------------": []
-  - Call to Action:
+  - Bob+:
       - Quick Start with Bob Modes: ibm-bob/index.md
       - Quick Start with Bob Skills: ibm-bob/skills/index.md
       - Build with Bob Workshops: workshop/index.md
