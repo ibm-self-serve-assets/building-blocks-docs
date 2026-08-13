@@ -1,9 +1,5 @@
 # Non-human Identity
 
-[← Back to Secure](index.md)
-
-> **Version**: 1.0.0 | **Last Updated**: 2025-07-14 | **Status**: Stable
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -15,8 +11,6 @@
 - [Download Custom Modes](#download-custom-modes)
 - [Assets](#assets)
 - [Call to Action](#call-to-action)
-
----
 
 ## Overview
 
@@ -36,8 +30,6 @@ This building block is designed for platform engineers, security teams, and DevO
 - **Reduce blast radius**: Short-lived credentials limit the window of exposure if a token or key is compromised.
 - **Enforce policy-based access**: Centralise access decisions so every service authenticates with a verifiable identity and receives only the permissions it needs.
 - **Accelerate compliance**: Comprehensive audit logs of every secrets access operation make compliance reporting straightforward.
-
----
 
 ## Key Features
 
@@ -85,8 +77,6 @@ This building block is designed for platform engineers, security teams, and DevO
 **Use Case**: A GitHub Actions workflow authenticates to Vault using JWT OIDC federation and retrieves deployment credentials scoped to a specific environment — no long-lived secrets stored in GitHub.
 
 </details>
-
----
 
 ## Architecture
 
@@ -152,8 +142,6 @@ sequenceDiagram
     Vault-->>App: Return credential + TTL
     Note over App,DB: Credential expires automatically
 ```
-
----
 
 ## Use Cases
 
@@ -237,8 +225,6 @@ Developers integrate Non-human Identity to retrieve credentials at runtime rathe
 - A compromised credential affects only one service
 - Rotation is automatic — no change management required
 
----
-
 ## Products & Services
 
 #### HashiCorp Vault
@@ -255,8 +241,6 @@ Developers integrate Non-human Identity to retrieve credentials at runtime rathe
 - 🚀 [Get Started](https://developer.hashicorp.com/vault/tutorials)
 - 💻 [GitHub Repository](https://github.com/hashicorp/vault)
 
----
-
 #### IBM Verify
 
 **Description**: Unified identity and access management platform that secures human identities with SSO, MFA, and risk-based adaptive access across cloud, hybrid, and on-premises environments.
@@ -271,7 +255,7 @@ Developers integrate Non-human Identity to retrieve credentials at runtime rathe
 - 🚀 [Get Started](https://www.ibm.com/products/verify-identity)
 - 💻 [GitHub Repository](https://github.com/ibm-security-verify)
 
----
+## Assets
 
 ## Download Skills
 
@@ -285,8 +269,6 @@ Download pre-built Bob skills to accelerate your Non-human Identity implementati
 
 - 📦 [All Skills Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/secure/non-human-identity/secrets-management/bob-skills)
 
----
-
 ## Download Custom Modes
 
 Extend Bob's functionality with custom modes tailored for Non-human Identity workflows:
@@ -299,10 +281,6 @@ Extend Bob's functionality with custom modes tailored for Non-human Identity wor
 
 - 🔧 [All Modes Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/secure/non-human-identity/secrets-management/bob-modes)
 
----
-
-## Assets
-
 ### Demo Videos
 
 #### Getting Started Videos
@@ -310,8 +288,6 @@ Extend Bob's functionality with custom modes tailored for Non-human Identity wor
 | Video Title | Description | Link |
 |-------------|-------------|------|
 | **Vault Secret Migrator Demo** | End-to-end walkthrough of migrating existing secrets into HashiCorp Vault using the Bob custom mode and skill | [▶️ Watch on YouTube](https://www.youtube.com/watch?v=ENm91laCBb8) |
-
----
 
 ## Additional Resources
 
@@ -328,8 +304,6 @@ Extend Bob's functionality with custom modes tailored for Non-human Identity wor
 - [Code Modernization](../build/middleware-modernization.md) - Modernize authentication middleware
 - [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Continuous security posture monitoring
 
----
-
 ## Call to Action
 
 ### Ready to Build with Non-human Identity?
@@ -340,8 +314,6 @@ Take the next step by choosing the path that best fits your needs:
 - **Download reusable assets** from [Download Skills](#download-skills) and [Download Custom Modes](#download-custom-modes)
 - **Watch the demo** in the [Assets](#assets) section to see the Vault Secret Migrator in action
 
----
-
 <div align="center">
 
 **[Overview](#overview)** • **[Download Skills](#download-skills)** • **[Download Custom Modes](#download-custom-modes)** • **[Assets](#assets)**
@@ -349,7 +321,5 @@ Take the next step by choosing the path that best fits your needs:
 Made with ❤️ by IBM
 
 </div>
-
----
 
 [← Back to Secure](index.md)
