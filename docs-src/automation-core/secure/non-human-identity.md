@@ -35,7 +35,7 @@ This building block is designed for platform engineers, security teams, and DevO
 
 ### Core Capabilities
 
-<details>
+<details markdown="1">
 <summary>
 <strong>🔒 Dynamic Secrets Generation</strong>
 </summary>
@@ -49,7 +49,7 @@ This building block is designed for platform engineers, security teams, and DevO
 **Use Case**: A Kubernetes microservice requests a PostgreSQL credential at startup, uses it for its session lifetime, and the credential is automatically revoked when the pod terminates.
 
 </details>
-<details>
+<details markdown="1">
 <summary>
 <strong>⚡ Automated Secrets Rotation</strong>
 </summary>
@@ -63,7 +63,7 @@ This building block is designed for platform engineers, security teams, and DevO
 **Use Case**: A legacy application relying on a static database password is migrated to Vault-managed rotation, removing the credential from source control entirely.
 
 </details>
-<details>
+<details markdown="1">
 <summary>
 <strong>🎯 Identity-Based Machine Authentication</strong>
 </summary>
@@ -149,7 +149,7 @@ sequenceDiagram
 
 #### Target Personas
 
-<details>
+<details markdown="1">
 <summary>
 <strong>👨‍💻 Platform & DevOps Engineers</strong>
 </summary>
@@ -157,16 +157,18 @@ sequenceDiagram
 Platform engineers use Non-human Identity to remove static secrets from infrastructure and enable secure, automated credential management.
 
 **Common Tasks:**
+
 - Configure Vault auth methods for Kubernetes and CI/CD systems
 - Define secrets engines and access policies per environment
 - Integrate Vault into GitOps and IaC workflows
 
 **Benefits:**
+
 - No secrets in Git repositories or environment variables
 - Self-service credential access for development teams
 
 </details>
-<details>
+<details markdown="1">
 <summary>
 <strong>🏢 Security & Compliance Teams</strong>
 </summary>
@@ -174,16 +176,18 @@ Platform engineers use Non-human Identity to remove static secrets from infrastr
 Security teams use Non-human Identity to enforce least-privilege access and satisfy audit requirements for credential management.
 
 **Common Tasks:**
+
 - Define and review Vault access policies
 - Monitor audit logs for anomalous secrets access
 - Drive secrets rotation schedules and compliance reporting
 
 **Benefits:**
+
 - Complete audit trail of every credential request
 - Policy-as-code for consistent, reviewable access control
 
 </details>
-<details>
+<details markdown="1">
 <summary>
 <strong>🎯 Application Developers</strong>
 </summary>
@@ -191,11 +195,13 @@ Security teams use Non-human Identity to enforce least-privilege access and sati
 Developers integrate Non-human Identity to retrieve credentials at runtime rather than managing secrets manually.
 
 **Common Tasks:**
+
 - Use Vault SDKs or agent sidecar to fetch credentials
 - Migrate hardcoded secrets to Vault KV or dynamic engines
 - Configure application startup to authenticate via platform identity
 
 **Benefits:**
+
 - No credential management burden in application code
 - Automatic credential renewal without application restarts
 
@@ -210,6 +216,7 @@ Developers integrate Non-human Identity to retrieve credentials at runtime rathe
 **Solution**: Use the Vault Secret Migrator Bob skill to identify secrets in existing configuration, write them to Vault KV, and update application configuration to read from Vault at runtime.
 
 **Results**:
+
 - ✅ Zero hardcoded credentials in source repositories
 - ✅ Centralized audit trail for all secrets access
 - ✅ Secrets rotation without redeploying applications
@@ -221,6 +228,7 @@ Developers integrate Non-human Identity to retrieve credentials at runtime rathe
 **Solution**: Enable the Vault Database secrets engine, configure per-service roles, and have each pod request its own short-lived credential on startup using Kubernetes auth.
 
 **Benefits**:
+
 - Each service gets a unique, time-limited credential
 - A compromised credential affects only one service
 - Rotation is automatic — no change management required
@@ -313,13 +321,5 @@ Take the next step by choosing the path that best fits your needs:
 - **Explore the fundamentals** in the [Overview](#overview), [Architecture](#architecture), and [Key Features](#key-features) sections
 - **Download reusable assets** from [Download Skills](#download-skills) and [Download Custom Modes](#download-custom-modes)
 - **Watch the demo** in the [Assets](#assets) section to see the Vault Secret Migrator in action
-
-<div align="center">
-
-**[Overview](#overview)** • **[Download Skills](#download-skills)** • **[Download Custom Modes](#download-custom-modes)** • **[Assets](#assets)**
-
-Made with ❤️ by IBM
-
-</div>
 
 [← Back to Secure](index.md)
