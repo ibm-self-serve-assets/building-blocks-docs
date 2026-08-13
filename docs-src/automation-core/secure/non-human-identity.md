@@ -35,46 +35,48 @@ This building block is designed for platform engineers, security teams, and DevO
 
 ### Core Capabilities
 
-<details markdown="1">
-<summary>
-<strong>🔒 Dynamic Secrets Generation</strong>
-</summary>
+<details>
+<summary><strong>🔒 Dynamic Secrets Generation</strong></summary>
 
-**On-demand Credentials**: HashiCorp Vault generates short-lived credentials for databases, cloud platforms, and services at request time — no static passwords required.
+<p><strong>On-demand Credentials</strong>: HashiCorp Vault generates short-lived credentials for databases, cloud platforms, and services at request time — no static passwords required.</p>
 
-- **Database Secrets Engine**: Creates unique, time-limited database credentials per application instance.
-- **Cloud IAM Integration**: Issues temporary AWS, Azure, and GCP credentials scoped to specific roles.
-- **PKI Certificates**: Generates and signs X.509 certificates on demand with configurable TTLs.
+<ul>
+<li><strong>Database Secrets Engine</strong>: Creates unique, time-limited database credentials per application instance.</li>
+<li><strong>Cloud IAM Integration</strong>: Issues temporary AWS, Azure, and GCP credentials scoped to specific roles.</li>
+<li><strong>PKI Certificates</strong>: Generates and signs X.509 certificates on demand with configurable TTLs.</li>
+</ul>
 
-**Use Case**: A Kubernetes microservice requests a PostgreSQL credential at startup, uses it for its session lifetime, and the credential is automatically revoked when the pod terminates.
-
-</details>
-<details markdown="1">
-<summary>
-<strong>⚡ Automated Secrets Rotation</strong>
-</summary>
-
-**Zero-downtime Rotation**: Vault automatically rotates static credentials on a defined schedule, removing the operational burden of manual rotation.
-
-- **Database Password Rotation**: Rotates database root and service account passwords without application downtime.
-- **API Key Lifecycle**: Manages the renewal and revocation of API keys for third-party services.
-- **Certificate Renewal**: Auto-renews TLS certificates before expiry using the PKI secrets engine.
-
-**Use Case**: A legacy application relying on a static database password is migrated to Vault-managed rotation, removing the credential from source control entirely.
+<p><strong>Use Case</strong>: A Kubernetes microservice requests a PostgreSQL credential at startup, uses it for its session lifetime, and the credential is automatically revoked when the pod terminates.</p>
 
 </details>
-<details markdown="1">
-<summary>
-<strong>🎯 Identity-Based Machine Authentication</strong>
-</summary>
 
-**Platform-Native Auth Methods**: Applications and services authenticate to Vault using their existing platform identity — no shared secrets needed to bootstrap trust.
+<details>
+<summary><strong>⚡ Automated Secrets Rotation</strong></summary>
 
-- **Kubernetes Auth**: Pods authenticate using their native service account JWT, validated against the Kubernetes API.
-- **AWS IAM Auth**: EC2 instances and Lambda functions authenticate using their IAM instance profile.
-- **AppRole**: Lightweight role-based authentication for CI/CD systems and automation tools.
+<p><strong>Zero-downtime Rotation</strong>: Vault automatically rotates static credentials on a defined schedule, removing the operational burden of manual rotation.</p>
 
-**Use Case**: A GitHub Actions workflow authenticates to Vault using JWT OIDC federation and retrieves deployment credentials scoped to a specific environment — no long-lived secrets stored in GitHub.
+<ul>
+<li><strong>Database Password Rotation</strong>: Rotates database root and service account passwords without application downtime.</li>
+<li><strong>API Key Lifecycle</strong>: Manages the renewal and revocation of API keys for third-party services.</li>
+<li><strong>Certificate Renewal</strong>: Auto-renews TLS certificates before expiry using the PKI secrets engine.</li>
+</ul>
+
+<p><strong>Use Case</strong>: A legacy application relying on a static database password is migrated to Vault-managed rotation, removing the credential from source control entirely.</p>
+
+</details>
+
+<details>
+<summary><strong>🎯 Identity-Based Machine Authentication</strong></summary>
+
+<p><strong>Platform-Native Auth Methods</strong>: Applications and services authenticate to Vault using their existing platform identity — no shared secrets needed to bootstrap trust.</p>
+
+<ul>
+<li><strong>Kubernetes Auth</strong>: Pods authenticate using their native service account JWT, validated against the Kubernetes API.</li>
+<li><strong>AWS IAM Auth</strong>: EC2 instances and Lambda functions authenticate using their IAM instance profile.</li>
+<li><strong>AppRole</strong>: Lightweight role-based authentication for CI/CD systems and automation tools.</li>
+</ul>
+
+<p><strong>Use Case</strong>: A GitHub Actions workflow authenticates to Vault using JWT OIDC federation and retrieves deployment credentials scoped to a specific environment — no long-lived secrets stored in GitHub.</p>
 
 </details>
 
@@ -149,61 +151,69 @@ sequenceDiagram
 
 #### Target Personas
 
-<details markdown="1">
-<summary>
-<strong>👨‍💻 Platform & DevOps Engineers</strong>
-</summary>
+<details>
+<summary><strong>👨‍💻 Platform & DevOps Engineers</strong></summary>
 
-Platform engineers use Non-human Identity to remove static secrets from infrastructure and enable secure, automated credential management.
+<p>Platform engineers use Non-human Identity to remove static secrets from infrastructure and enable secure, automated credential management.</p>
 
-**Common Tasks:**
+<p><strong>Common Tasks:</strong></p>
 
-- Configure Vault auth methods for Kubernetes and CI/CD systems
-- Define secrets engines and access policies per environment
-- Integrate Vault into GitOps and IaC workflows
+<ul>
+<li>Configure Vault auth methods for Kubernetes and CI/CD systems</li>
+<li>Define secrets engines and access policies per environment</li>
+<li>Integrate Vault into GitOps and IaC workflows</li>
+</ul>
 
-**Benefits:**
+<p><strong>Benefits:</strong></p>
 
-- No secrets in Git repositories or environment variables
-- Self-service credential access for development teams
-
-</details>
-<details markdown="1">
-<summary>
-<strong>🏢 Security & Compliance Teams</strong>
-</summary>
-
-Security teams use Non-human Identity to enforce least-privilege access and satisfy audit requirements for credential management.
-
-**Common Tasks:**
-
-- Define and review Vault access policies
-- Monitor audit logs for anomalous secrets access
-- Drive secrets rotation schedules and compliance reporting
-
-**Benefits:**
-
-- Complete audit trail of every credential request
-- Policy-as-code for consistent, reviewable access control
+<ul>
+<li>No secrets in Git repositories or environment variables</li>
+<li>Self-service credential access for development teams</li>
+</ul>
 
 </details>
-<details markdown="1">
-<summary>
-<strong>🎯 Application Developers</strong>
-</summary>
 
-Developers integrate Non-human Identity to retrieve credentials at runtime rather than managing secrets manually.
+<details>
+<summary><strong>🏢 Security & Compliance Teams</strong></summary>
 
-**Common Tasks:**
+<p>Security teams use Non-human Identity to enforce least-privilege access and satisfy audit requirements for credential management.</p>
 
-- Use Vault SDKs or agent sidecar to fetch credentials
-- Migrate hardcoded secrets to Vault KV or dynamic engines
-- Configure application startup to authenticate via platform identity
+<p><strong>Common Tasks:</strong></p>
 
-**Benefits:**
+<ul>
+<li>Define and review Vault access policies</li>
+<li>Monitor audit logs for anomalous secrets access</li>
+<li>Drive secrets rotation schedules and compliance reporting</li>
+</ul>
 
-- No credential management burden in application code
-- Automatic credential renewal without application restarts
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Complete audit trail of every credential request</li>
+<li>Policy-as-code for consistent, reviewable access control</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>🎯 Application Developers</strong></summary>
+
+<p>Developers integrate Non-human Identity to retrieve credentials at runtime rather than managing secrets manually.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Use Vault SDKs or agent sidecar to fetch credentials</li>
+<li>Migrate hardcoded secrets to Vault KV or dynamic engines</li>
+<li>Configure application startup to authenticate via platform identity</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>No credential management burden in application code</li>
+<li>Automatic credential renewal without application restarts</li>
+</ul>
 
 </details>
 
