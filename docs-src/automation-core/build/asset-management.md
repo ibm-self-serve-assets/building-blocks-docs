@@ -457,7 +457,7 @@ Two reusable full-stack assets are available under the [`assets/`](https://githu
 
 | Use this asset when… | Asset |
 |---|---|
-| You need an AI-powered knowledge hub to search Maximo docs, live asset data, and community knowledge | [`asset-management-knowledge-hub`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/asset-management-knowledge-hub) |
+| You need a central intelligence platform that unifies maintenance knowledge, live asset context, and enterprise content — and drives intelligent decisions across technician troubleshooting, job planning, compliance, predictive maintenance, and more | [`asset-management-knowledge-hub`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/asset-management-knowledge-hub) |
 | You need a web application to analyse, optimise, and convert Maximo automation scripts using AI | [`maximo_code_modernization_asset`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset) |
 
 ---
@@ -466,15 +466,44 @@ Two reusable full-stack assets are available under the [`assets/`](https://githu
 
 **IBM Products**: IBM Maximo Application Suite · IBM watsonx AI · IBM watsonx.data (OpenSearch) · IBM Cloud Object Storage · IBM Cloud Code Engine
 
-An AI-powered knowledge hub that unifies Maximo documentation, community knowledge, and live operational data into a single conversational interface. Operations teams can ask natural-language questions about their Maximo environment and receive grounded, cited answers — without switching between documentation portals, Maximo itself, and community forums.
+A central intelligence platform that unifies every source of maintenance knowledge — work orders, manuals, sensor data, compliance documents, and live asset context — into a single AI-powered assistant. It is not a search engine: it understands intent, maps relationships between assets and procedures, enforces governance, and drives intelligent maintenance decisions across the full operational lifecycle.
 
-**Business value:**
+**Connected knowledge sources:**
 
-- **Faster issue resolution** — field technicians and operations teams get instant, contextual answers from Maximo docs, IBM Support, and community knowledge without manual searching
-- **Live operational context** — answers are grounded in real-time Maximo asset and work order data, not just static documentation
-- **Enterprise knowledge capture** — ingest internal Maximo PDFs, procedure documents, and DOCX files from IBM Cloud Object Storage to build an organisation-specific knowledge base
-- **AI assistant integration** — exposes an MCP server that connects IBM Bob and other AI assistants directly to Maximo knowledge, enabling in-context help during automation and script work
-- **Web knowledge at scale** — Spiderbot automatically crawls IBM Docs, IBM Support, and Maximo Secrets to keep the knowledge index current without manual curation
+The hub ingests and indexes content from across the enterprise — Maximo work orders and asset history, maintenance manuals and SOPs, inspection reports and service notes, IoT and sensor data, parts catalogues and BOMs, external document management systems, ERP and procurement systems, SharePoint and file repositories, OEM and vendor documentation, and safety and compliance documents.
+
+**Core capabilities:**
+
+- **Unified Knowledge Index** — structured and unstructured content from all connected sources unified and indexed into a single queryable store
+- **Semantic Search / RAG** — AI-powered retrieval with relevance scoring and context grounding, going beyond keyword matching to understand the intent behind every question
+- **Context Engine** — understands entities, asset hierarchies, work history, plans, locations, and conditions to return answers that are relevant to the specific operational situation
+- **Asset + Work Context** — every answer is grounded in live asset state and work order history, not just static documentation
+- **Governance / Access Control** — security, roles, permissions, audit trails, and policy enforcement built in at the platform level
+
+**Business use cases:**
+
+| # | Use Case | What it enables |
+|---|---|---|
+| 1 | **Technician Troubleshooting Assistant** | Instant, context-aware guidance during fault diagnosis and repair |
+| 2 | **Job Plan Creation Support** | AI-assisted generation of job plans grounded in past work and best practices |
+| 3 | **Natural Language Search Across Assets** | Search the entire asset estate in plain language — no query syntax required |
+| 4 | **Failure Root Cause Analysis** | Correlate work history, sensor data, and manuals to identify failure patterns |
+| 5 | **Recommended Maintenance Procedures** | Surface the right procedure for the right asset at the right time |
+| 6 | **Parts Identification and Availability** | Identify correct parts from BOMs and check availability from connected ERP and procurement systems |
+| 7 | **Safety Guidance During Repairs** | Retrieve relevant safety documents and compliance requirements in context |
+| 8 | **Asset Health Insights** | Combine IoT data, inspection history, and maintenance records into a unified asset health view |
+| 9 | **Training and Knowledge Transfer** | Capture and surface institutional knowledge for onboarding and upskilling |
+| 10 | **Work Order Summarisation** | Automatically summarise work order history and outcomes for planning and reporting |
+| 11 | **Predictive Maintenance Support** | Use historical patterns and sensor trends to anticipate failures before they occur |
+| 12 | **Compliance and Audit Readiness** | Instantly retrieve evidence of inspections, procedures followed, and regulatory adherence |
+
+**How the hub adds value:**
+
+- **Single place to access trusted maintenance knowledge** — eliminate context switching across portals, systems, and documents
+- **Faster issue resolution for technicians and planners** — answers in seconds rather than minutes or hours of manual searching
+- **Improved consistency, compliance, and knowledge reuse** — every decision is grounded in the same governed, up-to-date knowledge base
+- **Connects source systems to actionable operational insights** — live data from Maximo, ERP, IoT, and documents flows into every answer
+- **Enables AI-assisted maintenance and decision support** — IBM Bob and other AI assistants connect via MCP to bring knowledge hub capabilities directly into operational workflows
 
 ---
 
