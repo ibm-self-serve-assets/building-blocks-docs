@@ -447,11 +447,52 @@ Download pre-built skills to extend your Asset Management capabilities with Bob 
 
 - 📦 [Building Blocks — Asset Management Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management)
 - 📖 [Skills Development Guide](../../ibm-bob/skills/contributing_to_skills.md)
-- 💻 [Asset Management Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset)
+- 💻 [Asset Management Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets)
 
 ---
 
 ## Assets
+
+Two reusable full-stack assets are available under the [`assets/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets) directory.
+
+| Use this asset when… | Asset |
+|---|---|
+| You need an AI-powered knowledge hub to search Maximo docs, live asset data, and community knowledge | [`asset-management-knowledge-hub`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/asset-management-knowledge-hub) |
+| You need a web application to analyse, optimise, and convert Maximo automation scripts using AI | [`maximo_code_modernization_asset`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset) |
+
+---
+
+### [Asset Management Knowledge Hub](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/asset-management-knowledge-hub)
+
+**IBM Products**: IBM Maximo Application Suite · IBM watsonx AI · IBM watsonx.data (OpenSearch) · IBM Cloud Object Storage · IBM Cloud Code Engine
+
+An AI-powered knowledge hub that unifies Maximo documentation, community knowledge, and live operational data into a single conversational interface. Operations teams can ask natural-language questions about their Maximo environment and receive grounded, cited answers — without switching between documentation portals, Maximo itself, and community forums.
+
+**Business value:**
+
+- **Faster issue resolution** — field technicians and operations teams get instant, contextual answers from Maximo docs, IBM Support, and community knowledge without manual searching
+- **Live operational context** — answers are grounded in real-time Maximo asset and work order data, not just static documentation
+- **Enterprise knowledge capture** — ingest internal Maximo PDFs, procedure documents, and DOCX files from IBM Cloud Object Storage to build an organisation-specific knowledge base
+- **AI assistant integration** — exposes an MCP server that connects IBM Bob and other AI assistants directly to Maximo knowledge, enabling in-context help during automation and script work
+- **Web knowledge at scale** — Spiderbot automatically crawls IBM Docs, IBM Support, and Maximo Secrets to keep the knowledge index current without manual curation
+
+---
+
+### [Maximo Code Modernization Asset](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset)
+
+**IBM Products**: IBM Maximo Application Suite · OpenAI (GPT-4)
+
+A web application that gives maintenance engineers and developers a self-service tool to analyse, optimise, and convert legacy Maximo automation scripts — directly connected to a live Maximo instance via the `MXAPIAUTOSCRIPT` REST API.
+
+**Business value:**
+
+- **Eliminate script technical debt** — automatically surface security issues, performance bottlenecks, and anti-patterns across an entire Maximo script library without manual code review
+- **Accelerate Java modernisation** — convert legacy Maximo Java classes to Jython, JavaScript, Nashorn, ECMAScript, or MBR in minutes rather than days of manual rewriting
+- **Reduce modernisation risk** — impact analysis generates a dependency graph and risk assessment for any script before it is modified, preventing unintended production breakage
+- **Write back without friction** — optimised scripts are pushed directly back to Maximo via REST, eliminating the manual copy-paste step between tooling and the platform
+- **Scale across teams** — batch conversion processes multiple Java files in a single operation, allowing operations teams to modernise large script estates systematically
+
+---
 
 ### Demo Videos
 
@@ -467,7 +508,8 @@ Explore our comprehensive video library to see Asset Management with IBM Maximo 
 
 - 🎥 [YouTube Channel](https://youtube.com/@ibm-building-blocks) - Subscribe for the latest Bob<span style="color:#0f62fe">+</span> IBM Technology Building Blocks videos
 - 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/asset-management/README.md) - Complete IBM Maximo Application Suite guide with implementation examples
-- 💻 [Asset Management Code Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset) - Reusable code assets for Maximo modernization
+- 💻 [Asset Management Knowledge Hub](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/asset-management-knowledge-hub) - Full-stack MCP knowledge hub for Maximo docs and live operational data
+- 💻 [Maximo Code Modernization Asset](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset) - AI-powered script optimisation and Java conversion web app
 
 ---
 
@@ -479,12 +521,15 @@ Take the next step with this Building Block by choosing the path that best fits 
 
 - **Explore the fundamentals** in the [Overview](#overview), [Architecture](#architecture), and [Core Concepts](#core-concepts) sections
 - **Download reusable skills** from [Download Skills](#download-skills) to get Bob working with Maximo immediately
+- **Deploy a code asset** from [Assets](#assets) to modernise scripts or enable voice-driven work orders immediately
 - **Watch the demo videos** to see Maximo automation and Bob AI agents in action
 - **Extend and customise** using your own Maximo automation scripts and Bob workflow agents
 
 **Get Started Now:**
 - 🚀 [Download Maximo Script Modernization Skill](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills)
 - 📥 [Download Maximo Java Conversion Skill](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills)
+- 💻 [Deploy Asset Management Knowledge Hub](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/asset-management-knowledge-hub)
+- 💻 [Deploy Maximo Code Modernization Asset](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset)
 - 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/asset-management/README.md)
 
 ---
