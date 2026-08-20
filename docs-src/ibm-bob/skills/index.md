@@ -9,8 +9,9 @@ This collection of [Skills for IBM Bob](https://bob.ibm.com/docs/ide/features/sk
 ## How to install the Skills
 The Skills have been packed into a single .zip that you can easily download and install. Go to the [skills.zip page](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills.zip) and click the `Download raw file` icon at the upper-right of the page.  Copy all skill folders at either the global, `~/.bob/skills`, or project-level, `<project>/.bob/skills`
   
-<img src="images/download-raw-file.png" width="200">
-
+<a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills.zip">
+  <img src="images/download-raw-file.png" width="200">
+</a>
 
 ## Skill Taxonomy
 
@@ -25,7 +26,7 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
       <tr>
         <td><div class="skill-subgroup"><img src="images/agents.png" alt="" class="title-icon"><span>Agents</span></div></td>
         <td>
-            <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/agent-builder/SKILL.md">Agent Builder</a>
+            <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/agent">Agent Builder</a>
             <br>Build and deploy multi-agent systems with tools (MCP servers) using watsonx Orchestrate's Agent Development Kit (ADK), CLI and REST API.
         </td>
       </tr>
