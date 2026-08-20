@@ -1,0 +1,71 @@
+table {
+    background: #fff;
+    border: 2px solid var(--accent);
+    color: #111827; /* Add this line to force all text black */
+    font-size: 18px;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.skill-card th img {
+    width:  50px;
+    height: 50px;
+}
+
+.skill-card thead {
+    padding:  0px;
+    margin:  0px;
+}
+
+.skill-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--th);
+    text-align: left;
+    color: var(--text);
+    font-size: 22px;
+}
+
+.skill-subgroup {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text);
+    font-size: 22px;
+    vertical-align: middle;
+}
+
+.skill-card td {
+    background: white;
+    padding: 10px;
+    vertical-align: middle;
+    line-height: 1.4;
+}
+
+.skill-card td:first-child {
+    width: 25%;
+    background: var(--first-td);
+    font-size: 20px;
+}
+
+.skill-card td:first-child img {
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.skill-card td {
+    vertical-align: top;
+    border: 1px solid var(--grid);
+}
+
+.skill-card td p {
+    margin: 0px 0px 5px 0px
+}
+
+@media (max-width: 900px) {
+    .skills-listing {
+        grid-template-columns: 1fr;
+    }
+}

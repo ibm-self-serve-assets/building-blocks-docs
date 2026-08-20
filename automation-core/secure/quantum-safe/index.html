@@ -1,0 +1,4078 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bob+ IBM Technology Building Blocks Documentation">
+      
+      
+      
+        <link rel="canonical" href="https://ibm-self-serve-assets.github.io/building-blocks/automation-core/secure/quantum-safe/">
+      
+      
+        <link rel="prev" href="../non-human-identity/">
+      
+      
+        <link rel="next" href="../../../ibm-bob/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Quantum-Safe - Bob+ IBM Technology Building Blocks Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/carbon.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quantum-safe" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Bob+ IBM Technology Building Blocks Docs" class="md-header__button md-logo" aria-label="Bob+ IBM Technology Building Blocks Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bob+ IBM Technology Building Blocks Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quantum-Safe
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Bob+ IBM Technology Building Blocks Docs" class="md-nav__button md-logo" aria-label="Bob+ IBM Technology Building Blocks Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Bob+ IBM Technology Building Blocks Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/agents/agent-builder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Builder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/agents/multi-agent-orchestration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-Agent Orchestration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/agents/agentic-sdlc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic SDLC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Trust
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI Trust
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/model-evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/agent-ops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Ops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/real-time-guardrails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Real-Time Guardrails
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/ai-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Integration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/integration/data-pipeline-ai-generated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Pipeline (AI Generated)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/integration/data-streaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Streaming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/integration/data-observability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Observability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intelligence
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Intelligence
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/intelligence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/intelligence/data-quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/intelligence/data-lineage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Lineage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/intelligence/text2sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text2SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Retrieval
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Retrieval
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/rag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vector Search
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vector Search
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/vector-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/vector-search/milvus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milvus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/vector-search/opensearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenSearch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/vector-search/datastax-astra-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DataStax Astra DB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/no-sql-database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    No SQL Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/zero-copy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Automation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build and Deploy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build and Deploy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/ipaas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iPaaS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/infrastructure-as-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure as Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/middleware-modernization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Modernization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/asset-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asset Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optimize
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Optimize
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/automated-resilience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Resilience & Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/finops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FinOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/automated-resource-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Resource Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/budget-and-forecasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Budget & Forecasting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Secure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../non-human-identity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-human Identity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quantum-Safe
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quantum-Safe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-quantum-safe-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Quantum Safe Explorer?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-quantum-safe-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Quantum Safe Explorer?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-level-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Level Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-should-use-quantum-safe-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who Should Use Quantum Safe Explorer?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Who Should Use Quantum Safe Explorer?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Personas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-automated-cryptographic-remediation-in-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: Automated Cryptographic Remediation in CI/CD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-post-quantum-migration-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: Post-Quantum Migration Planning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#products-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Products &amp; Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Products &amp; Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibm-quantum-safe-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IBM Quantum Safe Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cbomkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CBOMkit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibm-bob-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IBM BOB (Building Blocks)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamental-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fundamental Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamental Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept-1-cryptography-bill-of-materials-cbom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 1: Cryptography Bill of Materials (CBOM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-2-ibms-leadership-in-cbom-standardization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 2: IBM's Leadership in CBOM Standardization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-3-quantum-vulnerable-algorithms-nist-pqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 3: Quantum-Vulnerable Algorithms &amp; NIST PQC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-custom-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Custom Modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demo Videos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Demo Videos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-started-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started Videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-playlists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video Playlists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Get Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Get Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-start-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-success-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First Success Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#related-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Building Blocks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#call-to-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Call to Action
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Call to Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ready-to-build-with-quantum-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ready to Build with Quantum Safe?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bob+
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bob+
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ibm-bob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start with Bob Modes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ibm-bob/skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start with Bob Skills
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build with Bob Workshops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build-with-bob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build with Bob Webinars
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-quantum-safe-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Quantum Safe Explorer?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-quantum-safe-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Quantum Safe Explorer?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-level-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Level Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-should-use-quantum-safe-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who Should Use Quantum Safe Explorer?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Who Should Use Quantum Safe Explorer?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Personas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-automated-cryptographic-remediation-in-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: Automated Cryptographic Remediation in CI/CD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-post-quantum-migration-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: Post-Quantum Migration Planning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#products-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Products &amp; Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Products &amp; Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibm-quantum-safe-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IBM Quantum Safe Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cbomkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CBOMkit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibm-bob-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IBM BOB (Building Blocks)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamental-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fundamental Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamental Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept-1-cryptography-bill-of-materials-cbom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 1: Cryptography Bill of Materials (CBOM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-2-ibms-leadership-in-cbom-standardization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 2: IBM's Leadership in CBOM Standardization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-3-quantum-vulnerable-algorithms-nist-pqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 3: Quantum-Vulnerable Algorithms &amp; NIST PQC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-custom-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Custom Modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demo Videos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Demo Videos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-started-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started Videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-playlists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video Playlists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Get Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Get Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-start-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-success-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First Success Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#related-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Building Blocks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#call-to-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Call to Action
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Call to Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ready-to-build-with-quantum-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ready to Build with Quantum Safe?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="quantum-safe">Quantum-Safe<a class="headerlink" href="#quantum-safe" title="Permanent link">&para;</a></h1>
+<p><a href="../">← Back to Secure</a></p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>As quantum computing advances, the cryptographic algorithms that protect today's software may no longer be secure. IBM Quantum Safe Explorer gives organizations a head start by automatically discovering every cryptographic asset in their codebase — before a vulnerability becomes a breach.</p>
+<h3 id="what-is-quantum-safe-explorer">What is Quantum Safe Explorer?<a class="headerlink" href="#what-is-quantum-safe-explorer" title="Permanent link">&para;</a></h3>
+<p>IBM Quantum Safe Explorer scans application source code and binaries to surface cryptographic assets, identify weak or quantum-vulnerable algorithms, and generate a Cryptography Bill of Materials (CBOM) in standardized CycloneDX JSON format. It gives security teams and developers a clear, auditable picture of where cryptography lives across their software — and what needs to change.</p>
+<p>Built for technology leaders — VPs of Products, CISOs, and DevSecOps teams — it is especially valuable for organizations in regulated or data-sensitive industries: SaaS providers, database vendors, CRM and ERP platforms, HR systems, and AI/ML companies. Whether the goal is audit readiness, regulatory compliance, or long-term post-quantum preparedness, Quantum Safe Explorer provides the visibility to act with confidence.</p>
+<p>IBM has validated this approach internally through its "Client Zero" initiative, accelerating crypto-agility across its own product portfolio. Learn more: <a href="https://www.ibm.com/new/product-blog/empowering-cios-to-accelerate-crypto-agility-with-ibm-quantum-safe-explorer">Empowering CIOs to Accelerate Crypto-Agility with IBM Quantum Safe Explorer</a></p>
+<h3 id="why-quantum-safe-explorer">Why Quantum Safe Explorer?<a class="headerlink" href="#why-quantum-safe-explorer" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Continuous Cryptographic Inventory</strong>: Always know exactly what cryptography is deployed across your applications and infrastructure.</li>
+<li><strong>Automatic CBOM Generation</strong>: Produce a Cryptography Bill of Materials with every build — no manual tracking required.</li>
+<li><strong>Early Detection of Weak Algorithms</strong>: Find vulnerable or deprecated cryptographic implementations before they reach production.</li>
+<li><strong>AI-Assisted Remediation</strong>: Pair with IBM BOB Building Blocks to automatically generate code fixes, pull requests, and migration guides.</li>
+</ul>
+<hr />
+<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<h3 id="core-capabilities">Core Capabilities<a class="headerlink" href="#core-capabilities" title="Permanent link">&para;</a></h3>
+<details>
+<summary><strong>🎯 Cryptographic Discovery & Scanning</strong></summary>
+
+<p><strong>Source Code & Binary Scanning</strong>: IBM Quantum Safe Explorer performs deep scanning of application source code and compiled binaries to surface all cryptographic usage across a codebase.</p>
+
+<ul>
+<li><strong>Encryption Algorithm Detection</strong>: Identifies RSA, ECC, AES, SHA, and other algorithms in use</li>
+<li><strong>Key Size & Mode Analysis</strong>: Reports key sizes, cipher modes, and protocol versions</li>
+<li><strong>Library & Certificate Discovery</strong>: Enumerates cryptographic libraries (e.g., OpenSSL, BouncyCastle), X.509 certificates, and TLS protocols</li>
+</ul>
+
+<p><strong>Use Case</strong>: A development team wants to audit all cryptographic dependencies before a major release to ensure no weak algorithms are present.</p>
+
+</details>
+
+<details>
+<summary><strong>⚡ CBOM Generation & Reporting</strong></summary>
+
+<p><strong>Cryptography Bill of Materials (CBOM)</strong>: Every scan automatically produces a structured CBOM in JSON format, providing a standardized inventory of cryptographic assets aligned with the CycloneDX standard.</p>
+
+<ul>
+<li><strong>findings.json</strong>: Detailed discovery results per file and line</li>
+<li><strong>CSV Reports</strong>: Tabular summaries for security teams and auditors</li>
+<li><strong>CBOM.json</strong>: Machine-readable CycloneDX-compliant cryptographic inventory</li>
+</ul>
+
+<p><strong>Use Case</strong>: A CISO needs a compliance artifact listing every algorithm, key size, and certificate in a product's codebase to satisfy a regulatory audit.</p>
+
+</details>
+
+<details>
+<summary><strong>🔒 CI/CD Pipeline Integration & Remediation</strong></summary>
+
+<p><strong>Continuous Scanning in Pipelines</strong>: Integrate IBM Quantum Safe Explorer directly into CI/CD workflows (GitHub Actions, Jenkins, Tekton, Azure DevOps) so every code push is automatically scanned.</p>
+
+<ul>
+<li><strong>Automated Vulnerability Detection</strong>: Flags quantum-vulnerable algorithms (e.g., RSA-1024, SHA-1, TLS 1.0) as pipeline quality gates</li>
+<li><strong>IBM BOB Integration</strong>: Feeds CBOM findings into IBM BOB for AI-generated code remediation and pull requests</li>
+<li><strong>Post-Quantum Migration Paths</strong>: Recommends NIST PQC algorithms (ML-KEM / Kyber, ML-DSA / Dilithium) as migration targets</li>
+</ul>
+
+<p><strong>Use Case</strong>: A DevSecOps team wants broken-crypto findings to automatically trigger AI-generated fix PRs without manual developer intervention.</p>
+
+</details>
+
+<hr />
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<h3 id="high-level-architecture">High-Level Architecture<a class="headerlink" href="#high-level-architecture" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image.png" /></p>
+<h3 id="system-components">System Components<a class="headerlink" href="#system-components" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+<th>Technology</th>
+<th>Scalability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CI/CD Pipeline</strong></td>
+<td>Trigger scans on every push</td>
+<td>GitHub Actions / Jenkins / Tekton</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Quantum Safe Explorer</strong></td>
+<td>Crypto discovery and CBOM generation</td>
+<td>IBM QSE Scanner</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>CBOM Store</strong></td>
+<td>Persist cryptographic inventories</td>
+<td>JSON / CycloneDX</td>
+<td>Vertical/Horizontal</td>
+</tr>
+<tr>
+<td><strong>IBM BOB</strong></td>
+<td>AI-assisted code remediation and PR generation</td>
+<td>IBM BOB Building Blocks</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Version Control</strong></td>
+<td>Track remediation history and approvals</td>
+<td>GitHub / GitLab</td>
+<td>Horizontal</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-flow">Data Flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Developer
+    participant CI/CD
+    participant Explorer
+    participant BOB
+    participant VCS
+
+    Developer-&gt;&gt;VCS: Git Push
+    VCS-&gt;&gt;CI/CD: Trigger Pipeline
+    CI/CD-&gt;&gt;Explorer: Run Scan (source + binaries)
+    Explorer--&gt;&gt;CI/CD: findings.json, CBOM.json, CSV
+    CI/CD-&gt;&gt;BOB: Feed CBOM + findings
+    BOB-&gt;&gt;BOB: Analyse vulnerable algorithms
+    BOB--&gt;&gt;VCS: Create remediation Pull Request
+    VCS--&gt;&gt;Developer: Review &amp; Approve PR
+    Developer-&gt;&gt;CI/CD: Merge triggers re-scan
+    Explorer--&gt;&gt;CI/CD: Updated CBOM (quantum-ready)</code></pre>
+<hr />
+<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<h3 id="who-should-use-quantum-safe-explorer">Who Should Use Quantum Safe Explorer?<a class="headerlink" href="#who-should-use-quantum-safe-explorer" title="Permanent link">&para;</a></h3>
+<h4 id="target-personas">Target Personas<a class="headerlink" href="#target-personas" title="Permanent link">&para;</a></h4>
+<details>
+<summary><strong>👨‍💻 Developers & DevSecOps Engineers</strong></summary>
+
+<p>Quantum Safe Explorer integrates directly into developer workflows, surfacing cryptographic findings during normal CI/CD execution and pairing with IBM BOB to generate ready-to-review fix PRs.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Run automated crypto scans on every pull request</li>
+<li>Review IBM BOB-generated remediation suggestions</li>
+<li>Validate fixes by re-scanning after merging changes</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>No context switching — findings and fixes surface inside existing pipelines</li>
+<li>AI-generated PRs reduce manual remediation effort</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>🏢 Enterprise Security & Compliance Teams (CISOs)</strong></summary>
+
+<p>Security executives use Quantum Safe Explorer to gain organization-wide visibility into cryptographic posture and demonstrate compliance readiness for post-quantum mandates.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Generate CBOMs across the product portfolio for audit submissions</li>
+<li>Track cryptographic risk trends over time via scan histories</li>
+<li>Enforce quantum-readiness gates in enterprise CI/CD standards</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Standardized CycloneDX CBOM output accepted by compliance frameworks</li>
+<li>Continuous monitoring replaces point-in-time manual audits</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>🎯 VP of Products & Technology Leaders</strong></summary>
+
+<p>Product leaders leverage Quantum Safe Explorer to ensure their software products remain competitive and secure as quantum computing advances, backed by IBM's own Client Zero experience.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Assess overall quantum vulnerability exposure across product lines</li>
+<li>Prioritize engineering investment in cryptographic modernization</li>
+<li>Communicate crypto-agility progress to customers and regulators</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Clear risk dashboards from CBOM data support executive decision-making</li>
+<li>IBM Client Zero validation provides proven enterprise-scale reference</li>
+</ul>
+
+</details>
+
+<h3 id="real-world-scenarios">Real-World Scenarios<a class="headerlink" href="#real-world-scenarios" title="Permanent link">&para;</a></h3>
+<h4 id="scenario-1-automated-cryptographic-remediation-in-cicd">Scenario 1: Automated Cryptographic Remediation in CI/CD<a class="headerlink" href="#scenario-1-automated-cryptographic-remediation-in-cicd" title="Permanent link">&para;</a></h4>
+<p><strong>Challenge</strong>: A SaaS provider needs to identify and fix weak cryptographic algorithms (RSA-1024, SHA-1, TLS 1.0) across a large Java codebase before an upcoming SOC 2 audit, but manual code review at scale is impractical.</p>
+<p><strong>Solution</strong>: Integrate IBM Quantum Safe Explorer into the CI/CD pipeline to scan every build, generate a CBOM, and feed findings into IBM BOB for automated fix generation and pull request creation.</p>
+<p><strong>Implementation</strong>:
+<div class="highlight"><pre><span></span><code><span class="c1"># GitHub Actions workflow excerpt</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Quantum Safe Explorer</span>
+<span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">qse scan --source ./src --output ./reports</span>
+<span class="w">    </span><span class="no"># Outputs: findings.json, CBOM.json, report.csv</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Feed CBOM to IBM BOB</span>
+<span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">bob remediate --cbom ./reports/CBOM.json --create-pr</span>
+</code></pre></div></p>
+<p><strong>Results</strong>:
+- ✅ <strong>Scan coverage</strong>: 100% of source code scanned on every push
+- ✅ <strong>Remediation speed</strong>: AI-generated PRs reduce fix time from days to hours
+- ✅ <strong>Audit readiness</strong>: CycloneDX CBOM available for every build artifact</p>
+<h4 id="scenario-2-post-quantum-migration-planning">Scenario 2: Post-Quantum Migration Planning<a class="headerlink" href="#scenario-2-post-quantum-migration-planning" title="Permanent link">&para;</a></h4>
+<p><strong>Challenge</strong>: An enterprise preparing for NIST post-quantum cryptography (PQC) mandates needs to understand which applications use quantum-vulnerable algorithms and plan a phased migration roadmap.</p>
+<p><strong>Solution</strong>: Use IBM Quantum Safe Explorer to produce a portfolio-wide CBOM, identify all quantum-vulnerable algorithms, and leverage IBM BOB to generate migration guides targeting ML-KEM (Kyber) and ML-DSA (Dilithium).</p>
+<p><strong>Benefits</strong>:
+- Clear inventory of every vulnerable algorithm across all products
+- Prioritized migration roadmap based on risk ratings from scan findings
+- IBM BOB suggests NIST PQC replacement APIs, reducing migration complexity</p>
+<hr />
+<h2 id="products-services">Products &amp; Services<a class="headerlink" href="#products-services" title="Permanent link">&para;</a></h2>
+<h4 id="ibm-quantum-safe-explorer">IBM Quantum Safe Explorer<a class="headerlink" href="#ibm-quantum-safe-explorer" title="Permanent link">&para;</a></h4>
+<p><strong>Description</strong>: The core scanning engine that discovers cryptographic assets in source code and binaries, generating CBOMs and vulnerability reports to help organizations understand their cryptographic posture.</p>
+<p><strong>Key Features:</strong>
+- Deep source code and binary scanning for cryptographic assets
+- Automatic CBOM generation in CycloneDX JSON format
+- Identification of quantum-vulnerable algorithms and risk ratings</p>
+<p><strong>Links:</strong>
+- 📖 <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/README.md">Implementation Guide</a>
+- 🌐 <a href="https://www.ibm.com/quantum-safe">IBM Quantum Safe</a></p>
+<hr />
+<h4 id="cbomkit">CBOMkit<a class="headerlink" href="#cbomkit" title="Permanent link">&para;</a></h4>
+<p><strong>Description</strong>: An open-source toolkit contributed by IBM to the Post-Quantum Cryptography Alliance (PQCA) under the Linux Foundation, enabling cryptographic inventory generation, visualization, analysis, and storage based on the CycloneDX CBOM standard.</p>
+<p><strong>Key Features:</strong>
+- CBOM generation, visualization, and storage
+- Open-source and community-driven under the Linux Foundation / PQCA
+- Integrates with IBM Quantum Safe Explorer output</p>
+<p><strong>Links:</strong>
+- 💻 <a href="https://github.com/PQCA/cbomkit">CBOMkit on GitHub (PQCA)</a>
+- 📖 <a href="https://cyclonedx.org/capabilities/cbom/">CycloneDX CBOM Specification</a></p>
+<hr />
+<h4 id="ibm-bob-building-blocks">IBM BOB (Building Blocks)<a class="headerlink" href="#ibm-bob-building-blocks" title="Permanent link">&para;</a></h4>
+<p><strong>Description</strong>: IBM's AI-assisted engineering platform that ingests CBOM findings from IBM Quantum Safe Explorer and automatically generates code remediation suggestions, replacement APIs, migration guides, and pull requests to accelerate cryptographic modernization.</p>
+<p><strong>Key Features:</strong>
+- Reads CBOM and understands vulnerable cryptographic locations in code
+- Generates pull requests with specific algorithm replacement code
+- Produces migration guides for post-quantum algorithm transitions</p>
+<p><strong>Links:</strong>
+- 📖 <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/README.md">Quantum-Safe Integration Guide</a></p>
+<hr />
+<h2 id="core-concepts">Core Concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="fundamental-concepts">Fundamental Concepts<a class="headerlink" href="#fundamental-concepts" title="Permanent link">&para;</a></h3>
+<h4 id="concept-1-cryptography-bill-of-materials-cbom">Concept 1: Cryptography Bill of Materials (CBOM)<a class="headerlink" href="#concept-1-cryptography-bill-of-materials-cbom" title="Permanent link">&para;</a></h4>
+<p>A <strong>Cryptography Bill of Materials (CBOM)</strong> provides a standardized inventory of the cryptographic assets used within software and systems, including algorithms, keys, certificates, protocols, and their configurations. As a core capability of the <strong>CycloneDX</strong> standard, CBOM gives organizations visibility into how and where cryptography is deployed across their environments.</p>
+<p><strong>Key Points:</strong>
+- Enables identification of vulnerable or deprecated cryptographic components
+- Supports compliance requirements and security governance
+- Plays a critical role in assessing and planning the transition to post-quantum cryptography</p>
+<p><strong>CBOM Contents:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Information</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Algorithms</td>
+<td>RSA-2048, AES-256, SHA-1</td>
+</tr>
+<tr>
+<td>Libraries</td>
+<td>OpenSSL, BouncyCastle</td>
+</tr>
+<tr>
+<td>Protocols</td>
+<td>TLS 1.2</td>
+</tr>
+<tr>
+<td>Certificates</td>
+<td>X.509 certificates</td>
+</tr>
+<tr>
+<td>Key sizes</td>
+<td>1024-bit, 2048-bit</td>
+</tr>
+<tr>
+<td>Dependencies</td>
+<td>Which components use which crypto</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example CBOM finding:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"algorithm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RSA"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"key_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">1024</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"auth-service.java:120"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"risk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"High"</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="concept-2-ibms-leadership-in-cbom-standardization">Concept 2: IBM's Leadership in CBOM Standardization<a class="headerlink" href="#concept-2-ibms-leadership-in-cbom-standardization" title="Permanent link">&para;</a></h4>
+<p>IBM Research has been instrumental in defining the CycloneDX CBOM specification and driving its industry adoption. In 2024, IBM open-sourced <strong>CBOMkit</strong>, a powerful toolkit for cryptographic inventory generation, visualization, analysis, and storage. IBM subsequently contributed these capabilities to the <strong>Post-Quantum Cryptography Alliance (PQCA)</strong> under the Linux Foundation to advance industry collaboration.</p>
+<p><strong>Visual Representation:</strong>
+<div class="highlight"><pre><span></span><code>IBM Research → CycloneDX CBOM Spec → Industry Standard
+                       ↓
+              IBM Quantum Safe Explorer
+                       ↓
+                 CBOMkit (open-source)
+                       ↓
+         Post-Quantum Cryptography Alliance (PQCA)
+                       ↓
+              Community Adoption &amp; Contribution
+</code></pre></div></p>
+<h4 id="concept-3-quantum-vulnerable-algorithms-nist-pqc">Concept 3: Quantum-Vulnerable Algorithms &amp; NIST PQC<a class="headerlink" href="#concept-3-quantum-vulnerable-algorithms-nist-pqc" title="Permanent link">&para;</a></h4>
+<p>Certain widely-used cryptographic algorithms (RSA, ECC, Diffie-Hellman) are considered quantum-vulnerable because sufficiently powerful quantum computers could break them. NIST has standardized post-quantum cryptographic (PQC) algorithms as replacements:</p>
+<ul>
+<li><strong>ML-KEM (Kyber)</strong> — Key encapsulation mechanism replacement</li>
+<li><strong>ML-DSA (Dilithium)</strong> — Digital signature replacement</li>
+</ul>
+<h3 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>┌──────────────────────┐
+│  Developer Code Push │
+└──────────┬───────────┘
+           │
+           ↓
+┌──────────────────────┐
+│  CI/CD Pipeline      │
+│  Build + Tests       │
+└──────────┬───────────┘
+           │
+           ↓
+┌──────────────────────┐
+│  QSE Scan            │
+│  findings.json       │
+│  CBOM.json           │
+└──────────┬───────────┘
+           │
+           ↓
+┌──────────────────────┐
+│  IBM BOB             │
+│  Read CBOM           │
+│  Generate Fix PR     │
+└──────────┬───────────┘
+           │
+           ↓
+┌──────────────────────┐
+│  Developer Approves  │
+│  Re-scan confirms    │
+│  Quantum-Ready App   │
+└──────────────────────┘
+</code></pre></div>
+<hr />
+<h2 id="assets">Assets<a class="headerlink" href="#assets" title="Permanent link">&para;</a></h2>
+<h3 id="download-skills">Download Skills<a class="headerlink" href="#download-skills" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Skill Name</th>
+<th>Description</th>
+<th>Download Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Quantum Safe Skills</strong></td>
+<td>Pre-built skills for IBM Quantum Safe Explorer integration with IBM BOB</td>
+<td><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/bob-skills/skills.zip">📥 Download</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="download-custom-modes">Download Custom Modes<a class="headerlink" href="#download-custom-modes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Mode Name</th>
+<th>Description</th>
+<th>Download Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Quantum Safe Mode</strong></td>
+<td>Custom BOB mode tailored for quantum-safe cryptographic scanning and remediation workflows</td>
+<td><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/bob-modes/quantum-safe.zip">📥 Download</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="demo-videos">Demo Videos<a class="headerlink" href="#demo-videos" title="Permanent link">&para;</a></h3>
+<p>Explore our video library to see Quantum Safe Explorer in action:</p>
+<h4 id="getting-started-videos">Getting Started Videos<a class="headerlink" href="#getting-started-videos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Video Title</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Introduction to IBM Quantum Safe Explorer</strong></td>
+<td>Overview of key features, CBOM generation, and CI/CD integration</td>
+<td><a href="https://www.youtube.com/watch?v=2IziCt51Dfc">▶️ Watch on YouTube</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="video-playlists">Video Playlists<a class="headerlink" href="#video-playlists" title="Permanent link">&para;</a></h3>
+<ul>
+<li>📺 <a href="https://www.youtube.com/@IBMTechnology">IBM Quantum Safe YouTube Playlist</a> — IBM Technology channel for latest quantum-safe content</li>
+</ul>
+<h3 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🌐 <a href="https://www.ibm.com/quantum-safe">IBM Quantum Safe</a> — Official IBM Quantum Safe product page</li>
+<li>📖 <a href="https://www.ibm.com/new/product-blog/empowering-cios-to-accelerate-crypto-agility-with-ibm-quantum-safe-explorer">IBM Client Zero Blog</a> — Empowering CIOs to Accelerate Crypto-Agility</li>
+<li>💻 <a href="https://github.com/PQCA/cbomkit">CBOMkit (PQCA)</a> — Open-source CBOM toolkit</li>
+</ul>
+<hr />
+<h2 id="how-to-get-started">How to Get Started<a class="headerlink" href="#how-to-get-started" title="Permanent link">&para;</a></h2>
+<h3 id="quick-start-path">Quick Start Path<a class="headerlink" href="#quick-start-path" title="Permanent link">&para;</a></h3>
+<p>Follow this recommended onboarding flow:</p>
+<ol>
+<li><strong>Understand the purpose</strong></li>
+<li>Read the <a href="#overview">Overview</a> section to understand the quantum cryptography problem this Building Block solves.</li>
+<li>
+<p>Review the <a href="#key-features">Key Features</a> section to identify the most relevant scanning and remediation capabilities.</p>
+</li>
+<li>
+<p><strong>Identify your use case</strong></p>
+</li>
+<li>Use the <a href="#use-cases">Use Cases</a> section to map the tool to your role — developer, CISO, or VP of Products.</li>
+<li>
+<p>Review the CI/CD integration scenario or the post-quantum migration planning scenario that best matches your needs.</p>
+</li>
+<li>
+<p><strong>Review architecture and concepts</strong></p>
+</li>
+<li>Explore the <a href="#architecture">Architecture</a> section to understand how Quantum Safe Explorer, CBOM output, and IBM BOB connect.</li>
+<li>
+<p>Read the <a href="#core-concepts">Core Concepts</a> section to understand CBOM, quantum-vulnerable algorithms, and NIST PQC standards.</p>
+</li>
+<li>
+<p><strong>Choose supporting products and services</strong></p>
+</li>
+<li>Use the <a href="#products--services">Products &amp; Services</a> section to determine which IBM products are required (IBM Quantum Safe Explorer, CBOMkit, IBM BOB).</li>
+<li>
+<p>Note any prerequisites: access to IBM Quantum Safe Explorer, a CI/CD platform, and an IBM BOB environment.</p>
+</li>
+<li>
+<p><strong>Review the implementation guide</strong></p>
+</li>
+<li>Proceed to the <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/README.md">complete implementation guide</a> for detailed setup instructions.</li>
+</ol>
+<h3 id="recommended-prerequisites">Recommended Prerequisites<a class="headerlink" href="#recommended-prerequisites" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Access requirements</strong>: IBM Quantum Safe Explorer license, IBM BOB environment, GitHub/GitLab account</li>
+<li><strong>Environment requirements</strong>: CI/CD platform (GitHub Actions, Jenkins, Tekton, or Azure DevOps)</li>
+<li><strong>Technical prerequisites</strong>: Java or other supported language codebase, familiarity with CI/CD pipeline configuration</li>
+<li><strong>Knowledge prerequisites</strong>: Basic understanding of cryptographic concepts (algorithms, key sizes, TLS), familiarity with CBOM/CycloneDX standard</li>
+</ul>
+<h3 id="first-success-checklist">First Success Checklist<a class="headerlink" href="#first-success-checklist" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Access to IBM Quantum Safe Explorer is confirmed</li>
+<li>[ ] CI/CD pipeline is configured to run Explorer on code push</li>
+<li>[ ] A CBOM is successfully generated from a sample scan</li>
+<li>[ ] IBM BOB is connected and can read CBOM findings</li>
+<li>[ ] A remediation pull request has been generated and reviewed</li>
+<li>[ ] Re-scan confirms cryptographic improvements</li>
+</ul>
+<hr />
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Integrate Explorer Early</strong> — Add IBM Quantum Safe Explorer to CI/CD pipelines from the start of a project</li>
+<li><strong>Automate CBOM Generation</strong> — Generate CBOMs automatically with every build for continuous visibility</li>
+<li><strong>Start with Risk Assessment</strong> — Use Explorer to evaluate quantum vulnerability of existing cryptographic implementations before planning remediation</li>
+<li><strong>Leverage AI Remediation</strong> — Use IBM BOB to automatically generate fixes for vulnerable cryptography</li>
+<li><strong>Continuous Scanning</strong> — Re-scan applications after remediation to verify fixes and update the CBOM</li>
+<li><strong>Maintain Audit Trails</strong> — Keep records of all cryptographic changes and remediations for compliance</li>
+<li><strong>Prioritize High-Risk Findings</strong> — Address critical vulnerabilities (RSA-1024, SHA-1, TLS 1.0) first</li>
+<li><strong>Test Thoroughly</strong> — Validate all cryptographic changes in non-production environments before deploying</li>
+<li><strong>Plan for Post-Quantum</strong> — Prepare migration paths to NIST PQC algorithms (ML-KEM, ML-DSA) proactively</li>
+</ul>
+<hr />
+<h2 id="additional-resources_1">Additional Resources<a class="headerlink" href="#additional-resources_1" title="Permanent link">&para;</a></h2>
+<h3 id="related-building-blocks">Related Building Blocks<a class="headerlink" href="#related-building-blocks" title="Permanent link">&para;</a></h3>
+<p><strong>Within Secure:</strong></p>
+<ul>
+<li><a href="../non-human-identity/">Non-human Identity</a> — Identity and access management</li>
+</ul>
+<p><strong>Other Building Blocks:</strong></p>
+<ul>
+<li><a href="../../build/infrastructure-as-code/">Infrastructure as Code</a> — Automated infrastructure provisioning</li>
+<li><a href="../../build/ipaas/">iPaaS</a> — Integration platform capabilities</li>
+<li><a href="../../build/middleware-modernization/">Code Modernization</a> — Modernize security middleware</li>
+<li><a href="../../optimize/automated-resilience/">Automated Resilience &amp; Compliance</a> — Ensure cryptographic compliance</li>
+</ul>
+<h3 id="external-links">External Links<a class="headerlink" href="#external-links" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.ibm.com/quantum-safe">IBM Quantum Safe</a></li>
+<li><a href="https://cyclonedx.org/capabilities/cbom/">CycloneDX CBOM Specification</a></li>
+<li><a href="https://www.nist.gov/pqcrypto">NIST Post-Quantum Cryptography Standards</a></li>
+<li><a href="https://pqca.org/">Post-Quantum Cryptography Alliance (PQCA)</a></li>
+<li><a href="https://github.com/PQCA/cbomkit">CBOMkit on GitHub</a></li>
+</ul>
+<hr />
+<h2 id="call-to-action">Call to Action<a class="headerlink" href="#call-to-action" title="Permanent link">&para;</a></h2>
+<h3 id="ready-to-build-with-quantum-safe">Ready to Build with Quantum Safe?<a class="headerlink" href="#ready-to-build-with-quantum-safe" title="Permanent link">&para;</a></h3>
+<p>Take the next step with this Building Block by choosing the path that best fits your needs:</p>
+<ul>
+<li><strong>Explore the fundamentals</strong> in the <a href="#overview">Overview</a>, <a href="#architecture">Architecture</a>, and <a href="#core-concepts">Core Concepts</a> sections</li>
+<li><strong>Follow a hands-on path</strong> in <a href="#how-to-get-started">How to Get Started</a></li>
+<li><strong>Review the complete implementation guide</strong> on GitHub</li>
+<li><strong>Watch the demo</strong> to see Quantum Safe Explorer and IBM BOB in action</li>
+</ul>
+<p><strong>Quick links:</strong></p>
+<ul>
+<li>🚀 <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/README.md">Complete Implementation Guide</a></li>
+<li>▶️ <a href="https://www.youtube.com/watch?v=2IziCt51Dfc">Watch Demo on YouTube</a></li>
+<li>🌐 <a href="https://www.ibm.com/quantum-safe">IBM Quantum Safe</a></li>
+<li>📖 <a href="https://cyclonedx.org/capabilities/cbom/">CycloneDX CBOM Standard</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../non-human-identity/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Non-human Identity">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Non-human Identity
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../ibm-bob/" class="md-footer__link md-footer__link--next" aria-label="Next: Quick Start with Bob Modes">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Quick Start with Bob Modes
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.instant", "navigation.top", "navigation.footer", "content.code.copy", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

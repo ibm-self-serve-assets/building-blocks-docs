@@ -1,0 +1,4100 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bob+ IBM Technology Building Blocks Documentation">
+      
+      
+      
+        <link rel="canonical" href="https://ibm-self-serve-assets.github.io/building-blocks/automation-core/build/asset-management/">
+      
+      
+        <link rel="prev" href="../middleware-modernization/">
+      
+      
+        <link rel="next" href="../../optimize/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Asset Management - Bob+ IBM Technology Building Blocks Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/carbon.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#asset-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Bob+ IBM Technology Building Blocks Docs" class="md-header__button md-logo" aria-label="Bob+ IBM Technology Building Blocks Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bob+ IBM Technology Building Blocks Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Asset Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Bob+ IBM Technology Building Blocks Docs" class="md-nav__button md-logo" aria-label="Bob+ IBM Technology Building Blocks Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Bob+ IBM Technology Building Blocks Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/agents/agent-builder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Builder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/agents/multi-agent-orchestration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-Agent Orchestration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/agents/agentic-sdlc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic SDLC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Trust
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI Trust
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/model-evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/agent-ops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Ops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/real-time-guardrails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Real-Time Guardrails
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/ai-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Integration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/integration/data-pipeline-ai-generated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Pipeline (AI Generated)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/integration/data-streaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Streaming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/integration/data-observability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Observability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intelligence
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Intelligence
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/intelligence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/intelligence/data-quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/intelligence/data-lineage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Lineage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/intelligence/text2sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text2SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Retrieval
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Retrieval
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/rag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vector Search
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vector Search
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/vector-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/vector-search/milvus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milvus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/vector-search/opensearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenSearch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/vector-search/datastax-astra-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DataStax Astra DB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/no-sql-database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    No SQL Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/zero-copy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Automation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build and Deploy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build and Deploy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ipaas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iPaaS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-as-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure as Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../middleware-modernization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Modernization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asset Management
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asset Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Asset Management?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Asset Management?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-level-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Level Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-should-use-asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who Should Use Asset Management?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Who Should Use Asset Management?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Personas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-legacy-automation-script-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: Legacy Automation Script Modernization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-voice-enabled-field-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: Voice-Enabled Field Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-predictive-maintenance-for-critical-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 3: Predictive Maintenance for Critical Assets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#products-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Products &amp; Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Products &amp; Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-1-ibm-maximo-application-suite-mas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product 1: IBM Maximo Application Suite (MAS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-2-ibm-bob-ai-adlc-partner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product 2: IBM Bob AI (ADLC Partner)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamental-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fundamental Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamental Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept-1-asset-lifecycle-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 1: Asset Lifecycle Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-2-preventive-vs-predictive-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 2: Preventive vs Predictive Maintenance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-3-automation-script-architecture-in-maximo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 3: Automation Script Architecture in Maximo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Skills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Download Skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-included-in-asset-management-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's Included in Asset Management Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-install-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Install Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asset-management-knowledge-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asset Management Knowledge Hub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximo-code-modernization-asset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximo Code Modernization Asset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demo Videos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Demo Videos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-started-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started Videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#call-to-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Call to Action
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Call to Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ready-to-build-with-asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ready to Build with Asset Management?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optimize
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Optimize
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/automated-resilience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Resilience & Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/finops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FinOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/automated-resource-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Resource Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/budget-and-forecasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Budget & Forecasting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Secure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../secure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../secure/non-human-identity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-human Identity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../secure/quantum-safe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quantum-Safe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bob+
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bob+
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ibm-bob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start with Bob Modes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ibm-bob/skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start with Bob Skills
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build with Bob Workshops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build-with-bob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build with Bob Webinars
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Asset Management?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Asset Management?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-level-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Level Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-should-use-asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who Should Use Asset Management?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Who Should Use Asset Management?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Personas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-legacy-automation-script-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: Legacy Automation Script Modernization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-voice-enabled-field-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: Voice-Enabled Field Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-predictive-maintenance-for-critical-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 3: Predictive Maintenance for Critical Assets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#products-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Products &amp; Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Products &amp; Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-1-ibm-maximo-application-suite-mas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product 1: IBM Maximo Application Suite (MAS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-2-ibm-bob-ai-adlc-partner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product 2: IBM Bob AI (ADLC Partner)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamental-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fundamental Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamental Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept-1-asset-lifecycle-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 1: Asset Lifecycle Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-2-preventive-vs-predictive-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 2: Preventive vs Predictive Maintenance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-3-automation-script-architecture-in-maximo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 3: Automation Script Architecture in Maximo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Skills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Download Skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-included-in-asset-management-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's Included in Asset Management Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-install-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Install Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asset-management-knowledge-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asset Management Knowledge Hub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximo-code-modernization-asset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximo Code Modernization Asset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demo Videos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Demo Videos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-started-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started Videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#call-to-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Call to Action
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Call to Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ready-to-build-with-asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ready to Build with Asset Management?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="asset-management">Asset Management<a class="headerlink" href="#asset-management" title="Permanent link">&para;</a></h1>
+<p><a href="../">← Back to Build and Deploy</a></p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>IBM Maximo Application Suite (MAS) is an enterprise-grade asset lifecycle management platform that unifies maintenance, inspection, and reliability operations across physical assets. Built on a cloud-native, AI-powered foundation, Maximo enables organisations to manage the complete lifecycle of assets — from acquisition and deployment through maintenance, compliance, and decommission — within a single integrated platform.</p>
+<h3 id="what-is-asset-management">What is Asset Management?<a class="headerlink" href="#what-is-asset-management" title="Permanent link">&para;</a></h3>
+<p>Asset Management with IBM Maximo transforms reactive, manual maintenance operations into automated, AI-driven asset performance management. This building block combines IBM Maximo Application Suite for asset lifecycle management with Bob AI capabilities for automation script modernization, conversational agents, and intelligent operational workflows.</p>
+<p>Designed for maintenance engineers, operations teams, and enterprise architects, Maximo enables organisations to manage work orders, track asset health, schedule preventive maintenance, and meet regulatory compliance — all through a unified platform. By treating asset data, maintenance workflows, and operational knowledge as managed software artefacts, teams can apply modern DevOps and AI-assisted practices to asset-intensive industries.</p>
+<p>The solution addresses the complexity of managing dynamic, distributed physical asset estates where manual processes cannot scale. Whether automating work order lifecycle management, converting legacy Maximo scripts, or deploying AI-driven voice agents for field technicians, Asset Management accelerates delivery while maintaining consistency, governance, and auditability across the entire asset lifecycle.</p>
+<h3 id="why-asset-management">Why Asset Management?<a class="headerlink" href="#why-asset-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>🏗️ Unified Asset Lifecycle Management</strong>: Manage assets from acquisition through decommission within a single, cloud-native platform</li>
+<li><strong>⚙️ AI-Powered Automation</strong>: Leverage Bob AI to modernise automation scripts, orchestrate workflows, and build intelligent agents</li>
+<li><strong>🔄 Predictive Maintenance</strong>: Shift from reactive to proactive maintenance using IoT sensor data and AI-driven failure prediction</li>
+<li><strong>📋 Regulatory Compliance</strong>: Automate inspection records, audit trails, and compliance reporting across all asset types</li>
+<li><strong>🚀 Accelerated Field Operations</strong>: Empower technicians with voice agents and mobile-enabled work order management</li>
+<li><strong>🎯 Enterprise Integration</strong>: Connect Maximo with ERP, SCADA, IoT, and enterprise systems through standardised integration patterns</li>
+</ul>
+<hr />
+<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<h3 id="core-capabilities">Core Capabilities<a class="headerlink" href="#core-capabilities" title="Permanent link">&para;</a></h3>
+<details>
+<summary><strong>🎯 Maximo Automation Script Modernization</strong></summary>
+
+<p><strong>AI-Powered Script Analysis and Modernization</strong>: Ingest, analyse, and modernise legacy Maximo automation scripts with Bob AI assistance</p>
+
+<ul>
+<li><strong>Legacy Script Ingestion</strong>: Automated parsing and analysis of existing Maximo automation scripts across all supported languages</li>
+<li><strong>Static Code Analysis</strong>: Identification of technical debt, anti-patterns, and optimisation opportunities within automation scripts</li>
+<li><strong>Modernization Recommendations</strong>: AI-generated guidance aligned to current Maximo best practices and maintainability standards</li>
+<li><strong>Java-to-Script Conversion</strong>: Automated conversion of legacy Maximo Java classes to Python (Jython), JavaScript, Nashorn, ECMAScript, and Maximo Business Rules</li>
+<li><strong>Test Script Generation</strong>: Automated creation of test scripts alongside every converted or modernised automation script</li>
+</ul>
+
+<p><strong>Use Case</strong>: Operations teams can modernise entire libraries of legacy Maximo automation scripts in hours, with comprehensive conversion reports and before/after comparisons generated automatically.</p>
+
+</details>
+
+<details>
+<summary><strong>⚡ Work Order & Field Operations Automation</strong></summary>
+
+<p><strong>AI-Driven Work Order Lifecycle Management</strong>: Automate work order creation, routing, execution, and closure through conversational and API-driven interfaces</p>
+
+<ul>
+<li><strong>Voice-Enabled Work Orders</strong>: Hands-free work order creation, update, retrieval, and closure for field technicians in industrial environments</li>
+<li><strong>Multi-Turn Workflow Agents</strong>: Conversational agents that orchestrate end-to-end work order lifecycle activities through guided dialogue</li>
+<li><strong>Real-Time API Integration</strong>: Live integration with Maximo Manage APIs for real-time work order state management</li>
+<li><strong>Natural Language Understanding</strong>: AI-powered interpretation of Maximo work order data structures from unstructured technician input</li>
+<li><strong>Contextual Task Execution</strong>: Orchestration of complex operational activities aligned to Maximo process workflows</li>
+</ul>
+
+<p><strong>Use Case</strong>: Field technicians in industrial environments can manage their entire work queue hands-free, reducing job execution time and improving real-time data capture accuracy.</p>
+
+</details>
+
+<details>
+<summary><strong>🔒 Knowledge Management & Compliance</strong></summary>
+
+<p><strong>Centralised Maximo Knowledge Platform</strong>: Unified knowledge retrieval, compliance automation, and AI-assisted operational support</p>
+
+<ul>
+<li><strong>Knowledge Hub</strong>: Centralised ingestion of Maximo operational, technical, and regulatory reference documentation</li>
+<li><strong>Semantic Search</strong>: AI-powered contextual retrieval accelerating troubleshooting for field technicians and operations teams</li>
+<li><strong>Compliance Automation</strong>: Automated inspection records, audit trails, and regulatory reporting across asset types</li>
+<li><strong>Data Ingestion Framework</strong>: Domain-specific ingestion pipeline for Bentley and Maximo data sources supporting structured and unstructured formats</li>
+<li><strong>Regulatory Reporting</strong>: Automated compliance checks and report generation against industry standards</li>
+</ul>
+
+<p><strong>Use Case</strong>: Operations teams can resolve Maximo issues in minutes using semantic knowledge retrieval, while compliance teams generate audit-ready reports automatically from Maximo operational data.</p>
+
+</details>
+
+<hr />
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<h3 id="high-level-architecture">High-Level Architecture<a class="headerlink" href="#high-level-architecture" title="Permanent link">&para;</a></h3>
+<p><img width="800" alt="Asset Management High-Level Architecture" src="/building-blocks/automation-core/images/asset_management_image.png" /></p>
+<h3 id="system-components">System Components<a class="headerlink" href="#system-components" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+<th>Technology</th>
+<th>Scalability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Maximo Manage</strong></td>
+<td>Core work order, asset, and inventory management</td>
+<td>IBM MAS, OpenShift</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Maximo Monitor</strong></td>
+<td>IoT asset health monitoring and anomaly detection</td>
+<td>IBM MAS, Watson IoT</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Maximo Health / Predict / Visual</strong></td>
+<td>AI-driven failure prediction, reliability analytics, and visual inspection</td>
+<td>IBM MAS, Watson Studio</td>
+<td>Vertical</td>
+</tr>
+<tr>
+<td><strong>OpenShift Container Platform</strong></td>
+<td>Container orchestration and runtime for all MAS components</td>
+<td>Red Hat OpenShift</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Integration &amp; API Layer</strong></td>
+<td>Enterprise system connectivity and API management</td>
+<td>IBM App Connect, iPaaS</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Event Streaming</strong></td>
+<td>Real-time event ingestion and processing across asset data streams</td>
+<td>Confluent (Kafka)</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Search &amp; Analytics</strong></td>
+<td>Full-text and semantic search across asset and operational data</td>
+<td>OpenSearch</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Object Storage</strong></td>
+<td>Scalable storage for asset documents, images, and reports</td>
+<td>MinIO / S3 Compatible</td>
+<td>Vertical</td>
+</tr>
+<tr>
+<td><strong>Database</strong></td>
+<td>Persistent relational data store for Maximo operational data</td>
+<td>PostgreSQL / Db2</td>
+<td>Vertical</td>
+</tr>
+<tr>
+<td><strong>Bob AI Layer</strong></td>
+<td>Script modernization, conversational agents, and knowledge retrieval</td>
+<td>IBM Bob, Building Blocks</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>IoT / SCADA</strong></td>
+<td>Real-time sensor data ingestion and edge device integration</td>
+<td>Watson IoT / Edge</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Enterprise Systems</strong></td>
+<td>ERP, GIS, CMMS, and third-party system integration</td>
+<td>SAP, Oracle, GIS, Others</td>
+<td>Horizontal</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-flow">Data Flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Tech as Field Technician
+    participant Agent as Bob Voice Agent
+    participant MAS as Maximo Manage
+    participant Monitor as Maximo Monitor
+    participant IoT as IoT Sensors
+    participant ERP as Enterprise Systems
+
+    IoT-&gt;&gt;Monitor: Real-time Asset Data
+    Monitor-&gt;&gt;MAS: Anomaly Alert / Work Order Trigger
+    Tech-&gt;&gt;Agent: Voice Command (Create Work Order)
+    Agent-&gt;&gt;MAS: API Call — Create/Update Work Order
+    MAS--&gt;&gt;Agent: Work Order Confirmation
+    Agent--&gt;&gt;Tech: Verbal Confirmation
+    MAS-&gt;&gt;ERP: Work Order Sync (Parts, Labour)
+    ERP--&gt;&gt;MAS: Inventory &amp; Cost Updates</code></pre>
+<hr />
+<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<h3 id="who-should-use-asset-management">Who Should Use Asset Management?<a class="headerlink" href="#who-should-use-asset-management" title="Permanent link">&para;</a></h3>
+<h4 id="target-personas">Target Personas<a class="headerlink" href="#target-personas" title="Permanent link">&para;</a></h4>
+<details>
+<summary><strong>🔧 Maintenance Engineers</strong></summary>
+
+<p>Asset Management is designed for maintenance engineers who need to manage work orders, track asset health, and execute preventive and predictive maintenance workflows efficiently.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Creating, updating, and closing work orders through web, mobile, and voice interfaces</li>
+<li>Reviewing AI-generated predictive maintenance alerts from Maximo Predict</li>
+<li>Managing asset inspection records and compliance documentation</li>
+<li>Executing preventive maintenance schedules across asset fleets</li>
+<li>Accessing Maximo knowledge base for troubleshooting guidance</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Hands-free work order management through voice-enabled agents</li>
+<li>Faster issue resolution through AI-powered knowledge retrieval</li>
+<li>Reduced paperwork through automated inspection and audit records</li>
+<li>Proactive alerts replacing reactive fault discovery</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>🏢 Operations & Reliability Teams</strong></summary>
+
+<p>Operations and reliability teams use Asset Management to monitor asset health, analyse failure patterns, and implement data-driven maintenance strategies that maximise uptime and reduce costs.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Monitoring real-time asset health dashboards in Maximo Monitor</li>
+<li>Analysing failure prediction scores and reliability analytics from Maximo Predict</li>
+<li>Managing preventive and condition-based maintenance schedules</li>
+<li>Reviewing operational KPIs — MTTR, MTBF, asset availability</li>
+<li>Orchestrating multi-step operational workflows through Bob agents</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Reduced unplanned downtime through AI-driven predictive maintenance</li>
+<li>Lower maintenance costs through optimised work scheduling</li>
+<li>Improved asset availability and production continuity</li>
+<li>Data-driven decisions replacing experience-only judgement</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>🎯 Maximo Platform Architects & Developers</strong></summary>
+
+<p>Platform architects and developers leverage Asset Management building blocks to modernise legacy Maximo implementations, build integrations, and extend Maximo with AI-powered automation.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Modernising legacy Maximo automation scripts and Java classes with Bob</li>
+<li>Designing Maximo integration architectures with ERP, IoT, and SCADA systems</li>
+<li>Building and deploying custom automation scripts and business rules</li>
+<li>Implementing Bob-powered agents for Maximo operational workflows</li>
+<li>Establishing governance and code standards for Maximo development</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Accelerated script modernization with AI-generated conversion and recommendations</li>
+<li>Reusable Building Block accelerators reducing implementation time</li>
+<li>Automated test script generation improving code quality</li>
+<li>Standardised integration patterns across Maximo deployments</li>
+</ul>
+
+</details>
+
+<h3 id="real-world-scenarios">Real-World Scenarios<a class="headerlink" href="#real-world-scenarios" title="Permanent link">&para;</a></h3>
+<h4 id="scenario-1-legacy-automation-script-modernization">Scenario 1: Legacy Automation Script Modernization<a class="headerlink" href="#scenario-1-legacy-automation-script-modernization" title="Permanent link">&para;</a></h4>
+<p><strong>Challenge</strong>: A utilities company has hundreds of legacy Maximo Java automation scripts that are difficult to maintain, lack documentation, and cannot be tested with modern CI/CD pipelines.</p>
+<p><strong>Solution</strong>: Bob-powered automation script modernization converts all Java classes to modern Jython/JavaScript, generates test scripts, and produces detailed conversion reports.</p>
+<p><strong>Implementation</strong>:
+<div class="highlight"><pre><span></span><code>Use skill maximo-java-conversion to convert all Java files in java-input/ to Jython
+
+Use skill maximo-script-modernization to analyse MaintenanceValidator.py and recommend improvements
+</code></pre></div></p>
+<p><strong>Results</strong>:</p>
+<ul>
+<li>✅ <strong>Time Savings</strong>: 85% reduction in manual script migration effort</li>
+<li>✅ <strong>Quality</strong>: Automated test script generated alongside every converted script</li>
+<li>✅ <strong>Compliance</strong>: Security best practices enforced — SQL injection prevention, input validation</li>
+<li>✅ <strong>Maintainability</strong>: Full conversion reports with before/after comparisons for every script</li>
+</ul>
+
+<h4 id="scenario-2-voice-enabled-field-operations">Scenario 2: Voice-Enabled Field Operations<a class="headerlink" href="#scenario-2-voice-enabled-field-operations" title="Permanent link">&para;</a></h4>
+<p><strong>Challenge</strong>: Industrial field technicians working in noisy, high-hazard environments cannot safely use mobile devices to manage work orders, leading to delayed updates and data quality issues.</p>
+<p><strong>Solution</strong>: A Bob-powered voice agent enables hands-free work order creation, update, and closure through natural language commands integrated with Maximo Manage APIs.</p>
+<p><strong>Benefits</strong>:</p>
+<ul>
+<li>Hands-free work order management in industrial environments</li>
+<li>Real-time work order state updates without leaving the work site</li>
+<li>Reduced data entry errors through AI-powered natural language understanding</li>
+<li>Faster job execution with immediate access to work instructions and asset history</li>
+</ul>
+
+<h4 id="scenario-3-predictive-maintenance-for-critical-assets">Scenario 3: Predictive Maintenance for Critical Assets<a class="headerlink" href="#scenario-3-predictive-maintenance-for-critical-assets" title="Permanent link">&para;</a></h4>
+<p><strong>Challenge</strong>: A manufacturing company experiences frequent unplanned failures of critical production equipment, resulting in costly downtime and emergency maintenance callouts.</p>
+<p><strong>Solution</strong>: Maximo Monitor and Predict analyse IoT sensor data in real time, triggering AI-driven work orders in Maximo Manage before failures occur.</p>
+<p><strong>Benefits</strong>:</p>
+<ul>
+<li>Unplanned downtime reduced by proactive AI-generated maintenance alerts</li>
+<li>Maintenance scheduled during planned windows, eliminating emergency callouts</li>
+<li>Asset lifespan extended through condition-based intervention</li>
+<li>Maintenance cost reduced through optimised parts and labour scheduling</li>
+</ul>
+
+<hr />
+<h2 id="products-services">Products &amp; Services<a class="headerlink" href="#products-services" title="Permanent link">&para;</a></h2>
+<h4 id="product-1-ibm-maximo-application-suite-mas">Product 1: IBM Maximo Application Suite (MAS)<a class="headerlink" href="#product-1-ibm-maximo-application-suite-mas" title="Permanent link">&para;</a></h4>
+<p><strong>Description</strong>: IBM Maximo Application Suite is an integrated cloud-native platform for managing the complete lifecycle of physical assets. MAS unifies asset management, work management, monitoring, inspection, and reliability operations — powered by AI and deployed on Red Hat OpenShift.</p>
+<p><strong>Key Features:</strong>
+- Unified asset lifecycle management — from acquisition to decommission
+- AI-powered predictive maintenance with Maximo Predict
+- Real-time IoT asset health monitoring with Maximo Monitor
+- Mobile-enabled field workforce with Maximo Mobile
+- Regulatory compliance and automated inspection management</p>
+<p><strong>Links:</strong>
+- 📖 <a href="https://www.ibm.com/docs/en/mas-cd/continuous-delivery">Documentation</a>
+- 🚀 <a href="https://www.ibm.com/products/maximo">Get Started</a>
+- 💻 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management">GitHub Repository</a></p>
+<hr />
+<h4 id="product-2-ibm-bob-ai-adlc-partner">Product 2: IBM Bob AI (ADLC Partner)<a class="headerlink" href="#product-2-ibm-bob-ai-adlc-partner" title="Permanent link">&para;</a></h4>
+<p><strong>Description</strong>: IBM Bob is the AI-powered development lifecycle companion (ADLC partner) embedded across the Maximo delivery lifecycle. Bob accelerates automation script modernization, builds conversational agents, orchestrates multi-step operational workflows, and provides contextual knowledge retrieval — all grounded in Maximo domain knowledge.</p>
+<p><strong>Key Features:</strong>
+- Maximo automation script analysis and modernization
+- Legacy Java class conversion to Jython, JavaScript, Nashorn, ECMAScript, and MBR
+- Voice and conversational agent development for Maximo operations
+- Domain-specific knowledge ingestion and semantic retrieval
+- Multi-turn workflow orchestration for complex Maximo operational processes</p>
+<p><strong>Links:</strong>
+- 📖 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills">Bob Skills Repository</a>
+- 🚀 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management">Building Blocks — Asset Management</a>
+- 💻 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets">Asset Management Assets</a></p>
+<hr />
+<h2 id="core-concepts">Core Concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="fundamental-concepts">Fundamental Concepts<a class="headerlink" href="#fundamental-concepts" title="Permanent link">&para;</a></h3>
+<h4 id="concept-1-asset-lifecycle-management">Concept 1: Asset Lifecycle Management<a class="headerlink" href="#concept-1-asset-lifecycle-management" title="Permanent link">&para;</a></h4>
+<p>Asset Lifecycle Management is the practice of tracking, maintaining, and optimising physical assets from acquisition through decommission using integrated data, automated workflows, and AI-powered analytics. IBM Maximo provides the platform to manage every stage of this lifecycle within a single system of record.</p>
+<p><strong>Key Points:</strong>
+- Assets are tracked across their full lifecycle — procurement, deployment, maintenance, and retirement
+- Work orders, inspection records, and maintenance history are centralised in Maximo Manage
+- Asset health data from IoT sensors feeds real-time monitoring and AI-driven prediction
+- Compliance records are automatically generated and maintained for regulatory audit readiness</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>Asset Lifecycle in Maximo:
+┌─────────────┐
+│ Acquisition │ → Asset Record Created in Maximo Manage
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Deployment  │ → Installation, Commissioning, Baseline Established
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Operations  │ → Work Orders, Inspections, IoT Monitoring, PM Schedules
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Maintenance │ → Corrective, Preventive, Condition-Based, Predictive
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Decommission│ → Retirement, Disposal, Regulatory Sign-Off
+└─────────────┘
+</code></pre></div></p>
+<h4 id="concept-2-preventive-vs-predictive-maintenance">Concept 2: Preventive vs Predictive Maintenance<a class="headerlink" href="#concept-2-preventive-vs-predictive-maintenance" title="Permanent link">&para;</a></h4>
+<p>Understanding the difference between preventive (schedule-driven) and predictive (condition-driven) maintenance is fundamental to implementing an effective Maximo strategy.</p>
+<p><strong>Preventive Maintenance</strong>:
+- Schedule-based maintenance at fixed intervals
+- Reduces risk of failure through proactive replacement
+- Can lead to over-maintenance — servicing assets before needed
+- Best for low-cost assets or those without reliable sensor data</p>
+<p><strong>Predictive Maintenance</strong>:
+- Condition-based maintenance triggered by asset health data
+- AI analyses sensor readings, failure patterns, and historical data
+- Maintenance only performed when condition thresholds indicate risk
+- Best for high-value, critical assets with IoT sensor coverage</p>
+<p><strong>Visual Representation:</strong>
+<div class="highlight"><pre><span></span><code>Preventive (Schedule-Driven):
+┌─────────────┐
+│ PM Schedule │
+│ (Time-Based)│ → Trigger at Interval → Work Order Created
+│ (What)      │
+└─────────────┘
+
+Predictive (Condition-Driven):
+┌─────────────┐
+│ IoT Sensor  │ → Maximo Monitor → AI Failure Score → Alert
+│ Data        │ → Maximo Predict → Work Order Triggered
+│ (How)       │
+└─────────────┘
+</code></pre></div></p>
+<h4 id="concept-3-automation-script-architecture-in-maximo">Concept 3: Automation Script Architecture in Maximo<a class="headerlink" href="#concept-3-automation-script-architecture-in-maximo" title="Permanent link">&para;</a></h4>
+<p>Maximo automation scripts are server-side code modules that extend Maximo business logic without modifying the core platform. They execute on specific events — object saves, status transitions, field validation — and are the primary customisation mechanism in Maximo Manage.</p>
+<p><strong>Key Points:</strong>
+- Scripts execute within the Maximo server JVM — no separate deployment required
+- Supported languages: Python (Jython 2.7.4), JavaScript/ECMAScript (Nashorn 15.6), Maximo Business Rules
+- Scripts access Maximo business objects (MBOs) through the MboSet API
+- Bob AI can analyse, modernise, convert, and generate test scripts for all supported languages
+- Security best practices must be enforced: SQL injection prevention, input validation, MXLoggerFactory error handling</p>
+<p><strong>Script Execution Flow:</strong></p>
+<p><img width="800" alt="Script Execution Flow in Maximo" src="/building-blocks/automation-core/images/asset_management_script_execution_flow.png" /></p>
+<h3 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
+<p><img width="800" alt="How Asset Management Works with Maximo + Bob AI" src="/building-blocks/automation-core/images/asset_management_how_it_works.png" /></p>
+<hr />
+<h2 id="download-skills">Download Skills<a class="headerlink" href="#download-skills" title="Permanent link">&para;</a></h2>
+<p>Download pre-built skills to extend your Asset Management capabilities with Bob AI Assistant:</p>
+<table>
+<thead>
+<tr>
+<th>Skill Name</th>
+<th>Description</th>
+<th>Download Link</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Maximo Script Modernization</strong></td>
+<td>AI-powered analysis and modernization of legacy Maximo automation scripts with code quality review and recommendations</td>
+<td><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills">📥 Download</a></td>
+<td>v1.0.0</td>
+</tr>
+<tr>
+<td><strong>Maximo Java Conversion</strong></td>
+<td>Automated conversion of legacy Maximo Java classes to Jython, JavaScript, Nashorn, ECMAScript, and MBR with test script generation</td>
+<td><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills">📥 Download</a></td>
+<td>v1.0.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="whats-included-in-asset-management-skills">What's Included in Asset Management Skills<a class="headerlink" href="#whats-included-in-asset-management-skills" title="Permanent link">&para;</a></h3>
+<p><strong>Maximo Script Modernization Skill:</strong>
+- Automated ingestion and parsing of legacy Maximo automation scripts
+- Static code analysis for technical debt and anti-pattern identification
+- AI-generated modernization recommendations aligned to Maximo best practices
+- Code quality review with actionable remediation guidance
+- Batch processing support for large script libraries</p>
+<p><strong>Maximo Java Conversion Skill:</strong>
+- Conversion of Maximo Java classes to Jython, JavaScript, Nashorn, ECMAScript, and MBR
+- Business logic preservation — validation rules, field updates, status transitions, MboSet patterns
+- Automated test script generation for every converted script
+- Comprehensive conversion reports with before/after comparisons
+- Security best practices enforcement: SQL injection prevention, input validation, MXLoggerFactory error handling</p>
+<h3 id="how-to-install-skills">How to Install Skills<a class="headerlink" href="#how-to-install-skills" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Download the skill package</strong> from the link above</li>
+<li><strong>Extract the contents</strong> to your Bob skills directory:
+   <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/Downloads
+unzip<span class="w"> </span>maximo-script-modernization.zip<span class="w"> </span>-d<span class="w"> </span>~/.bob/skills/maximo-script-modernization
+unzip<span class="w"> </span>maximo-java-conversion.zip<span class="w"> </span>-d<span class="w"> </span>~/.bob/skills/maximo-java-conversion
+</code></pre></div></li>
+<li><strong>Verify installation</strong>:
+   <div class="highlight"><pre><span></span><code>ls<span class="w"> </span>~/.bob/skills/
+<span class="c1"># Should show: maximo-script-modernization/ maximo-java-conversion/</span>
+</code></pre></div></li>
+<li><strong>Restart Bob</strong> to load the new skills</li>
+<li><strong>Quick start</strong> — place <code>.java</code> files in <code>java-input/</code> and ask Bob:
+   <div class="highlight"><pre><span></span><code>Use skill maximo-java-conversion to convert WorkOrderValidator.java to Jython
+</code></pre></div></li>
+</ol>
+<h3 id="skills-resources">Skills Resources<a class="headerlink" href="#skills-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li>📦 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management">Building Blocks — Asset Management Repository</a></li>
+<li>📖 <a href="../../../ibm-bob/skills/contributing_to_skills/">Skills Development Guide</a></li>
+<li>💻 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets">Asset Management Assets</a></li>
+</ul>
+<hr />
+<h2 id="assets">Assets<a class="headerlink" href="#assets" title="Permanent link">&para;</a></h2>
+<p>Two reusable full-stack assets are available under the <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets"><code>assets/</code></a> directory.</p>
+<table>
+<thead>
+<tr>
+<th>Use this asset when…</th>
+<th>Asset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>You need a central intelligence platform that unifies maintenance knowledge, live asset context, and enterprise content — and drives intelligent decisions across technician troubleshooting, job planning, compliance, predictive maintenance, and more</td>
+<td><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/asset-management-knowledge-hub"><code>asset-management-knowledge-hub</code></a></td>
+</tr>
+<tr>
+<td>You need a web application to analyse, optimise, and convert Maximo automation scripts using AI</td>
+<td><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset"><code>maximo_code_modernization_asset</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="asset-management-knowledge-hub"><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/asset-management-knowledge-hub">Asset Management Knowledge Hub</a><a class="headerlink" href="#asset-management-knowledge-hub" title="Permanent link">&para;</a></h3>
+<p><strong>IBM Products</strong>: IBM Maximo Application Suite · IBM watsonx AI · IBM watsonx.data (OpenSearch) · IBM Cloud Object Storage · IBM Cloud Code Engine</p>
+<p>A central intelligence platform that unifies every source of maintenance knowledge — work orders, manuals, sensor data, compliance documents, and live asset context — into a single AI-powered assistant. It is not a search engine: it understands intent, maps relationships between assets and procedures, enforces governance, and drives intelligent maintenance decisions across the full operational lifecycle.</p>
+<p><strong>Connected knowledge sources:</strong></p>
+<p>The hub ingests and indexes content from across the enterprise — Maximo work orders and asset history, maintenance manuals and SOPs, inspection reports and service notes, IoT and sensor data, parts catalogues and BOMs, external document management systems, ERP and procurement systems, SharePoint and file repositories, OEM and vendor documentation, and safety and compliance documents.</p>
+<p><strong>Core capabilities:</strong></p>
+<ul>
+<li><strong>Unified Knowledge Index</strong> — structured and unstructured content from all connected sources unified and indexed into a single queryable store</li>
+<li><strong>Semantic Search / RAG</strong> — AI-powered retrieval with relevance scoring and context grounding, going beyond keyword matching to understand the intent behind every question</li>
+<li><strong>Context Engine</strong> — understands entities, asset hierarchies, work history, plans, locations, and conditions to return answers that are relevant to the specific operational situation</li>
+<li><strong>Asset + Work Context</strong> — every answer is grounded in live asset state and work order history, not just static documentation</li>
+<li><strong>Governance / Access Control</strong> — security, roles, permissions, audit trails, and policy enforcement built in at the platform level</li>
+</ul>
+<p><strong>Business use cases:</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Use Case</th>
+<th>What it enables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Technician Troubleshooting Assistant</strong></td>
+<td>Instant, context-aware guidance during fault diagnosis and repair</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Job Plan Creation Support</strong></td>
+<td>AI-assisted generation of job plans grounded in past work and best practices</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Natural Language Search Across Assets</strong></td>
+<td>Search the entire asset estate in plain language — no query syntax required</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Failure Root Cause Analysis</strong></td>
+<td>Correlate work history, sensor data, and manuals to identify failure patterns</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Recommended Maintenance Procedures</strong></td>
+<td>Surface the right procedure for the right asset at the right time</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Parts Identification and Availability</strong></td>
+<td>Identify correct parts from BOMs and check availability from connected ERP and procurement systems</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Safety Guidance During Repairs</strong></td>
+<td>Retrieve relevant safety documents and compliance requirements in context</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Asset Health Insights</strong></td>
+<td>Combine IoT data, inspection history, and maintenance records into a unified asset health view</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Training and Knowledge Transfer</strong></td>
+<td>Capture and surface institutional knowledge for onboarding and upskilling</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Work Order Summarisation</strong></td>
+<td>Automatically summarise work order history and outcomes for planning and reporting</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Predictive Maintenance Support</strong></td>
+<td>Use historical patterns and sensor trends to anticipate failures before they occur</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Compliance and Audit Readiness</strong></td>
+<td>Instantly retrieve evidence of inspections, procedures followed, and regulatory adherence</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How the hub adds value:</strong></p>
+<ul>
+<li><strong>Single place to access trusted maintenance knowledge</strong> — eliminate context switching across portals, systems, and documents</li>
+<li><strong>Faster issue resolution for technicians and planners</strong> — answers in seconds rather than minutes or hours of manual searching</li>
+<li><strong>Improved consistency, compliance, and knowledge reuse</strong> — every decision is grounded in the same governed, up-to-date knowledge base</li>
+<li><strong>Connects source systems to actionable operational insights</strong> — live data from Maximo, ERP, IoT, and documents flows into every answer</li>
+<li><strong>Enables AI-assisted maintenance and decision support</strong> — IBM Bob and other AI assistants connect via MCP to bring knowledge hub capabilities directly into operational workflows</li>
+</ul>
+<hr />
+<h3 id="maximo-code-modernization-asset"><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset">Maximo Code Modernization Asset</a><a class="headerlink" href="#maximo-code-modernization-asset" title="Permanent link">&para;</a></h3>
+<p><strong>IBM Products</strong>: IBM Maximo Application Suite · OpenAI (GPT-4)</p>
+<p>A web application that gives maintenance engineers and developers a self-service tool to analyse, optimise, and convert legacy Maximo automation scripts — directly connected to a live Maximo instance via the <code>MXAPIAUTOSCRIPT</code> REST API.</p>
+<p><strong>Business value:</strong></p>
+<ul>
+<li><strong>Eliminate script technical debt</strong> — automatically surface security issues, performance bottlenecks, and anti-patterns across an entire Maximo script library without manual code review</li>
+<li><strong>Accelerate Java modernisation</strong> — convert legacy Maximo Java classes to Jython, JavaScript, Nashorn, ECMAScript, or MBR in minutes rather than days of manual rewriting</li>
+<li><strong>Reduce modernisation risk</strong> — impact analysis generates a dependency graph and risk assessment for any script before it is modified, preventing unintended production breakage</li>
+<li><strong>Write back without friction</strong> — optimised scripts are pushed directly back to Maximo via REST, eliminating the manual copy-paste step between tooling and the platform</li>
+<li><strong>Scale across teams</strong> — batch conversion processes multiple Java files in a single operation, allowing operations teams to modernise large script estates systematically</li>
+</ul>
+<hr />
+<h3 id="demo-videos">Demo Videos<a class="headerlink" href="#demo-videos" title="Permanent link">&para;</a></h3>
+<p>Explore our comprehensive video library to see Asset Management with IBM Maximo and Bob in action:</p>
+<h4 id="getting-started-videos">Getting Started Videos<a class="headerlink" href="#getting-started-videos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Video Title</th>
+<th>Description</th>
+<th>Duration</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Maximo Automation Script Modernization with Bob</strong></td>
+<td>Complete walkthrough of AI-powered script analysis, Java conversion, and test generation for IBM Maximo</td>
+<td>18 mins</td>
+<td><a href="https://www.youtube.com/watch?v=bNID8QRi7Iw">▶️ Watch on YouTube</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🎥 <a href="https://youtube.com/@ibm-building-blocks">YouTube Channel</a> - Subscribe for the latest Bob<span style="color:#0f62fe">+</span> IBM Technology Building Blocks videos</li>
+<li>📖 <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/asset-management/README.md">Implementation Guide</a> - Complete IBM Maximo Application Suite guide with implementation examples</li>
+<li>💻 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/asset-management-knowledge-hub">Asset Management Knowledge Hub</a> - Full-stack MCP knowledge hub for Maximo docs and live operational data</li>
+<li>💻 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset">Maximo Code Modernization Asset</a> - AI-powered script optimisation and Java conversion web app</li>
+</ul>
+<hr />
+<h2 id="call-to-action">Call to Action<a class="headerlink" href="#call-to-action" title="Permanent link">&para;</a></h2>
+<h3 id="ready-to-build-with-asset-management">Ready to Build with Asset Management?<a class="headerlink" href="#ready-to-build-with-asset-management" title="Permanent link">&para;</a></h3>
+<p>Take the next step with this Building Block by choosing the path that best fits your needs:</p>
+<ul>
+<li><strong>Explore the fundamentals</strong> in the <a href="#overview">Overview</a>, <a href="#architecture">Architecture</a>, and <a href="#core-concepts">Core Concepts</a> sections</li>
+<li><strong>Download reusable skills</strong> from <a href="#download-skills">Download Skills</a> to get Bob working with Maximo immediately</li>
+<li><strong>Deploy a code asset</strong> from <a href="#assets">Assets</a> to modernise scripts or enable voice-driven work orders immediately</li>
+<li><strong>Watch the demo videos</strong> to see Maximo automation and Bob AI agents in action</li>
+<li><strong>Extend and customise</strong> using your own Maximo automation scripts and Bob workflow agents</li>
+</ul>
+<p><strong>Get Started Now:</strong>
+- 🚀 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills">Download Maximo Script Modernization Skill</a>
+- 📥 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills">Download Maximo Java Conversion Skill</a>
+- 💻 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/asset-management-knowledge-hub">Deploy Asset Management Knowledge Hub</a>
+- 💻 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/assets/maximo_code_modernization_asset">Deploy Maximo Code Modernization Asset</a>
+- 📖 <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/asset-management/README.md">Implementation Guide</a></p>
+<hr />
+<h2 id="related-capabilities">Related Capabilities<a class="headerlink" href="#related-capabilities" title="Permanent link">&para;</a></h2>
+<p><strong>Within Build and Deploy:</strong></p>
+<ul>
+<li><a href="../infrastructure-as-code/">Infrastructure as Code</a> - Automate OpenShift and cloud infrastructure provisioning for Maximo deployments</li>
+<li><a href="../ipaas/">iPaaS</a> - Integrate Maximo with ERP, SCADA, IoT, and enterprise systems</li>
+<li><a href="../middleware-modernization/">Code Modernization</a> - Migrate legacy Maximo on-premise installations to MAS on OpenShift</li>
+</ul>
+<p><strong>Other Building Blocks:</strong></p>
+<ul>
+<li><a href="../../optimize/automated-resource-management/">Automated Resource Management</a> - Optimise cloud resources hosting Maximo workloads</li>
+<li><a href="../../optimize/finops/">FinOps</a> - Track and optimise Maximo platform and infrastructure spend</li>
+<li><a href="../../optimize/automated-resilience/">Automated Resilience &amp; Compliance</a> - Ensure Maximo platform availability and compliance posture</li>
+<li><a href="../../secure/non-human-identity/">Non-human Identity</a> - Secure Maximo service accounts and API integrations</li>
+</ul>
+<hr />
+<p><a href="../">← Back to Build and Deploy</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../middleware-modernization/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Code Modernization">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Code Modernization
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../optimize/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.instant", "navigation.top", "navigation.footer", "content.code.copy", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3809 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bob+ IBM Technology Building Blocks Documentation">
+      
+      
+      
+        <link rel="canonical" href="https://ibm-self-serve-assets.github.io/building-blocks/automation-core/build/middleware-modernization/">
+      
+      
+        <link rel="prev" href="../infrastructure-as-code/">
+      
+      
+        <link rel="next" href="../asset-management/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Code Modernization - Bob+ IBM Technology Building Blocks Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/carbon.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#code-modernization" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Bob+ IBM Technology Building Blocks Docs" class="md-header__button md-logo" aria-label="Bob+ IBM Technology Building Blocks Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bob+ IBM Technology Building Blocks Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Code Modernization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Bob+ IBM Technology Building Blocks Docs" class="md-nav__button md-logo" aria-label="Bob+ IBM Technology Building Blocks Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Bob+ IBM Technology Building Blocks Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/agents/agent-builder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Builder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/agents/multi-agent-orchestration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-Agent Orchestration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/agents/agentic-sdlc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic SDLC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Trust
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI Trust
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/model-evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/agent-ops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Ops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/real-time-guardrails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Real-Time Guardrails
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-core/ai-trust/ai-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Integration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/integration/data-pipeline-ai-generated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Pipeline (AI Generated)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/integration/data-streaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Streaming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/integration/data-observability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Observability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intelligence
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Intelligence
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/intelligence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/intelligence/data-quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/intelligence/data-lineage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Lineage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/intelligence/text2sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text2SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Retrieval
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Retrieval
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/rag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vector Search
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vector Search
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/vector-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/vector-search/milvus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milvus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/vector-search/opensearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenSearch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/vector-search/datastax-astra-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DataStax Astra DB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/no-sql-database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    No SQL Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/retrieval/zero-copy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Automation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build and Deploy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build and Deploy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ipaas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iPaaS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure-as-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure as Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Modernization
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Modernization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-code-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Code Modernization?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-code-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Code Modernization?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-level-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Level Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-should-use-code-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who Should Use Code Modernization?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Who Should Use Code Modernization?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Personas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-legacy-java-application-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: Legacy Java Application Modernization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-maximo-automation-scripts-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: Maximo Automation Scripts Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-react-application-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 3: React Application Modernization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#products-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Products &amp; Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Products &amp; Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-1-ibm-bob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product 1: IBM Bob
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamental-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fundamental Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamental Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept-1-technical-debt-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 1: Technical Debt Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-2-incremental-modernization-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 2: Incremental Modernization Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-3-strangler-fig-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 3: Strangler Fig Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Skills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Download Skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-install-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Install Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demo-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demo Videos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Demo Videos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-started-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started Videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#call-to-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Call to Action
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Call to Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ready-to-build-with-code-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ready to Build with Code Modernization?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asset Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optimize
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Optimize
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/automated-resilience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Resilience & Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/finops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FinOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/automated-resource-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Resource Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimize/budget-and-forecasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Budget & Forecasting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Secure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../secure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../secure/non-human-identity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-human Identity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../secure/quantum-safe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quantum-Safe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bob+
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bob+
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ibm-bob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start with Bob Modes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ibm-bob/skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start with Bob Skills
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build with Bob Workshops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build-with-bob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build with Bob Webinars
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-code-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Code Modernization?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-code-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Code Modernization?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-level-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Level Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-should-use-code-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who Should Use Code Modernization?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Who Should Use Code Modernization?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Personas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-legacy-java-application-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: Legacy Java Application Modernization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-maximo-automation-scripts-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: Maximo Automation Scripts Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-react-application-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 3: React Application Modernization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#products-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Products &amp; Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Products &amp; Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-1-ibm-bob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product 1: IBM Bob
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamental-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fundamental Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamental Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept-1-technical-debt-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 1: Technical Debt Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-2-incremental-modernization-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 2: Incremental Modernization Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-3-strangler-fig-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept 3: Strangler Fig Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Skills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Download Skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-install-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Install Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demo-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demo Videos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Demo Videos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-started-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started Videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#call-to-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Call to Action
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Call to Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ready-to-build-with-code-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ready to Build with Code Modernization?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="code-modernization">Code Modernization<a class="headerlink" href="#code-modernization" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Code Modernization is a comprehensive transformation platform that enables enterprises to refactor legacy applications, codebases, middleware, and integration layers into modern, cloud-native architectures through AI-powered analysis, automated transformations, and systematic migration strategies.</p>
+<h3 id="what-is-code-modernization">What is Code Modernization?<a class="headerlink" href="#what-is-code-modernization" title="Permanent link">&para;</a></h3>
+<p>Code Modernization transforms legacy infrastructure from a constraint into an enabler of business agility by providing structured transformation paths from legacy code and platforms to modern, maintainable architectures. Built on AI-powered code analysis tools, transformation frameworks, and cloud-native platforms, it automates the conversion of legacy code and middleware to modern architectures while preserving business functionality and improving code quality.</p>
+<p>Modern enterprises operate applications and middleware platforms built on legacy technologies, outdated programming languages, and monolithic architectures that are difficult to scale, costly to maintain, and incompatible with cloud-native architectures. Legacy codebases, application servers, message brokers, and integration middleware often represent significant technical debt and operational complexity. Without effective code modernization, enterprises face high operational costs, limited scalability, difficulty adopting cloud-native patterns, vendor lock-in, slow deployment cycles, and increased security vulnerabilities.</p>
+<p>This building block addresses these challenges through systematic code analysis, automated refactoring, language and framework modernization, application restructuring, middleware migration, and integration pattern updates. It analyzes existing codebases and middleware configurations, identifies refactoring opportunities, generates migration plans, and automates deployment to cloud-native platforms with comprehensive testing and validation.</p>
+<h3 id="why-code-modernization">Why Code Modernization?<a class="headerlink" href="#why-code-modernization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Reduced Technical Debt</strong>: Eliminate legacy code smells, outdated patterns, and unmaintainable code through AI-powered analysis and automated refactoring</li>
+<li><strong>Cloud-Native Transformation</strong>: Migrate from monolithic architectures to microservices, containerized workloads, and serverless patterns</li>
+<li><strong>Cost Optimization</strong>: Reduce middleware licensing costs and operational expenses through platform modernization and efficient resource utilization</li>
+<li><strong>Accelerated Delivery</strong>: Improve deployment velocity and development agility through modern frameworks, CI/CD integration, and automated testing</li>
+</ul>
+<hr />
+<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<h3 id="core-capabilities">Core Capabilities<a class="headerlink" href="#core-capabilities" title="Permanent link">&para;</a></h3>
+<details>
+<summary><strong>🔍 AI-Powered Code Analysis & Assessment</strong></summary>
+
+<p><strong>Comprehensive Technical Debt Analysis</strong>: Automated analysis of legacy codebases to identify technical debt, code smells, security vulnerabilities, and modernization opportunities</p>
+
+<ul>
+<li><strong>Framework Version Detection</strong>: Automatic identification of outdated frameworks, libraries, and dependencies (package.json, requirements.txt, pom.xml)</li>
+<li><strong>Deprecated API Detection</strong>: Identification of deprecated APIs and import statements requiring updates</li>
+<li><strong>Code Smell Detection</strong>: Analysis of code quality issues including TODO comments, FIXME markers, and HACK patterns</li>
+<li><strong>Security Vulnerability Scanning</strong>: Comprehensive security analysis to identify vulnerabilities and insecure coding patterns</li>
+<li><strong>Dependency Health Analysis</strong>: Assessment of outdated and vulnerable dependencies across the codebase</li>
+<li><strong>Test Coverage Calculation</strong>: Measurement of test coverage percentage to identify testing gaps</li>
+</ul>
+
+<p><strong>Use Case</strong>: Financial services organizations can automatically assess legacy Java applications to identify security vulnerabilities, outdated frameworks, and technical debt before planning modernization efforts.</p>
+
+</details>
+
+<details>
+<summary><strong>🔄 Automated Code Transformations</strong></summary>
+
+<p><strong>Intelligent Refactoring & Migration</strong>: Automated code transformations across multiple languages and frameworks with pattern-based modernization</p>
+
+<ul>
+<li><strong>Language Modernization</strong>: Automated conversion between language versions (Java 8→21, JavaScript ES5→ES6+, PHP 5→8, Ruby 2→3)</li>
+<li><strong>Framework Upgrades</strong>: Systematic migration to modern frameworks (React Class Components→Hooks, Vue 2→3, Angular.js→React, Spring Boot 2→3)</li>
+<li><strong>Architecture Transformation</strong>: Decomposition of monolithic applications into microservices with proper service boundaries</li>
+<li><strong>API Modernization</strong>: Transformation from REST to GraphQL and callback patterns to async/await</li>
+<li><strong>Pattern Updates</strong>: Modernization of coding patterns including var→let/const, prototypes→classes, callbacks→async/await</li>
+</ul>
+
+<p><strong>Use Case</strong>: E-commerce platforms can automatically refactor React class components to modern hooks-based architecture, improving performance and maintainability.</p>
+
+</details>
+
+<details>
+<summary><strong>🎯 Maximo Automation Scripts Modernization</strong></summary>
+
+<p><strong>Specialized Maximo Optimization</strong>: Comprehensive modernization and optimization of IBM Maximo automation scripts with performance improvements and best practices</p>
+
+<ul>
+<li><strong>Maximo API Integration</strong>: Automated script fetching from Maximo environments with REST API authentication</li>
+<li><strong>Security Analysis</strong>: Detection of SQL injection vulnerabilities, input validation gaps, and credential exposure</li>
+<li><strong>Performance Optimization</strong>: MboSet lifecycle management, database query optimization, resource leak prevention, and memory management improvements</li>
+<li><strong>Error Handling Enhancement</strong>: Implementation of comprehensive error handling, MXLoggerFactory integration, and proper exception patterns</li>
+<li><strong>Script Analysis</strong>: Multi-level issue detection including critical security vulnerabilities, incomplete code, logic errors, and performance bottlenecks</li>
+</ul>
+
+<p><strong>Use Case</strong>: Manufacturing organizations can automatically optimize Maximo automation scripts to improve performance, eliminate security vulnerabilities, and implement best practices.</p>
+
+</details>
+
+<hr />
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<h3 id="high-level-architecture">High-Level Architecture<a class="headerlink" href="#high-level-architecture" title="Permanent link">&para;</a></h3>
+<p><img width="600" height="500" alt="ChatGPT Image Jun 22, 2026, 08_05_48 PM" src="https://github.com/user-attachments/assets/c2627308-ab17-4381-af95-058ada6efc68" /></p>
+<h3 id="system-components">System Components<a class="headerlink" href="#system-components" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+<th>Technology</th>
+<th>Scalability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Code Scanner</strong></td>
+<td>Analyze legacy codebases</td>
+<td>AST Parsers, Static Analysis</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>AI Analysis Engine</strong></td>
+<td>Identify patterns and issues</td>
+<td>Machine Learning, NLP</td>
+<td>Vertical</td>
+</tr>
+<tr>
+<td><strong>Transformation Engine</strong></td>
+<td>Execute code refactoring</td>
+<td>Code Generation, AST Manipulation</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Testing Framework</strong></td>
+<td>Validate transformations</td>
+<td>Unit Tests, Integration Tests</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Migration Orchestrator</strong></td>
+<td>Coordinate multi-step migrations</td>
+<td>Workflow Engine</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Deployment Pipeline</strong></td>
+<td>Deploy modernized code</td>
+<td>CI/CD, Kubernetes</td>
+<td>Horizontal</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-flow">Data Flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Legacy as Legacy Code
+    participant Scanner as Code Scanner
+    participant Analyzer as AI Analyzer
+    participant Transform as Transformer
+    participant Test as Test Generator
+    participant Deploy as Deployment
+
+    Legacy-&gt;&gt;Scanner: Source Code
+    Scanner-&gt;&gt;Analyzer: AST &amp; Metadata
+    Analyzer-&gt;&gt;Analyzer: Pattern Analysis
+    Analyzer-&gt;&gt;Transform: Transformation Plan
+    Transform-&gt;&gt;Transform: Code Refactoring
+    Transform-&gt;&gt;Test: Generate Tests
+    Test-&gt;&gt;Test: Validate Changes
+    Test-&gt;&gt;Deploy: Validated Code
+    Deploy-&gt;&gt;Deploy: Deploy to Cloud</code></pre>
+<hr />
+<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<h3 id="who-should-use-code-modernization">Who Should Use Code Modernization?<a class="headerlink" href="#who-should-use-code-modernization" title="Permanent link">&para;</a></h3>
+<h4 id="target-personas">Target Personas<a class="headerlink" href="#target-personas" title="Permanent link">&para;</a></h4>
+<details>
+<summary><strong>👨‍💻 Application Developers</strong></summary>
+
+<p>Code Modernization is designed for application developers who need to refactor legacy codebases, upgrade frameworks, and adopt modern development practices.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Refactoring legacy code to modern languages and frameworks</li>
+<li>Upgrading outdated dependencies and libraries</li>
+<li>Eliminating technical debt and code smells</li>
+<li>Implementing modern design patterns and best practices</li>
+<li>Migrating monolithic applications to microservices</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Reduce time spent on manual refactoring by 70-80%</li>
+<li>Eliminate common code quality issues through automated analysis</li>
+<li>Adopt modern frameworks and patterns with confidence</li>
+<li>Improve code maintainability and reduce technical debt</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>🏢 Enterprise Architects</strong></summary>
+
+<p>Enterprise architects use Code Modernization to plan and execute large-scale application transformation initiatives across the organization.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Assessing legacy application portfolios for modernization opportunities</li>
+<li>Planning migration strategies from monoliths to microservices</li>
+<li>Defining cloud-native architecture patterns and standards</li>
+<li>Coordinating multi-application modernization programs</li>
+<li>Tracking modernization progress and ROI</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Gain comprehensive visibility into technical debt across all applications</li>
+<li>Accelerate modernization timelines through automation</li>
+<li>Reduce modernization risks through systematic transformation</li>
+<li>Demonstrate ROI through cost savings and improved agility</li>
+</ul>
+
+</details>
+
+<details>
+<summary><strong>🔧 Platform Engineers</strong></summary>
+
+<p>Platform engineers leverage Code Modernization to migrate legacy middleware platforms to cloud-native alternatives and optimize infrastructure.</p>
+
+<p><strong>Common Tasks:</strong></p>
+
+<ul>
+<li>Migrating from WebSphere/WebLogic to OpenShift/Kubernetes</li>
+<li>Modernizing integration middleware to cloud-native patterns</li>
+<li>Containerizing legacy applications</li>
+<li>Implementing CI/CD pipelines for modernized applications</li>
+<li>Optimizing resource utilization and performance</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Reduce middleware licensing costs by 40-60%</li>
+<li>Improve application scalability and resilience</li>
+<li>Accelerate deployment cycles through automation</li>
+<li>Simplify operations with cloud-native platforms</li>
+</ul>
+
+</details>
+
+<h3 id="real-world-scenarios">Real-World Scenarios<a class="headerlink" href="#real-world-scenarios" title="Permanent link">&para;</a></h3>
+<h4 id="scenario-1-legacy-java-application-modernization">Scenario 1: Legacy Java Application Modernization<a class="headerlink" href="#scenario-1-legacy-java-application-modernization" title="Permanent link">&para;</a></h4>
+<p><strong>Challenge</strong>: A financial services company operates a critical banking application built on Java 8 with Spring Boot 2, running on WebSphere. The application has accumulated significant technical debt, uses deprecated APIs, and cannot leverage modern cloud-native features.</p>
+<p><strong>Solution</strong>: Code Modernization automatically analyzes the codebase, identifies modernization opportunities, refactors code to Java 21 and Spring Boot 3, and migrates from WebSphere to OpenShift with comprehensive testing.</p>
+<p><strong>Implementation</strong>:
+<div class="highlight"><pre><span></span><code><span class="c1">// Before: Legacy Java 8 Code</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AccountService</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Account</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getAccounts</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Account</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accounts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">// Legacy JDBC code</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">accounts</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// After: Modern Java 21 with Spring Boot 3</span>
+<span class="nd">@Service</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AccountService</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">AccountRepository</span><span class="w"> </span><span class="n">repository</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">AccountService</span><span class="p">(</span><span class="n">AccountRepository</span><span class="w"> </span><span class="n">repository</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">repository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repository</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Account</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getAccounts</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">repository</span><span class="p">.</span><span class="na">findAll</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Results</strong>:</p>
+<ul>
+<li>✅ <strong>Performance</strong>: 40% improvement in application performance through modern JVM optimizations</li>
+<li>✅ <strong>Cost Savings</strong>: $500K annual savings from WebSphere license elimination</li>
+<li>✅ <strong>Development Velocity</strong>: 50% faster feature delivery through modern frameworks</li>
+<li>✅ <strong>Technical Debt</strong>: Eliminated 80% of identified code smells and deprecated API usage</li>
+</ul>
+
+<h4 id="scenario-2-maximo-automation-scripts-optimization">Scenario 2: Maximo Automation Scripts Optimization<a class="headerlink" href="#scenario-2-maximo-automation-scripts-optimization" title="Permanent link">&para;</a></h4>
+<p><strong>Challenge</strong>: A manufacturing organization has 200+ Maximo automation scripts with performance issues, security vulnerabilities, and inconsistent error handling, leading to system slowdowns and maintenance challenges.</p>
+<p><strong>Solution</strong>: Code Modernization automatically fetches scripts from Maximo, analyzes security vulnerabilities, optimizes performance bottlenecks, implements proper error handling, and generates comprehensive reports.</p>
+<p><strong>Benefits</strong>:</p>
+<ul>
+<li>Improved script execution performance by 60% through MboSet lifecycle optimization</li>
+<li>Eliminated 45 critical security vulnerabilities including SQL injection risks</li>
+<li>Reduced memory consumption by 35% through resource leak prevention</li>
+<li>Standardized error handling across all automation scripts</li>
+</ul>
+
+<h4 id="scenario-3-react-application-modernization">Scenario 3: React Application Modernization<a class="headerlink" href="#scenario-3-react-application-modernization" title="Permanent link">&para;</a></h4>
+<p><strong>Challenge</strong>: An e-commerce platform built with React class components and outdated patterns needs modernization to improve performance, maintainability, and developer experience.</p>
+<p><strong>Solution</strong>: Code Modernization automatically refactors class components to functional components with hooks, updates lifecycle methods to useEffect, and modernizes state management patterns.</p>
+<p><strong>Benefits</strong>:</p>
+<ul>
+<li>Reduced component code by 30% through hooks-based architecture</li>
+<li>Improved application performance by 25% through optimized re-renders</li>
+<li>Enhanced developer productivity with modern React patterns</li>
+<li>Simplified testing with functional component architecture</li>
+</ul>
+
+<hr />
+<h2 id="products-services">Products &amp; Services<a class="headerlink" href="#products-services" title="Permanent link">&para;</a></h2>
+<h4 id="product-1-ibm-bob">Product 1: IBM Bob<a class="headerlink" href="#product-1-ibm-bob" title="Permanent link">&para;</a></h4>
+<p><strong>Description</strong>: IBM Bob is an AI-powered development assistant that provides natural language interfaces for code modernization, refactoring, and transformation tasks. It enables developers to modernize legacy codebases through conversational interactions, automated analysis, and intelligent code transformations.</p>
+<p><strong>Key Features:</strong>
+- Natural language interface for code modernization tasks
+- AI-powered code analysis and technical debt assessment
+- Automated refactoring and framework upgrades
+- Multi-language support (Java, Python, JavaScript, Ruby, PHP, etc.)
+- Specialized skills for Maximo automation script optimization
+- Integration with development workflows and CI/CD pipelines</p>
+<p><strong>Links:</strong>
+- 📖 <a href="../../../ibm-bob/index.md">Documentation</a>
+- 🚀 <a href="../../../ibm-bob/index.md">Get Started</a>
+- 💻 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/code-modernisation">GitHub Repository</a></p>
+<hr />
+<h2 id="core-concepts">Core Concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="fundamental-concepts">Fundamental Concepts<a class="headerlink" href="#fundamental-concepts" title="Permanent link">&para;</a></h3>
+<h4 id="concept-1-technical-debt-assessment">Concept 1: Technical Debt Assessment<a class="headerlink" href="#concept-1-technical-debt-assessment" title="Permanent link">&para;</a></h4>
+<p>Technical debt assessment involves systematic analysis of legacy codebases to identify code quality issues, outdated patterns, security vulnerabilities, and modernization opportunities. This creates a comprehensive understanding of the current state before transformation.</p>
+<p><strong>Key Points:</strong>
+- Automated scanning identifies technical debt across the entire codebase
+- AI-powered analysis categorizes issues by severity and impact
+- Dependency analysis reveals outdated and vulnerable libraries
+- Test coverage metrics highlight areas requiring additional testing
+- Prioritization matrix guides remediation efforts based on business impact</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Technical Debt Assessment Report</span>
+<span class="nt">codebase</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">banking-application</span>
+<span class="nt">total_files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1,247</span>
+<span class="nt">issues_found</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">critical</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">23</span>
+<span class="w">  </span><span class="nt">high</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">156</span>
+<span class="w">  </span><span class="nt">medium</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">489</span>
+<span class="w">  </span><span class="nt">low</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1,034</span>
+<span class="nt">categories</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">security_vulnerabilities</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">45</span>
+<span class="w">  </span><span class="nt">deprecated_apis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">234</span>
+<span class="w">  </span><span class="nt">code_smells</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">567</span>
+<span class="w">  </span><span class="nt">outdated_dependencies</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">89</span>
+<span class="w">  </span><span class="nt">test_coverage_gaps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">312</span>
+</code></pre></div></p>
+<h4 id="concept-2-incremental-modernization-strategy">Concept 2: Incremental Modernization Strategy<a class="headerlink" href="#concept-2-incremental-modernization-strategy" title="Permanent link">&para;</a></h4>
+<p>Incremental modernization transforms legacy applications gradually through systematic, risk-managed steps rather than risky "big bang" rewrites. This approach maintains business continuity while progressively improving the codebase.</p>
+<p><strong>Visual Representation:</strong>
+<div class="highlight"><pre><span></span><code>Big Bang Approach (High Risk):
+┌─────────────┐
+│   Legacy    │ → Complete Rewrite → │   Modern    │
+│ Application │   (6-12 months)      │ Application │
+└─────────────┘                      └─────────────┘
+     ↓ High risk, long downtime, business disruption
+
+Incremental Approach (Low Risk):
+┌─────────────┐
+│   Legacy    │ → Module 1 (1%) → Module 2 (5%) → Module 3 (25%) → │   Modern    │
+│ Application │    Week 1          Week 2           Month 1         │ Application │
+└─────────────┘                                                     └─────────────┘
+     ↓ Low risk, continuous delivery, business continuity
+</code></pre></div></p>
+<h4 id="concept-3-strangler-fig-pattern">Concept 3: Strangler Fig Pattern<a class="headerlink" href="#concept-3-strangler-fig-pattern" title="Permanent link">&para;</a></h4>
+<p>The Strangler Fig pattern gradually replaces legacy system components with modern implementations by routing traffic incrementally to new services while maintaining the old system until complete replacement.</p>
+<p><strong>How It Works:</strong></p>
+<div class="highlight"><pre><span></span><code>┌─────────────┐
+│   Routing   │ ← User requests
+│   Layer     │
+└──────┬──────┘
+       │
+       ├─────────────────────────────┐
+       │                             │
+       ↓                             ↓
+┌─────────────┐              ┌─────────────┐
+│   Legacy    │              │   Modern    │
+│   System    │              │   Service   │
+│   (90%)     │              │   (10%)     │
+└─────────────┘              └─────────────┘
+
+Gradually increase traffic to modern services:
+Week 1: 10% → Week 4: 25% → Month 3: 50% → Month 6: 100%
+</code></pre></div>
+<hr />
+<h2 id="download-skills">Download Skills<a class="headerlink" href="#download-skills" title="Permanent link">&para;</a></h2>
+<p>Download pre-built skills to extend your Code Modernization capabilities:</p>
+<table>
+<thead>
+<tr>
+<th>Skill Name</th>
+<th>Description</th>
+<th>Download Link</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Code Modernization Expert</strong></td>
+<td>Comprehensive skill for modernizing legacy codebases with automated refactoring and technical debt analysis</td>
+<td><a href="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/build-and-deploy/code-modernisation/bob-skills/code-modernization-expert.zip">📥 Download</a></td>
+<td>v1.0.0</td>
+</tr>
+<tr>
+<td><strong>Maximo Code Optimization</strong></td>
+<td>Specialized skill for optimizing IBM Maximo automation scripts with performance improvements and security analysis</td>
+<td><a href="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/build-and-deploy/code-modernisation/bob-skills/maximo-code-optimization.zip">📥 Download</a></td>
+<td>v1.0.0</td>
+</tr>
+<tr>
+<td><strong>Maximo Modernization Java</strong></td>
+<td>Java-specific modernization skill for IBM Maximo applications with framework upgrades and best practices</td>
+<td><a href="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/build-and-deploy/code-modernisation/bob-skills/maximo-modernization-java.zip">📥 Download</a></td>
+<td>v1.0.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-to-install-skills">How to Install Skills<a class="headerlink" href="#how-to-install-skills" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Download the skill package</strong> from the link above</li>
+<li><strong>Extract the contents</strong> to your skills directory:
+   <div class="highlight"><pre><span></span><code>unzip<span class="w"> </span>code-modernization-expert.zip<span class="w"> </span>-d<span class="w"> </span>~/.bob/skills/
+</code></pre></div></li>
+<li><strong>Activate the skill</strong> in your Bob configuration:
+   <div class="highlight"><pre><span></span><code><span class="nt">skills</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">code-modernization-expert</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div></li>
+<li><strong>Restart Bob</strong> to load the new skill</li>
+</ol>
+<h3 id="skills-resources">Skills Resources<a class="headerlink" href="#skills-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li>📦 <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/code-modernisation/bob-skills">All Skills Repository</a></li>
+<li>📖 <a href="../../../ibm-bob/skills/contributing_to_skills.md">Skills Development Guide</a></li>
+<li>📄 <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/code-modernisation/bob-skills/README.md">Skills Documentation</a></li>
+</ul>
+<hr />
+<h2 id="assets">Assets<a class="headerlink" href="#assets" title="Permanent link">&para;</a></h2>
+<h3 id="demo-videos">Demo Videos<a class="headerlink" href="#demo-videos" title="Permanent link">&para;</a></h3>
+<p>Explore our comprehensive video library to see Code Modernization in action:</p>
+<h4 id="getting-started-videos">Getting Started Videos<a class="headerlink" href="#getting-started-videos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Video Title</th>
+<th>Description</th>
+<th>Duration</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Maximo Automation Scripts Modernization</strong></td>
+<td>Complete walkthrough of modernizing IBM Maximo automation scripts with performance optimization and security analysis</td>
+<td>18:30</td>
+<td><a href="https://www.youtube.com/watch?v=bNID8QRi7Iw">▶️ Watch on YouTube</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🎥 <a href="https://www.youtube.com/@IBMTechnology">IBM Technology YouTube Channel</a> - Subscribe for latest videos</li>
+<li>📖 <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/code-modernisation/README.md">Implementation Guide</a> - Complete setup and configuration guide</li>
+</ul>
+<hr />
+<h2 id="call-to-action">Call to Action<a class="headerlink" href="#call-to-action" title="Permanent link">&para;</a></h2>
+<h3 id="ready-to-build-with-code-modernization">Ready to Build with Code Modernization?<a class="headerlink" href="#ready-to-build-with-code-modernization" title="Permanent link">&para;</a></h3>
+<p>Take the next step with this Building Block by choosing the path that best fits your needs:</p>
+<ul>
+<li><strong>Explore the fundamentals</strong> in the <a href="#overview">Overview</a>, <a href="#architecture">Architecture</a>, and <a href="#core-concepts">Core Concepts</a> sections</li>
+<li><strong>Download reusable assets</strong> from <a href="#download-skills">Download Skills</a> for automated code modernization</li>
+<li><strong>Watch the demo video</strong> in the <a href="#assets">Assets</a> section to see Maximo modernization in action</li>
+<li><strong>Get started with IBM Bob</strong> through the <a href="#products--services">Products &amp; Services</a> section</li>
+</ul>
+<p><strong>Quick Links:</strong>
+- 🚀 <a href="../../../ibm-bob/index.md">Get Started with IBM Bob</a>
+- 📥 <a href="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/build-and-deploy/code-modernisation/bob-skills/code-modernization-expert.zip">Download Code Modernization Expert Skill</a>
+- 📥 <a href="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/build-and-deploy/code-modernisation/bob-skills/maximo-code-optimization.zip">Download Maximo Optimization Skill</a>
+- 📖 <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/build-and-deploy/code-modernisation/README.md">Implementation Guide</a></p>
+<hr />
+<h2 id="related-capabilities">Related Capabilities<a class="headerlink" href="#related-capabilities" title="Permanent link">&para;</a></h2>
+<p><strong>Within Build and Deploy:</strong></p>
+<ul>
+<li><a href="../infrastructure-as-code/">Infrastructure as Code</a> - Automate modernized infrastructure deployment</li>
+<li><a href="../ipaas/">iPaaS</a> - Integrate modernized middleware</li>
+</ul>
+<p><strong>Other Building Blocks:</strong></p>
+<ul>
+<li><a href="../../optimize/automated-resource-management/">Automated Resource Management</a> - Optimize modernized workloads</li>
+<li><a href="../../optimize/finops/">FinOps</a> - Track modernization cost benefits</li>
+<li><a href="../../optimize/automated-resilience/">Automated Resilience &amp; Compliance</a> - Ensure modernized workload compliance</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../infrastructure-as-code/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Infrastructure as Code">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Infrastructure as Code
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../asset-management/" class="md-footer__link md-footer__link--next" aria-label="Next: Asset Management">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Asset Management
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.instant", "navigation.top", "navigation.footer", "content.code.copy", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
