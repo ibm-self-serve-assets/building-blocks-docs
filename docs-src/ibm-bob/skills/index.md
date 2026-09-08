@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="./skills.css">
-
 # Skills for the Bob<span style="color:#0f62fe">+</span> IBM Technology Building Blocks
 
 This collection of [Skills for IBM Bob](https://bob.ibm.com/docs/ide/features/skills) provides IBM Bob with the expertise to quickly build applications using the [Bob<span style="color:#0f62fe">+</span> IBM Technology Building Blocks](../../index.md).   Each skill focuses on a specific Building Block and contains task-specific instructions, code patterns, examples and constraints Bob should follow when doing engineering work.
@@ -26,8 +24,8 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
       <tr>
         <td><div class="skill-subgroup"><img src="images/agents.png" alt="" class="title-icon"><span>Agents</span></div></td>
         <td>
-            <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/agent">Agent Builder</a>
-            <br>Build and deploy multi-agent systems with tools (MCP servers) using watsonx Orchestrate's Agent Development Kit (ADK), CLI and REST API.
+            <a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/agent">Agent Skills</a>
+            <br>Build and deploy enterprise-ready AI agents that automate business workflows, orchestrate complex tasks, and accelerate software development through intelligent automation.
         </td>
       </tr>
       <tr>

@@ -25,6 +25,7 @@ theme:
 
 extra_css:
   - stylesheets/carbon.css
+  - ibm-bob/skills/skills.css
 
 extra_javascript:
   - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
@@ -45,7 +46,7 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Getting Started: index.md
+  - IBM Bob+: index.md
       
   - AI:
       - Overview: ai-core/index.md
@@ -53,65 +54,77 @@ nav:
           - Overview: ai-core/agents/index.md
           - Agent Builder: ai-core/agents/agent-builder.md
           - Multi-Agent Orchestration: ai-core/agents/multi-agent-orchestration.md
-          - Agentic SDLC: ai-core/agents/agentic-sdlc.md
 
-      - AI Trust:
+      - AI Control Plane:
           - Overview: ai-core/ai-trust/index.md
-          - Model Evaluation: ai-core/ai-trust/model-evaluation.md
           - Agent Ops: ai-core/ai-trust/agent-ops.md
-          - Real-Time Guardrails: ai-core/ai-trust/real-time-guardrails.md
+          - AI Cost Management: ai-core/ai-trust/ai-cost-management.md
           - AI Compliance: ai-core/ai-trust/ai-compliance.md
+          - Lifecycle Management: ai-core/ai-trust/lifecycle-management.md
+          # Hidden for now — uncomment to restore:
+          # - Shadow AI Discovery: ai-core/ai-trust/shadow-ai-discovery.md
+          # - Model Evaluation: ai-core/ai-trust/model-evaluation.md
+          # - Real-Time Guardrails: ai-core/ai-trust/real-time-guardrails.md
+
+      - AI Engineering:
+          - Overview: ai-core/ai-engineering/index.md
+          - Agentic SDLC: ai-core/ai-engineering/agentic-sdlc.md
+          - Code Modernization: ai-core/ai-engineering/code-modernization.md
+          - Headless Bob: ai-core/ai-engineering/headless-bob.md
+          - Integration as Code: ai-core/ai-engineering/integration-as-code.md
+          - Context Engineering: ai-core/ai-engineering/context-engineering.md
+
+      - Skills and Modes: ai-core/bob-skills-and-modes.md
 
   - Data:
       - Overview: data-core/index.md
-      
-      - Integration:
-          - Overview: data-core/integration/index.md
-          - Data Pipeline (AI Generated): data-core/integration/data-pipeline-ai-generated/index.md
-          - Data Streaming: data-core/integration/data-streaming/index.md
-          - Data Observability: data-core/integration/data-observability/index.md
 
-      - Intelligence:
-          - Overview: data-core/intelligence/index.md
-          - Data Quality: data-core/intelligence/data-quality/index.md
-          - Data Lineage: data-core/intelligence/data-lineage/index.md
-          - Text2SQL: data-core/intelligence/text2sql/index.md
+      - Context:
+          - Overview: data-core/context/index.md
+          - Context Hub: data-core/context/context-hub/index.md
+          - Real-Time Streaming: data-core/context/real-time-streaming/index.md
+          - Metadata Enrichment & Data Quality: data-core/context/metadata-enrichment/index.md
+          - Data Observability: data-core/context/data-observability/index.md
 
-      - Retrieval:
-          - Overview: data-core/retrieval/index.md
-          - RAG: data-core/retrieval/rag/index.md
-          - Vector Search:
-              - Overview: data-core/retrieval/vector-search/index.md
-              - Milvus: data-core/retrieval/vector-search/milvus.md
-              - OpenSearch: data-core/retrieval/vector-search/opensearch.md
-              - DataStax Astra DB: data-core/retrieval/vector-search/datastax-astra-db.md
-          - No SQL Database: data-core/retrieval/no-sql-database/index.md
-          - Zero Copy: data-core/retrieval/zero-copy/index.md
+      - Pipelines:
+          - Overview: data-core/pipelines/index.md
+          - RAG: data-core/pipelines/rag/index.md
+          - UDI: data-core/pipelines/udi/index.md
+          - Text2SQL: data-core/pipelines/text2sql/index.md
+          - ETL: data-core/pipelines/etl/index.md
+          - Data Sync: data-core/pipelines/data-sync/index.md
+
+      - Query Engines:
+          - Overview: data-core/query-engines/index.md
+          - Zero-Copy Lakehouse: data-core/query-engines/zero-copy-lakehouse/index.md
+          - Serverless Vector: data-core/query-engines/serverless-vector/index.md
+
+      - Skills and Modes: data-core/bob-skills-and-modes.md
 
   - Automation:
       - Overview: automation-core/index.md
-        
-      - Build and Deploy:
-          - Overview: automation-core/build/index.md
-          - iPaaS: automation-core/build/ipaas.md
-          - Infrastructure as Code: automation-core/build/infrastructure-as-code.md
-          - Code Modernization: automation-core/build/middleware-modernization.md
-          - Asset Management: automation-core/build/asset-management.md
+
+      - Operate:
+          - Overview: automation-core/operate/index.md
+          - Infrastructure as Code: automation-core/operate/infrastructure-as-code.md
+          - Configure & Automate: automation-core/operate/configure-automate.md
+          - Workload Orchestration & Scheduling: automation-core/operate/workload-orchestration.md
+
+      - Secure:
+          - Overview: automation-core/secure/index.md
+          - Non-human Identity & Secret Management: automation-core/secure/non-human-identity.md
+          - Application Risk & Continuous Compliance: automation-core/secure/application-risk.md
+          - Cryptographic & Quantum-Safe Readiness: automation-core/secure/cryptographic-readiness.md
 
       - Optimize:
           - Overview: automation-core/optimize/index.md
-          - Automated Resilience & Compliance: automation-core/optimize/automated-resilience.md
-          - FinOps: automation-core/optimize/finops.md
-          - Automated Resource Management: automation-core/optimize/automated-resource-management.md
-          - Budget & Forecasting: automation-core/optimize/budget-and-forecasting.md
-          
-      - Secure:
-          - Overview: automation-core/secure/index.md
-          - Non-human Identity: automation-core/secure/non-human-identity.md
-          - Quantum-Safe: automation-core/secure/quantum-safe.md
+          - Full-Stack Application Observability: automation-core/optimize/full-stack-observability.md
+          - Application Performance: automation-core/optimize/application-performance.md
+          - Technology Financial Management & FinOps: automation-core/optimize/technology-financial-management.md
+          - Network Performance Management: automation-core/optimize/network-performance.md
 
-  - Bob+:
-      - Quick Start with Bob Modes: ibm-bob/index.md
-      - Quick Start with Bob Skills: ibm-bob/skills/index.md
+      - Skills and Modes: automation-core/bob-skills-and-modes.md
+
+  - Connect with us:
       - Build with Bob Workshops: workshop/index.md
       - Build with Bob Webinars: build-with-bob/index.md

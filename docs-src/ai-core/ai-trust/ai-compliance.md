@@ -16,6 +16,34 @@ AI regulations are multiplying fast and every AI use case may fall under differe
 | **Map AI use cases to regulations** | Compliance plans identify which rules apply by use case and region |
 | **Position reporting** | Surface potential compliance gaps across the enterprise |
 | **Configurable assessment workflows** | Streamline the review cycle for use case owners and compliance teams |
+| **Enforcement tracking** | Automatically capture agent evaluation metrics as governance evidence and track pass/breach results against policy thresholds |
+
+## Two Layers: Policy and Proof
+
+AI compliance in watsonx.governance operates at two complementary layers:
+
+| Layer | What It Answers | Evidence |
+|-------|----------------|----------|
+| **Policy — Governance Console (OpenPages)** | Which regulations apply? What are the risks? Who assessed and approved? | Human-generated and periodic: risk assessments, questionnaires, attestations, sign-offs |
+| **Proof — Enforcement Tracking** | Is the deployed AI actually behaving within the defined policies? | Machine-generated and continuous: agent evaluation metrics scored as pass/breach against control thresholds |
+
+The two compose into a closed loop: controls are defined and mapped to regulations in the Governance Console, Enforcement Tracking automatically supplies the operational evidence that those controls are holding, and breaches surface back into governance workflows for teams to act on. Without the proof layer, a use case can be fully documented and approved while the deployed agent drifts out of policy — compliance on paper, but not in production.
+
+## Enforcement Tracking for watsonx Orchestrate
+
+Defining governance policies is no longer enough — organizations need ongoing proof that those policies are actually being enforced. **Enforcement Tracking** connects agent evaluations from watsonx Orchestrate directly to governance controls in watsonx.governance, turning documented policy into continuous, evidence-backed verification. With this capability, watsonx.governance provides enforcement tracking across traditional ML, LLMs, and agents.
+
+It works in three steps:
+
+1. **Connect operational AI to governance controls** — Link watsonx Orchestrate to watsonx.governance, then associate each AI agent with the governance use cases and controls it must satisfy across development and production.
+2. **Continuously collect evidence of enforcement** — Evaluation metrics such as hallucination, helpfulness, and toxicity are captured automatically and stored as governance evidence: on a schedule for production agents, on demand for agents still in development. No manual evidence gathering.
+3. **Verify controls with automated pass and breach tracking** — Collected metrics are checked against thresholds set by the business, and each result is recorded as a pass or breach in watsonx.governance — giving governance teams, compliance leaders, and auditors a single, continuously updated source of evidence.
+
+The evaluation metrics themselves come from agent evaluations — see the [Agent Ops](agent-ops.md) building block for how watsonx Orchestrate agents are evaluated, red-teamed, and observed.
+
+!!! tip "Learn More"
+    - [Announcement: From governance policies to governance proof with Enforcement Tracking](https://www.ibm.com/new/announcements/from-governance-policies-to-governance-proof-with-enforcement-tracking-for-watsonx-orchestrate)
+    - [Documentation: Configuring metrics synchronization for watsonx Orchestrate agents](https://www.ibm.com/docs/en/watsonx/saas?topic=console-configuring-metrics-synchronization-watsonx-orchestrate-agents)
 
 ## Available Assets
 

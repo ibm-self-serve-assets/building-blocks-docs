@@ -8,13 +8,14 @@ The Agents building blocks provide ready-to-use accelerators that make it easier
 
 ![Agents Building Blocks Architecture](images/agents-architecture.png)
 
+
+
 ## Building Blocks
 
 | Building Block | What It Does |
 |---|---|
 | **[Agent Builder](agent-builder.md)** | Create and deploy autonomous AI agents that interact with enterprise applications, tools, and data using the watsonx Orchestrate Agentic Development Kit (ADK) |
 | **[Multi-Agent Orchestration](multi-agent-orchestration.md)** | Coordinate multiple AI agents to collaborate intelligently on complex enterprise workflows, with support for external system integration through workflows, MCP and A2A protocols |
-| **[Agentic SDLC](agentic-sdlc.md)** | Transform software development with IBM Bob, an IDE-native agentic AI that automates the entire software development lifecycle from intent to production-ready code |
 
 ## Getting Started
 

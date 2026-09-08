@@ -1,278 +1,138 @@
-# Data - Building Blocks
+# Data – Intelligent Data Platform
 
-Welcome to the **Data Building Blocks** documentation. This collection provides ready-to-use accelerators organized into three main categories: **Integration**, **Intelligence**, and **Retrieval**.
+**The Data Building Blocks** provide a practical, composable foundation for making enterprise data **connected, contextual, trusted, and ready for analytics and AI**. The model is organized around three use-case groups from the current Data sales play: **Context**, **Pipelines**, and **Query Engines**.
 
-## Overview
+![Data - Intelligent Data Platform overview](images/overview.jpg)
 
-This framework provides ready-to-use accelerators that address critical capabilities required to manage, process, and secure data for AI-driven applications. These accelerators are designed to integrate seamlessly with existing enterprise systems, reducing time-to-value for AI projects.
-
-![Data Building Blocks Overview](images/overview.jpg)
-
-The Data building blocks provide a comprehensive data management framework organized into three core capabilities that work together to enable AI-driven applications:
-
-!!! info "GitHub Repository"
-    The complete source code and examples are available in the GitHub repository:
-    
-    **[Building Blocks - Data](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data)**
+!!! info "How to use this section"
+    Start with the business outcome you need, then choose the smallest building block that solves it. The blocks are designed to work independently or together in an end-to-end data and AI architecture.
 
 ---
 
-## Architecture
+## Building Block Map
 
-The Data building blocks are organized into three core capabilities that form a complete data lifecycle:
-
-### 1. Integration
-**Bring data into your systems efficiently and reliably**
-
-Data ingestion and pipeline automation capabilities that connect to various data sources, transform data, and load it into your data platform. Includes AI-powered pipeline generation, real-time streaming, and comprehensive observability.
-
-**Key Capabilities:**
-- AI-generated data pipelines for rapid development
-- Real-time event streaming with Confluent
-- Pipeline monitoring and data quality validation
-
-### 2. Intelligence
-**Ensure data quality, governance, and traceability**
-
-Data quality, governance, and lineage tracking capabilities that ensure your data is trustworthy, compliant, and traceable throughout its lifecycle. Includes automated quality checks, end-to-end lineage tracking, and natural language query generation.
-
-**Key Capabilities:**
-- Automated data quality validation and monitoring
-- Complete data lineage tracking for compliance
-- Natural language to SQL query conversion
-
-### 3. Retrieval
-**Access and query data for AI applications**
-
-Data access and retrieval capabilities that enable AI applications to efficiently query and retrieve data. Includes vector search for semantic similarity, NoSQL storage for scalability, and zero-copy federated analytics.
-
-**Key Capabilities:**
-- Vector search for RAG and semantic retrieval
-- Scalable NoSQL database with Cassandra compatibility
-- Federated analytics without data duplication
+| Use Case | Capability | Primary Products | What It Enables |
+|---|---|---|---|
+| **Context** | [Context Hub](context/context-hub/index.md) | IBM Confluent + IBM watsonx.data + IBM watsonx.data intelligence | Combine real-time events, enterprise data, metadata, lineage and policy context for AI and analytics |
+| **Context** | [Real-Time Streaming](context/real-time-streaming/index.md) | IBM Confluent (Kafka + Flink + connectors + governance) | Stream, transform and govern continuously changing data |
+| **Context** | [Metadata Enrichment & Data Quality](context/metadata-enrichment/index.md) | IBM watsonx.data intelligence | Add business meaning, quality rules, descriptions, terms, classifications and relationships to technical data |
+| **Context** | [Data Observability](context/data-observability/index.md) | IBM watsonx.data integration + IBM Data Observability by Databand | Detect pipeline and dataset issues before downstream users and AI are impacted |
+| **Pipelines** | [RAG](pipelines/rag/index.md) | IBM watsonx.data OpenRAG + OpenSearch | Ground applications and agents with governed enterprise knowledge |
+| **Pipelines** | [UDI](pipelines/udi/index.md) | IBM watsonx.data integration + Docling for IBM watsonx | Ingest, parse, cleanse, chunk, enrich and prepare documents for RAG and AI |
+| **Pipelines** | [Text2SQL](pipelines/text2sql/index.md) | IBM watsonx.data intelligence | Convert natural-language questions into SQL using enriched metadata as context |
+| **Pipelines** | [ETL / ELT](pipelines/etl/index.md) | IBM watsonx.data integration DataStage + IBM watsonx.data | Build governed batch integration flows across source, transformation and target stages |
+| **Pipelines** | [Data Sync](pipelines/data-sync/index.md) | IBM Aspera Sync | Synchronize large file sets and repositories securely across WAN and hybrid environments |
+| **Query Engines** | [Zero-Copy Lakehouse](query-engines/zero-copy-lakehouse/index.md) | IBM watsonx.data (Presto + Spark + Iceberg) | Query data across distributed platforms without unnecessary copying |
+| **Query Engines** | [Serverless Vector](query-engines/serverless-vector/index.md) | IBM watsonx.data + Astra DB Serverless | Elastic vector storage for semantic search, RAG and agent memory patterns |
 
 ---
 
-## Integration Building Blocks
+## 1. Context
 
-Integration capabilities focus on data ingestion and pipeline automation.
+> **Goal:** give applications, analytics, and AI systems the business and operational context they need at the moment they need it.
 
-### [Data Pipeline (AI Generated)](integration/data-pipeline-ai-generated/index.md)
+!!! success "Business Value"
+    - **Fresher decisions** — use continuously updated events rather than delayed batch snapshots.
+    - **Trusted context** — enrich technical data with business terms, metadata, lineage, classifications, quality signals and policy controls.
+    - **Reusable data products** — make contextual data easier for teams and AI agents to discover and consume consistently.
+    - **Lower integration sprawl** — use managed streaming, connectors, metadata services and observability rather than bespoke pipelines.
 
-Transform how you build data pipelines with AI-powered generation and automation. This accelerator uses IBM watsonx.ai to automatically generate optimized data pipelines for both structured and unstructured data sources, dramatically reducing development time from weeks to hours.
+**Use Context when:**
 
-**Key Features:**
+- AI agents or applications need **live operational state** in addition to historical data.
+- Teams need to understand **what a field means, where it came from, and whether it can be trusted**.
+- Streaming pipelines are business-critical and failures or stale datasets need to be detected quickly.
+- You want the same governed context to be reusable across analytics, AI, and operational workflows.
 
-- **AI-Powered Generation**: Automatically generate complete data pipelines using natural language descriptions
-- **Unstructured Data Support**: Process documents, PDFs, images, and media files with built-in extraction
-- **Structured Data Integration**: Connect to RDBMS sources with Change Data Capture (CDC) support
-- **Flexible Ingestion Modes**: Support for both batch and real-time streaming ingestion
-- **watsonx.data Integration**: Seamless integration with IBM's open lakehouse platform
-
-**Use Cases:** Document processing, database migration, real-time data synchronization, data lake population
-
----
-
-### [Data Streaming](integration/data-streaming/index.md)
-
-Enable real-time data processing with enterprise-grade streaming capabilities powered by Confluent Platform. Capture, process, and route data streams in real-time to power AI applications, analytics, and operational systems with low-latency data delivery.
-
-**Key Features:**
-
-- **Real-Time Event Ingestion**: Capture and process millions of events per second with Confluent Platform
-- **Advanced Stream Processing**: Transform data in-flight using ksqlDB, Kafka Streams, and Apache Flink
-- **200+ Pre-Built Connectors**: Integrate with databases, cloud services, and applications via Kafka Connect
-- **Schema Registry**: Centralized schema management for data governance and compatibility
-- **Stream Governance**: Built-in data quality, lineage, and security controls
-
-**Use Cases:** Real-time analytics, event-driven architectures, microservices integration, IoT data processing
+[Explore Context →](context/index.md)
 
 ---
 
-### [Data Observability](integration/data-observability/index.md)
+## 2. Pipelines
 
-Gain complete visibility into your data pipelines with comprehensive monitoring, alerting, and quality validation. Powered by Databand, this accelerator helps teams detect, diagnose, and resolve data quality issues before they impact downstream applications and AI models.
+> **Goal:** prepare and move structured and unstructured data into forms that applications, search systems, analytics and AI can consume.
 
-**Key Features:**
+!!! success "Business Value"
+    - **Faster AI readiness** — convert documents and raw enterprise sources into structured, chunked, enriched and searchable content.
+    - **More reliable RAG** — combine document preparation with enterprise retrieval and governed metadata.
+    - **More accessible analytics** — let users express analytical intent in natural language while retaining SQL as the execution layer.
+    - **Repeatable integration** — use visual ETL/ELT flows, managed runtimes, scheduling and reusable transformations.
+    - **High-speed data movement** — synchronize large repositories across data centres and clouds when conventional file transfer is a bottleneck.
 
-- **Pipeline Monitoring**: Real-time tracking of pipeline execution, performance metrics, and bottleneck identification
-- **Data Quality Validation**: Automated quality checks, schema validation, and anomaly detection
-- **Intelligent Alerting**: Configurable alerts with multi-channel notifications (email, Slack, PagerDuty)
-- **Historical Analysis**: Trend analysis and SLA monitoring for continuous improvement
-- **Native Integration**: Seamless integration with IBM watsonx.data and popular orchestration tools
+**Use Pipelines when:**
 
-**Use Cases:** Pipeline health monitoring, data quality assurance, incident response, compliance reporting
+- Data must be **ingested, transformed, enriched, replicated, synchronized or indexed** before it is useful.
+- You are building a **RAG, enterprise search, or agent grounding** pipeline.
+- You need **batch ETL/ELT** with enterprise connectors and operational control.
+- Large file sets need to be moved or synchronized across high-latency networks.
 
----
-
-## Intelligence Building Blocks
-
-Intelligence capabilities focus on data quality, governance, and lineage tracking.
-
-### [Data Quality](intelligence/data-quality/index.md)
-
-Maintain trustworthy data for AI applications with automated quality validation and monitoring. This accelerator provides comprehensive data quality checks, profiling, and validation rules to ensure your data meets business requirements and quality standards.
-
-**Key Features:**
-
-- **Automated Validation**: Define and enforce data quality rules across your data estate
-- **Quality Monitoring**: Continuous assessment of data quality metrics and trends
-- **Data Profiling**: Automated profiling to understand data characteristics and patterns
-- **Anomaly Detection**: Identify data quality issues and anomalies in real-time
-- **watsonx.data Intelligence**: Native integration for enterprise-grade data governance
-
-**Use Cases:** Data quality assurance, regulatory compliance, AI model accuracy, data cleansing
+[Explore Pipelines →](pipelines/index.md)
 
 ---
 
-### [Data Lineage](intelligence/data-lineage/index.md)
+## 3. Query Engines
 
-Achieve complete visibility into data flow and transformations across your organization. Track data from source to destination, understand dependencies, and assess the impact of changes with automated lineage capture and visualization.
+> **Goal:** execute analytics and retrieval workloads on the engine best suited to the data and latency profile.
 
-**Key Features:**
+!!! success "Business Value"
+    - **Reduce unnecessary data movement** — query external platforms in place where supported.
+    - **Use open table formats** — Apache Iceberg enables multiple engines to work with the same governed data without proprietary lock-in.
+    - **Fit-for-purpose compute** — use Presto for interactive SQL and Spark for large-scale processing and complex transformations.
+    - **Elastic semantic retrieval** — use serverless vector databases for similarity search and RAG workloads without managing clusters.
 
-- **End-to-End Tracking**: Automatic lineage capture from data pipelines and transformations
-- **Column-Level Lineage**: Track individual column transformations and dependencies
-- **Impact Analysis**: Assess downstream effects of schema changes and data modifications
-- **Compliance Support**: Generate audit trails and lineage reports for regulatory requirements
-- **Visual Lineage Maps**: Interactive visualization of data flows and relationships
+**Use Query Engines when:**
 
-**Use Cases:** Regulatory compliance (GDPR, CCPA), impact analysis, root cause analysis, migration planning
+- The same data must support **interactive SQL, large-scale processing, and AI retrieval**.
+- Copying data creates cost, latency or governance issues.
+- You need **vector similarity search** at application scale.
 
----
-
-### [Text2SQL](intelligence/text2sql/index.md)
-
-Democratize data access by enabling users to query databases using natural language instead of SQL. Powered by IBM watsonx.ai foundation models, this accelerator translates natural language questions into optimized SQL queries, making data accessible to non-technical users.
-
-**Key Features:**
-
-- **Natural Language Understanding**: Interpret complex questions with context awareness
-- **Intelligent SQL Generation**: Generate syntactically correct, optimized SQL queries
-- **Schema Intelligence**: Automatic understanding of table relationships and business terms
-- **Multi-Database Support**: Compatible with PostgreSQL, MySQL, Db2, and other databases
-- **Query Validation**: Built-in syntax validation and security checks
-
-**Use Cases:** Business intelligence, ad-hoc analysis, self-service analytics, report generation
+[Explore Query Engines →](query-engines/index.md)
 
 ---
 
-## Retrieval Building Blocks
+## Recommended End-to-End Pattern
 
-Retrieval capabilities enable AI applications to access and query data efficiently.
+```mermaid
+flowchart LR
+    S["Operational systems<br/>Databases · SaaS · Files · Devices"] --> C["IBM Confluent<br/>Kafka + Connectors"]
+    C --> F["Apache Flink<br/>real-time transform / enrich"]
+    F --> W["IBM watsonx.data<br/>Open lakehouse / AI-ready data"]
+    W --> I["watsonx.data intelligence<br/>metadata + governance + context"]
+    W --> P["UDI / DataStage / RAG pipelines"]
+    P --> Q["OpenRAG / OpenSearch<br/>Astra DB / Presto / Spark"]
+    I --> Q
+    Q --> A["Analytics · AI agents · Applications"]
+```
 
-### [Vector Search](retrieval/vector-search/index.md)
-
-Build powerful RAG (Retrieval-Augmented Generation) systems with high-performance vector search capabilities. This accelerator provides document ingestion, embedding generation, and semantic similarity search to enable AI applications to retrieve relevant information based on meaning, not just keywords.
-
-**Key Features:**
-
-- **Document Processing**: Automated parsing and extraction from multiple file formats
-- **Flexible Embedding**: Support for dense, hybrid, and dual embedding strategies
-- **Semantic Search**: Find documents based on meaning and context
-- **REST API**: Production-ready API with authentication and rate limiting
-- **Multiple Backends**: Support for Milvus, OpenSearch, and DataStax Astra DB
-
-**Supported Databases:**
-
-- **[Milvus](retrieval/vector-search/milvus.md)**: High-performance open-source vector database
-- **[OpenSearch](retrieval/vector-search/opensearch.md)**: Hybrid vector and keyword search capabilities
-- **[DataStax Astra DB](retrieval/vector-search/datastax-astra-db.md)**: Cloud-native serverless vector database
-
-**Use Cases:** RAG systems, semantic search, document similarity, recommendation engines
+!!! note
+    This is a **reference composition**, not a requirement to deploy every product. Select only the capabilities needed for the use case.
 
 ---
 
-### [No SQL Database](retrieval/no-sql-database/index.md)
+## Selection Guide
 
-Scale your AI applications with enterprise-grade NoSQL storage powered by Apache Cassandra. This accelerator provides a serverless, highly available database with optional vector capabilities, perfect for storing application data, user profiles, and AI-generated content.
-
-**Key Features:**
-
-- **Cassandra Compatibility**: Leverage proven Apache Cassandra technology in a serverless model
-- **Vector Collections**: Store and query vector embeddings alongside traditional data
-- **Dual API Support**: Use Data API for REST access or CQL for native Cassandra queries
-- **Global Distribution**: Multi-region replication for high availability and low latency
-- **Elastic Scaling**: Automatic scaling based on workload demands
-
-**Use Cases:** User profile storage, session management, IoT data storage, AI application backends
-
----
-
-### [Zero Copy](retrieval/zero-copy/index.md)
-
-Eliminate data silos and reduce costs with federated analytics that queries data in place without copying. Built on IBM watsonx.data's open lakehouse architecture, this accelerator enables you to analyze data across multiple sources using a single query interface.
-
-**Key Benefits:**
-
-- **No Data Movement**: Query data where it lives without ETL or replication
-- **Cost Savings**: Eliminate redundant storage and reduce infrastructure costs
-- **Faster Insights**: Access data immediately without waiting for ETL processes
-- **Open Standards**: Built on Iceberg and Delta Lake table formats for vendor independence
-- **Unified Governance**: Centralized access control and security policies
-
-**Architecture Components:**
-- IBM watsonx.data as the query engine
-- Presto/Trino for distributed SQL execution
-- Support for S3, ADLS, and on-premises storage
-- Integration with Db2, PostgreSQL, and other databases
-
-**Use Cases:** Multi-cloud analytics, data mesh architectures, cost optimization, real-time reporting
-
----
-
-## Getting Started
-
-!!! tip "Quick Start Guide"
-    Follow these steps to get started with any building block:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/ibm-self-serve-assets/building-blocks.git
-   cd building-blocks/data
-   ```
-
-2. **Navigate to the specific building block directory**
-
-3. **Follow the README instructions** for setup and configuration
-
----
-
-## Key Benefits
-
-!!! success "Why Use Data Building Blocks?"
-    
-    - **Faster Time-to-Value**: Pre-built accelerators reduce development time
-    - **Cost Savings**: Eliminate redundant storage and data movement
-    - **Enhanced Security**: Built-in governance and data protection
-    - **Scalability**: Optimized for enterprise AI workloads
-    - **Flexibility**: Modular design allows mix-and-match capabilities
+| If your primary problem is… | Start with… |
+|---|---|
+| "My AI needs the latest business events" | [Real-Time Streaming](context/real-time-streaming/index.md) + [Context Hub](context/context-hub/index.md) |
+| "Users cannot understand or trust the available data" | [Metadata Enrichment & Data Quality](context/metadata-enrichment/index.md) |
+| "Pipelines fail and we discover it too late" | [Data Observability](context/data-observability/index.md) |
+| "I need reliable enterprise RAG / search" | [UDI](pipelines/udi/index.md) + [RAG](pipelines/rag/index.md) |
+| "Business users need to query governed data in plain English" | [Metadata Enrichment & Data Quality](context/metadata-enrichment/index.md) + [Text2SQL](pipelines/text2sql/index.md) |
+| "I need repeatable batch transformation across systems" | [ETL / ELT](pipelines/etl/index.md) |
+| "I need to synchronize very large file repositories globally" | [Data Sync](pipelines/data-sync/index.md) |
+| "I want to query distributed data without creating another copy" | [Zero-Copy Lakehouse](query-engines/zero-copy-lakehouse/index.md) |
+| "I need an elastic vector store for GenAI" | [Serverless Vector](query-engines/serverless-vector/index.md) |
 
 ---
 
 ## IBM Products Used
 
-These building blocks leverage the following IBM products:
-
-- **[IBM watsonx.ai](https://www.ibm.com/products/watsonx-ai)**: Foundation models and AI services
-- **[IBM watsonx.data](https://www.ibm.com/products/watsonx-data)**: Open lakehouse platform
-- **[IBM Cloud Object Storage](https://www.ibm.com/cloud/object-storage)**: Scalable object storage
-- **[IBM Db2](https://www.ibm.com/products/db2)**: Enterprise database
-
----
-
-## Contributing
-
-We welcome contributions! Please fork the repository, create a feature branch, and open a pull request with your changes.
-
-!!! note "Contribution Guidelines"
-    - Follow existing code style and documentation patterns
-    - Include tests for new features
-    - Update documentation as needed
-    - Ensure all tests pass before submitting
-
----
-
-## License
-
-This project is licensed under the Apache 2.0 License.
+| Product | Role |
+|---|---|
+| **[IBM watsonx.data](https://www.ibm.com/products/watsonx-data)** | Open hybrid data platform — lakehouse, Presto, Spark, Iceberg, OpenRAG |
+| **[IBM Confluent](https://www.ibm.com/products/confluent)** | Managed Kafka + Flink + connectors + Stream Governance for real-time data |
+| **[IBM watsonx.data integration](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=data-integration)** | DataStage ETL, UDI, data replication and observability |
+| **[IBM watsonx.data intelligence](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=data-enriching-your-assets)** | Metadata enrichment, business glossary, Text2SQL |
+| **[IBM Aspera Sync](https://www.ibm.com/products/aspera/sync)** | High-speed WAN file and repository synchronization |
+| **[Docling for IBM watsonx](https://www.ibm.com/products/docling)** | Advanced document conversion for complex PDFs and unstructured content |
+| **[Astra DB Serverless](https://docs.datastax.com/en/astra-db-serverless/databases/create-database.html)** | Serverless vector database for embeddings and semantic search |
