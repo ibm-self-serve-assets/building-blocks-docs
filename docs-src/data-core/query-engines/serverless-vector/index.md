@@ -8,7 +8,7 @@ Use **Astra DB Serverless through IBM watsonx.data** for elastic vector storage 
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Serverless Vector](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/datastax-astradb)
+    [Building Blocks - Serverless Vector](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query-engines/serverless-vector)
 
 !!! warning "Architecture note"
     The Astra DB Vector Search Building Block may reflect an earlier integration pattern. Current watsonx.data documentation supports provisioning Astra DB Serverless (vector) **directly from the watsonx.data infrastructure experience** — see [IBM watsonx.data documentation](https://www.ibm.com/docs/en/watsonxdata/saas?topic=watsonxdata-adding-astra-db-service) for the current product integration.

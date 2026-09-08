@@ -8,7 +8,7 @@ Use **IBM DataStage in IBM watsonx.data integration** to build batch data flows 
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - ETL / ELT](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated)
+    [Building Blocks - ETL / ELT](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/etl)
 
 ---
 

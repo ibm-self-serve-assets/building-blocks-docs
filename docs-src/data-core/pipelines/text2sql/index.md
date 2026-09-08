@@ -8,7 +8,7 @@ Use **IBM watsonx.data intelligence** to convert natural-language requests into 
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Text2SQL](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/text2sql)
+    [Building Blocks - Text2SQL](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/text2sql)
 
 ---
 

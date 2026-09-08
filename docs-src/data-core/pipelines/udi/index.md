@@ -9,7 +9,7 @@ Use **IBM watsonx.data integration Unstructured Data Integration** to ingest, cl
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - UDI](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated)
+    [Building Blocks - UDI](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/udi)
 
 ---
 

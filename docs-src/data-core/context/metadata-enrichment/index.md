@@ -8,7 +8,7 @@ Use **IBM watsonx.data intelligence** to add business and governance context to 
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Metadata Enrichment & Data Quality](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-quality)
+    [Building Blocks - Metadata Enrichment & Data Quality](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/context/metadata-enrichment)
 
 ---
 

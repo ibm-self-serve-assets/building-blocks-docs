@@ -8,7 +8,7 @@ Use **OpenRAG on IBM watsonx.data** to ground AI applications and agents in ente
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - RAG](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG)
+    [Building Blocks - RAG](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/rag)
 
 !!! warning "Architecture note"
     The RAG Building Block is a reusable accelerator and may implement a custom RAG pipeline rather than **OpenRAG** specifically. The current recommended product architecture is **IBM watsonx.data OpenRAG** — a managed enterprise RAG capability provisioned directly from watsonx.data. Refer to the [IBM OpenRAG provisioning documentation](https://www.ibm.com/docs/en/watsonxdata/saas?topic=openrag-provisioning) for details.

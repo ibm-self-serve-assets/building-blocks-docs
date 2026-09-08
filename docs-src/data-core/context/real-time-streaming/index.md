@@ -8,7 +8,7 @@ Use **IBM Confluent** to stream, connect, process, govern and serve continuously
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Real-Time Streaming](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-streaming)
+    [Building Blocks - Real-Time Streaming](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/context/real-time-streaming)
 
 ---
 

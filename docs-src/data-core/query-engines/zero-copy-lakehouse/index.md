@@ -8,7 +8,7 @@ Use **IBM watsonx.data** with **Presto, Spark and Apache Iceberg** to query and 
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Zero-Copy Lakehouse](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/zero-copy)
+    [Building Blocks - Zero-Copy Lakehouse](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/query-engines/zero-copy-lakehouse)
 
 ---
 

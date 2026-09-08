@@ -9,7 +9,7 @@ Use **IBM watsonx.data integration Data Observability** and **IBM Data Observabi
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Data Observability](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-observability)
+    [Building Blocks - Data Observability](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/context/data-observability)
 
 ---
 
