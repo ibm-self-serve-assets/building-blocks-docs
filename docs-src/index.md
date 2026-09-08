@@ -1,22 +1,14 @@
-# Bob<span style="color:#0f62fe">+</span> IBM Technology Building Blocks
+# Bob<span style="color:#0f62fe">+</span>
 
-**Bob<span style="color:#0f62fe">+</span> IBM Technology Building Blocks** provide a unified digital experience for discovering, adopting, and implementing IBM technologies across AI and Automation. The Building Blocks encapsulate reusable, enterprise-ready capabilities spanning AI (Agents, Trust, and Data) and Automation (Build, Secure, and Optimize), enabling organizations to rapidly integrate IBM technologies into new and existing applications.
+**Bob<span style="color:#0f62fe">+</span>** provide a unified digital experience for discovering, adopting, and implementing reusable IBM capabilities across AI (Agents, Trust, Data) and Automation (Operate, Secure, Optimize).
 
-Powered by **IBM Bob**, developers, architects, partners, and technical teams receive AI-assisted guidance throughout the software development lifecycle—from discovering the appropriate Building Blocks and generating solution architectures to accelerating development, application modernization, cloud migration, deployment, and ongoing optimization. This AI-first experience improves developer productivity, promotes consistent engineering practices, reduces implementation risk, and accelerates time-to-value while maintaining enterprise-grade security, governance, scalability, and operational excellence.
+Powered by **IBM Bob**, technical teams receive AI-assisted guidance across the entire development lifecycle—from solution design and coding to modernization, deployment, and optimization—accelerating time-to-value while ensuring enterprise-grade security, governance, and consistency.
 
 # Digital Experience with Bob+
 
-Bob<span style="color:#0f62fe">+</span> delivers an AI-powered digital experience that enables developers, architects, partners, and enterprise teams to discover, build, modernize, migrate, and operate applications using IBM Technology Building Blocks. Rather than searching through multiple product documents, APIs, and best practices, users interact with a single intelligent assistant that understands enterprise architecture and recommends the right IBM capabilities for every stage of the software lifecycle.
+Bob<span style="color:#0f62fe">+</span> combines Generative AI with IBM technology expertise to serve as an intelligent engineering companion across the software lifecycle. Instead of navigating fragmented documentation and APIs, teams interact with a single assistant that recommends the right Building Blocks, abstracts implementation complexity, and accelerates building, modernizing, and operating applications.
 
-Bob<span style="color:#0f62fe">+</span> combines Generative AI with IBM Technology expertise to guide users from initial solution design through deployment and ongoing operations. By abstracting implementation complexity, teams can focus on delivering business value instead of building foundational capabilities from scratch.
-
-Whether building new cloud-native applications, modernizing legacy workloads, migrating infrastructure, or optimizing production environments, Bob+ acts as an intelligent engineering companion that accelerates delivery while ensuring consistency, governance, and security.
-
-<img src="image-1.png"
-     alt="Digital Experience with IBM Bob+"
-     width="750"
-     height="150"
-     style="max-width:100%; height:auto;">
+![alt text](../image.png)
 
 ## Capability Areas
 
