@@ -8,7 +8,7 @@ Powered by **IBM Bob**, technical teams receive AI-assisted guidance across the 
 
 Bob<span style="color:#0f62fe">+</span> combines Generative AI with IBM technology expertise to serve as an intelligent engineering companion across the software lifecycle. Instead of navigating fragmented documentation and APIs, teams interact with a single assistant that recommends the right Building Blocks, abstracts implementation complexity, and accelerates building, modernizing, and operating applications.
 
-![alt text](../image.png)
+![Bob+ Digital Experience](images/bob-digital-experience.png)
 
 ## Capability Areas
 
