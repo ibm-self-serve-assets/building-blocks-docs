@@ -64,7 +64,7 @@ A [Bob skill for Multi-Agent Orchestration](https://ibm-self-serve-assets.github
 
 ## Bob Modes
 
-A [Bob mode for Multi-Agent Orchestration](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/multi-agent-orchestration/bob-modes) is available, providing an AI-assisted workflow for building and deploying multi-agent systems with watsonx Orchestrate.
+A [Bob mode for Multi-Agent Orchestration](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/agents/multi-agent-orchestration/bob-modes) is available, providing an AI-assisted workflow for building and deploying multi-agent systems with watsonx Orchestrate.
 
 !!! info "GitHub Repository"
-    [Multi-Agent Orchestration Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/multi-agent-orchestration)
+    [Multi-Agent Orchestration Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/agents/multi-agent-orchestration)

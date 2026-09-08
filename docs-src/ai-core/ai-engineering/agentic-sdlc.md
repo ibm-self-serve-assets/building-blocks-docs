@@ -100,4 +100,4 @@ Bob V2 introduces three focused modes that cover the full development lifecycle 
 | **[Bob Modes](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/modes)** | Browse custom Bob modes for specialized workflows across every building block |
 
 !!! info "GitHub Repository"
-    [Agentic SDLC Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/agentic-sdlc)
+    [Agentic SDLC Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/agentic-sdlc)

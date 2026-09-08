@@ -204,7 +204,7 @@ oc set env deploy/bobserver BOBSHELL_API_KEY="$BOBSHELL_API_KEY"
 ---
 
 !!! info "GitHub Repository"
-    [Bobserver — Headless Bob Reference Implementation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/headless-bob)
+    [Bobserver — Headless Bob Reference Implementation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/headless-bob)
 
 !!! note "On the Roadmap"
     Bobserver is the community reference implementation for Headless Bob. The interaction modes it establishes — async jobs, guided sessions, approval workflows — are designed to carry forward as the pattern evolves.

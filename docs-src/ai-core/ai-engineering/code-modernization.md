@@ -453,17 +453,7 @@ Take the next step with this Building Block by choosing the path that best fits 
 
 ---
 
-## Related Capabilities
-
-**Within Build and Deploy:**
-
-- [Infrastructure as Code](infrastructure-as-code.md) - Automate modernized infrastructure deployment
-- [iPaaS](ipaas.md) - Integrate modernized middleware
-
-**Other Building Blocks:**
-
-- [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize modernized workloads
-- [FinOps](../optimize/finops.md) - Track modernization cost benefits
-- [Automated Resilience & Compliance](../optimize/automated-resilience.md) - Ensure modernized workload compliance
+!!! info "GitHub Repository"
+    [Agentic SDLC Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/code-modernization)
 
 ---

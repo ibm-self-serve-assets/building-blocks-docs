@@ -23,4 +23,4 @@ The Agents building blocks provide ready-to-use accelerators that make it easier
 2. Check **bob-modes** for AI-assisted agent development workflows.
 
 !!! info "GitHub Repository"
-    [Agents Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents)
+    [Agents Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai)

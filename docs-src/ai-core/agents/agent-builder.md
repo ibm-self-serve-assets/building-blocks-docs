@@ -68,7 +68,7 @@ A [Bob skill for Agent Builder](https://ibm-self-serve-assets.github.io/building
 
 ## Bob Modes
 
-A [Bob mode for Agent Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/agent-builder/bob-modes) is available, providing an AI-assisted workflow for creating and deploying agents with watsonx Orchestrate.
+A [Bob mode for Agent Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/agents/agent-builder/bob-modes) is available, providing an AI-assisted workflow for creating and deploying agents with watsonx Orchestrate.
 
 !!! info "GitHub Repository"
-    [Agent Builder Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/agent-builder)
+    [Agent Builder Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/agents/agent-builder)

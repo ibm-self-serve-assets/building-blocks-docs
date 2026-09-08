@@ -111,19 +111,9 @@ Organizations commonly leverage webMethods Hybrid Integration to:
 
 ---
 
-## **Related Capabilities**
-
-**Within Build and Deploy:**
-
-- [Non-human Identity](../secure/non-human-identity.md) - Secure access and identity management
-- [Infrastructure as Code](infrastructure-as-code.md) - Automated infrastructure provisioning
-- [Quantum-Safe Cryptography](../secure/quantum-safe.md) - Secure integration communications
-
-**Other Building Blocks:**
-
-- [Code Modernization](middleware-modernization.md) - Modernize integration platforms
-- [Automated Resource Management](../optimize/automated-resource-management.md) - Optimize integration workloads
+!!! info "GitHub Repository"
+    [Agentic SDLC Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/integrate-as-code)
 
 ---
 
-[← Back to Build and Deploy](index.md)
+
