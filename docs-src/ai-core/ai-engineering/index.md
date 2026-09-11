@@ -17,7 +17,7 @@ The AI Engineering building blocks cover five interconnected engineering capabil
 | **[Agentic SDLC](agentic-sdlc.md)** | Transform software development with IBM Bob, an IDE-native agentic AI that automates the entire software development lifecycle from intent to production-ready code |
 | **[Code Modernization](code-modernization.md)** | Transform legacy Java, mainframe, IBM Z, and IBM i applications into modern cloud-native systems using AI-powered analysis, automated refactoring, and systematic migration strategies |
 | **[Integration as Code](integration-as-code.md)** | Connect applications, systems, and data across distributed environments using webMethods Hybrid Integration — a cloud-native iPaaS supporting hybrid, API, B2B/EDI, and event-driven integration patterns |
-| **[Headless Bob](headless-bob.md)** | Run IBM Bob autonomously in CI/CD pipelines, scheduled jobs, and event-driven automations — agentic engineering workflows without a developer in the loop —  |
+| **[Headless Bob](headless-bob.md)** | Expose IBM Bob Shell as a REST and ACP service — run prompts asynchronously, stream live output, and integrate Bob into CI/CD pipelines, scheduled jobs, and multi-agent workflows without an IDE or developer in the loop |
 
 ## Getting Started
 

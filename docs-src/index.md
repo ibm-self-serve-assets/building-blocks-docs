@@ -41,7 +41,7 @@ Bob<span style="color:#0f62fe">+</span> combines Generative AI with IBM technolo
     | [Code Modernization](ai-core/ai-engineering/code-modernization.md) | Transform legacy Java, mainframe, IBM Z, and IBM i applications into modern cloud-native systems |
     | [Integration as Code](ai-core/ai-engineering/integration-as-code.md) | Connect SaaS apps, on-premise systems, APIs, and event streams through a low-code iPaaS model |
     | [Headless Bob](ai-core/ai-engineering/headless-bob.md) | Run Bob autonomously in CI/CD pipelines, scheduled jobs, and event-driven automations |
-    | [Context Engineering](ai-core/ai-engineering/context-engineering.md) | Design and optimise the context agents and LLMs receive — prompt architecture, RAG patterns, context window management |
+    
 
 **[Data Core Capabilities](data-core/index.md)**
 
