@@ -1,0 +1,3815 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bob+ IBM Technology Building Blocks Documentation">
+      
+      
+      
+        <link rel="canonical" href="https://ibm-self-serve-assets.github.io/building-blocks/ai-core/ai-engineering/headless-bob/">
+      
+      
+        <link rel="prev" href="../code-modernization/">
+      
+      
+        <link rel="next" href="../integration-as-code/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Headless Bob - Bob+ IBM Technology Building Blocks Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/carbon.css">
+    
+      <link rel="stylesheet" href="../../../ibm-bob/skills/skills.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#headless-bob" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Bob+ IBM Technology Building Blocks Docs" class="md-header__button md-logo" aria-label="Bob+ IBM Technology Building Blocks Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bob+ IBM Technology Building Blocks Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Headless Bob
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Bob+ IBM Technology Building Blocks Docs" class="md-nav__button md-logo" aria-label="Bob+ IBM Technology Building Blocks Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Bob+ IBM Technology Building Blocks Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IBM Bob+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/agent-builder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Builder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/multi-agent-orchestration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-Agent Orchestration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Control Plane
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI Control Plane
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-trust/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-trust/agent-ops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Ops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-trust/ai-cost-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Cost Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-trust/ai-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-trust/lifecycle-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lifecycle Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Engineering
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI Engineering
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agentic-sdlc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic SDLC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-modernization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Modernization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Headless Bob
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Headless Bob
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-headlessbob-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How headlessbob Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interaction-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interaction Modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrated-browser-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integrated Browser UI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrated Browser UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest-api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REST API Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="REST API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capabilities-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capabilities &amp; Health
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Threads
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workspace-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workspace Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acp-api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACP API Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ACP API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent Discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sessions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acp-run-modes-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACP Run Modes — Quick Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local (Node.js)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenShift
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operational-limits-trust-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Limits &amp; Trust Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration-as-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration as Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bob-skills-and-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills and Modes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Context
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Context
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/context/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/context/context-hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Context Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/context/real-time-streaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Real-Time Streaming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/context/metadata-enrichment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metadata Enrichment & Data Quality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/context/data-observability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Observability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipelines
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pipelines
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/pipelines/rag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/pipelines/udi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UDI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/pipelines/text2sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text2SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/pipelines/etl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ETL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/pipelines/data-sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Sync
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Query Engines
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Query Engines
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/query-engines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/query-engines/zero-copy-lakehouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero-Copy Lakehouse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/query-engines/serverless-vector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Serverless Vector
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data-core/bob-skills-and-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills and Modes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Automation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operate
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operate
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/operate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/operate/infrastructure-as-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure as Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/operate/configure-automate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure & Automate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/operate/workload-orchestration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workload Orchestration & Scheduling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Secure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/secure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/secure/non-human-identity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-human Identity & Secret Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/secure/application-risk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application Risk & Continuous Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/secure/cryptographic-readiness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cryptographic & Quantum-Safe Readiness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optimize
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Optimize
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/optimize/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/optimize/full-stack-observability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full-Stack Application Observability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/optimize/application-performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/optimize/technology-financial-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technology Financial Management & FinOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/optimize/network-performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Performance Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../automation-core/bob-skills-and-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills and Modes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connect with us
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Connect with us
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build with Bob Workshops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build-with-bob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build with Bob Webinars
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-headlessbob-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How headlessbob Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interaction-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interaction Modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrated-browser-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integrated Browser UI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrated Browser UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest-api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REST API Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="REST API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capabilities-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capabilities &amp; Health
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Threads
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workspace-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workspace Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acp-api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACP API Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ACP API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent Discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sessions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acp-run-modes-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACP Run Modes — Quick Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local (Node.js)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenShift
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operational-limits-trust-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Limits &amp; Trust Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="headless-bob">Headless Bob<a class="headerlink" href="#headless-bob" title="Permanent link">&para;</a></h1>
+<p>IBM Bob was built for the IDE — but engineering work doesn't stop at the developer's desk. The <strong>Headless Bob building block</strong> is the pattern for running Bob outside the IDE: in CI/CD pipelines, automation scripts, Slack workflows, and any system that needs to call Bob programmatically without a developer actively present.</p>
+<p>The reference implementation is <strong>headlessbob</strong> — a TypeScript/Node.js service that runs <strong>IBM Bob Shell 2.0.1</strong> and exposes it through native <strong>Agent Communication Protocol (ACP) 0.2.0</strong> and thread-based <strong>REST APIs</strong>, with an integrated browser UI. Bob is the execution engine; no VS Code, Codex runtime, or OpenAI account is involved.</p>
+<h2 id="why-this-matters">Why This Matters<a class="headerlink" href="#why-this-matters" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Not all engineering work happens interactively.</strong> Code reviews, test generation, documentation sync, dependency audits, and deployment validations are repeatable tasks that should run automatically — not wait for a developer to open an IDE. Headless Bob makes these tasks a first-class engineering concern.</li>
+<li><strong>Bob needs an API boundary for automation.</strong> Teams integrating Bob into CI pipelines, scheduled jobs, or multi-system workflows need a stable REST surface to call — headlessbob provides that boundary, wrapping Bob Shell in a managed, authenticated API without requiring changes to Bob itself.</li>
+<li><strong>Multi-agent interoperability requires a standard protocol.</strong> ACP 0.2.0 lets any ACP-compatible agent or pipeline discover Bob, submit tasks, and consume results in a standardized way — making Headless Bob a first-class node in multi-agent architectures.</li>
+<li><strong>AI calls are asynchronous by nature.</strong> Bob runs can take seconds to minutes depending on task complexity. Headless execution requires a queue-and-poll model — or live streaming — so systems can submit work and retrieve results without holding connections or blocking pipelines.</li>
+<li><strong>Persistent conversations enable multi-turn workflows.</strong> Thread-based sessions carry workspace context across runs, letting Bob build on previous work — essential for iterative tasks like code generation, refactoring, and incremental deployments.</li>
+<li><strong>Visibility into cost and execution matters at scale.</strong> headlessbob captures token counts, execution duration, tool call metrics, and session cost per run — giving teams the observability they need to govern autonomous Bob usage.</li>
+</ul>
+<h2 id="whats-covered">What's Covered<a class="headerlink" href="#whats-covered" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>What It Covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="#how-headlessbob-works">How headlessbob Works</a></strong></td>
+<td>Architecture: ACP + REST APIs, run manager, SQLite, workspace model, browser UI</td>
+</tr>
+<tr>
+<td><strong><a href="#interaction-modes">Interaction Modes</a></strong></td>
+<td>Sync, async, and stream execution modes via ACP and REST</td>
+</tr>
+<tr>
+<td><strong><a href="#integrated-browser-ui">Browser UI</a></strong></td>
+<td>Built-in chat interface with live streaming, file explorer, and run diagnostics</td>
+</tr>
+<tr>
+<td><strong><a href="#rest-api-reference">REST API Reference</a></strong></td>
+<td>Full <code>/api/v1</code> endpoint surface for threads, runs, and files</td>
+</tr>
+<tr>
+<td><strong><a href="#acp-api-reference">ACP API Reference</a></strong></td>
+<td>ACP 0.2.0 endpoints for agent discovery, runs, sessions, and events</td>
+</tr>
+<tr>
+<td><strong><a href="#deployment">Deployment</a></strong></td>
+<td>Local (Node.js), Docker, and OpenShift setup</td>
+</tr>
+<tr>
+<td><strong><a href="#client-examples">Client Examples</a></strong></td>
+<td>Python standard-library clients for REST, ACP, and cancellation</td>
+</tr>
+<tr>
+<td><strong><a href="#use-cases">Use Cases</a></strong></td>
+<td>CI/CD integration, Slack automation, multi-agent orchestration</td>
+</tr>
+<tr>
+<td><strong><a href="#bob-skills">Bob Skills &amp; Modes</a></strong></td>
+<td>AI-assisted workflows for configuring headless pipelines from your IDE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="how-headlessbob-works">How headlessbob Works<a class="headerlink" href="#how-headlessbob-works" title="Permanent link">&para;</a></h2>
+<p>headlessbob sits between any API client and Bob Shell. Clients authenticate with a bearer token, submit work via REST or ACP, and receive results synchronously, asynchronously, or via live SSE streaming. Bob Shell runs in an isolated workspace directory per session, with all generated artifacts available for download.</p>
+<pre class="mermaid"><code>%%{init: {'theme': 'base', 'themeVariables': {'clusterBkg': '#f7f7f7', 'clusterBorder': '#cccccc', 'titleColor': '#222222', 'edgeLabelBackground': '#ffffff', 'fontSize': '14px'}}}%%
+flowchart LR
+    subgraph Clients["Clients"]
+        UI["Browser UI"]:::client
+        RESTClient["REST API Client"]:::client
+        ACPClient["ACP Agent / Pipeline"]:::client
+    end
+
+    subgraph Service["headlessbob — Node.js / TypeScript Service"]
+        direction TB
+        REST["REST API\n/api/v1"]:::api
+        ACP["ACP API\n/agents  /runs  /session"]:::api
+        Manager["Run Manager\n&amp; Scheduler"]:::internal
+        Files["Workspace\nFile Manager"]:::internal
+    end
+
+    subgraph Backend["Storage &amp; Engine"]
+        direction TB
+        Store[("SQLite\nruns.sqlite")]:::store
+        Workspaces[("File\nWorkspaces")]:::store
+        Bob["IBM Bob Shell 2.0.1\nSubprocess"]:::bob
+    end
+
+    Result["Result / Artifact\n(SSE · JSON · file)"]:::result
+
+    UI --&gt; REST
+    RESTClient --&gt; REST
+    ACPClient --&gt; ACP
+    REST --&gt; Manager
+    ACP --&gt; Manager
+    REST --&gt; Files
+    Manager --&gt; Bob
+    Manager --&gt; Store
+    Manager --&gt; Workspaces
+    Files --&gt; Workspaces
+    Bob --&gt; Result
+
+    classDef client   fill:#f0f0f0,color:#222222,stroke:#cccccc,stroke-width:1.5px
+    classDef api      fill:#1e1e2e,color:#e0e0f0,stroke:none,font-weight:600
+    classDef internal fill:#2e2e42,color:#c8c8e0,stroke:none
+    classDef bob      fill:#3a3a56,color:#e8e8ff,stroke:none,font-weight:600
+    classDef store    fill:#f5f5f5,color:#333333,stroke:#bbbbbb,stroke-width:1.5px
+    classDef result   fill:#eeeeee,color:#222222,stroke:#999999,stroke-width:1.5px,font-weight:600</code></pre>
+<p><strong>Key design decisions:</strong></p>
+<ul>
+<li><strong>TypeScript/Node.js runtime</strong> — headlessbob is a Node.js 22.22+ service. Bob Shell 2.0.1 runs as a managed subprocess within it.</li>
+<li><strong>Dual protocol surface</strong> — ACP 0.2.0 endpoints (<code>/agents</code>, <code>/runs</code>, <code>/session</code>) for agent interoperability, plus thread-based REST (<code>/api/v1</code>) for direct integration. Both share the same run manager and workspace layer.</li>
+<li><strong>Workspace isolation</strong> — every session gets its own UUID workspace directory under <code>DATA_DIR/workspaces</code>. Bob's internal history lives under <code>$HOME/.bob</code>.</li>
+<li><strong>SQLite persistence</strong> — run metadata, session ownership, task mappings, and ordered events are stored in <code>DATA_DIR/runs.sqlite</code>. Conversations survive service restarts.</li>
+<li><strong>Bearer token auth</strong> — all endpoints require <code>Authorization: Bearer &lt;TOKEN&gt;</code>. Tokens are configured in <code>AUTH_TOKENS</code> in <code>.env</code>. No external IdP required.</li>
+<li><strong>Bounded resource usage</strong> — concurrency, queue depth, timeouts, output buffer sizes, and Bob cost limits are all configurable and strictly enforced.</li>
+</ul>
+<hr />
+<h2 id="interaction-modes">Interaction Modes<a class="headerlink" href="#interaction-modes" title="Permanent link">&para;</a></h2>
+<p>headlessbob exposes Bob through three execution modes, available via both ACP and REST interfaces.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>What It Is</th>
+<th>Use When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>⚡ Sync</strong></td>
+<td>Submit a task and wait — the HTTP response returns only after Bob completes. Returns full output and usage metrics in one response</td>
+<td>Short tasks where the caller can hold the connection; simple integrations that don't need polling logic</td>
+</tr>
+<tr>
+<td><strong>📡 Stream</strong></td>
+<td>Submit a task and receive live output via Server-Sent Events (SSE). Text chunks and lifecycle events arrive in real time</td>
+<td>Interactive integrations, browser UIs, Slack bots — any context where live feedback matters</td>
+</tr>
+<tr>
+<td><strong>🔄 Async</strong></td>
+<td>Submit a task and receive a <code>run_id</code> immediately (HTTP 202). Poll <code>/runs/{run_id}</code> for status, or consume <code>/runs/{run_id}/events</code> for SSE replay</td>
+<td>CI/CD pipelines, scheduled jobs, long-running tasks — any system that cannot hold an HTTP connection</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Multi-turn session continuation</strong> — pass the <code>session_id</code> returned from any run back into a new run request. Bob resumes in the same workspace, retaining all generated files and context from previous turns.</p>
+<hr />
+<h2 id="integrated-browser-ui">Integrated Browser UI<a class="headerlink" href="#integrated-browser-ui" title="Permanent link">&para;</a></h2>
+<p>Open your deployment URL (or <code>http://127.0.0.1:8000</code> locally). The root page serves an interactive chat interface — no separate frontend deployment needed.</p>
+<p>Connect using your <strong>service token</strong> (the <code>owner</code> key in <code>AUTH_TOKENS</code>). The token is held only in browser session memory — reloading or clicking Disconnect clears it.</p>
+<h3 id="ui-features">UI Features<a class="headerlink" href="#ui-features" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conversation Management</strong></td>
+<td>Create, rename, search, archive/restore, and delete threads</td>
+</tr>
+<tr>
+<td><strong>Live Output Streaming</strong></td>
+<td>Real-time message streaming with sanitized Markdown rendering — headings, tables, syntax-highlighted code blocks</td>
+</tr>
+<tr>
+<td><strong>Execution Controls</strong></td>
+<td>Real-time <strong>Cancel run</strong> button to terminate active or queued runs immediately</td>
+</tr>
+<tr>
+<td><strong>Workspace File Explorer</strong></td>
+<td>Right-hand panel to browse all files generated by Bob in the workspace — download any file with one click</td>
+</tr>
+<tr>
+<td><strong>Run Diagnostics &amp; Cost</strong></td>
+<td>Inspect full run JSON, tool calls, execution duration, and token/cost statistics reported by Bob Shell</td>
+</tr>
+<tr>
+<td><strong>Integrated API Docs</strong></td>
+<td>One-click modal linking to interactive OpenAPI specifications (<code>/api/openapi.json</code>, <code>/acp/openapi.json</code>) and downloadable Python samples</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rest-api-reference">REST API Reference<a class="headerlink" href="#rest-api-reference" title="Permanent link">&para;</a></h2>
+<p>All REST endpoints require <code>Authorization: Bearer &lt;TOKEN&gt;</code> and return structured JSON. Send an <code>Idempotency-Key</code> header when posting messages to safely retry without duplicate executions.</p>
+<h3 id="capabilities-health">Capabilities &amp; Health<a class="headerlink" href="#capabilities-health" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/v1/capabilities</code></td>
+<td>Caller identity, readiness, features, and operational limits</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/ping</code>, <code>/healthz</code></td>
+<td>Unauthenticated liveness probes</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/readyz</code></td>
+<td>Authenticated Bob executable/version/key readiness check</td>
+</tr>
+</tbody>
+</table>
+<h3 id="threads">Threads<a class="headerlink" href="#threads" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><code>/api/v1/threads</code></td>
+<td>Create a thread — <code>{}</code> or <code>{"title":"Project Name"}</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/v1/threads</code></td>
+<td>List/search threads (<code>q</code>, <code>archived</code>, <code>limit</code>, <code>cursor</code>)</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/v1/threads/{id}</code></td>
+<td>Retrieve thread metadata and status</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/api/v1/threads/{id}</code></td>
+<td>Update <code>title</code> and/or <code>archived</code> state</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>/api/v1/threads/{id}</code></td>
+<td>Delete thread conversation records (returns 204)</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/api/v1/threads/{id}/messages</code></td>
+<td>Send <code>{"content":"Your prompt"}</code> — returns 202 with run ID and events URL</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/v1/threads/{id}/messages</code></td>
+<td>Read conversation turns (<code>limit</code>, <code>before</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="runs">Runs<a class="headerlink" href="#runs" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/v1/runs/{id}</code></td>
+<td>Check run status, output, errors, and usage metrics</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/v1/runs/{id}/events</code></td>
+<td>Live SSE stream with replay cursor support (<code>?after=</code> or <code>Last-Event-ID</code>)</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/api/v1/runs/{id}/cancel</code></td>
+<td>Request cancellation of an active run</td>
+</tr>
+</tbody>
+</table>
+<h3 id="workspace-files">Workspace Files<a class="headerlink" href="#workspace-files" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/v1/threads/{id}/files</code></td>
+<td>List files generated in the thread's workspace (<code>?path=folder</code>)</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/v1/threads/{id}/files/{path}</code></td>
+<td>Download a workspace file as a binary attachment</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="acp-api-reference">ACP API Reference<a class="headerlink" href="#acp-api-reference" title="Permanent link">&para;</a></h2>
+<p>headlessbob natively implements the text subset of <strong>ACP 0.2.0</strong>. ACP endpoints live at root routes and do not carry the <code>/api/v1</code> prefix. OpenAPI spec available at <code>/acp/openapi.json</code>.</p>
+<p>For full protocol details, see the <a href="https://bob.ibm.com/docs/shell/features/acp">IBM Bob ACP Documentation</a>.</p>
+<h3 id="agent-discovery">Agent Discovery<a class="headerlink" href="#agent-discovery" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/agents</code></td>
+<td>Agent discovery — lists available agents</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/agents/headlessbob</code></td>
+<td>Detailed agent capability manifest</td>
+</tr>
+</tbody>
+</table>
+<h3 id="runs_1">Runs<a class="headerlink" href="#runs_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><code>/runs</code></td>
+<td>Create a run — <code>mode: "sync"</code>, <code>"async"</code>, or <code>"stream"</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/runs/{run_id}</code></td>
+<td>Poll run status, output text, and usage metrics</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/runs/{run_id}/events</code></td>
+<td>Fetch stored ACP JSON events in execution sequence</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/runs/{run_id}/cancel</code></td>
+<td>Cancel an in-flight ACP run (returns HTTP 202)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sessions">Sessions<a class="headerlink" href="#sessions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/session/{session_id}</code></td>
+<td>Retrieve session workspace ID and run history URNs</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>/session/{session_id}</code></td>
+<td>Terminate an ACP session</td>
+</tr>
+</tbody>
+</table>
+<h3 id="acp-run-modes-quick-reference">ACP Run Modes — Quick Reference<a class="headerlink" href="#acp-run-modes-quick-reference" title="Permanent link">&para;</a></h3>
+<p><strong>Synchronous</strong> — waits for full completion:
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">"</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"</span><span class="nv">$BASE</span><span class="s2">/runs"</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">    "agent_name": "headlessbob",</span>
+<span class="s1">    "input": [{"role": "user", "parts": [{"content_type": "text/plain", "content": "Create a file named hello.txt with content Hello World"}]}],</span>
+<span class="s1">    "mode": "sync"</span>
+<span class="s1">  }'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.
+</code></pre></div></p>
+<p><strong>Streaming</strong> — live SSE output:
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-N<span class="w"> </span>-s<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">"</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"</span><span class="nv">$BASE</span><span class="s2">/runs"</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">    "agent_name": "headlessbob",</span>
+<span class="s1">    "input": [{"role": "user", "parts": [{"content_type": "text/plain", "content": "Write a Python script that computes Fibonacci numbers."}]}],</span>
+<span class="s1">    "mode": "stream"</span>
+<span class="s1">  }'</span>
+</code></pre></div></p>
+<p><strong>Asynchronous</strong> — fire-and-poll:
+<div class="highlight"><pre><span></span><code><span class="c1"># Start async run</span>
+<span class="nv">RUN_RESP</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-s<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">"</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"</span><span class="nv">$BASE</span><span class="s2">/runs"</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">    "agent_name": "headlessbob",</span>
+<span class="s1">    "input": [{"role": "user", "parts": [{"content_type": "text/plain", "content": "Analyze project files"}]}],</span>
+<span class="s1">    "mode": "async"</span>
+<span class="s1">  }'</span><span class="k">)</span>
+<span class="nv">RUN_ID</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$RUN_RESP</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span>.run_id<span class="k">)</span>
+<span class="nv">SESSION_ID</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$RUN_RESP</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span>.session_id<span class="k">)</span>
+
+<span class="c1"># Poll status</span>
+curl<span class="w"> </span>-s<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$BASE</span><span class="s2">/runs/</span><span class="nv">$RUN_ID</span><span class="s2">"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.
+
+<span class="c1"># Fetch all recorded events</span>
+curl<span class="w"> </span>-s<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$BASE</span><span class="s2">/runs/</span><span class="nv">$RUN_ID</span><span class="s2">/events"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.
+</code></pre></div></p>
+<p><strong>Multi-turn session continuation</strong> — pass <code>session_id</code> to resume in the same workspace:
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">"</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"</span><span class="nv">$BASE</span><span class="s2">/runs"</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">"{</span>
+<span class="s2">    \"agent_name\": \"headlessbob\",</span>
+<span class="s2">    \"session_id\": \"</span><span class="nv">$SESSION_ID</span><span class="s2">\",</span>
+<span class="s2">    \"input\": [{\"role\": \"user\", \"parts\": [{\"content_type\": \"text/plain\", \"content\": \"Now add unit tests for the code generated earlier.\"}]}],</span>
+<span class="s2">    \"mode\": \"sync\"</span>
+<span class="s2">  }"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.
+</code></pre></div></p>
+<hr />
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Node.js 22.22 or newer</li>
+<li>Licensed <strong>IBM Bob Shell 2.0.1</strong> binary on your <code>PATH</code></li>
+<li><code>BOB_API_KEY</code> configured with valid credentials</li>
+</ul>
+<h3 id="key-configuration">Key Configuration<a class="headerlink" href="#key-configuration" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BOB_API_KEY</code></td>
+<td>—</td>
+<td><strong>Required.</strong> Bob Shell authentication key</td>
+</tr>
+<tr>
+<td><code>AUTH_TOKENS</code></td>
+<td>—</td>
+<td><strong>Required.</strong> Bearer tokens for service access (JSON object — <code>owner</code> key is the UI token)</td>
+</tr>
+<tr>
+<td><code>DATA_DIR</code></td>
+<td><code>./data</code></td>
+<td>Root for SQLite database and all Bob run workspaces</td>
+</tr>
+<tr>
+<td><code>CONCURRENCY</code></td>
+<td><code>2</code></td>
+<td>Maximum concurrent Bob runs</td>
+</tr>
+<tr>
+<td><code>QUEUE_LIMIT</code></td>
+<td><code>100</code></td>
+<td>Maximum queued tasks</td>
+</tr>
+<tr>
+<td><code>TIMEOUT_SECONDS</code></td>
+<td><code>300</code></td>
+<td>Maximum runtime per Bob job</td>
+</tr>
+<tr>
+<td><code>MAX_TURNS</code></td>
+<td><code>20</code></td>
+<td>Maximum conversation turns per run</td>
+</tr>
+<tr>
+<td><code>BOB_COST_LIMIT</code></td>
+<td><code>1.00</code></td>
+<td>Maximum Bob cost (USD) per run</td>
+</tr>
+<tr>
+<td><code>KILL_GRACE_MS</code></td>
+<td>—</td>
+<td>Grace period between SIGTERM and SIGKILL for subprocess cleanup</td>
+</tr>
+</tbody>
+</table>
+<h3 id="local-nodejs">Local (Node.js)<a class="headerlink" href="#local-nodejs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>assets/headlessbob
+npm<span class="w"> </span>ci
+cp<span class="w"> </span>.env.example<span class="w"> </span>.env
+<span class="c1"># Edit .env: set BOB_API_KEY and AUTH_TOKENS</span>
+npm<span class="w"> </span>run<span class="w"> </span>build
+npm<span class="w"> </span>start
+</code></pre></div>
+<p>Access the UI at <code>http://127.0.0.1:8000</code>. Connect using your <code>owner</code> service token.</p>
+<p>Run the test suite:
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>run<span class="w"> </span>check<span class="w">   </span><span class="c1"># TypeScript type-check and fixture/HTTP unit tests</span>
+npm<span class="w"> </span>run<span class="w"> </span>smoke<span class="w">   </span><span class="c1"># End-to-end smoke test invoking real Bob binary (consumes small credit)</span>
+</code></pre></div></p>
+<h3 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>headlessbob<span class="w"> </span>assets/headlessbob
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">BOB_API_KEY</span><span class="o">=</span><span class="s2">"your-key"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">AUTH_TOKENS</span><span class="o">=</span><span class="s1">'{"owner":"your-service-token"}'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>headlessbob
+</code></pre></div>
+<h3 id="openshift">OpenShift<a class="headerlink" href="#openshift" title="Permanent link">&para;</a></h3>
+<p>OpenShift manifests are in <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/headless-bob/assets/headlessbob/openshift"><code>assets/headlessbob/openshift/</code></a>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Deploy BuildConfig and ImageStream</span>
+oc<span class="w"> </span>apply<span class="w"> </span>-n<span class="w"> </span>binb<span class="w"> </span>-f<span class="w"> </span>openshift/build.yaml
+
+<span class="c1"># Build image from local archive (including vendor Bob binary)</span>
+tar<span class="w"> </span>-czf<span class="w"> </span>/tmp/headlessbob-build.tgz<span class="w"> </span>Dockerfile<span class="w"> </span>package.json<span class="w"> </span>package-lock.json<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>tsconfig.json<span class="w"> </span>src<span class="w"> </span>browser<span class="w"> </span>spec<span class="w"> </span>public<span class="w"> </span>examples<span class="w"> </span>scripts/container-entrypoint.sh<span class="w"> </span>vendor/bobshell-2.0.1.tgz
+oc<span class="w"> </span>start-build<span class="w"> </span>headlessbob<span class="w"> </span>-n<span class="w"> </span>binb<span class="w"> </span>--from-archive<span class="o">=</span>/tmp/headlessbob-build.tgz<span class="w"> </span>--follow
+
+<span class="c1"># Generate Secrets/ConfigMap from local .env and deploy</span>
+node<span class="w"> </span>--env-file<span class="o">=</span>.env<span class="w"> </span>scripts/configure-cluster.mjs
+oc<span class="w"> </span>apply<span class="w"> </span>-n<span class="w"> </span>binb<span class="w"> </span>-f<span class="w"> </span>openshift/app.yaml
+oc<span class="w"> </span>rollout<span class="w"> </span>status<span class="w"> </span>deployment/headlessbob<span class="w"> </span>-n<span class="w"> </span>binb
+</code></pre></div>
+<hr />
+<h2 id="client-examples">Client Examples<a class="headerlink" href="#client-examples" title="Permanent link">&para;</a></h2>
+<p>Ready-to-use Python clients using only Python's standard library are in <a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/headless-bob/assets/headlessbob/examples/python"><code>assets/headlessbob/examples/python/</code></a>:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HEADLESSBOB_URL</span><span class="o">=</span><span class="s2">"http://127.0.0.1:8000"</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HEADLESSBOB_TOKEN</span><span class="o">=</span><span class="s2">"your-service-token"</span>
+
+<span class="c1"># ACP task with live streaming</span>
+python3<span class="w"> </span>examples/python/acp.py<span class="w"> </span>--mode<span class="w"> </span>stream<span class="w"> </span><span class="s2">"Generate a quick HTTP server in Go"</span>
+
+<span class="c1"># Continue a previous session in the same workspace</span>
+python3<span class="w"> </span>examples/python/acp.py<span class="w"> </span>--session<span class="w"> </span><span class="s2">"&lt;SESSION_ID&gt;"</span><span class="w"> </span><span class="s2">"Add a health check endpoint to that server"</span>
+
+<span class="c1"># Demonstrate async task cancellation</span>
+python3<span class="w"> </span>examples/python/cancel.py
+
+<span class="c1"># REST thread conversation and workspace file downloads</span>
+python3<span class="w"> </span>examples/python/rest.py
+</code></pre></div>
+<p>Interactive CLI test tool:
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>run<span class="w"> </span>client<span class="w"> </span>--<span class="w"> </span>/agents
+npm<span class="w"> </span>run<span class="w"> </span>client<span class="w"> </span>--<span class="w"> </span>/runs<span class="w"> </span>examples/run.json
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rest.py</code></td>
+<td>Create threads, send tasks, stream output, and download generated files via REST</td>
+</tr>
+<tr>
+<td><code>acp.py</code></td>
+<td>Dispatch tasks using ACP protocol, consume SSE events, multi-turn sessions</td>
+</tr>
+<tr>
+<td><code>cancel.py</code></td>
+<td>Asynchronous cancellation of active executions</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="operational-limits-trust-model">Operational Limits &amp; Trust Model<a class="headerlink" href="#operational-limits-trust-model" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Limit</th>
+<th>Default</th>
+<th>Environment Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Concurrent runs</td>
+<td><code>2</code></td>
+<td><code>CONCURRENCY</code></td>
+</tr>
+<tr>
+<td>Queued tasks</td>
+<td><code>100</code></td>
+<td><code>QUEUE_LIMIT</code></td>
+</tr>
+<tr>
+<td>Job timeout</td>
+<td><code>300s</code></td>
+<td><code>TIMEOUT_SECONDS</code></td>
+</tr>
+<tr>
+<td>Max turns per run</td>
+<td><code>20</code></td>
+<td><code>MAX_TURNS</code></td>
+</tr>
+<tr>
+<td>Bob cost limit</td>
+<td><code>$1.00</code></td>
+<td><code>BOB_COST_LIMIT</code></td>
+</tr>
+<tr>
+<td>stdout/stderr buffer</td>
+<td><code>2 MiB</code></td>
+<td><code>OUTPUT_BUFFER_SIZE</code></td>
+</tr>
+<tr>
+<td>Events per run</td>
+<td><code>10,000</code></td>
+<td><code>MAX_EVENTS</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trust boundary:</strong> headlessbob is intended for deployment within trusted environments. Bob Shell executes code and terminal commands on the host or container. Workspace token checks prevent caller crossover between sessions, but the service does not provide an OS sandbox between mutually untrusted actors.</p>
+<p><strong>Process cleanup:</strong> Subprocesses are spawned in their own process groups and cleaned up with <code>SIGTERM</code> followed by <code>SIGKILL</code> escalation after <code>KILL_GRACE_MS</code>.</p>
+<p><strong>Storage:</strong> SQLite stores run metadata, session ownership, task mappings, and ordered events. Bob workspaces are UUID directories under <code>DATA_DIR/workspaces</code>. Bob's internal history database lives under <code>$HOME/.bob</code>.</p>
+<hr />
+<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>What Headless Bob Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CI/CD Pipeline Integration</strong></td>
+<td>A GitHub Actions or Tekton pipeline POSTs a prompt to <code>/api/v1/threads/{id}/messages</code> after a PR is merged — Bob runs code review, generates test stubs, or updates documentation autonomously. The pipeline polls the run for completion and downloads generated artifacts</td>
+</tr>
+<tr>
+<td><strong>Scheduled Engineering Tasks</strong></td>
+<td>A cron job triggers nightly: Bob audits dependencies, generates a summary report, and posts it to Slack — without a developer touching anything</td>
+</tr>
+<tr>
+<td><strong>Slack-Driven Workflows</strong></td>
+<td>Developers use <code>/bob &lt;prompt&gt;</code> in Slack — headlessbob handles the slash command, runs Bob asynchronously, and posts the result back via <code>response_url</code>. No IDE required</td>
+</tr>
+<tr>
+<td><strong>Multi-Agent Orchestration</strong></td>
+<td>An orchestrating agent (Claude, watsonx, LangGraph) calls Bob via ACP 0.2.0 as a specialist node — Bob handles coding and engineering tasks while the orchestrator handles routing, memory, and business logic</td>
+</tr>
+<tr>
+<td><strong>Multi-Turn Engineering Sessions</strong></td>
+<td>A project intake tool creates an ACP session — Bob builds iteratively across multiple prompts in the same workspace, generating files that reference and extend each other across turns</td>
+</tr>
+<tr>
+<td><strong>Automated Code Generation Pipelines</strong></td>
+<td>A pipeline seeds a workspace with existing source files, then invokes Bob across multiple async runs to generate tests, documentation, and refactored code — each run building on the last via <code>session_id</code> continuation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div class="admonition info">
+<p class="admonition-title">GitHub Repository</p>
+<p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/headless-bob">headlessbob — Headless Bob Reference Implementation</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">ACP Protocol Reference</p>
+<p>For full IBM Bob ACP 0.2.0 protocol capabilities, see the <a href="https://bob.ibm.com/docs/shell/features/acp">IBM Bob ACP Documentation</a>. OpenAPI specifications are available at <code>/api/openapi.json</code> (REST) and <code>/acp/openapi.json</code> (ACP) on any running headlessbob instance.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../code-modernization/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Code Modernization">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Code Modernization
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../integration-as-code/" class="md-footer__link md-footer__link--next" aria-label="Next: Integration as Code">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Integration as Code
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.instant", "navigation.top", "navigation.footer", "content.code.copy", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
