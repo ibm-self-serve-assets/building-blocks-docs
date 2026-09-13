@@ -237,6 +237,18 @@ Certain widely-used cryptographic algorithms (RSA, ECC, Diffie-Hellman) are cons
 |-------------|-------------|------|
 | **Introduction to IBM Guardium Cryptography Manager** | Overview of key features, CBOM generation, and CI/CD integration | [▶️ Watch on YouTube](https://www.youtube.com/watch?v=2IziCt51Dfc) |
 
+### Bob Artifacts
+
+Accelerate cryptographic and quantum-readiness assessments directly inside IBM Bob using dedicated pre-configured modes and skills:
+
+| Artifact | Description | Package |
+|:---|:---|:---|
+| **Bob Modes** | Custom agent personas tailored for cryptographic asset scanning, CBOM triage, and automated quantum-safe migration workflows | [📥 `quantum-safe.zip`](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/cryptographic-and-quantum-safe-readiness/bob-modes/quantum-safe.zip) |
+| **Bob Skills** | Task-specific skill packages providing Bob with deep domain expertise across NIST PQC algorithm replacement, CBOM parsing, and Guardium integration | [📥 `skills.zip`](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/cryptographic-and-quantum-safe-readiness/bob-skills/skills.zip) |
+
+!!! tip "Quick Setup"
+    Download and extract the zip packages into your `.bob/modes` and `.bob/skills` directories (either globally in `~/.bob/` or within your project root) to immediately enable Quantum-Safe capabilities in your Bob assistant.
+
 ### Additional Resources
 
 - 🌐 [IBM Quantum Safe](https://www.ibm.com/quantum-safe)
