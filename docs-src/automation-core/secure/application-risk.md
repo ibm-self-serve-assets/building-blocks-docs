@@ -190,6 +190,18 @@ sequenceDiagram
 |-------------|-------------|----------|------|
 | **Introduction to Automated Resilience & Compliance** | Overview of key features and capabilities with IBM Concert | 12:45 | [▶️ Watch on YouTube](https://www.youtube.com/watch?v=0iGyTeYmPyU) |
 
+### Bob Artifacts
+
+Accelerate application risk analysis and automated continuous compliance directly inside IBM Bob using dedicated pre-configured modes and skills:
+
+| Artifact | Description | Package |
+|:---|:---|:---|
+| **Bob Modes** | Custom agent personas tailored for application resilience, risk assessment, and continuous compliance automation | [📥 `application-resilience.zip`](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/application-risk-and-continuous-compliance/bob-modes/base-modes/application-resilience.zip) |
+| **Bob Skills** | Task-specific skill packages providing Bob with domain expertise for IBM Concert integration, vulnerability triage, and resilience management | [📥 `automated-resilience-concert.zip`](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/application-risk-and-continuous-compliance/bob-skills/automated-resilience-concert.zip) |
+
+!!! tip "Quick Setup"
+    Download and extract the zip packages into your `.bob/modes` and `.bob/skills` directories (either globally in `~/.bob/` or within your project root) to immediately enable Application Risk & Continuous Compliance capabilities in your Bob assistant.
+
 ### Additional Resources
 
 - 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resilience-and-compliance/README.md) - Complete setup and configuration guide
