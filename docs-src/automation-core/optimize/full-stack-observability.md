@@ -260,6 +260,22 @@ Instana continuously builds and updates a graph of all services and their depend
 
 ---
 
+## Assets
+
+### Bob Artifacts
+
+Accelerate full-stack application observability directly inside IBM Bob using dedicated pre-configured modes and skills:
+
+| Artifact | Description | Package |
+|:---|:---|:---|
+| **Bob Modes** | Custom agent personas tailored for automated observability workflows, topology exploration, and Instana incident analysis | [📥 `application-observability.zip`](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/full-stack-application-observability/bob-modes/application-observability.zip) |
+| **Bob Skills** | Task-specific skill packages providing Bob with domain expertise for IBM Instana integration, metrics diagnosis, and trace correlation | [📥 `application-observability.zip`](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/full-stack-application-observability/bob-skills/application-observability.zip) |
+
+!!! tip "Quick Setup"
+    Download and extract the zip packages into your `.bob/modes` and `.bob/skills` directories (either globally in `~/.bob/` or within your project root) to immediately enable Observability & Performance capabilities in your Bob assistant.
+
+---
+
 ## Call to Action
 
 ### Ready to Build with Full-Stack Application Observability?

@@ -225,6 +225,18 @@ sequenceDiagram
 |-------------|-------------|----------|------|
 | **Introduction to Application Performance with IBM Turbonomic** | Overview of key features and capabilities | 15:30 | [▶️ Watch on YouTube](https://www.youtube.com/watch?v=_bwm6rOYy5Y) |
 
+### Bob Artifacts
+
+Accelerate application performance and automated resource management directly inside IBM Bob using dedicated pre-configured modes and skills:
+
+| Artifact | Description | Package |
+|:---|:---|:---|
+| **Bob Modes** | Custom agent personas tailored for automated resource management, capacity planning, and Turbonomic optimization actions | [📥 `automated-resource-mgmt.zip`](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/application-performance/bob-modes/base-modes/automated-resource-mgmt.zip) |
+| **Bob Skills** | Task-specific skill packages providing Bob with domain expertise for IBM Turbonomic integration, resource right-sizing, and performance assurance | [📥 `automated-resource-mgmt-turbonomic.zip`](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/application-performance/bob-skills/automated-resource-mgmt-turbonomic.zip) |
+
+!!! tip "Quick Setup"
+    Download and extract the zip packages into your `.bob/modes` and `.bob/skills` directories (either globally in `~/.bob/` or within your project root) to immediately enable Application Performance capabilities in your Bob assistant.
+
 ### Additional Resources
 
 - 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resource-mgmt/README.md)

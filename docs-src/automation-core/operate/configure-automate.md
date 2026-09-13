@@ -293,6 +293,17 @@ roles/
 |-------------|-------------|----------|------|
 | **Infrastructure as Code with Terraform & Ansible** | Complete walkthrough of IaC automation including Ansible configuration management | 15:42 | [▶️ Watch on YouTube](https://www.youtube.com/watch?v=o-gSbancvVM&t=1s) |
 
+### Bob Artifacts
+
+Accelerate IT automation and configuration management directly inside IBM Bob using dedicated pre-configured skills:
+
+| Artifact | Description | Package |
+|:---|:---|:---|
+| **Bob Skills** | Task-specific skill packages providing Bob with domain expertise for Red Hat Ansible playbook authoring, role structuring, and configuration automation | [📥 `configure-and-automate.zip`](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/operate/configure-and-automate/bob-skills/configure-and-automate.zip) |
+
+!!! tip "Quick Setup"
+    Download and extract the zip package into your `.bob/skills` directory (either globally in `~/.bob/skills` or within your project root at `.bob/skills`) to immediately enable Configure & Automate skills in your Bob assistant.
+
 ---
 
 ## Call to Action
