@@ -124,6 +124,9 @@ nav:
 
       - Skills and Modes: automation-core/bob-skills-and-modes.md
 
+  - Bob+ Extension:
+      - Extension Installation Guide: ibm-bob/extension/install.md
+
   - Connect with us:
       - Build with Bob Workshops: workshop/index.md
       - Build with Bob Webinars: build-with-bob/index.md

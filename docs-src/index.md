@@ -105,3 +105,8 @@ Bob<span style="color:#0f62fe">+</span> combines Generative AI with IBM technolo
     | [Application Performance](automation-core/optimize/application-performance.md) | Demand-driven resource optimization balancing performance and cost continuously |
     | [Technology Financial Management & FinOps](automation-core/optimize/technology-financial-management.md) | Granular cloud spend visibility, cost allocation, and forecasting |
     | [Network Performance Management](automation-core/optimize/network-performance.md) | High-frequency network monitoring, capacity planning, and AI-powered anomaly detection |
+
+---
+
+!!! info "Get started — install the Bob+ extension"
+    The **Bob<span style="color:#0f62fe">+</span> extension** brings the Building Blocks Marketplace directly into IBM Bob, letting you browse and install Skills and Modes without leaving your IDE. [**→ Extension Installation Guide**](ibm-bob/extension/install.md)
