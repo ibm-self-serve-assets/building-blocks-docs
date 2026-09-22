@@ -2,7 +2,7 @@
 
 IBM Bob was built for the IDE — but engineering work doesn't stop at the developer's desk. The **Headless Bob building block** is the pattern for running Bob outside the IDE: in CI/CD pipelines, automation scripts, Slack workflows, and any system that needs to call Bob programmatically without a developer actively present.
 
-The reference implementation is **headlessbob** — a TypeScript/Node.js service that runs **IBM Bob Shell 2.0.1** and exposes it through native **Agent Communication Protocol (ACP) 0.2.0** and thread-based **REST APIs**, with an integrated browser UI. Bob is the execution engine; no VS Code, Codex runtime, or OpenAI account is involved.
+The reference implementation is **headlessbob** — a TypeScript/Node.js service that runs **IBM Bob Shell 2.0.4** and exposes it through native **[Agent Communication Protocol (ACP) 0.2.0](https://www.ibm.com/think/topics/agent-communication-protocol)** and thread-based **REST APIs**, with an integrated browser UI. Both APIs communicate with Bob Shell internally via IBM's **[Agent Client Protocol](https://bob.ibm.com/docs/shell/features/acp)**, the officially supported programmatic interface to Bob.
 
 ## Why This Matters
 
@@ -11,7 +11,7 @@ The reference implementation is **headlessbob** — a TypeScript/Node.js service
 - **Multi-agent interoperability requires a standard protocol.** ACP 0.2.0 lets any ACP-compatible agent or pipeline discover Bob, submit tasks, and consume results in a standardized way — making Headless Bob a first-class node in multi-agent architectures.
 - **AI calls are asynchronous by nature.** Bob runs can take seconds to minutes depending on task complexity. Headless execution requires a queue-and-poll model — or live streaming — so systems can submit work and retrieve results without holding connections or blocking pipelines.
 - **Persistent conversations enable multi-turn workflows.** Thread-based sessions carry workspace context across runs, letting Bob build on previous work — essential for iterative tasks like code generation, refactoring, and incremental deployments.
-- **Visibility into cost and execution matters at scale.** headlessbob captures token counts, execution duration, tool call metrics, and session cost per run — giving teams the observability they need to govern autonomous Bob usage.
+- **Visibility into cost and execution matters at scale.** headlessbob captures token counts, execution duration, and tool call metrics per run — giving teams the observability they need to govern autonomous Bob usage. Note: Bob Shell 2.0.4's `acp` command does not expose cost/turn limit controls; cost and turn limits are legacy CLI settings only and are reported as `null` by `/api/v1/capabilities`.
 
 ## What's Covered
 
@@ -34,59 +34,59 @@ The reference implementation is **headlessbob** — a TypeScript/Node.js service
 headlessbob sits between any API client and Bob Shell. Clients authenticate with a bearer token, submit work via REST or ACP, and receive results synchronously, asynchronously, or via live SSE streaming. Bob Shell runs in an isolated workspace directory per session, with all generated artifacts available for download.
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'clusterBkg': '#f7f7f7', 'clusterBorder': '#cccccc', 'titleColor': '#222222', 'edgeLabelBackground': '#ffffff', 'fontSize': '14px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#ffffff', 'clusterBkg': '#f4f6fb', 'clusterBorder': '#c5cde0', 'titleColor': '#1a1a2e', 'fontSize': '14px'}}}%%
 flowchart LR
     subgraph Clients["Clients"]
-        UI["Browser UI"]:::client
-        RESTClient["REST API Client"]:::client
-        ACPClient["ACP Agent / Pipeline"]:::client
+        UI[Browser UI]
+        Client[API Client]
+        Agent[ACP Client]
     end
 
-    subgraph Service["headlessbob — Node.js / TypeScript Service"]
-        direction TB
-        REST["REST API\n/api/v1"]:::api
-        ACP["ACP API\n/agents  /runs  /session"]:::api
-        Manager["Run Manager\n& Scheduler"]:::internal
-        Files["Workspace\nFile Manager"]:::internal
+    subgraph Service["headlessbob"]
+        REST[REST API /api/v1]
+        ACP[ACP API /agents /runs]
+        Manager[Run Manager]
     end
 
     subgraph Backend["Storage & Engine"]
-        direction TB
-        Store[("SQLite\nruns.sqlite")]:::store
-        Workspaces[("File\nWorkspaces")]:::store
-        Bob["IBM Bob Shell 2.0.1\nSubprocess"]:::bob
+        Protocol[Agent Client Protocol]
+        Bob[Bob Shell Subprocess]
+        Store[(SQLite & Workspaces)]
     end
 
-    Result["Result / Artifact\n(SSE · JSON · file)"]:::result
-
     UI --> REST
-    RESTClient --> REST
-    ACPClient --> ACP
+    Client --> REST
+    Agent --> ACP
     REST --> Manager
     ACP --> Manager
-    REST --> Files
-    Manager --> Bob
+    Manager --> Protocol
+    Protocol --> Bob
     Manager --> Store
-    Manager --> Workspaces
-    Files --> Workspaces
-    Bob --> Result
 
-    classDef client   fill:#f0f0f0,color:#222222,stroke:#cccccc,stroke-width:1.5px
-    classDef api      fill:#1e1e2e,color:#e0e0f0,stroke:none,font-weight:600
-    classDef internal fill:#2e2e42,color:#c8c8e0,stroke:none
-    classDef bob      fill:#3a3a56,color:#e8e8ff,stroke:none,font-weight:600
-    classDef store    fill:#f5f5f5,color:#333333,stroke:#bbbbbb,stroke-width:1.5px
-    classDef result   fill:#eeeeee,color:#222222,stroke:#999999,stroke-width:1.5px,font-weight:600
+    classDef client  fill:#ffffff,color:#1a1a2e,stroke:#c5cde0,stroke-width:1.5px
+    classDef api     fill:#0f3460,color:#ffffff,stroke:#0f3460,stroke-width:1.5px,font-weight:600
+    classDef manager fill:#16213e,color:#ffffff,stroke:#16213e,stroke-width:1.5px,font-weight:600
+    classDef runtime fill:#1a1a2e,color:#e8eaf6,stroke:#3949ab,stroke-width:1.5px
+    classDef bob     fill:#0f3460,color:#ffffff,stroke:#3949ab,stroke-width:2px,font-weight:600
+    classDef store   fill:#f4f6fb,color:#1a1a2e,stroke:#c5cde0,stroke-width:1.5px
+
+    class UI,Client,Agent client
+    class REST,ACP api
+    class Manager manager
+    class Protocol runtime
+    class Bob bob
+    class Store store
 ```
 
 **Key design decisions:**
 
-- **TypeScript/Node.js runtime** — headlessbob is a Node.js 22.22+ service. Bob Shell 2.0.1 runs as a managed subprocess within it.
+- **TypeScript/Node.js runtime** — headlessbob is a Node.js 22.22+ service. Bob Shell 2.0.4 runs as a managed subprocess within it.
+- **Agent Client Protocol connector** — both the REST API (including the browser UI) and the ACP API share a single `BobClientRuntime` that communicates with Bob Shell over **Agent Client Protocol v1** (`bob acp`) via stdio. The old `BobRuntime` (`bob run`) is retained for legacy compatibility only.
 - **Dual protocol surface** — ACP 0.2.0 endpoints (`/agents`, `/runs`, `/session`) for agent interoperability, plus thread-based REST (`/api/v1`) for direct integration. Both share the same run manager and workspace layer.
 - **Workspace isolation** — every session gets its own UUID workspace directory under `DATA_DIR/workspaces`. Bob's internal history lives under `$HOME/.bob`.
 - **SQLite persistence** — run metadata, session ownership, task mappings, and ordered events are stored in `DATA_DIR/runs.sqlite`. Conversations survive service restarts.
 - **Bearer token auth** — all endpoints require `Authorization: Bearer <TOKEN>`. Tokens are configured in `AUTH_TOKENS` in `.env`. No external IdP required.
-- **Bounded resource usage** — concurrency, queue depth, timeouts, output buffer sizes, and Bob cost limits are all configurable and strictly enforced.
+- **Bounded resource usage** — concurrency, queue depth, timeouts, and output buffer sizes are all configurable and strictly enforced. Cost and turn limits apply only to the legacy CLI runtime; the default Agent Client Protocol runtime does not enforce them and reports them as `null`.
 
 ---
 
@@ -191,7 +191,6 @@ For full protocol details, see the [IBM Bob ACP Documentation](https://bob.ibm.c
 | Method | Path | Description |
 |--------|------|-------------|
 | `GET` | `/session/{session_id}` | Retrieve session workspace ID and run history URNs |
-| `DELETE` | `/session/{session_id}` | Terminate an ACP session |
 
 ### ACP Run Modes — Quick Reference
 
@@ -252,7 +251,7 @@ curl -s -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
 ### Prerequisites
 
 - Node.js 22.22 or newer
-- Licensed **IBM Bob Shell 2.0.1** binary on your `PATH`
+- Licensed **IBM Bob Shell 2.0.4** binary on your `PATH` (run `sh scripts/download-bob.sh` to download and verify)
 - `BOB_API_KEY` configured with valid credentials
 
 ### Key Configuration
@@ -261,13 +260,18 @@ curl -s -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
 |----------|---------|-------------|
 | `BOB_API_KEY` | — | **Required.** Bob Shell authentication key |
 | `AUTH_TOKENS` | — | **Required.** Bearer tokens for service access (JSON object — `owner` key is the UI token) |
-| `DATA_DIR` | `./data` | Root for SQLite database and all Bob run workspaces |
-| `CONCURRENCY` | `2` | Maximum concurrent Bob runs |
-| `QUEUE_LIMIT` | `100` | Maximum queued tasks |
-| `TIMEOUT_SECONDS` | `300` | Maximum runtime per Bob job |
-| `MAX_TURNS` | `20` | Maximum conversation turns per run |
-| `BOB_COST_LIMIT` | `1.00` | Maximum Bob cost (USD) per run |
-| `KILL_GRACE_MS` | — | Grace period between SIGTERM and SIGKILL for subprocess cleanup |
+| `DATA_DIR` | `.headlessbob` | Root for SQLite database and all Bob run workspaces |
+| `BOB_MODE` | `agent` | Bob agent mode passed to the runtime |
+| `BOB_ENABLE_CONTINUATION` | `false` | Set to `true` to enable multi-turn session continuation across runs |
+| `MAX_CONCURRENT` | `2` | Maximum concurrent Bob runs |
+| `MAX_QUEUED` | `100` | Maximum queued tasks |
+| `RUN_TIMEOUT_MS` | `300000` | Maximum runtime per Bob job (milliseconds) |
+| `MAX_OUTPUT_BYTES` | `2097152` | Maximum combined stdout/stderr bytes per run (2 MiB) |
+| `MAX_BODY_BYTES` | `65536` | Maximum incoming HTTP request body size (64 KiB) |
+| `MAX_EVENTS` | `10000` | Maximum protocol events stored per run |
+| `BOB_MAX_TURNS` | `20` | ⚠ **Legacy CLI runtime only.** Maximum conversation turns per run. Not enforced by the default Agent Client Protocol runtime; reported as `null` by `/api/v1/capabilities` |
+| `BOB_MAX_COST` | `1.00` | ⚠ **Legacy CLI runtime only.** Maximum Bob cost (USD) per run. Not enforced by the default Agent Client Protocol runtime; reported as `null` by `/api/v1/capabilities` |
+| `KILL_GRACE_MS` | `2000` | Grace period (ms) between SIGTERM and SIGKILL for subprocess cleanup |
 
 ### Local (Node.js)
 
@@ -284,14 +288,19 @@ Access the UI at `http://127.0.0.1:8000`. Connect using your `owner` service tok
 
 Run the test suite:
 ```bash
-npm run check   # TypeScript type-check and fixture/HTTP unit tests
-npm run smoke   # End-to-end smoke test invoking real Bob binary (consumes small credit)
+npm run check              # TypeScript type-check, fixture/HTTP unit and contract tests (52 tests, no API key required)
+npm run smoke              # End-to-end smoke test via legacy Bob runtime (consumes small credit)
+npm run smoke:client-bridge  # End-to-end smoke test via Agent Client Protocol bridge (consumes small credit)
 ```
 
 ### Docker
 
+The container image uses **Node.js 24**. Run `sh scripts/download-bob.sh` inside `assets/headlessbob` to download and verify the Bob Shell 2.0.4 binary before building.
+
 ```bash
-docker build -t headlessbob assets/headlessbob
+cd assets/headlessbob
+sh scripts/download-bob.sh   # downloads and SHA-256 verifies vendor/bobshell-2.0.4.tgz
+docker build -t headlessbob .
 docker run -d -p 8000:8000 \
   -e BOB_API_KEY="your-key" \
   -e AUTH_TOKENS='{"owner":"your-service-token"}' \
@@ -303,12 +312,15 @@ docker run -d -p 8000:8000 \
 OpenShift manifests are in [`assets/headlessbob/openshift/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/headless-bob/assets/headlessbob/openshift):
 
 ```bash
+# Download and verify the Bob Shell 2.0.4 binary
+sh scripts/download-bob.sh
+
 # Deploy BuildConfig and ImageStream
 oc apply -n binb -f openshift/build.yaml
 
 # Build image from local archive (including vendor Bob binary)
 tar -czf /tmp/headlessbob-build.tgz Dockerfile package.json package-lock.json \
-  tsconfig.json src browser spec public examples scripts/container-entrypoint.sh vendor/bobshell-2.0.1.tgz
+  tsconfig.json src browser spec public examples scripts/container-entrypoint.sh vendor/bobshell-2.0.4.tgz
 oc start-build headlessbob -n binb --from-archive=/tmp/headlessbob-build.tgz --follow
 
 # Generate Secrets/ConfigMap from local .env and deploy
@@ -321,23 +333,40 @@ oc rollout status deployment/headlessbob -n binb
 
 ## Client Examples
 
-Ready-to-use Python clients using only Python's standard library are in [`assets/headlessbob/examples/python/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/headless-bob/assets/headlessbob/examples/python):
+Ready-to-use Python clients using only Python's standard library are in [`assets/headlessbob/examples/python/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/headless-bob/assets/headlessbob/examples/python). Set environment variables first (use your **service access token**, not the Bob API key):
 
 ```bash
 export HEADLESSBOB_URL="http://127.0.0.1:8000"
 export HEADLESSBOB_TOKEN="your-service-token"
+```
 
-# ACP task with live streaming
+**ACP — agent discovery, runs, and multi-turn continuation** (`acp.py`):
+```bash
+# Default: async run (submits and polls)
+python3 examples/python/acp.py "Say hello in one sentence."
+
+# Live streaming output
 python3 examples/python/acp.py --mode stream "Generate a quick HTTP server in Go"
 
 # Continue a previous session in the same workspace
 python3 examples/python/acp.py --session "<SESSION_ID>" "Add a health check endpoint to that server"
+```
 
-# Demonstrate async task cancellation
-python3 examples/python/cancel.py
+**REST — threads, live output, and file downloads** (`rest.py`):
+```bash
+# Create a thread, send a task, stream output, and download a generated file
+python3 examples/python/rest.py "Create hello.txt containing Hello from Python." \
+  --download hello.txt --output hello.txt
 
-# REST thread conversation and workspace file downloads
-python3 examples/python/rest.py
+# Continue an existing thread
+python3 examples/python/rest.py "Explain the file you created." --thread <THREAD_ID>
+```
+
+**Cancel an active run** (`cancel.py`):
+```bash
+# Cancel via REST or ACP using a printed run ID
+python3 examples/python/cancel.py <RUN_ID> --api rest
+python3 examples/python/cancel.py <RUN_ID> --api acp
 ```
 
 Interactive CLI test tool:
@@ -348,9 +377,10 @@ npm run client -- /runs examples/run.json
 
 | Example | Description |
 |---------|-------------|
-| `rest.py` | Create threads, send tasks, stream output, and download generated files via REST |
-| `acp.py` | Dispatch tasks using ACP protocol, consume SSE events, multi-turn sessions |
-| `cancel.py` | Asynchronous cancellation of active executions |
+| `acp.py` | Agent discovery, ACP runs (async/stream/sync), multi-turn session continuation |
+| `rest.py` | Create threads, send tasks, stream live output, download generated workspace files |
+| `cancel.py` | Cancel an active run by ID via REST or ACP; waits for terminal status |
+| `client.py` | Shared HTTP helpers (`request`, `api`, `events`, `wait_run`) used by the other examples — not a standalone script |
 
 ---
 
@@ -358,13 +388,16 @@ npm run client -- /runs examples/run.json
 
 | Limit | Default | Environment Variable |
 |-------|---------|---------------------|
-| Concurrent runs | `2` | `CONCURRENCY` |
-| Queued tasks | `100` | `QUEUE_LIMIT` |
-| Job timeout | `300s` | `TIMEOUT_SECONDS` |
-| Max turns per run | `20` | `MAX_TURNS` |
-| Bob cost limit | `$1.00` | `BOB_COST_LIMIT` |
-| stdout/stderr buffer | `2 MiB` | `OUTPUT_BUFFER_SIZE` |
+| Concurrent runs | `2` | `MAX_CONCURRENT` |
+| Queued tasks | `100` | `MAX_QUEUED` |
+| Job timeout | `300,000 ms` | `RUN_TIMEOUT_MS` |
+| stdout/stderr buffer | `2 MiB` | `MAX_OUTPUT_BYTES` |
+| Request body size | `64 KiB` | `MAX_BODY_BYTES` |
 | Events per run | `10,000` | `MAX_EVENTS` |
+| Max turns per run ⚠ | `20` (legacy only) | `BOB_MAX_TURNS` |
+| Bob cost limit ⚠ | `$1.00` (legacy only) | `BOB_MAX_COST` |
+
+⚠ Cost and turn limits apply only to the legacy `BobRuntime` (`bob run`). The default Agent Client Protocol runtime (`BobClientRuntime`, `bob acp`) does not enforce them; `/api/v1/capabilities` reports these as `null`.
 
 **Trust boundary:** headlessbob is intended for deployment within trusted environments. Bob Shell executes code and terminal commands on the host or container. Workspace token checks prevent caller crossover between sessions, but the service does not provide an OS sandbox between mutually untrusted actors.
 
