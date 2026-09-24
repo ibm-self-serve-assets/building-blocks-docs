@@ -51,7 +51,7 @@ Bob<span style="color:#0f62fe">+</span> combines Generative AI with IBM technolo
     | Building Block | What It Enables |
     |---|---|
     | [Context Hub](data-core/context/context-hub/index.md) | Combine real-time events, enterprise data, metadata, lineage and policy context for AI and analytics |
-    | [Real-Time Streaming](data-core/context/real-time-streaming/index.md) | Stream, transform and govern continuously changing data |
+    | [Streamhouse](data-core/context/streamhouse/index.md) | Capture, transport, transform, govern, and serve continuously current enterprise data for applications, analytics, and AI |
     | [Metadata Enrichment & Data Quality](data-core/context/metadata-enrichment/index.md) | Add business meaning, quality rules, descriptions, terms, classifications and relationships to technical data |
     | [Data Observability](data-core/context/data-observability/index.md) | Detect pipeline and dataset issues before downstream users and AI are impacted |
 

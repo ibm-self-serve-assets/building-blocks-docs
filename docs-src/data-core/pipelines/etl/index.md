@@ -41,8 +41,8 @@ Use DataStage when:
 - Data must be prepared before loading into watsonx.data or another target.
 - You need repeatable ETL/ELT jobs with **operational governance**.
 
-!!! tip "Use Real-Time Streaming instead when…"
-    For sub-second event processing or CDC with low-latency requirements, use the **[Real-Time Streaming](../../context/real-time-streaming/index.md)** building block instead.
+!!! tip "Use Streamhouse instead when…"
+    For CDC with low-latency requirements, continuous event processing, real-time enrichment, or when applications and AI require continuously current data and live operational context, use the **[Streamhouse](../../context/streamhouse/index.md)** building block instead.
 
 ---
 

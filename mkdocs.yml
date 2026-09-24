@@ -81,7 +81,7 @@ nav:
       - Context:
           - Overview: data-core/context/index.md
           - Context Hub: data-core/context/context-hub/index.md
-          - Real-Time Streaming: data-core/context/real-time-streaming/index.md
+          - Streamhouse: data-core/context/streamhouse/index.md
           - Metadata Enrichment & Data Quality: data-core/context/metadata-enrichment/index.md
           - Data Observability: data-core/context/data-observability/index.md
 

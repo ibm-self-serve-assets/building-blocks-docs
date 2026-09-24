@@ -35,7 +35,7 @@ Use Aspera Sync when:
 - A one-to-one, one-to-many, bidirectional or mesh synchronization topology is required.
 
 !!! warning "What this is not"
-    Aspera Sync is a **file/data-set synchronization** capability. For near-real-time replication of relational database changes, use a CDC/data-replication technology such as **watsonx.data integration Data Replication** or a streaming pattern with **[IBM Confluent](../../context/real-time-streaming/index.md)**.
+    Aspera Sync is a **file/data-set synchronization** capability. For near-real-time replication of relational database changes, use a CDC/data-replication technology such as **watsonx.data integration Data Replication** or the **[Streamhouse](../../context/streamhouse/index.md)** building block (IBM Confluent).
 
 ---
 

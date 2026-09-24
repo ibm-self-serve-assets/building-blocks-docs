@@ -27,7 +27,7 @@ The markdown files located in [docs-src](./docs-src) are used by Github Pages to
 | Group | Building Block | Primary Products |
 |---|---|---|
 | **Context** | [Context Hub](docs-src/data-core/context/context-hub/index.md) | IBM Confluent + IBM watsonx.data + IBM watsonx.data intelligence |
-| **Context** | [Real-Time Streaming](docs-src/data-core/context/real-time-streaming/index.md) | IBM Confluent |
+| **Context** | [Streamhouse](docs-src/data-core/context/streamhouse/index.md) | IBM Confluent — Connect + Kafka + Flink + Stream Governance + Tableflow + Real-Time Context Engine |
 | **Context** | [Metadata Enrichment & Data Quality](docs-src/data-core/context/metadata-enrichment/index.md) | IBM watsonx.data intelligence |
 | **Context** | [Data Observability](docs-src/data-core/context/data-observability/index.md) | IBM watsonx.data integration + IBM Data Observability by Databand |
 | **Pipelines** | [RAG](docs-src/data-core/pipelines/rag/index.md) | IBM watsonx.data OpenRAG + OpenSearch |

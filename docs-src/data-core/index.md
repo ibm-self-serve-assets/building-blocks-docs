@@ -14,7 +14,7 @@
 | Use Case | Capability | Primary Products | What It Enables |
 |---|---|---|---|
 | **Context** | [Context Hub](context/context-hub/index.md) | IBM Confluent + IBM watsonx.data + IBM watsonx.data intelligence | Combine real-time events, enterprise data, metadata, lineage and policy context for AI and analytics |
-| **Context** | [Real-Time Streaming](context/real-time-streaming/index.md) | IBM Confluent (Kafka + Flink + connectors + governance) | Stream, transform and govern continuously changing data |
+| **Context** | [Streamhouse](context/streamhouse/index.md) | IBM Confluent — Connect + Kafka + Flink + Stream Governance + Tableflow + Real-Time Context Engine | Continuously capture, transport, transform, govern, and serve enterprise data for applications, analytics, and AI |
 | **Context** | [Metadata Enrichment & Data Quality](context/metadata-enrichment/index.md) | IBM watsonx.data intelligence | Add business meaning, quality rules, descriptions, terms, classifications and relationships to technical data |
 | **Context** | [Data Observability](context/data-observability/index.md) | IBM watsonx.data integration + IBM Data Observability by Databand | Detect pipeline and dataset issues before downstream users and AI are impacted |
 | **Pipelines** | [RAG](pipelines/rag/index.md) | IBM watsonx.data OpenRAG + OpenSearch | Ground applications and agents with governed enterprise knowledge |
@@ -113,7 +113,7 @@ flowchart LR
 
 | If your primary problem is… | Start with… |
 |---|---|
-| "My AI needs the latest business events" | [Real-Time Streaming](context/real-time-streaming/index.md) + [Context Hub](context/context-hub/index.md) |
+| "My AI needs the latest business events or continuously current state" | [Streamhouse](context/streamhouse/index.md) + [Context Hub](context/context-hub/index.md) |
 | "Users cannot understand or trust the available data" | [Metadata Enrichment & Data Quality](context/metadata-enrichment/index.md) |
 | "Pipelines fail and we discover it too late" | [Data Observability](context/data-observability/index.md) |
 | "I need reliable enterprise RAG / search" | [UDI](pipelines/udi/index.md) + [RAG](pipelines/rag/index.md) |
