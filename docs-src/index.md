@@ -22,15 +22,15 @@ Bob<span style="color:#0f62fe">+</span> combines Generative AI with IBM technolo
     | [Agent Builder](ai-core/agents/agent-builder.md) | Create and deploy LLM-backed, tool-calling agents — from local development to production |
     | [Multi-Agent Orchestration](ai-core/agents/multi-agent-orchestration.md) | Coordinate agents and route LLM calls across providers via open standards (A2A, MCP, AI Gateway) |
 
-- **[AI Control Plane](ai-core/ai-trust/index.md)**
+- **[AI Control Plane](ai-core/ai-control-plane/index.md)**
   Evaluate, observe, govern, and enforce policy across every AI agent and model in production — making AI safe and compliant at enterprise scale.
 
     | Building Block | What It Enables |
     |---|---|
-    | [Agent Ops](ai-core/ai-trust/agent-ops.md) | Evaluate, observe, and govern agents — benchmarking, red-teaming, runtime guardrails, cost tracking |
-    | [AI Compliance](ai-core/ai-trust/ai-compliance.md) | Map AI use cases to regulations, manage risk assessments, and report compliance posture |
-    | [AI Cost Management](ai-core/ai-trust/ai-cost-management.md) | Track, allocate, and optimize the cost of AI workloads across the enterprise |
-    | [Lifecycle Management](ai-core/ai-trust/lifecycle-management.md) | Manage AI models and agents from onboarding through retirement |
+    | [Agent Ops](ai-core/ai-control-plane/agent-ops.md) | Evaluate, observe, and govern agents — benchmarking, red-teaming, runtime guardrails, cost tracking |
+    | [AI Cost Management](ai-core/ai-control-plane/ai-cost-management.md) | Track, allocate, and optimize the cost of AI workloads across the enterprise |
+    | [AI Compliance](ai-core/ai-control-plane/ai-compliance.md) | Map AI use cases to regulations, manage risk assessments, and report compliance posture |
+    <!-- Hidden for now: | [Lifecycle Management](ai-core/ai-control-plane/lifecycle-management.md) | Manage AI models and agents from onboarding through retirement | -->
 
 - **[AI Engineering](ai-core/ai-engineering/index.md)**
   Accelerates every phase of software delivery — building new systems with AI assistance and systematically modernizing legacy applications.

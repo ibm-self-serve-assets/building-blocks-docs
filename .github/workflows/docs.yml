@@ -1,5 +1,5 @@
 # To run this workflow for local testing, use the following command:
-# pip install mkdocs-material
+# pip install mkdocs-material mkdocs-redirects
 # mkdocs serve
 #
 name: Publish Docs
@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - run: pip install mkdocs-material
+      - run: pip install mkdocs-material mkdocs-redirects
 
       - run: mkdocs gh-deploy --force
 

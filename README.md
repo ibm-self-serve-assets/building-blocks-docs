@@ -12,11 +12,10 @@ The markdown files located in [docs-src](./docs-src) are used by Github Pages to
 |---|---|---|
 | **Agents** | [Agent Builder](docs-src/ai-core/agents/agent-builder.md) | IBM watsonx Orchestrate (ADK) |
 | **Agents** | [Multi-Agent Orchestration](docs-src/ai-core/agents/multi-agent-orchestration.md) | IBM watsonx Orchestrate |
-| **Control Plane** | [Agent Controls](docs-src/ai-core/agents/agent-controls.md) | IBM watsonx Orchestrate |
-| **Control Plane** | [Model Evaluation](docs-src/ai-core/ai-trust/model-evaluation.md) | IBM watsonx.governance |
-| **Control Plane** | [Agent Ops](docs-src/ai-core/ai-trust/agent-ops.md) | IBM watsonx.governance |
-| **Control Plane** | [Real-Time Guardrails](docs-src/ai-core/ai-trust/real-time-guardrails.md) | IBM watsonx.governance |
-| **Control Plane** | [AI Compliance](docs-src/ai-core/ai-trust/ai-compliance.md) | IBM watsonx.governance |
+| **AI Control Plane** | [Agent Ops](docs-src/ai-core/ai-control-plane/agent-ops.md) | IBM watsonx.governance + IBM watsonx Orchestrate |
+| **AI Control Plane** | [AI Cost Management](docs-src/ai-core/ai-control-plane/ai-cost-management.md) | IBM watsonx.governance |
+| **AI Control Plane** | [AI Compliance](docs-src/ai-core/ai-control-plane/ai-compliance.md) | IBM watsonx.governance |
+<!-- Hidden for now: | **AI Control Plane** | [Lifecycle Management](docs-src/ai-core/ai-control-plane/lifecycle-management.md) | IBM watsonx.governance | -->
 | **Engineering** | [Agentic SDLC](docs-src/ai-core/ai-engineering/agentic-sdlc.md) | IBM Bob |
 | **Engineering** | [Code Modernization](docs-src/ai-core/ai-engineering/code-modernization.md) | IBM Bob |
 

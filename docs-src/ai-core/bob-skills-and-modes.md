@@ -27,7 +27,7 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
         </td>
       </tr>
       <tr>
-        <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/ai-trust.png" alt="" class="title-icon"><span>AI Control Plane</span></div></td>
+        <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/ai-control-plane.png" alt="" class="title-icon"><span>AI Control Plane</span></div></td>
         <td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/real-time-guardrails">Real-Time Guardrails</a>
             <br>Add runtime safety and quality guardrails to Gen AI, RAG agents, and watsonx Orchestrate tools using watsonx.governance. Pass/Flag/Block at input, retrieval, generation, and output.</p>
@@ -73,11 +73,11 @@ Instructions and related files for these custom modes can be found in their resp
         </td>
       </tr>
       <tr>
-        <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/ai-trust.png" alt="" class="title-icon"><span>AI Control Plane</span></div></td>
+        <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/ai-control-plane.png" alt="" class="title-icon"><span>AI Control Plane</span></div></td>
         <td>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/agent-ops/bob-modes/base-modes">Agent Ops</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/agent-ops/bob-modes/base-modes">Agent Ops</a>
             <br>Foundation mode for pre-deployment evaluation of watsonx Orchestrate agents. Bob automates benchmark generation and provides a structured workflow for assessing agent behavior across key dimensions — agent-specific metrics, cost and latency, and adversarial robustness through red-teaming.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai-trust/model-evaluation/gen-ai-evaluations/bob-modes/base-modes">Model Evaluation</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/agent-ops/model-evaluation/gen-ai-evaluations/bob-modes/base-modes">Model Evaluation</a>
             <br>Bob helps you evaluate GenAI apps (RAG pipelines, LLM outputs, chatbot safety) using IBM watsonx governance SDK and custom watsonx governance MCP server.</p>
         </td>
       </tr>

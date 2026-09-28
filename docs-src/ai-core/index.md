@@ -15,15 +15,18 @@
 |---|---|---|---|
 | **Agents** | [Agent Builder](agents/agent-builder.md) | IBM watsonx Orchestrate (ADK) | Create and deploy LLM-backed, tool-calling agents — from local development to production |
 | **Agents** | [Multi-Agent Orchestration](agents/multi-agent-orchestration.md) | IBM watsonx Orchestrate, A2A, AI Gateway | Coordinate wxO agents with external agents via open standards and route LLM calls across providers |
-| **AI Control Plane** | [Agent Ops](ai-trust/agent-ops.md) | IBM watsonx.governance, IBM watsonx Orchestrate | Evaluate, observe, and govern agents — benchmarking, red-teaming, runtime policy controls, cost tracking |
-| **AI Control Plane** | [AI Compliance](ai-trust/ai-compliance.md) | IBM watsonx.governance | Map AI use cases to regulations, manage risk assessments, and report compliance posture |
-| **AI Control Plane** | [AI Cost Management](ai-trust/ai-cost-management.md) | IBM watsonx.governance | Track, allocate, and optimize the cost of AI workloads across the enterprise |
-| **AI Control Plane** | [Lifecycle Management](ai-trust/lifecycle-management.md) | IBM watsonx.governance | Manage AI models and agents from onboarding through retirement |
+| **AI Control Plane** | [Agent Ops](ai-control-plane/agent-ops.md) | IBM watsonx.governance, IBM watsonx Orchestrate | Evaluate, observe, and govern agents — benchmarking, red-teaming, runtime policy controls, cost tracking |
+| **AI Control Plane** | [AI Cost Management](ai-control-plane/ai-cost-management.md) | IBM watsonx.governance | Track, allocate, and optimize the cost of AI workloads across the enterprise |
+| **AI Control Plane** | [AI Compliance](ai-control-plane/ai-compliance.md) | IBM watsonx.governance | Map AI use cases to regulations, manage risk assessments, and report compliance posture |
 | **AI Engineering** | [Agentic SDLC](ai-engineering/agentic-sdlc.md) | IBM Bob | IDE-native AI agent spanning planning, coding, testing, documentation, modernization, and CI/CD |
 | **AI Engineering** | [Code Modernization](ai-engineering/code-modernization.md) | IBM Bob | Transform legacy Java, mainframe, IBM Z, and IBM i applications into modern cloud-native systems |
 | **AI Engineering** | [Integration as Code](ai-engineering/integration-as-code.md) | IBM webMethods | Connect SaaS apps, on-premise systems, APIs, and event streams through a low-code iPaaS model |
 | **AI Engineering** | [Headless Bob](ai-engineering/headless-bob.md) | IBM Bob | Run Bob autonomously in CI/CD pipelines, scheduled jobs, and event-driven automations |
 | **AI Engineering** | [Context Engineering](ai-engineering/context-engineering.md) | IBM Bob | Design and optimise the context agents and LLMs receive — prompt architecture, RAG patterns, context window management |
+
+<!-- Hidden for now — restore to the AI Control Plane rows above:
+| **AI Control Plane** | [Lifecycle Management](ai-control-plane/lifecycle-management.md) | IBM watsonx.governance | Manage AI models and agents from onboarding through retirement |
+-->
 
 ---
 
@@ -66,7 +69,7 @@
 - **AI costs are growing** and you need visibility, allocation, and control across teams and workloads.
 - Models need **reliability engineering** — fallback routing, load balancing, and retry policies when primary endpoints degrade.
 
-[Explore AI Control Plane →](ai-trust/index.md)
+[Explore AI Control Plane →](ai-control-plane/index.md)
 
 ---
 
@@ -146,10 +149,10 @@ flowchart TB
 |---|---|
 | "I need to automate a multi-step business workflow" | [Agent Builder](agents/agent-builder.md) |
 | "I have multiple agents that need to work together" | [Multi-Agent Orchestration](agents/multi-agent-orchestration.md) |
-| "My agent is producing harmful or non-compliant output" | [Agent Ops](ai-trust/agent-ops.md) |
-| "I need PII filtering or content guardrails on my agent" | [Agent Ops](ai-trust/agent-ops.md) |
-| "AI regulation requires documented risk assessments" | [AI Compliance](ai-trust/ai-compliance.md) |
-| "AI costs are growing and I can't see where" | [AI Cost Management](ai-trust/ai-cost-management.md) |
+| "My agent is producing harmful or non-compliant output" | [Agent Ops](ai-control-plane/agent-ops.md) |
+| "I need PII filtering or content guardrails on my agent" | [Agent Ops](ai-control-plane/agent-ops.md) |
+| "AI costs are growing and I can't see where" | [AI Cost Management](ai-control-plane/ai-cost-management.md) |
+| "AI regulation requires documented risk assessments" | [AI Compliance](ai-control-plane/ai-compliance.md) |
 | "My development team needs an AI partner across the full SDLC" | [Agentic SDLC](ai-engineering/agentic-sdlc.md) |
 | "We have legacy Java / mainframe / IBM Z apps that need modernizing" | [Code Modernization](ai-engineering/code-modernization.md) |
 | "We need enterprise integrations without heavy custom code" | [Integration as Code](ai-engineering/integration-as-code.md) |
@@ -163,7 +166,7 @@ flowchart TB
 |---|---|
 | **[IBM watsonx Orchestrate](https://www.ibm.com/products/watsonx-orchestrate)** | Agent development and orchestration — ADK, multi-agent coordination, runtime policy controls, and AI Gateway |
 | **[IBM watsonx.ai](https://www.ibm.com/products/watsonx-ai)** | Foundation models and AI services — powers LLM reasoning across agents and evaluations |
-| **[IBM watsonx.governance](https://www.ibm.com/products/watsonx-governance)** | AI governance — agent evaluation, observability, compliance mapping, cost management, and lifecycle management |
+| **[IBM watsonx.governance](https://www.ibm.com/products/watsonx-governance)** | AI governance — agent evaluation, observability, compliance mapping, and cost management |
 | **[IBM Bob](https://bob.ibm.com/)** | AI Agent purpose-built for the Software Development Lifecycle — the development partner across every building block |
 | **[IBM webMethods](https://www.ibm.com/products/webmethods-integration)** | Cloud-native iPaaS — hybrid integration, API management, B2B/EDI, and event-driven architectures |
 
