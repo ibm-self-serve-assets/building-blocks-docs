@@ -26,7 +26,7 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
             <br>Works with IBM Confluent for real-time data streaming, Kafka topic management, Schema Registry contracts, stream processing configuration, and event pipeline setup.</p>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/data-streaming-confluent-terraform/SKILL.md">Data-streaming: Confluent plus Terraform</a>
             <br>Expert guidance for building real-time streaming systems on Confluent Cloud using Infrastructure-as-Code (Terraform), Apache Flink SQL, and Python producers.</p>
-            <p><strong>Streamhouse Continuous RAG</strong> (Coming soon)
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/context/streamhouse/bob-skills/streamhouse-continuous-rag.zip">Streamhouse Continuous RAG</a>
             <br>Combines Streamhouse live operational state with RAG enterprise knowledge — design and implement continuous RAG pipelines that keep AI agents grounded in live context.</p>
         </td>
       </tr>

@@ -25,7 +25,7 @@ Use **IBM Confluent Real-Time Context Engine (RTCE)** and **Tableflow** to serve
 | Skill | Description |
 |---|---|
 | **[data-streaming-confluent](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/data-streaming-confluent/SKILL.md)** | Configures Confluent Tableflow, Apache Iceberg sink integrations, and RTCE endpoints for application consumption |
-| **Streamhouse Continuous RAG** | *Coming soon* |
+| **[streamhouse-continuous-rag](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/context/streamhouse/bob-skills/streamhouse-continuous-rag.zip)** | Combines Streamhouse live operational state with RAG enterprise knowledge — designs and implements continuous RAG pipelines that ground AI agents in real-time context |
 
 !!! tip "Installing skills"
     Download the skill `.zip` files and copy the skill folders to `~/.bob/skills` (global) or `<project>/.bob/skills` (project-level). See the [Data Skills and Modes](../../bob-skills-and-modes.md) page for full installation instructions.
