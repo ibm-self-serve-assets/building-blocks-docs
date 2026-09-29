@@ -1,6 +1,6 @@
 # Text2SQL
 
-Use **IBM watsonx.data intelligence** to convert natural-language requests into SQL by using vectorized and enriched metadata as context — giving business users self-service access to governed relational data.
+Use **IBM watsonx.data intelligence** to convert natural-language requests into SQL by using vectorized and enriched metadata as context — giving business users self-service access to governed relational and lakehouse data.
 
 !!! info "Product mapping"
     **IBM watsonx.data intelligence** — Text2SQL, natural-language query, vectorized metadata

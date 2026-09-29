@@ -48,46 +48,50 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
         <div class="skill-group"><img src="images/data.png" alt="" class="title-icon"><span>Data Skills</span></div>
       </th></tr></thead>
       <tr>
-        <td><div class="skill-subgroup"><img src="images/integration.png" alt="" class="title-icon"><span>Integration</span></div></td>
+        <td><div class="skill-subgroup"><img src="images/integration.png" alt="" class="title-icon"><span>Streamhouse</span></div></td>
         <td>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/data-streaming-confluent">Data-streaming: Confluent</a>
-            <br>Works with the Confluent Platform for real-time data streaming, Kafka topic management, stream processing configuration, and data pipeline setup for event-driven architectures.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/data-streaming-confluent/SKILL.md">Data-streaming: Confluent</a>
+            <br>Works with IBM Confluent for real-time data streaming, Kafka topic management, Schema Registry contracts, stream processing configuration, and event pipeline setup.</p>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/data-streaming-confluent-terraform/SKILL.md">Data-streaming: Confluent plus Terraform</a>
-            <br>Expert guidance for building real-time streaming systems on Confluent Cloud using Infrastructure-as-Code (Terraform), Apache Flink SQL, and Python producers. Adapts to any streaming use case (IoT, finance, retail, healthcare, logistics) while maintaining production-ready quality.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated/bob-skills">Data Ingestion: Structured</a>
-            <br>IBM DataStage connector config, CDC pipeline design, schema mapping, DB2/PostgreSQL/MySQL/Oracle patterns, batch and incremental load strategies into IBM watsonx.data.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated/bob-skills">Data Ingestion: Unstructured</a>
-            <br>IBM Docling document parsing, UDI pipeline configuration, IBM COS ingestion, multi-format chunking (PDF, DOCX, HTML, images), metadata extraction, Python 3.12 automation scripts.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-pipeline-ai-generated/bob-skills">Data Ingestion: UDI + OpenSearch</a>
-            <br>IBM UDI + OpenSearch integration, document search pipeline setup, OpenSearch index provisioning for UDI output into IBM watsonx.data.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/integration/data-observability/bob-skills">Data Observability: Databand Pipeline Setup</a>
-            <br>IBM Databand pipeline onboarding, OpenLineage event design (START / COMPLETE / FAIL), alert policy authoring (null-rate, schema-drift, SLA-breach), IBM IAM auth patterns.</p>
+            <br>Expert guidance for building real-time streaming systems on Confluent Cloud using Infrastructure-as-Code (Terraform), Apache Flink SQL, and Python producers.</p>
+            <p><strong>Streamhouse Continuous RAG</strong> (Coming soon)
+            <br>Combines Streamhouse live operational state with RAG enterprise knowledge — design and implement continuous RAG pipelines that keep AI agents grounded in live context.</p>
         </td>
       </tr>
       <tr>
-        <td><div class="skill-subgroup"><img src="images/intelligence.png" alt="" class="title-icon"><span>Intelligence</span></div></td>
+        <td><div class="skill-subgroup"><img src="images/intelligence.png" alt="" class="title-icon"><span>Pipelines</span></div></td>
         <td>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/text2sql/bob-skills">Text2SQL: Metadata Enrichment</a>
-            <br>watsonx.data Intelligence project onboarding, table/column description enrichment, synonym design, query example authoring, accuracy measurement. Maximises Text2SQL query accuracy.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/text2sql/bob-skills">Text2SQL: Query Optimizer</a>
-            <br>Model selection (Granite vs Llama), SQL safety validation, accuracy evaluation (exact-match + execution accuracy), error pattern diagnosis, SQL dialect tuning (Presto, PostgreSQL, Oracle, Snowflake).</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-lineage/bob-skills">Data Lineage: OpenLineage Instrumentation</a>
-            <br>OpenLineage event design, Python/DataStage/Spark instrumentation patterns, IBM Databand lineage API integration, lineage graph authoring for end-to-end data traceability.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/intelligence/data-quality/bob-skills">Data Quality: Rules</a>
-            <br>Data quality rule authoring, watsonx.data Intelligence quality checks, profiling automation, threshold design, compliance reporting patterns for AI-ready data.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/rag/bob-skills">RAG Pipeline Builder</a>
+            <br>Complete RAG pipeline design — IBM watsonx.ai embedding integration, OpenSearch HNSW + hybrid search design, chunking strategy selection, and evaluation with RAGAS metrics.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/rag/bob-skills">RAG MCP Server Builder</a>
+            <br>MCP server development (SSE transport, FastMCP), RAG ingestion + retrieval tool design, IBM Bob / Claude integration, and deployment to IBM Code Engine.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/udi/bob-skills">Data Ingestion: Unstructured (UDI + Docling)</a>
+            <br>IBM Docling document parsing, UDI pipeline configuration, multi-format chunking (PDF, DOCX, HTML, images), metadata extraction, and Python automation scripts.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/udi/bob-skills">Data Ingestion: UDI + OpenSearch</a>
+            <br>IBM UDI + OpenSearch integration, document search pipeline setup, and OpenSearch index provisioning for UDI output into IBM watsonx.data.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/text2sql/bob-skills">Text2SQL: Metadata Enrichment</a>
+            <br>watsonx.data Intelligence project onboarding, table/column description enrichment, synonym design, query example authoring, and accuracy measurement.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/text2sql/bob-skills">Text2SQL: Query Optimizer</a>
+            <br>Model selection, SQL safety validation, accuracy evaluation (exact-match + execution accuracy), error pattern diagnosis, and SQL dialect tuning.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/etl/bob-skills">Data Ingestion: Structured (DataStage)</a>
+            <br>IBM DataStage connector config, CDC pipeline design, schema mapping, batch and incremental load strategies into IBM watsonx.data lakehouse tables.</p>
         </td>
       </tr>
       <tr>
-        <td><div class="skill-subgroup"><img src="images/query.png" alt="" class="title-icon"><span>Retrieval</span></div></td>
+        <td><div class="skill-subgroup"><img src="images/query.png" alt="" class="title-icon"><span>Lakehouse</span></div></td>
         <td>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/bob-skills">RAG Pipeline Builder</a>
-            <br>Complete RAG pipeline design — IBM watsonx.ai embedding integration, OpenSearch HNSW + hybrid search design, chunking strategy selection, FastAPI service patterns, RAG evaluation with RAGAS metrics.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/RAG/bob-skills">RAG MCP Server Builder</a>
-            <br>MCP server development (SSE transport, FastMCP), RAG ingestion + retrieval tool design (`ingest_from_cos`, `search_documents`, `ask_question`), IBM Bob / Claude integration, deployment to IBM Code Engine.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/opensearch/bob-skills">Vector Search: OpenSearch</a>
-            <br>IBM watsonx.data OpenSearch k-NN index design, HNSW parameter tuning (`ef_construction`, `m`), hybrid search (vector + BM25) score fusion, IBM watsonx.ai embedding integration.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/retrieval/vector-search/datastax-astradb/bob-skills">Vector Search: AstraDB</a>
-            <br>Astra DB vector collection creation, IBM watsonx.ai embedding integration, ANN cosine search queries via `astrapy` Data API, IBM COS ingestion patterns for IBM HCD.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/metadata-enrichment/bob-skills">Data Quality: Rules</a>
+            <br>Data quality rule authoring, watsonx.data Intelligence quality checks, profiling automation, threshold design, and compliance reporting patterns for AI-ready data.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/metadata-enrichment/bob-skills">Data Lineage: OpenLineage Instrumentation</a>
+            <br>OpenLineage event design, Python/DataStage/Spark instrumentation patterns, IBM Databand lineage API integration, and lineage graph authoring.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/data-observability/bob-skills">Data Observability: Databand Pipeline Setup</a>
+            <br>IBM Databand pipeline onboarding, OpenLineage event design (START / COMPLETE / FAIL), alert policy authoring (null-rate, schema-drift, SLA-breach), and IAM auth patterns.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/zero-copy-lakehouse/bob-skills">Zero-Copy Lakehouse</a>
+            <br>Presto SQL optimization, Spark job configuration on watsonx.data, cross-catalog federation design, and Iceberg table maintenance.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/serverless-vector/bob-skills">Vector Search: AstraDB</a>
+            <br>Astra DB vector collection creation, IBM watsonx.ai embedding integration, ANN cosine search queries via `astrapy` Data API, and metadata filtering.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/serverless-vector/bob-skills">Vector Search: OpenSearch</a>
+            <br>IBM watsonx.data OpenSearch k-NN index design, HNSW parameter tuning (`ef_construction`, `m`), hybrid search (vector + BM25) score fusion, and IBM watsonx.ai embedding integration.</p>
         </td>
       </tr>
     </tbody>

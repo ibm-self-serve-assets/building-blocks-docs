@@ -1,6 +1,6 @@
 # Data – Intelligent Data Platform
 
-**The Data Building Blocks** provide a practical, composable foundation for making enterprise data **connected, contextual, trusted, and ready for analytics and AI**. The model is organized around three use-case groups from the current Data sales play: **Context**, **Pipelines**, and **Query Engines**.
+**The Data Building Blocks** provide a practical, composable foundation for making enterprise data **connected, contextual, trusted, and ready for analytics and AI**. The model is organized around three primary pillars: **Streamhouse**, **Pipelines**, and **Lakehouse**.
 
 ![Data - Intelligent Data Platform overview](images/overview.jpg)
 
@@ -11,82 +11,88 @@
 
 ## Building Block Map
 
-| Use Case | Capability | Primary Products | What It Enables |
+| Pillar | Building Block | Primary Products | What It Enables |
 |---|---|---|---|
-| **Context** | [Context Hub](context/context-hub/index.md) | IBM Confluent + IBM watsonx.data + IBM watsonx.data intelligence | Combine real-time events, enterprise data, metadata, lineage and policy context for AI and analytics |
-| **Context** | [Streamhouse](context/streamhouse/index.md) | IBM Confluent — Connect + Kafka + Flink + Stream Governance + Tableflow + Real-Time Context Engine | Continuously capture, transport, transform, govern, and serve enterprise data for applications, analytics, and AI |
-| **Context** | [Metadata Enrichment & Data Quality](context/metadata-enrichment/index.md) | IBM watsonx.data intelligence | Add business meaning, quality rules, descriptions, terms, classifications and relationships to technical data |
-| **Context** | [Data Observability](context/data-observability/index.md) | IBM watsonx.data integration + IBM Data Observability by Databand | Detect pipeline and dataset issues before downstream users and AI are impacted |
-| **Pipelines** | [RAG](pipelines/rag/index.md) | IBM watsonx.data OpenRAG + OpenSearch | Ground applications and agents with governed enterprise knowledge |
-| **Pipelines** | [UDI](pipelines/udi/index.md) | IBM watsonx.data integration + Docling for IBM watsonx | Ingest, parse, cleanse, chunk, enrich and prepare documents for RAG and AI |
-| **Pipelines** | [Text2SQL](pipelines/text2sql/index.md) | IBM watsonx.data intelligence | Convert natural-language questions into SQL using enriched metadata as context |
-| **Pipelines** | [ETL / ELT](pipelines/etl/index.md) | IBM watsonx.data integration DataStage + IBM watsonx.data | Build governed batch integration flows across source, transformation and target stages |
-| **Pipelines** | [Data Sync](pipelines/data-sync/index.md) | IBM Aspera Sync | Synchronize large file sets and repositories securely across WAN and hybrid environments |
-| **Query Engines** | [Zero-Copy Lakehouse](query-engines/zero-copy-lakehouse/index.md) | IBM watsonx.data (Presto + Spark + Iceberg) | Query data across distributed platforms without unnecessary copying |
-| **Query Engines** | [Serverless Vector](query-engines/serverless-vector/index.md) | IBM watsonx.data + Astra DB Serverless | Elastic vector storage for semantic search, RAG and agent memory patterns |
+| **Streamhouse** | [Real-Time streaming](streamhouse/real-time-streaming/index.md) | IBM Confluent — Connectors and Kafka | Capture and transport enterprise event streams and CDC from databases, SaaS, and IoT into a durable event backbone |
+| **Streamhouse** | [Transform](streamhouse/transform/index.md) | IBM Confluent (Flink) | Execute real-time stream processing, event enrichment, filtering, and windowed aggregations on data in motion |
+| **Streamhouse** | [Govern](streamhouse/govern/index.md) | IBM Confluent — Stream governance | Enforce schema contracts, trace end-to-end stream lineage, evaluate stream quality rules, and catalog data products |
+| **Streamhouse** | [Serve](streamhouse/serve/index.md) | IBM Confluent — RTCE | Deliver low-latency live state to AI agents via Real-Time Context Engine (MCP/REST) and open Iceberg tables for analytics |
+| **Pipelines** | [RAG](pipelines/rag/index.md) | IBM watsonx.data (OpenRAG / OpenSearch) | Ground applications and agents with governed enterprise documents, vector search, and hybrid retrieval |
+| **Pipelines** | [UDI](pipelines/udi/index.md) | IBM watsonx.data integration, IBM Docling | Ingest, parse, cleanse, chunk, and structure complex unstructured documents for RAG and AI |
+| **Pipelines** | [Text2SQL](pipelines/text2sql/index.md) | IBM watsonx.data intelligence | Convert natural-language questions into SQL queries using vectorized and enriched metadata context |
+| **Pipelines** | [ETL](pipelines/etl/index.md) | IBM watsonx.data (DataStage) | Build governed visual batch integration flows across source systems, transformations, and lakehouse targets |
+| **Pipelines** | [Data Sync](pipelines/data-sync/index.md) | Aspera | Synchronize large file sets, media, and AI repositories securely across WAN and hybrid environments at wire speed |
+| **Lakehouse** | [Meta Data Enrichment and Quality](lakehouse/metadata-enrichment/index.md) | IBM watsonx.data intelligence | Add business glossary terms, automated descriptions, profiling, quality rules, and lineage to lakehouse assets |
+| **Lakehouse** | [Data Observability](lakehouse/data-observability/index.md) | watsonx.data Integration (Databand) | Detect pipeline failures, data drift, volume anomalies, and SLA breaches before downstream AI and analytics are impacted |
+| **Lakehouse** | [Zero-Copy Lakehouse](lakehouse/zero-copy-lakehouse/index.md) | IBM watsonx.data (Presto, Spark, Iceberg) | Query and process distributed data in place without unnecessary copying using open Apache Iceberg tables |
+| **Lakehouse** | [Serverless Vector](lakehouse/serverless-vector/index.md) | IBM watsonx.data, AstraDB | Elastic, serverless vector storage and similarity search for RAG and autonomous AI agent memory |
 
 ---
 
-## 1. Context
+## 1. Streamhouse
 
-> **Goal:** give applications, analytics, and AI systems the business and operational context they need at the moment they need it.
+> **Goal:** capture, transport, transform, govern, and serve the continuously current state of the business to production applications, analytics, and AI agents.
 
 !!! success "Business Value"
-    - **Fresher decisions** — use continuously updated events rather than delayed batch snapshots.
-    - **Trusted context** — enrich technical data with business terms, metadata, lineage, classifications, quality signals and policy controls.
-    - **Reusable data products** — make contextual data easier for teams and AI agents to discover and consume consistently.
-    - **Lower integration sprawl** — use managed streaming, connectors, metadata services and observability rather than bespoke pipelines.
+    - **Sub-second freshness** — replace delayed batch snapshots with continuously updated operational events.
+    - **Production-native reliability** — engineered to mission-critical SLAs for autonomous AI agents and core applications.
+    - **Decentralized data access** — meets data where it lives across databases, SaaS, and edge devices without monolithic consolidation.
+    - **Single stream for ops and analytics** — powers both real-time operational applications (RTCE) and open lakehouse tables (Tableflow/Iceberg).
+    - **Strict stream governance** — enforce schema contracts and track end-to-end data lineage in motion.
 
-**Use Context when:**
+**Use Streamhouse when:**
 
-- AI agents or applications need **live operational state** in addition to historical data.
-- Teams need to understand **what a field means, where it came from, and whether it can be trusted**.
-- Streaming pipelines are business-critical and failures or stale datasets need to be detected quickly.
-- You want the same governed context to be reusable across analytics, AI, and operational workflows.
+- AI agents or applications need **live operational facts** in addition to historical knowledge.
+- You need **Change Data Capture (CDC)** or high-frequency event streaming.
+- Continuous filtering, enrichment, or aggregation is required directly in motion.
+- Streaming data must be published as open **Apache Iceberg tables** for lakehouse analytics.
 
-[Explore Context →](context/index.md)
+[Explore Streamhouse →](streamhouse/index.md)
 
 ---
 
 ## 2. Pipelines
 
-> **Goal:** prepare and move structured and unstructured data into forms that applications, search systems, analytics and AI can consume.
+> **Goal:** prepare, transform, move, and index structured and unstructured data into forms that applications, search engines, analytics, and AI models can consume.
 
 !!! success "Business Value"
-    - **Faster AI readiness** — convert documents and raw enterprise sources into structured, chunked, enriched and searchable content.
-    - **More reliable RAG** — combine document preparation with enterprise retrieval and governed metadata.
-    - **More accessible analytics** — let users express analytical intent in natural language while retaining SQL as the execution layer.
-    - **Repeatable integration** — use visual ETL/ELT flows, managed runtimes, scheduling and reusable transformations.
-    - **High-speed data movement** — synchronize large repositories across data centres and clouds when conventional file transfer is a bottleneck.
+    - **Faster AI readiness** — convert complex PDFs, presentations, and raw sources into structured, chunked, enriched content.
+    - **More reliable RAG** — combine layout-aware document preparation (Docling) with enterprise retrieval (OpenRAG + OpenSearch).
+    - **Democratized analytics** — let business users express analytical intent in natural language with Text2SQL while retaining SQL governance.
+    - **Standardized batch integration** — visual ETL/ELT flows, enterprise connectors, and operational scheduling with DataStage.
+    - **High-speed data movement** — synchronize multi-terabyte repositories across clouds and data centers via Aspera Sync.
 
 **Use Pipelines when:**
 
-- Data must be **ingested, transformed, enriched, replicated, synchronized or indexed** before it is useful.
-- You are building a **RAG, enterprise search, or agent grounding** pipeline.
-- You need **batch ETL/ELT** with enterprise connectors and operational control.
-- Large file sets need to be moved or synchronized across high-latency networks.
+- Data must be **ingested, transformed, enriched, replicated, or indexed** before consumption.
+- You are building a **RAG pipeline, enterprise search, or agent grounding** service.
+- You need **governed batch ETL/ELT** across diverse enterprise systems.
+- Large files or datasets must be synchronized across high-latency WAN links.
 
 [Explore Pipelines →](pipelines/index.md)
 
 ---
 
-## 3. Query Engines
+## 3. Lakehouse
 
-> **Goal:** execute analytics and retrieval workloads on the engine best suited to the data and latency profile.
+> **Goal:** execute analytics, ML processing, metadata governance, data observability, and vector retrieval workloads on the engines best suited to each latency and data profile.
 
 !!! success "Business Value"
-    - **Reduce unnecessary data movement** — query external platforms in place where supported.
-    - **Use open table formats** — Apache Iceberg enables multiple engines to work with the same governed data without proprietary lock-in.
-    - **Fit-for-purpose compute** — use Presto for interactive SQL and Spark for large-scale processing and complex transformations.
-    - **Elastic semantic retrieval** — use serverless vector databases for similarity search and RAG workloads without managing clusters.
+    - **Reduce unnecessary data movement** — query external platforms in place with Presto federation without redundant copies.
+    - **Open table interoperability** — Apache Iceberg enables Presto, Spark, and Flink to share the same governed tables without vendor lock-in.
+    - **Fit-for-purpose compute** — interactive ANSI SQL on Presto; heavy distributed transformations on Spark.
+    - **Automated metadata and data quality** — watsonx.data intelligence enriches raw tables with business terms, automated classifications, and quality scores.
+    - **Proactive data observability** — Databand detects pipeline failures, run anomalies, and SLA breaches before users notice.
+    - **Elastic serverless vector retrieval** — Astra DB Serverless scales on demand for semantic search and AI agent memory.
 
-**Use Query Engines when:**
+**Use Lakehouse when:**
 
-- The same data must support **interactive SQL, large-scale processing, and AI retrieval**.
-- Copying data creates cost, latency or governance issues.
-- You need **vector similarity search** at application scale.
+- The same dataset must support **interactive SQL, large-scale processing, and AI retrieval**.
+- You want to eliminate data duplication and query distributed sources in place.
+- You need automated **data profiling, business glossary mapping, and quality rules**.
+- You need **vector similarity search** at application scale without cluster management.
 
-[Explore Query Engines →](query-engines/index.md)
+[Explore Lakehouse →](lakehouse/index.md)
 
 ---
 
@@ -94,18 +100,19 @@
 
 ```mermaid
 flowchart LR
-    S["Operational systems<br/>Databases · SaaS · Files · Devices"] --> C["IBM Confluent<br/>Kafka + Connectors"]
-    C --> F["Apache Flink<br/>real-time transform / enrich"]
-    F --> W["IBM watsonx.data<br/>Open lakehouse / AI-ready data"]
-    W --> I["watsonx.data intelligence<br/>metadata + governance + context"]
-    W --> P["UDI / DataStage / RAG pipelines"]
-    P --> Q["OpenRAG / OpenSearch<br/>Astra DB / Presto / Spark"]
+    S["Operational Systems<br/>Databases · SaaS · Files · IoT"] --> C["IBM Confluent<br/>Connectors + Kafka"]
+    C --> F["IBM Confluent (Flink)<br/>Real-Time Transform / Enrich"]
+    F --> G["Stream Governance<br/>Schemas · Lineage · Quality"]
+    G --> RTCE["Real-Time Context Engine<br/>Live State (MCP / REST)"]
+    G --> T["Tableflow / Iceberg Sink"]
+    T --> W["IBM watsonx.data<br/>Open Lakehouse (Iceberg)"]
+    W --> I["watsonx.data intelligence<br/>Metadata Enrichment & Quality"]
+    W --> P["UDI / DataStage / RAG Pipelines"]
+    P --> Q["OpenRAG / OpenSearch<br/>Astra DB Serverless / Presto / Spark"]
     I --> Q
-    Q --> A["Analytics · AI agents · Applications"]
+    RTCE --> A["Operational AI Agents<br/>& Applications"]
+    Q --> A
 ```
-
-!!! note
-    This is a **reference composition**, not a requirement to deploy every product. Select only the capabilities needed for the use case.
 
 ---
 
@@ -113,15 +120,17 @@ flowchart LR
 
 | If your primary problem is… | Start with… |
 |---|---|
-| "My AI needs the latest business events or continuously current state" | [Streamhouse](context/streamhouse/index.md) + [Context Hub](context/context-hub/index.md) |
-| "Users cannot understand or trust the available data" | [Metadata Enrichment & Data Quality](context/metadata-enrichment/index.md) |
-| "Pipelines fail and we discover it too late" | [Data Observability](context/data-observability/index.md) |
-| "I need reliable enterprise RAG / search" | [UDI](pipelines/udi/index.md) + [RAG](pipelines/rag/index.md) |
-| "Business users need to query governed data in plain English" | [Metadata Enrichment & Data Quality](context/metadata-enrichment/index.md) + [Text2SQL](pipelines/text2sql/index.md) |
-| "I need repeatable batch transformation across systems" | [ETL / ELT](pipelines/etl/index.md) |
-| "I need to synchronize very large file repositories globally" | [Data Sync](pipelines/data-sync/index.md) |
-| "I want to query distributed data without creating another copy" | [Zero-Copy Lakehouse](query-engines/zero-copy-lakehouse/index.md) |
-| "I need an elastic vector store for GenAI" | [Serverless Vector](query-engines/serverless-vector/index.md) |
+| "My AI agents need the latest business events or live operational state" | [Real-Time streaming](streamhouse/real-time-streaming/index.md) + [Serve (RTCE)](streamhouse/serve/index.md) |
+| "I need to filter, join, or aggregate high-volume data streams in real time" | [Transform](streamhouse/transform/index.md) |
+| "Streaming schema changes break downstream applications and consumers" | [Govern](streamhouse/govern/index.md) |
+| "Users cannot understand or trust the available data in the lakehouse" | [Meta Data Enrichment and Quality](lakehouse/metadata-enrichment/index.md) |
+| "Pipelines break, run slow, or breach SLAs without early alerts" | [Data Observability](lakehouse/data-observability/index.md) |
+| "I need reliable enterprise RAG over complex documents and PDFs" | [UDI](pipelines/udi/index.md) + [RAG](pipelines/rag/index.md) |
+| "Business users need to query governed lakehouse data in plain English" | [Meta Data Enrichment and Quality](lakehouse/metadata-enrichment/index.md) + [Text2SQL](pipelines/text2sql/index.md) |
+| "I need repeatable batch transformation across enterprise systems" | [ETL](pipelines/etl/index.md) |
+| "I need to synchronize very large file repositories globally over WAN" | [Data Sync](pipelines/data-sync/index.md) |
+| "I want to query distributed data without creating another copy" | [Zero-Copy Lakehouse](lakehouse/zero-copy-lakehouse/index.md) |
+| "I need an elastic serverless vector store for GenAI and agents" | [Serverless Vector](lakehouse/serverless-vector/index.md) |
 
 ---
 
@@ -129,10 +138,11 @@ flowchart LR
 
 | Product | Role |
 |---|---|
-| **[IBM watsonx.data](https://www.ibm.com/products/watsonx-data)** | Open hybrid data platform — lakehouse, Presto, Spark, Iceberg, OpenRAG |
-| **[IBM Confluent](https://www.ibm.com/products/confluent)** | Managed Kafka + Flink + connectors + Stream Governance for real-time data |
-| **[IBM watsonx.data integration](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=data-integration)** | DataStage ETL, UDI, data replication and observability |
-| **[IBM watsonx.data intelligence](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=data-enriching-your-assets)** | Metadata enrichment, business glossary, Text2SQL |
-| **[IBM Aspera Sync](https://www.ibm.com/products/aspera/sync)** | High-speed WAN file and repository synchronization |
-| **[Docling for IBM watsonx](https://www.ibm.com/products/docling)** | Advanced document conversion for complex PDFs and unstructured content |
-| **[Astra DB Serverless](https://docs.datastax.com/en/astra-db-serverless/databases/create-database.html)** | Serverless vector database for embeddings and semantic search |
+| **[IBM Confluent](https://www.ibm.com/products/confluent)** | Complete Streamhouse platform — Connectors, Kafka, Apache Flink, Stream Governance, Tableflow, and Real-Time Context Engine |
+| **[IBM watsonx.data](https://www.ibm.com/products/watsonx-data)** | Open hybrid lakehouse platform — Presto, Spark, Apache Iceberg, and OpenRAG |
+| **[IBM watsonx.data intelligence](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=data-enriching-your-assets)** | Metadata enrichment, business glossary, data quality rules, lineage, and Text2SQL |
+| **[IBM watsonx.data integration](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=data-integration)** | DataStage visual ETL/ELT, UDI document pipelines, and Databand data observability |
+| **[IBM Data Observability by Databand](https://www.ibm.com/products/watsonx-data-integration/data-observability)** | Continuous pipeline and dataset monitoring, anomaly detection, and SLA tracking |
+| **[Docling for IBM watsonx](https://www.ibm.com/products/docling)** | Deep learning document conversion for complex PDFs, tables, and unstructured layouts |
+| **[IBM Aspera Sync](https://www.ibm.com/products/aspera/sync)** | High-speed WAN file, dataset, and repository synchronization |
+| **[Astra DB Serverless](https://docs.datastax.com/en/astra-db-serverless/databases/create-database.html)** | Serverless vector database for embeddings and high-scale similarity search |

@@ -1,9 +1,9 @@
 # Pipelines – Building Blocks
 
-The **Pipelines** use case prepares, transforms, moves and indexes structured and unstructured data for analytics, RAG, search and AI applications.
+The **Pipelines** use case prepares, transforms, moves, and indexes structured and unstructured data for enterprise analytics, Retrieval-Augmented Generation (RAG), search, and AI applications.
 
 !!! info "Key principle"
-    The quality of AI output depends heavily on the quality of data going in. Pipelines are where that quality is established — through parsing, cleaning, enrichment, chunking and governed transformation before data reaches any retrieval or analytics layer.
+    The quality of AI output depends directly on the quality of data going in. Pipelines are where that quality is established — through visual ETL/ELT, high-speed WAN synchronization, unstructured document parsing, chunking, enrichment, and natural-language query interfaces before data reaches retrieval, analytics, or agent layers.
 
 ---
 
@@ -11,22 +11,22 @@ The **Pipelines** use case prepares, transforms, moves and indexes structured an
 
 | Capability | Products | Best Fit |
 |---|---|---|
-| **[RAG](rag/index.md)** | IBM watsonx.data OpenRAG + OpenSearch | Enterprise retrieval and agent grounding |
-| **[Unstructured Data Integration (UDI)](udi/index.md)** | IBM watsonx.data integration + Docling for IBM watsonx | Document ingestion, parsing, transformation, chunking and enrichment |
-| **[Text2SQL](text2sql/index.md)** | IBM watsonx.data intelligence | Natural-language access to governed relational data |
-| **[ETL / ELT](etl/index.md)** | IBM watsonx.data integration DataStage + IBM watsonx.data | Batch transformation and data movement |
-| **[Data Sync](data-sync/index.md)** | IBM Aspera Sync | High-speed synchronization of files and large repositories over WAN |
+| **[RAG](rag/index.md)** | IBM watsonx.data (OpenRAG / OpenSearch) | Enterprise document retrieval, agent grounding, and hybrid vector+keyword search |
+| **[UDI](udi/index.md)** | IBM watsonx.data integration, IBM Docling | Document ingestion, layout-aware parsing, transformation, chunking, and enrichment |
+| **[Text2SQL](text2sql/index.md)** | IBM watsonx.data intelligence | Convert natural-language questions into SQL queries using enriched metadata context |
+| **[ETL](etl/index.md)** | IBM watsonx.data (DataStage) | Governed visual batch integration flows and data transformations across enterprise sources and lakehouse targets |
+| **[Data Sync](data-sync/index.md)** | Aspera | High-speed, secure synchronization of large file sets and repositories across hybrid WAN environments |
 
 ---
 
 ## Business Value
 
 !!! success "Why Pipelines matter"
-    - **Shorten the path from raw data to AI-ready data** — structured pipelines eliminate ad hoc scripts and manual steps between sources and consumers.
-    - **Improve RAG retrieval quality** — better extraction, layout preservation, chunking and enrichment directly improve what gets indexed and retrieved.
-    - **Enable self-service analytics** — Text2SQL lets business users express queries in plain language while SQL and governance remain the execution layer.
-    - **Standardize repeatable integration** — DataStage flows, scheduling and connectors make batch ETL reproducible, governed and auditable.
-    - **Move large data globally** — Aspera Sync overcomes WAN latency for large file and repository distribution between sites and clouds.
+    - **Shorten the path from raw data to AI readiness** — structured pipelines eliminate ad-hoc scripting and manual file manipulation between source systems and AI applications.
+    - **Improve RAG retrieval quality** — document-aware parsing (Docling) and visual chunking pipelines (UDI) ensure high-fidelity context for vector embeddings.
+    - **Democratize data access** — Text2SQL enables non-technical business users to ask questions in natural language while maintaining governed SQL execution.
+    - **Standardize enterprise batch movement** — DataStage flows, enterprise connectors, and scheduling provide repeatable, auditable batch ETL/ELT operations.
+    - **Global multi-site synchronization** — Aspera Sync overcomes WAN latency to move terabyte-scale datasets globally at wire speed.
 
 ---
 
@@ -34,11 +34,11 @@ The **Pipelines** use case prepares, transforms, moves and indexes structured an
 
 | If you need to… | Use… |
 |---|---|
-| Ground AI agents in enterprise documents | [RAG](rag/index.md) |
-| Ingest and prepare complex PDFs, tables or presentations | [UDI](udi/index.md) |
-| Let business users query governed data in plain English | [Text2SQL](text2sql/index.md) |
-| Build repeatable batch ETL/ELT across enterprise systems | [ETL / ELT](etl/index.md) |
-| Synchronize large file repositories across WAN or cloud sites | [Data Sync](data-sync/index.md) |
+| Ground AI applications and autonomous agents in enterprise documents and knowledge bases | [RAG](rag/index.md) |
+| Ingest, parse, and chunk complex PDFs, tables, scanned images, or presentations for AI | [UDI](udi/index.md) |
+| Allow business users to query governed relational and lakehouse data in plain English | [Text2SQL](text2sql/index.md) |
+| Build governed, visual batch ETL/ELT flows across databases, SaaS, and lakehouse targets | [ETL](etl/index.md) |
+| Synchronize large file repositories or training datasets across high-latency WAN links | [Data Sync](data-sync/index.md) |
 
 ---
 
@@ -46,36 +46,55 @@ The **Pipelines** use case prepares, transforms, moves and indexes structured an
 
 ```mermaid
 flowchart LR
-    S["Enterprise sources<br/>Files · DBs · SaaS"] --> U["UDI / DataStage<br/>Ingest + transform"]
-    U --> R["RAG pipeline<br/>Chunk + embed + index"]
-    R --> O["OpenRAG + OpenSearch<br/>Retrieval"]
-    S --> E["ETL / ELT<br/>Batch preparation"]
-    E --> W["watsonx.data<br/>Governed lakehouse"]
-    W --> T["Text2SQL<br/>Natural-language access"]
-    W --> O
-    O --> A["AI agents / Analytics / Applications"]
-    T --> A
+    subgraph SOURCES["Enterprise Data Sources"]
+        FILES["Documents & Files<br/>(SharePoint, COS, PDFs)"]
+        DBS["Relational Databases<br/>& SaaS Applications"]
+        REMOTE["Remote Sites & WAN"]
+    end
+
+    subgraph PIPELINES_CORE["Pipelines Engine"]
+        UDI["UDI + IBM Docling<br/>(Parse & Chunk)"]
+        ETL["IBM DataStage<br/>(Visual Batch ETL)"]
+        SYNC["IBM Aspera Sync<br/>(High-Speed WAN)"]
+    end
+
+    subgraph TARGETS["Retrieval & Lakehouse Targets"]
+        RAG["OpenRAG + OpenSearch<br/>(RAG Retrieval)"]
+        LAKE["IBM watsonx.data<br/>(Lakehouse Storage)"]
+        T2S["Text2SQL Intelligence<br/>(Natural-Language SQL)"]
+    end
+
+    FILES --> UDI
+    UDI --> RAG
+    DBS --> ETL
+    ETL --> LAKE
+    REMOTE --> SYNC
+    SYNC --> FILES
+    LAKE --> T2S
+
+    RAG --> AI["AI Agents & Search Applications"]
+    T2S --> USERS["Business Users & Dashboards"]
 ```
 
 ---
 
 ## IBM Products Used
 
-| Product | Role |
+| Product | Role in Pipelines |
 |---|---|
-| **[IBM watsonx.data OpenRAG](https://www.ibm.com/products/watsonx-data/ai-enterprise-search)** | Managed enterprise RAG service with OpenSearch backend |
-| **[IBM watsonx.data integration — UDI](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=data-integrating-unstructured-documents)** | Visual, drag-and-drop unstructured document pipeline |
-| **[Docling for IBM watsonx](https://www.ibm.com/products/docling)** | Advanced document conversion for complex PDFs, tables and layouts |
-| **[IBM watsonx.data intelligence](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=tools-data-intelligence)** | Metadata context for Text2SQL; natural-language query generation |
-| **[IBM DataStage](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=datastage-designing-flows)** | Visual ETL/ELT flow designer with enterprise connectors (part of watsonx.data integration) |
-| **[IBM Aspera Sync](https://www.ibm.com/products/aspera/sync)** | High-speed WAN file and repository synchronization |
+| **[IBM watsonx.data OpenRAG](https://www.ibm.com/products/watsonx-data/ai-enterprise-search)** | Managed enterprise RAG service orchestrating vector retrieval, search indexing, and agent grounding |
+| **[IBM watsonx.data integration — UDI](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=data-integrating-unstructured-documents)** | Visual drag-and-drop pipeline for document ingestion, transformation, chunking, and enrichment |
+| **[Docling for IBM watsonx](https://www.ibm.com/products/docling)** | Deep learning document conversion preserving tables, layouts, and reading order for complex documents |
+| **[IBM watsonx.data intelligence — Text2SQL](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=tools-data-intelligence)** | Natural-language query generation using vectorized metadata as context |
+| **[IBM DataStage](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=datastage-designing-flows)** | Visual ETL/ELT flow design with hundreds of pre-built enterprise connectors (part of watsonx.data integration) |
+| **[IBM Aspera Sync](https://www.ibm.com/products/aspera/sync)** | High-speed WAN file and repository synchronization using the patented FASP transport protocol |
 
 ---
 
 ## Design Principles
 
-!!! tip "Build pipelines that last"
-    - **Separate preparation from retrieval** — invest in upstream data quality before tuning retrieval or prompting.
-    - **Prefer governed pipelines over scripts** — use visual ETL and flow tooling for traceability and operational control.
-    - **Keep metadata with data** — always carry source identifiers, document names, permissions and lineage alongside transformed content.
-    - **Plan for change** — document updates, schema evolution and deleted records are first-class lifecycle events, not edge cases.
+!!! tip "Pipeline engineering best practices"
+    - **Separate data preparation from retrieval** — invest in high-fidelity document parsing and cleaning (Docling) before tuning vector embeddings or prompts.
+    - **Prefer governed visual flows over scripts** — use DataStage and UDI flows for auditability, enterprise scheduling, and built-in error handling.
+    - **Maintain metadata alongside payloads** — always preserve source identifiers, document versions, ACLs, and timestamps with indexed chunks.
+    - **Design for incremental processing** — ensure pipelines process only modified files and updated database rows rather than full reprocessing.

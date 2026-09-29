@@ -45,34 +45,36 @@ Bob<span style="color:#0f62fe">+</span> combines Generative AI with IBM technolo
 
 **[Data Core Capabilities](data-core/index.md)**
 
-- **[Context](data-core/context/index.md)**  
-  Where data is brought together and made trusted — combining real-time events, metadata enrichment, lineage, quality signals, and observability to give applications and AI the business context they need.
+- **[Streamhouse](data-core/streamhouse/index.md)**
+  Captures, transports, transforms, governs, and serves the continuously current state of enterprise business events to production applications, analytics, and AI agents at sub-second latency.
 
     | Building Block | What It Enables |
     |---|---|
-    | [Context Hub](data-core/context/context-hub/index.md) | Combine real-time events, enterprise data, metadata, lineage and policy context for AI and analytics |
-    | [Streamhouse](data-core/context/streamhouse/index.md) | Capture, transport, transform, govern, and serve continuously current enterprise data for applications, analytics, and AI |
-    | [Metadata Enrichment & Data Quality](data-core/context/metadata-enrichment/index.md) | Add business meaning, quality rules, descriptions, terms, classifications and relationships to technical data |
-    | [Data Observability](data-core/context/data-observability/index.md) | Detect pipeline and dataset issues before downstream users and AI are impacted |
+    | [Real-Time streaming](data-core/streamhouse/real-time-streaming/index.md) | Capture and transport enterprise event streams and CDC from databases, SaaS, and IoT |
+    | [Transform](data-core/streamhouse/transform/index.md) | Real-time stream processing, event enrichment, filtering, and windowed aggregations in motion |
+    | [Govern](data-core/streamhouse/govern/index.md) | Enforce schema contracts, trace stream lineage, evaluate data quality rules, and catalog data products |
+    | [Serve](data-core/streamhouse/serve/index.md) | Deliver low-latency live state to AI agents (MCP/REST) and open Iceberg tables for lakehouse analytics |
 
-- **[Pipelines](data-core/pipelines/index.md)**  
-  Where data is prepared and moved into forms that applications, search systems, analytics, and AI can consume — covering RAG, document ingestion, Text2SQL, ETL/ELT, and large-file synchronization.
-
-    | Building Block | What It Enables |
-    |---|---|
-    | [RAG](data-core/pipelines/rag/index.md) | Ground applications and agents with governed enterprise knowledge |
-    | [UDI](data-core/pipelines/udi/index.md) | Ingest, parse, cleanse, chunk, enrich and prepare documents for RAG and AI |
-    | [Text2SQL](data-core/pipelines/text2sql/index.md) | Convert natural-language questions into SQL using enriched metadata as context |
-    | [ETL / ELT](data-core/pipelines/etl/index.md) | Build governed batch integration flows across source, transformation and target stages |
-    | [Data Sync](data-core/pipelines/data-sync/index.md) | Synchronize large file sets and repositories securely across WAN and hybrid environments |
-
-- **[Query Engines](data-core/query-engines/index.md)**  
-  The consumption layer — enabling users, applications, analytics, and AI to access the right data through federated SQL, vector retrieval, and serverless compute without unnecessary data movement.
+- **[Pipelines](data-core/pipelines/index.md)**
+  Prepares, transforms, moves, and indexes structured and unstructured data into AI-ready representations — covering RAG, document parsing, Text2SQL, visual batch ETL, and high-speed WAN synchronization.
 
     | Building Block | What It Enables |
     |---|---|
-    | [Zero-Copy Lakehouse](data-core/query-engines/zero-copy-lakehouse/index.md) | Query data across distributed platforms without unnecessary copying |
-    | [Serverless Vector](data-core/query-engines/serverless-vector/index.md) | Elastic vector storage for semantic search, RAG and agent memory patterns |
+    | [RAG](data-core/pipelines/rag/index.md) | Ground applications and agents with governed enterprise documents and hybrid retrieval |
+    | [UDI](data-core/pipelines/udi/index.md) | Ingest, parse, cleanse, chunk, and structure complex unstructured documents for RAG and AI |
+    | [Text2SQL](data-core/pipelines/text2sql/index.md) | Convert natural-language questions into SQL using enriched metadata context |
+    | [ETL](data-core/pipelines/etl/index.md) | Build governed visual batch integration flows across enterprise sources and lakehouse targets |
+    | [Data Sync](data-core/pipelines/data-sync/index.md) | Synchronize large file sets, media, and AI repositories securely across WAN at wire speed |
+
+- **[Lakehouse](data-core/lakehouse/index.md)**
+  Unified lakehouse analytics, multi-engine compute, metadata governance, data observability, and serverless vector retrieval without data duplication.
+
+    | Building Block | What It Enables |
+    |---|---|
+    | [Meta Data Enrichment and Quality](data-core/lakehouse/metadata-enrichment/index.md) | Add business terms, descriptions, profiling, quality rules, and lineage to lakehouse assets |
+    | [Data Observability](data-core/lakehouse/data-observability/index.md) | Detect pipeline failures, data drift, volume anomalies, and SLA breaches before users notice |
+    | [Zero-Copy Lakehouse](data-core/lakehouse/zero-copy-lakehouse/index.md) | Query and process distributed data in place without copying using open Apache Iceberg tables |
+    | [Serverless Vector](data-core/lakehouse/serverless-vector/index.md) | Elastic serverless vector storage for semantic search, RAG, and AI agent memory |
 
 ---
 

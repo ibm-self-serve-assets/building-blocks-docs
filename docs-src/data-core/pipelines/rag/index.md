@@ -1,9 +1,9 @@
-# RAG with OpenRAG and OpenSearch
+# RAG
 
-Use **OpenRAG on IBM watsonx.data** to ground AI applications and agents in enterprise knowledge using document processing, semantic/vector retrieval, keyword search, hybrid retrieval and agentic retrieval patterns.
+Use **IBM watsonx.data (OpenRAG / OpenSearch)** to ground AI applications and agents in enterprise knowledge using document processing, semantic/vector retrieval, keyword search, hybrid retrieval, and agentic retrieval patterns.
 
 !!! info "Product mapping"
-    **IBM watsonx.data OpenRAG + OpenSearch** — OpenSearch is automatically provisioned when OpenRAG is enabled in supported watsonx.data environments and serves as the required search backend.
+    **IBM watsonx.data (OpenRAG / OpenSearch)** — OpenSearch is automatically provisioned when OpenRAG is enabled in supported watsonx.data environments and serves as the required search backend.
 
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:

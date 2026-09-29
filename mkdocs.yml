@@ -43,6 +43,15 @@ plugins:
         'ai-core/ai-trust/shadow-ai-discovery.md': 'ai-core/ai-control-plane/shadow-ai-discovery.md'
         'ai-core/ai-trust/model-evaluation.md': 'ai-core/ai-control-plane/model-evaluation.md'
         'ai-core/ai-trust/real-time-guardrails.md': 'ai-core/ai-control-plane/real-time-guardrails.md'
+        # Data Building Blocks re-architecture redirects
+        'data-core/context/index.md': 'data-core/streamhouse/index.md'
+        'data-core/context/streamhouse/index.md': 'data-core/streamhouse/index.md'
+        'data-core/context/context-hub/index.md': 'data-core/streamhouse/serve/index.md'
+        'data-core/context/metadata-enrichment/index.md': 'data-core/lakehouse/metadata-enrichment/index.md'
+        'data-core/context/data-observability/index.md': 'data-core/lakehouse/data-observability/index.md'
+        'data-core/query-engines/index.md': 'data-core/lakehouse/index.md'
+        'data-core/query-engines/zero-copy-lakehouse/index.md': 'data-core/lakehouse/zero-copy-lakehouse/index.md'
+        'data-core/query-engines/serverless-vector/index.md': 'data-core/lakehouse/serverless-vector/index.md'
 
 markdown_extensions:
   - admonition
@@ -92,12 +101,12 @@ nav:
   - Data:
       - Overview: data-core/index.md
 
-      - Context:
-          - Overview: data-core/context/index.md
-          - Context Hub: data-core/context/context-hub/index.md
-          - Streamhouse: data-core/context/streamhouse/index.md
-          - Metadata Enrichment & Data Quality: data-core/context/metadata-enrichment/index.md
-          - Data Observability: data-core/context/data-observability/index.md
+      - Streamhouse:
+          - Overview: data-core/streamhouse/index.md
+          - Real-Time streaming: data-core/streamhouse/real-time-streaming/index.md
+          - Transform: data-core/streamhouse/transform/index.md
+          - Govern: data-core/streamhouse/govern/index.md
+          - Serve: data-core/streamhouse/serve/index.md
 
       - Pipelines:
           - Overview: data-core/pipelines/index.md
@@ -107,10 +116,12 @@ nav:
           - ETL: data-core/pipelines/etl/index.md
           - Data Sync: data-core/pipelines/data-sync/index.md
 
-      - Query Engines:
-          - Overview: data-core/query-engines/index.md
-          - Zero-Copy Lakehouse: data-core/query-engines/zero-copy-lakehouse/index.md
-          - Serverless Vector: data-core/query-engines/serverless-vector/index.md
+      - Lakehouse:
+          - Overview: data-core/lakehouse/index.md
+          - Meta Data Enrichment and Quality: data-core/lakehouse/metadata-enrichment/index.md
+          - Data Observability: data-core/lakehouse/data-observability/index.md
+          - Zero-Copy Lakehouse: data-core/lakehouse/zero-copy-lakehouse/index.md
+          - Serverless Vector: data-core/lakehouse/serverless-vector/index.md
 
       - Skills and Modes: data-core/bob-skills-and-modes.md
 

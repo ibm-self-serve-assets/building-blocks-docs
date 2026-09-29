@@ -1,9 +1,9 @@
-# ETL / ELT with DataStage
+# ETL
 
-Use **IBM DataStage in IBM watsonx.data integration** to build batch data flows that extract data from source systems, transform it, and deliver it to target systems. DataStage integrates with **IBM watsonx.data** for lakehouse ingestion and access.
+Use **IBM watsonx.data (DataStage)** to build governed batch data flows that extract data from source systems, transform it, and deliver it to lakehouse targets. DataStage integrates directly with **IBM watsonx.data** for high-performance lakehouse ingestion and access.
 
 !!! info "Product mapping"
-    **IBM DataStage** is a capability of **IBM watsonx.data integration** and integrates directly with IBM watsonx.data. The sales-play shorthand may say *watsonx.data (DataStage)*.
+    **IBM watsonx.data (DataStage)** — enterprise visual ETL/ELT flows and connectors hosted in watsonx.data integration.
 
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
@@ -42,7 +42,7 @@ Use DataStage when:
 - You need repeatable ETL/ELT jobs with **operational governance**.
 
 !!! tip "Use Streamhouse instead when…"
-    For CDC with low-latency requirements, continuous event processing, real-time enrichment, or when applications and AI require continuously current data and live operational context, use the **[Streamhouse](../../context/streamhouse/index.md)** building block instead.
+    For CDC with low-latency requirements, continuous event processing, real-time enrichment, or when applications and AI require continuously current data and live operational context, use the **[Streamhouse](../../streamhouse/index.md)** building blocks instead.
 
 ---
 

@@ -1,10 +1,9 @@
-# Unstructured Data Integration (UDI)
+# UDI
 
-Use **IBM watsonx.data integration Unstructured Data Integration** to ingest, cleanse, transform and enrich unstructured content for RAG and AI. Use **Docling for IBM watsonx** when complex documents need high-quality conversion into structured, AI-ready representations.
+Use **IBM watsonx.data integration and IBM Docling** to ingest, cleanse, transform, and enrich unstructured content for RAG and AI. Use **IBM Docling** when complex documents need high-quality conversion into structured, AI-ready representations.
 
 !!! info "Product mapping"
-    - **IBM watsonx.data integration — Unstructured Data Integration (UDI)** — visual, drag-and-drop document pipeline
-    - **Docling for IBM watsonx** — managed document intelligence and conversion for complex layouts
+    **IBM watsonx.data integration, IBM Docling** — visual, drag-and-drop document pipeline (UDI) plus managed deep learning document intelligence (Docling).
 
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:

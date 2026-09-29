@@ -1,9 +1,9 @@
-# Data Sync with IBM Aspera
+# Data Sync
 
-Use **IBM Aspera Sync** to replicate and synchronize large files and data repositories quickly and securely over wide-area networks.
+Use **Aspera** to replicate and synchronize large files, datasets, and AI training repositories quickly and securely over wide-area networks.
 
 !!! info "Product mapping"
-    **IBM Aspera Sync** — high-speed WAN file and repository synchronization using IBM's FASP transport protocol
+    **Aspera** — high-speed WAN file and repository synchronization using IBM's patented FASP transport protocol.
 
 ---
 
@@ -35,7 +35,7 @@ Use Aspera Sync when:
 - A one-to-one, one-to-many, bidirectional or mesh synchronization topology is required.
 
 !!! warning "What this is not"
-    Aspera Sync is a **file/data-set synchronization** capability. For near-real-time replication of relational database changes, use a CDC/data-replication technology such as **watsonx.data integration Data Replication** or the **[Streamhouse](../../context/streamhouse/index.md)** building block (IBM Confluent).
+    Aspera Sync is a **file/data-set synchronization** capability. For near-real-time replication of relational database changes, use a CDC/data-replication technology such as **watsonx.data integration Data Replication** or the **[Streamhouse](../../streamhouse/index.md)** building blocks (IBM Confluent).
 
 ---
 
