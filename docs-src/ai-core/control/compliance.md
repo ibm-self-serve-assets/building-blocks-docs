@@ -77,4 +77,4 @@ For full compliance lifecycle management — regulation mapping, risk assessment
     - [IBM AI Governance Facts Client samples](https://github.com/IBM/ai-governance-factsheet-samples)
 
 !!! info "GitHub Repository"
-    [Compliance Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/ai-compliance)
+    [Compliance Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/compliance)

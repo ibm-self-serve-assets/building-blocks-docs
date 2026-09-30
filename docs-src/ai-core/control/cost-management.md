@@ -32,4 +32,4 @@ Tracking runs on Langfuse, either locally with watsonx Orchestrate Developer Edi
 The [Bob skill for Agent Ops](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/agent-ops) includes Langfuse cost analysis. Ask Bob, for example, *"How do I set up Langfuse so I can see cost per scenario?"*
 
 !!! info "GitHub Repository"
-    [Langfuse observability script for watsonx Orchestrate agents](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/agent-ops/assets/wxo-agents)
+    [Langfuse observability script for watsonx Orchestrate agents](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/assets/wxo-agents)

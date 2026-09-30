@@ -112,7 +112,7 @@ Organizations commonly leverage webMethods Hybrid Integration to:
 ---
 
 !!! info "GitHub Repository"
-    [Agentic SDLC Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/integrate-as-code)
+    [Agentic SDLC Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/engineering/integrate-as-code)
 
 ---
 

@@ -71,7 +71,7 @@ A [Bob skill for Model Evaluation](https://github.com/ibm-self-serve-assets/buil
 
 ## Bob Modes
 
-A [Bob mode for Gen AI evaluation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/agent-ops/model-evaluation/gen-ai-evaluations/bob-modes) is available, providing an AI-assisted workflow that guides you through the evaluation process step by step.
+A [Bob mode for Gen AI evaluation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/model-evaluation/gen-ai-evaluations/bob-modes) is available, providing an AI-assisted workflow that guides you through the evaluation process step by step.
 
 !!! info "GitHub Repository"
-    [Model Evaluation Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/agent-ops/model-evaluation)
+    [Model Evaluation Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/model-evaluation)

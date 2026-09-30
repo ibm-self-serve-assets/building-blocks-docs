@@ -373,7 +373,7 @@ docker run -d -p 8000:8000 \
 
 ### OpenShift
 
-OpenShift manifests are in [`assets/headlessbob/openshift/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/headless-bob/assets/headlessbob/openshift):
+OpenShift manifests are in [`assets/headlessbob/openshift/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/engineering/headless-bob/assets/headlessbob/openshift):
 
 ```bash
 # Download and verify the Bob Shell 2.0.4 binary
@@ -397,7 +397,7 @@ oc rollout status deployment/headlessbob -n binb
 
 ## Client Examples
 
-Ready-to-use Python clients using only Python's standard library are in [`assets/headlessbob/examples/python/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/headless-bob/assets/headlessbob/examples/python). Set environment variables first (use your **service access token**, not the Bob API key):
+Ready-to-use Python clients using only Python's standard library are in [`assets/headlessbob/examples/python/`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/engineering/headless-bob/assets/headlessbob/examples/python). Set environment variables first (use your **service access token**, not the Bob API key):
 
 ```bash
 export HEADLESSBOB_URL="http://127.0.0.1:8000"
@@ -502,7 +502,7 @@ npm run client -- /runs examples/run.json
 ---
 
 !!! info "GitHub Repository"
-    [headlessbob — Headless Bob Reference Implementation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/headless-bob)
+    [headlessbob — Headless Bob Reference Implementation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/engineering/headless-bob)
 
 !!! note "ACP Protocol Reference"
     For full IBM Bob ACP 0.2.0 protocol capabilities, see the [IBM Bob ACP Documentation](https://bob.ibm.com/docs/shell/features/acp). OpenAPI specifications are available at `/api/openapi.json` (REST) and `/acp/openapi.json` (ACP) on any running headlessbob instance.

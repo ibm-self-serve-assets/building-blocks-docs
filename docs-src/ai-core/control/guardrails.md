@@ -184,7 +184,7 @@ All scripts use the `ibm_watsonx_gov` SDK with `MetricsEvaluator` and `GenAIConf
 The repository also ships a production package, `real-time-guardrails`, that wraps the same checks for use as a Python library, a REST server, or an MCP server, with JSONL audit logging.
 
 !!! info "GitHub Repository"
-    [Real-Time Guardrails Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/agent-ops/real-time-guardrails)
+    [Real-Time Guardrails Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/guardrails)
 
 ## Bob Skills
 
@@ -194,4 +194,4 @@ A [Bob skill for Real-Time Guardrails](https://github.com/ibm-self-serve-assets/
 
 ## Bob Modes
 
-A [Bob mode for Real-Time Guardrails](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/agent-ops/real-time-guardrails/bob-modes) is available, walking you through setup, integration design, implementation, threshold tuning, and deployment of guardrails for your agent.
+A [Bob mode for Real-Time Guardrails](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/guardrails/bob-modes) is available, walking you through setup, integration design, implementation, threshold tuning, and deployment of guardrails for your agent.

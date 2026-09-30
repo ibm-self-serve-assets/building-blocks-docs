@@ -454,6 +454,6 @@ Take the next step with this Building Block by choosing the path that best fits 
 ---
 
 !!! info "GitHub Repository"
-    [Agentic SDLC Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering/code-modernization)
+    [Agentic SDLC Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/engineering/code-modernization)
 
 ---

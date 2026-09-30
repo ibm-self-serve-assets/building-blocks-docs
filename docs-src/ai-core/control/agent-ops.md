@@ -79,7 +79,7 @@ graph LR
 
 For teams building agents with **LangGraph or LangChain**, a Python SDK package (`wx_gov_agent_eval`) is also available. It provides three evaluator classes — BasicRAG, ToolCalling, and AdvancedRAG — integrated with IBM watsonx governance for metrics and factsheet tracking.
 
-[LangGraph Agent Evaluation Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/agent-ops/assets/langgraph-agents)
+[LangGraph Agent Evaluation Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/assets/langgraph-agents)
 
 ## Bob Skills
 
@@ -91,7 +91,7 @@ Bob skills for Agent Controls and Real-Time Guardrails are listed on the [Guardr
 
 ## Bob Modes
 
-A [Bob mode for Agent Ops evaluation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/agent-ops/bob-modes) is available, providing an AI-assisted workflow for automated agent evaluation with WXO agents in Bob.
+A [Bob mode for Agent Ops evaluation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/bob-modes) is available, providing an AI-assisted workflow for automated agent evaluation with WXO agents in Bob.
 
 !!! info "GitHub Repository"
-    [Agent Ops Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/agent-ops)
+    [Agent Ops Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops)

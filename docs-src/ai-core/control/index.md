@@ -30,4 +30,4 @@ The Control building blocks provide frameworks, production-ready code samples, a
 3. Check **bob-modes** for AI-assisted evaluation workflows.
 
 !!! info "GitHub Repository"
-    [Control Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane)
+    [Control Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control)

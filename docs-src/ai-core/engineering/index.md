@@ -27,4 +27,4 @@ The Engineering building blocks cover five interconnected engineering capabiliti
 2. Check **bob-modes** for AI-assisted development workflows.
 
 !!! info "GitHub Repository"
-    [Engineering Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering)
+    [Engineering Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/engineering)

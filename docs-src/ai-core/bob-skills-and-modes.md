@@ -75,9 +75,9 @@ Instructions and related files for these custom modes can be found in their resp
       <tr>
         <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/control.png" alt="" class="title-icon"><span>Control</span></div></td>
         <td>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/agent-ops/bob-modes/base-modes">Agent Ops</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/bob-modes/base-modes">Agent Ops</a>
             <br>Foundation mode for pre-deployment evaluation of watsonx Orchestrate agents. Bob automates benchmark generation and provides a structured workflow for assessing agent behavior across key dimensions — agent-specific metrics, cost and latency, and adversarial robustness through red-teaming.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/agent-ops/model-evaluation/gen-ai-evaluations/bob-modes/base-modes">Model Evaluation</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/model-evaluation/gen-ai-evaluations/bob-modes/base-modes">Model Evaluation</a>
             <br>Bob helps you evaluate GenAI apps (RAG pipelines, LLM outputs, chatbot safety) using IBM watsonx governance SDK and custom watsonx governance MCP server.</p>
         </td>
       </tr>
