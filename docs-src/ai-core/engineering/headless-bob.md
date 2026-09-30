@@ -2,7 +2,7 @@
 
 IBM Bob was built for the IDE — but engineering work doesn't stop at the developer's desk. The **Headless Bob building block** is the pattern for running Bob outside the IDE: in CI/CD pipelines, automation scripts, Slack workflows, and any system that needs to call Bob programmatically without a developer actively present.
 
-The reference implementation is **headlessbob** — a TypeScript/Node.js service that runs **IBM Bob Shell 2.0.4** and exposes it through native **[Agent Communication Protocol (ACP) 0.2.0](https://www.ibm.com/think/topics/agent-communication-protocol)** and thread-based **REST APIs**, with an integrated browser UI. Both APIs communicate with Bob Shell internally via IBM's **[Agent Client Protocol](https://bob.ibm.com/docs/shell/features/acp)**, the officially supported programmatic interface to Bob.
+The reference implementation is **headlessbob** — a TypeScript/Node.js service that runs **IBM Bob Shell 2.0.4** and exposes it through native **[Agent Communication Protocol (ACP) 0.2.0](https://www.ibm.com/think/topics/agent-communication-protocol)**, thread-based **REST APIs**, and **MCP** (Streamable HTTP) — all on the same port, with an integrated browser UI. All three interfaces communicate with Bob Shell internally via IBM's **[Agent Client Protocol](https://bob.ibm.com/docs/shell/features/acp)**, the officially supported programmatic interface to Bob.
 
 ## Why This Matters
 
@@ -17,13 +17,14 @@ The reference implementation is **headlessbob** — a TypeScript/Node.js service
 
 | Area | What It Covers |
 |------|---------------|
-| **[How headlessbob Works](#how-headlessbob-works)** | Architecture: ACP + REST APIs, run manager, SQLite, workspace model, browser UI |
+| **[How headlessbob Works](#how-headlessbob-works)** | Architecture: REST, ACP, and MCP interfaces, run manager, SQLite, workspace model, browser UI |
 | **[Interaction Modes](#interaction-modes)** | Sync, async, and stream execution modes via ACP and REST |
 | **[Browser UI](#integrated-browser-ui)** | Built-in chat interface with live streaming, file explorer, and run diagnostics |
 | **[REST API Reference](#rest-api-reference)** | Full `/api/v1` endpoint surface for threads, runs, and files |
 | **[ACP API Reference](#acp-api-reference)** | ACP 0.2.0 endpoints for agent discovery, runs, sessions, and events |
+| **[MCP API Reference](#mcp-api-reference)** | MCP Streamable HTTP endpoint, tools, and client usage |
 | **[Deployment](#deployment)** | Local (Node.js), Docker, and OpenShift setup |
-| **[Client Examples](#client-examples)** | Python standard-library clients for REST, ACP, and cancellation |
+| **[Client Examples](#client-examples)** | Python standard-library clients for REST, ACP, MCP, and cancellation |
 | **[Use Cases](#use-cases)** | CI/CD integration, Slack automation, multi-agent orchestration |
 | **[Bob Skills & Modes](#bob-skills)** | AI-assisted workflows for configuring headless pipelines from your IDE |
 
@@ -31,7 +32,7 @@ The reference implementation is **headlessbob** — a TypeScript/Node.js service
 
 ## How headlessbob Works
 
-headlessbob sits between any API client and Bob Shell. Clients authenticate with a bearer token, submit work via REST or ACP, and receive results synchronously, asynchronously, or via live SSE streaming. Bob Shell runs in an isolated workspace directory per session, with all generated artifacts available for download.
+headlessbob sits between any API client and Bob Shell. Clients authenticate with a bearer token, submit work via REST, ACP, or MCP, and receive results synchronously, asynchronously, or via live SSE streaming. Bob Shell runs in an isolated workspace directory per session, with all generated artifacts available for download.
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#ffffff', 'clusterBkg': '#f4f6fb', 'clusterBorder': '#c5cde0', 'titleColor': '#1a1a2e', 'fontSize': '14px'}}}%%
@@ -40,11 +41,13 @@ flowchart LR
         UI[Browser UI]
         Client[API Client]
         Agent[ACP Client]
+        MCPClient[MCP Client]
     end
 
     subgraph Service["headlessbob"]
         REST[REST API /api/v1]
         ACP[ACP API /agents /runs]
+        MCP[MCP /mcp Streamable HTTP]
         Manager[Run Manager]
     end
 
@@ -57,8 +60,10 @@ flowchart LR
     UI --> REST
     Client --> REST
     Agent --> ACP
+    MCPClient --> MCP
     REST --> Manager
     ACP --> Manager
+    MCP --> Manager
     Manager --> Protocol
     Protocol --> Bob
     Manager --> Store
@@ -70,8 +75,8 @@ flowchart LR
     classDef bob     fill:#0f3460,color:#ffffff,stroke:#3949ab,stroke-width:2px,font-weight:600
     classDef store   fill:#f4f6fb,color:#1a1a2e,stroke:#c5cde0,stroke-width:1.5px
 
-    class UI,Client,Agent client
-    class REST,ACP api
+    class UI,Client,Agent,MCPClient client
+    class REST,ACP,MCP api
     class Manager manager
     class Protocol runtime
     class Bob bob
@@ -81,8 +86,8 @@ flowchart LR
 **Key design decisions:**
 
 - **TypeScript/Node.js runtime** — headlessbob is a Node.js 22.22+ service. Bob Shell 2.0.4 runs as a managed subprocess within it.
-- **Agent Client Protocol connector** — both the REST API (including the browser UI) and the ACP API share a single `BobClientRuntime` that communicates with Bob Shell over **Agent Client Protocol v1** (`bob acp`) via stdio. The old `BobRuntime` (`bob run`) is retained for legacy compatibility only.
-- **Dual protocol surface** — ACP 0.2.0 endpoints (`/agents`, `/runs`, `/session`) for agent interoperability, plus thread-based REST (`/api/v1`) for direct integration. Both share the same run manager and workspace layer.
+- **Agent Client Protocol connector** — all three interfaces (REST, ACP, and MCP) share a single `BobClientRuntime` that communicates with Bob Shell over **Agent Client Protocol v1** (`bob acp`) via stdio. The old `BobRuntime` (`bob run`) is retained for legacy compatibility only.
+- **Triple protocol surface** — ACP 0.2.0 endpoints (`/agents`, `/runs`, `/session`) for agent interoperability; thread-based REST (`/api/v1`) for direct integration and the browser UI; and MCP (`/mcp`, Streamable HTTP) for any MCP-compatible client or agent framework. All three share the same run manager, workspace layer, and Agent Client Protocol connector.
 - **Workspace isolation** — every session gets its own UUID workspace directory under `DATA_DIR/workspaces`. Bob's internal history lives under `$HOME/.bob`.
 - **SQLite persistence** — run metadata, session ownership, task mappings, and ordered events are stored in `DATA_DIR/runs.sqlite`. Conversations survive service restarts.
 - **Bearer token auth** — all endpoints require `Authorization: Bearer <TOKEN>`. Tokens are configured in `AUTH_TOKENS` in `.env`. No external IdP required.
@@ -246,6 +251,64 @@ curl -s -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
 
 ---
 
+## MCP API Reference
+
+headlessbob exposes Bob Shell to any **MCP-compatible client or agent framework** via a **Streamable HTTP** endpoint at `/mcp`. The transport is stateless — each call is a standard JSON-RPC 2.0 `POST` with no session handshake or persistent connection required. Bob's conversation and workspace state persists independently in SQLite.
+
+**Authentication:** `Authorization: Bearer <service-token>` (same `AUTH_TOKENS` token as REST/ACP — not the `BOB_API_KEY`). Browser `Origin` requests are rejected on this endpoint.
+
+### MCP Tools
+
+| Tool | Arguments | Returns |
+|------|-----------|---------|
+| `bob_create_thread` | `title` (optional string) | Thread object including `id` |
+| `bob_send_message` | `thread_id` (UUID), `content` (string), `request_id` (string) | Thread, run, and message ID |
+| `bob_get_run` | `run_id` (UUID) | Run status, completed output, and reported usage |
+| `bob_cancel_run` | `run_id` (UUID) | Current cancellation / run status |
+
+**Typical flow:** call `bob_create_thread` → `bob_send_message` → poll `bob_get_run` every few seconds until status is `completed`, `failed`, or `cancelled`. Save the thread ID for follow-up turns. Threads created via MCP are visible in the browser UI for the same caller.
+
+**`request_id` idempotency:** use a unique value per intended message (1–128 alphanumeric characters, dots, underscores, colons, or hyphens). On retry, reuse the same `request_id` with the same thread and content to retrieve the original run without re-executing. Reusing it with different content returns a tool error.
+
+!!! note "Disconnecting does not cancel a run"
+    Closing an MCP client connection does not stop the server-side Bob run. Use `bob_cancel_run` explicitly if you need to stop an active run.
+
+### MCP Quick Reference
+
+**TypeScript SDK client:**
+```js
+import { Client } from '@modelcontextprotocol/sdk/client/index.js';
+import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js';
+
+const client = new Client({ name: 'bob-client', version: '1.0.0' });
+await client.connect(new StreamableHTTPClientTransport(
+  new URL('/mcp', process.env.HEADLESSBOB_URL),
+  { requestInit: { headers: { Authorization: `Bearer ${process.env.HEADLESSBOB_TOKEN}` } } }
+));
+
+// Create a thread and start a run
+const thread = await client.callTool({ name: 'bob_create_thread', arguments: { title: 'Demo' } });
+const started = await client.callTool({
+  name: 'bob_send_message',
+  arguments: {
+    thread_id: thread.structuredContent.id,
+    content: 'Create hello.txt containing hello.',
+    request_id: 'demo-1'
+  }
+});
+const runId = started.structuredContent.run.run_id;
+
+// Poll until complete (Bob run continues after client.close())
+await client.close();
+```
+
+**MCP integration test:**
+```bash
+npx tsx --test tests/mcp.test.ts   # verifies auth, ownership, retries, continuation, cancellation — no Bob credit consumed
+```
+
+---
+
 ## Deployment
 
 ### Prerequisites
@@ -288,9 +351,10 @@ Access the UI at `http://127.0.0.1:8000`. Connect using your `owner` service tok
 
 Run the test suite:
 ```bash
-npm run check              # TypeScript type-check, fixture/HTTP unit and contract tests (52 tests, no API key required)
+npm run check              # TypeScript type-check, fixture/HTTP unit and contract tests (no API key required)
 npm run smoke              # End-to-end smoke test via legacy Bob runtime (consumes small credit)
 npm run smoke:client-bridge  # End-to-end smoke test via Agent Client Protocol bridge (consumes small credit)
+npx tsx --test tests/mcp.test.ts  # MCP SDK integration tests — auth, ownership, retries, continuation, cancellation (no Bob credit)
 ```
 
 ### Docker
@@ -362,6 +426,22 @@ python3 examples/python/rest.py "Create hello.txt containing Hello from Python."
 python3 examples/python/rest.py "Explain the file you created." --thread <THREAD_ID>
 ```
 
+**MCP — drive Bob over Model Context Protocol** (`mcp.py`):
+```bash
+# Run a prompt and print Bob's response
+python3 examples/python/mcp.py "Create hello.txt containing Hello from MCP."
+
+# Follow up in the same thread
+python3 examples/python/mcp.py "What did you just create?" --thread <THREAD_ID>
+
+# Retry the same send safely (reuse the same --request-id)
+python3 examples/python/mcp.py "Create hello.txt containing Hello from MCP." \
+  --thread <THREAD_ID> --request-id my-unique-key-1
+
+# Cancel an active run
+python3 examples/python/mcp.py --cancel <RUN_ID>
+```
+
 **Cancel an active run** (`cancel.py`):
 ```bash
 # Cancel via REST or ACP using a printed run ID
@@ -379,6 +459,7 @@ npm run client -- /runs examples/run.json
 |---------|-------------|
 | `acp.py` | Agent discovery, ACP runs (async/stream/sync), multi-turn session continuation |
 | `rest.py` | Create threads, send tasks, stream live output, download generated workspace files |
+| `mcp.py` | Drive Bob over MCP (Streamable HTTP); create threads, send messages, poll for completion, cancel runs |
 | `cancel.py` | Cancel an active run by ID via REST or ACP; waits for terminal status |
 | `client.py` | Shared HTTP helpers (`request`, `api`, `events`, `wait_run`) used by the other examples — not a standalone script |
 
