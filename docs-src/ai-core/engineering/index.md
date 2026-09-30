@@ -1,8 +1,10 @@
-# AI Engineering
+# Engineering
 
-AI Engineering provides the development layer that spans the entire software lifecycle — from planning and coding to testing, documentation, modernization, and CI/CD. Powered by **IBM Bob** and enterprise-grade integration platforms, it gives teams the tools to build new software faster, retire legacy systems systematically, and connect everything in between.
+Engineering is part of the **[AI Control Plane](../index.md)**, alongside [Agents](../agents/index.md) and [Control](../control/index.md).
 
-The AI Engineering building blocks cover five interconnected engineering capabilities:
+Engineering provides the development layer that spans the entire software lifecycle — from planning and coding to testing, documentation, modernization, and CI/CD. Powered by **IBM Bob** and enterprise-grade integration platforms, it gives teams the tools to build new software faster, retire legacy systems systematically, and connect everything in between.
+
+The Engineering building blocks cover five interconnected engineering capabilities:
 
 - **Agentic SDLC** — an IDE-native AI partner that handles every phase of building new software, from requirements through CI/CD, so teams ship faster without sacrificing quality or governance.
 - **Code Modernization** — AI-powered analysis and transformation of legacy Java, mainframe, IBM Z, and IBM i applications into modern cloud-native architectures, preserving business logic throughout.
@@ -25,4 +27,4 @@ The AI Engineering building blocks cover five interconnected engineering capabil
 2. Check **bob-modes** for AI-assisted development workflows.
 
 !!! info "GitHub Repository"
-    [AI Engineering Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering)
+    [Engineering Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-engineering)

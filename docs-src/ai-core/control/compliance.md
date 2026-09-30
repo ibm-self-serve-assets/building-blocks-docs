@@ -1,4 +1,4 @@
-# AI Compliance
+# Compliance
 
 AI regulations are multiplying fast and every AI use case may fall under different rules. Without a systematic approach, compliance becomes a bottleneck to deploying AI — or a risk if missed entirely.
 
@@ -77,4 +77,4 @@ For full compliance lifecycle management — regulation mapping, risk assessment
     - [IBM AI Governance Facts Client samples](https://github.com/IBM/ai-governance-factsheet-samples)
 
 !!! info "GitHub Repository"
-    [AI Compliance Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/ai-compliance)
+    [Compliance Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/ai-control-plane/ai-compliance)

@@ -29,7 +29,7 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
         </td>
       </tr>
       <tr>
-        <td><div class="skill-subgroup"><img src="images/ai-control-plane.png" alt="" class="title-icon"><span>AI Control Plane</span></div></td>
+        <td><div class="skill-subgroup"><img src="images/control.png" alt="" class="title-icon"><span>Control</span></div></td>
         <td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/real-time-guardrails">Real-Time Guardrails</a>
             <br>Add runtime safety and quality guardrails to Gen AI, RAG agents, and watsonx Orchestrate tools using watsonx.governance, Pass/Flag/Block at input, retrieval, generation, and output.</p>

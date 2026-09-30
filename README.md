@@ -6,18 +6,19 @@ The markdown files located in [docs-src](./docs-src) are used by Github Pages to
 
 ## Capability Areas
 
-### AI – Agentic AI Build and Control
+### AI Control Plane – Agents, Control, and Engineering
 
 | Group | Building Block | Primary Products |
 |---|---|---|
 | **Agents** | [Agent Builder](docs-src/ai-core/agents/agent-builder.md) | IBM watsonx Orchestrate (ADK) |
 | **Agents** | [Multi-Agent Orchestration](docs-src/ai-core/agents/multi-agent-orchestration.md) | IBM watsonx Orchestrate |
-| **AI Control Plane** | [Agent Ops](docs-src/ai-core/ai-control-plane/agent-ops.md) | IBM watsonx.governance + IBM watsonx Orchestrate |
-| **AI Control Plane** | [AI Cost Management](docs-src/ai-core/ai-control-plane/ai-cost-management.md) | IBM watsonx.governance |
-| **AI Control Plane** | [AI Compliance](docs-src/ai-core/ai-control-plane/ai-compliance.md) | IBM watsonx.governance |
-<!-- Hidden for now: | **AI Control Plane** | [Lifecycle Management](docs-src/ai-core/ai-control-plane/lifecycle-management.md) | IBM watsonx.governance | -->
-| **Engineering** | [Agentic SDLC](docs-src/ai-core/ai-engineering/agentic-sdlc.md) | IBM Bob |
-| **Engineering** | [Code Modernization](docs-src/ai-core/ai-engineering/code-modernization.md) | IBM Bob |
+| **Control** | [Agent Ops](docs-src/ai-core/control/agent-ops.md) | IBM watsonx.governance + IBM watsonx Orchestrate |
+| **Control** | [Guardrails](docs-src/ai-core/control/guardrails.md) | IBM watsonx Orchestrate + IBM watsonx.governance |
+| **Control** | [Cost Management](docs-src/ai-core/control/cost-management.md) | IBM watsonx.governance |
+| **Control** | [Compliance](docs-src/ai-core/control/compliance.md) | IBM watsonx.governance |
+<!-- Hidden for now: | **Control** | [Lifecycle Management](docs-src/ai-core/control/lifecycle-management.md) | IBM watsonx.governance | -->
+| **Engineering** | [Agentic SDLC](docs-src/ai-core/engineering/agentic-sdlc.md) | IBM Bob |
+| **Engineering** | [Code Modernization](docs-src/ai-core/engineering/code-modernization.md) | IBM Bob |
 
 ---
 

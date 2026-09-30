@@ -1,31 +1,36 @@
-# AI – Building Blocks
+# AI Control Plane
 
-**The AI Building Blocks** provide a practical, composable foundation for building, governing, and engineering enterprise AI systems — from autonomous agents and multi-agent orchestration to runtime policy enforcement, compliance, and AI-accelerated software development.
+**The AI Control Plane** is a practical, composable foundation for building, controlling, and engineering enterprise AI systems. It brings together three groups of building blocks:
+
+- **[Agents](agents/index.md)** — build, orchestrate, and deploy autonomous AI agents that act across business systems.
+- **[Control](control/index.md)** — evaluate, observe, enforce policy on, and govern every agent and model in production, including cost and compliance.
+- **[Engineering](engineering/index.md)** — accelerate software delivery with IBM Bob, from new builds to legacy modernization and integration.
 
 !!! info "How to use this section"
     Start with the business outcome you need, then choose the smallest building block that solves it. The blocks are designed to work independently or together across the full AI lifecycle — from building agents to governing them in production to accelerating the engineering work itself.
 
-![AI Core Building Blocks Architecture](agents/images/AI_BB_Architecture.png)
+![AI Control Plane Architecture](agents/images/AI_BB_Architecture.png)
 
 ---
 
 ## Building Block Map
 
-| Pillar | Building Block | Primary Products | What It Enables |
+| Group | Building Block | Primary Products | What It Enables |
 |---|---|---|---|
 | **Agents** | [Agent Builder](agents/agent-builder.md) | IBM watsonx Orchestrate (ADK) | Create and deploy LLM-backed, tool-calling agents — from local development to production |
 | **Agents** | [Multi-Agent Orchestration](agents/multi-agent-orchestration.md) | IBM watsonx Orchestrate, A2A, AI Gateway | Coordinate wxO agents with external agents via open standards and route LLM calls across providers |
-| **AI Control Plane** | [Agent Ops](ai-control-plane/agent-ops.md) | IBM watsonx.governance, IBM watsonx Orchestrate | Evaluate, observe, and govern agents — benchmarking, red-teaming, runtime policy controls, cost tracking |
-| **AI Control Plane** | [AI Cost Management](ai-control-plane/ai-cost-management.md) | IBM watsonx.governance | Track, allocate, and optimize the cost of AI workloads across the enterprise |
-| **AI Control Plane** | [AI Compliance](ai-control-plane/ai-compliance.md) | IBM watsonx.governance | Map AI use cases to regulations, manage risk assessments, and report compliance posture |
-| **AI Engineering** | [Agentic SDLC](ai-engineering/agentic-sdlc.md) | IBM Bob | IDE-native AI agent spanning planning, coding, testing, documentation, modernization, and CI/CD |
-| **AI Engineering** | [Code Modernization](ai-engineering/code-modernization.md) | IBM Bob | Transform legacy Java, mainframe, IBM Z, and IBM i applications into modern cloud-native systems |
-| **AI Engineering** | [Integration as Code](ai-engineering/integration-as-code.md) | IBM webMethods | Connect SaaS apps, on-premise systems, APIs, and event streams through a low-code iPaaS model |
-| **AI Engineering** | [Headless Bob](ai-engineering/headless-bob.md) | IBM Bob | Run Bob autonomously in CI/CD pipelines, scheduled jobs, and event-driven automations |
-| **AI Engineering** | [Context Engineering](ai-engineering/context-engineering.md) | IBM Bob | Design and optimise the context agents and LLMs receive — prompt architecture, RAG patterns, context window management |
+| **Control** | [Agent Ops](control/agent-ops.md) | IBM watsonx.governance, IBM watsonx Orchestrate | Evaluate and observe agents — benchmarking, red-teaming, failure analysis, traces and latency |
+| **Control** | [Guardrails](control/guardrails.md) | IBM watsonx Orchestrate, IBM watsonx.governance | Enforce runtime policy on agents, tools, and models — PII filters, content safety, secrets detection, rate limits, model fallback, and Pass/Flag/Block checks for any framework |
+| **Control** | [Cost Management](control/cost-management.md) | IBM watsonx Orchestrate, IBM watsonx.governance | Track cost and token usage per agent interaction today; enterprise allocation and budgets coming soon |
+| **Control** | [Compliance](control/compliance.md) | IBM watsonx.governance | Map AI use cases to regulations, manage risk assessments, and report compliance posture |
+| **Engineering** | [Agentic SDLC](engineering/agentic-sdlc.md) | IBM Bob | IDE-native AI agent spanning planning, coding, testing, documentation, modernization, and CI/CD |
+| **Engineering** | [Code Modernization](engineering/code-modernization.md) | IBM Bob | Transform legacy Java, mainframe, IBM Z, and IBM i applications into modern cloud-native systems |
+| **Engineering** | [Integration as Code](engineering/integration-as-code.md) | IBM webMethods | Connect SaaS apps, on-premise systems, APIs, and event streams through a low-code iPaaS model |
+| **Engineering** | [Headless Bob](engineering/headless-bob.md) | IBM Bob | Run Bob autonomously in CI/CD pipelines, scheduled jobs, and event-driven automations |
+| **Engineering** | [Context Engineering](engineering/context-engineering.md) | IBM Bob | Design and optimise the context agents and LLMs receive — prompt architecture, RAG patterns, context window management |
 
-<!-- Hidden for now — restore to the AI Control Plane rows above:
-| **AI Control Plane** | [Lifecycle Management](ai-control-plane/lifecycle-management.md) | IBM watsonx.governance | Manage AI models and agents from onboarding through retirement |
+<!-- Hidden for now — restore to the Control rows above:
+| **Control** | [Lifecycle Management](control/lifecycle-management.md) | IBM watsonx.governance | Manage AI models and agents from onboarding through retirement |
 -->
 
 ---
@@ -51,17 +56,17 @@
 
 ---
 
-## 2. AI Control Plane
+## 2. Control
 
 > **Goal:** enforce, evaluate, and govern every AI agent and model in production — making AI safe to operate at enterprise scale.
 
 !!! success "Business Value"
     - **Policy without code changes** — attach PII filters, content guardrails, secrets detection, rate limits, and model fallback to any agent as configuration, updated without redeploy.
-    - **Full observability before and after deployment** — benchmark agents, run red-team attacks, trace tool calls, and track cost and latency from a single control plane.
+    - **Full observability before and after deployment** — benchmark agents, run red-team attacks, trace tool calls, and track cost and latency from one place.
     - **Regulatory confidence** — map AI use cases to EU AI Act, NIST AI RMF, and other frameworks; generate evidence for audits; manage risk assessments at the portfolio level.
     - **Cost accountability** — allocate AI spend by team, use case, or model; identify waste and set budgets before costs become unmanageable.
 
-**Use the AI Control Plane when:**
+**Use Control when:**
 
 - Agents handle sensitive data and need **PII filtering, content guardrails, or secrets detection** enforced at runtime.
 - You need to **evaluate agent quality and safety** before deployment — benchmarking, red-teaming, and adversarial testing.
@@ -69,11 +74,11 @@
 - **AI costs are growing** and you need visibility, allocation, and control across teams and workloads.
 - Models need **reliability engineering** — fallback routing, load balancing, and retry policies when primary endpoints degrade.
 
-[Explore AI Control Plane →](ai-control-plane/index.md)
+[Explore Control →](control/index.md)
 
 ---
 
-## 3. AI Engineering
+## 3. Engineering
 
 > **Goal:** accelerate every phase of software delivery — building new systems with AI assistance and systematically modernizing the legacy systems that hold enterprises back.
 
@@ -84,7 +89,7 @@
     - **Agentic workflows in the delivery pipeline** — headless Bob brings AI-assisted automation directly into CI/CD, code review, and scheduled engineering tasks.
     - **Context as a first-class engineering discipline** — structured prompt architecture, context window management, and RAG context patterns that directly determine agent quality and cost.
 
-**Use AI Engineering when:**
+**Use Engineering when:**
 
 - Development teams need an **AI partner across the full SDLC** — not just code generation, but planning, testing, documentation, and CI/CD.
 - The enterprise has **legacy applications** (Java monoliths, mainframe COBOL, IBM Z, IBM i) that need systematic modernization without business logic loss.
@@ -92,7 +97,7 @@
 - You want **Bob running autonomously** in pipelines and scheduled jobs — code reviews, security scans, documentation updates — without a developer actively in the loop.
 - Agent quality or cost is unexpectedly poor and the root cause is **poorly structured prompts or context**.
 
-[Explore AI Engineering →](ai-engineering/index.md)
+[Explore Engineering →](engineering/index.md)
 
 ---
 
@@ -101,7 +106,7 @@
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'clusterBkg': '#f4f4f4', 'clusterBorder': '#c6c6c6', 'edgeLabelBackground': '#ffffff'}}}%%
 flowchart TB
-    subgraph ENG["3. AI Engineering"]
+    subgraph ENG["3. Engineering"]
         direction LR
         BOB["IBM Bob<br/>Agentic SDLC · Code Modernization<br/>Integration as Code · Context Engineering"]:::eng
     end
@@ -117,11 +122,12 @@ flowchart TB
         SYSTEMS(["🏢  Enterprise Systems<br/>CRM · ERP · Databases · Events"]):::systems
         USERS(["👤  Users · Channels · APIs"]):::input
 
-        subgraph CP["2. AI Control Plane"]
+        subgraph CP["2. Control"]
             direction TB
-            AO["Agent Ops<br/>Eval · Observability · Policy Controls"]:::ctrl
-            AC["AI Compliance<br/>Regulatory Mapping · Risk"]:::ctrl
+            AO["Agent Ops<br/>Eval · Observability"]:::ctrl
+            GR["Guardrails<br/>Agent Controls · Real-Time SDK"]:::ctrl
             CM["Cost Management<br/>Allocation · Budgets"]:::ctrl
+            AC["Compliance<br/>Regulatory Mapping · Risk"]:::ctrl
         end
     end
 
@@ -149,14 +155,14 @@ flowchart TB
 |---|---|
 | "I need to automate a multi-step business workflow" | [Agent Builder](agents/agent-builder.md) |
 | "I have multiple agents that need to work together" | [Multi-Agent Orchestration](agents/multi-agent-orchestration.md) |
-| "My agent is producing harmful or non-compliant output" | [Agent Ops](ai-control-plane/agent-ops.md) |
-| "I need PII filtering or content guardrails on my agent" | [Agent Ops](ai-control-plane/agent-ops.md) |
-| "AI costs are growing and I can't see where" | [AI Cost Management](ai-control-plane/ai-cost-management.md) |
-| "AI regulation requires documented risk assessments" | [AI Compliance](ai-control-plane/ai-compliance.md) |
-| "My development team needs an AI partner across the full SDLC" | [Agentic SDLC](ai-engineering/agentic-sdlc.md) |
-| "We have legacy Java / mainframe / IBM Z apps that need modernizing" | [Code Modernization](ai-engineering/code-modernization.md) |
-| "We need enterprise integrations without heavy custom code" | [Integration as Code](ai-engineering/integration-as-code.md) |
-| "Agent quality is poor and I think it's a context problem" | [Context Engineering](ai-engineering/context-engineering.md) |
+| "My agent is producing harmful or non-compliant output" | [Agent Ops](control/agent-ops.md) |
+| "I need PII filtering or content guardrails on my agent" | [Guardrails](control/guardrails.md) |
+| "AI costs are growing and I can't see where" | [Cost Management](control/cost-management.md) |
+| "AI regulation requires documented risk assessments" | [Compliance](control/compliance.md) |
+| "My development team needs an AI partner across the full SDLC" | [Agentic SDLC](engineering/agentic-sdlc.md) |
+| "We have legacy Java / mainframe / IBM Z apps that need modernizing" | [Code Modernization](engineering/code-modernization.md) |
+| "We need enterprise integrations without heavy custom code" | [Integration as Code](engineering/integration-as-code.md) |
+| "Agent quality is poor and I think it's a context problem" | [Context Engineering](engineering/context-engineering.md) |
 
 ---
 
@@ -171,4 +177,4 @@ flowchart TB
 | **[IBM webMethods](https://www.ibm.com/products/webmethods-integration)** | Cloud-native iPaaS — hybrid integration, API management, B2B/EDI, and event-driven architectures |
 
 !!! info "GitHub Repository"
-    [AI Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main)
+    [AI Control Plane Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai)
