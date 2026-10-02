@@ -16,7 +16,7 @@ Use **watsonx.data Integration (Databand)** and **IBM Data Observability by Data
 
 | Asset | Description |
 |---|---|
-| **[databand-pipeline-observability](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/data-observability/assets/databand-pipeline-observability)** | Databand monitoring blueprints — OpenLineage event emitters for Python, Spark, and DataStage, custom alerting rule definitions, and metric dashboards |
+| **[databand-pipeline-monitor](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/data-observability/assets/databand-pipeline-monitor)** | Databand monitoring blueprints — OpenLineage event emitters for Python, Spark, and DataStage, custom alerting rule definitions, and metric dashboards |
 
 ---
 
@@ -24,7 +24,7 @@ Use **watsonx.data Integration (Databand)** and **IBM Data Observability by Data
 
 | Skill | Description |
 |---|---|
-| **[data-observability-databand](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/data-observability/bob-skills/data-observability-databand.zip)** | Databand pipeline onboarding, OpenLineage event design (START / COMPLETE / FAIL), alert policy authoring (null-rate, schema-drift, SLA-breach), and IAM auth patterns |
+| **[databand-pipeline-setup](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/data-observability/bob-skills/databand-pipeline-setup.zip)** | Databand pipeline onboarding, OpenLineage event design (START / COMPLETE / FAIL), alert policy authoring (null-rate, schema-drift, SLA-breach), and IAM auth patterns |
 
 !!! tip "Installing skills"
     Download the skill `.zip` files and copy the skill folders to `~/.bob/skills` (global) or `<project>/.bob/skills` (project-level). See the [Data Skills and Modes](../../bob-skills-and-modes.md) page for full installation instructions.
