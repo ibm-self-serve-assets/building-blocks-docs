@@ -16,7 +16,8 @@ Use **IBM watsonx.data intelligence** to add business and governance context, se
 
 | Asset | Description |
 |---|---|
-| **[metadata-enrichment-quality-rules](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/metadata-enrichment/assets/metadata-enrichment-quality-rules)** | Governance reference templates — automated profiling configurations, business glossary mapping, data quality rule sets, and OpenLineage instrumentation |
+| **[quality-rules-engine](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/metadata-enrichment/data-quality/assets/quality-rules-engine)** | Data quality rules engine — automated profiling configurations, business glossary mapping, quality rule sets, and threshold management for AI-ready data |
+| **[openlineage-collector](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/metadata-enrichment/data-lineage/assets/openlineage-collector)** | OpenLineage event collection and lineage graph building for end-to-end data traceability |
 
 ---
 
@@ -24,8 +25,8 @@ Use **IBM watsonx.data intelligence** to add business and governance context, se
 
 | Skill | Description |
 |---|---|
-| **[data-quality-rules](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/metadata-enrichment/bob-skills/data-quality-rules.zip)** | Data quality rule authoring, watsonx.data intelligence quality checks, profiling automation, threshold design, and compliance reporting patterns for AI-ready data |
-| **[openlineage-instrumentation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/metadata-enrichment/bob-skills/openlineage-instrumentation.zip)** | OpenLineage event design, Python/DataStage/Spark instrumentation patterns, IBM Databand lineage API integration, and lineage graph authoring for end-to-end data traceability |
+| **[data-quality-rules](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/metadata-enrichment/data-quality/bob-skills/data-quality-rules.zip)** | Data quality rule authoring, watsonx.data intelligence quality checks, profiling automation, threshold design, and compliance reporting patterns for AI-ready data |
+| **[openlineage-instrumentation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/metadata-enrichment/data-lineage/bob-skills/openlineage-instrumentation.zip)** | OpenLineage event design, Python/DataStage/Spark instrumentation patterns, IBM Databand lineage API integration, and lineage graph authoring for end-to-end data traceability |
 
 !!! tip "Installing skills"
     Download the skill `.zip` files and copy the skill folders to `~/.bob/skills` (global) or `<project>/.bob/skills` (project-level). See the [Data Skills and Modes](../../bob-skills-and-modes.md) page for full installation instructions.

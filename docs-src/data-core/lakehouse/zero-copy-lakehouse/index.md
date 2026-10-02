@@ -16,7 +16,7 @@ Use **IBM watsonx.data** with **Presto, Spark, and Apache Iceberg** to query, pr
 
 | Asset | Description |
 |---|---|
-| **[zero-copy-lakehouse-blueprints](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/zero-copy-lakehouse/assets/zero-copy-lakehouse-blueprints)** | Reference setup — Presto federated query configurations, multi-catalog connections (DB2, PostgreSQL, Snowflake, S3), Spark ETL jobs, and Iceberg table optimization scripts |
+| **[setup-lakehouse](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/zero-copy-lakehouse/assets/setup-lakehouse)** | Reference setup — Presto federated query configurations, multi-catalog connections (DB2, PostgreSQL, Snowflake, S3), Spark ETL jobs, and Iceberg table optimization scripts |
 
 ---
 
@@ -24,7 +24,8 @@ Use **IBM watsonx.data** with **Presto, Spark, and Apache Iceberg** to query, pr
 
 | Skill | Description |
 |---|---|
-| **[zero-copy-lakehouse](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/zero-copy-lakehouse/bob-skills/zero-copy-lakehouse.zip)** | Presto SQL optimization, Spark job configuration on watsonx.data, cross-catalog federation design, and Iceberg table maintenance |
+| **[watsonxdata-lakehouse](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/zero-copy-lakehouse/bob-skills/watsonxdata-lakehouse.zip)** | Presto SQL optimization, Spark job configuration on watsonx.data, cross-catalog federation design, and Iceberg table maintenance |
+| **[iceberg-table-management](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/zero-copy-lakehouse/bob-skills/iceberg-table-management.zip)** | Apache Iceberg table operations — schema evolution, partition management, time travel, snapshot expiry, and compaction on watsonx.data |
 
 !!! tip "Installing skills"
     Download the skill `.zip` files and copy the skill folders to `~/.bob/skills` (global) or `<project>/.bob/skills` (project-level). See the [Data Skills and Modes](../../bob-skills-and-modes.md) page for full installation instructions.
