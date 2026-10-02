@@ -10,16 +10,22 @@ AI agents turn every interaction into model calls, tool calls, and tokens. Witho
 
 ## Available Today — Agent Cost and Token Tracking
 
-For **watsonx Orchestrate agents**, cost and token usage can be captured per interaction through Langfuse, alongside the traces and latency data that [Agent Ops](agent-ops.md) uses.
+For **watsonx Orchestrate agents** there are three places to look, from tokens to dollars:
 
-| Capability | What It Does |
+| Source | What you get |
+|---|---|
+| **Agentic Control Plane** (product UI) | Token consumption, model usage, and call volume per agent; a FinOps view in preview |
+| **Platform traces** | Tokens and model per generation inside every conversation's span tree — see [Agent Ops](agent-ops.md) |
+| **Langfuse** | **Cost in dollars** per trace, session, model, and tag, once the integration is configured and the models are priced |
+
+| Capability (Langfuse) | What It Does |
 |---|---|
 | **Cost per scenario** | See tokens, cost, and pass or fail for every evaluation scenario, so expensive paths show up before production |
-| **Context growth per turn** | See how cost climbs as multi-turn conversations grow, a key driver of multi-turn cost |
+| **Context growth per turn** | See how cost climbs as multi-turn conversations grow, the main driver of multi-turn cost |
 | **Cost patterns** | Base cost, growth rate, input-to-output token ratio, and spend wasted on failed runs |
 | **Production projection** | Project cost at your expected conversation volume, with data-driven recommendations |
 
-Tracking runs on Langfuse, either locally with watsonx Orchestrate Developer Edition or on a hosted Langfuse instance. Cost appears when Langfuse has pricing for the agent's model. Models it does not already know, including many watsonx-served models, need their pricing registered first. Latency is always recorded.
+Langfuse receives traces through the instance's Langfuse integration (`orchestrate settings observability langfuse configure …` on SaaS; `orchestrate server start -l` on Developer Edition). The integration is one setting per instance, so on a shared instance it belongs to the instance owner. Cost appears when Langfuse has pricing for the agent's model; watsonx-served models need their pricing registered first. Latency and tokens are always recorded.
 
 ## Coming Soon — Enterprise Cost Management
 
@@ -29,7 +35,9 @@ Tracking runs on Langfuse, either locally with watsonx Orchestrate Developer Edi
 
 ## Bob Skills
 
-The [Bob skill for Agent Ops](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/agent-ops) includes Langfuse cost analysis. Ask Bob, for example, *"How do I set up Langfuse so I can see cost per scenario?"*
+A [Bob skill for Cost Management](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/cost-management) is available, giving Bob the expertise to answer *what does this agent cost, why, and what would change it*: tokens and dollars from platform traces with an indicative price table, the Langfuse integration and model pricing, the five-layer cost report with cost per successful journey, and the optimization levers with their re-test. Bob emits the commands and never configures an instance you do not own.
+
+For evaluation, rubrics, red-teaming, and reading traces for correctness use the [Bob skill for Agent Ops](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/agent-ops).
 
 !!! info "GitHub Repository"
-    [Langfuse observability script for watsonx Orchestrate agents](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/assets/wxo-agents)
+    [Cost Management assets — trace cost script and price table, Langfuse setup, model pricing, cost report, analysis guide](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/cost-management)

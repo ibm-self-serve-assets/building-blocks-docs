@@ -34,9 +34,11 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/real-time-guardrails">Real-Time Guardrails</a>
             <br>Add runtime safety and quality guardrails to Gen AI, RAG agents, and watsonx Orchestrate tools using watsonx.governance, Pass/Flag/Block at input, retrieval, generation, and output.</p>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/agent-ops">Agent Ops</a>
-            <br>Plan and run evaluations, red-teaming, and runtime observability for watsonx Orchestrate agents across Developer Edition and SaaS — benchmark authoring, metric diagnosis, attack catalog, traces, Langfuse cost analysis.</p>
+            <br>Evaluate, red-team, and observe watsonx Orchestrate agents with the ADK evaluation framework (ADK 2.18+) on SaaS or Developer Edition — ground-truth test cases with handoff goals, metric diagnosis, rubrics, the attack catalogue, and platform traces.</p>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/build-time-gen-ai-evals">Model Evaluation</a>
             <br>Evaluate GenAI models and applications — prompts, RAG pipelines, LLM outputs, agentic tool-calling — using watsonx.governance metrics.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/cost-management">Cost Management</a>
+            <br>Measure, explain, and reduce the cost of watsonx Orchestrate agents — tokens and dollars from platform traces, the Langfuse integration and model pricing, a five-layer cost report with cost per successful journey, and optimization levers with their re-test.</p>
         </td>
       </tr>
     </tbody>

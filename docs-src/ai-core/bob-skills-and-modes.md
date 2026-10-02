@@ -32,9 +32,11 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/real-time-guardrails">Real-Time Guardrails</a>
             <br>Add runtime safety and quality guardrails to Gen AI, RAG agents, and watsonx Orchestrate tools using watsonx.governance. Pass/Flag/Block at input, retrieval, generation, and output.</p>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/agent-ops">Agent Ops</a>
-            <br>Plan and run evaluations, red-teaming, and runtime observability for watsonx Orchestrate agents across Developer Edition and SaaS — benchmark authoring, metric diagnosis, attack catalog, traces, Langfuse cost analysis.</p>
+            <br>Evaluate, red-team, and observe watsonx Orchestrate agents with the ADK evaluation framework (ADK 2.18+) on SaaS or Developer Edition — ground-truth test cases with handoff goals, metric diagnosis, rubrics, the attack catalogue, and platform traces.</p>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/build-time-gen-ai-evals">Model Evaluation</a>
             <br>Evaluate GenAI models and applications — prompts, RAG pipelines, LLM outputs, agentic tool-calling — using watsonx.governance metrics.</p>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/cost-management">Cost Management</a>
+            <br>Measure, explain, and reduce the cost of watsonx Orchestrate agents — tokens and dollars from platform traces, the Langfuse integration and model pricing, a five-layer cost report with cost per successful journey, and optimization levers with their re-test.</p>
         </td>
       </tr>
     </tbody>
@@ -76,7 +78,7 @@ Instructions and related files for these custom modes can be found in their resp
         <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/control.png" alt="" class="title-icon"><span>Control</span></div></td>
         <td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/bob-modes/base-modes">Agent Ops</a>
-            <br>Foundation mode for pre-deployment evaluation of watsonx Orchestrate agents. Bob automates benchmark generation and provides a structured workflow for assessing agent behavior across key dimensions — agent-specific metrics, cost and latency, and adversarial robustness through red-teaming.</p>
+            <br>Hands-on mode for pre-release evaluation of watsonx Orchestrate agents (ADK 2.18+, SaaS or Developer Edition). Bob runs the workflow phase by phase — smoke test, ground-truth test cases, evaluate, analyze, rubric scoring, red-teaming, traces — and attributes every failure to the test case, the agent, the model, or infrastructure.</p>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/model-evaluation/gen-ai-evaluations/bob-modes/base-modes">Model Evaluation</a>
             <br>Bob helps you evaluate GenAI apps (RAG pipelines, LLM outputs, chatbot safety) using IBM watsonx governance SDK and custom watsonx governance MCP server.</p>
         </td>
