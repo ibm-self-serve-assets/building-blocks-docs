@@ -24,7 +24,7 @@ The capabilities below are built for **watsonx Orchestrate agents** with the eva
 | **Analyze** | Expected vs actual tool calls, parameter mismatches, conversation history, tool docstring quality |
 | **Rubric** | Plain-language rules scored pass/fail by a judge model, with reasoning (`RubricEvaluation`) |
 | **Red-team** | 15 attack types (instruction override, crescendo, emotional appeal, prompt leakage, jailbreaking, …) against the policies that matter |
-| **Observe** | Platform traces per conversation — handoffs, tool calls, model and tokens, latency — by CLI, Python, REST, and the Agentic Control Plane |
+| **Observe** | Platform traces per conversation — handoffs, tool calls, model and tokens, latency — by CLI, Python, REST, and the watsonx Orchestrate Agentic Control Plane |
 
 For runtime enforcement — PII filters, content guardrails, secrets detection, rate limits, model fallback, and Pass/Flag/Block checks — see [Guardrails](guardrails.md). For cost and token spend in dollars, see [Cost Management](cost-management.md).
 

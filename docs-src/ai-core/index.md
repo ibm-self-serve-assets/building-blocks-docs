@@ -21,13 +21,12 @@
 | **Agents** | [Multi-Agent Orchestration](agents/multi-agent-orchestration.md) | IBM watsonx Orchestrate, A2A, AI Gateway | Coordinate wxO agents with external agents via open standards and route LLM calls across providers |
 | **Control** | [Agent Ops](control/agent-ops.md) | IBM watsonx.governance, IBM watsonx Orchestrate | Evaluate and observe agents — benchmarking, red-teaming, failure analysis, traces and latency |
 | **Control** | [Guardrails](control/guardrails.md) | IBM watsonx Orchestrate, IBM watsonx.governance | Enforce runtime policy on agents, tools, and models — PII filters, content safety, secrets detection, rate limits, model fallback, and Pass/Flag/Block checks for any framework |
-| **Control** | [Cost Management](control/cost-management.md) | IBM watsonx Orchestrate, IBM watsonx.governance | Track cost and token usage per agent interaction today; enterprise allocation and budgets coming soon |
+| **Control** | [Cost Management](control/cost-management.md) | IBM watsonx Orchestrate, IBM watsonx.governance | Track what watsonx Orchestrate agents cost — tokens per agent and conversation in the platform, and cost in dollars per trace, session, and evaluation scenario with Langfuse |
 | **Control** | [Compliance](control/compliance.md) | IBM watsonx.governance | Map AI use cases to regulations, manage risk assessments, and report compliance posture |
 | **Engineering** | [Agentic SDLC](engineering/agentic-sdlc.md) | IBM Bob | IDE-native AI agent spanning planning, coding, testing, documentation, modernization, and CI/CD |
 | **Engineering** | [Code Modernization](engineering/code-modernization.md) | IBM Bob | Transform legacy Java, mainframe, IBM Z, and IBM i applications into modern cloud-native systems |
 | **Engineering** | [Integration as Code](engineering/integration-as-code.md) | IBM webMethods | Connect SaaS apps, on-premise systems, APIs, and event streams through a low-code iPaaS model |
 | **Engineering** | [Headless Bob](engineering/headless-bob.md) | IBM Bob | Run Bob autonomously in CI/CD pipelines, scheduled jobs, and event-driven automations |
-| **Engineering** | [Context Engineering](engineering/context-engineering.md) | IBM Bob | Design and optimise the context agents and LLMs receive — prompt architecture, RAG patterns, context window management |
 
 <!-- Hidden for now — restore to the Control rows above:
 | **Control** | [Lifecycle Management](control/lifecycle-management.md) | IBM watsonx.governance | Manage AI models and agents from onboarding through retirement |
@@ -87,7 +86,6 @@
     - **Legacy modernization at scale** — structured, repeatable AI-driven workflows for Java, mainframe, IBM Z, and IBM i transformation that preserve business logic while eliminating technical debt.
     - **Enterprise integration without custom code** — a cloud-native iPaaS connecting SaaS, on-premise systems, APIs, and event streams through a low-code model, reducing bespoke integration sprawl.
     - **Agentic workflows in the delivery pipeline** — headless Bob brings AI-assisted automation directly into CI/CD, code review, and scheduled engineering tasks.
-    - **Context as a first-class engineering discipline** — structured prompt architecture, context window management, and RAG context patterns that directly determine agent quality and cost.
 
 **Use Engineering when:**
 
@@ -95,7 +93,6 @@
 - The enterprise has **legacy applications** (Java monoliths, mainframe COBOL, IBM Z, IBM i) that need systematic modernization without business logic loss.
 - Integrations between SaaS platforms, on-premise systems, and APIs need to be built, governed, and maintained **without heavy custom code**.
 - You want **Bob running autonomously** in pipelines and scheduled jobs — code reviews, security scans, documentation updates — without a developer actively in the loop.
-- Agent quality or cost is unexpectedly poor and the root cause is **poorly structured prompts or context**.
 
 [Explore Engineering →](engineering/index.md)
 
@@ -103,46 +100,7 @@
 
 ## End-to-End Pattern
 
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'clusterBkg': '#f4f4f4', 'clusterBorder': '#c6c6c6', 'edgeLabelBackground': '#ffffff'}}}%%
-flowchart TB
-    subgraph ENG["3. Engineering"]
-        direction LR
-        BOB["IBM Bob<br/>Agentic SDLC · Code Modernization<br/>Integration as Code · Context Engineering"]:::eng
-    end
-
-    subgraph BOTTOM["&nbsp;"]
-        direction LR
-        subgraph AGT["1. Agents"]
-            direction TB
-            AB["Agent Builder<br/>ADK · Tools · Knowledge"]:::agent
-            MAO["Multi-Agent Orchestration<br/>A2A · MCP · AI Gateway"]:::agent
-        end
-
-        SYSTEMS(["🏢  Enterprise Systems<br/>CRM · ERP · Databases · Events"]):::systems
-        USERS(["👤  Users · Channels · APIs"]):::input
-
-        subgraph CP["2. Control"]
-            direction TB
-            AO["Agent Ops<br/>Eval · Observability"]:::ctrl
-            GR["Guardrails<br/>Agent Controls · Real-Time SDK"]:::ctrl
-            CM["Cost Management<br/>Allocation · Budgets"]:::ctrl
-            AC["Compliance<br/>Regulatory Mapping · Risk"]:::ctrl
-        end
-    end
-
-    ENG -->|"builds & maintains"| AGT
-    SYSTEMS --> AGT
-    AGT --> USERS
-    AGT -->|"governed by"| CP
-    CP -->|"insights back to"| ENG
-
-    classDef input   fill:#031040,color:#AACAFF,stroke:#6FA1FE,stroke-width:2px,font-weight:700
-    classDef systems fill:#021F1F,color:#6ADADA,stroke:#0F6E6E,stroke-width:2px,font-weight:700
-    classDef agent   fill:#CCDDFF,color:#031040,stroke:#6FA1FE,stroke-width:1.5px
-    classDef ctrl    fill:#D5ACFF,color:#160040,stroke:#A56EFF,stroke-width:1.5px
-    classDef eng     fill:#B2F2F2,color:#021F1F,stroke:#6ADADA,stroke-width:1.5px
-```
+![AI Control Plane end-to-end pattern — Control, Agents, and Engineering, with users, applications, and foundation models](images/ai-control-plane.png)
 
 !!! note
     This is a **reference composition**, not a requirement to use every building block. Select only the capabilities needed for your use case.
@@ -162,7 +120,7 @@ flowchart TB
 | "My development team needs an AI partner across the full SDLC" | [Agentic SDLC](engineering/agentic-sdlc.md) |
 | "We have legacy Java / mainframe / IBM Z apps that need modernizing" | [Code Modernization](engineering/code-modernization.md) |
 | "We need enterprise integrations without heavy custom code" | [Integration as Code](engineering/integration-as-code.md) |
-| "Agent quality is poor and I think it's a context problem" | [Context Engineering](engineering/context-engineering.md) |
+| "I want Bob running unattended in CI/CD, scheduled jobs, or event-driven automations" | [Headless Bob](engineering/headless-bob.md) |
 
 ---
 

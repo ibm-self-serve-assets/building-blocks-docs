@@ -29,7 +29,7 @@ Bob<span style="color:#0f62fe">+</span> combines Generative AI with IBM technolo
     |---|---|
     | [Agent Ops](ai-core/control/agent-ops.md) | Evaluate and observe agents — benchmarking, red-teaming, failure analysis, traces and latency |
     | [Guardrails](ai-core/control/guardrails.md) | Enforce runtime policy on agents, tools, and models — PII filters, content safety, secrets detection, rate limits, model fallback, and Pass/Flag/Block checks for any framework |
-    | [Cost Management](ai-core/control/cost-management.md) | Track cost and token usage per agent interaction today; enterprise allocation and budgets coming soon |
+    | [Cost Management](ai-core/control/cost-management.md) | Track what watsonx Orchestrate agents cost — tokens per agent and conversation in the platform, and cost in dollars per trace, session, and evaluation scenario with Langfuse |
     | [Compliance](ai-core/control/compliance.md) | Map AI use cases to regulations, manage risk assessments, and report compliance posture |
     <!-- Hidden for now: | [Lifecycle Management](ai-core/control/lifecycle-management.md) | Manage AI models and agents from onboarding through retirement | -->
 

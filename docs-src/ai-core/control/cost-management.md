@@ -1,6 +1,6 @@
 # Cost Management
 
-AI agents turn every interaction into model calls, tool calls, and tokens. Without visibility, spend grows quietly: a looping agent, a verbose prompt, or an oversized model can burn through a budget before anyone notices. **Cost Management** gives you that visibility, starting at the level of each agent interaction.
+AI agents turn every interaction into model calls, tool calls, and tokens. Without visibility, spend grows quietly: a looping agent, a verbose prompt, or an oversized model can burn through a budget before anyone notices. **Cost Management** gives you that visibility at the level of each agent interaction.
 
 ## Why This Matters
 
@@ -8,13 +8,13 @@ AI agents turn every interaction into model calls, tool calls, and tokens. Witho
 - **Token budgets burn silently.** Without per-interaction tracking, runaway loops and oversized prompts show up only on the invoice.
 - **Cost has to be weighed against quality.** Choosing a smaller model or a shorter prompt only makes sense when you can see both the cost and the evaluation results.
 
-## Available Today — Agent Cost and Token Tracking
+## Agent Cost and Token Tracking
 
 For **watsonx Orchestrate agents** there are three places to look, from tokens to dollars:
 
 | Source | What you get |
 |---|---|
-| **Agentic Control Plane** (product UI) | Token consumption, model usage, and call volume per agent; a FinOps view in preview |
+| **watsonx Orchestrate Agentic Control Plane** (product UI) | Visibility into token usage and LLM calls per agent, and usage over time |
 | **Platform traces** | Tokens and model per generation inside every conversation's span tree — see [Agent Ops](agent-ops.md) |
 | **Langfuse** | **Cost in dollars** per trace, session, model, and tag, once the integration is configured and the models are priced |
 
@@ -26,12 +26,6 @@ For **watsonx Orchestrate agents** there are three places to look, from tokens t
 | **Production projection** | Project cost at your expected conversation volume, with data-driven recommendations |
 
 Langfuse receives traces through the instance's Langfuse integration (`orchestrate settings observability langfuse configure …` on SaaS; `orchestrate server start -l` on Developer Edition). The integration is one setting per instance, so on a shared instance it belongs to the instance owner. Cost appears when Langfuse has pricing for the agent's model; watsonx-served models need their pricing registered first. Latency and tokens are always recorded.
-
-## Coming Soon — Enterprise Cost Management
-
-- **Allocation** of AI spend by team, use case, or model.
-- **Budgets and alerts** before costs become unmanageable.
-- **Optimization** — identifying waste and cost per outcome across AI workloads.
 
 ## Bob Skills
 

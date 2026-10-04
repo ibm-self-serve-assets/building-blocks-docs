@@ -4,13 +4,12 @@ Engineering is part of the **[AI Control Plane](../index.md)**, alongside [Agent
 
 Engineering provides the development layer that spans the entire software lifecycle — from planning and coding to testing, documentation, modernization, and CI/CD. Powered by **IBM Bob** and enterprise-grade integration platforms, it gives teams the tools to build new software faster, retire legacy systems systematically, and connect everything in between.
 
-The Engineering building blocks cover five interconnected engineering capabilities:
+The Engineering building blocks cover four interconnected engineering capabilities:
 
 - **Agentic SDLC** — an IDE-native AI partner that handles every phase of building new software, from requirements through CI/CD, so teams ship faster without sacrificing quality or governance.
 - **Code Modernization** — AI-powered analysis and transformation of legacy Java, mainframe, IBM Z, and IBM i applications into modern cloud-native architectures, preserving business logic throughout.
 - **Integration as Code (iPaaS)** — a cloud-native Integration Platform as a Service using webMethods Hybrid Integration, connecting SaaS applications, on-premise systems, APIs, and event streams through a low-code development model.
 - **Headless Bob** — IBM Bob running autonomously in CI/CD pipelines, scheduled jobs, and event-driven automations, bringing agentic engineering workflows to the software delivery process itself.
-- **Context Engineering** — the practices and tooling to design, manage, and optimise the context that agents and LLMs receive, directly determining agent quality, reliability, and cost.
 
 ## Building Blocks
 

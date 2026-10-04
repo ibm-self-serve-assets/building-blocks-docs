@@ -1,6 +1,6 @@
 # Model Evaluation
 
-Evaluate your AI and ML models for a range of key metrics — performance quality, fairness, reliability, drift, bias, and more — throughout the AI lifecycle.
+Evaluate your generative AI applications — RAG pipelines, LLM outputs, and chatbot safety — for quality, safety, and readability before they reach production.
 
 ## Why This Matters
 
@@ -8,15 +8,6 @@ Evaluate your AI and ML models for a range of key metrics — performance qualit
 - **Production failures are costly.** Issues like PII leakage or ungrounded responses become significantly harder to diagnose once embedded in live workflows.
 - **Compliance requires evidence.** Regulatory frameworks such as the EU AI Act and NIST AI RMF expect structured testing with reproducible scoring and stored evaluation artifacts.
 - **Baselines enable monitoring.** Metrics captured at evaluation time become reference points for detecting drift and regression in production.
-
-## What's Covered
-
-| Area | What It Evaluates |
-|------|------------------|
-| **[Gen AI Evaluations](#gen-ai-evaluations)** | RAG pipelines, LLM outputs, chatbot safety — quality, safety, readability metrics |
-| **[Predictive ML Evaluations](#predictive-ml-evaluations)** | Traditional ML models — scoring, confidence assessment, credit risk prediction |
-
----
 
 ## Gen AI Evaluations
 
@@ -51,19 +42,6 @@ Evaluate generative AI applications — RAG pipelines, LLM outputs, and chatbot 
 | Topic Relevance | Quality | Is the response on-topic? |
 | Text Grade Level | Readability | US school grade needed to understand the text |
 | Text Reading Ease | Readability | Flesch Reading Ease score (0–100) |
-
-## Predictive ML Evaluations
-
-Evaluate predictive ML models deployed on IBM watsonx ML — scoring, confidence assessment, and interactive exploration.
-
-### Available Assets
-
-| Asset | What It Does |
-|-------|-------------|
-| **Credit Risk Prediction App** | Interactive Dash web app for credit risk scoring with real-time predictions |
-| **Model Scoring API** | Direct REST API calls to deployed watsonx ML models — suitable for batch scoring and pipeline integration |
-
-Both assets authenticate via IBM Cloud IAM and call deployed watsonx ML model endpoints.
 
 ## Bob Skills
 

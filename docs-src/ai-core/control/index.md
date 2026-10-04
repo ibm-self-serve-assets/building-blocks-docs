@@ -14,13 +14,13 @@ The Control building blocks provide frameworks, production-ready code samples, a
 |---------------|-------------|
 | **[Agent Ops](agent-ops.md)** | Evaluate, observe, and optimize your AI agents throughout the lifecycle — benchmarking, red-teaming, failure analysis, traces, and latency |
 | **[Guardrails](guardrails.md)** | Enforce runtime policy on agents, tools, and models — PII filters, content safety, secrets detection, rate limits, model fallback, and Pass/Flag/Block checks for any framework |
-| **[Cost Management](cost-management.md)** | Track cost and token usage per agent interaction today; enterprise allocation and budgets *(coming soon)* |
+| **[Cost Management](cost-management.md)** | Track what watsonx Orchestrate agents cost — tokens per agent and conversation in the platform, and cost in dollars per trace, session, and evaluation scenario with Langfuse |
 | **[Compliance](compliance.md)** | Ensure your AI applications meet regulatory requirements and industry standards for responsible AI use |
 
 <!-- Hidden for now — restore these rows to the table above to bring the pages back:
 | **[Lifecycle Management](lifecycle-management.md)** | Manage AI models and agents across their full lifecycle, from onboarding to retirement |
 | **[Shadow AI Discovery](shadow-ai-discovery.md)** | Discover ungoverned agents, tools, MCP servers, and models across your AI estate and bring them into governed workflows |
-| **[Model Evaluation](model-evaluation.md)** | Evaluate your AI and ML models for performance quality, fairness, reliability, drift, and bias |
+| **[Model Evaluation](model-evaluation.md)** | Evaluate GenAI applications — RAG pipelines, LLM outputs, chatbot safety — for quality, safety, and readability before release |
 -->
 
 ## Getting Started
