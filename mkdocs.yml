@@ -80,7 +80,9 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      use_pygments: true
+      pygments_lang_class: true
   - pymdownx.tabbed
   - pymdownx.details
   - pymdownx.inlinehilite

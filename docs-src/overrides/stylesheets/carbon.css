@@ -72,6 +72,38 @@
    CONTENT
    ========================================================= */
 
+/* Left nav column grey, everything else white.
+   The hard-stop gradient on body fills the full left column
+   (including the gap above .md-sidebar--primary). */
+body {
+  background: linear-gradient(
+    to right,
+    #f4f4f4 18rem,
+    #ffffff 18rem
+  );
+}
+
+.md-main__inner,
+.md-content,
+.md-sidebar--secondary,
+.md-container {
+  background-color: #ffffff;
+}
+
+/* Remove the gap between the header and the content row */
+.md-main__inner {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Left nav sidebar — grey, full height, spacing preserved via padding */
+.md-sidebar--primary {
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  margin-top: 0;
+  padding-top: 1.2rem;
+}
+
 .md-typeset h1,
 .md-typeset h2 {
   font-weight: 400;
@@ -127,6 +159,11 @@
 /* Left nav padding */
 .md-sidebar--primary .md-sidebar__inner {
   padding-left: 0.5rem;
+}
+
+/* Indent nested nav items (e.g. Agents, Control under AI) */
+.md-nav--primary .md-nav__item .md-nav .md-nav__list {
+  padding-left: 1.0rem;
 }
 
 /* =========================================================
