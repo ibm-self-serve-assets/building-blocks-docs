@@ -35,33 +35,42 @@ plugins:
   - redirects:
       # Section renamed from AI Trust to AI Control Plane — keep old URLs working
       redirect_maps:
-        'ai-core/ai-trust/index.md': 'ai-core/control/index.md'
-        'ai-core/ai-trust/agent-ops.md': 'ai-core/control/agent-ops.md'
-        'ai-core/ai-trust/ai-compliance.md': 'ai-core/control/compliance.md'
-        'ai-core/ai-trust/ai-cost-management.md': 'ai-core/control/cost-management.md'
-        'ai-core/ai-trust/lifecycle-management.md': 'ai-core/control/lifecycle-management.md'
-        'ai-core/ai-trust/shadow-ai-discovery.md': 'ai-core/control/shadow-ai-discovery.md'
-        'ai-core/ai-trust/model-evaluation.md': 'ai-core/control/model-evaluation.md'
-        'ai-core/ai-trust/real-time-guardrails.md': 'ai-core/control/guardrails.md'
-        # Sections renamed: AI Control Plane -> Control, AI Engineering -> Engineering
-        'ai-core/ai-control-plane/index.md': 'ai-core/control/index.md'
-        'ai-core/ai-control-plane/agent-ops.md': 'ai-core/control/agent-ops.md'
-        'ai-core/ai-control-plane/ai-compliance.md': 'ai-core/control/compliance.md'
-        'ai-core/ai-control-plane/ai-cost-management.md': 'ai-core/control/cost-management.md'
-        'ai-core/ai-control-plane/lifecycle-management.md': 'ai-core/control/lifecycle-management.md'
-        'ai-core/ai-control-plane/shadow-ai-discovery.md': 'ai-core/control/shadow-ai-discovery.md'
-        'ai-core/ai-control-plane/model-evaluation.md': 'ai-core/control/model-evaluation.md'
-        'ai-core/ai-control-plane/real-time-guardrails.md': 'ai-core/control/guardrails.md'
+        'ai-core/ai-trust/index.md': 'ai-core/govern/index.md'
+        'ai-core/ai-trust/agent-ops.md': 'ai-core/govern/agent-ops.md'
+        'ai-core/ai-trust/ai-compliance.md': 'ai-core/govern/compliance.md'
+        'ai-core/ai-trust/ai-cost-management.md': 'ai-core/govern/cost-management.md'
+        'ai-core/ai-trust/lifecycle-management.md': 'ai-core/govern/lifecycle-management.md'
+        'ai-core/ai-trust/shadow-ai-discovery.md': 'ai-core/govern/shadow-ai-discovery.md'
+        'ai-core/ai-trust/model-evaluation.md': 'ai-core/govern/model-evaluation.md'
+        'ai-core/ai-trust/real-time-guardrails.md': 'ai-core/govern/guardrails.md'
+        # Sections renamed: AI Control Plane -> Govern, AI Engineering -> Engineering
+        'ai-core/ai-control-plane/index.md': 'ai-core/govern/index.md'
+        'ai-core/ai-control-plane/agent-ops.md': 'ai-core/govern/agent-ops.md'
+        'ai-core/ai-control-plane/ai-compliance.md': 'ai-core/govern/compliance.md'
+        'ai-core/ai-control-plane/ai-cost-management.md': 'ai-core/govern/cost-management.md'
+        'ai-core/ai-control-plane/lifecycle-management.md': 'ai-core/govern/lifecycle-management.md'
+        'ai-core/ai-control-plane/shadow-ai-discovery.md': 'ai-core/govern/shadow-ai-discovery.md'
+        'ai-core/ai-control-plane/model-evaluation.md': 'ai-core/govern/model-evaluation.md'
+        'ai-core/ai-control-plane/real-time-guardrails.md': 'ai-core/govern/guardrails.md'
         'ai-core/ai-engineering/agentic-sdlc.md': 'ai-core/engineering/agentic-sdlc.md'
         'ai-core/ai-engineering/code-modernization.md': 'ai-core/engineering/code-modernization.md'
         'ai-core/ai-engineering/headless-bob.md': 'ai-core/engineering/headless-bob.md'
         'ai-core/ai-engineering/index.md': 'ai-core/engineering/index.md'
         'ai-core/ai-engineering/integration-as-code.md': 'ai-core/engineering/integration-as-code.md'
-        # Control blocks renamed: AI Cost Management -> Cost Management, AI Compliance -> Compliance
-        'ai-core/control/ai-cost-management.md': 'ai-core/control/cost-management.md'
-        'ai-core/control/ai-compliance.md': 'ai-core/control/compliance.md'
+        # Govern blocks renamed: AI Cost Management -> Cost Management, AI Compliance -> Compliance
+        'ai-core/control/ai-cost-management.md': 'ai-core/govern/cost-management.md'
+        'ai-core/control/ai-compliance.md': 'ai-core/govern/compliance.md'
         # Real-Time Guardrails folded into the Guardrails building block
-        'ai-core/control/real-time-guardrails.md': 'ai-core/control/guardrails.md'
+        'ai-core/control/real-time-guardrails.md': 'ai-core/govern/guardrails.md'
+        # Folder rename: control → govern
+        'ai-core/control/index.md': 'ai-core/govern/index.md'
+        'ai-core/control/agent-ops.md': 'ai-core/govern/agent-ops.md'
+        'ai-core/control/guardrails.md': 'ai-core/govern/guardrails.md'
+        'ai-core/control/cost-management.md': 'ai-core/govern/cost-management.md'
+        'ai-core/control/compliance.md': 'ai-core/govern/compliance.md'
+        'ai-core/control/lifecycle-management.md': 'ai-core/govern/lifecycle-management.md'
+        'ai-core/control/shadow-ai-discovery.md': 'ai-core/govern/shadow-ai-discovery.md'
+        'ai-core/control/model-evaluation.md': 'ai-core/govern/model-evaluation.md'
         # Data Building Blocks re-architecture redirects (original paths)
         'data-core/context/index.md': 'streamhouse-core/real-time/index.md'
         'data-core/context/streamhouse/index.md': 'streamhouse-core/real-time/index.md'
@@ -118,16 +127,16 @@ nav:
           - Agent Builder: ai-core/agents/agent-builder.md
           - Multi-Agent Orchestration: ai-core/agents/multi-agent-orchestration.md
 
-      - Control:
-          - Overview: ai-core/control/index.md
-          - Agent Ops: ai-core/control/agent-ops.md
-          - Guardrails: ai-core/control/guardrails.md
-          - Cost Management: ai-core/control/cost-management.md
-          - Compliance: ai-core/control/compliance.md
+      - Govern:
+          - Overview: ai-core/govern/index.md
+          - Agent Ops: ai-core/govern/agent-ops.md
+          - Guardrails: ai-core/govern/guardrails.md
+          - Cost Management: ai-core/govern/cost-management.md
+          - Compliance: ai-core/govern/compliance.md
           # Hidden for now — uncomment to restore:
-          # - Lifecycle Management: ai-core/control/lifecycle-management.md
-          # - Shadow AI Discovery: ai-core/control/shadow-ai-discovery.md
-          # - Model Evaluation: ai-core/control/model-evaluation.md
+          # - Lifecycle Management: ai-core/govern/lifecycle-management.md
+          # - Shadow AI Discovery: ai-core/govern/shadow-ai-discovery.md
+          # - Model Evaluation: ai-core/govern/model-evaluation.md
 
       - Engineering:
           - Overview: ai-core/engineering/index.md

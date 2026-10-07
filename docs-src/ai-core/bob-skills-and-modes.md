@@ -27,7 +27,7 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
         </td>
       </tr>
       <tr>
-        <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/control.png" alt="" class="title-icon"><span>Control</span></div></td>
+        <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/control.png" alt="" class="title-icon"><span>Govern</span></div></td>
         <td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/real-time-guardrails">Real-Time Guardrails</a>
             <br>Add runtime safety and quality guardrails to Gen AI, RAG agents, and watsonx Orchestrate tools using watsonx.governance. Pass/Flag/Block at input, retrieval, generation, and output.</p>
@@ -75,7 +75,7 @@ Instructions and related files for these custom modes can be found in their resp
         </td>
       </tr>
       <tr>
-        <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/control.png" alt="" class="title-icon"><span>Control</span></div></td>
+        <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/control.png" alt="" class="title-icon"><span>Govern</span></div></td>
         <td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/bob-modes/base-modes">Agent Ops</a>
             <br>Hands-on mode for pre-release evaluation of watsonx Orchestrate agents (ADK 2.18+, SaaS or Developer Edition). Bob runs the workflow phase by phase — smoke test, ground-truth test cases, evaluate, analyze, rubric scoring, red-teaming, traces — and attributes every failure to the test case, the agent, the model, or infrastructure.</p>

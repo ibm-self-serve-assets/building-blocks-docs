@@ -1,6 +1,6 @@
 # Agents
 
-Agents is part of the **[AI Control Plane](../index.md)**, alongside [Control](../control/index.md) and [Engineering](../engineering/index.md).
+Agents is part of the **[AI Control Plane](../index.md)**, alongside [Govern](../govern/index.md) and [Engineering](../engineering/index.md).
 
 Enterprise-ready AI agents that automate business workflows, orchestrate complex tasks, and accelerate software development through intelligent automation. These building blocks provide the foundation for creating, deploying, and managing autonomous AI agents that integrate seamlessly with enterprise systems. These capabilities are powered by **IBM watsonx orchestrate** and **IBM Bob**.
 

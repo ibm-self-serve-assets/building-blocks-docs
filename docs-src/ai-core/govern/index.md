@@ -1,10 +1,10 @@
-# Control
+# Govern
 
-Control is part of the **[AI Control Plane](../index.md)**, alongside [Agents](../agents/index.md) and [Engineering](../engineering/index.md).
+Govern is part of the **[AI Control Plane](../index.md)**, alongside [Agents](../agents/index.md) and [Engineering](../engineering/index.md).
 
 Running AI in production takes more than building agents — it takes continuous visibility and control across the full AI lifecycle: evaluating and observing agents, enforcing policies at runtime, managing cost, and proving regulatory compliance. These capabilities are powered by **IBM watsonx.governance** and **IBM watsonx Orchestrate**.
 
-The Control building blocks provide frameworks, production-ready code samples, and tools to help you run AI that is reliable, transparent, and compliant. Whether you're evaluating and red-teaming agents before deployment, enforcing guardrails in production, tracking AI consumption and cost, or mapping AI use cases to regulations — Control has you covered.
+The Govern building blocks provide frameworks, production-ready code samples, and tools to help you run AI that is reliable, transparent, and compliant. Whether you're evaluating and red-teaming agents before deployment, enforcing guardrails in production, tracking AI consumption and cost, or mapping AI use cases to regulations — Govern has you covered.
 
 ![Control Building Blocks](images/control-architecture.png)
 
@@ -30,4 +30,4 @@ The Control building blocks provide frameworks, production-ready code samples, a
 3. Check **bob-modes** for AI-assisted evaluation workflows.
 
 !!! info "GitHub Repository"
-    [Control Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control)
+    [Govern Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control)

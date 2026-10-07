@@ -1,6 +1,6 @@
 # Engineering
 
-Engineering is part of the **[AI Control Plane](../index.md)**, alongside [Agents](../agents/index.md) and [Control](../control/index.md).
+Engineering is part of the **[AI Control Plane](../index.md)**, alongside [Agents](../agents/index.md) and [Govern](../govern/index.md).
 
 Engineering provides the development layer that spans the entire software lifecycle — from planning and coding to testing, documentation, modernization, and CI/CD. Powered by **IBM Bob** and enterprise-grade integration platforms, it gives teams the tools to build new software faster, retire legacy systems systematically, and connect everything in between.
 

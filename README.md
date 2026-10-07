@@ -6,17 +6,17 @@ The markdown files located in [docs-src](./docs-src) are used by Github Pages to
 
 ## Capability Areas
 
-### AI Control Plane – Agents, Control, and Engineering
+### AI Control Plane – Agents, Govern, and Engineering
 
 | Group | Building Block | Primary Products |
 |---|---|---|
 | **Agents** | [Agent Builder](docs-src/ai-core/agents/agent-builder.md) | IBM watsonx Orchestrate (ADK) |
 | **Agents** | [Multi-Agent Orchestration](docs-src/ai-core/agents/multi-agent-orchestration.md) | IBM watsonx Orchestrate |
-| **Control** | [Agent Ops](docs-src/ai-core/control/agent-ops.md) | IBM watsonx.governance + IBM watsonx Orchestrate |
-| **Control** | [Guardrails](docs-src/ai-core/control/guardrails.md) | IBM watsonx Orchestrate + IBM watsonx.governance |
-| **Control** | [Cost Management](docs-src/ai-core/control/cost-management.md) | IBM watsonx.governance |
-| **Control** | [Compliance](docs-src/ai-core/control/compliance.md) | IBM watsonx.governance |
-<!-- Hidden for now: | **Control** | [Lifecycle Management](docs-src/ai-core/control/lifecycle-management.md) | IBM watsonx.governance | -->
+| **Govern** | [Agent Ops](docs-src/ai-core/govern/agent-ops.md) | IBM watsonx.governance + IBM watsonx Orchestrate |
+| **Govern** | [Guardrails](docs-src/ai-core/govern/guardrails.md) | IBM watsonx Orchestrate + IBM watsonx.governance |
+| **Govern** | [Cost Management](docs-src/ai-core/govern/cost-management.md) | IBM watsonx.governance |
+| **Govern** | [Compliance](docs-src/ai-core/govern/compliance.md) | IBM watsonx.governance |
+<!-- Hidden for now: | **Govern** | [Lifecycle Management](docs-src/ai-core/govern/lifecycle-management.md) | IBM watsonx.governance | -->
 | **Engineering** | [Agentic SDLC](docs-src/ai-core/engineering/agentic-sdlc.md) | IBM Bob |
 | **Engineering** | [Code Modernization](docs-src/ai-core/engineering/code-modernization.md) | IBM Bob |
 

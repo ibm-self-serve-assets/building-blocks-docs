@@ -27,14 +27,14 @@ Instructions and related files for these custom modes can be found in their resp
 - [Agent-model-gateway-bob-mode](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/agent-gateway/bob-modes/base-modes/agent-model-gateway-bob-mode): Comprehensive mode for integrating third-party LLM models (OpenAI, Anthropic, Google, Azure, AWS Bedrock, and more) into watsonx Orchestrate
 - [Agent-Integrate Mode](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/agents/agent-builder/bob-modes/agent-builder-bob-modes/custom-modes/agent-rest-integration): Comprehensive custom mode for integrating IBM watsonx Orchestrate agents into applications via REST API. Provides end-to-end support from agent creation to production-ready code deployment, handling authentication, connection testing, and code generation across all deployment platforms (IBM Cloud, AWS, AWS GovCloud, and On-premises).
 
-#### Control
+#### Govern
 - [Agent Ops](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/bob-modes/base-modes): Hands-on mode for pre-release evaluation of WXO agents with the ADK evaluation framework (ADK 2.18+, SaaS or Developer Edition). Bob runs the workflow phase by phase — smoke test, ground-truth test cases, evaluate, analyze, rubric scoring, red-teaming, traces — and attributes every failure to the test case, the agent, the model, or infrastructure.
 - [Model Evaluation](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/model-evaluation/gen-ai-evaluations/bob-modes/base-modes): Bob helps you evaluate GenAI apps (RAG pipelines, LLM outputs, chatbot safety) using IBM watsonx governance SDK and custom watsonx governance MCP server.
 
 
 ### Data
 
-#### [Real-Time](../streamhouse-core/streamhouse/index.md)
+#### [Real-Time](../streamhouse-core/real-time/index.md)
 
 - [Data Ingestion](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/streamhouse/real-time-streaming/bob-modes): AI-generated streaming data pipeline mode for IBM Confluent (Kafka, Connectors, Flink CDC). Describe your data source and target — Bob generates the complete ingestion pipeline automatically.
 

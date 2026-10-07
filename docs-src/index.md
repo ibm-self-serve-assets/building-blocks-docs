@@ -1,6 +1,6 @@
 # Bob<span style="color:#0f62fe">+</span>
 
-**Bob<span style="color:#0f62fe">+</span>** provide a unified digital experience for discovering, adopting, and implementing reusable IBM capabilities across the AI Control Plane (Agents, Control, Engineering), Data, and Automation (Operate, Secure, Optimize).
+**Bob<span style="color:#0f62fe">+</span>** provide a unified digital experience for discovering, adopting, and implementing reusable IBM capabilities across the AI Control Plane (Agents, Govern, Engineering), Data, and Automation (Operate, Secure, Optimize).
 
 Powered by **IBM Bob**, technical teams receive AI-assisted guidance across the entire development lifecycle—from solution design and coding to modernization, deployment, and optimization—accelerating time-to-value while ensuring enterprise-grade security, governance, and consistency.
 
@@ -22,16 +22,17 @@ Bob<span style="color:#0f62fe">+</span> combines Generative AI with IBM technolo
     | [Agent Builder](ai-core/agents/agent-builder.md) | Create and deploy LLM-backed, tool-calling agents — from local development to production |
     | [Multi-Agent Orchestration](ai-core/agents/multi-agent-orchestration.md) | Coordinate agents and route LLM calls across providers via open standards (A2A, MCP, AI Gateway) |
 
-- **[Control](ai-core/control/index.md)**
+- **[Govern](ai-core/govern/index.md)**
   Evaluate, observe, govern, and enforce policy across every AI agent and model in production — making AI safe and compliant at enterprise scale.
 
     | Building Block | What It Enables |
     |---|---|
-    | [Agent Ops](ai-core/control/agent-ops.md) | Evaluate and observe agents — benchmarking, red-teaming, failure analysis, traces and latency |
-    | [Guardrails](ai-core/control/guardrails.md) | Enforce runtime policy on agents, tools, and models — PII filters, content safety, secrets detection, rate limits, model fallback, and Pass/Flag/Block checks for any framework |
-    | [Cost Management](ai-core/control/cost-management.md) | Track what watsonx Orchestrate agents cost — tokens per agent and conversation in the platform, and cost in dollars per trace, session, and evaluation scenario with Langfuse |
-    | [Compliance](ai-core/control/compliance.md) | Map AI use cases to regulations, manage risk assessments, and report compliance posture |
-    <!-- Hidden for now: | [Lifecycle Management](ai-core/control/lifecycle-management.md) | Manage AI models and agents from onboarding through retirement | -->
+    | [Agent Ops](ai-core/govern/agent-ops.md) | Evaluate and observe agents — benchmarking, red-teaming, failure analysis, traces and latency |
+    | [Guardrails](ai-core/govern/guardrails.md) | Enforce runtime policy on agents, tools, and models — PII filters, content safety, secrets detection, rate limits, model fallback, and Pass/Flag/Block checks for any framework |
+    | [Cost Management](ai-core/govern/cost-management.md) | Track what watsonx Orchestrate agents cost — tokens per agent and conversation in the platform, and cost in dollars per trace, session, and evaluation scenario with Langfuse |
+    | [Compliance](ai-core/govern/compliance.md) | Map AI use cases to regulations, manage risk assessments, and report compliance posture |
+
+<!-- Hidden for now: | [Lifecycle Management](ai-core/govern/lifecycle-management.md) | Manage AI models and agents from onboarding through retirement | -->
 
 - **[Engineering](ai-core/engineering/index.md)**
   Accelerates every phase of software delivery — building new systems with AI assistance and systematically modernizing legacy applications.

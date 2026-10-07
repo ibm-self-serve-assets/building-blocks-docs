@@ -3,7 +3,7 @@
 **The AI Control Plane** is a practical, composable foundation for building, controlling, and engineering enterprise AI systems. It brings together three groups of building blocks:
 
 - **[Agents](agents/index.md)** — build, orchestrate, and deploy autonomous AI agents that act across business systems.
-- **[Control](control/index.md)** — evaluate, observe, enforce policy on, and govern every agent and model in production, including cost and compliance.
+- **[Govern](govern/index.md)** — evaluate, observe, enforce policy on, and govern every agent and model in production, including cost and compliance.
 - **[Engineering](engineering/index.md)** — accelerate software delivery with IBM Bob, from new builds to legacy modernization and integration.
 
 !!! info "How to use this section"
@@ -19,17 +19,17 @@
 |---|---|---|---|
 | **Agents** | [Agent Builder](agents/agent-builder.md) | IBM watsonx Orchestrate (ADK) | Create and deploy LLM-backed, tool-calling agents — from local development to production |
 | **Agents** | [Multi-Agent Orchestration](agents/multi-agent-orchestration.md) | IBM watsonx Orchestrate, A2A, AI Gateway | Coordinate wxO agents with external agents via open standards and route LLM calls across providers |
-| **Control** | [Agent Ops](control/agent-ops.md) | IBM watsonx.governance, IBM watsonx Orchestrate | Evaluate and observe agents — benchmarking, red-teaming, failure analysis, traces and latency |
-| **Control** | [Guardrails](control/guardrails.md) | IBM watsonx Orchestrate, IBM watsonx.governance | Enforce runtime policy on agents, tools, and models — PII filters, content safety, secrets detection, rate limits, model fallback, and Pass/Flag/Block checks for any framework |
-| **Control** | [Cost Management](control/cost-management.md) | IBM watsonx Orchestrate, IBM watsonx.governance | Track what watsonx Orchestrate agents cost — tokens per agent and conversation in the platform, and cost in dollars per trace, session, and evaluation scenario with Langfuse |
-| **Control** | [Compliance](control/compliance.md) | IBM watsonx.governance | Map AI use cases to regulations, manage risk assessments, and report compliance posture |
+| **Govern** | [Agent Ops](govern/agent-ops.md) | IBM watsonx.governance, IBM watsonx Orchestrate | Evaluate and observe agents — benchmarking, red-teaming, failure analysis, traces and latency |
+| **Govern** | [Guardrails](govern/guardrails.md) | IBM watsonx Orchestrate, IBM watsonx.governance | Enforce runtime policy on agents, tools, and models — PII filters, content safety, secrets detection, rate limits, model fallback, and Pass/Flag/Block checks for any framework |
+| **Govern** | [Cost Management](govern/cost-management.md) | IBM watsonx Orchestrate, IBM watsonx.governance | Track what watsonx Orchestrate agents cost — tokens per agent and conversation in the platform, and cost in dollars per trace, session, and evaluation scenario with Langfuse |
+| **Govern** | [Compliance](govern/compliance.md) | IBM watsonx.governance | Map AI use cases to regulations, manage risk assessments, and report compliance posture |
 | **Engineering** | [Agentic SDLC](engineering/agentic-sdlc.md) | IBM Bob | IDE-native AI agent spanning planning, coding, testing, documentation, modernization, and CI/CD |
 | **Engineering** | [Code Modernization](engineering/code-modernization.md) | IBM Bob | Transform legacy Java, mainframe, IBM Z, and IBM i applications into modern cloud-native systems |
 | **Engineering** | [Integration as Code](engineering/integration-as-code.md) | IBM webMethods | Connect SaaS apps, on-premise systems, APIs, and event streams through a low-code iPaaS model |
 | **Engineering** | [Headless Bob](engineering/headless-bob.md) | IBM Bob | Run Bob autonomously in CI/CD pipelines, scheduled jobs, and event-driven automations |
 
-<!-- Hidden for now — restore to the Control rows above:
-| **Control** | [Lifecycle Management](control/lifecycle-management.md) | IBM watsonx.governance | Manage AI models and agents from onboarding through retirement |
+<!-- Hidden for now — restore to the Govern rows above:
+| **Govern** | [Lifecycle Management](govern/lifecycle-management.md) | IBM watsonx.governance | Manage AI models and agents from onboarding through retirement |
 -->
 
 ---
@@ -55,7 +55,7 @@
 
 ---
 
-## 2. Control
+## 2. Govern
 
 > **Goal:** enforce, evaluate, and govern every AI agent and model in production — making AI safe to operate at enterprise scale.
 
@@ -65,7 +65,7 @@
     - **Regulatory confidence** — map AI use cases to EU AI Act, NIST AI RMF, and other frameworks; generate evidence for audits; manage risk assessments at the portfolio level.
     - **Cost accountability** — allocate AI spend by team, use case, or model; identify waste and set budgets before costs become unmanageable.
 
-**Use Control when:**
+**Use Govern when:**
 
 - Agents handle sensitive data and need **PII filtering, content guardrails, or secrets detection** enforced at runtime.
 - You need to **evaluate agent quality and safety** before deployment — benchmarking, red-teaming, and adversarial testing.
@@ -73,7 +73,7 @@
 - **AI costs are growing** and you need visibility, allocation, and control across teams and workloads.
 - Models need **reliability engineering** — fallback routing, load balancing, and retry policies when primary endpoints degrade.
 
-[Explore Control →](control/index.md)
+[Explore Govern →](govern/index.md)
 
 ---
 
@@ -113,10 +113,10 @@
 |---|---|
 | "I need to automate a multi-step business workflow" | [Agent Builder](agents/agent-builder.md) |
 | "I have multiple agents that need to work together" | [Multi-Agent Orchestration](agents/multi-agent-orchestration.md) |
-| "My agent is producing harmful or non-compliant output" | [Agent Ops](control/agent-ops.md) |
-| "I need PII filtering or content guardrails on my agent" | [Guardrails](control/guardrails.md) |
-| "AI costs are growing and I can't see where" | [Cost Management](control/cost-management.md) |
-| "AI regulation requires documented risk assessments" | [Compliance](control/compliance.md) |
+| "My agent is producing harmful or non-compliant output" | [Agent Ops](govern/agent-ops.md) |
+| "I need PII filtering or content guardrails on my agent" | [Guardrails](govern/guardrails.md) |
+| "AI costs are growing and I can't see where" | [Cost Management](govern/cost-management.md) |
+| "AI regulation requires documented risk assessments" | [Compliance](govern/compliance.md) |
 | "My development team needs an AI partner across the full SDLC" | [Agentic SDLC](engineering/agentic-sdlc.md) |
 | "We have legacy Java / mainframe / IBM Z apps that need modernizing" | [Code Modernization](engineering/code-modernization.md) |
 | "We need enterprise integrations without heavy custom code" | [Integration as Code](engineering/integration-as-code.md) |
