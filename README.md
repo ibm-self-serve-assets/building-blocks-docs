@@ -42,7 +42,7 @@ The markdown files located in [docs-src](./docs-src) are used by Github Pages to
 
 ---
 
-### Automation – Intelligent Hybrid Application
+### Automation – Secure Hybrid Automation
 
 | Group | Building Block | Primary Products |
 |---|---|---|

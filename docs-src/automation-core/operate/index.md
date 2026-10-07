@@ -1,6 +1,6 @@
 # **Operate**
 
-Operate focuses on provisioning, configuring, and scheduling the infrastructure and workloads that power intelligent hybrid applications. This building block enables organizations to automate infrastructure lifecycle management, enforce consistent configuration at scale, and orchestrate dynamic workloads—reducing manual toil and creating repeatable, auditable delivery pipelines across hybrid cloud environments.
+Operate focuses on provisioning, configuring, and scheduling the infrastructure and workloads that power secure hybrid automation. This building block enables organizations to automate infrastructure lifecycle management, enforce consistent configuration at scale, and orchestrate dynamic workloads—reducing manual toil and creating repeatable, auditable delivery pipelines across hybrid cloud environments.
 
 ## **Core Capabilities**
 

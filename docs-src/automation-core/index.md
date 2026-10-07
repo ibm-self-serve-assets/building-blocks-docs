@@ -1,8 +1,8 @@
-# Automation – Intelligent Hybrid Application
+# Automation – Secure Hybrid Automation
 
 **The Automation Building Blocks** provide a practical, composable foundation for **operating, securing, and optimizing** enterprise applications and infrastructure across hybrid cloud environments. The model is organized around three use-case groups: **Operate**, **Secure**, and **Optimize**.
 
-![Automation Core overview](images/automation.png)
+![Automation Core overview](images/automation.svg)
 
 !!! info "How to use this section"
     Start with the business outcome you need, then choose the smallest building block that solves it. The blocks are designed to work independently or together in an end-to-end automation and resilience architecture.
