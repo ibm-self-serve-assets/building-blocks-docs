@@ -1,4 +1,4 @@
-# Text2SQL
+﻿# Text2SQL
 
 Use **IBM watsonx.data intelligence** to convert natural-language requests into SQL by using vectorized and enriched metadata as context — giving business users self-service access to governed relational and lakehouse data.
 
@@ -8,7 +8,69 @@ Use **IBM watsonx.data intelligence** to convert natural-language requests into 
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Text2SQL](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/text2sql)
+    [Building Blocks - Text2SQL](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/text2sql)
+
+---
+
+## Included Assets
+
+### `watsonx-text2sql` — Managed Text-to-SQL API
+
+Built on the IBM watsonx.data intelligence managed Text-to-SQL API, using governed metadata as context for natural-language SQL generation.
+
+| Asset | Description |
+|---|---|
+| **[text_to_sql_app](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/text2sql/assets/watsonx-text2sql/applications/text_to_sql_app)** | FastAPI wrapper for the watsonx.data intelligence Text-to-SQL API with optional controlled SQL execution |
+| **[metadata_enrichment_text2sql](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/text2sql/assets/watsonx-text2sql/metadata_enrichment_text2sql)** | Reference metadata-enrichment flow to improve Text-to-SQL context quality |
+
+```mermaid
+flowchart TD
+    Q["User question"]
+    Q --> META["Governed metadata / examples\nIBM watsonx.data intelligence"]
+    META --> API["Text-to-SQL API"]
+    API --> GATE["SQL validation / policy gate"]
+    GATE --> RET["return SQL"]
+    GATE --> EXEC["optional controlled execution"]
+    EXEC --> DB["IBM data source"]
+```
+
+### `NL2SQL` — Custom NL-to-SQL with Schema Retrieval
+
+A self-contained NL-to-SQL system using semantic schema retrieval and hardened read-only SQL execution, targeting PostgreSQL and IBM Db2.
+
+| Asset | Description |
+|---|---|
+| **[schema_retriever](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/text2sql/assets/NL2SQL/backend/schema_retriever)** | FastAPI schema retriever using OpenSearch k-NN or pgvector for semantic schema lookup |
+| **[sql_executor](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/text2sql/assets/NL2SQL/backend/sql_executor)** | FastAPI SQL executor with AST-based safety validation for read-only execution against PostgreSQL and Db2 |
+
+```mermaid
+flowchart TD
+    Q["User question"]
+    Q --> RETR["Schema Retriever (FastAPI)\nOpenSearch k-NN / pgvector"]
+    RETR --> LLM["LLM SQL generation"]
+    LLM --> EXSVC["SQL Executor (FastAPI)\nAST-based safety validation"]
+    EXSVC --> DB["IBM data source\nPostgreSQL / Db2"]
+```
+
+---
+
+## Bob Modes
+
+| Mode | Description |
+|---|---|
+| **[Text-to-SQL](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/text2sql/bob-modes)** | Natural language to SQL using IBM watsonx.data intelligence — FastAPI app, metadata enrichment (table/column descriptions, synonyms), and SQL accuracy evaluation |
+
+---
+
+## Bob Skills
+
+| Skill | Description |
+|---|---|
+| **[text2sql-metadata-enrichment](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/text2sql/bob-skills/text2sql-metadata-enrichment.zip)** | watsonx.data intelligence project onboarding, table/column description enrichment, synonym design, query example authoring, and accuracy measurement |
+| **[text2sql-query-optimizer](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/text2sql/bob-skills/text2sql-query-optimizer.zip)** | Model selection, SQL safety validation, accuracy evaluation (exact-match + execution accuracy), error pattern diagnosis, and SQL dialect tuning |
+
+!!! tip "Installing skills and modes"
+    Download the `.zip` files and copy the folders to `~/.bob/skills` or `~/.bob/modes` (global) or `<project>/.bob/skills` / `<project>/.bob/modes` (project-level). See the [Data Skills and Modes](../../../streamhouse-core/bob-skills-and-modes.md) page for full installation instructions.
 
 ---
 

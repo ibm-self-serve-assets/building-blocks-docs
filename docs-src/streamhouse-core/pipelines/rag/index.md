@@ -1,4 +1,4 @@
-# RAG
+﻿# RAG
 
 Use **IBM watsonx.data (OpenRAG / OpenSearch)** to ground AI applications and agents in enterprise knowledge using document processing, semantic/vector retrieval, keyword search, hybrid retrieval, and agentic retrieval patterns.
 
@@ -8,10 +8,83 @@ Use **IBM watsonx.data (OpenRAG / OpenSearch)** to ground AI applications and ag
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - RAG](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/rag)
+    [Building Blocks - RAG](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag)
 
 !!! warning "Architecture note"
     The RAG Building Block is a reusable accelerator and may implement a custom RAG pipeline rather than **OpenRAG** specifically. The current recommended product architecture is **IBM watsonx.data OpenRAG** — a managed enterprise RAG capability provisioned directly from watsonx.data. Refer to the [IBM OpenRAG provisioning documentation](https://www.ibm.com/docs/en/watsonxdata/saas?topic=openrag-provisioning) for details.
+
+---
+
+## Included Assets
+
+| Asset | Description |
+|---|---|
+| **[rag-accelerator](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/assets/rag-accelerator)** | Combined ingestion, vector search, and Q&A FastAPI service — start here for a full end-to-end RAG pipeline |
+| **[opensearch-data-ingestion](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/assets/opensearch-data-ingestion)** | IBM COS → chunk → watsonx.ai embedding → OpenSearch ingestion pipeline |
+| **[rag-ingestion-sse-mcp-server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/assets/rag-ingestion-sse-mcp-server)** | MCP server exposing RAG ingestion as tools for AI agents |
+| **[rag-retrieval-fastapi-server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/assets/rag-retrieval-fastapi-server)** | Standalone REST retrieval service |
+| **[rag-retrieval-sse-mcp-server](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/assets/rag-retrieval-sse-mcp-server)** | MCP server exposing RAG retrieval as tools for AI agents |
+
+---
+
+## Bob Modes
+
+| Mode | Description |
+|---|---|
+| **[RAG Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/bob-modes)** | End-to-end RAG architect — pipeline architecture, hybrid search design, chunking strategy, watsonx.ai embedding model choice, MCP server design, and RAG evaluation (RAGAS) |
+| **[RAG Ingestion Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/bob-modes)** | Focused ingestion specialist — IBM COS document loading, chunking, watsonx.ai embedding, OpenSearch indexing, and MCP ingestion tool design |
+| **[RAG Retrieval Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/bob-modes)** | Focused retrieval and generation specialist — hybrid search, reranking, watsonx.ai Granite generation, RAGAS evaluation, and MCP retrieval tools |
+| **[OpenSearch Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/bob-modes)** | IBM watsonx.data OpenSearch k-NN index design, HNSW parameter tuning, and hybrid search score fusion |
+
+---
+
+## Bob Skills
+
+| Skill | Description |
+|---|---|
+| **[rag-pipeline-builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/bob-skills)** | Complete RAG pipeline design — watsonx.ai embedding integration, OpenSearch HNSW + hybrid search design, chunking strategy selection, and evaluation with RAGAS metrics |
+| **[rag-mcp-server-builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/bob-skills)** | MCP server development (SSE transport, FastMCP), RAG ingestion + retrieval tool design, IBM Bob / Claude integration, and deployment to IBM Code Engine |
+| **[opensearch-vector-search](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/bob-skills)** | IBM watsonx.data OpenSearch k-NN index design, HNSW parameter tuning, and hybrid search (vector + BM25) score fusion |
+
+!!! tip "Installing skills and modes"
+    Download the `.zip` files and copy the folders to `~/.bob/skills` or `~/.bob/modes` (global) or `<project>/.bob/skills` / `<project>/.bob/modes` (project-level). See the [Data Skills and Modes](../../../streamhouse-core/bob-skills-and-modes.md) page for full installation instructions.
+
+---
+
+## Quick Start
+
+Pick an asset based on your need:
+
+- Full ingestion + retrieval + Q&A in one service? Start with **rag-accelerator**.
+- Focused OpenSearch ingestion pipeline only? Use **opensearch-data-ingestion**.
+- Retrieval as a REST API? Use **rag-retrieval-fastapi-server**.
+- Tool access for Bob or Claude agents? Use one of the **MCP server** assets.
+
+```bash
+cd data/pipelines/rag/assets/rag-accelerator
+cp .env.example .env
+# Configure IBM Cloud, watsonx.ai, COS, and your selected vector store
+pip install -r requirements.txt
+python main.py
+```
+
+Read [`assets/rag-accelerator/README.md`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/assets/rag-accelerator) before running — required variables differ by vector-store choice.
+
+---
+
+## Model Defaults
+
+!!! warning "Verify before production"
+    Model IDs in `.env.example` files are current defaults, not permanent. Confirm availability for your region and deployment before provisioning indexes or deploying an application.
+
+    ```
+    WATSONX_EMBEDDING_MODEL_ID=ibm/granite-embedding-278m-multilingual
+    WATSONX_GENERATION_MODEL_ID=ibm/granite-4-h-small
+    ```
+
+    - [Supported foundation models](https://www.ibm.com/docs/en/watsonx/saas?topic=solutions-supported-foundation-models)
+    - [Supported embedding models](https://www.ibm.com/docs/en/watsonx/saas?topic=models-supported-embedding)
+    - [Foundation model lifecycle](https://www.ibm.com/docs/en/watsonx/saas?topic=model-foundation-lifecycle)
 
 ---
 

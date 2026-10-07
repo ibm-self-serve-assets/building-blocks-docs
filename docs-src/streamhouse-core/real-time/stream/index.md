@@ -1,4 +1,4 @@
-# Stream
+﻿# Stream
 
 Use **IBM Confluent Connectors and Apache Kafka** to capture and transport high-throughput enterprise event streams from databases, applications, SaaS platforms, mainframes, and IoT devices into a durable, scalable streaming backbone.
 
@@ -8,7 +8,7 @@ Use **IBM Confluent Connectors and Apache Kafka** to capture and transport high-
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Stream](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/streamhouse/real-time-streaming)
+    [Building Blocks - Stream](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/real-time/stream)
 
 ---
 
@@ -16,7 +16,42 @@ Use **IBM Confluent Connectors and Apache Kafka** to capture and transport high-
 
 | Asset | Description |
 |---|---|
-| **[supply-chain-risk-control-tower](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/streamhouse/real-time-streaming/assets/supply-chain-risk-control-tower)** | Real-time event streaming reference — managed Kafka topics, producer scripts, CDC simulation, and enterprise event ingestion |
+| **[supply-chain-risk-control-tower](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/real-time/stream/assets/supply-chain-risk-control-tower)** | Real-time event streaming reference — managed Kafka topics, producer scripts, CDC simulation, and enterprise event ingestion |
+| **[bob-modes](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/real-time/stream/bob-modes)** | IBM Bob Data Ingestion mode |
+
+---
+
+## Quick Start
+
+**Browser simulation (no Kafka cluster required):**
+
+```bash
+python -m http.server 8080 --directory data/streamhouse/stream/assets/supply-chain-risk-control-tower/code/ui
+```
+
+**Python dry run:**
+
+```bash
+cd data/streamhouse/stream/assets/supply-chain-risk-control-tower
+cp .env.example .env
+python -m scrc.risk_engine --dry-run
+```
+
+**Full IBM Confluent deployment:** Provision infrastructure with Terraform, register schemas, and run the full streaming pipeline. See [`assets/supply-chain-risk-control-tower/README.md`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/real-time/stream/assets/supply-chain-risk-control-tower).
+
+---
+
+## What the Asset Demonstrates
+
+The supply-chain asset covers:
+
+- Managed Kafka topic provisioning and partition sizing
+- JSON Schema contracts with Schema Registry and compatibility enforcement
+- Python Confluent producers with Schema Registry-aware serialization
+- Reference Apache Flink SQL for risk aggregation over event streams
+- Terraform IaC for Confluent environment, cluster, topics, and service accounts
+- Carbon React dashboard consuming a live Kafka bridge
+- Integration points for IBM watsonx.ai, watsonx Orchestrate, and IBM Cloud services
 
 ---
 

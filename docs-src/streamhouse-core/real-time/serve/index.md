@@ -1,4 +1,4 @@
-# Serve
+﻿# Serve
 
 Use **IBM Confluent Real-Time Context Engine (RTCE)** and **Tableflow** to serve continuously current business state to operational applications, AI agents, and open lakehouse query engines with sub-second latency.
 
@@ -8,7 +8,7 @@ Use **IBM Confluent Real-Time Context Engine (RTCE)** and **Tableflow** to serve
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Real-Time Serve](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/streamhouse/serve)
+    [Building Blocks - Real-Time Serve](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/real-time/serve)
 
 ---
 
@@ -16,7 +16,36 @@ Use **IBM Confluent Real-Time Context Engine (RTCE)** and **Tableflow** to serve
 
 | Asset | Description |
 |---|---|
-| **[live-context-for-supply-chain-resilience](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/streamhouse/serve/assets/live-context-for-supply-chain-resilience)** | Full-stack operational AI application combining Confluent Real-Time Context Engine, watsonx Orchestrate AI agents, and an IBM Carbon React control tower |
+| **[live-context-for-supply-chain-resilience](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/real-time/serve/assets/live-context-for-supply-chain-resilience)** | Full-stack operational AI application combining Confluent Real-Time Context Engine, watsonx Orchestrate AI agents, and an IBM Carbon React control tower |
+| **[streamhouse-continous-rag](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/real-time/serve/assets/streamhouse-continous-rag)** | FactoryPulse Continuous RAG demo — Kafka/Flink RAG profiles, FastAPI backend, IBM Carbon UI, and IBM Code Engine deployment |
+
+---
+
+## Quick Start
+
+**Live Context for Supply Chain Resilience:**
+
+```bash
+cd data/streamhouse/serve/assets/live-context-for-supply-chain-resilience/backend
+cp .env.example .env
+# Configure IBM Confluent, watsonx.ai, and watsonx Orchestrate credentials
+pip install -r requirements.txt
+python run.py
+```
+
+See [`assets/live-context-for-supply-chain-resilience/README.md`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/real-time/serve/assets/live-context-for-supply-chain-resilience) for full setup including the React UI and agent configuration.
+
+**Streamhouse Continuous RAG:**
+
+```bash
+cd data/streamhouse/serve/assets/streamhouse-continous-rag
+cp .env.example .env
+# Configure Confluent Cloud, watsonx.ai embedding model, and IBM COS
+pip install -r requirements.txt
+python -m app.main
+```
+
+See [`assets/streamhouse-continous-rag/README.md`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/real-time/serve/assets/streamhouse-continous-rag) for Flink RAG profile setup and UI options.
 
 ---
 
@@ -25,7 +54,7 @@ Use **IBM Confluent Real-Time Context Engine (RTCE)** and **Tableflow** to serve
 | Skill | Description |
 |---|---|
 | **[data-streaming-confluent](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/data-streaming-confluent/SKILL.md)** | Configures Confluent Tableflow, Apache Iceberg sink integrations, and RTCE endpoints for application consumption |
-| **[streamhouse-continuous-rag](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/data/streamhouse/serve/bob-skills/streamhouse-continuous-rag.zip)** | Combines Real-Time live operational state with RAG enterprise knowledge — designs and implements continuous RAG pipelines that ground AI agents in real-time context |
+| **[streamhouse-continuous-rag](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/streamhouse/real-time/serve/bob-skills/streamhouse-continuous-rag.zip)** | Combines Real-Time live operational state with RAG enterprise knowledge — designs and implements continuous RAG pipelines that ground AI agents in real-time context |
 
 !!! tip "Installing skills"
     Download the skill `.zip` files and copy the skill folders to `~/.bob/skills` (global) or `<project>/.bob/skills` (project-level). See the [Data Skills and Modes](../../bob-skills-and-modes.md) page for full installation instructions.
@@ -119,6 +148,17 @@ flowchart LR
 | **Live / Operational Context** | Real-Time RTCE | Real-time events, current sensor metrics, live transit delays | "Where is supplier shipment #8942 right now and what is its risk status?" |
 
 Combining both layers gives AI agents full contextual awareness — what the enterprise knows plus what is happening right now.
+
+```mermaid
+flowchart TD
+    RTCE["RTCE — live operational state\ncurrent orders · alerts · inventory · risk scores"]
+    RAG["RAG Pipeline — enterprise knowledge\nhistorical documents · policies · contracts · specs"]
+
+    RTCE --> AGENT["AI Agent\nwatsonx.ai"]
+    RAG  --> AGENT
+
+    AGENT --> OUT["Grounded response with\nlive + historical context"]
+```
 
 ---
 

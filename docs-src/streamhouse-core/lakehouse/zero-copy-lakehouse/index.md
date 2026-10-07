@@ -1,4 +1,4 @@
-# Zero-Copy Lakehouse
+﻿# Zero-Copy Lakehouse
 
 Use **IBM watsonx.data** with **Presto, Spark, and Apache Iceberg** to query, process, and govern distributed data in place with zero unnecessary copying and to keep analytic data open and interoperable across multiple engines.
 
@@ -8,7 +8,7 @@ Use **IBM watsonx.data** with **Presto, Spark, and Apache Iceberg** to query, pr
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Zero-Copy Lakehouse](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/zero-copy-lakehouse)
+    [Building Blocks - Zero-Copy Lakehouse](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/lakehouse/zero-copy-lakehouse)
 
 ---
 
@@ -16,7 +16,7 @@ Use **IBM watsonx.data** with **Presto, Spark, and Apache Iceberg** to query, pr
 
 | Asset | Description |
 |---|---|
-| **[setup-lakehouse](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/zero-copy-lakehouse/assets/setup-lakehouse)** | Reference setup — Presto federated query configurations, multi-catalog connections (DB2, PostgreSQL, Snowflake, S3), Spark ETL jobs, and Iceberg table optimization scripts |
+| **[setup-lakehouse](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/lakehouse/zero-copy-lakehouse/assets/setup-lakehouse)** | Reference setup — Presto federated query configurations, multi-catalog connections (DB2, PostgreSQL, Snowflake, S3), Spark ETL jobs, and Iceberg table optimization scripts |
 
 ---
 
@@ -24,8 +24,8 @@ Use **IBM watsonx.data** with **Presto, Spark, and Apache Iceberg** to query, pr
 
 | Skill | Description |
 |---|---|
-| **[watsonxdata-lakehouse](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/zero-copy-lakehouse/bob-skills/watsonxdata-lakehouse.zip)** | Presto SQL optimization, Spark job configuration on watsonx.data, cross-catalog federation design, and Iceberg table maintenance |
-| **[iceberg-table-management](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/zero-copy-lakehouse/bob-skills/iceberg-table-management.zip)** | Apache Iceberg table operations — schema evolution, partition management, time travel, snapshot expiry, and compaction on watsonx.data |
+| **[watsonxdata-lakehouse](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/lakehouse/zero-copy-lakehouse/bob-skills/watsonxdata-lakehouse.zip)** | Presto SQL optimization, Spark job configuration on watsonx.data, cross-catalog federation design, and Iceberg table maintenance |
+| **[iceberg-table-management](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/lakehouse/zero-copy-lakehouse/bob-skills/iceberg-table-management.zip)** | Apache Iceberg table operations — schema evolution, partition management, time travel, snapshot expiry, and compaction on watsonx.data |
 
 !!! tip "Installing skills"
     Download the skill `.zip` files and copy the skill folders to `~/.bob/skills` (global) or `<project>/.bob/skills` (project-level). See the [Data Skills and Modes](../../bob-skills-and-modes.md) page for full installation instructions.

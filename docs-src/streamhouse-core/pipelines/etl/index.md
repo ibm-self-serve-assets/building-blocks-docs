@@ -1,4 +1,4 @@
-# ETL
+﻿# ETL
 
 Use **IBM watsonx.data (DataStage)** to build governed batch data flows that extract data from source systems, transform it, and deliver it to lakehouse targets. DataStage integrates directly with **IBM watsonx.data** for high-performance lakehouse ingestion and access.
 
@@ -8,7 +8,7 @@ Use **IBM watsonx.data (DataStage)** to build governed batch data flows that ext
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - ETL / ELT](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/etl)
+    [Building Blocks - ETL / ELT](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/etl)
 
 ---
 

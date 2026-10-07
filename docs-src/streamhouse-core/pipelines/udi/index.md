@@ -1,4 +1,4 @@
-# UDI
+﻿# UDI
 
 Use **IBM watsonx.data integration and IBM Docling** to ingest, cleanse, transform, and enrich unstructured content for RAG and AI. Use **IBM Docling** when complex documents need high-quality conversion into structured, AI-ready representations.
 
@@ -8,7 +8,61 @@ Use **IBM watsonx.data integration and IBM Docling** to ingest, cleanse, transfo
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - UDI](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/udi)
+    [Building Blocks - UDI](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/udi)
+
+---
+
+## Included Assets
+
+| Asset | Description |
+|---|---|
+| **[udi-ingestion-opensearch](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/udi/assets/udi-ingestion-opensearch)** | End-to-end document ingestion — IBM COS → UDI document processing → watsonx.ai embeddings → OpenSearch |
+
+---
+
+## Bob Modes
+
+| Mode | Description |
+|---|---|
+| **[Data Ingestion](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/udi/bob-modes)** | IBM Bob mode for UDI document ingestion pipeline design, COS source configuration, chunking strategy, and OpenSearch indexing |
+
+---
+
+## Bob Skills
+
+| Skill | Description |
+|---|---|
+| **[data-ingestion-unstructured](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/udi/bob-skills/data-ingestion-unstructured.zip)** | IBM Docling document parsing, UDI pipeline configuration, multi-format chunking (PDF, DOCX, HTML, images), metadata extraction, and Python automation scripts |
+| **[udi-opensearch](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/udi/bob-skills/udi-opensearch.zip)** | IBM UDI + OpenSearch integration, document search pipeline setup, and OpenSearch index provisioning for UDI output into IBM watsonx.data |
+| **[data-ingestion-structured](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/udi/bob-skills/data-ingestion-structured.zip)** | Structured ingestion companion guidance for IBM DataStage connector config, CDC pipeline design, and schema mapping |
+
+!!! tip "Installing skills and modes"
+    Download the `.zip` files and copy the folders to `~/.bob/skills` or `~/.bob/modes` (global) or `<project>/.bob/skills` / `<project>/.bob/modes` (project-level). See the [Data Skills and Modes](../../../streamhouse-core/bob-skills-and-modes.md) page for full installation instructions.
+
+---
+
+## Quick Start
+
+```bash
+cd data/pipelines/udi/assets/udi-ingestion-opensearch
+cp scripts/.env.example scripts/.env
+# Populate IBM Cloud, project, COS, and target credentials described in the asset README
+pip install -r requirements.txt
+python scripts/setup.py
+python scripts/ingest.py
+```
+
+Read [`assets/udi-ingestion-opensearch/README.md`](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/udi/assets/udi-ingestion-opensearch) first — it documents required IBM services, COS HMAC credentials, input folder layout, generated resources, and troubleshooting.
+
+---
+
+## Model Default
+
+!!! warning "Verify before production"
+    The default embedding model is `ibm/granite-embedding-278m-multilingual`. Verify current support and dimensions before indexing:
+
+    - [Supported embedding models](https://www.ibm.com/docs/en/watsonx/saas?topic=models-supported-embedding)
+    - [Foundation model lifecycle](https://www.ibm.com/docs/en/watsonx/saas?topic=model-foundation-lifecycle)
 
 ---
 

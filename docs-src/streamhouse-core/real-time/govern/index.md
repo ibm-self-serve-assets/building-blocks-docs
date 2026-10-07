@@ -1,4 +1,4 @@
-# Govern
+﻿# Govern
 
 Use **IBM Confluent Stream Governance** to establish end-to-end trust, strict data contracts, automatic stream lineage, data quality validation, and self-service discoverability across all streaming assets in the Real-Time architecture.
 
@@ -8,7 +8,7 @@ Use **IBM Confluent Stream Governance** to establish end-to-end trust, strict da
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Stream Governance](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/streamhouse/govern)
+    [Building Blocks - Stream Governance](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/real-time/govern)
 
 ---
 

@@ -1,4 +1,4 @@
-# Transform
+﻿# Transform
 
 Use **IBM Confluent (Flink)** to perform serverless, real-time stream processing, stateful computations, continuous event enrichment, filtering, and windowed aggregations directly on data in motion.
 
@@ -8,7 +8,7 @@ Use **IBM Confluent (Flink)** to perform serverless, real-time stream processing
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Transform](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/streamhouse/transform)
+    [Building Blocks - Transform](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/real-time/transform)
 
 ---
 

@@ -1,4 +1,4 @@
-# Serverless Vector
+﻿# Serverless Vector
 
 Use **IBM watsonx.data and Astra DB Serverless** for elastic, high-scale vector storage, similarity search, and hybrid retrieval in RAG, semantic search, and AI agent memory patterns without managing vector database infrastructure.
 
@@ -8,7 +8,7 @@ Use **IBM watsonx.data and Astra DB Serverless** for elastic, high-scale vector 
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Serverless Vector](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/serverless-vector)
+    [Building Blocks - Serverless Vector](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/lakehouse/serverless-vector)
 
 ---
 
@@ -16,8 +16,8 @@ Use **IBM watsonx.data and Astra DB Serverless** for elastic, high-scale vector 
 
 | Asset | Description |
 |---|---|
-| **[astradb-vector-ingestion](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/serverless-vector/assets/astradb-vector-ingestion)** | Vector retrieval reference — Astra DB collection provisioning via `astrapy`, watsonx.ai embedding pipeline integration, approximate nearest-neighbor (ANN) similarity search, and hybrid vector+metadata filtering |
-| **[astradb-nosql-crud](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/serverless-vector/assets/astradb-nosql-crud)** | FastAPI document CRUD service using the Astra Data API for NoSQL document access patterns |
+| **[astradb-vector-ingestion](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/lakehouse/serverless-vector/assets/astradb-vector-ingestion)** | Vector retrieval reference — Astra DB collection provisioning via `astrapy`, watsonx.ai embedding pipeline integration, approximate nearest-neighbor (ANN) similarity search, and hybrid vector+metadata filtering |
+| **[astradb-nosql-crud](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/lakehouse/serverless-vector/assets/astradb-nosql-crud)** | FastAPI document CRUD service using the Astra Data API for NoSQL document access patterns |
 
 ---
 
@@ -25,8 +25,8 @@ Use **IBM watsonx.data and Astra DB Serverless** for elastic, high-scale vector 
 
 | Skill | Description |
 |---|---|
-| **[astradb-vector-setup](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/serverless-vector/bob-skills/astradb-vector-setup.zip)** | Astra DB vector collection creation, IBM watsonx.ai embedding integration, ANN cosine/dot-product search queries via `astrapy` Data API, and metadata filtering patterns |
-| **[astradb-nosql-design](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/serverless-vector/bob-skills/astradb-nosql-design.zip)** | Astra DB NoSQL document modeling, collection design, CRUD patterns, and IBM watsonx.data integration |
+| **[astradb-vector-setup](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/lakehouse/serverless-vector/bob-skills/astradb-vector-setup.zip)** | Astra DB vector collection creation, IBM watsonx.ai embedding integration, ANN cosine/dot-product search queries via `astrapy` Data API, and metadata filtering patterns |
+| **[astradb-nosql-design](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/lakehouse/serverless-vector/bob-skills/astradb-nosql-design.zip)** | Astra DB NoSQL document modeling, collection design, CRUD patterns, and IBM watsonx.data integration |
 
 !!! tip "Installing skills"
     Download the skill `.zip` files and copy the skill folders to `~/.bob/skills` (global) or `<project>/.bob/skills` (project-level). See the [Data Skills and Modes](../../bob-skills-and-modes.md) page for full installation instructions.
