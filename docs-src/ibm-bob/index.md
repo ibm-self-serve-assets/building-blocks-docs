@@ -34,18 +34,18 @@ Instructions and related files for these custom modes can be found in their resp
 
 ### Data
 
-#### [Streamhouse](../data-core/streamhouse/index.md)
+#### [Real-Time](../streamhouse-core/streamhouse/index.md)
 
 - [Data Ingestion](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/streamhouse/real-time-streaming/bob-modes): AI-generated streaming data pipeline mode for IBM Confluent (Kafka, Connectors, Flink CDC). Describe your data source and target — Bob generates the complete ingestion pipeline automatically.
 
-#### [Pipelines](../data-core/pipelines/index.md)
+#### [Pipelines](../streamhouse-core/pipelines/index.md)
 
 - [Text-to-SQL](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/text2sql/bob-modes): Natural language to SQL using IBM watsonx.data Intelligence Text2SQL API. Bob helps build the FastAPI application, enrich database metadata (table/column descriptions, synonyms), and evaluate SQL accuracy across Presto, PostgreSQL, Oracle, and Snowflake dialects.
 - [RAG Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/rag/bob-modes): End-to-end RAG architect — pipeline architecture, hybrid search design, chunking strategy, IBM watsonx.ai embedding model choice, MCP server design, RAG evaluation (RAGAS).
 - [RAG Ingestion Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/rag/bob-modes): Focused ingestion specialist — IBM COS document loading, chunking, watsonx.ai embedding, OpenSearch indexing, MCP ingestion tool design (`ingest_from_cos`).
 - [RAG Retrieval Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/pipelines/rag/bob-modes): Focused retrieval and generation specialist — hybrid search queries, reranking, watsonx.ai Granite generation, RAGAS evaluation, streaming SSE responses, MCP retrieval tools.
 
-#### [Lakehouse](../data-core/lakehouse/index.md)
+#### [Lakehouse](../streamhouse-core/lakehouse/index.md)
 
 - [Data Lineage Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/metadata-enrichment/bob-modes): End-to-end lineage tracking with IBM Manta and watsonx.data Intelligence. Bob assists with OpenLineage instrumentation, impact analysis, compliance reporting, and lineage visualization.
 - [Data Quality Builder](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/data/lakehouse/metadata-enrichment/bob-modes): Data quality rule authoring and monitoring with watsonx.data Intelligence. Bob helps define validation rules, configure profiling, set quality thresholds, and build compliance reports.
