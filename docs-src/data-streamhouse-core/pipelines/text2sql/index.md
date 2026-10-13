@@ -70,7 +70,7 @@ flowchart TD
 | **[text2sql-query-optimizer](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/text2sql/bob-skills/text2sql-query-optimizer.zip)** | Model selection, SQL safety validation, accuracy evaluation (exact-match + execution accuracy), error pattern diagnosis, and SQL dialect tuning |
 
 !!! tip "Installing skills and modes"
-    Download the `.zip` files and copy the folders to `~/.bob/skills` or `~/.bob/modes` (global) or `<project>/.bob/skills` / `<project>/.bob/modes` (project-level). See the [Data Skills and Modes](../../../streamhouse-core/bob-skills-and-modes.md) page for full installation instructions.
+    Download the `.zip` files and copy the folders to `~/.bob/skills` or `~/.bob/modes` (global) or `<project>/.bob/skills` / `<project>/.bob/modes` (project-level). See the [Data Skills and Modes](../../../data-streamhouse-core/bob-skills-and-modes.md) page for full installation instructions.
 
 ---
 

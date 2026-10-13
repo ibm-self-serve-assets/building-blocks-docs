@@ -72,33 +72,52 @@ plugins:
         'ai-core/control/shadow-ai-discovery.md': 'ai-core/govern/shadow-ai-discovery.md'
         'ai-core/control/model-evaluation.md': 'ai-core/govern/model-evaluation.md'
         # Data Building Blocks re-architecture redirects (original paths)
-        'data-core/context/index.md': 'streamhouse-core/real-time/index.md'
-        'data-core/context/streamhouse/index.md': 'streamhouse-core/real-time/index.md'
-        'data-core/context/context-hub/index.md': 'streamhouse-core/real-time/serve/index.md'
-        'data-core/context/metadata-enrichment/index.md': 'streamhouse-core/lakehouse/metadata-enrichment/index.md'
-        'data-core/context/data-observability/index.md': 'streamhouse-core/lakehouse/data-observability/index.md'
-        'data-core/query-engines/index.md': 'streamhouse-core/lakehouse/index.md'
-        'data-core/query-engines/zero-copy-lakehouse/index.md': 'streamhouse-core/lakehouse/zero-copy-lakehouse/index.md'
-        'data-core/query-engines/serverless-vector/index.md': 'streamhouse-core/lakehouse/serverless-vector/index.md'
-        # Folder rename: data-core → streamhouse-core
-        'data-core/index.md': 'streamhouse-core/index.md'
-        'data-core/bob-skills-and-modes.md': 'streamhouse-core/bob-skills-and-modes.md'
-        'data-core/streamhouse/index.md': 'streamhouse-core/real-time/index.md'
-        'data-core/streamhouse/real-time-streaming/index.md': 'streamhouse-core/real-time/stream/index.md'
-        'data-core/streamhouse/transform/index.md': 'streamhouse-core/real-time/transform/index.md'
-        'data-core/streamhouse/govern/index.md': 'streamhouse-core/real-time/govern/index.md'
-        'data-core/streamhouse/serve/index.md': 'streamhouse-core/real-time/serve/index.md'
-        'data-core/pipelines/index.md': 'streamhouse-core/pipelines/index.md'
-        'data-core/pipelines/rag/index.md': 'streamhouse-core/pipelines/rag/index.md'
-        'data-core/pipelines/udi/index.md': 'streamhouse-core/pipelines/udi/index.md'
-        'data-core/pipelines/text2sql/index.md': 'streamhouse-core/pipelines/text2sql/index.md'
-        'data-core/pipelines/etl/index.md': 'streamhouse-core/pipelines/etl/index.md'
-        'data-core/pipelines/data-sync/index.md': 'streamhouse-core/pipelines/data-sync/index.md'
-        'data-core/lakehouse/index.md': 'streamhouse-core/lakehouse/index.md'
-        'data-core/lakehouse/metadata-enrichment/index.md': 'streamhouse-core/lakehouse/metadata-enrichment/index.md'
-        'data-core/lakehouse/data-observability/index.md': 'streamhouse-core/lakehouse/data-observability/index.md'
-        'data-core/lakehouse/zero-copy-lakehouse/index.md': 'streamhouse-core/lakehouse/zero-copy-lakehouse/index.md'
-        'data-core/lakehouse/serverless-vector/index.md': 'streamhouse-core/lakehouse/serverless-vector/index.md'
+        'data-core/context/index.md': 'data-streamhouse-core/real-time/index.md'
+        'data-core/context/streamhouse/index.md': 'data-streamhouse-core/real-time/index.md'
+        'data-core/context/context-hub/index.md': 'data-streamhouse-core/real-time/serve/index.md'
+        'data-core/context/metadata-enrichment/index.md': 'data-streamhouse-core/lakehouse/metadata-enrichment/index.md'
+        'data-core/context/data-observability/index.md': 'data-streamhouse-core/lakehouse/data-observability/index.md'
+        'data-core/query-engines/index.md': 'data-streamhouse-core/lakehouse/index.md'
+        'data-core/query-engines/zero-copy-lakehouse/index.md': 'data-streamhouse-core/lakehouse/zero-copy-lakehouse/index.md'
+        'data-core/query-engines/serverless-vector/index.md': 'data-streamhouse-core/lakehouse/serverless-vector/index.md'
+        # Folder rename: data-core → data-streamhouse-core
+        'data-core/index.md': 'data-streamhouse-core/index.md'
+        'data-core/bob-skills-and-modes.md': 'data-streamhouse-core/bob-skills-and-modes.md'
+        'data-core/streamhouse/index.md': 'data-streamhouse-core/real-time/index.md'
+        'data-core/streamhouse/real-time-streaming/index.md': 'data-streamhouse-core/real-time/stream/index.md'
+        'data-core/streamhouse/transform/index.md': 'data-streamhouse-core/real-time/transform/index.md'
+        'data-core/streamhouse/govern/index.md': 'data-streamhouse-core/real-time/govern/index.md'
+        'data-core/streamhouse/serve/index.md': 'data-streamhouse-core/real-time/serve/index.md'
+        'data-core/pipelines/index.md': 'data-streamhouse-core/pipelines/index.md'
+        'data-core/pipelines/rag/index.md': 'data-streamhouse-core/pipelines/rag/index.md'
+        'data-core/pipelines/udi/index.md': 'data-streamhouse-core/pipelines/udi/index.md'
+        'data-core/pipelines/text2sql/index.md': 'data-streamhouse-core/pipelines/text2sql/index.md'
+        'data-core/pipelines/etl/index.md': 'data-streamhouse-core/pipelines/etl/index.md'
+        'data-core/pipelines/data-sync/index.md': 'data-streamhouse-core/pipelines/data-sync/index.md'
+        'data-core/lakehouse/index.md': 'data-streamhouse-core/lakehouse/index.md'
+        'data-core/lakehouse/metadata-enrichment/index.md': 'data-streamhouse-core/lakehouse/metadata-enrichment/index.md'
+        'data-core/lakehouse/data-observability/index.md': 'data-streamhouse-core/lakehouse/data-observability/index.md'
+        'data-core/lakehouse/zero-copy-lakehouse/index.md': 'data-streamhouse-core/lakehouse/zero-copy-lakehouse/index.md'
+        'data-core/lakehouse/serverless-vector/index.md': 'data-streamhouse-core/lakehouse/serverless-vector/index.md'
+        # Folder rename: streamhouse-core → data-streamhouse-core
+        'streamhouse-core/index.md': 'data-streamhouse-core/index.md'
+        'streamhouse-core/bob-skills-and-modes.md': 'data-streamhouse-core/bob-skills-and-modes.md'
+        'streamhouse-core/real-time/index.md': 'data-streamhouse-core/real-time/index.md'
+        'streamhouse-core/real-time/stream/index.md': 'data-streamhouse-core/real-time/stream/index.md'
+        'streamhouse-core/real-time/transform/index.md': 'data-streamhouse-core/real-time/transform/index.md'
+        'streamhouse-core/real-time/govern/index.md': 'data-streamhouse-core/real-time/govern/index.md'
+        'streamhouse-core/real-time/serve/index.md': 'data-streamhouse-core/real-time/serve/index.md'
+        'streamhouse-core/pipelines/index.md': 'data-streamhouse-core/pipelines/index.md'
+        'streamhouse-core/pipelines/rag/index.md': 'data-streamhouse-core/pipelines/rag/index.md'
+        'streamhouse-core/pipelines/udi/index.md': 'data-streamhouse-core/pipelines/udi/index.md'
+        'streamhouse-core/pipelines/text2sql/index.md': 'data-streamhouse-core/pipelines/text2sql/index.md'
+        'streamhouse-core/pipelines/etl/index.md': 'data-streamhouse-core/pipelines/etl/index.md'
+        'streamhouse-core/pipelines/data-sync/index.md': 'data-streamhouse-core/pipelines/data-sync/index.md'
+        'streamhouse-core/lakehouse/index.md': 'data-streamhouse-core/lakehouse/index.md'
+        'streamhouse-core/lakehouse/metadata-enrichment/index.md': 'data-streamhouse-core/lakehouse/metadata-enrichment/index.md'
+        'streamhouse-core/lakehouse/data-observability/index.md': 'data-streamhouse-core/lakehouse/data-observability/index.md'
+        'streamhouse-core/lakehouse/zero-copy-lakehouse/index.md': 'data-streamhouse-core/lakehouse/zero-copy-lakehouse/index.md'
+        'streamhouse-core/lakehouse/serverless-vector/index.md': 'data-streamhouse-core/lakehouse/serverless-vector/index.md'
 
 markdown_extensions:
   - admonition
@@ -147,32 +166,32 @@ nav:
 
       - Skills and Modes: ai-core/bob-skills-and-modes.md
 
-  - Streamhouse:
-      - Overview: streamhouse-core/index.md
-
-      - Real-Time:
-          - Overview: streamhouse-core/real-time/index.md
-          - Stream: streamhouse-core/real-time/stream/index.md
-          - Transform: streamhouse-core/real-time/transform/index.md
-          - Govern: streamhouse-core/real-time/govern/index.md
-          - Serve: streamhouse-core/real-time/serve/index.md
+  - Data Streamhouse:
+      - Overview: data-streamhouse-core/index.md
 
       - Pipelines:
-          - Overview: streamhouse-core/pipelines/index.md
-          - RAG: streamhouse-core/pipelines/rag/index.md
-          - UDI: streamhouse-core/pipelines/udi/index.md
-          - Text2SQL: streamhouse-core/pipelines/text2sql/index.md
-          - ETL: streamhouse-core/pipelines/etl/index.md
-          - Data Sync: streamhouse-core/pipelines/data-sync/index.md
+          - Overview: data-streamhouse-core/pipelines/index.md
+          - RAG: data-streamhouse-core/pipelines/rag/index.md
+          - UDI: data-streamhouse-core/pipelines/udi/index.md
+          - Text2SQL: data-streamhouse-core/pipelines/text2sql/index.md
+          - ETL: data-streamhouse-core/pipelines/etl/index.md
+          - Data Sync: data-streamhouse-core/pipelines/data-sync/index.md
+
+      - Real-Time:
+          - Overview: data-streamhouse-core/real-time/index.md
+          - Stream: data-streamhouse-core/real-time/stream/index.md
+          - Transform: data-streamhouse-core/real-time/transform/index.md
+          - Govern: data-streamhouse-core/real-time/govern/index.md
+          - Serve: data-streamhouse-core/real-time/serve/index.md
 
       - Lakehouse:
-          - Overview: streamhouse-core/lakehouse/index.md
-          - Meta Data Enrichment and Quality: streamhouse-core/lakehouse/metadata-enrichment/index.md
-          - Data Observability: streamhouse-core/lakehouse/data-observability/index.md
-          - Zero-Copy Lakehouse: streamhouse-core/lakehouse/zero-copy-lakehouse/index.md
-          - Serverless Vector: streamhouse-core/lakehouse/serverless-vector/index.md
+          - Overview: data-streamhouse-core/lakehouse/index.md
+          - Meta Data Enrichment and Quality: data-streamhouse-core/lakehouse/metadata-enrichment/index.md
+          - Data Observability: data-streamhouse-core/lakehouse/data-observability/index.md
+          - Zero-Copy Lakehouse: data-streamhouse-core/lakehouse/zero-copy-lakehouse/index.md
+          - Serverless Vector: data-streamhouse-core/lakehouse/serverless-vector/index.md
 
-      - Skills and Modes: streamhouse-core/bob-skills-and-modes.md
+      - Skills and Modes: data-streamhouse-core/bob-skills-and-modes.md
 
   - Automation:
       - Overview: automation-core/index.md

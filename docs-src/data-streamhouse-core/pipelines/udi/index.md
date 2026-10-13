@@ -37,7 +37,7 @@ Use **IBM watsonx.data integration and IBM Docling** to ingest, cleanse, transfo
 | **[data-ingestion-structured](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/udi/bob-skills/data-ingestion-structured.zip)** | Structured ingestion companion guidance for IBM DataStage connector config, CDC pipeline design, and schema mapping |
 
 !!! tip "Installing skills and modes"
-    Download the `.zip` files and copy the folders to `~/.bob/skills` or `~/.bob/modes` (global) or `<project>/.bob/skills` / `<project>/.bob/modes` (project-level). See the [Data Skills and Modes](../../../streamhouse-core/bob-skills-and-modes.md) page for full installation instructions.
+    Download the `.zip` files and copy the folders to `~/.bob/skills` or `~/.bob/modes` (global) or `<project>/.bob/skills` / `<project>/.bob/modes` (project-level). See the [Data Skills and Modes](../../../data-streamhouse-core/bob-skills-and-modes.md) page for full installation instructions.
 
 ---
 

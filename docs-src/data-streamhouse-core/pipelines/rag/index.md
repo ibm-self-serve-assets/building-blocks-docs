@@ -47,7 +47,7 @@ Use **IBM watsonx.data (OpenRAG / OpenSearch)** to ground AI applications and ag
 | **[opensearch-vector-search](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/pipelines/rag/bob-skills)** | IBM watsonx.data OpenSearch k-NN index design, HNSW parameter tuning, and hybrid search (vector + BM25) score fusion |
 
 !!! tip "Installing skills and modes"
-    Download the `.zip` files and copy the folders to `~/.bob/skills` or `~/.bob/modes` (global) or `<project>/.bob/skills` / `<project>/.bob/modes` (project-level). See the [Data Skills and Modes](../../../streamhouse-core/bob-skills-and-modes.md) page for full installation instructions.
+    Download the `.zip` files and copy the folders to `~/.bob/skills` or `~/.bob/modes` (global) or `<project>/.bob/skills` / `<project>/.bob/modes` (project-level). See the [Data Skills and Modes](../../../data-streamhouse-core/bob-skills-and-modes.md) page for full installation instructions.
 
 ---
 

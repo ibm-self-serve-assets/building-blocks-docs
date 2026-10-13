@@ -22,23 +22,23 @@ The markdown files located in [docs-src](./docs-src) are used by Github Pages to
 
 ---
 
-### Streamhouse
+### Data Streamhouse
 
 | Group | Building Block | Primary Products |
 |---|---|---|
-| **Real-Time** | [Stream](docs-src/streamhouse-core/real-time/stream/index.md) | IBM Confluent — Connectors and Kafka |
-| **Real-Time** | [Transform](docs-src/streamhouse-core/real-time/transform/index.md) | IBM Confluent (Flink) |
-| **Real-Time** | [Govern](docs-src/streamhouse-core/real-time/govern/index.md) | IBM Confluent — Stream Governance |
-| **Real-Time** | [Serve](docs-src/streamhouse-core/real-time/serve/index.md) | IBM Confluent — RTCE |
-| **Pipelines** | [RAG](docs-src/streamhouse-core/pipelines/rag/index.md) | IBM watsonx.data OpenRAG + OpenSearch |
-| **Pipelines** | [UDI](docs-src/streamhouse-core/pipelines/udi/index.md) | IBM watsonx.data integration + Docling for IBM watsonx |
-| **Pipelines** | [Text2SQL](docs-src/streamhouse-core/pipelines/text2sql/index.md) | IBM watsonx.data intelligence |
-| **Pipelines** | [ETL / ELT](docs-src/streamhouse-core/pipelines/etl/index.md) | IBM watsonx.data integration DataStage + IBM watsonx.data |
-| **Pipelines** | [Data Sync](docs-src/streamhouse-core/pipelines/data-sync/index.md) | IBM Aspera Sync |
-| **Lakehouse** | [Zero-Copy Lakehouse](docs-src/streamhouse-core/lakehouse/zero-copy-lakehouse/index.md) | IBM watsonx.data (Presto + Spark + Iceberg) |
-| **Lakehouse** | [Serverless Vector](docs-src/streamhouse-core/lakehouse/serverless-vector/index.md) | IBM watsonx.data + Astra DB Serverless |
-| **Lakehouse** | [Meta Data Enrichment and Quality](docs-src/streamhouse-core/lakehouse/metadata-enrichment/index.md) | IBM watsonx.data intelligence |
-| **Lakehouse** | [Data Observability](docs-src/streamhouse-core/lakehouse/data-observability/index.md) | IBM watsonx.data integration + IBM Data Observability by Databand |
+| **Pipelines** | [RAG](docs-src/data-streamhouse-core/pipelines/rag/index.md) | IBM watsonx.data OpenRAG + OpenSearch |
+| **Pipelines** | [UDI](docs-src/data-streamhouse-core/pipelines/udi/index.md) | IBM watsonx.data integration + Docling for IBM watsonx |
+| **Pipelines** | [Text2SQL](docs-src/data-streamhouse-core/pipelines/text2sql/index.md) | IBM watsonx.data intelligence |
+| **Pipelines** | [ETL / ELT](docs-src/data-streamhouse-core/pipelines/etl/index.md) | IBM watsonx.data integration DataStage + IBM watsonx.data |
+| **Pipelines** | [Data Sync](docs-src/data-streamhouse-core/pipelines/data-sync/index.md) | IBM Aspera Sync |
+| **Real-Time** | [Stream](docs-src/data-streamhouse-core/real-time/stream/index.md) | IBM Confluent — Connectors and Kafka |
+| **Real-Time** | [Transform](docs-src/data-streamhouse-core/real-time/transform/index.md) | IBM Confluent (Flink) |
+| **Real-Time** | [Govern](docs-src/data-streamhouse-core/real-time/govern/index.md) | IBM Confluent — Stream Governance |
+| **Real-Time** | [Serve](docs-src/data-streamhouse-core/real-time/serve/index.md) | IBM Confluent — RTCE |
+| **Lakehouse** | [Zero-Copy Lakehouse](docs-src/data-streamhouse-core/lakehouse/zero-copy-lakehouse/index.md) | IBM watsonx.data (Presto + Spark + Iceberg) |
+| **Lakehouse** | [Serverless Vector](docs-src/data-streamhouse-core/lakehouse/serverless-vector/index.md) | IBM watsonx.data + Astra DB Serverless |
+| **Lakehouse** | [Meta Data Enrichment and Quality](docs-src/data-streamhouse-core/lakehouse/metadata-enrichment/index.md) | IBM watsonx.data intelligence |
+| **Lakehouse** | [Data Observability](docs-src/data-streamhouse-core/lakehouse/data-observability/index.md) | IBM watsonx.data integration + IBM Data Observability by Databand |
 
 ---
 
