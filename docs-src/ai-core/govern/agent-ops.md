@@ -61,7 +61,7 @@ The repository ships a validated four-agent underwriting system in two versions.
 | Rubric (4 rules × 5 cases) | 18/20 | 20/20 |
 | Red team (3 attacks on the AML policy) | 3/3 succeed on the first turn | 0/3 |
 
-[Loan-underwriting example on GitHub](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/assets/wxo-agents/examples/loan-underwriting) — agents, tools, test cases, configs, attacks, and the design notes that made the numbers trustworthy (handoff goals, `display_name`, argument order, turn caps, orchestrator style, model choice).
+[Loan-underwriting example on GitHub](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/govern/agent-ops/assets/wxo-agents/examples/loan-underwriting) — agents, tools, test cases, configs, attacks, and the design notes that made the numbers trustworthy (handoff goals, `display_name`, argument order, turn caps, orchestrator style, model choice).
 
 ## Metrics Reference
 
@@ -110,7 +110,7 @@ Native agents only. The catalogue is aligned with the OWASP Top 10 for LLM Appli
 
 For teams building agents with **LangGraph or LangChain**, a Python SDK package (`wx_gov_agent_eval`) is also available. It provides three evaluator classes — BasicRAG, ToolCalling, and AdvancedRAG — integrated with IBM watsonx governance for metrics and factsheet tracking.
 
-[LangGraph Agent Evaluation Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/assets/langgraph-agents)
+[LangGraph Agent Evaluation Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/govern/agent-ops/assets/langgraph-agents)
 
 ## Bob Skills
 
@@ -122,7 +122,7 @@ Bob skills for Agent Controls and Real-Time Guardrails are listed on the [Guardr
 
 ## Bob Modes
 
-A [Bob mode for Agent Ops](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops/bob-modes) is available: the hands-on variant, where Bob runs the commands, reads the results, and proposes fixes phase by phase — smoke test, test cases, evaluate, analyze, rubric, red-team, traces.
+A [Bob mode for Agent Ops](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/govern/agent-ops/bob-modes) is available: the hands-on variant, where Bob runs the commands, reads the results, and proposes fixes phase by phase — smoke test, test cases, evaluate, analyze, rubric, red-team, traces.
 
 !!! info "GitHub Repository"
-    [Agent Ops Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/agent-ops)
+    [Agent Ops Assets](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/govern/agent-ops)

@@ -1,4 +1,4 @@
-# Govern
+# AI and Agent Governance
 
 Govern is part of the **[AI Control Plane](../index.md)**, alongside [Agents](../agents/index.md) and [Engineering](../engineering/index.md).
 
@@ -6,7 +6,7 @@ Running AI in production takes more than building agents — it takes continuous
 
 The Govern building blocks provide frameworks, production-ready code samples, and tools to help you run AI that is reliable, transparent, and compliant. Whether you're evaluating and red-teaming agents before deployment, enforcing guardrails in production, tracking AI consumption and cost, or mapping AI use cases to regulations — Govern has you covered.
 
-![Control Building Blocks](images/control-architecture.png)
+![Govern building blocks — Agent Ops, Guardrails, Cost Management, Compliance](images/govern-architecture.png)
 
 ## Building Blocks
 
@@ -30,4 +30,4 @@ The Govern building blocks provide frameworks, production-ready code samples, an
 3. Check **bob-modes** for AI-assisted evaluation workflows.
 
 !!! info "GitHub Repository"
-    [Govern Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control)
+    [Govern Building Blocks](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/govern)

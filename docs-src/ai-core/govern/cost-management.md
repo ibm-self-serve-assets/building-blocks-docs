@@ -34,4 +34,4 @@ A [Bob skill for Cost Management](https://github.com/ibm-self-serve-assets/build
 For evaluation, rubrics, red-teaming, and reading traces for correctness use the [Bob skill for Agent Ops](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/agent-ops).
 
 !!! info "GitHub Repository"
-    [Cost Management assets — trace cost script and price table, Langfuse setup, model pricing, cost report, analysis guide](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/control/cost-management)
+    [Cost Management assets — trace cost script and price table, Langfuse setup, model pricing, cost report, analysis guide](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ai/govern/cost-management)
