@@ -9,7 +9,7 @@ The **Data Streamhouse Building Blocks** accelerate the journey from architectur
 
 ---
 
-![Streamhouse overview](images/overview.jpg)
+![Streamhouse overview](images/overview.png)
 
 ---
 
