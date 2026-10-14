@@ -39,6 +39,14 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
             <br>Measure, explain, and reduce the cost of watsonx Orchestrate agents — tokens and dollars from platform traces, the Langfuse integration and model pricing, a five-layer cost report with cost per successful journey, and optimization levers with their re-test.</p>
         </td>
       </tr>
+      <tr>
+        <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/ai.png" alt="" class="title-icon"><span>AI Engineering</span></div></td>
+        <td>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/ttm-forecasting">TTM Forecasting</a>
+            <br>End-to-end time-series forecasting with IBM Granite TTM (Tiny Time Mixer). Guides Bob through 96-step forecasting across three inference paths — watsonx.ai native API, local HuggingFace granite-tsfm, and mock fallback — with an ECharts dashboard scaffold for forecast and risk score visualisation.</p>
+            <p><strong>Target use cases:</strong> cold-chain temperature breach prediction, retail demand &amp; inventory planning, energy consumption &amp; IoT predictive maintenance.</p>
+        </td>
+      </tr>
     </tbody>
   </table>
 
