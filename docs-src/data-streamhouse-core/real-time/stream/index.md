@@ -69,7 +69,7 @@ The supply-chain asset covers:
 
 ## Why It Matters
 
-Traditional data movement relies on batch polling or scheduled ETL jobs that introduce hours or days of latency. In modern enterprises, events happen continuously: orders are placed, sensors detect anomalies, inventory updates, and transactions clear. **Stream** establishes the capture and transport foundation of the Real-Time architecture, streaming changes the instant they occur with strict ordering and persistence guarantees.
+Traditional data movement relies on batch polling or scheduled ETL jobs that introduce hours or days of latency. In modern enterprises, events happen continuously: orders are placed, sensors detect anomalies, inventory updates, and transactions clear. **Stream** establishes the capture and transport foundation of the Streamhouse architecture, streaming changes the instant they occur with strict ordering and persistence guarantees.
 
 ---
 
@@ -129,7 +129,7 @@ flowchart LR
         KAFKA["IBM Confluent Kafka<br/>• Partitioned Topics<br/>• Distributed Storage<br/>• Cluster Linking"]
     end
 
-    subgraph DOWNSTREAM["Real-Time Downstream"]
+    subgraph DOWNSTREAM["Streamhouse Downstream"]
         FLINK["Transform (Flink SQL)"]
         GOV["Govern (Schema Registry)"]
         SERVE["Serve (RTCE & Tableflow)"]
@@ -170,4 +170,4 @@ flowchart LR
 |---|---|
 | **[IBM Confluent](https://www.ibm.com/products/confluent)** | Fully managed Kafka service, connectors, enterprise security, and multi-cloud streaming infrastructure |
 | **[Confluent Cloud Connectors](https://docs.confluent.io/cloud/current/connectors/overview.html)** | Managed source and sink connectors for enterprise data capture |
-| **[Confluent Cloud Apache Kafka](https://docs.confluent.io/cloud/current/kafka/overview.html)** | Durable, scalable event-streaming backbone for the Real-Time transport layer |
+| **[Confluent Cloud Apache Kafka](https://docs.confluent.io/cloud/current/kafka/overview.html)** | Durable, scalable event-streaming backbone for the Streamhouse transport layer |

@@ -1,6 +1,6 @@
 ﻿# Govern
 
-Use **IBM Confluent Stream Governance** to establish end-to-end trust, strict data contracts, automatic stream lineage, data quality validation, and self-service discoverability across all streaming assets in the Real-Time architecture.
+Use **IBM Confluent Stream Governance** to establish end-to-end trust, strict data contracts, automatic stream lineage, data quality validation, and self-service discoverability across all streaming assets in the Streamhouse architecture.
 
 !!! info "Product mapping"
     **IBM Confluent — Stream Governance** — Schema Registry, Stream Lineage, Stream Quality (Data Contracts), and Confluent Data Portal.
@@ -87,7 +87,7 @@ flowchart TD
         DP["Data Portal<br/>(Discovery & Tagging)"]
     end
 
-    subgraph STREAMHOUSE_CORE["Real-Time Core (Kafka & Flink)"]
+    subgraph STREAMHOUSE_CORE["Streamhouse Core (Kafka & Flink)"]
         TOPIC["Governed Kafka Topics"]
         FLINK["Apache Flink Processing"]
     end

@@ -1,15 +1,15 @@
-# Data Streamhouse
+# Data Intelligence
 
 !!! abstract "Executive Overview"
-    **Streamhouse turns fragmented enterprise data into continuous, AI-ready business value.** By bringing together real-time data, intelligent data pipelines, and governed lakehouse analytics into one connected architecture, Streamhouse helps enterprises eliminate data silos, accelerate AI adoption, and deliver trusted, up-to-date insights across applications and operations. 
+    **Data Intelligence turns fragmented enterprise data into continuous, AI-ready business value.** By bringing together real-time data, intelligent data pipelines, and governed lakehouse analytics into one connected architecture, Data Intelligence helps enterprises eliminate data silos, accelerate AI adoption, and deliver trusted, up-to-date insights across applications and operations.
     
     Its open, composable approach enables organizations to activate real-time context, build AI-ready pipelines, deliver trusted data products, and reduce data duplication and integration complexity—**without replacing existing investments**.
 
-The **Data Streamhouse Building Blocks** accelerate the journey from architecture to business outcomes. With a proven reference architecture, reusable implementation assets, and IBM Bob skills, sales and technical teams can rapidly identify customer opportunities, demonstrate value through targeted use cases, and accelerate deployments across hybrid cloud environments. Together, these assets create a repeatable sales play to modernize data foundations, unlock enterprise AI use cases, and expand customer value through continuous data-to-AI flows.
+The **Data Intelligence Building Blocks** accelerate the journey from architecture to business outcomes. With a proven reference architecture, reusable implementation assets, and IBM Bob skills, sales and technical teams can rapidly identify customer opportunities, demonstrate value through targeted use cases, and accelerate deployments across hybrid cloud environments. Together, these assets create a repeatable sales play to modernize data foundations, unlock enterprise AI use cases, and expand customer value through continuous data-to-AI flows.
 
 ---
 
-![Streamhouse overview](images/overview.png)
+![Data Intelligence overview](images/overview.jpeg)
 
 ---
 
@@ -39,7 +39,7 @@ The **Data Streamhouse Building Blocks** accelerate the journey from architectur
 
 ## Building Block Map
 
-The Data Streamhouse architecture is organized into three foundational pillars: **Pipelines**, **Real-Time**, and **Lakehouse**.
+The Data Intelligence architecture is organized into three foundational pillars: **Pipelines**, **Streamhouse**, and **Lakehouse**.
 
 | Pillar | Building Block | Primary Products | What It Enables |
 |:---|:---|:---|:---|
@@ -48,10 +48,10 @@ The Data Streamhouse architecture is organized into three foundational pillars: 
 | **Pipelines** | [**Text2SQL**](pipelines/text2sql/index.md) | IBM watsonx.data intelligence | Convert natural-language questions into SQL queries using vectorized and enriched metadata context |
 | **Pipelines** | [**ETL**](pipelines/etl/index.md) | IBM watsonx.data (DataStage) | Build governed visual batch integration flows across source systems, transformations, and lakehouse targets |
 | **Pipelines** | [**Data Sync**](pipelines/data-sync/index.md) | Aspera | Synchronize large file sets, media, and AI repositories securely across WAN and hybrid environments at wire speed |
-| **Real-Time** | [**Stream**](real-time/stream/index.md) | IBM Confluent — Connectors & Kafka | Capture and transport enterprise event streams and CDC from databases, SaaS, and IoT into a durable event backbone |
-| **Real-Time** | [**Transform**](real-time/transform/index.md) | IBM Confluent (Flink) | Execute real-time stream processing, event enrichment, filtering, and windowed aggregations on data in motion |
-| **Real-Time** | [**Govern**](real-time/govern/index.md) | IBM Confluent — Stream Governance | Enforce schema contracts, trace end-to-end stream lineage, evaluate stream quality rules, and catalog data products |
-| **Real-Time** | [**Serve**](real-time/serve/index.md) | IBM Confluent — RTCE | Deliver low-latency live state to AI agents via Real-Time Context Engine (MCP/REST) and open Iceberg tables for analytics |
+| **Streamhouse** | [**Stream**](real-time/stream/index.md) | IBM Confluent — Connectors & Kafka | Capture and transport enterprise event streams and CDC from databases, SaaS, and IoT into a durable event backbone |
+| **Streamhouse** | [**Transform**](real-time/transform/index.md) | IBM Confluent (Flink) | Execute real-time stream processing, event enrichment, filtering, and windowed aggregations on data in motion |
+| **Streamhouse** | [**Govern**](real-time/govern/index.md) | IBM Confluent — Stream Governance | Enforce schema contracts, trace end-to-end stream lineage, evaluate stream quality rules, and catalog data products |
+| **Streamhouse** | [**Serve**](real-time/serve/index.md) | IBM Confluent — RTCE | Deliver low-latency live state to AI agents via Real-Time Context Engine (MCP/REST) and open Iceberg tables for analytics |
 | **Lakehouse** | [**Metadata Enrichment & Quality**](lakehouse/metadata-enrichment/index.md) | IBM watsonx.data intelligence | Add business glossary terms, automated descriptions, profiling, quality rules, and lineage to lakehouse assets |
 | **Lakehouse** | [**Data Observability**](lakehouse/data-observability/index.md) | watsonx.data Integration (Databand) | Detect pipeline failures, data drift, volume anomalies, and SLA breaches before downstream AI and analytics are impacted |
 | **Lakehouse** | [**Zero-Copy Lakehouse**](lakehouse/zero-copy-lakehouse/index.md) | IBM watsonx.data (Presto, Spark, Iceberg) | Query and process distributed data in place without unnecessary copying using open Apache Iceberg tables |
@@ -80,7 +80,7 @@ The Data Streamhouse architecture is organized into three foundational pillars: 
 
 ---
 
-## 2. Real-Time
+## 2. Streamhouse
 
 > **Mission:** Capture, transport, transform, govern, and serve continuously fresh business events to AI agents, operational systems, and analytics.
 
@@ -91,13 +91,13 @@ The Data Streamhouse architecture is organized into three foundational pillars: 
     - **Unified Stream-to-Lakehouse Flow:** Serve live state to agents via **RTCE** and automatically sink into open **Apache Iceberg** tables.
     - **Governed Streams:** Enforce schema contracts and trace data in motion across enterprise teams.
 
-??? info "When to deploy the Real-Time pillar"
+??? info "When to deploy the Streamhouse pillar"
     - AI agents need **live, in-the-moment operational facts** alongside historical knowledge.
     - Low-latency **Change Data Capture (CDC)** or high-frequency event streaming is required.
     - Stream filtering, sliding-window aggregations, or continuous event enrichment must occur **in flight**.
     - Real-time streams need to be exposed as **Apache Iceberg tables** for lakehouse queries.
 
-[Explore Real-Time Building Blocks →](real-time/index.md)
+[Explore Streamhouse Building Blocks →](real-time/index.md)
 
 ---
 
@@ -162,10 +162,10 @@ flowchart LR
 
 ## Technology Stack Matrix
 
-| Product | Architecture Pillar | Role in Streamhouse |
+| Product | Architecture Pillar | Role in Data Intelligence |
 |:---|:---|:---|
 | **[IBM watsonx.data](https://www.ibm.com/products/watsonx-data)** | Lakehouse & Pipelines | Open hybrid lakehouse platform powered by Presto ANSI SQL, Apache Spark, Apache Iceberg, and OpenRAG |
-| **[IBM Confluent](https://www.ibm.com/products/confluent)** | Real-Time | Complete enterprise event streaming platform with Kafka connectors, Apache Flink, Stream Governance, Tableflow, and RTCE |
+| **[IBM Confluent](https://www.ibm.com/products/confluent)** | Streamhouse | Complete enterprise event streaming platform with Kafka connectors, Apache Flink, Stream Governance, Tableflow, and RTCE |
 | **[IBM watsonx.data intelligence](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=data-enriching-your-assets)** | Lakehouse & Pipelines | Automated metadata profiling, AI business glossary mapping, data quality rules, data lineage, and Text2SQL |
 | **[IBM watsonx.data integration](https://www.ibm.com/docs/en/watsonx/wdi/2.4.x?topic=data-integration)** | Pipelines & Lakehouse | DataStage enterprise visual ETL/ELT pipelines, UDI document processing flows, and Databand observability integration |
 | **[IBM Data Observability by Databand](https://www.ibm.com/products/watsonx-data-integration/data-observability)** | Lakehouse | Continuous pipeline monitoring, automated anomaly detection, schema drift tracking, and SLA management |

@@ -8,7 +8,7 @@ Use **IBM Confluent Real-Time Context Engine (RTCE)** and **Tableflow** to serve
 !!! info "GitHub Repository"
     The complete source code and examples are available in the GitHub repository:
 
-    [Building Blocks - Real-Time Serve](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/real-time/serve)
+    [Building Blocks - Streamhouse Serve](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/streamhouse/real-time/serve)
 
 ---
 
@@ -63,7 +63,7 @@ See [`assets/streamhouse-continous-rag/README.md`](https://github.com/ibm-self-s
 
 ## Why It Matters
 
-Data is only as valuable as the decisions it empowers. In the Real-Time architecture, **Serve** provides the dual consumption layer that bridges data in motion with both **operational AI/applications** and **analytical lakehouses**:
+Data is only as valuable as the decisions it empowers. In the Streamhouse architecture, **Serve** provides the dual consumption layer that bridges data in motion with both **operational AI/applications** and **analytical lakehouses**:
 
 1. **For AI Agents & Operational Apps**: The Real-Time Context Engine provides sub-second query access to the latest state of any business entity (e.g., current location of a shipment, real-time risk score, latest fraud alert) via standard protocols like Model Context Protocol (MCP) and REST.
 2. **For Lakehouse Analytics**: Confluent Tableflow automatically materializes Kafka topics as open Apache Iceberg tables without custom ETL pipelines, making streaming data instantly queryable in IBM watsonx.data, Presto, and Apache Spark.
@@ -111,7 +111,7 @@ Use Serve when:
 flowchart LR
     KAFKA["Governed Kafka Topics & Flink State<br/>(IBM Confluent)"]
 
-    subgraph SERVE_LAYER["Real-Time Serve Layer"]
+    subgraph SERVE_LAYER["Streamhouse Serve Layer"]
         RTCE["Real-Time Context Engine (RTCE)<br/>• Fast State Queries<br/>• Model Context Protocol (MCP)<br/>• REST Endpoints"]
         TABLEFLOW["Confluent Tableflow<br/>• Zero-ETL Open Tables<br/>• Auto Iceberg Metadata"]
     end

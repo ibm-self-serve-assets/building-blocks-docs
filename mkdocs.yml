@@ -166,7 +166,7 @@ nav:
 
       - Skills and Modes: ai-core/bob-skills-and-modes.md
 
-  - Data Streamhouse:
+  - Intelligent Data:
       - Overview: data-streamhouse-core/index.md
 
       - Pipelines:
@@ -177,7 +177,7 @@ nav:
           - ETL: data-streamhouse-core/pipelines/etl/index.md
           - Data Sync: data-streamhouse-core/pipelines/data-sync/index.md
 
-      - Real-Time:
+      - Streamhouse:
           - Overview: data-streamhouse-core/real-time/index.md
           - Stream: data-streamhouse-core/real-time/stream/index.md
           - Transform: data-streamhouse-core/real-time/transform/index.md

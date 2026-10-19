@@ -1,11 +1,11 @@
-# Real-Time – Building Blocks
+# Streamhouse – Building Blocks
 
-The **Real-Time** use case provides a real-time, production-native, and decentralized data architecture that keeps the **continuously current state of a business** available to production applications, analytics, and AI agents.
+The **Streamhouse** use case provides a real-time, production-native, and decentralized data architecture that keeps the **continuously current state of a business** available to production applications, analytics, and AI agents.
 
 !!! info "Category Definition"
-    **Real-Time** is an open, vendor-neutral category for data architectures that empower organizations to **capture, transport, transform, govern, and serve** data in motion at production service levels. IBM delivers the complete Real-Time architecture through **IBM Confluent**.
+    **Streamhouse** is an open, vendor-neutral category for data architectures that empower organizations to **capture, transport, transform, govern, and serve** data in motion at production service levels. IBM delivers the complete Streamhouse architecture through **IBM Confluent**.
 
-![IBM Confluent — Real-Time overview](../images/data-streaming-confluent.png)
+![IBM Confluent — Streamhouse overview](../images/data-streaming-confluent.png)
 
 ---
 
@@ -22,7 +22,7 @@ The **Real-Time** use case provides a real-time, production-native, and decentra
 
 ## Business Value
 
-!!! success "Why Real-Time matters"
+!!! success "Why Streamhouse matters"
     - **Real-time freshness** — data remains continuously current as business events occur, replacing stale batch snapshots.
     - **Production-native reliability** — engineered to mission-critical SLAs so production applications and autonomous AI agents can depend on it continuously.
     - **Decentralized data access** — meets data where it already lives across databases, applications, cloud services, and edge devices.
@@ -48,7 +48,7 @@ The **Real-Time** use case provides a real-time, production-native, and decentra
 flowchart LR
     SRC["Enterprise Data Sources<br/>Databases · SaaS · IoT · Applications"]
 
-    subgraph STREAMHOUSE["Real-Time Architecture (IBM Confluent)"]
+    subgraph STREAMHOUSE["Streamhouse Architecture (IBM Confluent)"]
         direction LR
         subgraph CAPTURE_TRANSPORT["Capture & Transport"]
             CONNECT["Confluent Connect"] --> KAFKA["Apache Kafka Topics"]
@@ -83,8 +83,6 @@ flowchart LR
 
 ## IBM Products Used
 
-| Product | Role in Real-Time |
+| Product | Role in Streamhouse |
 |---|---|
-| **[IBM Confluent](https://www.ibm.com/products/confluent)** | Complete managed Real-Time platform delivering Connectors, Kafka, Apache Flink, Stream Governance, Tableflow, and Real-Time Context Engine |
-| **[IBM watsonx.data](https://www.ibm.com/products/watsonx-data)** | Open hybrid lakehouse platform consuming Iceberg tables published by Real-Time for multi-engine SQL analytics |
-| **[IBM watsonx Orchestrate & AI Agents](https://www.ibm.com/products/watsonx-orchestrate)** | Operational AI agents consuming live business state from the Real-Time Context Engine via Model Context Protocol (MCP) |
+| **[IBM Confluent](https://www.ibm.com/products/confluent)** | Complete managed Streamhouse platform delivering Connectors, Kafka, Apache Flink, Stream Governance, Tableflow, and Real-Time Context Engine |
