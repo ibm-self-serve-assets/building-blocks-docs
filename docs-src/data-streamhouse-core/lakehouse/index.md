@@ -1,4 +1,4 @@
-# Lakehouse – Building Blocks
+# Lakehouse
 
 The **Lakehouse** use case provides fit-for-purpose execution for SQL analytics, large-scale processing, open lakehouse interoperability, metadata governance, data observability, and vector retrieval — matching the engine and governance tool to the workload rather than routing everything through a single technology.
 

@@ -1,4 +1,4 @@
-# Pipelines – Building Blocks
+# Pipelines
 
 The **Pipelines** use case prepares, transforms, moves, and indexes structured and unstructured data for enterprise analytics, Retrieval-Augmented Generation (RAG), search, and AI applications.
 

@@ -1,4 +1,4 @@
-# Streamhouse – Building Blocks
+# Streamhouse
 
 The **Streamhouse** use case provides a real-time, production-native, and decentralized data architecture that keeps the **continuously current state of a business** available to production applications, analytics, and AI agents.
 
