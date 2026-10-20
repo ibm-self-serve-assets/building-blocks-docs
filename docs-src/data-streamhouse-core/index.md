@@ -1,15 +1,15 @@
-# Intelligent Data
+# Data
 
 !!! abstract "Executive Overview"
-    **Intelligent Data, powered by [Streamhouse](real-time/index.md), keeps AI grounded in what is happening in the business right now.** **Streamhouse** captures, transforms, governs and serves events as they occur, so applications and AI agents work from live context instead of stale batch snapshots. It eliminates data silos, accelerates AI adoption, and delivers trusted, up-to-date insights across applications and operations.
+    **Data, powered by [Streamhouse](real-time/index.md), keeps AI grounded in what is happening in the business right now.** **Streamhouse** captures, transforms, governs and serves events as they occur, so applications and AI agents work from live context instead of stale batch snapshots. It eliminates data silos, accelerates AI adoption, and delivers trusted, up-to-date insights across applications and operations.
     
     Its open, composable approach lets organizations activate real-time context, deliver trusted data products, and reduce data duplication and integration complexity—**without replacing existing investments**.
 
-The **Intelligent Data Building Blocks** accelerate the journey from architecture to business outcomes. Anchored by the **Streamhouse** reference architecture for data in motion and extended by **Pipelines** and **Lakehouse**, these reusable implementation assets and IBM Bob skills help sales and technical teams rapidly identify customer opportunities, demonstrate value through targeted use cases, and accelerate deployments across hybrid cloud environments. Together, they create a repeatable sales play that moves customers from real-time events to AI-ready, governed insight.
+The **Data Building Blocks** accelerate the journey from architecture to business outcomes. Anchored by the **Streamhouse** reference architecture for data in motion and extended by **Pipelines** and **Lakehouse**, these reusable implementation assets and IBM Bob skills help sales and technical teams rapidly identify customer opportunities, demonstrate value through targeted use cases, and accelerate deployments across hybrid cloud environments. Together, they create a repeatable sales play that moves customers from real-time events to AI-ready, governed insight.
 
 ---
 
-![Intelligent Data overview](images/overview.jpeg)
+![Data overview](images/overview.jpeg)
 
 ---
 
@@ -39,7 +39,7 @@ The **Intelligent Data Building Blocks** accelerate the journey from architectur
 
 ## Building Block Map
 
-The Intelligent Data architecture is organized into three foundational pillars: **Pipelines**, **Streamhouse**, and **Lakehouse**.
+The Data architecture is organized into three foundational pillars: **Pipelines**, **Streamhouse**, and **Lakehouse**.
 
 | Pillar | Building Block | Primary Products | What It Enables |
 |:---|:---|:---|:---|
@@ -162,7 +162,7 @@ flowchart LR
 
 ## Technology Stack Matrix
 
-| Product | Architecture Pillar | Role in Intelligent Data |
+| Product | Architecture Pillar | Role in Data |
 |:---|:---|:---|
 | **[IBM watsonx.data](https://www.ibm.com/products/watsonx-data)** | Lakehouse & Pipelines | Open hybrid lakehouse platform powered by Presto ANSI SQL, Apache Spark, Apache Iceberg, and OpenRAG |
 | **[IBM Confluent](https://www.ibm.com/products/confluent)** | Streamhouse | Complete enterprise event streaming platform with Kafka connectors, Apache Flink, Stream Governance, Tableflow, and RTCE |
