@@ -45,7 +45,7 @@ Bob<span style="color:#0f62fe">+</span> combines Generative AI with IBM technolo
     | [Headless Bob](ai-core/engineering/headless-bob.md) | Run Bob autonomously in CI/CD pipelines, scheduled jobs, and event-driven automations |
     
 
-**[Data Intelligence Core Capabilities](data-streamhouse-core/index.md)**
+**[Intelligent Data Core Capabilities](data-streamhouse-core/index.md)**
 
 - **[Pipelines](data-streamhouse-core/pipelines/index.md)**
   Prepares, transforms, moves, and indexes structured and unstructured data into AI-ready representations — covering RAG, document parsing, Text2SQL, visual batch ETL, and high-speed WAN synchronization.

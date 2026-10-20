@@ -22,7 +22,7 @@ The markdown files located in [docs-src](./docs-src) are used by Github Pages to
 
 ---
 
-### Data Intelligence
+### Intelligent Data
 
 | Group | Building Block | Primary Products |
 |---|---|---|
