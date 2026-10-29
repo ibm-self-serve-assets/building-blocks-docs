@@ -282,7 +282,7 @@ Terraform maintains a state file that tracks the current state of managed infras
 
 ### Additional Resources
 
-- 🎥 [YouTube Channel](https://youtube.com/@ibm-building-blocks) - Subscribe for latest videos
+- 🎥 [YouTube Channel](https://www.youtube.com/@BuildwithIBM) - Subscribe for latest videos
 - 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/operate/infrastructure-as-code/README.md) - Complete Terraform automation guide
 
 ---

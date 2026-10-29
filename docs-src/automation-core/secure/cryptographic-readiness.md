@@ -200,7 +200,7 @@ sequenceDiagram
 **Links:**
 - 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/cryptographic-and-quantum-safe-readiness/README.md)
 - 🌐 [IBM Guardium](https://www.ibm.com/guardium)
-- 🌐 [IBM Quantum Safe](https://www.ibm.com/quantum-safe)
+- 🌐 [IBM Quantum Safe](https://www.ibm.com/quantum/quantum-safe)
 
 ---
 
@@ -251,7 +251,7 @@ Accelerate cryptographic and quantum-readiness assessments directly inside IBM B
 
 ### Additional Resources
 
-- 🌐 [IBM Quantum Safe](https://www.ibm.com/quantum-safe)
+- 🌐 [IBM Quantum Safe](https://www.ibm.com/quantum/quantum-safe)
 - 💻 [CBOMkit (PQCA)](https://github.com/PQCA/cbomkit) — Open-source CBOM toolkit
 - 📖 [CycloneDX CBOM Specification](https://cyclonedx.org/capabilities/cbom/)
 - 📖 [NIST Post-Quantum Cryptography Standards](https://www.nist.gov/pqcrypto)
@@ -268,7 +268,7 @@ Accelerate cryptographic and quantum-readiness assessments directly inside IBM B
 **Quick links:**
 - 🚀 [Complete Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/cryptographic-and-quantum-safe-readiness/README.md)
 - ▶️ [Watch Demo on YouTube](https://www.youtube.com/watch?v=2IziCt51Dfc)
-- 🌐 [IBM Quantum Safe](https://www.ibm.com/quantum-safe)
+- 🌐 [IBM Quantum Safe](https://www.ibm.com/quantum/quantum-safe)
 
 ---
 
