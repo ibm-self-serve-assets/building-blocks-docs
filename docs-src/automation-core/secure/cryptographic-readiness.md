@@ -198,7 +198,7 @@ sequenceDiagram
 - Integration with CI/CD pipelines for continuous scanning
 
 **Links:**
-- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/README.md)
+- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/cryptographic-and-quantum-safe-readiness/README.md)
 - 🌐 [IBM Guardium](https://www.ibm.com/guardium)
 - 🌐 [IBM Quantum Safe](https://www.ibm.com/quantum-safe)
 
@@ -266,7 +266,7 @@ Accelerate cryptographic and quantum-readiness assessments directly inside IBM B
 - **Watch the demo** to see IBM Guardium Cryptography Manager in action
 
 **Quick links:**
-- 🚀 [Complete Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/secure/quantum-safe/README.md)
+- 🚀 [Complete Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/cryptographic-and-quantum-safe-readiness/README.md)
 - ▶️ [Watch Demo on YouTube](https://www.youtube.com/watch?v=2IziCt51Dfc)
 - 🌐 [IBM Quantum Safe](https://www.ibm.com/quantum-safe)
 

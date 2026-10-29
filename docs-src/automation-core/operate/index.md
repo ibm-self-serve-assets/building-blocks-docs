@@ -11,7 +11,7 @@ Operate focuses on provisioning, configuring, and scheduling the infrastructure 
 | **[Workload Orchestration & Scheduling](workload-orchestration.md)** | HashiCorp Nomad | Flexible, lightweight workload scheduler for containers, VMs, and batch jobs across hybrid infrastructure |
 
 ## **Github Repository**
-Code for these accelerators can be found in the [Operate - Automation Building Blocks repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/operate).
+Code for these accelerators can be found in the [Operate - Automation Building Blocks repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/automation/operate).
 
 ## **Key Use Cases**
 

@@ -278,12 +278,12 @@ Terraform maintains a state file that tracks the current state of managed infras
 
 | Video Title | Description | Duration | Link |
 |-------------|-------------|----------|------|
-| **Infrastructure as Code with Terraform** | Complete walkthrough of Terraform IaC automation for enterprise infrastructure deployment | 15:42 | [▶️ Watch on YouTube](https://www.youtube.com/watch?v=o-gSbancvVM&t=1s) |
+| **Infrastructure as Code with Terraform** | Complete walkthrough of Terraform IaC automation for enterprise infrastructure deployment | 15:42 | [▶️ Watch on YouTube](https://www.youtube.com/watch?v=hRse53dTg8w) |
 
 ### Additional Resources
 
 - 🎥 [YouTube Channel](https://youtube.com/@ibm-building-blocks) - Subscribe for latest videos
-- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/operate/infrastructure-as-code/README.md) - Complete Terraform automation guide
+- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/operate/infrastructure-as-code/README.md) - Complete Terraform automation guide
 
 ---
 
@@ -295,7 +295,7 @@ Terraform maintains a state file that tracks the current state of managed infras
 - **Watch the demo video** to see IaC in action
 
 **Get Started Now:**
-- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/operate/infrastructure-as-code/README.md)
+- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/operate/infrastructure-as-code/README.md)
 
 ---
 

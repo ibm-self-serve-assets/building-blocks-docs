@@ -14,7 +14,7 @@ Technology Financial Management (TFM) and FinOps establishes a data-driven disci
 
     For detailed implementation guides and code samples for IBM Apptio, see:
 
-    **[FinOps Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/finops/README.md)** - Complete IBM Apptio integration guide for natural language financial operations
+    **[FinOps Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/technology-financial-management-and-finops/README.md)** - Complete IBM Apptio integration guide for natural language financial operations
 
 ---
 
@@ -98,7 +98,7 @@ IBM Cloudability / Apptio delivers:
 
 **Links:**
 - 🚀 [IBM Apptio](https://www.ibm.com/products/apptio)
-- 📖 [FinOps Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/finops/README.md)
+- 📖 [FinOps Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/technology-financial-management-and-finops/README.md)
 
 ---
 
@@ -131,7 +131,7 @@ Organizations commonly leverage TFM & FinOps to:
 **Get Started Now:**
 - 🚀 [IBM Cloudability](https://www.ibm.com/products/cloudability)
 - 🚀 [IBM Apptio](https://www.ibm.com/products/apptio)
-- 📖 [FinOps Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/finops/README.md)
+- 📖 [FinOps Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/technology-financial-management-and-finops/README.md)
 
 ---
 

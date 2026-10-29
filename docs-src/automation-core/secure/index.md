@@ -11,7 +11,7 @@ Secure focuses on protecting enterprise applications, data, and infrastructure t
 | **[Cryptographic & Quantum-Safe Readiness](cryptographic-readiness.md)** | IBM Guardium Cryptography Manager | Enterprise-grade cryptographic discovery, key management, and post-quantum cryptographic readiness |
 
 ## **Github Repository**
-Code for these accelerators can be found in the [Secure - Automation Building Blocks repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/secure).
+Code for these accelerators can be found in the [Secure - Automation Building Blocks repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/automation/secure).
 
 ## **Key Use Cases**
 

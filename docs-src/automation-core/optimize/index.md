@@ -12,7 +12,7 @@ Optimize focuses on continuously improving observability, application performanc
 | **[Network Performance Management](network-performance.md)** | IBM SevOne Network Performance Management | End-to-end network visibility and performance analytics for hybrid infrastructure |
 
 ## **Github Repository**
-Code for these accelerators can be found in the [Optimize building blocks repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/optimize)
+Code for these accelerators can be found in the [Optimize building blocks repo](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/automation/optimize)
 
 ## **Use Cases**
 

@@ -239,7 +239,7 @@ Accelerate application performance and automated resource management directly in
 
 ### Additional Resources
 
-- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resource-mgmt/README.md)
+- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/application-performance/README.md)
 
 ---
 
@@ -252,7 +252,7 @@ Accelerate application performance and automated resource management directly in
 
 **Quick Links:**
 - 🚀 [Get Started with IBM Turbonomic](https://www.ibm.com/products/turbonomic)
-- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resource-mgmt/README.md)
+- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/application-performance/README.md)
 
 ---
 

@@ -178,7 +178,7 @@ sequenceDiagram
 **Links:**
 - 📖 [Documentation](https://www.ibm.com/docs/en/concert)
 - 🚀 [Get Started](https://www.ibm.com/products/concert)
-- 💻 [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/secure/application-risk)
+- 💻 [GitHub Repository](https://github.com/ibm-self-serve-assets/building-blocks/tree/main/automation/secure/application-risk-and-continuous-compliance)
 
 ---
 
@@ -204,7 +204,7 @@ Accelerate application risk analysis and automated continuous compliance directl
 
 ### Additional Resources
 
-- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resilience-and-compliance/README.md) - Complete setup and configuration guide
+- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/application-risk-and-continuous-compliance/README.md) - Complete setup and configuration guide
 
 ---
 
@@ -217,7 +217,7 @@ Accelerate application risk analysis and automated continuous compliance directl
 
 **Quick Links:**
 - 🚀 [Get Started with IBM Concert](https://www.ibm.com/products/concert)
-- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resilience-and-compliance/README.md)
+- 📖 [Implementation Guide](https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/application-risk-and-continuous-compliance/README.md)
 
 ---
 

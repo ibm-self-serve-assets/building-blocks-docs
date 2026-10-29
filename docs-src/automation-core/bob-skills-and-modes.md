@@ -30,7 +30,7 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
             <br>Use when writing, reviewing, or debugging Terraform/OpenTofu modules, tests, CI/CD pipelines, or state operations. Diagnoses failure modes (identity churn, secrets, blast radius, CI drift, state corruption) with version-aware guidance.</p>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/ibm-bob/skills/maximo-code-optimization">Maximo Code Optimization</a>
             <br>Modernize and optimize Maximo automation scripts by analyzing legacy code patterns, identifying performance bottlenecks, and applying best practices for script efficiency. Transforms outdated automation scripts into maintainable, performant code while preserving business logic and ensuring compatibility with current Maximo versions.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/asset-management/bob-skills">Maximo Java Conversion</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/automation/operate/asset-management/bob-skills">Maximo Java Conversion</a>
             <br>Convert legacy Maximo Java classes to automation scripts (Python/Jython, JavaScript, Nashorn, ECMAScript, MBR). Preserves business logic, generates test scripts, enforces MXLoggerFactory error handling and MboSet lifecycle patterns, and produces before/after conversion reports.</p>
         </td>
       </tr>
@@ -39,9 +39,9 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
         <td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/non-human-identity-vault/SKILL.md">Non-human Identity: Vault</a>
             <br>Coming soon</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/optimize/automated-resilience-and-compliance/bob-skills/automated-resilience-concert.zip">Application Risk & Continuous Compliance</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/application-risk-and-continuous-compliance/bob-skills/automated-resilience-concert.zip">Application Risk & Continuous Compliance</a>
             <br>Unified Vulnerability and Certificate Intelligence via IBM Concert.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/optimize/automated-resilience-and-compliance/bob-skills/automated-resilience-concert.zip">Cryptographic & Quantum-Safe Readiness</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/cryptographic-and-quantum-safe-readiness/bob-skills/skills.zip">Cryptographic & Quantum-Safe Readiness</a>
             <br>Discover, govern, and migrate cryptographic assets to quantum-safe algorithms using IBM Guardium Cryptography Manager.</p>
         </td>
       </tr>
@@ -50,7 +50,7 @@ Each Skill for IBM Building Blocks often aligns with an IBM product but not alwa
         <td>
             <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/ibm-bob/skills/automated-resource-mgmt-turbonomic/SKILL.md">Automated Resource Management (ARM): Turbonomic</a>
             <br>Automates application resource management at scale with the precision required to assure application performance. It continuously analyzes and optimizes compute, storage, and network resources in real time, helping organizations improve application resiliency, maximize infrastructure utilization, reduce operational costs, and ensure applications always receive the resources.</p>
-            <p><a href="">Full-Stack Application Observability</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/full-stack-application-observability/bob-skills/application-observability.zip">Full-Stack Application Observability</a>
             <br>Connect Bob with the Instana MCP server for automated, real-time visibility across every tier of hybrid applications.</p>
         </td>
       </tr>
@@ -75,31 +75,31 @@ Instructions and related files for these custom modes can be found in their resp
       <tr>
         <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/build.png" alt="" class="title-icon"><span>Operate</span></div></td>
         <td>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/Iaas/bob-modes/base-modes">Ansible Ops</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/automation/operate/infrastructure-as-code/bob-modes/base-modes">Ansible Ops</a>
             <br>Ansible Operations with Ansible playbook to deploy the Retail Application on RedHat OpenShift Cluster.</p>
         </td>
       </tr>
       <tr>
         <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/optimize.png" alt="" class="title-icon"><span>Secure</span></div></td>
         <td>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/build-and-deploy/non-human-identity/secrets-management/bob-modes/base-modes">Secrets Management</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/tree/main/automation/secure/non-human-identity-and-secret-management/secrets-management/bob-modes/base-modes">Secrets Management</a>
             <br>Secrets Management via IBM Hashicorp Vault.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/optimize/automated-resilience-and-compliance/bob-modes/base-modes/application-resilience.zip">Application Risk & Continuous Compliance</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/application-risk-and-continuous-compliance/bob-modes/base-modes/application-resilience.zip">Application Risk & Continuous Compliance</a>
             <br>Unified Vulnerability and Certificate Intelligence via IBM Concert.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/raw/main/optimize/automated-resilience-and-compliance/bob-modes/base-modes/application-resilience.zip">Cryptographic & Quantum-Safe Readiness</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/cryptographic-and-quantum-safe-readiness/bob-modes/quantum-safe.zip">Cryptographic & Quantum-Safe Readiness</a>
             <br>Discover, govern, and migrate cryptographic assets to quantum-safe algorithms using IBM Guardium Cryptography Manager.</p>
         </td>
       </tr>
       <tr>
         <td><div class="skill-subgroup"><img src="../../ibm-bob/skills/images/modernize.png" alt="" class="title-icon"><span>Optimize</span></div></td>
         <td>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resilience-and-compliance/bob-modes/base-modes/application-resilience.zip">Automated Resilience & Compliance</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/secure/application-risk-and-continuous-compliance/bob-modes/base-modes/application-resilience.zip">Automated Resilience & Compliance</a>
             <br>Unified Vulnerability and Certificate Intelligence via IBM Concert.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/optimize/automated-resilience-and-compliance/bob-modes/base-modes/application-resilience.zip">Automated Resource Management</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/application-performance/bob-modes/base-modes/automated-resource-mgmt.zip">Automated Resource Management</a>
             <br>Resource Optimization & Cost Control with IBM Turbonomic.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/finops/optimize/finops/bob-modes/base-modes/cloudability-api.zip">Technology Financial Management & FinOps</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/technology-financial-management-and-finops/ibm-bob-apptio-mode.md">Technology Financial Management & FinOps</a>
             <br>Maximize Cloud Value Through FinOps with IBM Apptio.</p>
-            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/finops/observe/application-observability/bob-modes/base-modes/application-observability.zip">Full-Stack Application Observability</a>
+            <p><a href="https://github.com/ibm-self-serve-assets/building-blocks/blob/main/automation/optimize/full-stack-application-observability/bob-modes/application-observability.zip">Full-Stack Application Observability</a>
             <br>Connect Bob with the Instana MCP server for automated, real-time visibility across every tier of hybrid applications.</p>
         </td>
       </tr>
